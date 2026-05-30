@@ -32,4 +32,4 @@ Disallow: /Logo-Export/
 Disallow: /Skills/
 
 # Sitemap
-Sitemap: https://averio-media.de/sitemap.xml
+Sitemap: https://averiomedia.de/sitemap.xml
