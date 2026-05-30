@@ -1538,6 +1538,9 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
         return;
       }
 
+      // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
+      const thankYouWin = window.open('', '_blank');
+
       // Daten an nForms senden
       try {
         await fetch(NFORMS_URL, {
@@ -1565,20 +1568,12 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
         });
       } catch(err) { console.warn('nForms:', err); }
 
-      // Hide form steps + indicators
-      document.getElementById('step-3').classList.remove('active');
-      document.getElementById('step-indicators').style.display = 'none';
-      document.getElementById('invoice-preview').style.display = 'none';
-
-      // Show success
-      document.getElementById('booking-success').classList.add('visible');
-
-      // Update step 4 indicator
-      document.getElementById('si-3').classList.remove('active');
-      document.getElementById('si-3').classList.add('done');
-      document.getElementById('si-4').classList.add('active');
-
-      document.getElementById('buchung').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Danke-Seite im vorab geöffneten Tab laden
+      if (thankYouWin) {
+        thankYouWin.location.href = 'averio-danke-kampagnencheck.html';
+      } else {
+        window.open('averio-danke-kampagnencheck.html', '_blank');
+      }
     }
 
     /* ────────────────────────────────────────

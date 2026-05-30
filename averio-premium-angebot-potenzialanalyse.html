@@ -1211,6 +1211,9 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
     async function submitPotenzial(e) {
       e.preventDefault();
 
+      // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
+      const thankYouWin = window.open('', '_blank');
+
       try {
         await fetch(NFORMS_URL, {
           method: 'POST',
@@ -1229,7 +1232,12 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
         });
       } catch(err) { console.warn('nForms:', err); }
 
-      window.location.href = 'averio-anfrage-bestaetigt.html';
+      // Danke-Seite im vorab geöffneten Tab laden
+      if (thankYouWin) {
+        thankYouWin.location.href = 'averio-danke-potenzialanalyse.html';
+      } else {
+        window.open('averio-danke-potenzialanalyse.html', '_blank');
+      }
     }
 
     // ── FAQ ──

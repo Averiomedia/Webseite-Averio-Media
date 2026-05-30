@@ -1400,6 +1400,9 @@ async function submitCollab(e) {
 
   const laufzeit = document.querySelector('#radio-laufzeit .radio-option.selected span');
 
+  // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
+  const thankYouWin = window.open('', '_blank');
+
   try {
     await fetch(NFORMS_URL, {
       method: 'POST',
@@ -1421,7 +1424,12 @@ async function submitCollab(e) {
     });
   } catch(err) { console.warn('nForms:', err); }
 
-  window.location.href = 'averio-anfrage-bestaetigt.html';
+  // Danke-Seite im vorab geöffneten Tab laden
+  if (thankYouWin) {
+    thankYouWin.location.href = 'averio-danke-zusammenarbeit.html';
+  } else {
+    window.open('averio-danke-zusammenarbeit.html', '_blank');
+  }
 }
 
 /* ══ FAQ ACCORDION ══════════════════════════════════════════════ */
