@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Interne / nicht indexierbare Seiten
+Disallow: /averio-premium-datenschutz.html
+Disallow: /averio-premium-impressum.html
+Disallow: /averio-premium-termin-bestaetigung.html
+Disallow: /averio-danke.html
+
+# Interne Angebots-/Proposal-Seiten (nicht indexieren)
+Disallow: /averio-premium-angebote.html
+Disallow: /averio-premium-angebot-zusammenarbeit.html
+Disallow: /averio-premium-angebot-kampagnencheck.html
+Disallow: /averio-premium-angebot-potenzialanalyse.html
+
+# Alte Versionen (nicht indexieren)
+Disallow: /averio-premium-original.html
+Disallow: /averio-premium-v1.html
+Disallow: /averio-premium-v1-bild1.html
+Disallow: /averio-premium-v1-bild2.html
+Disallow: /averio-premium-v1-bild3.html
+Disallow: /averio-premium-v1-bild4.html
+Disallow: /averio-premium-v1-mit-bild.html
+Disallow: /averio-premium-v1-kacheln2.html
+Disallow: /averio-premium-v1-kacheln3.html
+Disallow: /averio-premium-v1-aufgefaechert.html
+Disallow: /averio-premium-v1-small-badges.html
+Disallow: /averio_website_FINAL_premium.html
+Disallow: /logo-preview.html
+Disallow: /averio-logo-download.html
+Disallow: /Logo-Export/
+Disallow: /Skills/
+
+# Sitemap
+Sitemap: https://averio-media.de/sitemap.xml

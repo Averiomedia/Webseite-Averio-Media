@@ -1,0 +1,1492 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leistungen & Angebote – Google Ads Betreuung | Averio Media</title>
+<meta name="description" content="Kampagnencheck, Potenzialanalyse oder laufende Zusammenarbeit – wähle den richtigen nächsten Schritt mit Averio Media.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averio-media.de/leistungen">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averio-media.de/leistungen">
+<meta property="og:title" content="Leistungen & Angebote – Google Ads Betreuung | Averio Media">
+<meta property="og:description" content="Kampagnencheck ab 199 €, kostenlose Potenzialanalyse oder monatliche Google Ads Betreuung – alle Leistungen von Averio Media auf einen Blick.">
+<meta property="og:image" content="https://averio-media.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leistungen & Angebote – Google Ads Betreuung | Averio Media">
+<meta name="twitter:description" content="Kampagnencheck ab 199 €, kostenlose Potenzialanalyse oder monatliche Google Ads Betreuung – alle Leistungen von Averio Media auf einen Blick.">
+<meta name="twitter:image" content="https://averio-media.de/og-image.jpg">
+
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+
+<link rel="stylesheet" href="averio-premium.css">
+
+<style>
+:root {
+  --o: #FF4D00; --o2: #FF8A00;
+  --bg: #090909; --bg2: #1e1e1e; --bg3: #272727;
+  --border: #383838; --border2: #444444;
+  --ice: #D6EEFF; --ice2: #A8D8F0;
+  --fh: 'Syne', sans-serif; --fb: 'DM Sans', sans-serif;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x: hidden; }
+.nav-links a { white-space: nowrap; }
+.nav-cta   { white-space: nowrap; flex-shrink: 0; }
+
+/* ══ SHARED ═════════════════════════════════════════════ */
+.sec     { padding: 5rem 2.5rem; border-top: 1px solid var(--border); }
+.sec-alt { padding: 5rem 2.5rem; border-top: 1px solid var(--border); background: var(--bg2); }
+.sec-ey  { font-size: 10px; letter-spacing: .18em; color: var(--ice); text-transform: uppercase;
+           margin-bottom: 1rem; font-weight: 600; opacity: .75;
+           display: flex; align-items: center; gap: 8px; }
+.sec-ey::before { content: ''; width: 16px; height: 1px; background: var(--ice); display: block; opacity: .55; }
+.sec-title { font-family: var(--fh); font-size: clamp(26px, 3.5vw, 40px); font-weight: 800;
+             color: #fff; letter-spacing: -.03em; line-height: 1.0; margin-bottom: 1rem; }
+.sec-title em { color: var(--o); font-style: normal; }
+.sec-body { font-size: 14px; color: #888; line-height: 1.9; max-width: 680px; }
+
+/* ══ HERO ════════════════════════════════════════════════ */
+.ang-hero {
+  padding: 9rem 2.5rem 5rem;
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.ang-hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 700px 400px at 5% 80%, rgba(255,77,0,.08), transparent),
+    radial-gradient(ellipse 400px 400px at 95% 10%, rgba(168,216,240,.04), transparent);
+}
+.ang-hero-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  max-width: 1400px;
+}
+.ang-eyebrow { font-size: 10px; letter-spacing: .2em; color: var(--ice); text-transform: uppercase;
+  margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; opacity: .8; }
+.ang-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--ice); display: block; opacity: .6; }
+.ang-h1 { font-family: var(--fh); font-size: clamp(40px, 5.5vw, 64px); font-weight: 800;
+  line-height: .95; color: #fff; letter-spacing: -2px; margin-bottom: 1.5rem; }
+.ang-h1 em { color: var(--o); font-style: normal; text-shadow: 0 0 40px rgba(255,77,0,.3); }
+.ang-sub { font-size: 15px; color: #888; line-height: 1.85; margin-bottom: 2.5rem; max-width: 480px; }
+.hero-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-pill { display: flex; align-items: center; gap: 7px;
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 100px; padding: 8px 16px; font-size: 12px; color: #bbb; }
+.hero-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--o); box-shadow: 0 0 5px var(--o); }
+
+/* Product cards in hero */
+.hero-cards { display: flex; flex-direction: column; gap: 12px; }
+.hero-card-preview {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--bg3); border: 1px solid var(--border2); border-radius: 14px;
+  padding: 18px 20px; cursor: pointer; transition: border-color .2s, background .2s;
+  text-decoration: none;
+}
+.hero-card-preview:hover { border-color: rgba(255,77,0,.35); background: rgba(255,77,0,.03); }
+.hero-card-preview.featured { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.04); }
+.hcp-icon { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; }
+.hcp-icon.orange { background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.2); }
+.hcp-icon.ice    { background: rgba(168,216,240,.07); border: 1px solid rgba(168,216,240,.15); }
+.hcp-text { flex: 1; }
+.hcp-label { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--o); opacity: .7; margin-bottom: .25rem; }
+.hcp-label.ice-label { color: var(--ice2); }
+.hcp-name  { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; }
+.hcp-desc  { font-size: 12px; color: #888; margin-top: .25rem; }
+.hcp-price { font-family: var(--fh); font-size: 18px; font-weight: 800; color: var(--o); flex-shrink: 0; }
+.hcp-price.free { color: var(--ice2); opacity: .7; }
+.hcp-arrow { font-size: 16px; color: #555; flex-shrink: 0; transition: transform .2s; }
+.hero-card-preview:hover .hcp-arrow { transform: translateX(4px); }
+
+/* ══ TICKER ═════════════════════════════════════════════ */
+.ticker { background: var(--o); padding: .6rem 0; overflow: hidden; }
+.ticker-track { display: flex; animation: tick 28s linear infinite; width: max-content; }
+.tick-item { font-size: 11px; font-weight: 700; color: #fff; letter-spacing: .08em;
+  text-transform: uppercase; padding: 0 2rem; white-space: nowrap;
+  display: flex; align-items: center; gap: 1rem; }
+.tick-item::after { content: '◆'; font-size: 8px; opacity: .6; }
+@keyframes tick { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ══ PRODUKT-HEADER ══════════════════════════════════════ */
+.product-section { border-top: 1px solid var(--border); }
+.product-header {
+  padding: 4rem 2.5rem 3rem;
+  display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start;
+  position: relative; overflow: hidden; background: var(--bg);
+}
+.product-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(255,77,0,.06), transparent); }
+.product-badge {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2);
+  color: var(--o); font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; padding: 6px 16px; border-radius: 100px; width: fit-content;
+}
+.product-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--o);
+  box-shadow: 0 0 6px var(--o); animation: blink 1.8s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+.product-title { font-family: var(--fh); font-size: clamp(32px, 4vw, 52px); font-weight: 800;
+  color: #fff; letter-spacing: -1.5px; line-height: .95; margin-bottom: 1rem; }
+.product-title em { color: var(--o); font-style: normal; }
+.product-tagline { font-size: 15px; color: #999; line-height: 1.8; max-width: 580px; }
+.product-price-box {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 20px;
+  padding: 2rem; min-width: 200px; text-align: center; position: relative; z-index: 1; flex-shrink: 0;
+}
+.ppb-label { font-size: 10px; color: #aaa; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+.ppb-price { font-family: var(--fh); font-size: 52px; font-weight: 800; color: #fff; line-height: 1; }
+.ppb-price span { color: var(--o); }
+.ppb-sub   { font-size: 11px; color: #888; margin-top: .4rem; }
+.ppb-mwst  { font-size: 10px; color: #666; margin-top: .25rem; }
+.ppb-cta   { width: 100%; margin-top: 1.5rem; background: var(--o); color: #fff; border: none;
+  padding: 13px; border-radius: 100px; font-size: 13px; font-weight: 700; cursor: pointer;
+  font-family: var(--fb); box-shadow: 0 4px 20px rgba(255,77,0,.35); transition: all .25s; }
+.ppb-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,77,0,.5); }
+
+/* ══ WHAT'S INCLUDED ════════════════════════════════════ */
+.whats-included { display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border); }
+.wi-card { background: var(--bg); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background .2s; }
+.wi-card:hover { background: var(--bg2); }
+.wi-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--o), transparent); opacity: 0; transition: opacity .25s; }
+.wi-card:hover::after { opacity: 1; }
+.wi-icon { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(255,77,0,.2);
+  background: rgba(255,77,0,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.wi-num   { font-family: var(--fh); font-size: 11px; font-weight: 700; color: var(--o); letter-spacing: .1em; margin-bottom: .5rem; }
+.wi-title { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: .75rem; }
+.wi-text  { font-size: 13px; color: #888; line-height: 1.7; }
+.wi-tag   { display: inline-block; margin-top: 1rem; background: rgba(255,77,0,.08);
+  border: 1px solid rgba(255,77,0,.18); color: var(--o); font-size: 10px;
+  font-weight: 700; padding: 4px 12px; border-radius: 100px; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ══ PROZESS TIMELINE ════════════════════════════════════ */
+.process-flow { display: flex; align-items: flex-start; gap: 0; margin-top: 3rem; position: relative; }
+.pf-line-track { position: absolute; top: 22px; left: 22px; right: 22px; height: 1px; overflow: hidden; pointer-events: none; z-index: 0; }
+.pf-line-fill  { height: 100%; width: 0; background: linear-gradient(90deg, var(--o) 0%, rgba(255,77,0,.35) 70%, transparent 100%); }
+.pf-step { flex: 1; position: relative; z-index: 1; text-align: center; padding: 0 .75rem; }
+.pf-circle { width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid rgba(255,77,0,.4); background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fh); font-size: 14px; font-weight: 800; color: #888;
+  margin: 0 auto 1rem; }
+.pf-circle.done { background: var(--o); color: #fff; border-color: var(--o); box-shadow: 0 0 16px rgba(255,77,0,.4); }
+.pf-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+.pf-text  { font-size: 12px; color: #777; line-height: 1.5; }
+
+/* ══ BUCHUNGSFORMULAR ════════════════════════════════════ */
+.booking-section { padding: 5rem 2.5rem; background: var(--bg2); border-top: 1px solid var(--border); }
+.booking-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+
+/* Step indicators */
+.step-indicators { display: flex; align-items: center; gap: 8px; margin-bottom: 2.5rem; }
+.si { display: flex; align-items: center; gap: 8px; }
+.si-circle { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; color: #777; transition: all .3s; font-family: var(--fh); }
+.si.active .si-circle { background: var(--o); border-color: var(--o); color: #fff; box-shadow: 0 0 12px rgba(255,77,0,.3); }
+.si.done   .si-circle { background: #1a1a1a; border-color: #555; color: var(--o); }
+.si-label { font-size: 11px; color: #666; transition: color .3s; }
+.si.active .si-label { color: #ccc; }
+.si-line { flex: 1; height: 1px; background: var(--border2); min-width: 20px; }
+
+/* Form elements */
+.form-step { display: none; }
+.form-step.active { display: block; }
+.form-title    { font-family: var(--fh); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: .4rem; }
+.form-subtitle { font-size: 13px; color: #777; margin-bottom: 1.75rem; line-height: 1.6; }
+.form-group  { margin-bottom: 1.25rem; }
+.form-label  { font-size: 11px; color: #aaa; letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: .5rem; display: block; font-weight: 600; }
+.form-input  { width: 100%; background: #0d0d0d; border: 1px solid var(--border2); border-radius: 10px;
+  padding: 13px 16px; font-size: 13px; color: #fff; font-family: var(--fb);
+  outline: none; transition: border-color .2s; resize: vertical; }
+.form-input:focus { border-color: var(--o); }
+.form-input::placeholder { color: #444; }
+.form-select { width: 100%; background: #0d0d0d; border: 1px solid var(--border2); border-radius: 10px;
+  padding: 13px 16px; font-size: 13px; color: #bbb; font-family: var(--fb);
+  outline: none; transition: border-color .2s; cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+.form-select:focus { border-color: var(--o); }
+.form-select option { background: #1a1a1a; color: #fff; }
+.form-hint  { font-size: 11px; color: #666; margin-top: .4rem; }
+.form-input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-btn-row { display: flex; gap: 12px; margin-top: 1.75rem; }
+.form-btn  { padding: 13px 28px; border-radius: 100px; font-size: 13px; font-weight: 600;
+  cursor: pointer; font-family: var(--fb); border: none; transition: all .25s; }
+.form-btn-primary   { background: var(--o); color: #fff; box-shadow: 0 4px 20px rgba(255,77,0,.3); }
+.form-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,77,0,.5); }
+.form-btn-secondary { background: transparent; color: #999; border: 1px solid var(--border2); }
+.form-btn-secondary:hover { color: #fff; border-color: #888; }
+
+/* Checkbox & Radio */
+.form-check { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; margin-bottom: .75rem; }
+.check-box  { width: 18px; height: 18px; border: 1px solid var(--border2); border-radius: 4px;
+  flex-shrink: 0; margin-top: 1px; transition: all .2s;
+  background: #0d0d0d; display: flex; align-items: center; justify-content: center; }
+input[type=checkbox]:checked + .check-box { background: var(--o); border-color: var(--o); }
+input[type=checkbox]:checked + .check-box::after { content: '✓'; font-size: 11px; color: #fff; }
+input[type=checkbox] { display: none; }
+.check-label { font-size: 12px; color: #888; line-height: 1.6; }
+.check-label a { color: var(--o); text-decoration: none; }
+.radio-group  { display: flex; flex-direction: column; gap: 8px; }
+.radio-option { display: flex; align-items: center; gap: 10px; cursor: pointer;
+  padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px;
+  transition: border-color .2s; }
+.radio-option input[type=radio] { display: none; }
+.radio-circle { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #444;
+  flex-shrink: 0; transition: all .2s; }
+.radio-option.selected { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.04); }
+.radio-option.selected .radio-circle { background: var(--o); border-color: var(--o); box-shadow: 0 0 6px rgba(255,77,0,.4); }
+.radio-text { font-size: 13px; color: #bbb; }
+.radio-option.selected .radio-text { color: #fff; }
+
+/* Success state */
+.form-success { display: none; text-align: center; padding: 3rem; }
+.form-success.active { display: block; }
+.success-icon  { width: 56px; height: 56px; background: var(--o); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: #fff; margin: 0 auto 1.5rem; box-shadow: 0 0 24px rgba(255,77,0,.4); }
+.success-title { font-family: var(--fh); font-size: 22px; font-weight: 800; color: #fff; margin-bottom: .75rem; }
+.success-text  { font-size: 14px; color: #888; line-height: 1.7; max-width: 400px; margin: 0 auto; }
+
+/* Invoice preview */
+.invoice-preview { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+.inv-header { display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.inv-logo { display: flex; align-items: center; gap: 8px; }
+.inv-logo-mark { width: 28px; height: 28px; background: var(--o); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; }
+.inv-logo-name { font-family: var(--fh); font-size: 13px; font-weight: 800; color: #fff; }
+.inv-logo-sub  { font-size: 9px; color: #888; letter-spacing: .1em; text-transform: uppercase; }
+.inv-badge { background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.2);
+  color: var(--o); font-size: 10px; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+.inv-section-title { font-size: 10px; color: #888; letter-spacing: .14em; text-transform: uppercase;
+  margin-bottom: .75rem; margin-top: 1.5rem; }
+.inv-to { font-size: 13px; color: #ccc; line-height: 1.8; }
+.inv-to .inv-name { font-family: var(--fh); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: .25rem; }
+.inv-placeholder { color: #555; font-style: italic; }
+.inv-line { display: flex; justify-content: space-between; align-items: flex-start;
+  padding: .75rem 0; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+.inv-line-label { color: #888; max-width: 220px; line-height: 1.5; }
+.inv-line-val   { color: #fff; font-weight: 600; font-family: var(--fh); font-size: 14px; white-space: nowrap; }
+.inv-total { background: var(--bg); border: 1px solid rgba(255,77,0,.2); border-radius: 12px;
+  padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+.inv-total-label { font-size: 13px; color: #888; }
+.inv-total-val   { font-family: var(--fh); font-size: 24px; font-weight: 800; color: var(--o); }
+.inv-footer { font-size: 11px; color: #666; line-height: 1.7; margin-top: 1.5rem; padding-top: 1rem;
+  border-top: 1px solid var(--border); }
+
+/* ══ TRENNER ═════════════════════════════════════════════ */
+.trenner {
+  padding: 3rem 2.5rem; background: var(--bg); border-top: 1px solid var(--border); text-align: center;
+}
+.trenner-label { font-size: 11px; color: rgba(255,255,255,.4); letter-spacing: .18em; text-transform: uppercase; margin-bottom: .75rem; }
+.trenner-title { font-family: var(--fh); font-size: clamp(20px, 3vw, 28px); font-weight: 800;
+  color: #fff; margin-bottom: 1.5rem; letter-spacing: -.5px; }
+.trenner-title span { color: var(--ice); }
+.trenner-title span.orange { color: var(--o); }
+
+/* ══ POTENZIALANALYSE ════════════════════════════════════ */
+.potential-section { border-top: 3px solid var(--border); }
+.potential-hero { padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr auto;
+  gap: 2rem; align-items: start; position: relative; overflow: hidden; background: var(--bg); }
+.potential-hero::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(168,216,240,.05), transparent); }
+.pot-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
+  background: rgba(168,216,240,.07); border: 1px solid rgba(168,216,240,.18);
+  color: var(--ice2); font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; padding: 6px 16px; border-radius: 100px; width: fit-content; }
+.pot-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ice2); box-shadow: 0 0 6px var(--ice2); }
+.pot-title { font-family: var(--fh); font-size: clamp(28px, 4vw, 48px); font-weight: 800;
+  color: #fff; letter-spacing: -1px; line-height: .95; margin-bottom: 1rem; }
+.pot-title em { color: var(--ice); font-style: normal; }
+.pot-tagline { font-size: 15px; color: #888; line-height: 1.8; max-width: 560px; }
+.pot-free-box { background: rgba(168,216,240,.04); border: 1px solid rgba(168,216,240,.12);
+  border-radius: 20px; padding: 2rem; text-align: center; min-width: 200px; position: relative; z-index: 1; flex-shrink: 0; }
+.pfb-label { font-size: 10px; color: #aaa; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+.pfb-price { font-family: var(--fh); font-size: 44px; font-weight: 800; color: #fff; line-height: 1; }
+.pfb-sub   { font-size: 11px; color: #888; margin-top: .4rem; }
+.pfb-cta   { width: 100%; margin-top: 1.5rem; background: var(--bg2); color: var(--ice2);
+  border: 1px solid rgba(168,216,240,.2); padding: 13px; border-radius: 100px; font-size: 13px;
+  font-weight: 600; cursor: pointer; font-family: var(--fb); transition: all .25s; }
+.pfb-cta:hover { background: rgba(168,216,240,.1); color: var(--ice); border-color: rgba(168,216,240,.35); }
+
+.analysis-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); margin-top: 2.5rem; }
+.ag-card { background: var(--bg); padding: 2rem 1.75rem; display: flex; gap: 1rem; align-items: flex-start; }
+.ag-icon { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(168,216,240,.06); border: 1px solid rgba(168,216,240,.15);
+  display: flex; align-items: center; justify-content: center; }
+.ag-title { font-family: var(--fh); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+.ag-text  { font-size: 13px; color: #888; line-height: 1.65; }
+
+/* ══ POTENZIAL FORMULAR ══════════════════════════════════ */
+.potential-form-section { padding: 5rem 2.5rem; background: var(--bg2); border-top: 1px solid var(--border); }
+.pot-form-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+.pot-sidebar { display: flex; flex-direction: column; gap: 2rem; }
+.pot-info-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; }
+.pic-title { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+.pic-items { display: flex; flex-direction: column; gap: .75rem; }
+.pic-item  { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: #999; }
+.pic-dot   { width: 6px; height: 6px; border-radius: 50%; background: var(--ice2); flex-shrink: 0; margin-top: 5px; opacity: .6; }
+.pot-contact { background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; }
+.poc-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
+.poc-items { display: flex; flex-direction: column; gap: 1rem; }
+.poc-item  { display: flex; align-items: center; gap: 12px; }
+.poc-icon  { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(255,77,0,.2);
+  background: rgba(255,77,0,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.poc-text  { font-size: 12px; color: #999; }
+.poc-text strong { color: #ccc; display: block; font-size: 11px; margin-bottom: 1px; }
+
+/* Range slider */
+.budget-display { font-family: var(--fh); font-size: 28px; font-weight: 800; color: var(--o);
+  margin-bottom: .75rem; }
+.range-input { width: 100%; -webkit-appearance: none; background: var(--border); height: 4px;
+  border-radius: 2px; outline: none; cursor: pointer; }
+.range-input::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px;
+  border-radius: 50%; background: var(--o); cursor: pointer; box-shadow: 0 0 8px rgba(255,77,0,.5); }
+.range-labels { display: flex; justify-content: space-between; font-size: 10px; color: #555; margin-top: .4rem; }
+
+/* ══ ZUSAMMENARBEIT ANFRAGE ══════════════════════════════ */
+.collab-section { border-top: 3px solid var(--border); }
+.collab-header  { padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr auto;
+  gap: 3rem; align-items: start; position: relative; overflow: hidden; background: var(--bg); }
+.collab-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 600px 400px at 85% 50%, rgba(255,77,0,.07), transparent); }
+.collab-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2); color: var(--o);
+  font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px; width: fit-content; }
+.collab-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--o);
+  box-shadow: 0 0 6px var(--o); animation: blink 1.8s ease-in-out infinite; }
+.collab-title { font-family: var(--fh); font-size: clamp(28px, 4vw, 52px); font-weight: 800;
+  color: #fff; letter-spacing: -1.5px; line-height: .95; margin-bottom: 1rem; }
+.collab-title em { color: var(--o); font-style: normal; }
+.collab-tagline { font-size: 15px; color: #888; line-height: 1.8; max-width: 580px; }
+.collab-price-box { background: var(--bg3); border: 1px solid var(--border); border-radius: 20px;
+  padding: 2rem; text-align: center; min-width: 200px; position: relative; z-index: 1; flex-shrink: 0; }
+.collab-3cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+.collab-col { background: var(--bg2); padding: 2.5rem 2rem; }
+.collab-col-icon { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,77,0,.2);
+  background: rgba(255,77,0,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.collab-col-title { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: .75rem; }
+.collab-col-text  { font-size: 12px; color: #888; line-height: 1.7; }
+
+/* ══ CTA STRIP ═══════════════════════════════════════════ */
+.cta-strip { padding: 5rem 2.5rem; text-align: center; border-top: 1px solid var(--border); background: var(--bg2); }
+.cta-strip h2 { font-family: var(--fh); font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 800; color: #fff; letter-spacing: -.02em; margin-bottom: 1rem; }
+.cta-strip h2 em { color: var(--o); font-style: normal; }
+.cta-strip p { font-size: 15px; color: rgba(255,255,255,.45); margin-bottom: 2rem; }
+.cta-note-small { margin-top: 1.25rem; font-size: 12px; color: rgba(255,255,255,.25); }
+
+/* ══ FOOTER ══════════════════════════════════════════════ */
+.ang-footer { text-align: center; padding: 36px 24px; font-size: 12px; color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.06); }
+.ang-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
+.ang-footer a:hover { color: var(--o); }
+
+/* ══ POT SUCCESS ═════════════════════════════════════════ */
+.pot-success { display: none; text-align: center; padding: 3rem; }
+.pot-success.active { display: block; }
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .ang-h1               { color: #0D1117 !important; }
+html[data-theme="light"] .ang-sub              { color: #495057 !important; }
+html[data-theme="light"] .sec-body             { color: #495057 !important; }
+html[data-theme="light"] .hero-card-preview    { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .hcp-name             { color: #0D1117 !important; }
+html[data-theme="light"] .hcp-desc             { color: #495057 !important; }
+html[data-theme="light"] .hcp-arrow            { color: #ADB5BD !important; }
+html[data-theme="light"] .product-title        { color: #0D1117 !important; }
+html[data-theme="light"] .product-tagline      { color: #495057 !important; }
+html[data-theme="light"] .product-price-box    { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .ppb-label            { color: #495057 !important; }
+html[data-theme="light"] .ppb-price            { color: #0D1117 !important; }
+html[data-theme="light"] .ppb-sub              { color: #495057 !important; }
+html[data-theme="light"] .ppb-mwst             { color: #868E96 !important; }
+html[data-theme="light"] .wi-card              { background: #FFFFFF !important; }
+html[data-theme="light"] .wi-title             { color: #0D1117 !important; }
+html[data-theme="light"] .wi-text              { color: #495057 !important; }
+html[data-theme="light"] .pf-title             { color: #0D1117 !important; }
+html[data-theme="light"] .pf-text              { color: #495057 !important; }
+html[data-theme="light"] .si-label             { color: #495057 !important; }
+html[data-theme="light"] .form-title           { color: #0D1117 !important; }
+html[data-theme="light"] .form-subtitle        { color: #495057 !important; }
+html[data-theme="light"] .form-label           { color: #495057 !important; }
+html[data-theme="light"] .form-hint            { color: #868E96 !important; }
+html[data-theme="light"] .form-input           { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .form-select          { background-color: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .check-label          { color: #495057 !important; }
+html[data-theme="light"] .radio-text           { color: #495057 !important; }
+html[data-theme="light"] .radio-option         { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .radio-option.selected .radio-text { color: #0D1117 !important; }
+html[data-theme="light"] .success-title        { color: #0D1117 !important; }
+html[data-theme="light"] .success-text         { color: #495057 !important; }
+html[data-theme="light"] .invoice-preview      { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .inv-logo-name        { color: #0D1117 !important; }
+html[data-theme="light"] .inv-logo-sub         { color: #495057 !important; }
+html[data-theme="light"] .inv-section-title    { color: #495057 !important; }
+html[data-theme="light"] .inv-to               { color: #495057 !important; }
+html[data-theme="light"] .inv-to .inv-name     { color: #0D1117 !important; }
+html[data-theme="light"] .inv-line-val         { color: #0D1117 !important; }
+html[data-theme="light"] .inv-line-label       { color: #868E96 !important; }
+html[data-theme="light"] .inv-total            { background: #FFFFFF !important; }
+html[data-theme="light"] .inv-total-label      { color: #495057 !important; }
+html[data-theme="light"] .trenner-label        { color: #868E96 !important; }
+html[data-theme="light"] .trenner-title        { color: #0D1117 !important; }
+html[data-theme="light"] .pot-title            { color: #0D1117 !important; }
+html[data-theme="light"] .pot-tagline          { color: #495057 !important; }
+html[data-theme="light"] .ag-title             { color: #0D1117 !important; }
+html[data-theme="light"] .ag-text              { color: #495057 !important; }
+html[data-theme="light"] .ag-card              { background: #FFFFFF !important; }
+html[data-theme="light"] .pic-title            { color: #0D1117 !important; }
+html[data-theme="light"] .poc-title            { color: #0D1117 !important; }
+html[data-theme="light"] .poc-text             { color: #495057 !important; }
+html[data-theme="light"] .poc-text strong      { color: #212529 !important; }
+html[data-theme="light"] .pfb-price            { color: #0D1117 !important; }
+html[data-theme="light"] .pfb-sub              { color: #495057 !important; }
+html[data-theme="light"] .collab-title         { color: #0D1117 !important; }
+html[data-theme="light"] .collab-tagline       { color: #495057 !important; }
+html[data-theme="light"] .collab-col           { background: #FFFFFF !important; }
+html[data-theme="light"] .collab-col-title     { color: #0D1117 !important; }
+html[data-theme="light"] .collab-col-text      { color: #495057 !important; }
+html[data-theme="light"] .cta-strip h2         { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip p          { color: #495057 !important; }
+html[data-theme="light"] .cta-note-small       { color: #868E96 !important; }
+html[data-theme="light"] .ang-footer           { color: #868E96 !important; }
+html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Leistungen & Angebote – Averio Media",
+  "url": "https://averio-media.de/leistungen",
+  "description": "Google Ads Betreuung: Kampagnencheck, kostenlose Potenzialanalyse oder monatliche Vollbetreuung.",
+  "mainEntity": {
+    "@type": "OfferCatalog",
+    "name": "Google Ads Leistungen von Averio Media",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Google Ads Kampagnencheck", "price": "199", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Kostenlose Potenzialanalyse", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Monatliche Google Ads Betreuung", "description": "Laufende monatliche Betreuung — flexibel kündbar" }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav">
+  <a href="averio-premium.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Averio Media</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="averio-premium.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 &#8364;</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kostenloser Kurzcheck</a>
+</nav>
+
+<!-- ════ HERO ═════════════════════════════════════════════ -->
+<section class="ang-hero">
+  <div class="ang-hero-inner">
+    <div>
+      <div class="ang-eyebrow">Unsere Angebote</div>
+      <h1 class="ang-h1">Drei Wege zu<br><em>besseren</em> Ergebnissen.</h1>
+      <p class="ang-sub">Ob du bereits Google Ads schaltest und wissen willst, was darin steckt — oder noch ganz am Anfang stehst: Hier findest du den richtigen nächsten Schritt.</p>
+      <div class="hero-pills">
+        <div class="hero-pill"><div class="hero-pill-dot"></div>Kein Abo · kein Versteck</div>
+        <div class="hero-pill"><div class="hero-pill-dot"></div>Ehrliche Einschätzung</div>
+        <div class="hero-pill"><div class="hero-pill-dot"></div>Direkt mit Marie</div>
+      </div>
+    </div>
+
+    <div class="hero-cards">
+      <!-- Card 1: Kampagnencheck -->
+      <a class="hero-card-preview featured" href="#kampagnencheck">
+        <div class="hcp-icon orange">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 12l5-5 4 4 7-7" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 5h3v3" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hcp-text">
+          <div class="hcp-label">Einmalig · Bezahlt</div>
+          <div class="hcp-name">Kampagnencheck</div>
+          <div class="hcp-desc">Du hast Ads laufen — wir schauen rein</div>
+        </div>
+        <div class="hcp-price">199 &#8364;</div>
+        <div class="hcp-arrow">→</div>
+      </a>
+
+      <!-- Card 2: Potenzialanalyse -->
+      <a class="hero-card-preview" href="#potenzialanalyse">
+        <div class="hcp-icon ice">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3v4M11 15v4M3 11h4M15 11h4" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="11" r="3" stroke="#A8D8F0" stroke-width="1.5"/></svg>
+        </div>
+        <div class="hcp-text">
+          <div class="hcp-label ice-label">Einmalig · Kostenlos</div>
+          <div class="hcp-name">Potenzialanalyse</div>
+          <div class="hcp-desc">Du startest neu — wir zeigen dir was möglich ist</div>
+        </div>
+        <div class="hcp-price free">Gratis</div>
+        <div class="hcp-arrow">→</div>
+      </a>
+
+      <!-- Card 3: Zusammenarbeit -->
+      <a class="hero-card-preview" href="#collab-anfrage">
+        <div class="hcp-icon orange">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 11l3 3 5-5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="8" stroke="#FF4D00" stroke-width="1.5"/></svg>
+        </div>
+        <div class="hcp-text">
+          <div class="hcp-label">Laufend · Monatlich</div>
+          <div class="hcp-name">Zusammenarbeit anfragen</div>
+          <div class="hcp-desc">Du willst professionelle, laufende Betreuung</div>
+        </div>
+        <div class="hcp-price" style="font-size:13px;color:#777;">Kostenlos<br><span style="font-size:10px;">anfragen</span></div>
+        <div class="hcp-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TICKER ═════════════════════════════════════════ -->
+<div class="ticker"><div class="ticker-track">
+  <div class="tick-item">Kampagnencheck 199 &#8364; netto</div>
+  <div class="tick-item">Potenzialanalyse kostenlos</div>
+  <div class="tick-item">Sofort buchbar</div>
+  <div class="tick-item">Rechnung inklusive</div>
+  <div class="tick-item">Direkte Betreuung durch Marie</div>
+  <div class="tick-item">100% Google Ads Fokus</div>
+  <div class="tick-item">Kampagnencheck 199 &#8364; netto</div>
+  <div class="tick-item">Potenzialanalyse kostenlos</div>
+  <div class="tick-item">Sofort buchbar</div>
+  <div class="tick-item">Rechnung inklusive</div>
+  <div class="tick-item">Direkte Betreuung durch Marie</div>
+  <div class="tick-item">100% Google Ads Fokus</div>
+</div></div>
+
+
+<!-- ══════════════════════════════════════
+     PRODUKT 1: KAMPAGNENCHECK
+══════════════════════════════════════ -->
+<div class="product-section" id="kampagnencheck">
+
+  <div class="product-header">
+    <div>
+      <div class="product-badge"><div class="product-badge-dot"></div>Einmalig · 199 &#8364; netto</div>
+      <div class="product-title">Der <em>Kampagnencheck</em></div>
+      <p class="product-tagline">Du hast Google Ads laufen — aber das Bauchgefühl sagt: da ist mehr drin. Oder du weißt schlicht nicht, ob dein Geld gut investiert ist. Genau dafür gibt es den Kampagnencheck. Wir schauen uns dein Konto an, finden die Schwachstellen und liefern dir ein klares, priorisiertes Reporting — ohne Agentur-Kauderwelsch.</p>
+    </div>
+    <div class="product-price-box">
+      <div class="ppb-label">Einmaliger Preis</div>
+      <div class="ppb-price"><span>199</span> &#8364;</div>
+      <div class="ppb-sub">netto · Kleinunternehmer</div>
+      <div class="ppb-mwst">gem. &#167; 19 UStG keine MwSt.</div>
+      <button class="ppb-cta" onclick="scrollTo('kampagnencheck-form')">Jetzt buchen →</button>
+    </div>
+  </div>
+
+  <!-- WAS ENTHALTEN IST -->
+  <div class="sec">
+    <div class="sec-ey">Was du bekommst</div>
+    <h2 class="sec-title">Was im <em>Kampagnencheck</em> steckt</h2>
+    <div class="whats-included" style="margin-top:2.5rem;">
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l4-4 4 4 6-6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-num">01 · Struktur-Analyse</div>
+        <div class="wi-title">Kampagnenstruktur &amp; Keywords</div>
+        <div class="wi-text">Wir prüfen, wie dein Konto aufgebaut ist: Anzeigengruppen-Logik, Keyword-Typen, Negative-Listen, Qualitätsfaktoren. Du siehst sofort, wo strukturelle Probleme Budget verbrennen.</div>
+        <div class="wi-tag">Detailtiefe: hoch</div>
+      </div>
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#FF4D00" stroke-width="1.5"/><path d="M10 6v4l2 2" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="wi-num">02 · Tracking-Check</div>
+        <div class="wi-title">Conversion-Tracking &amp; Datenbasis</div>
+        <div class="wi-text">Wir pr&#252;fen ob ein Tracking eingerichtet ist und geben dir Impulse zum richtigen Tracking &#8212; damit deine Datenbasis valide ist und du fundierte Entscheidungen treffen kannst.</div>
+        <div class="wi-tag">GA4 + GTM</div>
+      </div>
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="12" width="4" height="6" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="8" y="7" width="4" height="11" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="14" y="2" width="4" height="16" rx="1" stroke="#FF4D00" stroke-width="1.5"/></svg></div>
+        <div class="wi-num">03 · Performance-Bewertung</div>
+        <div class="wi-title">Budget, CPC &amp; ROAS-Analyse</div>
+        <div class="wi-text">Wir analysieren Keywords und Budget, um unn&#246;tigen Budgetverlust zu vermeiden &#8212; und zeigen dir konkret, wo dein Geld sinnvoll eingesetzt ist und wo es verloren geht.</div>
+        <div class="wi-tag">Zahlen &amp; Fakten</div>
+      </div>
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 6h12M4 10h8M4 14h6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="wi-num">04 · Anzeigentexte</div>
+        <div class="wi-title">Copy &amp; Message-Market-Fit</div>
+        <div class="wi-text">Sprechen deine Anzeigen wirklich die Suchabsicht an? Wir bewerten Headlines, Beschreibungen und Extensions — und zeigen dir konkrete Verbesserungspotenziale.</div>
+        <div class="wi-tag">Copywriting-Review</div>
+      </div>
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 10h16M10 2l8 8-8 8" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-num">05 · Handlungsplan</div>
+        <div class="wi-title">Priorisierte Maßnahmen</div>
+        <div class="wi-text">Kein Lagebericht ohne Ausblick. Du bekommst eine priorisierte Liste der wichtigsten Maßnahmen — sortiert nach Impact und Aufwand. Damit du sofort weißt, wo du anfangen sollst.</div>
+        <div class="wi-tag">Sofort umsetzbar</div>
+      </div>
+      <div class="wi-card">
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 16l4-4 4 4 8-10" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-num">06 · Deliverable</div>
+        <div class="wi-title">Ausführliches PDF-Reporting</div>
+        <div class="wi-text">Alles gebündelt in einem professionellen Report — inkl. Screenshots, Kennzahlen, Bewertung und Empfehlungen. Für dich und dein Team verständlich aufbereitet. Keine Zahlenfriedhöfe.</div>
+        <div class="wi-tag">PDF-Report</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABLAUF -->
+  <div class="sec-alt">
+    <div class="sec-ey">So läuft es ab</div>
+    <h2 class="sec-title">Nach der Buchung bis zum <em>Report</em></h2>
+    <p class="sec-body">Du buchst, wir machen den Rest. Kein langes Hin und Her — klarer Prozess, klares Ergebnis.</p>
+    <div class="process-flow" style="margin-top:3.5rem;">
+      <div class="pf-line-track"><div class="pf-line-fill"></div></div>
+      <div class="pf-step">
+        <div class="pf-circle done">1</div>
+        <div class="pf-title">Buchung &amp; Zahlung</div>
+        <div class="pf-text">Formular ausfüllen, Rechnung erhalten, per Überweisung bezahlen</div>
+      </div>
+      <div class="pf-step">
+        <div class="pf-circle done">2</div>
+        <div class="pf-title">Kontozugang</div>
+        <div class="pf-text">Du gibst uns Lesezugriff auf dein Google-Ads-Konto</div>
+      </div>
+      <div class="pf-step">
+        <div class="pf-circle done">3</div>
+        <div class="pf-title">Analyse</div>
+        <div class="pf-text">Wir analysieren dein Konto systematisch — dauert 2–4 Werktage</div>
+      </div>
+      <div class="pf-step">
+        <div class="pf-circle done">4</div>
+        <div class="pf-title">Report</div>
+        <div class="pf-text">Du erhältst deinen Report als PDF per E-Mail</div>
+      </div>
+      <div class="pf-step">
+        <div class="pf-circle">5</div>
+        <div class="pf-title">Optional: Beratung</div>
+        <div class="pf-text">Gerne besprechen wir den Report in einem kurzen Call</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUCHUNGSFORMULAR -->
+  <div class="booking-section" id="kampagnencheck-form">
+    <div class="sec-ey">Jetzt buchen</div>
+    <h2 class="sec-title" style="margin-bottom:3rem;">Kampagnencheck <em>buchen</em></h2>
+
+    <div class="booking-grid">
+      <!-- FORM -->
+      <div>
+        <div class="step-indicators" id="step-indicators">
+          <div class="si active" id="si-1"><div class="si-circle">1</div><div class="si-label">Kontaktdaten</div></div>
+          <div class="si-line"></div>
+          <div class="si" id="si-2"><div class="si-circle">2</div><div class="si-label">Rechnungsdaten</div></div>
+          <div class="si-line"></div>
+          <div class="si" id="si-3"><div class="si-circle">3</div><div class="si-label">Google Ads</div></div>
+          <div class="si-line"></div>
+          <div class="si" id="si-4"><div class="si-circle">4</div><div class="si-label">Bestätigung</div></div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="form-step active" id="step-1">
+          <div class="form-title">Deine Kontaktdaten</div>
+          <div class="form-subtitle">Damit wir wissen, wer du bist und wie wir dich erreichen können.</div>
+          <div class="form-input-row">
+            <div class="form-group">
+              <label class="form-label">Vorname *</label>
+              <input class="form-input" id="f-vorname" type="text" placeholder="Marie" oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nachname *</label>
+              <input class="form-input" id="f-nachname" type="text" placeholder="Mustermann" oninput="updatePreview()">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-Mail-Adresse *</label>
+            <input class="form-input" id="f-email" type="email" placeholder="deine@email.de" oninput="updatePreview()">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefon (optional)</label>
+            <input class="form-input" id="f-telefon" type="tel" placeholder="+49 000 00000000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Unternehmensname</label>
+            <input class="form-input" id="f-firma" type="text" placeholder="Muster GmbH" oninput="updatePreview()">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Website-URL</label>
+            <input class="form-input" id="f-website" type="url" placeholder="https://deine-seite.de">
+          </div>
+          <div class="form-btn-row">
+            <button class="form-btn form-btn-primary" onclick="nextStep(2)">Weiter: Rechnungsdaten →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-step" id="step-2">
+          <div class="form-title">Rechnungsdaten</div>
+          <div class="form-subtitle">Diese Angaben erscheinen auf deiner Rechnung.</div>
+          <div class="form-group">
+            <label class="form-label">Rechnungsempfänger *</label>
+            <input class="form-input" id="f-re-name" type="text" placeholder="Muster GmbH oder Max Mustermann" oninput="updatePreview()">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Straße &amp; Hausnummer *</label>
+            <input class="form-input" id="f-re-strasse" type="text" placeholder="Musterstraße 42" oninput="updatePreview()">
+          </div>
+          <div class="form-input-row">
+            <div class="form-group">
+              <label class="form-label">PLZ *</label>
+              <input class="form-input" id="f-re-plz" type="text" placeholder="12345" oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ort *</label>
+              <input class="form-input" id="f-re-ort" type="text" placeholder="München" oninput="updatePreview()">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Land</label>
+            <select class="form-select" id="f-re-land">
+              <option>Deutschland</option>
+              <option>Österreich</option>
+              <option>Schweiz</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">USt-IdNr. (optional)</label>
+            <input class="form-input" id="f-re-ust" type="text" placeholder="DE123456789">
+            <div class="form-hint">Bei eingetragener USt-IdNr. wird die MwSt. separat ausgewiesen</div>
+          </div>
+          <div class="form-btn-row">
+            <button class="form-btn form-btn-secondary" onclick="nextStep(1)">← Zurück</button>
+            <button class="form-btn form-btn-primary" onclick="nextStep(3)">Weiter: Google Ads →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-step" id="step-3">
+          <div class="form-title">Dein Google Ads Konto</div>
+          <div class="form-subtitle">Damit wir loslegen können — du gibst uns anschließend Lesezugriff.</div>
+          <div class="form-group">
+            <label class="form-label">Google Ads Kundennummer *</label>
+            <input class="form-input" id="f-konto" type="text" placeholder="123-456-7890" oninput="formatKonto(this);updatePreview()">
+            <div class="form-hint">Zu finden oben rechts in deinem Google Ads Konto (Format: 123-456-7890)</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Branche / Was du verkaufst *</label>
+            <input class="form-input" id="f-branche" type="text" placeholder="z.B. Sanitärtechnik, Coaching, Onlineshop...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Monatliches Werbebudget (ca.)</label>
+            <select class="form-select" id="f-budget">
+              <option value="">Bitte wählen</option>
+              <option>Unter 500 €</option>
+              <option>500 – 1.500 €</option>
+              <option>1.500 – 3.000 €</option>
+              <option>3.000 – 5.000 €</option>
+              <option>Über 5.000 €</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Was ist dein größtes Problem?</label>
+            <textarea class="form-input" id="f-problem" rows="3" placeholder="z.B. Zu wenig Leads, hohe CPCs, kein Tracking, schlechte Conversion-Rate..."></textarea>
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label class="form-check">
+              <input type="checkbox" id="f-dsgvo">
+              <div class="check-box"></div>
+              <span class="check-label">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" id="f-agb">
+              <div class="check-box"></div>
+              <span class="check-label">Ich akzeptiere die <a href="#">AGB</a> und die Rechnungsstellung per E-Mail. *</span>
+            </label>
+          </div>
+          <div class="form-btn-row">
+            <button class="form-btn form-btn-secondary" onclick="nextStep(2)">← Zurück</button>
+            <button class="form-btn form-btn-primary" onclick="submitBooking()">Jetzt kostenpflichtig buchen ✓</button>
+          </div>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="form-success">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Buchung eingegangen!</div>
+          <div class="success-text">Wir haben deine Buchung erhalten und senden dir innerhalb von 24 Stunden die Rechnung per E-Mail. Sobald die Zahlung eingegangen ist, erhältst du eine Zugriffsanfrage für dein Google Ads Konto.</div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-top:1.5rem;text-align:left;">
+            <div style="font-size:12px;color:var(--o);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem;font-weight:600;">Was jetzt passiert</div>
+            <div style="font-size:13px;color:#aaa;line-height:2;">
+              <span style="color:#666;">1.</span> Du erhältst deine <strong style="color:#ccc;">Rechnung per E-Mail</strong><br>
+              <span style="color:#666;">2.</span> Bitte &#252;berweise <strong style="color:#ccc;">199,00 &#8364; auf unser Konto</strong><br>
+              <span style="color:#666;">3.</span> Wir schicken dir eine <strong style="color:#ccc;">Zugriffsanfrage für Google Ads</strong><br>
+              <span style="color:#666;">4.</span> Dein <strong style="color:#ccc;">Report ist in 2–4 Werktagen</strong> in deinem Postfach
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECHNUNG PREVIEW -->
+      <div class="invoice-preview" id="invoice-preview">
+        <div class="inv-header">
+          <div class="inv-logo">
+            <div class="inv-logo-mark">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 2L14 13H2L8 2Z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="inv-logo-name">Averio Media</div>
+              <div class="inv-logo-sub">Marie Böttiger</div>
+            </div>
+          </div>
+          <div class="inv-badge">Vorschau</div>
+        </div>
+
+        <div class="inv-section-title">Rechnungsempfänger</div>
+        <div class="inv-to">
+          <div class="inv-name" id="inv-name"><span class="inv-placeholder">Dein Name erscheint hier</span></div>
+          <span id="inv-firma" style="color:#888;font-size:12px;"></span>
+          <div id="inv-adresse"><span class="inv-placeholder" style="font-size:12px;">Adresse nach Schritt 2</span></div>
+        </div>
+
+        <div class="inv-section-title" style="margin-top:1.75rem;">Rechnungsposition</div>
+        <div class="inv-line">
+          <div class="inv-line-label">Kampagnencheck<br><span style="font-size:11px;color:#666;">Google Ads Account-Analyse inkl. Reporting</span></div>
+          <div class="inv-line-val">199,00 &#8364;</div>
+        </div>
+        <div class="inv-line">
+          <div class="inv-line-label" style="color:#888;">Umsatzsteuer gem. &#167; 19 UStG</div>
+          <div class="inv-line-val" style="color:#888;">entf&#228;llt</div>
+        </div>
+        <div class="inv-total">
+          <div class="inv-total-label">Gesamtbetrag</div>
+          <div class="inv-total-val">199,00 &#8364;</div>
+        </div>
+
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:8px;">
+          <div style="font-size:11px;color:var(--o);font-weight:600;margin-bottom:.25rem;">Google Ads Konto</div>
+          <div style="font-size:12px;color:#888;" id="inv-konto"><span class="inv-placeholder">Wird in Schritt 3 ergänzt</span></div>
+        </div>
+
+        <div class="inv-footer">
+          Zahlbar nach Erhalt der Rechnung per Banküberweisung.<br>
+          Averio Media · Marie Böttiger · Bayern, Deutschland
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ TRENNER 1 ══════════════════════════════════════════ -->
+<div style="padding:4rem 2.5rem;background:linear-gradient(135deg,rgba(168,216,240,.07) 0%,rgba(168,216,240,.02) 100%);border-top:2px solid rgba(168,216,240,.18);border-bottom:2px solid rgba(168,216,240,.18);text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at 50% 50%,rgba(168,216,240,.06),transparent);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ice2);font-weight:700;margin-bottom:1rem;opacity:.8;">
+      <span style="display:block;width:20px;height:1px;background:var(--ice2);opacity:.6;"></span>
+      Noch kein Google Ads Konto?
+      <span style="display:block;width:20px;height:1px;background:var(--ice2);opacity:.6;"></span>
+    </div>
+    <div style="font-family:var(--fh);font-size:clamp(22px,3vw,32px);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:1.25rem;">
+      Die kostenlose <span style="color:var(--ice);">Potenzialanalyse</span> zeigt dir,<br>ob Google Ads sich f&#252;r dich lohnt.
+    </div>
+    <p style="font-size:14px;color:#888;max-width:500px;margin:0 auto 2rem;line-height:1.75;">Ehrliche Einsch&#228;tzung. Keine Verpflichtung. Kein Verkaufsdruck.</p>
+    <a href="#potenzialanalyse" style="background:rgba(168,216,240,.1);color:var(--ice2);border:1px solid rgba(168,216,240,.3);padding:13px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);transition:all .2s;text-decoration:none;display:inline-block;">Jetzt kostenfrei anfragen &#8595;</a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PRODUKT 2: POTENZIALANALYSE
+══════════════════════════════════════ -->
+<div class="potential-section" id="potenzialanalyse">
+
+  <div class="potential-hero">
+    <div>
+      <div class="pot-badge"><div class="pot-badge-dot"></div>Kostenlos &amp; Unverbindlich</div>
+      <div class="pot-title">Die kostenlose<br><em>Potenzialanalyse</em></div>
+      <p class="pot-tagline">Du denkst über Google Ads nach, aber weißt nicht ob es für dich passt — oder wie viel Budget du brauchst? In der kostenlosen Potenzialanalyse schauen wir uns dein Business, deine Zielgruppe und den Wettbewerb an und sagen dir ehrlich, was realistisch drin ist.</p>
+    </div>
+    <div class="pot-free-box">
+      <div class="pfb-label">Dein Investment</div>
+      <div class="pfb-price">0 €</div>
+      <div class="pfb-sub">100% kostenlos &amp; unverbindlich</div>
+      <button class="pfb-cta" onclick="scrollTo('potenzial-form')">Jetzt anfragen →</button>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">Was wir analysieren</div>
+    <h2 class="sec-title">Was in der Analyse <em>steckt</em></h2>
+    <div class="analysis-grid">
+      <div class="ag-card">
+        <div class="ag-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#A8D8F0" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><div class="ag-title">Suchvolumen &amp; Nachfrage</div><div class="ag-text">Wie oft wird nach deinem Angebot gesucht? Wir schauen uns das monatliche Suchvolumen relevanter Keywords in deiner Region an.</div></div>
+      </div>
+      <div class="ag-card">
+        <div class="ag-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h14M9 2l7 7-7 7" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><div class="ag-title">Wettbewerbsanalyse</div><div class="ag-text">Wer schaltet schon Ads in deiner Branche und Region? Wie stark ist der Wettbewerb — und ist Luft nach oben?</div></div>
+      </div>
+      <div class="ag-card">
+        <div class="ag-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="9" width="3" height="7" rx="1" stroke="#A8D8F0" stroke-width="1.5"/><rect x="7" y="5" width="3" height="11" rx="1" stroke="#A8D8F0" stroke-width="1.5"/><rect x="12" y="2" width="3" height="14" rx="1" stroke="#A8D8F0" stroke-width="1.5"/></svg></div>
+        <div><div class="ag-title">Budget-Einschätzung</div><div class="ag-text">Was kostet ein Klick in deiner Branche? Wie viel Budget brauchst du für spürbare Ergebnisse? Wir sagen dir ehrlich, was nötig ist.</div></div>
+      </div>
+      <div class="ag-card">
+        <div class="ag-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2v4M9 12v4M2 9h4M12 9h4" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="2" stroke="#A8D8F0" stroke-width="1.5"/></svg></div>
+        <div><div class="ag-title">Potenzial-Einschätzung</div><div class="ag-text">Lohnt sich Google Ads für dich? Und wenn ja: welche Kampagnenarten machen Sinn? Du bekommst eine klare Empfehlung — auch wenn die Antwort mal Nein ist.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULAR -->
+  <div class="potential-form-section" id="potenzial-form">
+    <div class="sec-ey">Kostenlos anfragen</div>
+    <h2 class="sec-title" style="margin-bottom:3rem;">Deine <em>Potenzialanalyse</em> anfragen</h2>
+
+    <div class="pot-form-grid">
+      <div>
+        <div id="pot-form-inner">
+          <div class="form-group">
+            <label class="form-label">Dein Name *</label>
+            <input class="form-input" id="p-name" type="text" placeholder="Max Mustermann">
+          </div>
+          <div class="form-input-row">
+            <div class="form-group">
+              <label class="form-label">E-Mail *</label>
+              <input class="form-input" id="p-email" type="email" placeholder="deine@email.de">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Telefon (optional)</label>
+              <input class="form-input" id="p-tel" type="tel" placeholder="+49 ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Deine Website *</label>
+            <input class="form-input" id="p-website" type="url" placeholder="https://deine-seite.de">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Deine Branche / Was du anbietest *</label>
+            <input class="form-input" id="p-branche" type="text" placeholder="z.B. Steuerberater, Onlineshop, Handwerker...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">In welcher Region bist du tätig?</label>
+            <input class="form-input" id="p-region" type="text" placeholder="z.B. Bayern, Nürnberg &amp; Umgebung, deutschlandweit...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Hast du bereits ein Google Ads Konto?</label>
+            <div class="radio-group" id="rg-konto">
+              <label class="radio-option" onclick="selectRadio(this,'rg-konto')">
+                <input type="radio" name="konto"><div class="radio-circle"></div>
+                <span class="radio-text">Nein — ich starte ganz neu mit Google Ads</span>
+              </label>
+              <label class="radio-option" onclick="selectRadio(this,'rg-konto')">
+                <input type="radio" name="konto"><div class="radio-circle"></div>
+                <span class="radio-text">Ja, aber es läuft nicht zufriedenstellend</span>
+              </label>
+              <label class="radio-option" onclick="selectRadio(this,'rg-konto')">
+                <input type="radio" name="konto"><div class="radio-circle"></div>
+                <span class="radio-text">Ich informiere mich erst noch</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Welches monatliche Budget könntest du dir vorstellen?</label>
+            <div class="budget-display" id="budget-val">1.000 €</div>
+            <input class="range-input" type="range" min="300" max="5000" step="100" value="1000"
+              oninput="document.getElementById('budget-val').textContent=parseInt(this.value).toLocaleString('de-DE')+' €'">
+            <div class="range-labels"><span>300 €</span><span>1.500 €</span><span>3.000 €</span><span>5.000 €</span></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Was erwartest du dir von Google Ads? (optional)</label>
+            <textarea class="form-input" id="p-ziel" rows="3" placeholder="z.B. mehr Anfragen, mehr Shop-Umsatz, Bekanntheit in meiner Region..."></textarea>
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label class="form-check">
+              <input type="checkbox" id="p-dsgvo">
+              <div class="check-box"></div>
+              <span class="check-label">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+            </label>
+          </div>
+          <button class="form-btn form-btn-primary" style="width:100%;padding:15px;" onclick="submitPotenzial()">
+            Kostenlose Potenzialanalyse anfragen →
+          </button>
+          <div style="font-size:11px;color:#666;text-align:center;margin-top:.75rem;">100% kostenlos · Keine Verpflichtung · Antwort innerhalb von 24h</div>
+        </div>
+
+        <div class="pot-success" id="pot-success">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Anfrage erhalten!</div>
+          <div class="success-text">Danke für deine Anfrage! Wir melden uns innerhalb von 24 Stunden bei dir — mit einer ehrlichen Einschätzung deines Google-Ads-Potenzials.</div>
+          <div style="font-size:12px;color:#777;margin-top:1rem;">Schau auch in deinen Spam-Ordner, falls du nichts erhältst.</div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="pot-sidebar">
+        <div class="pot-info-card">
+          <div class="pic-title">Was passiert nach der Anfrage?</div>
+          <div class="pic-items">
+            <div class="pic-item"><div class="pic-dot"></div>Wir melden uns innerhalb von 24h (Werktage)</div>
+            <div class="pic-item"><div class="pic-dot"></div>Kurzes Vorgespräch (10–15 Min.) um dein Business zu verstehen</div>
+            <div class="pic-item"><div class="pic-dot"></div>Wir analysieren Suchvolumen, Wettbewerb &amp; Budget-Bedarf</div>
+            <div class="pic-item"><div class="pic-dot"></div>Wir vereinbaren ein gemeinsames Meeting um die Ergebnisse zu besprechen</div>
+            <div class="pic-item"><div class="pic-dot"></div>Kein Sales-Druck, kein Abo-Modell</div>
+          </div>
+        </div>
+
+        <div class="pot-contact">
+          <div class="poc-title">Oder direkt melden:</div>
+          <div class="poc-items">
+            <div class="poc-item">
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="poc-text"><strong>E-Mail</strong>kontakt@averiomedia.de</div>
+            </div>
+            <div class="poc-item">
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h2l1 3-1.5 1.5c1 2 2.5 3.5 4.5 4.5L10.5 10l3 1v2a1 1 0 01-1 1C5.4 14 2 7.6 2 4a1 1 0 011-1z" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+              <div class="poc-text"><strong>Telefon</strong>Mo–Fr, 9–18 Uhr</div>
+            </div>
+            <div class="poc-item">
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C4.7 1 2 3.7 2 7c0 2 1 3.8 2.5 5L8 15l3.5-3C13 10.8 14 9 14 7c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" stroke="#FF4D00" stroke-width="1.2"/></svg></div>
+              <div class="poc-text"><strong>Region</strong>Bayern &amp; deutschlandweit</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:14px;padding:1.75rem;">
+          <div style="font-size:10px;color:var(--o);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem;">Für wen passt die Analyse?</div>
+          <div style="font-size:12px;color:#999;line-height:2;">
+            <span style="color:var(--o);">✓</span> Unternehmer, die mit Google Ads starten wollen<br>
+            <span style="color:var(--o);">✓</span> Selbstständige, die nicht wissen ob Ads sich lohnen<br>
+            <span style="color:var(--o);">✓</span> Wer ein realistisches Budget-Gefühl braucht<br>
+            <span style="color:var(--o);">✓</span> Wer eine ehrliche Einschätzung statt Hochdruck-Sales will<br>
+            <span style="color:#555;margin-top:.5rem;display:block;">✕ Nicht geeignet: unter 500 € Monatsbudget</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ TRENNER 2 ══════════════════════════════════════════ -->
+<div class="trenner">
+  <div class="trenner-label">Ads laufen bereits — du willst professionelle Betreuung?</div>
+  <div class="trenner-title">Dann frag jetzt eine <span class="orange">Zusammenarbeit</span> an.</div>
+  <a href="#collab-anfrage" style="background:var(--o);color:#fff;border:none;padding:11px 26px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(255,77,0,.3);transition:all .2s;text-decoration:none;display:inline-block;">Zusammenarbeit anfragen ↓</a>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PRODUKT 3: ZUSAMMENARBEIT ANFRAGEN
+══════════════════════════════════════ -->
+<div class="collab-section" id="collab-anfrage">
+
+  <div class="collab-header">
+    <div style="position:relative;z-index:1;">
+      <div class="collab-badge"><div class="collab-badge-dot"></div>Laufende Zusammenarbeit · Monatlich</div>
+      <div class="collab-title">Du schaltest bereits Ads.<br><em>Lass sie für dich arbeiten.</em></div>
+      <p class="collab-tagline">Du hast ein laufendes Google-Ads-Konto, bist aber nicht zufrieden — oder du willst einfach nicht mehr allein dafür verantwortlich sein. Wir übernehmen die vollständige Betreuung: Strategie, Optimierung, Reporting. Du konzentrierst dich auf dein Business.</p>
+    </div>
+    <div class="collab-price-box" style="position:relative;z-index:1;">
+      <div style="font-size:10px;color:#aaa;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;">Einstieg</div>
+      <div style="font-family:var(--fh);font-size:36px;font-weight:800;color:#fff;line-height:1;">Kostenlos</div>
+      <div style="font-size:11px;color:#888;margin-top:.4rem;">Erstgespräch unverbindlich</div>
+      <div style="font-size:11px;color:#666;margin-top:.2rem;">Individuelle Konditionen danach</div>
+      <a href="averio-premium-kontakt.html" style="display:block;width:100%;margin-top:1.5rem;background:var(--o);color:#fff;border:none;padding:13px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(255,77,0,.35);transition:all .25s;text-decoration:none;text-align:center;">Termin buchen →</a>
+    </div>
+  </div>
+
+  <div class="collab-3cols">
+    <div class="collab-col">
+      <div class="collab-col-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h14M9 2l7 7-7 7" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="collab-col-title">Konto-Übernahme &amp; Audit</div>
+      <div class="collab-col-text">Wir analysieren dein bestehendes Konto, identifizieren die wichtigsten Hebel und starten mit einem priorisierten Maßnahmenplan. Kein blinder Weiterlauf.</div>
+    </div>
+    <div class="collab-col">
+      <div class="collab-col-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="10" width="3" height="6" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="7" y="6" width="3" height="10" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="12" y="2" width="3" height="14" rx="1" stroke="#FF4D00" stroke-width="1.5"/></svg>
+      </div>
+      <div class="collab-col-title">Laufende Optimierung</div>
+      <div class="collab-col-text">Wöchentliche Optimierungsrunden: Gebotsanpassungen, Suchanfragen-Bereinigung, A/B-Tests, Budget-Steuerung. Kein Autopilot — aktive Arbeit am Konto.</div>
+    </div>
+    <div class="collab-col">
+      <div class="collab-col-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h9M2 14h6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="collab-col-title">Monatliches Reporting</div>
+      <div class="collab-col-text">Du bekommst jeden Monat ein verständliches Reporting — was wurde optimiert, was hat sich verändert, was sind die nächsten Schritte. Keine Zahlenfriedhöfe.</div>
+    </div>
+  </div>
+
+  <!-- Formular -->
+  <div class="potential-form-section" id="collab-form">
+    <div class="sec-ey">Zusammenarbeit anfragen</div>
+    <h2 class="sec-title" style="margin-bottom:.75rem;">Erzähl uns von <em>deinem Konto</em></h2>
+    <p style="font-size:14px;color:#888;line-height:1.8;margin-bottom:3rem;max-width:600px;">Füll das Formular aus — je mehr wir wissen, desto gezielter können wir im ersten Gespräch auf deine Situation eingehen. Wir melden uns innerhalb von 24 Stunden.</p>
+
+    <div class="pot-form-grid">
+      <div id="collab-form-inner">
+        <div style="font-family:var(--fh);font-size:16px;font-weight:700;color:#fff;margin-bottom:.4rem;">Kontaktdaten</div>
+        <div style="font-size:13px;color:#777;margin-bottom:1.75rem;">Wie können wir dich erreichen?</div>
+
+        <div class="form-input-row">
+          <div class="form-group">
+            <label class="form-label">Vorname *</label>
+            <input class="form-input" type="text" placeholder="Max">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nachname *</label>
+            <input class="form-input" type="text" placeholder="Mustermann">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-Mail *</label>
+          <input class="form-input" type="email" placeholder="deine@email.de">
+        </div>
+        <div class="form-input-row">
+          <div class="form-group">
+            <label class="form-label">Telefon (optional)</label>
+            <input class="form-input" type="tel" placeholder="+49 ...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Unternehmen</label>
+            <input class="form-input" type="text" placeholder="Muster GmbH">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deine Website *</label>
+          <input class="form-input" type="url" placeholder="https://deine-seite.de">
+        </div>
+
+        <div style="border-top:1px solid var(--border);margin:2rem 0;"></div>
+        <div style="font-family:var(--fh);font-size:16px;font-weight:700;color:#fff;margin-bottom:.4rem;">Deine aktuelle Situation</div>
+        <div style="font-size:13px;color:#777;margin-bottom:1.75rem;">Damit wir vorbereitet ins Gespräch gehen können.</div>
+
+        <div class="form-group">
+          <label class="form-label">Branche / Was du verkaufst *</label>
+          <input class="form-input" type="text" placeholder="z.B. Sanitärtechnik, Online-Coaching, Handwerksbetrieb...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Wie lange läuft dein Google Ads Konto schon?</label>
+          <div class="radio-group" id="rg-laufzeit">
+            <label class="radio-option" onclick="selectRadio(this,'rg-laufzeit')"><input type="radio" name="laufzeit"><div class="radio-circle"></div><span class="radio-text">Weniger als 3 Monate</span></label>
+            <label class="radio-option" onclick="selectRadio(this,'rg-laufzeit')"><input type="radio" name="laufzeit"><div class="radio-circle"></div><span class="radio-text">3 – 12 Monate</span></label>
+            <label class="radio-option" onclick="selectRadio(this,'rg-laufzeit')"><input type="radio" name="laufzeit"><div class="radio-circle"></div><span class="radio-text">Mehr als 1 Jahr</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Monatliches Werbebudget (aktuell)</label>
+          <select class="form-select">
+            <option value="">Bitte wählen</option>
+            <option>Unter 500 €</option>
+            <option>500 – 1.500 €</option>
+            <option>1.500 – 3.000 €</option>
+            <option>3.000 – 5.000 €</option>
+            <option>Über 5.000 €</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Was läuft aktuell nicht rund? *</label>
+          <textarea class="form-input" rows="4" placeholder="z.B. Zu wenige Anfragen, hohe Kosten pro Klick, kein Tracking, Leads konvertieren nicht..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Was erwartest du dir von einer Zusammenarbeit?</label>
+          <textarea class="form-input" rows="3" placeholder="z.B. Mehr Leads, niedrigerer CPC, vollständige Übergabe der Kampagnen..."></textarea>
+        </div>
+        <div class="form-group" style="margin-top:1rem;">
+          <label class="form-check">
+            <input type="checkbox" id="c-dsgvo">
+            <div class="check-box"></div>
+            <span class="check-label">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+          </label>
+        </div>
+        <button class="form-btn form-btn-primary" style="width:100%;padding:15px;" onclick="submitCollab()">
+          Zusammenarbeit anfragen →
+        </button>
+        <div style="font-size:11px;color:#666;text-align:center;margin-top:.75rem;">Unverbindlich · Antwort innerhalb von 24h</div>
+
+        <div class="pot-success" id="collab-success">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Anfrage erhalten!</div>
+          <div class="success-text">Wir melden uns innerhalb von 24 Stunden bei dir für ein kurzes Erstgespräch.</div>
+        </div>
+      </div>
+
+      <div class="pot-sidebar">
+        <div class="pot-info-card">
+          <div class="pic-title">Was passiert nach der Anfrage?</div>
+          <div class="pic-items">
+            <div class="pic-item"><div class="pic-dot"></div>Wir melden uns innerhalb von 24h (Werktage)</div>
+            <div class="pic-item"><div class="pic-dot"></div>Kostenloser Kurzcheck (15–20 Min.) mit Marie direkt</div>
+            <div class="pic-item"><div class="pic-dot"></div>Wir schauen uns dein Konto gemeinsam an</div>
+            <div class="pic-item"><div class="pic-dot"></div>Du bekommst ein konkretes Angebot — individuell</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:14px;padding:1.75rem;">
+          <div style="font-size:10px;color:var(--o);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem;">Mindestvoraussetzungen</div>
+          <div style="font-size:12px;color:#999;line-height:2;">
+            <span style="color:var(--o);">✓</span> Monatliches Werbebudget ab 1.000 €<br>
+            <span style="color:var(--o);">✓</span> Bestehendes Google Ads Konto<br>
+            <span style="color:#555;margin-top:.5rem;display:block;">✕ Nicht geeignet: Einmalige Kampagnen ohne Strategie</span>
+          </div>
+        </div>
+        <div class="pot-contact">
+          <div class="poc-title">Lieber direkt Termin buchen?</div>
+          <div class="poc-items">
+            <div class="poc-item">
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="2" stroke="#FF4D00" stroke-width="1.2"/><path d="M2 7h12M5 1v4M11 1v4" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+              <div class="poc-text"><strong>Calendly</strong><a href="averio-premium-kontakt.html" style="color:var(--o);text-decoration:none;">Direkt buchen →</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════ CTA STRIP ═══════════════════════════════════════ -->
+<section class="cta-strip">
+  <h2>Noch unsicher, was für dich <em>passt?</em></h2>
+  <p>Buche ein kostenloses 15-Minuten-Gespräch — wir schauen gemeinsam, welcher Schritt für dich der richtige ist.</p>
+  <a href="averio-premium-kontakt.html" class="btn btn-primary btn-arrow magnetic">Kostenloser Kurzcheck</a>
+  <div class="cta-note-small">Direkt mit Marie · Ca. 15 Minuten</div>
+</section>
+
+<!-- ════ FOOTER ═══════════════════════════════════════════ -->
+<footer class="ang-footer">
+  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+    
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </p>
+</footer>
+
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+
+<script>
+/* ── Form: Kampagnencheck Schritt-Navigation ── */
+let currentStep = 1;
+function nextStep(n) {
+  document.getElementById('step-' + currentStep).classList.remove('active');
+  document.getElementById('si-' + currentStep).classList.remove('active');
+  document.getElementById('si-' + currentStep).classList.add('done');
+  currentStep = n;
+  const el = document.getElementById('step-' + n);
+  if (el) { el.classList.add('active'); }
+  const si = document.getElementById('si-' + n);
+  if (si) { si.classList.remove('done'); si.classList.add('active'); }
+}
+
+function submitBooking() {
+  const dsgvo = document.getElementById('f-dsgvo');
+  const agb   = document.getElementById('f-agb');
+  if (!dsgvo.checked || !agb.checked) {
+    alert('Bitte bestätige Datenschutzerklärung und AGB.');
+    return;
+  }
+  document.getElementById('step-3').classList.remove('active');
+  document.getElementById('form-success').classList.add('active');
+  document.getElementById('si-3').classList.remove('active');
+  document.getElementById('si-3').classList.add('done');
+  document.getElementById('si-4').classList.add('active');
+}
+
+/* Live Rechnung Preview */
+function updatePreview() {
+  const vor = document.getElementById('f-vorname')?.value || '';
+  const nach = document.getElementById('f-nachname')?.value || '';
+  const firma = document.getElementById('f-firma')?.value || '';
+  const konto = document.getElementById('f-konto')?.value || '';
+  const strasse = document.getElementById('f-re-strasse')?.value || '';
+  const plz = document.getElementById('f-re-plz')?.value || '';
+  const ort = document.getElementById('f-re-ort')?.value || '';
+  const reName = document.getElementById('f-re-name')?.value || '';
+
+  const nameEl = document.getElementById('inv-name');
+  if (nameEl) nameEl.textContent = reName || (vor + ' ' + nach).trim() || '';
+  if (!nameEl.textContent) nameEl.innerHTML = '<span class="inv-placeholder">Dein Name erscheint hier</span>';
+
+  const firmaEl = document.getElementById('inv-firma');
+  if (firmaEl) firmaEl.textContent = firma;
+
+  const adrEl = document.getElementById('inv-adresse');
+  if (adrEl) {
+    if (strasse || plz || ort) {
+      adrEl.textContent = (strasse ? strasse + ', ' : '') + (plz ? plz + ' ' : '') + ort;
+    } else {
+      adrEl.innerHTML = '<span class="inv-placeholder" style="font-size:12px;">Adresse nach Schritt 2</span>';
+    }
+  }
+  const kontoEl = document.getElementById('inv-konto');
+  if (kontoEl) {
+    kontoEl.textContent = konto || '';
+    if (!konto) kontoEl.innerHTML = '<span class="inv-placeholder">Wird in Schritt 3 ergänzt</span>';
+  }
+}
+
+function formatKonto(el) {
+  let v = el.value.replace(/\D/g,'').slice(0,10);
+  if (v.length > 6) v = v.slice(0,3)+'-'+v.slice(3,6)+'-'+v.slice(6);
+  else if (v.length > 3) v = v.slice(0,3)+'-'+v.slice(3);
+  el.value = v;
+}
+
+/* ── Radio buttons ── */
+function selectRadio(el, groupId) {
+  document.querySelectorAll('#' + groupId + ' .radio-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+/* ── Potenzialanalyse submit ── */
+function submitPotenzial() {
+  const dsgvo = document.getElementById('p-dsgvo');
+  if (!dsgvo.checked) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+  document.getElementById('pot-form-inner').style.display = 'none';
+  document.getElementById('pot-success').classList.add('active');
+}
+
+/* ── Zusammenarbeit submit ── */
+function submitCollab() {
+  const dsgvo = document.getElementById('c-dsgvo');
+  if (!dsgvo.checked) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+  document.getElementById('collab-form-inner').style.display = 'none';
+  document.getElementById('collab-success').classList.add('active');
+}
+
+/* ── Smooth scroll helper ── */
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+<script>
+/* ── GSAP ScrollTrigger Animations ── */
+gsap.registerPlugin(ScrollTrigger);
+
+/* Initial states */
+gsap.set('.pf-step', { opacity: 0, y: 22 });
+gsap.set('.wi-card', { opacity: 0, y: 26 });
+gsap.set('.ag-card', { opacity: 0, y: 26 });
+gsap.set('.hero-card-preview', { opacity: 0, x: 18 });
+gsap.set(['.ang-eyebrow', '.ang-h1', '.ang-sub', '.hero-pills'], { opacity: 0, y: 22 });
+
+/* Hero entrance – plays immediately */
+gsap.timeline({ delay: 0.25 })
+  .to('.ang-eyebrow',       { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' })
+  .to('.ang-h1',            { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, '-=0.3')
+  .to('.ang-sub',           { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.35')
+  .to('.hero-pills',        { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, '-=0.25')
+  .to('.hero-card-preview', { opacity: 1, x: 0, duration: 0.45, ease: 'power2.out', stagger: 0.13 }, '-=0.2');
+
+/* Section eyebrows + titles fade up */
+document.querySelectorAll('.sec-ey, .sec-title, .sec-body').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out',
+      scrollTrigger: { trigger: el, start: 'top 87%', once: true }
+    }
+  );
+});
+
+/* wi-cards – stagger in when grid enters view */
+ScrollTrigger.batch('.wi-card', {
+  start: 'top 88%', once: true,
+  onEnter: els => gsap.to(els, { opacity: 1, y: 0, stagger: 0.1, duration: 0.55, ease: 'power2.out' })
+});
+
+/* ag-cards – stagger in */
+ScrollTrigger.batch('.ag-card', {
+  start: 'top 88%', once: true,
+  onEnter: els => gsap.to(els, { opacity: 1, y: 0, stagger: 0.1, duration: 0.55, ease: 'power2.out' })
+});
+
+/* Process flow: line draws left → right, then steps pop in */
+gsap.timeline({
+  scrollTrigger: { trigger: '.process-flow', start: 'top 78%', once: true }
+})
+.to('.pf-line-fill', { width: '100%', duration: 1.1, ease: 'power2.inOut' })
+.to('.pf-step', { opacity: 1, y: 0, stagger: 0.16, duration: 0.5, ease: 'back.out(1.5)' }, '-=0.65');
+
+/* CTA strip */
+gsap.fromTo('.cta-strip',
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+    scrollTrigger: { trigger: '.cta-strip', start: 'top 86%', once: true }
+  }
+);
+</script>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+

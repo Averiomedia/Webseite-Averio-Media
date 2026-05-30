@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FF4D00">
+<title>Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media</title>
+<meta name="description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averio-media.de/kontakt">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averio-media.de/kontakt">
+<meta property="og:title" content="Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media">
+<meta property="og:description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
+<meta property="og:image" content="https://averio-media.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media">
+<meta name="twitter:description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
+<meta name="twitter:image" content="https://averio-media.de/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averio-media.de" },
+        { "@type": "ListItem", "position": 2, "name": "Kontakt & Kurzcheck", "item": "https://averio-media.de/kontakt" }
+      ]
+    },
+    {
+      "@type": "ContactPage",
+      "name": "Google Ads Beratung – Kostenloser Erstcheck",
+      "url": "https://averio-media.de/kontakt",
+      "description": "Jetzt kostenloses 30-Minuten-Erstgespräch mit Google Ads Freelancerin Marie Böttiger buchen — kein Verkaufsdruck, direkte Einschätzung.",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "@id": "https://averio-media.de/#business"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
+
+<!-- Calendly CSS wird erst nach Einwilligung dynamisch geladen -->
+
+<!-- Shared Styles -->
+<link rel="stylesheet" href="averio-premium.css">
+
+<style>
+/* ── PAGE SHELL ── */
+body { background: var(--bg); }
+
+/* ── NAV: vollbreit wie Hauptseite, kein Umbrechen ── */
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ── KONTAKT HERO ── */
+.kontakt-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 140px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow */
+.kontakt-hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(255,77,0,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.kontakt-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #FF4D00;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,77,0,.22);
+  border-radius: 100px;
+  padding: 6px 18px 6px 10px;
+  background: rgba(255,77,0,.06);
+}
+
+.kontakt-h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  max-width: 700px;
+}
+
+.kontakt-h1 .accent { color: #FF4D00; }
+
+.kontakt-sub {
+  font-size: clamp(.95rem, 1.4vw, 1.1rem);
+  color: rgba(255,255,255,.48);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+/* Trust badges */
+.kontakt-trust {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.kontakt-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+}
+.kontakt-trust-item svg { flex-shrink: 0; }
+.kontakt-trust-sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.2); }
+
+/* Calendly container */
+.calendly-wrap {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Placeholder anzeigen wenn Calendly-URL noch nicht gesetzt */
+.calendly-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  text-align: center;
+  gap: 16px;
+}
+.calendly-placeholder h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+.calendly-placeholder p {
+  font-size: 14px;
+  color: rgba(255,255,255,.4);
+  max-width: 400px;
+  line-height: 1.6;
+}
+.calendly-placeholder code {
+  background: rgba(255,77,0,.1);
+  border: 1px solid rgba(255,77,0,.2);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #FF4D00;
+  font-family: monospace;
+}
+
+/* ── Calendly Consent-Box ── */
+.calendly-consent-box {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; text-align: center;
+  padding: 64px 40px; gap: 20px;
+}
+.ccb-icon {
+  width: 64px; height: 64px; border-radius: 16px;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.18);
+  display: flex; align-items: center; justify-content: center;
+}
+.ccb-title {
+  font-family: 'Syne', sans-serif; font-size: 1.4rem;
+  font-weight: 700; color: #fff; margin: 0;
+}
+.ccb-text {
+  font-size: 14px; color: rgba(255,255,255,.45);
+  max-width: 420px; line-height: 1.7; margin: 0;
+}
+.ccb-text strong { color: rgba(255,255,255,.75); }
+.ccb-text a { color: #FF4D00; text-decoration: underline; }
+.ccb-buttons {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  justify-content: center; margin-top: 8px;
+}
+.ccb-btn-accept {
+  padding: .75rem 1.8rem; border-radius: 50px; border: none;
+  background: #FF4D00; color: #fff; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; font-size: .85rem;
+  font-weight: 700; letter-spacing: .05em;
+  box-shadow: 0 6px 20px rgba(255,77,0,.35);
+  transition: all .25s ease;
+}
+.ccb-btn-accept:hover { background: #ff6120; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255,77,0,.5); }
+.ccb-btn-link {
+  padding: .75rem 1.4rem; border-radius: 50px;
+  border: 1.5px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.6); font-size: .85rem;
+  font-family: 'DM Sans', sans-serif; font-weight: 500;
+  text-decoration: none; transition: all .25s ease;
+}
+.ccb-btn-link:hover { border-color: rgba(255,255,255,.4); color: #fff; }
+
+/* ── FOOTER MINI ── */
+.kontakt-footer {
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.kontakt-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
+.kontakt-footer a:hover { color: #FF4D00; }
+
+/* ── LIGHT MODE ───────────────────────────────────────── */
+html[data-theme="light"] body { color: #0D1117 !important; }
+html[data-theme="light"] .kontakt-h1,
+html[data-theme="light"] .k-h { color: #0D1117 !important; }
+html[data-theme="light"] .kontakt-sub,
+html[data-theme="light"] .k-sub { color: #495057 !important; }
+html[data-theme="light"] .kontakt-eyebrow { color: var(--ice) !important; opacity: .85 !important; }
+html[data-theme="light"] .step-title,
+html[data-theme="light"] .ccb-title { color: #0D1117 !important; }
+html[data-theme="light"] .step-desc,
+html[data-theme="light"] .ccb-text { color: #495057 !important; }
+html[data-theme="light"] .ccb-text strong { color: #212529 !important; }
+html[data-theme="light"] .consent-box { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .consent-text { color: #495057 !important; }
+html[data-theme="light"] .kontakt-note { color: #868E96 !important; }
+html[data-theme="light"] .kontakt-footer { color: #ADB5BD !important; border-top-color: #E9ECEF !important; }
+html[data-theme="light"] .kontakt-footer a { color: #868E96 !important; }
+html[data-theme="light"] [style*="color:#fff"][style*="font-weight:600"],
+html[data-theme="light"] [style*="color:#fff"][style*="font-weight: 600"] { color: #0D1117 !important; }
+html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Kostenloser Kurzcheck – Averio Media",
+  "url": "https://averio-media.de/kontakt",
+  "description": "Kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister und Handwerk.",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "name": "Averio Media",
+    "email": "kontakt@averiomedia.de",
+    "url": "https://averio-media.de",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "kontakt@averiomedia.de",
+      "contactType": "customer service",
+      "availableLanguage": "Deutsch"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ════ CUSTOM CURSOR ═══════════════════════════════════ -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav">
+  <a href="averio-premium.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Averio Media</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="averio-premium.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 &#8364;</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">
+    Kostenloser Kurzcheck
+  </a>
+</nav>
+
+<!-- ════ HAUPTBEREICH ══════════════════════════════════ -->
+<main class="kontakt-hero">
+
+  <div class="kontakt-eyebrow">
+    <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#FF4D00"/></svg>
+    Kostenlos · Kein Verkaufsdruck · Ehrliches Feedback
+  </div>
+
+  <h1 class="kontakt-h1">
+    Ist Google Ads gerade<br>
+    <span class="accent">die richtige Lösung für dich?</span>
+  </h1>
+
+  <p class="kontakt-sub">
+    In einem kurzen Telefonat finden wir gemeinsam heraus, ob und in welcher Form Google Ads aktuell Sinn für dein Unternehmen macht — ohne Verkaufsdruck, ohne leere Versprechen.
+  </p>
+
+  <!-- Was passiert in dem Telefonat -->
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:560px;width:100%;margin-bottom:2.5rem">
+    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
+      <span style="color:#FF4D00;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">01</span>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Situation verstehen</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Ich höre mir kurz an, was du machst, wen du erreichst und was dein Ziel ist.</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
+      <span style="color:#FF4D00;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">02</span>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Ehrliche Einschätzung</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Ich sage dir direkt, ob Google Ads für dich gerade Sinn macht — oder nicht. Kein Pitch, kein Rumdrucksen.</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
+      <span style="color:#FF4D00;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">03</span>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Nächster Schritt</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Wenn es passt, besprechen wir wie eine Zusammenarbeit konkret aussehen könnte.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kontakt-trust">
+    <div class="kontakt-trust-item">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Telefonat
+    </div>
+    <div class="kontakt-trust-sep"></div>
+    <div class="kontakt-trust-item">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#FF4D00" stroke-width="1.5"/><polyline points="12 6 12 12 16 14" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Ca. 15–20 Minuten
+    </div>
+    <div class="kontakt-trust-sep"></div>
+    <div class="kontakt-trust-item">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ab 1.000 € Werbebudget
+    </div>
+  </div>
+
+  <!-- ══ CALENDLY EMBED ══════════════════════════════════
+       Ersetze DEIN-CALENDLY-LINK mit deinem echten Calendly-Link,
+       z.B.: https://calendly.com/marie-averiomedia/erstgespraech
+  ════════════════════════════════════════════════════════ -->
+  <div class="calendly-wrap" id="calendly-wrap">
+
+    <!-- Consent-Placeholder (wird ausgeblendet sobald Calendly geladen) -->
+    <div class="calendly-consent-box" id="calendly-consent-box">
+      <div class="ccb-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4D00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <h3 class="ccb-title">Termin buchen</h3>
+      <p class="ccb-text">
+        Das Buchungswidget wird von <strong>Calendly</strong> (USA) bereitgestellt. Beim Laden werden Daten – inkl. deiner IP-Adresse – an Calendly übertragen.
+        Weitere Infos in unserer <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+      <div class="ccb-buttons">
+        <button class="ccb-btn-accept" id="calendly-load-btn">Calendly laden &amp; Termin buchen</button>
+        <a class="ccb-btn-link" href="https://calendly.com/mb-topad-info/telefongesprach" target="_blank" rel="noopener">Direkt bei Calendly öffnen ↗</a>
+      </div>
+    </div>
+
+    <!-- Calendly Widget (wird dynamisch befüllt) -->
+    <div id="calendly-widget" style="display:none;min-width:320px;height:700px;"></div>
+
+  </div>
+
+</main>
+
+<!-- ════ FOOTER ═══════════════════════════════════════ -->
+<footer class="kontakt-footer">
+  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+    
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </p>
+</footer>
+
+<!-- CDN Libraries (für Cursor & Animationen) -->
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+
+<!-- Calendly: erst nach Einwilligung laden -->
+<script>
+(function () {
+  var CALENDLY_URL = 'https://calendly.com/mb-topad-info/telefongesprach';
+
+  function loadCalendly() {
+    var consentBox  = document.getElementById('calendly-consent-box');
+    var widgetDiv   = document.getElementById('calendly-widget');
+    if (!consentBox || !widgetDiv) return;
+
+    // CSS laden
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    document.head.appendChild(link);
+
+    // Widget einblenden, Placeholder ausblenden
+    consentBox.style.display = 'none';
+    widgetDiv.style.display  = 'block';
+
+    // Calendly JS laden & Widget initialisieren
+    var script = document.createElement('script');
+    script.src  = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.onload = function () {
+      Calendly.initInlineWidget({
+        url: CALENDLY_URL,
+        parentElement: widgetDiv,
+        prefill: {},
+        utm: {}
+      });
+    };
+    document.body.appendChild(script);
+
+    // In localStorage merken damit Widget beim Reload direkt erscheint
+    try { localStorage.setItem('averio_calendly_consent', '1'); } catch(e) {}
+  }
+
+  // Button-Klick
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('calendly-load-btn');
+    if (btn) btn.addEventListener('click', loadCalendly);
+
+    // Bereits zugestimmt? Direkt laden
+    try {
+      if (localStorage.getItem('averio_calendly_consent') === '1') loadCalendly();
+    } catch(e) {}
+  });
+
+  // Weiterleitung nach Buchung
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.event === 'calendly.event_scheduled') {
+      var p = e.data.payload || {};
+      var params = new URLSearchParams({
+        assigned_to:       (p.event_type && p.event_type.owner && p.event_type.owner.name) || 'Marie Böttiger',
+        event_type_name:   (p.event_type && p.event_type.name) || 'Telefonsgespräch',
+        event_start_time:  (p.event && p.event.start_time)     || '',
+        event_end_time:    (p.event && p.event.end_time)        || '',
+        invitee_full_name: (p.invitee && p.invitee.name)        || '',
+        invitee_email:     (p.invitee && p.invitee.email)       || '',
+      });
+      window.location.href = 'averio-premium-termin-bestaetigung.html?' + params.toString();
+    }
+  });
+})();
+</script>
+
+<!-- Shared JS (Cursor etc.) -->
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FF4D00">
+<title>Preise & Kosten – Google Ads Betreuung | Averio Media</title>
+<meta name="description" content="Transparente Google Ads Preise: Kampagnencheck ab 199 €, kostenlose Potenzialanalyse, monatliche Vollbetreuung ohne versteckte Kosten — Preisliste kostenlos anfordern.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averio-media.de/preisliste">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averio-media.de/preisliste">
+<meta property="og:title" content="Preise & Kosten – Google Ads Betreuung | Averio Media">
+<meta property="og:description" content="Transparente Preise: Kampagnencheck ab 199 €, kostenlose Potenzialanalyse, monatliche Google Ads Vollbetreuung. Keine versteckten Kosten, keine langen Vertragsfallen.">
+<meta property="og:image" content="https://averio-media.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Preise & Kosten – Google Ads Betreuung | Averio Media">
+<meta name="twitter:description" content="Transparente Preise: Kampagnencheck ab 199 €, kostenlose Potenzialanalyse, monatliche Google Ads Vollbetreuung. Keine versteckten Kosten, keine langen Vertragsfallen.">
+<meta name="twitter:image" content="https://averio-media.de/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averio-media.de" },
+        { "@type": "ListItem", "position": 2, "name": "Preise & Kosten", "item": "https://averio-media.de/preisliste" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Google Ads Angebote von Averio Media",
+      "url": "https://averio-media.de/preisliste",
+      "itemListElement": [
+        {
+          "@type": "ListItem", "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Google Ads Kampagnencheck",
+            "description": "Einmaliger Audit deiner bestehenden Google Ads Kampagne mit priorisierten Handlungsempfehlungen.",
+            "offers": { "@type": "Offer", "price": "199", "priceCurrency": "EUR" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Kostenlose Potenzialanalyse",
+            "description": "Kostenloses 30-Minuten-Erstgespräch mit Einschätzung deines Google Ads Potenzials.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Google Ads Vollbetreuung",
+            "description": "Laufende monatliche Google Ads Betreuung für B2B-Dienstleister & Handwerk — inkl. Optimierung und Reporting.",
+            "provider": { "@type": "LocalBusiness", "@id": "https://averio-media.de/#business" }
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<link rel="stylesheet" href="averio-premium.css">
+
+<style>
+:root {
+  --o: #FF4D00; --o2: #FF8A00;
+  --bg: #090909; --bg2: #1e1e1e; --bg3: #272727;
+  --border: #383838; --border2: #444444;
+  --ice: #D6EEFF; --ice2: #A8D8F0;
+  --fh: 'Syne', sans-serif; --fb: 'DM Sans', sans-serif;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x: hidden; }
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ── HERO ─────────────────────────────────────────────── */
+.pl-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.pl-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 600px 500px at 0% 60%, rgba(255,77,0,.07), transparent),
+    radial-gradient(ellipse 400px 400px at 100% 10%, rgba(168,216,240,.04), transparent);
+}
+.pl-left {
+  padding: 9rem 4rem 6rem 2.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.pl-right {
+  display: flex; align-items: center; justify-content: center;
+  padding: 9rem 2.5rem 6rem 3rem;
+  position: relative; z-index: 2;
+}
+.pl-eyebrow {
+  font-size: 10px; letter-spacing: .2em; color: var(--ice);
+  text-transform: uppercase; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 10px; opacity: .8;
+}
+.pl-eyebrow::before { content:''; width:22px; height:1px; background:var(--ice); display:block; opacity:.6; }
+.pl-h1 {
+  font-family: var(--fh);
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 800; line-height: .92;
+  letter-spacing: -2.5px; color: #fff; margin-bottom: 1.75rem;
+}
+.pl-h1 em { color: var(--o); font-style: normal; text-shadow: 0 0 40px rgba(255,77,0,.4); }
+.pl-sub { font-size: 15px; color: #888; line-height: 1.9; max-width: 480px; margin-bottom: 2.5rem; }
+.pl-sub strong { color: #aaa; }
+.pl-trust { display: flex; flex-direction: column; gap: 10px; margin-bottom: 3rem; }
+.pl-trust-item {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(255,255,255,.09); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px;
+}
+.pl-trust-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.18);
+  display: flex; align-items: center; justify-content: center;
+}
+.pl-trust-text { font-size: 12px; color: #999; line-height: 1.5; }
+.pl-trust-text strong { color: #ccc; display: block; font-size: 11px; margin-bottom: 1px; }
+.pl-stats { display: flex; gap: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+.pl-stat-n { font-family: var(--fh); font-size: 36px; font-weight: 800; color: #fff; line-height: 1; }
+.pl-stat-n span { color: var(--o); }
+.pl-stat-l { font-size: 11px; color: var(--ice2); opacity: .65; letter-spacing: .05em; margin-top: 3px; }
+
+/* ── FORMULAR KARTE ───────────────────────────────────── */
+.pl-form-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 24px; padding: 2.5rem;
+  width: 100%; max-width: 480px;
+  box-shadow: 0 40px 80px rgba(0,0,0,.5);
+  position: relative; overflow: hidden;
+}
+.pl-form-card::before {
+  content: ''; position: absolute; top: -1px; left: 20%; right: 20%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--o), transparent);
+}
+.pl-price-hint { display: flex; gap: 10px; margin-bottom: 1.75rem; }
+.pph {
+  flex: 1; background: rgba(255,77,0,.06); border: 1px solid rgba(255,77,0,.15);
+  border-radius: 10px; padding: 12px; text-align: center;
+}
+.pph-val { font-family: var(--fh); font-size: 18px; font-weight: 800; color: var(--o); }
+.pph-label { font-size: 10px; color: #888; margin-top: 2px; letter-spacing: .04em; }
+.pph.free { background: rgba(168,216,240,.04); border-color: rgba(168,216,240,.12); }
+.pph.free .pph-val { color: var(--ice2); }
+.pl-form-title { font-family: var(--fh); font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -.3px; margin-bottom: .5rem; }
+.pl-form-sub { font-size: 13px; color: #888; line-height: 1.7; margin-bottom: 1.75rem; }
+.pl-form-footer { margin-top: 1.25rem; font-size: 11px; color: #555; text-align: center; line-height: 1.7; }
+
+/* Success */
+.pl-success { display: none; text-align: center; padding: 2rem 1rem; }
+.pl-success.active { display: block; }
+.pl-success-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,77,0,.1); border: 2px solid rgba(255,77,0,.3);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem; font-size: 28px;
+}
+.pl-success-title { font-family: var(--fh); font-size: 22px; font-weight: 800; color: #fff; margin-bottom: .75rem; }
+.pl-success-text { font-size: 13px; color: #888; line-height: 1.8; }
+
+/* Manual mode */
+.pl-manual { display: none; padding: 1.5rem; background: rgba(255,255,255,.09); border: 1px solid var(--border2); border-radius: 14px; margin-top: 1.5rem; }
+.pl-manual.active { display: block; }
+.pl-manual-title { font-family: var(--fh); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+.pl-manual-row { display: flex; gap: 8px; align-items: center; margin-bottom: .5rem; font-size: 12px; }
+.pl-manual-label { color: #666; min-width: 80px; }
+.pl-manual-value { color: #ccc; }
+.pl-mailto-btn {
+  display: block; width: 100%; margin-top: 1rem;
+  background: transparent; border: 1px solid rgba(255,77,0,.3);
+  color: var(--o); border-radius: 100px; padding: 11px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  font-family: var(--fb); text-align: center;
+  transition: background .2s;
+}
+.pl-mailto-btn:hover { background: rgba(255,77,0,.08); }
+
+/* Form shared */
+.form-group { margin-bottom: 1.15rem; }
+.form-label { font-size: 11px; color: #aaa; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; display: block; font-weight: 600; }
+.form-input {
+  width: 100%; background: #0d0d0d; border: 1px solid var(--border2);
+  border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #fff;
+  font-family: var(--fb); outline: none; transition: border-color .2s;
+}
+.form-input:focus { border-color: var(--o); }
+.form-input::placeholder { color: #444; }
+.radio-group { display: flex; flex-direction: column; gap: 6px; }
+.radio-option {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg3); border: 1px solid var(--border2); border-radius: 10px;
+  padding: 10px 14px; cursor: pointer; transition: border-color .2s;
+}
+.radio-option.selected { border-color: rgba(255,77,0,.4); background: rgba(255,77,0,.04); }
+.radio-circle { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #444; flex-shrink: 0; transition: border-color .2s; position: relative; }
+.radio-option.selected .radio-circle { border-color: var(--o); }
+.radio-option.selected .radio-circle::after { content: ''; position: absolute; inset: 3px; background: var(--o); border-radius: 50%; }
+.radio-text { font-size: 12px; color: #ccc; }
+.form-check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+.check-box { width: 16px; height: 16px; border: 1.5px solid #444; border-radius: 4px; flex-shrink: 0; margin-top: 1px; transition: all .2s; display: flex; align-items: center; justify-content: center; }
+input[type="checkbox"]:checked + .check-box { background: var(--o); border-color: var(--o); }
+input[type="checkbox"]:checked + .check-box::after { content: '✓'; font-size: 10px; color: #fff; }
+input[type="checkbox"] { display: none; }
+.check-label { font-size: 12px; color: #888; line-height: 1.6; }
+.check-label a { color: var(--ice2); }
+.pl-submit-btn {
+  width: 100%; padding: 14px; background: var(--o); color: #fff;
+  border: none; border-radius: 100px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: var(--fb);
+  box-shadow: 0 4px 24px rgba(255,77,0,.35);
+  transition: all .25s; margin-top: .75rem;
+}
+.pl-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,77,0,.5); }
+.pl-submit-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.form-error { font-size: 12px; color: #ff6b6b; margin-top: .5rem; display: none; }
+.form-error.visible { display: block; }
+
+/* ── TICKER ───────────────────────────────────────────── */
+.g-ticker { background: var(--o); padding: .6rem 0; overflow: hidden; }
+.g-ticker-track { display: flex; animation: gtick 35s linear infinite; width: max-content; }
+.g-tick-item { font-size: 11px; font-weight: 700; color: #fff; letter-spacing: .08em; padding: 0 2rem; white-space: nowrap; }
+.g-tick-item::after { content: '▸'; font-size: 9px; opacity: .5; margin-left: 2rem; }
+@keyframes gtick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── PAKETE GRID ──────────────────────────────────────── */
+.sec { padding: 5rem 2.5rem; border-top: 1px solid var(--border); }
+.sec-alt { padding: 5rem 2.5rem; border-top: 1px solid var(--border); background: var(--bg2); }
+.sec-ey { font-size: 10px; letter-spacing: .18em; color: var(--ice); text-transform: uppercase;
+  margin-bottom: 1rem; font-weight: 600; opacity: .75;
+  display: flex; align-items: center; gap: 8px; }
+.sec-ey::before { content:''; width:16px; height:1px; background:var(--ice); display:block; opacity:.55; }
+.sec-title { font-family: var(--fh); font-size: clamp(26px,3.5vw,44px); font-weight: 800;
+  color: #fff; letter-spacing: -.03em; line-height: 1.0; margin-bottom: 1rem; }
+.sec-title em { color: var(--o); font-style: normal; }
+.sec-body { font-size: 14px; color: #888; line-height: 1.9; max-width: 680px; margin-bottom: 3rem; }
+
+.pl-pakete { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pl-paket {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;
+  transition: border-color .2s;
+}
+.pl-paket:hover { border-color: #666; }
+.pl-paket.featured { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.03); }
+.pl-paket.featured::before {
+  content: 'Beliebt'; position: absolute; top: 14px; right: 14px;
+  background: var(--o); color: #fff; font-size: 9px; font-weight: 700;
+  padding: 3px 10px; border-radius: 100px; letter-spacing: .06em;
+}
+.pl-pak-label { font-size: 10px; color: var(--ice2); opacity: .65; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+.pl-pak-name { font-family: var(--fh); font-size: 20px; font-weight: 800; color: #fff; margin-bottom: .5rem; }
+.pl-pak-price-wrap { display: flex; align-items: baseline; gap: 4px; margin: .75rem 0 1.25rem; }
+.pl-pak-price { font-family: var(--fh); font-size: 42px; font-weight: 800; color: #fff; line-height: 1; }
+.pl-pak-price.blurred { filter: blur(8px); user-select: none; color: #888; transition: filter .5s; }
+.pl-pak-curr { font-size: 18px; color: var(--o); font-family: var(--fh); font-weight: 800; }
+.pl-pak-period { font-size: 12px; color: #777; margin-left: 4px; }
+.pl-pak-desc { font-size: 12px; color: #888; line-height: 1.65; margin-bottom: 1.5rem; }
+.pl-pak-features { display: flex; flex-direction: column; gap: 8px; }
+.pl-pak-feat { font-size: 12px; color: #999; display: flex; gap: 9px; align-items: flex-start; }
+.pl-pak-feat-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--o); flex-shrink: 0; margin-top: 5px; box-shadow: 0 0 4px var(--o); }
+.pl-lock-note {
+  margin-top: 1.25rem; padding: 10px 14px; border-radius: 8px;
+  background: rgba(255,77,0,.06); border: 1px solid rgba(255,77,0,.12);
+  font-size: 11px; color: var(--o); display: flex; align-items: center; gap: 8px;
+}
+.pl-pak-cta {
+  width: 100%; margin-top: 1.5rem; padding: 12px;
+  border-radius: 100px; font-size: 12px; font-weight: 700;
+  cursor: pointer; font-family: var(--fb); border: none; transition: all .2s;
+}
+.pl-pak-cta.primary { background: var(--o); color: #fff; box-shadow: 0 4px 20px rgba(255,77,0,.3); }
+.pl-pak-cta.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,77,0,.5); }
+.pl-pak-cta.ghost { background: transparent; color: var(--ice2); border: 1px solid rgba(168,216,240,.2); }
+.pl-pak-cta.ghost:hover { border-color: rgba(168,216,240,.4); background: rgba(168,216,240,.05); }
+.pl-pak-cta.secondary { background: var(--border); color: #999; }
+.pl-pak-cta.secondary:hover { background: var(--border2); color: #ccc; }
+
+/* ── FAQ ──────────────────────────────────────────────── */
+.faq-list { max-width: 760px; margin-top: 3rem; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.25rem 0; cursor: pointer;
+  font-family: var(--fh); font-size: 14px; font-weight: 700; color: #ddd;
+  gap: 1rem; transition: color .2s; user-select: none;
+}
+.faq-q:hover { color: #fff; }
+.faq-chevron {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid #333; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #666; transition: transform .25s, border-color .2s;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); border-color: var(--o); color: var(--o); }
+.faq-a { overflow: hidden; max-height: 0; transition: max-height .35s ease; }
+.faq-a-inner { padding: 0 0 1.25rem; font-size: 13px; color: #888; line-height: 1.8; }
+.faq-item.open .faq-a { max-height: 300px; }
+
+/* ── CTA STRIP ────────────────────────────────────────── */
+.cta-strip {
+  text-align: center; padding: 6rem 2rem;
+  background: var(--bg2); border-top: 1px solid var(--border);
+}
+.cta-strip h2 { font-family: var(--fh); font-size: clamp(24px,3vw,36px); font-weight: 800; color: #fff; margin-bottom: .75rem; }
+.cta-strip h2 em { color: var(--o); font-style: normal; }
+.cta-strip p { font-size: 14px; color: #888; margin-bottom: 2rem; }
+.btn-primary-cta {
+  display: inline-block; background: var(--o); color: #fff;
+  padding: 14px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
+  font-family: var(--fb); text-decoration: none;
+  box-shadow: 0 4px 24px rgba(255,77,0,.35); transition: all .25s;
+}
+.btn-primary-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,77,0,.5); }
+
+/* ── FOOTER ───────────────────────────────────────────── */
+.pl-footer { text-align: center; padding: 2.5rem; font-size: 12px; color: rgba(255,255,255,.2); border-top: 1px solid var(--border); }
+.pl-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
+.pl-footer a:hover { color: var(--o); }
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .pl-h1                { color: #0D1117 !important; }
+html[data-theme="light"] .pl-sub               { color: #495057 !important; }
+html[data-theme="light"] .pl-sub strong        { color: #212529 !important; }
+html[data-theme="light"] .pl-trust-item        { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .pl-trust-text        { color: #495057 !important; }
+html[data-theme="light"] .pl-trust-text strong { color: #212529 !important; }
+html[data-theme="light"] .pl-stat-n            { color: #0D1117 !important; }
+html[data-theme="light"] .pl-stat-l            { color: #868E96 !important; }
+html[data-theme="light"] .pl-form-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; box-shadow: 0 8px 32px rgba(0,0,0,.08) !important; }
+html[data-theme="light"] .pph                  { background: rgba(255,77,0,.04) !important; border-color: rgba(255,77,0,.1) !important; }
+html[data-theme="light"] .pph-label            { color: #495057 !important; }
+html[data-theme="light"] .pl-form-title        { color: #0D1117 !important; }
+html[data-theme="light"] .pl-form-sub          { color: #495057 !important; }
+html[data-theme="light"] .pl-form-footer       { color: #868E96 !important; }
+html[data-theme="light"] .pl-success-title     { color: #0D1117 !important; }
+html[data-theme="light"] .pl-success-text      { color: #495057 !important; }
+html[data-theme="light"] .pl-manual-title      { color: #0D1117 !important; }
+html[data-theme="light"] .pl-manual-label      { color: #868E96 !important; }
+html[data-theme="light"] .pl-manual-value      { color: #495057 !important; }
+html[data-theme="light"] .form-label           { color: #495057 !important; }
+html[data-theme="light"] .form-input           { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .radio-option         { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .radio-text           { color: #495057 !important; }
+html[data-theme="light"] .check-label          { color: #495057 !important; }
+html[data-theme="light"] .sec-body             { color: #495057 !important; }
+html[data-theme="light"] .pl-paket             { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .pl-pak-name          { color: #0D1117 !important; }
+html[data-theme="light"] .pl-pak-price         { color: #0D1117 !important; }
+html[data-theme="light"] .pl-pak-period        { color: #868E96 !important; }
+html[data-theme="light"] .pl-pak-desc          { color: #495057 !important; }
+html[data-theme="light"] .pl-pak-feat          { color: #495057 !important; }
+html[data-theme="light"] .faq-q               { color: #0D1117 !important; }
+html[data-theme="light"] .faq-a-inner          { color: #495057 !important; }
+html[data-theme="light"] .cta-strip            { background: #F8F9FA !important; }
+html[data-theme="light"] .cta-strip h2         { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip p          { color: #495057 !important; }
+html[data-theme="light"] .pl-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .pl-footer a          { color: #495057 !important; }
+html[data-theme="light"] .sec-alt              { background: #F0F1F3 !important; border-top-color: #DEE2E6 !important; }
+html[data-theme="light"] .sec                  { border-top-color: #DEE2E6 !important; }
+html[data-theme="light"] .sec-title            { color: #0D1117 !important; }
+html[data-theme="light"] .sec-ey               { color: #495057 !important; opacity: 1 !important; }
+html[data-theme="light"] .sec-ey::before       { background: #495057 !important; }
+html[data-theme="light"] .pl-pak-label         { color: #868E96 !important; opacity: 1 !important; }
+html[data-theme="light"] .pl-pak-curr          { color: #FF4D00 !important; }
+html[data-theme="light"] .faq-item             { border-bottom-color: #DEE2E6 !important; }
+html[data-theme="light"] .faq-chevron          { color: #868E96 !important; }
+html[data-theme="light"] .pl-manual            { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] #pl-manual-data       { color: #495057 !important; }
+html[data-theme="light"] .pl-mailto-btn        { color: #FF4D00 !important; border-color: rgba(255,77,0,.3) !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Preise & Kosten – Google Ads Betreuung | Averio Media",
+  "url": "https://averio-media.de/preisliste",
+  "description": "Transparente Preise für Google Ads Betreuung bei Averio Media.",
+  "mainEntity": {
+    "@type": "OfferCatalog",
+    "name": "Preisliste Averio Media",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Kampagnencheck",
+        "price": "199",
+        "priceCurrency": "EUR",
+        "description": "Einmaliger Google Ads Audit mit PDF-Reporting"
+      },
+      {
+        "@type": "Offer",
+        "name": "Kostenlose Potenzialanalyse",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Unverbindliche Analyse des Marktpotenzials"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav">
+  <a href="averio-premium.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="averio-premium.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 €</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html" class="active">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kostenloser Kurzcheck</a>
+</nav>
+
+<!-- ════ HERO ═══════════════════════════════════════════ -->
+<div class="pl-hero">
+  <div class="pl-left">
+    <div class="pl-eyebrow">Transparente Preise</div>
+    <h1 class="pl-h1">Unsere<br><em>Preisliste.</em><br>Für dich.</h1>
+    <p class="pl-sub">Wir glauben an Transparenz &#8212; auch beim Preis. Trag dich ein und bekomme sofort unsere vollst&#228;ndige Preisliste per E-Mail.</p>
+
+    <div class="pl-trust">
+      <div class="pl-trust-item">
+        <div class="pl-trust-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pl-trust-text"><strong>Sofortiger Versand</strong>Preisliste direkt in deinem Postfach</div>
+      </div>
+      <div class="pl-trust-item">
+        <div class="pl-trust-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="#FF4D00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pl-trust-text"><strong>Alle Pakete auf einen Blick</strong>Kampagnencheck, Vollbetreuung, Potenzialanalyse &#8212; alles drin</div>
+      </div>
+    </div>
+
+    <div class="pl-stats">
+      <div><div class="pl-stat-n">199<span> €</span></div><div class="pl-stat-l">Kampagnencheck</div></div>
+      <div><div class="pl-stat-n">3<span>+</span></div><div class="pl-stat-l">Betreuungspakete</div></div>
+      <div><div class="pl-stat-n">0<span> €</span></div><div class="pl-stat-l">Potenzialanalyse</div></div>
+    </div>
+  </div>
+
+  <div class="pl-right">
+    <div class="pl-form-card">
+      <div class="pl-price-hint">
+        <div class="pph"><div class="pph-val">199 &#8364;</div><div class="pph-label">Kampagnencheck</div></div>
+        <div class="pph"><div class="pph-val" style="letter-spacing:3px;">●●●</div><div class="pph-label">Vollbetreuung</div></div>
+        <div class="pph free"><div class="pph-val">0 €</div><div class="pph-label">Potenzialanalyse</div></div>
+      </div>
+
+      <div id="pl-form-inner">
+        <div class="pl-form-title">Preisliste erhalten</div>
+        <div class="pl-form-sub">Eintragen — die Preisliste kommt sofort. Kein Spam, kein Anruf, versprochen.</div>
+
+        <div class="form-group">
+          <label class="form-label">Dein Name *</label>
+          <input class="form-input" id="pl-name" type="text" placeholder="Max Mustermann">
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-Mail-Adresse *</label>
+          <input class="form-input" id="pl-email" type="email" placeholder="deine@email.de">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deine Branche (optional)</label>
+          <input class="form-input" id="pl-branche" type="text" placeholder="z.B. Handwerk, Coaching, E-Commerce...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Wofür interessierst du dich?</label>
+          <div class="radio-group" id="rg-pl-interest">
+            <label class="radio-option" onclick="selectRadio(this,'rg-pl-interest')">
+              <input type="radio" name="pl-interest"><div class="radio-circle"></div>
+              <span class="radio-text">Kampagnencheck (199 &#8364; netto)</span>
+            </label>
+            <label class="radio-option" onclick="selectRadio(this,'rg-pl-interest')">
+              <input type="radio" name="pl-interest"><div class="radio-circle"></div>
+              <span class="radio-text">Laufende Vollbetreuung</span>
+            </label>
+            <label class="radio-option" onclick="selectRadio(this,'rg-pl-interest')">
+              <input type="radio" name="pl-interest"><div class="radio-circle"></div>
+              <span class="radio-text">Ich schaue mich erst um</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:1rem;">
+          <label class="form-check">
+            <input type="checkbox" id="pl-dsgvo">
+            <div class="check-box"></div>
+            <span class="check-label">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+          </label>
+        </div>
+        <div class="form-error" id="pl-error">Bitte fülle alle Pflichtfelder aus und stimme der Datenschutzerklärung zu.</div>
+        <p style="font-size:11px;color:rgba(255,255,255,.18);margin:10px 0 4px;line-height:1.5;">Die Preisliste ist zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+
+        <button class="pl-submit-btn" id="pl-btn" onclick="submitPreisliste()">
+          Preisliste sofort erhalten →
+        </button>
+        <div class="pl-form-footer">Kein Spam · Einmaliger Versand · Jederzeit abmeldbar</div>
+      </div>
+
+      <!-- Erfolg (automatisch) -->
+      <div class="pl-success" id="pl-success">
+        <div class="pl-success-icon">📬</div>
+        <div class="pl-success-title">Preisliste gesendet!</div>
+        <div class="pl-success-text">Die Preisliste ist auf dem Weg zu dir. Schau in dein Postfach — und hier direkt eine Übersicht der Pakete.</div>
+        <button onclick="document.getElementById('pl-pakete-section').scrollIntoView({behavior:'smooth'})"
+          style="margin-top:1.5rem;background:var(--o);color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);">
+          Pakete direkt ansehen ↓
+        </button>
+      </div>
+
+      <!-- Manuell-Modus -->
+      <div class="pl-success" id="pl-manual-success" style="display:none;">
+        <div class="pl-success-icon">✓</div>
+        <div class="pl-success-title">Anfrage eingegangen!</div>
+        <div class="pl-success-text">Wir senden dir die Preisliste manuell zu — normalerweise innerhalb von wenigen Stunden.</div>
+        <div id="pl-manual-data" class="pl-manual active" style="margin-top:1.5rem;text-align:left;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ TICKER ══════════════════════════════════════════ -->
+<div class="g-ticker"><div class="g-ticker-track">
+  <div class="g-tick-item">Kampagnencheck 199 &#8364; netto</div>
+  <div class="g-tick-item">Vollbetreuung ab ●●● € / Monat</div>
+  <div class="g-tick-item">Keine versteckten Kosten</div>
+  <div class="g-tick-item">Flexibel kündbar</div>
+  <div class="g-tick-item">Potenzialanalyse kostenlos</div>
+  <div class="g-tick-item">Direkter Kontakt zu Marie</div>
+  <div class="g-tick-item">Kampagnencheck 199 &#8364; netto</div>
+  <div class="g-tick-item">Vollbetreuung ab ●●● € / Monat</div>
+  <div class="g-tick-item">Keine versteckten Kosten</div>
+  <div class="g-tick-item">Flexibel kündbar</div>
+  <div class="g-tick-item">Potenzialanalyse kostenlos</div>
+  <div class="g-tick-item">Direkter Kontakt zu Marie</div>
+</div></div>
+
+<!-- ════ PAKETE ══════════════════════════════════════════ -->
+<div class="sec" id="pl-pakete-section">
+  <div class="sec-ey">Unsere Pakete</div>
+  <h2 class="sec-title">Was wir anbieten — und was es <em>kostet</em></h2>
+  <p class="sec-body">Alle Preise sind transparent. Die genauen Konditionen für die Vollbetreuung stehen in der Preisliste, die du angefordert hast.</p>
+
+  <div class="pl-pakete">
+
+    <!-- Kampagnencheck -->
+    <div class="pl-paket">
+      <div class="pl-pak-label">Einmalig</div>
+      <div class="pl-pak-name">Kampagnencheck</div>
+      <div class="pl-pak-price-wrap">
+        <span class="pl-pak-curr">€</span>
+        <span class="pl-pak-price">199</span>
+        <span class="pl-pak-period">netto</span>
+      </div>
+      <div class="pl-pak-desc">Vollständige Analyse deines bestehenden Kontos — Struktur, Tracking, Performance, Copy. Priorisierter Maßnahmenplan als PDF in 2–4 Werktagen.</div>
+      <div class="pl-pak-features">
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Vollständige Konto-Analyse</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Tracking &amp; Datenbasis Check</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Keyword &amp; Anzeigentext-Review</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>PDF-Report in 2–4 Werktagen</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Priorisierter Handlungsplan</div>
+      </div>
+      <button class="pl-pak-cta primary" onclick="window.location='averio-premium-angebot-kampagnencheck.html'">Jetzt buchen →</button>
+    </div>
+
+    <!-- Vollbetreuung -->
+    <div class="pl-paket featured">
+      <div class="pl-pak-label">Monatlich</div>
+      <div class="pl-pak-name">Vollbetreuung</div>
+      <div class="pl-pak-price-wrap">
+        <span class="pl-pak-curr">ab</span>
+        <span class="pl-pak-price blurred" id="vb-price">●●●</span>
+        <span class="pl-pak-period">/ Monat</span>
+      </div>
+      <div class="pl-pak-desc">Vollständige Übernahme: Strategie, Setup, laufende Optimierung, monatliches Reporting — alles aus einer Hand. Individuelle Konditionen.</div>
+      <div class="pl-pak-features">
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Konto-Übernahme &amp; Audit inklusive</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Wöchentliche Optimierung</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Monatliches Reporting &amp; Gespräch</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Direkt mit Marie — immer</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot"></div>Budget-Empfehlungen &amp; Strategie</div>
+      </div>
+      <div class="pl-lock-note">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6" width="8" height="7" rx="1.5" stroke="#FF4D00" stroke-width="1.2"/><path d="M5 6V4.5a2 2 0 014 0V6" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Preis nach Preislistenanforderung sichtbar
+      </div>
+      <button class="pl-pak-cta primary" onclick="window.location='averio-premium-angebot-zusammenarbeit.html'">Zusammenarbeit anfragen →</button>
+    </div>
+
+    <!-- Potenzialanalyse -->
+    <div class="pl-paket">
+      <div class="pl-pak-label">Kostenlos</div>
+      <div class="pl-pak-name">Potenzialanalyse</div>
+      <div class="pl-pak-price-wrap">
+        <span class="pl-pak-curr">€</span>
+        <span class="pl-pak-price" style="color:var(--ice2);opacity:.7;">0</span>
+        <span class="pl-pak-period">kostenlos</span>
+      </div>
+      <div class="pl-pak-desc">Du denkst über Google Ads nach — wir analysieren Suchvolumen, Wettbewerb und Budget-Bedarf. Ehrliche Einschätzung, auch wenn die Antwort Nein ist.</div>
+      <div class="pl-pak-features">
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot" style="background:var(--ice2);box-shadow:0 0 4px var(--ice2);"></div>Suchvolumen &amp; Wettbewerb</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot" style="background:var(--ice2);box-shadow:0 0 4px var(--ice2);"></div>Realistische Budget-Einschätzung</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot" style="background:var(--ice2);box-shadow:0 0 4px var(--ice2);"></div>Ehrliche Empfehlung — auch Nein</div>
+        <div class="pl-pak-feat"><div class="pl-pak-feat-dot" style="background:var(--ice2);box-shadow:0 0 4px var(--ice2);"></div>Schriftliche Einschätzung</div>
+      </div>
+      <button class="pl-pak-cta ghost" onclick="window.location='averio-premium-angebot-potenzialanalyse.html'">Kostenlos anfragen →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════ FAQ ═════════════════════════════════════════════ -->
+<div class="sec-alt">
+  <div class="sec-ey">Häufige Fragen</div>
+  <h2 class="sec-title">Preise &amp; <em>Konditionen</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="faqTog(this)">
+        <span>Warum ist der Preis der Vollbetreuung nicht direkt sichtbar?</span>
+        <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Die Vollbetreuung ist individuell — der Preis hängt von deinem Budget, der Kontostruktur und dem Umfang ab. In der Preisliste findest du die Preisspanne und was in jedem Paket enthalten ist. So kannst du in Ruhe entscheiden, ohne direkt Verkaufsgespräche zu führen.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="faqTog(this)">
+        <span>Gibt es versteckte Kosten oder Einrichtungsgebühren?</span>
+        <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Nein. Was in der Preisliste steht, ist was du zahlst. Beim Kampagnencheck ist es ein Einmalbetrag (199 &#8364; netto), bei der Vollbetreuung ein monatlicher Fixpreis — kein Anteil am Werbebudget, keine Überraschungsrechnungen.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="faqTog(this)">
+        <span>Wie lange bin ich gebunden?</span>
+        <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Der Kampagnencheck ist einmalig — keine Bindung. Die Vollbetreuung läuft mit einer Laufzeit von 3 Monaten (weil Google Ads Zeit braucht), die Vertragslaufzeit beträgt jeweils 3 Monate und kann 1 Monat vor Ende des neuen Quartals gekündigt werden.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="faqTog(this)">
+        <span>Was passiert nach der Preislistenanforderung?</span>
+        <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Du bekommst die Preisliste per E-Mail — das war's. Kein automatischer Rückruf, kein Verkaufsgespräch. Wenn du danach Fragen hast oder ein Gespräch möchtest, meldest du dich — wann und wie es dir passt.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ CTA STRIP ════════════════════════════════════════ -->
+<div class="cta-strip">
+  <h2>Noch unsicher, was für dich <em>passt?</em></h2>
+  <p>Buch ein kostenloses 15-Minuten-Gespräch — wir schauen gemeinsam, welcher Schritt der richtige ist.</p>
+  <a href="averio-premium-kontakt.html" class="btn-primary-cta">Kostenloser Kurzcheck →</a>
+</div>
+
+<!-- ════ FOOTER ═══════════════════════════════════════════ -->
+<footer class="pl-footer">
+  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+    
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </p>
+</footer>
+
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+
+<script>
+/* ════════════════════════════════════════════════════════
+   BREVO E-MAIL KONFIGURATION
+   ════════════════════════════════════════════════════════
+   1) Trag deinen Brevo API-Key ein (Brevo → Einstellungen → API-Keys)
+   2) Absender-E-Mail muss in Brevo als Absender verifiziert sein
+   3) Vollbetreuung-Preis in der E-Mail eintragen (PREIS_VOLLBETREUUNG)
+   ════════════════════════════════════════════════════════ */
+const BREVO_API_KEY        = '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';          // ← Deinen API-Key hier eintragen
+const BREVO_SENDER_EMAIL   = 'kontakt@averiomedia.de';
+const BREVO_SENDER_NAME    = 'Averio Media';
+const BREVO_NOTIFY_EMAIL   = 'kontakt@averiomedia.de'; // Deine eigene E-Mail für Benachrichtigungen
+const PREIS_VOLLBETREUUNG  = 'ab 690 €'; // ← Deinen echten Preis hier eintragen
+
+/* ── E-Mail HTML Template ─────────────────────────────── */
+function buildEmailHTML(name) {
+  return `<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Deine Preise & Kosten – Google Ads Betreuung | Averio Media</title><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Preise & Kosten – Google Ads Betreuung | Averio Media",
+  "url": "https://averio-media.de/preisliste",
+  "description": "Transparente Preise für Google Ads Betreuung bei Averio Media.",
+  "mainEntity": {
+    "@type": "OfferCatalog",
+    "name": "Preisliste Averio Media",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Kampagnencheck",
+        "price": "199",
+        "priceCurrency": "EUR",
+        "description": "Einmaliger Google Ads Audit mit PDF-Reporting"
+      },
+      {
+        "@type": "Offer",
+        "name": "Kostenlose Potenzialanalyse",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Unverbindliche Analyse des Marktpotenzials"
+      }
+    ]
+  }
+}
+<\/script>
+</head>
+<body style="margin:0;padding:0;background:#0d0d0d;font-family:'Helvetica Neue',Arial,sans-serif;">
+<div style="max-width:600px;margin:0 auto;padding:40px 20px;">
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="display:inline-block;background:#FF4D00;border-radius:10px;padding:12px 20px;">
+      <span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.5px;">Averio Media</span>
+    </div>
+  </div>
+  <div style="background:#111;border:1px solid #1a1a1a;border-radius:16px;overflow:hidden;">
+    <div style="background:linear-gradient(135deg,rgba(255,77,0,.15),transparent);padding:40px 36px 32px;">
+      <p style="color:#FF4D00;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;">Deine Preisliste</p>
+      <h1 style="color:#fff;font-size:28px;font-weight:800;margin:0 0 12px;line-height:1.2;">Hallo ${name},</h1>
+      <p style="color:#999;font-size:15px;line-height:1.7;margin:0;">hier ist deine persönliche Preisliste von Averio Media — transparent, vollständig, kein Verkaufsdruck.</p>
+    </div>
+    <div style="padding:0 36px 36px;">
+
+      <!-- Kampagnencheck -->
+      <div style="border:1px solid #222;border-radius:12px;padding:24px;margin-bottom:16px;">
+        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Einmalig</div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Kampagnencheck</div>
+        <div style="font-size:36px;font-weight:800;color:#FF4D00;margin-bottom:12px;line-height:1;">119 <span style="font-size:14px;color:#777;font-weight:400;">€ inkl. MwSt.</span></div>
+        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Vollständige Analyse deines bestehenden Google Ads Kontos — Struktur, Tracking, Performance, Copy. Priorisierter Maßnahmenplan als PDF in 2–4 Werktagen.</p>
+        <div style="font-size:12px;color:#999;">✓&nbsp; Vollständige Konto-Analyse<br>✓&nbsp; Tracking &amp; Datenbasis Check<br>✓&nbsp; Keyword &amp; Anzeigentext-Review<br>✓&nbsp; PDF-Report in 2–4 Werktagen</div>
+      </div>
+
+      <!-- Vollbetreuung -->
+      <div style="border:1px solid rgba(255,77,0,.3);border-radius:12px;padding:24px;margin-bottom:16px;background:rgba(255,77,0,.03);">
+        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Monatlich · Beliebt</div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Vollbetreuung</div>
+        <div style="font-size:36px;font-weight:800;color:#FF4D00;margin-bottom:12px;line-height:1;">${PREIS_VOLLBETREUUNG} <span style="font-size:14px;color:#777;font-weight:400;">/ Monat</span></div>
+        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Vollständige Übernahme: Strategie, Setup, laufende wöchentliche Optimierung, monatliches Reporting — alles aus einer Hand. Individuelle Konditionen nach Erstgespräch.</p>
+        <div style="font-size:12px;color:#999;">✓&nbsp; Konto-Übernahme &amp; Audit inklusive<br>✓&nbsp; Wöchentliche Optimierung<br>✓&nbsp; Monatliches Reporting &amp; Gespräch<br>✓&nbsp; Direkt mit Marie — immer erreichbar<br><span style="color:#666;">Laufzeit 3 Monate, Kündigung 1 Monat vor Quartalsende</span></div>
+      </div>
+
+      <!-- Potenzialanalyse -->
+      <div style="border:1px solid rgba(168,216,240,.12);border-radius:12px;padding:24px;margin-bottom:32px;background:rgba(168,216,240,.03);">
+        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Kostenlos</div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Potenzialanalyse</div>
+        <div style="font-size:36px;font-weight:800;color:#A8D8F0;margin-bottom:12px;line-height:1;opacity:.7;">0 € <span style="font-size:14px;color:#777;font-weight:400;">kostenlos</span></div>
+        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Noch kein aktives Konto? Wir analysieren Suchvolumen, Wettbewerb und Budget-Bedarf — ehrliche Einschätzung, auch wenn die Antwort Nein ist.</p>
+        <div style="font-size:12px;color:#999;">✓&nbsp; Suchvolumen &amp; Wettbewerb<br>✓&nbsp; Realistische Budget-Einschätzung<br>✓&nbsp; Schriftliche Empfehlung</div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://averio-media.de" style="display:inline-block;background:#FF4D00;color:#fff;padding:14px 32px;border-radius:100px;font-size:14px;font-weight:700;text-decoration:none;">Jetzt Gespräch buchen →</a>
+        <p style="font-size:11px;color:#555;margin-top:16px;">Kein Verkaufsdruck · Du meldest dich, wenn du bereit bist</p>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:11px;color:#444;margin-top:24px;">
+    Averio Media · Marie Böttiger · Bayern, Deutschland<br>
+    <a href="#" style="color:#555;">Datenschutz</a> · <a href="#" style="color:#555;">Impressum</a>
+  </p>
+</div>
+</body></html>`;
+}
+
+/* ── Brevo API-Aufruf ─────────────────────────────────── */
+async function sendViaBrevo(name, email, branche, interest) {
+  // E-Mail an den Nutzer (Preisliste)
+  const userMail = fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'accept': 'application/json',
+      'api-key': BREVO_API_KEY,
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      sender: { name: BREVO_SENDER_NAME, email: BREVO_SENDER_EMAIL },
+      to: [{ email, name }],
+      subject: 'Deine Preisliste von Averio Media',
+      htmlContent: buildEmailHTML(name)
+    })
+  });
+
+  // Benachrichtigungs-E-Mail an Marie
+  const notifyMail = fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'accept': 'application/json',
+      'api-key': BREVO_API_KEY,
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      sender: { name: 'Averio Media Website', email: BREVO_SENDER_EMAIL },
+      to: [{ email: BREVO_NOTIFY_EMAIL, name: 'Marie' }],
+      subject: `Neue Preislistenanfrage: ${name}`,
+      htmlContent: `<p><strong>Name:</strong> ${name}</p>
+        <p><strong>E-Mail:</strong> ${email}</p>
+        <p><strong>Branche:</strong> ${branche || '–'}</p>
+        <p><strong>Interesse:</strong> ${interest}</p>`
+    })
+  });
+
+  const [r1] = await Promise.all([userMail, notifyMail]);
+  if (!r1.ok) throw new Error('Brevo error');
+}
+
+/* ── Formular Submit ──────────────────────────────────── */
+async function submitPreisliste() {
+  const name     = document.getElementById('pl-name').value.trim();
+  const email    = document.getElementById('pl-email').value.trim();
+  const branche  = document.getElementById('pl-branche').value.trim();
+  const dsgvo    = document.getElementById('pl-dsgvo').checked;
+  const interest = document.querySelector('#rg-pl-interest .radio-option.selected .radio-text')?.textContent || 'Nicht angegeben';
+  const errEl    = document.getElementById('pl-error');
+  const btn      = document.getElementById('pl-btn');
+
+  if (!name || !email || !dsgvo) {
+    errEl.classList.add('visible');
+    return;
+  }
+  errEl.classList.remove('visible');
+
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+
+  if (BREVO_API_KEY) {
+    /* ── AUTOMATISCH (Brevo) ── */
+    try {
+      await sendViaBrevo(name, email, branche, interest);
+      document.getElementById('pl-form-inner').style.display = 'none';
+      document.getElementById('pl-success').classList.add('active');
+      // Vollbetreuungs-Preis aufdecken
+      const vb = document.getElementById('vb-price');
+      if (vb) { vb.classList.remove('blurred'); vb.textContent = PREIS_VOLLBETREUUNG; }
+    } catch(e) {
+      btn.disabled = false;
+      btn.textContent = 'Preisliste sofort erhalten →';
+      alert('Etwas ist schiefgelaufen. Bitte schreib uns direkt: ' + BREVO_SENDER_EMAIL);
+    }
+  } else {
+    /* ── MANUELL (kein API-Key) ── */
+    document.getElementById('pl-form-inner').style.display = 'none';
+    const manualSuccess = document.getElementById('pl-manual-success');
+    manualSuccess.style.display = 'block';
+
+    const subject = encodeURIComponent(`Preislistenanfrage: ${name}`);
+    const body    = encodeURIComponent(
+      `Name: ${name}\nE-Mail: ${email}\nBranche: ${branche || '–'}\nInteresse: ${interest}\n\n---\nBitte Preisliste manuell zusenden.`
+    );
+    document.getElementById('pl-manual-data').innerHTML = `
+      <div style="font-size:12px;color:#aaa;font-family:var(--fh);font-weight:700;margin-bottom:12px;">Neue Anfrage</div>
+      <div style="font-size:12px;color:#888;line-height:2.2;">
+        <span style="color:#555;">Name:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${name}<br>
+        <span style="color:#555;">E-Mail:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${email}<br>
+        <span style="color:#555;">Branche:</span>&nbsp;&nbsp;&nbsp;${branche || '–'}<br>
+        <span style="color:#555;">Interesse:</span>&nbsp;${interest}
+      </div>
+      <a href="mailto:${email}?subject=${subject}&body=${body}" class="pl-mailto-btn">
+        → Preisliste manuell senden
+      </a>`;
+
+    // Vollbetreuungs-Preis aufdecken
+    const vb = document.getElementById('vb-price');
+    if (vb) { vb.classList.remove('blurred'); vb.textContent = PREIS_VOLLBETREUUNG; }
+  }
+}
+
+/* ── Radio-Buttons ────────────────────────────────────── */
+function selectRadio(el, groupId) {
+  document.querySelectorAll('#' + groupId + ' .radio-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+/* ── FAQ-Accordion ────────────────────────────────────── */
+function faqTog(btn) {
+  const item   = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── GSAP ScrollTrigger Animations ───────────────────── */
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero
+gsap.timeline({ delay: 0.25 })
+  .from('.pl-eyebrow',  { opacity: 0, y: 16, duration: 0.5, ease: 'power2.out' })
+  .from('.pl-h1',       { opacity: 0, y: 28, duration: 0.65, ease: 'power2.out' }, '-=0.3')
+  .from('.pl-sub',      { opacity: 0, y: 20, duration: 0.55, ease: 'power2.out' }, '-=0.35')
+  .from('.pl-trust',    { opacity: 0, y: 20, duration: 0.5,  ease: 'power2.out' }, '-=0.3')
+  .from('.pl-stats',    { opacity: 0, y: 16, duration: 0.45, ease: 'power2.out' }, '-=0.25')
+  .from('.pl-form-card',{ opacity: 0, y: 32, duration: 0.7,  ease: 'power3.out' }, '-=0.45');
+
+// Pakete stagger
+ScrollTrigger.batch('.pl-paket', {
+  start: 'top 88%', once: true,
+  onEnter: els => gsap.to(els, { opacity: 1, y: 0, stagger: 0.12, duration: 0.6, ease: 'power2.out' })
+});
+gsap.set('.pl-paket', { opacity: 0, y: 28 });
+
+// FAQ
+gsap.from('.faq-item', {
+  scrollTrigger: { trigger: '.faq-list', start: 'top 85%', once: true },
+  opacity: 0, y: 18, stagger: 0.1, duration: 0.55, ease: 'power2.out'
+});
+
+// CTA
+gsap.from('.cta-strip', {
+  scrollTrigger: { trigger: '.cta-strip', start: 'top 88%', once: true },
+  opacity: 0, y: 24, duration: 0.7, ease: 'power2.out'
+});
+</script>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+

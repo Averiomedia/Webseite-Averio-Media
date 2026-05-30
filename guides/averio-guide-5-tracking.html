@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Schritt-für-Schritt Anleitung: GA4 mit Google Ads verbinden, Conversion-Events einrichten, GTM konfigurieren & Consent Mode v2 umsetzen. Kostenlos von Averio Media.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averio-media.de/guides/averio-guide-5-tracking.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://averio-media.de/guides/averio-guide-5-tracking.html">
+<meta property="og:title" content="GA4 + Google Ads Tracking Setup – Kostenloser Guide | Averio Media">
+<meta property="og:description" content="Schritt-für-Schritt Anleitung: GA4 mit Google Ads verbinden, Conversion-Events einrichten, GTM konfigurieren & Consent Mode v2 umsetzen. Kostenlos von Averio Media.">
+<meta property="og:image" content="https://averio-media.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GA4 + Google Ads Tracking Setup – Kostenloser Guide | Averio Media">
+<meta name="twitter:description" content="Schritt-für-Schritt Anleitung: GA4 mit Google Ads verbinden, Conversion-Events einrichten, GTM konfigurieren & Consent Mode v2 umsetzen. Kostenlos von Averio Media.">
+<meta name="twitter:image" content="https://averio-media.de/og-image.jpg">
+<title>GA4 + Google Ads Tracking Setup – Averio Media Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; line-height: 1.7; }
+.print-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #1a1a1a; padding: 10px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.print-bar-text { font-size: 12px; color: rgba(255,255,255,.5); }
+.print-bar-text strong { color: #fff; }
+.print-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #FF4D00; color: #fff; border: none; border-radius: 100px;
+  padding: 8px 20px; font-size: 12px; font-weight: 700;
+  font-family: 'DM Sans', sans-serif; cursor: pointer;
+}
+.doc { max-width: 794px; margin: 60px auto 40px; background: #fff; box-shadow: 0 4px 40px rgba(0,0,0,.1); }
+
+/* COVER */
+.cover {
+  background: #0d0d0d; padding: 64px;
+  position: relative; overflow: hidden;
+  min-height: 480px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.cover::before {
+  content: ''; position: absolute; top: -80px; right: -80px;
+  width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.16), transparent 65%);
+}
+.cover-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; position: relative; z-index: 2; }
+.cover-logo-mark { width: 36px; height: 36px; background: #FF4D00; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.cover-logo-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+.cover-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid rgba(255,77,0,.35); background: rgba(255,77,0,.08); color: #FF4D00;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 100px; margin-bottom: 20px;
+}
+.cover-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #FF4D00; box-shadow: 0 0 6px #FF4D00; }
+.cover-title {
+  font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800;
+  color: #fff; line-height: 1.05; letter-spacing: -.03em; margin-bottom: 18px; position: relative; z-index: 2;
+}
+.cover-title em { color: #FF4D00; font-style: normal; }
+.cover-subtitle { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.75; max-width: 500px; position: relative; z-index: 2; margin-bottom: 48px; }
+.cover-meta { display: flex; gap: 28px; position: relative; z-index: 2; border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; }
+.cover-meta-item { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .04em; }
+.cover-meta-item strong { color: rgba(255,255,255,.65); font-weight: 600; }
+
+/* INTRO */
+.page-intro { padding: 44px 64px; background: #fafaf8; border-bottom: 1px solid #f0f0ee; }
+.page-intro h2 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
+.page-intro p { font-size: 14px; color: #555; line-height: 1.8; margin-bottom: 10px; }
+.page-intro p:last-child { margin-bottom: 0; }
+
+/* CONTENT SECTION */
+.content-sec { padding: 44px 64px; border-bottom: 1px solid #f0f0ee; }
+.content-sec:last-child { border-bottom: none; }
+
+/* STEP BLOCKS */
+.step-block {
+  display: flex; gap: 24px; margin-bottom: 40px;
+}
+.step-block:last-child { margin-bottom: 0; }
+.step-bubble {
+  width: 48px; height: 48px; min-width: 48px;
+  background: #0d0d0d; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800;
+  color: #FF4D00; position: relative; top: 2px;
+}
+.step-body { flex: 1; }
+.step-title {
+  font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700;
+  color: #1a1a1a; margin-bottom: 8px; line-height: 1.3;
+}
+.step-text { font-size: 14px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+.step-text:last-child { margin-bottom: 0; }
+
+/* SECTION HEADER */
+.sec-header { margin-bottom: 32px; }
+.sec-num {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+  color: #FF4D00; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px;
+}
+.sec-title {
+  font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800;
+  color: #1a1a1a; line-height: 1.2; letter-spacing: -.02em;
+}
+
+/* SUBSTEP LIST */
+.substep-list { list-style: none; margin-top: 10px; }
+.substep-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: #444; line-height: 1.75; margin-bottom: 6px;
+}
+.substep-list li::before {
+  content: ''; width: 6px; height: 6px; min-width: 6px;
+  border-radius: 50%; background: #FF4D00; margin-top: 8px;
+}
+
+/* TIP / WARN BOXES */
+.tip-box, .warn-box, .info-box {
+  border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: 13px; line-height: 1.75;
+}
+.tip-box { background: rgba(255,77,0,.05); border-left: 3px solid #FF4D00; color: #333; }
+.warn-box { background: rgba(220,60,0,.06); border-left: 3px solid #cc3300; color: #333; }
+.info-box { background: #f0f0ee; border-left: 3px solid #bbb; color: #555; }
+.tip-box strong, .warn-box strong, .info-box strong { font-weight: 700; color: #1a1a1a; }
+
+/* CODE SNIPPET */
+.code-block {
+  background: #1a1a1a; border-radius: 8px; padding: 14px 18px;
+  font-family: monospace; font-size: 12px; color: #e0e0e0;
+  line-height: 1.7; margin: 12px 0; overflow-x: auto;
+}
+.code-block .cm { color: #888; }
+.code-block .ck { color: #FF8C66; }
+.code-block .cv { color: #98d8a6; }
+
+/* KPI TAGS */
+.kpi-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.kpi-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; color: #FF4D00;
+  background: rgba(255,77,0,.06); border: 1px solid rgba(255,77,0,.2);
+  border-radius: 100px; padding: 4px 11px; letter-spacing: .04em;
+}
+
+/* FLOW DIAGRAM */
+.flow-diagram {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  background: #f7f7f5; border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+}
+.flow-node {
+  background: #1a1a1a; color: #fff; border-radius: 7px;
+  padding: 8px 14px; font-size: 12px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif; white-space: nowrap;
+}
+.flow-node.accent { background: #FF4D00; }
+.flow-arrow { color: #ccc; font-size: 16px; font-weight: 300; }
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+.data-table th { background: #0d0d0d; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 11px; letter-spacing: .04em; }
+.data-table td { padding: 10px 14px; border-bottom: 1px solid #f0f0ee; color: #444; vertical-align: top; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:nth-child(even) td { background: #fafaf8; }
+.td-label { font-weight: 600; color: #1a1a1a; }
+.td-badge {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 100px; letter-spacing: .04em;
+}
+.badge-pflicht { background: rgba(255,77,0,.1); color: #FF4D00; border: 1px solid rgba(255,77,0,.25); }
+.badge-opt { background: #f0f0ee; color: #888; border: 1px solid #e0e0de; }
+
+/* CHECKLIST PAGE */
+.check-page { padding: 44px 64px; background: #0d0d0d; }
+.check-page-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px; letter-spacing: -.02em; }
+.check-page-sub { font-size: 13px; color: rgba(255,255,255,.4); margin-bottom: 32px; }
+.check-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.check-group-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: #FF4D00; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+.check-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.6; margin-bottom: 10px;
+}
+.check-box {
+  width: 18px; height: 18px; min-width: 18px; border-radius: 4px;
+  border: 1.5px solid rgba(255,255,255,.15); margin-top: 1px;
+  display: flex; align-items: center; justify-content: center;
+}
+.check-box.done { background: rgba(255,77,0,.15); border-color: rgba(255,77,0,.4); }
+.check-box.done::after { content: '✓'; font-size: 10px; color: #FF4D00; font-weight: 700; }
+
+/* CTA PAGE */
+.cta-page { padding: 56px 64px; background: #f7f7f5; }
+.cta-label { font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+.cta-title { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: #1a1a1a; letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; }
+.cta-text { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 28px; max-width: 520px; }
+.cta-contact { display: flex; flex-direction: column; gap: 8px; }
+.cta-contact-item { font-size: 14px; color: #333; }
+.cta-contact-item strong { font-weight: 600; }
+.cta-divider { border: none; border-top: 1px solid #e8e8e6; margin: 32px 0; }
+
+/* PRINT */
+@media print {
+  .print-bar { display: none !important; }
+  body { background: #fff; }
+  .doc { margin: 0; box-shadow: none; }
+  .step-block, .check-item, .tip-box, .warn-box { page-break-inside: avoid; }
+  .content-sec { page-break-inside: avoid; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  "name": "GA4 + Google Ads Tracking Setup – Kostenloser Guide",
+  "description": "Schritt-für-Schritt Anleitung: GA4 mit Google Ads verbinden, Conversion-Events einrichten, GTM konfigurieren & Consent Mode v2 umsetzen. Kostenlos von Averio Media.",
+  "url": "https://averio-media.de/guides/averio-guide-5-tracking.html",
+  "author": { "@type": "Person", "name": "Marie Böttiger" },
+  "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averio-media.de" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "inLanguage": "de-DE",
+  "keywords": "Google Ads, SEA, Kampagnenoptimierung, Freelancer"
+}
+</script>
+</head>
+<body>
+
+<!-- Print Bar -->
+<div class="print-bar">
+  <div class="print-bar-text"><strong>Guide 05</strong> · GA4 + Google Ads Tracking Setup · Averio Media</div>
+  <button class="print-btn" onclick="window.print()">
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 1h6v4H4zM2 5h10a1 1 0 011 1v4a1 1 0 01-1 1H2a1 1 0 01-1-1V6a1 1 0 011-1zM4 10h6v3H4z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Als PDF speichern
+  </button>
+</div>
+
+<div class="doc">
+
+  <!-- ═══════════════════════════════════════════════════
+       COVER
+  ════════════════════════════════════════════════════ -->
+  <div class="cover">
+    <div>
+      <div class="cover-logo">
+        <div class="cover-logo-mark">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="10" width="4" height="7" rx="1" fill="#fff"/><rect x="8" y="6" width="4" height="11" rx="1" fill="#fff"/><rect x="13" y="2" width="4" height="15" rx="1" fill="rgba(255,255,255,.4)"/></svg>
+        </div>
+        <div class="cover-logo-name">Averio Media</div>
+      </div>
+      <div class="cover-badge"><div class="cover-badge-dot"></div>Guide 05 · Tracking</div>
+      <div class="cover-title"><em>GA4 + Google Ads</em><br>richtig verbinden —<br>das vollständige Tracking-Setup</div>
+      <div class="cover-subtitle">Schritt-für-Schritt: GA4 mit Google Ads verknüpfen, Conversion-Events einrichten, GTM konfigurieren und Consent Mode v2 korrekt umsetzen. Damit du endlich weißt, was wirklich funktioniert.</div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>6 Schritte</strong> · Setup-Guide</div>
+      <div class="cover-meta-item"><strong>GA4 + GTM</strong> · Consent Mode v2</div>
+      <div class="cover-meta-item"><strong>Averio Media</strong> · averio-media.de</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       INTRO
+  ════════════════════════════════════════════════════ -->
+  <div class="page-intro">
+    <h2>Warum Tracking so entscheidend ist</h2>
+    <p>Ohne sauberes Tracking schießt du blind. Du weißt nicht, welche Keywords wirklich Anfragen bringen, welche Anzeigen konvertieren und wo Budget sinnlos verpufft. Google Ads optimiert seine KI-Algorithmen auf die Daten, die du lieferst — und wenn diese Daten fehlerhaft oder unvollständig sind, optimiert der Algorithmus in die falsche Richtung.</p>
+    <p>Dieser Guide zeigt dir Schritt für Schritt, wie du ein lückenloses Tracking-Fundament aufbaust: GA4 einrichten, mit Google Ads verknüpfen, Conversions korrekt zählen und Consent Mode v2 rechtskonform konfigurieren.</p>
+    <div class="flow-diagram">
+      <div class="flow-node">Website</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">GTM</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">GA4</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node accent">Google Ads</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">Conversion-Daten</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 1: GA4 einrichten
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 01</div>
+      <div class="sec-title">GA4 Property korrekt einrichten</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">Neue GA4 Property anlegen</div>
+        <div class="step-text">Öffne <strong>analytics.google.com</strong> und navigiere zu <em>Verwaltung → Property erstellen</em>. Wähle Google Analytics 4 (nicht Universal Analytics — der wurde 2023 eingestellt). Gib deinen Unternehmensname, die Zeitzone (Europa/Berlin) und die Währung (EUR) ein.</div>
+        <div class="tip-box"><strong>Wichtig:</strong> Stelle sicher, dass du dieselbe Google-Konto-E-Mail nutzt, mit der dein Google Ads-Konto verknüpft ist. Das vereinfacht die Verlinkung erheblich.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">Datenstrom für die Website erstellen</div>
+        <div class="step-text">In der Property-Einrichtung: <em>Datenstrom → Web → URL deiner Website eingeben</em>. Aktiviere <strong>Erweiterte Messung</strong> — damit werden Seitenaufrufe, Scrolltiefe, Klicks auf externe Links und Dateidownloads automatisch erfasst.</div>
+        <ul class="substep-list">
+          <li>Notiere die <strong>Mess-ID</strong> (Format: G-XXXXXXXXXX) — du brauchst sie für GTM</li>
+          <li>Aktiviere: Seitenaufrufe, Bildlauf, ausgehende Klicks, Sitesuche, Videointeraktion</li>
+          <li>Deaktiviere vorläufig "Formularinteraktionen" — das erzeugt ohne Konfiguration unnötige Events</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">Interne Zugriffe ausschließen</div>
+        <div class="step-text">Navigiere zu <em>Verwaltung → Datenstrom → Mehr Tags-Einstellungen → Interne Zugriffe definieren</em>. Trage deine Büro-IP-Adresse und alle IPs deiner Mitarbeiter ein. So verzerren Testklicks und tägliche Besuche die Auswertung nicht.</div>
+        <div class="info-box"><strong>Tipp:</strong> Deine aktuelle IP-Adresse findest du unter <em>whatismyip.com</em>. Notiere dir alle relevanten IPs (Büro, Homeoffice, Mobilfunk-Hotspot).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 2: GTM einrichten
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 02</div>
+      <div class="sec-title">Google Tag Manager einrichten</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">GTM-Konto und Container erstellen</div>
+        <div class="step-text">Gehe zu <strong>tagmanager.google.com</strong>, erstelle ein neues Konto für dein Unternehmen und einen Web-Container für deine Domain. Nach der Erstellung erhältst du zwei Code-Snippets, die auf jeder Seite deiner Website eingebunden werden müssen.</div>
+        <div class="warn-box"><strong>Achtung:</strong> Das erste Snippet kommt direkt nach dem öffnenden <code>&lt;head&gt;</code>-Tag, das zweite direkt nach dem öffnenden <code>&lt;body&gt;</code>-Tag. Beide müssen auf <em>jeder</em> Seite vorhanden sein.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">GA4-Tag in GTM einrichten</div>
+        <div class="step-text">Im GTM-Workspace: <em>Tags → Neu → Tag-Typ: Google Tag</em>. Trage deine GA4 Mess-ID (G-XXXXXXXXXX) ein. Als Trigger wählst du <strong>All Pages (Alle Seiten)</strong>. Speichere und publiziere.</div>
+        <div class="code-block">
+          <span class="cm">// Konfiguration im GTM-Tag</span><br>
+          <span class="ck">Tag-Typ:</span> <span class="cv">Google Tag</span><br>
+          <span class="ck">Tag-ID:</span> <span class="cv">G-XXXXXXXXXX</span> <span class="cm">// deine Mess-ID</span><br>
+          <span class="ck">Trigger:</span> <span class="cv">All Pages</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">Installation testen</div>
+        <div class="step-text">Nutze den GTM-Vorschaumodus (<em>Vorschau</em>-Button im GTM) und öffne deine Website. Der Tag Assistant zeigt dir, ob der GA4-Tag korrekt feuert. In GA4 unter <em>Berichte → Echtzeit</em> siehst du deinen eigenen Besuch nach wenigen Sekunden.</div>
+        <div class="kpi-tags">
+          <div class="kpi-tag">GTM Vorschau aktiv</div>
+          <div class="kpi-tag">GA4 Echtzeit-Bericht</div>
+          <div class="kpi-tag">Chrome Extension: Tag Assistant</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 3: GA4 mit Google Ads verknüpfen
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 03</div>
+      <div class="sec-title">GA4 mit Google Ads verknüpfen</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">Verknüpfung in GA4 herstellen</div>
+        <div class="step-text">In GA4: <em>Verwaltung → Property → Produkt-Links → Google Ads-Links → Verknüpfen</em>. Wähle dein Google Ads-Konto aus der Liste. Aktiviere <strong>Personalisierte Anzeigen aktivieren</strong> und <strong>Auto-Tagging bestätigen</strong>.</div>
+        <ul class="substep-list">
+          <li>Die Verknüpfung ist kostenlos und bidirektional — Daten fließen in beide Richtungen</li>
+          <li>GA4-Zielgruppen werden in Google Ads verfügbar (Remarketing)</li>
+          <li>Conversion-Daten aus GA4 können in Google Ads als Conversion-Aktionen genutzt werden</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">Auto-Tagging prüfen</div>
+        <div class="step-text">In Google Ads: <em>Einstellungen → Konto → Auto-Tagging</em> muss aktiviert sein. Ohne Auto-Tagging fügt Google Ads keine <code>gclid</code>-Parameter an URLs an — und GA4 kann keine Klicks korrekt Google Ads zuordnen.</div>
+        <div class="tip-box"><strong>Kontrollcheck:</strong> Klicke auf eine deiner eigenen Anzeigen und prüfe die URL. Sie sollte einen <code>?gclid=...</code> Parameter enthalten. Fehlt er, ist Auto-Tagging deaktiviert.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">Verknüpfung verifizieren</div>
+        <div class="step-text">Nach 24–48 Stunden siehst du in GA4 unter <em>Berichte → Akquisition → Traffic-Akquisition</em> den Kanal <strong>Paid Search</strong> mit Google Ads-Kampagnendaten. In Google Ads erscheinen unter <em>Berichte → Google Analytics</em> die GA4-Metriken.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 4: Conversion-Events erstellen
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 04</div>
+      <div class="sec-title">Conversion-Events richtig einrichten</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">Was zählt als Conversion?</div>
+        <div class="step-text">Definiere zuerst, welche Aktionen für dein Geschäftsmodell wirklich relevant sind. Nicht jeder Klick ist eine Conversion — messe nur, was Umsatz-relevant ist.</div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Conversion-Typ</th><th>Event-Name</th><th>Priorität</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="td-label">Kontaktformular abgeschickt</td><td><code>form_submit</code></td><td><span class="td-badge badge-pflicht">Pflicht</span></td></tr>
+            <tr><td class="td-label">Telefon-Klick</td><td><code>click_phone</code></td><td><span class="td-badge badge-pflicht">Pflicht</span></td></tr>
+            <tr><td class="td-label">E-Mail-Klick</td><td><code>click_email</code></td><td><span class="td-badge badge-pflicht">Pflicht</span></td></tr>
+            <tr><td class="td-label">Danke-Seite aufgerufen</td><td><code>page_view</code> (URL-basiert)</td><td><span class="td-badge badge-pflicht">Pflicht</span></td></tr>
+            <tr><td class="td-label">Datei-Download</td><td><code>file_download</code></td><td><span class="td-badge badge-opt">Optional</span></td></tr>
+            <tr><td class="td-label">Chat geöffnet</td><td><code>chat_open</code></td><td><span class="td-badge badge-opt">Optional</span></td></tr>
+            <tr><td class="td-label">Scroll 75 %</td><td><code>scroll</code></td><td><span class="td-badge badge-opt">Optional</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">Events als Conversions markieren</div>
+        <div class="step-text">In GA4: <em>Verwaltung → Events → [Event auswählen] → Als Conversion markieren</em>. Alternativ unter <em>Verwaltung → Conversions → Neue Conversion-Ereignis erstellen</em>. Der Event-Name muss exakt mit dem gesendeten Event übereinstimmen.</div>
+        <div class="warn-box"><strong>Achtung: Doppeltes Tracking vermeiden!</strong> Wenn du GA4-Conversions <em>und</em> eigenständige Google Ads Conversion-Tags verwendest, zählt jede Conversion doppelt. Entscheide dich für eine Methode — empfohlen: <strong>GA4-Import in Google Ads</strong>.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">Conversions in Google Ads importieren</div>
+        <div class="step-text">In Google Ads: <em>Ziele → Conversions → Neue Conversion-Aktion → Aus Google Analytics importieren</em>. Wähle deine GA4-Property und die gewünschten Conversion-Events aus. Setze <strong>Primäre Conversions</strong> nur für wirklich kaufrelevante Events — alles andere als "Sekundär".</div>
+        <div class="tip-box"><strong>Best Practice:</strong> Setze für Formular-Submissions einen realistischen Conversion-Wert (z.B. 150 € für einen qualifizierten B2B-Lead). So kann Google Ads den tROAS-Algorithmus korrekt optimieren.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 5: Consent Mode v2
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 05</div>
+      <div class="sec-title">Consent Mode v2 konfigurieren</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">Was ist Consent Mode v2?</div>
+        <div class="step-text">Consent Mode v2 (CM v2) ist Googles Lösung für DSGVO-konformes Tracking. Wenn ein Nutzer Cookies ablehnt, sendet CM v2 statt gar keine Daten sogenannte "Pings" ohne personenbezogene Informationen. Google modelliert daraus Schätzwerte — so bleibt die Kampagnenoptimierung auch ohne vollständige Zustimmung funktionsfähig.</div>
+        <div class="flow-diagram">
+          <div class="flow-node">Nutzer stimmt zu</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node accent">Vollständiges Tracking</div>
+          <div class="flow-arrow">|</div>
+          <div class="flow-node">Ablehnung</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">Anonyme Pings + Modellierung</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">CMP auswählen und integrieren</div>
+        <div class="step-text">Du brauchst eine zertifizierte Consent Management Platform (CMP), die CM v2 unterstützt. Empfohlene Optionen für den deutschen Markt:</div>
+        <ul class="substep-list">
+          <li><strong>Cookiebot (Usercentrics):</strong> Sehr einfach, kostenlose Basis-Version, direkte GTM-Integration</li>
+          <li><strong>consentmanager.net:</strong> Deutsches Unternehmen, DSGVO-zertifiziert, flexible Preise</li>
+          <li><strong>Borlabs Cookie:</strong> WordPress-Plugin, einmalige Zahlung, einfach zu konfigurieren</li>
+        </ul>
+        <div class="tip-box"><strong>Wichtig:</strong> Die CMP muss explizit "Google-zertifiziert" für Consent Mode v2 sein. Nur dann werden die Consent-Signale korrekt an GA4 und Google Ads weitergeleitet.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">CM v2 in GTM implementieren</div>
+        <div class="step-text">Die meisten zertifizierten CMPs bieten eine GTM-Vorlage im <em>GTM Community Template Gallery</em>. Suche nach dem Namen deiner CMP, füge die Vorlage hinzu und konfiguriere sie gemäß der Anleitung des Anbieters. Stelle folgende Consent-Parameter sicher:</div>
+        <div class="code-block">
+          <span class="cm">// Consent-Parameter (müssen konfiguriert sein)</span><br>
+          <span class="ck">ad_storage:</span> <span class="cv">'granted' | 'denied'</span><br>
+          <span class="ck">analytics_storage:</span> <span class="cv">'granted' | 'denied'</span><br>
+          <span class="ck">ad_user_data:</span> <span class="cv">'granted' | 'denied'</span> <span class="cm">// NEU in v2</span><br>
+          <span class="ck">ad_personalization:</span> <span class="cv">'granted' | 'denied'</span> <span class="cm">// NEU in v2</span>
+        </div>
+        <div class="warn-box"><strong>CM v1 reicht nicht mehr:</strong> Seit März 2024 verlangt Google CM v2 für alle EU-Werbetreibenden. Ohne die neuen Parameter <code>ad_user_data</code> und <code>ad_personalization</code> verlierst du Datenmodellierung und Remarketing-Funktionen.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCHRITT 6: Testen & Verifizieren
+  ════════════════════════════════════════════════════ -->
+  <div class="content-sec">
+    <div class="sec-header">
+      <div class="sec-num">Schritt 06</div>
+      <div class="sec-title">Tracking testen und dauerhaft überwachen</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">1</div>
+      <div class="step-body">
+        <div class="step-title">End-to-End Test durchführen</div>
+        <div class="step-text">Öffne GTM im Vorschaumodus, akzeptiere im Cookie-Banner alle Cookies, führe jede definierte Conversion-Aktion durch (Formular ausfüllen und abschicken, Telefonnummer anklicken, E-Mail-Link klicken). Prüfe in der GTM-Vorschau, ob die entsprechenden Events feuern — und in GA4 Echtzeit, ob sie ankommen.</div>
+        <div class="kpi-tags">
+          <div class="kpi-tag">GTM Debug Mode</div>
+          <div class="kpi-tag">GA4 DebugView</div>
+          <div class="kpi-tag">Chrome: Tag Assistant</div>
+          <div class="kpi-tag">Google Ads Tag Diagnose</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">2</div>
+      <div class="step-body">
+        <div class="step-title">GA4 DebugView nutzen</div>
+        <div class="step-text">In GA4: <em>Verwaltung → DebugView</em>. Installiere die Chrome-Extension "GA Debugger" — damit wird dein Browser als Debug-Gerät registriert und alle Events erscheinen live im DebugView. So siehst du exakt, welche Parameter mit jedem Event mitgesendet werden.</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-bubble">3</div>
+      <div class="step-body">
+        <div class="step-title">Regelmäßige Tracking-Audits</div>
+        <div class="step-text">Tracking bricht häufig nach Website-Updates, Theme-Wechseln oder CMS-Updates. Etabliere eine monatliche Routine:</div>
+        <ul class="substep-list">
+          <li><strong>Monatlich:</strong> Conversion-Zahlen in GA4 und Google Ads vergleichen — starke Abweichungen deuten auf Tracking-Fehler hin</li>
+          <li><strong>Nach jedem Website-Update:</strong> End-to-End Test wiederholen</li>
+          <li><strong>Quartalsweise:</strong> GA4 Audit — prüfen ob alle Events noch korrekt feuern und keine doppelten Conversions gezählt werden</li>
+          <li><strong>Sofort bei Auffälligkeiten:</strong> Plötzlicher Conversion-Einbruch ohne Änderung der Kampagnen deutet auf Tracking-Ausfall hin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CHECKLISTE
+  ════════════════════════════════════════════════════ -->
+  <div class="check-page">
+    <div class="check-page-title">Deine Tracking-Setup Checkliste</div>
+    <div class="check-page-sub">Hake jeden Punkt ab, bevor du Kampagnen startest oder Budget erhöhst.</div>
+    <div class="check-cols">
+      <div>
+        <div class="check-group-title">GA4 Grundsetup</div>
+        <div class="check-item"><div class="check-box"></div>GA4 Property erstellt (nicht UA)</div>
+        <div class="check-item"><div class="check-box"></div>Datenstrom für Web angelegt</div>
+        <div class="check-item"><div class="check-box"></div>Mess-ID (G-XXXXXXXXXX) notiert</div>
+        <div class="check-item"><div class="check-box"></div>Erweiterte Messung konfiguriert</div>
+        <div class="check-item"><div class="check-box"></div>Interne IPs ausgeschlossen</div>
+        <div class="check-group-title" style="margin-top:20px;">GTM Setup</div>
+        <div class="check-item"><div class="check-box"></div>GTM-Container erstellt</div>
+        <div class="check-item"><div class="check-box"></div>GTM-Snippets auf Website eingebunden</div>
+        <div class="check-item"><div class="check-box"></div>GA4-Tag in GTM konfiguriert</div>
+        <div class="check-item"><div class="check-box"></div>Tag feuert auf allen Seiten</div>
+        <div class="check-item"><div class="check-box"></div>Test im Vorschaumodus bestanden</div>
+      </div>
+      <div>
+        <div class="check-group-title">Conversions</div>
+        <div class="check-item"><div class="check-box"></div>Formular-Submit wird erfasst</div>
+        <div class="check-item"><div class="check-box"></div>Telefon-Klick wird erfasst</div>
+        <div class="check-item"><div class="check-box"></div>E-Mail-Klick wird erfasst</div>
+        <div class="check-item"><div class="check-box"></div>Events als Conversions markiert</div>
+        <div class="check-item"><div class="check-box"></div>In Google Ads importiert</div>
+        <div class="check-item"><div class="check-box"></div>Kein doppeltes Tracking</div>
+        <div class="check-group-title" style="margin-top:20px;">Consent Mode v2</div>
+        <div class="check-item"><div class="check-box"></div>Zertifizierte CMP eingebunden</div>
+        <div class="check-item"><div class="check-box"></div>Alle 4 Consent-Parameter aktiv</div>
+        <div class="check-item"><div class="check-box"></div>ad_user_data konfiguriert</div>
+        <div class="check-item"><div class="check-box"></div>ad_personalization konfiguriert</div>
+        <div class="check-item"><div class="check-box"></div>Test: Ablehnen → nur Pings sichtbar</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA
+  ════════════════════════════════════════════════════ -->
+  <div class="cta-page">
+    <div class="cta-label">Averio Media · Google Ads Betreuung</div>
+    <div class="cta-title">Tracking richtig aufgesetzt —<br>jetzt Kampagnen auf Basis echter Daten schalten</div>
+    <div class="cta-text">Ein sauberes Tracking-Fundament ist die Voraussetzung für profitable Google Ads Kampagnen. Wenn du möchtest, dass ich dein Tracking auditiere, korrekt aufsetze und darauf aufbauend Kampagnen betreue — meld dich.</div>
+    <hr class="cta-divider">
+    <div class="cta-contact">
+      <div class="cta-contact-item"><strong>Website:</strong> averio-media.de</div>
+      <div class="cta-contact-item"><strong>Leistungen:</strong> Google Ads Setup · Kampagnenbetreuung · Tracking Audit</div>
+    </div>
+  </div>
+
+</div><!-- /.doc -->
+</body>
+</html>
+
