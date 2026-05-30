@@ -1138,11 +1138,11 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-2">
               <div class="form-group">
                 <label class="form-label">Vorname *</label>
-                <input class="form-input" type="text" placeholder="Marie" required>
+                <input class="form-input" id="zus-vorname" type="text" placeholder="Marie" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Nachname *</label>
-                <input class="form-input" type="text" placeholder="Mustermann" required>
+                <input class="form-input" id="zus-nachname" type="text" placeholder="Mustermann" required>
               </div>
             </div>
 
@@ -1150,7 +1150,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">E-Mail *</label>
-                <input class="form-input" type="email" placeholder="marie@beispiel.de" required>
+                <input class="form-input" id="zus-email" type="email" placeholder="marie@beispiel.de" required>
               </div>
             </div>
 
@@ -1158,11 +1158,11 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-2">
               <div class="form-group">
                 <label class="form-label">Telefon (optional)</label>
-                <input class="form-input" type="tel" placeholder="+49 123 456789">
+                <input class="form-input" id="zus-telefon" type="tel" placeholder="+49 123 456789">
               </div>
               <div class="form-group">
                 <label class="form-label">Unternehmen</label>
-                <input class="form-input" type="text" placeholder="Beispiel GmbH">
+                <input class="form-input" id="zus-unternehmen" type="text" placeholder="Beispiel GmbH">
               </div>
             </div>
 
@@ -1170,7 +1170,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">Website *</label>
-                <input class="form-input" type="url" placeholder="https://beispiel.de" required>
+                <input class="form-input" id="zus-website" type="url" placeholder="https://beispiel.de" required>
               </div>
             </div>
 
@@ -1185,7 +1185,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">Branche / Was du verkaufst *</label>
-                <input class="form-input" type="text" placeholder="z.B. B2B-Software, Steuerberatung, Maschinenbau …" required>
+                <input class="form-input" id="zus-branche" type="text" placeholder="z.B. B2B-Software, Steuerberatung, Maschinenbau …" required>
               </div>
             </div>
 
@@ -1214,7 +1214,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">Monatliches Werbebudget</label>
-                <select class="form-select">
+                <select class="form-select" id="zus-budget">
                   <option value="" disabled selected>Bitte wählen …</option>
                   <option value="u500">Unter 500 €</option>
                   <option value="500-1500">500–1.500 €</option>
@@ -1229,7 +1229,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">Was läuft aktuell nicht rund? *</label>
-                <textarea class="form-textarea" rows="4" placeholder="z.B. Zu wenige Anfragen, hohe Kosten pro Klick, kein Tracking …" required></textarea>
+                <textarea class="form-textarea" id="zus-problem" rows="4" placeholder="z.B. Zu wenige Anfragen, hohe Kosten pro Klick, kein Tracking …" required></textarea>
               </div>
             </div>
 
@@ -1237,7 +1237,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
             <div class="form-row form-row-1">
               <div class="form-group">
                 <label class="form-label">Was erwartest du dir von einer Zusammenarbeit? (optional)</label>
-                <textarea class="form-textarea" rows="3" placeholder="Deine Wünsche, Ziele, offene Fragen …"></textarea>
+                <textarea class="form-textarea" id="zus-erwartung" rows="3" placeholder="Deine Wünsche, Ziele, offene Fragen …"></textarea>
               </div>
             </div>
 
@@ -1398,31 +1398,30 @@ async function submitCollab(e) {
     return;
   }
 
-  // Formularfelder sammeln
-  const inputs   = document.querySelectorAll('#form-inner .form-input, #form-inner .form-textarea, #form-inner .form-select');
-  const labels   = document.querySelectorAll('#form-inner .form-label');
-  const payload  = { Formular: 'Zusammenarbeit anfragen' };
-  inputs.forEach((inp, i) => {
-    const label = labels[i]?.textContent?.replace(/\s*\*\s*$/, '').trim() || `Feld ${i+1}`;
-    payload[label] = inp.value.trim();
-  });
-  // Radio-Gruppe Laufzeit
-  const laufzeit = document.querySelector('#radio-laufzeit .radio-option.selected .radio-text');
-  if (laufzeit) payload['Laufzeit Google Ads'] = laufzeit.textContent.trim();
+  const laufzeit = document.querySelector('#radio-laufzeit .radio-option.selected span');
 
-  // Abschicken
   try {
     await fetch(NFORMS_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        Formular:      'Zusammenarbeit anfragen',
+        Vorname:       document.getElementById('zus-vorname')?.value.trim()     || '–',
+        Nachname:      document.getElementById('zus-nachname')?.value.trim()    || '–',
+        Email:         document.getElementById('zus-email')?.value.trim()       || '–',
+        Telefon:       document.getElementById('zus-telefon')?.value.trim()     || '–',
+        Unternehmen:   document.getElementById('zus-unternehmen')?.value.trim() || '–',
+        Website:       document.getElementById('zus-website')?.value.trim()     || '–',
+        Branche:       document.getElementById('zus-branche')?.value.trim()     || '–',
+        Laufzeit:      laufzeit?.textContent.trim()                             || '–',
+        Budget:        document.getElementById('zus-budget')?.value             || '–',
+        Problem:       document.getElementById('zus-problem')?.value.trim()     || '–',
+        Erwartung:     document.getElementById('zus-erwartung')?.value.trim()   || '–'
+      })
     });
   } catch(err) { console.warn('nForms:', err); }
 
-  document.getElementById('form-inner').style.display = 'none';
-  const success = document.getElementById('form-success');
-  success.style.display = 'block';
-  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  window.location.href = 'averio-anfrage-bestaetigt.html';
 }
 
 /* ══ FAQ ACCORDION ══════════════════════════════════════════════ */

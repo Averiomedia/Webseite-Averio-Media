@@ -1211,31 +1211,25 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
     async function submitPotenzial(e) {
       e.preventDefault();
 
-      // Formularfelder sammeln
-      const fields = {};
-      document.querySelectorAll('#potenzial-form [name]').forEach(el => {
-        if (el.name && el.name !== 'dsgvo') fields[el.name] = el.value.trim();
-      });
-      fields.formular = 'Potenzialanalyse';
-
       try {
         await fetch(NFORMS_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(fields)
+          body: JSON.stringify({
+            Formular:  'Potenzialanalyse',
+            Name:      document.getElementById('pa-name')?.value.trim()     || '–',
+            Email:     document.getElementById('pa-email')?.value.trim()    || '–',
+            Telefon:   document.getElementById('pa-telefon')?.value.trim()  || '–',
+            Website:   document.getElementById('pa-website')?.value.trim()  || '–',
+            Branche:   document.getElementById('pa-branche')?.value.trim()  || '–',
+            Region:    document.getElementById('pa-region')?.value.trim()   || '–',
+            Budget:    document.getElementById('budget-display')?.textContent.trim() || '–',
+            Erwartung: document.getElementById('pa-erwartung')?.value.trim() || '–'
+          })
         });
       } catch(err) { console.warn('nForms:', err); }
 
-      const form = document.getElementById('potenzial-form');
-      const success = document.getElementById('success-state');
-      form.style.opacity = '0';
-      form.style.transform = 'translateY(-8px)';
-      form.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-      setTimeout(() => {
-        form.style.display = 'none';
-        success.classList.add('visible');
-        gsap.from('#success-state', { opacity: 0, y: 16, duration: 0.5, ease: 'power2.out' });
-      }, 300);
+      window.location.href = 'averio-anfrage-bestaetigt.html';
     }
 
     // ── FAQ ──
