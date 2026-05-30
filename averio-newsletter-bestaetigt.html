@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anmeldung bestätigt – Averio Media</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Deine Newsletter-Anmeldung bei Averio Media wurde erfolgreich bestätigt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BG Glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.12), transparent 60%);
+  pointer-events: none;
+}
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -200px; left: 20%;
+  width: 500px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.06), transparent 60%);
+  pointer-events: none;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 56px;
+  text-decoration: none;
+}
+.logo-mark {
+  width: 36px; height: 36px;
+  background: #FF4D00;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 800;
+  color: #fff; letter-spacing: -.02em;
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+/* Check circle */
+.check-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(255,77,0,.12);
+  border: 2px solid rgba(255,77,0,.3);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 32px;
+  animation: popIn .5s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255,77,0,.3);
+  background: rgba(255,77,0,.08);
+  color: #FF4D00;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 24px;
+}
+.badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #FF4D00;
+  box-shadow: 0 0 6px #FF4D00;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #fff;
+}
+h1 span { color: #FF4D00; }
+
+.sub {
+  font-size: 15px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Info box */
+.info-box {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  text-align: left;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.info-icon {
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  color: #FF4D00;
+  margin-top: 2px;
+}
+.info-text {
+  font-size: 13px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+}
+.info-text strong {
+  color: rgba(255,255,255,.85);
+  font-weight: 600;
+}
+
+/* CTA */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FF4D00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 14px 28px;
+  font-size: 14px; font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  transition: background .2s;
+  margin-bottom: 14px;
+}
+.btn-primary:hover { background: #e04300; }
+
+.btn-secondary {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,.3);
+  text-decoration: none;
+  transition: color .2s;
+}
+.btn-secondary:hover { color: rgba(255,255,255,.6); }
+
+/* Divider */
+.divider {
+  width: 48px; height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 40px auto;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 11px;
+  color: rgba(255,255,255,.18);
+  line-height: 1.7;
+}
+.footer-text a {
+  color: rgba(255,255,255,.3);
+  text-decoration: none;
+}
+.footer-text a:hover { color: rgba(255,255,255,.6); }
+
+@media (max-width: 480px) {
+  .info-box { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Logo -->
+<a href="https://averiomedia.de/" class="logo">
+  <div class="logo-mark">
+    <svg viewBox="0 0 36 36" fill="none" width="22" height="22">
+      <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+  </div>
+  <span class="logo-name">Averio Media</span>
+</a>
+
+<!-- Card -->
+<div class="card">
+
+  <!-- Check Animation -->
+  <div class="check-circle">
+    <svg width="36" height="36" fill="none" viewBox="0 0 24 24">
+      <path d="M5 13l4 4L19 7" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="badge"><div class="badge-dot"></div>Bestätigt</div>
+
+  <h1>Anmeldung <span>erfolgreich</span><br>bestätigt.</h1>
+
+  <p class="sub">
+    Du bist jetzt eingetragen und bekommst neue Google Ads Guides, Tipps und Insights direkt in dein Postfach — wenn es etwas wirklich Relevantes gibt.
+  </p>
+
+  <div class="info-box">
+    <svg class="info-icon" viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="9" stroke="#FF4D00" stroke-width="1.5"/>
+      <path d="M10 9v5M10 7h.01" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <p class="info-text">
+      <strong>Kein Spam, kein Rauschen.</strong> Ich schreibe nur, wenn es wirklich etwas Nützliches gibt — keine wöchentlichen Pflicht-Newsletter, keine Affiliate-Links. Abmelden kannst du dich jederzeit per Klick in jeder E-Mail.
+    </p>
+  </div>
+
+  <a href="https://averiomedia.de/averio-premium-guides.html" class="btn-primary">
+    Weitere Guides herunterladen
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <a href="https://averiomedia.de/" class="btn-secondary">Zurück zur Startseite</a>
+
+  <div class="divider"></div>
+
+  <p class="footer-text">
+    Averio Media · Marie Böttiger · <a href="https://averiomedia.de/averio-premium-impressum.html">Impressum</a> · <a href="https://averiomedia.de/averio-premium-datenschutz.html">Datenschutz</a><br>
+    Du hast dich mit dieser E-Mail-Adresse für den Averio Media Newsletter angemeldet.<br>
+    Abmelden jederzeit per Link in jeder E-Mail möglich.
+  </p>
+
+</div>
+
+</body>
+</html>
