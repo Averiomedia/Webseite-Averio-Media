@@ -1420,6 +1420,13 @@ function filterGuides(cat, btn) {
     const cats = card.dataset.cat || '';
     const show = cat === 'all' || cats.includes(cat);
     card.style.display = show ? '' : 'none';
+    if (show) {
+      // GSAP setzt opacity:0 als from-Wert beim Seitenaufruf.
+      // Wenn die Karte noch nicht in den Viewport gescrollt hat,
+      // bleibt sie unsichtbar → Inline-Styles sofort clearen.
+      gsap.killTweensOf(card);
+      gsap.set(card, { clearProps: 'opacity,y,transform' });
+    }
     if (show && !card.classList.contains('coming-soon')) count++;
   });
   document.getElementById('guide-count').textContent =
