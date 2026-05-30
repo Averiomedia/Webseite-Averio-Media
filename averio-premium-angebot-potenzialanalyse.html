@@ -1206,8 +1206,26 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
     }
 
     // ── Form Submit ──
-    function submitPotenzial(e) {
+    const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+    async function submitPotenzial(e) {
       e.preventDefault();
+
+      // Formularfelder sammeln
+      const fields = {};
+      document.querySelectorAll('#potenzial-form [name]').forEach(el => {
+        if (el.name && el.name !== 'dsgvo') fields[el.name] = el.value.trim();
+      });
+      fields.formular = 'Potenzialanalyse';
+
+      try {
+        await fetch(NFORMS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(fields)
+        });
+      } catch(err) { console.warn('nForms:', err); }
+
       const form = document.getElementById('potenzial-form');
       const success = document.getElementById('success-state');
       form.style.opacity = '0';

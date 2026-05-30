@@ -1386,7 +1386,9 @@ function toggleCheckbox(wrapId) {
 }
 
 /* ══ FORM SUBMIT ════════════════════════════════════════════════ */
-function submitCollab(e) {
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+async function submitCollab(e) {
   e.preventDefault();
   const dsgvo = document.getElementById('dsgvo-wrap');
   if (!dsgvo.classList.contains('checked')) {
@@ -1395,6 +1397,28 @@ function submitCollab(e) {
     setTimeout(() => { dsgvo.style.outline = ''; }, 2000);
     return;
   }
+
+  // Formularfelder sammeln
+  const inputs   = document.querySelectorAll('#form-inner .form-input, #form-inner .form-textarea, #form-inner .form-select');
+  const labels   = document.querySelectorAll('#form-inner .form-label');
+  const payload  = { Formular: 'Zusammenarbeit anfragen' };
+  inputs.forEach((inp, i) => {
+    const label = labels[i]?.textContent?.replace(/\s*\*\s*$/, '').trim() || `Feld ${i+1}`;
+    payload[label] = inp.value.trim();
+  });
+  // Radio-Gruppe Laufzeit
+  const laufzeit = document.querySelector('#radio-laufzeit .radio-option.selected .radio-text');
+  if (laufzeit) payload['Laufzeit Google Ads'] = laufzeit.textContent.trim();
+
+  // Abschicken
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
   document.getElementById('form-inner').style.display = 'none';
   const success = document.getElementById('form-success');
   success.style.display = 'block';

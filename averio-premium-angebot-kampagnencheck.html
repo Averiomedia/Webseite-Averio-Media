@@ -1513,7 +1513,9 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
       document.getElementById('buchung').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    function submitBooking() {
+    const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+    async function submitBooking() {
       const dsgvo = document.getElementById('f-dsgvo').checked;
       const agb = document.getElementById('f-agb').checked;
       const konto = document.getElementById('f-konto').value.trim();
@@ -1535,6 +1537,33 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
         alert('Bitte akzeptiere die AGB, um die Buchung abzuschließen.');
         return;
       }
+
+      // Daten an nForms senden
+      try {
+        await fetch(NFORMS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            Formular:          'Kampagnencheck Buchung',
+            Vorname:           document.getElementById('f-vorname').value.trim(),
+            Nachname:          document.getElementById('f-nachname').value.trim(),
+            Email:             document.getElementById('f-email').value.trim(),
+            Telefon:           document.getElementById('f-tel').value.trim(),
+            Unternehmen:       document.getElementById('f-firma').value.trim(),
+            Website:           document.getElementById('f-website').value.trim(),
+            Rechnungsempf:     document.getElementById('f-rechnungsempf').value.trim(),
+            Strasse:           document.getElementById('f-strasse').value.trim(),
+            PLZ:               document.getElementById('f-plz').value.trim(),
+            Ort:               document.getElementById('f-ort').value.trim(),
+            Land:              document.getElementById('f-land').value,
+            UstNr:             document.getElementById('f-ust').value.trim(),
+            GoogleAdsKonto:    konto,
+            Branche:           document.getElementById('f-branche').value.trim(),
+            Werbebudget:       budget,
+            Problem:           document.getElementById('f-problem').value.trim()
+          })
+        });
+      } catch(err) { console.warn('nForms:', err); }
 
       // Hide form steps + indicators
       document.getElementById('step-3').classList.remove('active');

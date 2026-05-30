@@ -453,10 +453,8 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 <script src="js/gsap.min.js"></script>
 <script src="cookie-banner.js"></script>
 <script>
-// ── Brevo config (optional)
-const PA_BREVO_API_KEY      = '';
-const PA_BREVO_SENDER_EMAIL = 'kontakt@averiomedia.de';
-const PA_NOTIFY_EMAIL       = 'kontakt@averiomedia.de';
+// ── nForms Konfiguration
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
 // ── Lese Guide-Name aus URL-Parameter
 (function() {
@@ -491,38 +489,27 @@ async function submitPA() {
   btn.disabled = true;
   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="animation:spin 1s linear infinite"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20" stroke-dashoffset="5"/></svg> Wird gesendet…';
 
-  if (PA_BREVO_API_KEY) {
-    const company = document.getElementById('pa-company').value.trim();
-    const budget  = document.getElementById('pa-budget').value;
-    const msg     = document.getElementById('pa-message').value.trim();
-    await sendPANotification(name, email, company, budget, msg);
-  }
+  const company = document.getElementById('pa-company')?.value.trim() || '';
+  const budget  = document.getElementById('pa-budget')?.value || '';
+  const msg     = document.getElementById('pa-message')?.value.trim() || '';
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:        'Potenzialanalyse (Danke-Seite)',
+        Name:            name,
+        Email:           email,
+        Unternehmen:     company || '—',
+        Budget:          budget  || '—',
+        Herausforderung: msg     || '—'
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
 
   document.getElementById('pa-form-inner').style.display = 'none';
   document.getElementById('pa-success').classList.add('active');
-}
-
-async function sendPANotification(name, email, company, budget, message) {
-  const html = `
-    <h2>Neue Potenzialanalyse-Anfrage</h2>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>E-Mail:</strong> ${email}</p>
-    <p><strong>Unternehmen:</strong> ${company || '—'}</p>
-    <p><strong>Budget:</strong> ${budget || '—'}</p>
-    <p><strong>Herausforderung:</strong> ${message || '—'}</p>
-  `;
-  try {
-    await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: { 'api-key': PA_BREVO_API_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sender: { name: 'Averio Media Website', email: PA_BREVO_SENDER_EMAIL },
-        to: [{ email: PA_NOTIFY_EMAIL, name: 'Marie Böttiger' }],
-        subject: `Potenzialanalyse-Anfrage von ${name}`,
-        htmlContent: html
-      })
-    });
-  } catch(e) { console.warn('Brevo send failed', e); }
 }
 
 // ── Animationen

@@ -733,11 +733,8 @@ html[data-theme="light"] .pl-mailto-btn        { color: #FF4D00 !important; bord
    2) Absender-E-Mail muss in Brevo als Absender verifiziert sein
    3) Vollbetreuung-Preis in der E-Mail eintragen (PREIS_VOLLBETREUUNG)
    ════════════════════════════════════════════════════════ */
-const BREVO_API_KEY        = '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';          // ← Deinen API-Key hier eintragen
-const BREVO_SENDER_EMAIL   = 'kontakt@averiomedia.de';
-const BREVO_SENDER_NAME    = 'Averio Media';
-const BREVO_NOTIFY_EMAIL   = 'kontakt@averiomedia.de'; // Deine eigene E-Mail für Benachrichtigungen
-const PREIS_VOLLBETREUUNG  = 'ab 690 €'; // ← Deinen echten Preis hier eintragen
+const NFORMS_URL           = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+const PREIS_VOLLBETREUUNG  = 'ab 690 €';
 
 /* ── E-Mail HTML Template ─────────────────────────────── */
 function buildEmailHTML(name) {
@@ -831,45 +828,21 @@ function buildEmailHTML(name) {
 </body></html>`;
 }
 
-/* ── Brevo API-Aufruf ─────────────────────────────────── */
-async function sendViaBrevo(name, email, branche, interest) {
-  // E-Mail an den Nutzer (Preisliste)
-  const userMail = fetch('https://api.brevo.com/v3/smtp/email', {
+/* ── nForms Benachrichtigung ──────────────────────────── */
+async function sendViaNForms(name, email, branche, interest) {
+  const res = await fetch(NFORMS_URL, {
     method: 'POST',
-    headers: {
-      'accept': 'application/json',
-      'api-key': BREVO_API_KEY,
-      'content-type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
-      sender: { name: BREVO_SENDER_NAME, email: BREVO_SENDER_EMAIL },
-      to: [{ email, name }],
-      subject: 'Deine Preisliste von Averio Media',
-      htmlContent: buildEmailHTML(name)
+      Formular:  'Preisliste',
+      Name:      name,
+      Email:     email,
+      Branche:   branche || '–',
+      Interesse: interest
     })
   });
-
-  // Benachrichtigungs-E-Mail an Marie
-  const notifyMail = fetch('https://api.brevo.com/v3/smtp/email', {
-    method: 'POST',
-    headers: {
-      'accept': 'application/json',
-      'api-key': BREVO_API_KEY,
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify({
-      sender: { name: 'Averio Media Website', email: BREVO_SENDER_EMAIL },
-      to: [{ email: BREVO_NOTIFY_EMAIL, name: 'Marie' }],
-      subject: `Neue Preislistenanfrage: ${name}`,
-      htmlContent: `<p><strong>Name:</strong> ${name}</p>
-        <p><strong>E-Mail:</strong> ${email}</p>
-        <p><strong>Branche:</strong> ${branche || '–'}</p>
-        <p><strong>Interesse:</strong> ${interest}</p>`
-    })
-  });
-
-  const [r1] = await Promise.all([userMail, notifyMail]);
-  if (!r1.ok) throw new Error('Brevo error');
+  const data = await res.json();
+  if (!data.success) throw new Error('nForms error');
 }
 
 /* ── Formular Submit ──────────────────────────────────── */
@@ -891,45 +864,16 @@ async function submitPreisliste() {
   btn.disabled = true;
   btn.textContent = 'Wird gesendet …';
 
-  if (BREVO_API_KEY) {
-    /* ── AUTOMATISCH (Brevo) ── */
-    try {
-      await sendViaBrevo(name, email, branche, interest);
-      document.getElementById('pl-form-inner').style.display = 'none';
-      document.getElementById('pl-success').classList.add('active');
-      // Vollbetreuungs-Preis aufdecken
-      const vb = document.getElementById('vb-price');
-      if (vb) { vb.classList.remove('blurred'); vb.textContent = PREIS_VOLLBETREUUNG; }
-    } catch(e) {
-      btn.disabled = false;
-      btn.textContent = 'Preisliste sofort erhalten →';
-      alert('Etwas ist schiefgelaufen. Bitte schreib uns direkt: ' + BREVO_SENDER_EMAIL);
-    }
-  } else {
-    /* ── MANUELL (kein API-Key) ── */
+  try {
+    await sendViaNForms(name, email, branche, interest);
     document.getElementById('pl-form-inner').style.display = 'none';
-    const manualSuccess = document.getElementById('pl-manual-success');
-    manualSuccess.style.display = 'block';
-
-    const subject = encodeURIComponent(`Preislistenanfrage: ${name}`);
-    const body    = encodeURIComponent(
-      `Name: ${name}\nE-Mail: ${email}\nBranche: ${branche || '–'}\nInteresse: ${interest}\n\n---\nBitte Preisliste manuell zusenden.`
-    );
-    document.getElementById('pl-manual-data').innerHTML = `
-      <div style="font-size:12px;color:#aaa;font-family:var(--fh);font-weight:700;margin-bottom:12px;">Neue Anfrage</div>
-      <div style="font-size:12px;color:#888;line-height:2.2;">
-        <span style="color:#555;">Name:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${name}<br>
-        <span style="color:#555;">E-Mail:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${email}<br>
-        <span style="color:#555;">Branche:</span>&nbsp;&nbsp;&nbsp;${branche || '–'}<br>
-        <span style="color:#555;">Interesse:</span>&nbsp;${interest}
-      </div>
-      <a href="mailto:${email}?subject=${subject}&body=${body}" class="pl-mailto-btn">
-        → Preisliste manuell senden
-      </a>`;
-
-    // Vollbetreuungs-Preis aufdecken
+    document.getElementById('pl-success').classList.add('active');
     const vb = document.getElementById('vb-price');
     if (vb) { vb.classList.remove('blurred'); vb.textContent = PREIS_VOLLBETREUUNG; }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Preisliste sofort erhalten →';
+    alert('Etwas ist schiefgelaufen. Bitte schreib uns direkt: kontakt@averiomedia.de');
   }
 }
 
