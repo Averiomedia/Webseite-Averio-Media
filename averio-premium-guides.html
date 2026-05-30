@@ -1283,8 +1283,11 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 <script>
-// ── Brevo Newsletter-Formular (kein API-Key nötig)
+// ── Brevo-Formular für E-Mail-Verifizierung (DOI, kein API-Key nötig)
 const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+
+// ── nForms für Marie's Benachrichtigungen
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
 // ── Guide-URLs (direkter Zugang nach E-Mail-Eingabe)
 const GUIDE_URLS = {
@@ -1306,8 +1309,8 @@ function openGuideGate(guideId, title, icon) {
   document.getElementById('gate-icon').textContent  = icon;
   document.getElementById('gate-title').textContent = isNewsletter ? 'Newsletter abonnieren' : title + ' herunterladen';
   document.getElementById('gate-sub').textContent   = isNewsletter
-    ? 'Trag dich ein — du bekommst eine Bestätigungs-E-Mail und wirst als Erstes über neue Guides informiert.'
-    : 'Trag deine E-Mail ein — der Download-Link kommt sofort in dein Postfach.';
+    ? 'Trag dich ein — du bekommst eine Bestätigungs-E-Mail. Nach dem Klick auf den Link darin bist du dabei.'
+    : 'Trag deine E-Mail ein — du bekommst eine Bestätigungs-E-Mail. Erst nach dem Klick auf den Link öffnet sich dein Guide.';
   document.getElementById('gate-name').value        = '';
   document.getElementById('gate-email').value       = '';
   document.getElementById('gate-dsgvo').checked     = false;
@@ -1341,10 +1344,10 @@ function closeGateForce() {
 }
 
 async function submitGate() {
-  const name       = document.getElementById('gate-name').value.trim();
-  const email      = document.getElementById('gate-email').value.trim();
-  const dsgvo      = document.getElementById('gate-dsgvo').checked;
-  const newsletter = document.getElementById('gate-newsletter').checked;
+  const name         = document.getElementById('gate-name').value.trim();
+  const email        = document.getElementById('gate-email').value.trim();
+  const dsgvo        = document.getElementById('gate-dsgvo').checked;
+  const newsletter   = document.getElementById('gate-newsletter').checked;
   const isNewsletter = currentGuideId === 'newsletter';
 
   if (!name || !email) { alert('Bitte Name und E-Mail ausfüllen.'); return; }
@@ -1354,31 +1357,54 @@ async function submitGate() {
   btn.innerHTML = 'Wird gesendet…';
   btn.disabled  = true;
 
-  // Newsletter DOI via Brevo-Formular (kein API-Key nötig)
-  if (newsletter || isNewsletter) {
+  // Guide-ID in localStorage speichern, damit die Bestätigungsseite weiß welcher Guide gemeint war.
+  // (Funktioniert wenn die E-Mail im selben Browser geöffnet wird — Fallback: alle Guides werden angezeigt)
+  if (!isNewsletter) {
     try {
-      const fd = new FormData();
-      fd.append('EMAIL', email);
-      fd.append('email_address_check', '');
-      fd.append('locale', 'de');
-      fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
-    } catch(e) {
-      console.warn('Newsletter DOI Fehler:', e);
-    }
+      localStorage.setItem('av_pendingGuide', currentGuideId);
+      localStorage.setItem('av_pendingGuideName', name);
+    } catch(e) {}
   }
 
-  btn.textContent = '✓ Gleich weiterleiten…';
-  btn.disabled    = false;
+  // Immer via Brevo DOI senden — für alle (Newsletter oder nicht).
+  // Der Bestätigungslink in der E-Mail öffnet erst dann den Guide.
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI Fehler:', e); }
 
-  // Direkt zur Guide-Seite weiterleiten (kein E-Mail-Versand nötig)
-  setTimeout(() => {
-    if (isNewsletter) {
-      window.location.href = 'averio-danke.html?newsletter=1';
-    } else {
-      const guideUrl = GUIDE_URLS[currentGuideId] || 'averio-danke.html';
-      window.location.href = guideUrl;
-    }
-  }, 600);
+  // nForms-Eintrag damit Marie sieht, wer welchen Guide angefragt hat
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:   isNewsletter ? 'Newsletter Anmeldung' : 'Guide Download Anfrage',
+        Name:       name,
+        Email:      email,
+        Guide:      isNewsletter ? '–' : currentGuideTitle,
+        Newsletter: newsletter ? 'Ja' : 'Nein'
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
+  // ── Formular ausblenden, Warte-Hinweis anzeigen ──
+  // Guide öffnet sich NICHT sofort — erst nach Klick auf Bestätigungslink in der E-Mail!
+  document.getElementById('guide-gate-form-inner').style.display = 'none';
+
+  const successEl    = document.getElementById('guide-gate-success');
+  const successTitle = successEl.querySelector('.guide-gate-success-title');
+  const successText  = successEl.querySelector('.guide-gate-success-text');
+  if (successTitle) successTitle.textContent = 'Bestätigungslink gesendet!';
+  if (successText) successText.textContent  = isNewsletter
+    ? 'Schau in dein Postfach und klicke den Bestätigungslink — dann bist du dabei. Manchmal landet er im Spam-Ordner.'
+    : 'Schau in dein Postfach und klicke den Bestätigungslink. Erst danach öffnet sich dein Guide — so stellen wir sicher, dass deine E-Mail-Adresse korrekt ist.';
+
+  successEl.classList.add('active');
+  btn.disabled = false;
 }
 
 // ── Alte API-Funktionen entfernt (kein API-Key mehr nötig) ──
