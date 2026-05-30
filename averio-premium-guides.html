@@ -1280,19 +1280,20 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
 <!-- Shared JS -->
 <script src="averio-premium.js"></script>
 <script src="cookie-banner.js"></script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 <script>
-// ── Brevo configuration
-const BREVO_API_KEY             = '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';
-const BREVO_SENDER_EMAIL        = 'kontakt@averiomedia.de';
-const BREVO_NOTIFY_EMAIL        = 'kontakt@averiomedia.de';
+// ── Brevo Newsletter-Formular (kein API-Key nötig)
+const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
 
-// ── Newsletter Double-Opt-In Konfiguration
-// 1) Brevo → Kontakte → Listen → Neue Liste erstellen → ID notieren
-// 2) Brevo → E-Mail-Kampagnen → Vorlagen → DOI-Vorlage erstellen → ID notieren
-const BREVO_NEWSLETTER_LIST_ID  = 3;   // Averio Media Newsletter
-const BREVO_DOI_TEMPLATE_ID     = 1;   // DOI Bestätigungs-Template
-const BREVO_DOI_REDIRECT_URL    = 'https://averiomedia.de/averio-newsletter-bestaetigt.html';
+// ── Guide-URLs (direkter Zugang nach E-Mail-Eingabe)
+const GUIDE_URLS = {
+  'guide-1': 'guides/averio-guide-1-budgetfehler.html',
+  'guide-2': 'guides/averio-guide-2-checkliste.html',
+  'guide-3': 'guides/averio-guide-3-optimierung.html',
+  'guide-4': 'guides/averio-guide-4-negative-keywords.html',
+  'guide-5': 'guides/averio-guide-5-tracking.html',
+};
 
 // ── Guide gate logic
 let currentGuideId = '';
@@ -1353,214 +1354,35 @@ async function submitGate() {
   btn.innerHTML = 'Wird gesendet…';
   btn.disabled  = true;
 
-  if (BREVO_API_KEY) {
-    // Guide-E-Mail sofort senden (transaktional, kein DOI nötig)
-    if (!isNewsletter) {
-      await sendGuideViaBrevo(name, email, currentGuideId, currentGuideTitle);
-    }
-    // Newsletter DOI: wenn Checkbox angehakt ODER reiner Newsletter-Modus
-    if (newsletter || isNewsletter) {
-      await subscribeNewsletterDOI(name, email);
+  // Newsletter DOI via Brevo-Formular (kein API-Key nötig)
+  if (newsletter || isNewsletter) {
+    try {
+      const fd = new FormData();
+      fd.append('EMAIL', email);
+      fd.append('email_address_check', '');
+      fd.append('locale', 'de');
+      fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+    } catch(e) {
+      console.warn('Newsletter DOI Fehler:', e);
     }
   }
-
-  // Redirect to thank-you page (with guide param for personalisation)
-  const redirectUrl = isNewsletter
-    ? 'averio-danke.html?newsletter=1'
-    : `averio-danke.html?guide=${encodeURIComponent(currentGuideId)}${newsletter ? '&newsletter=1' : ''}`;
-
-  setTimeout(() => {
-    window.location.href = redirectUrl;
-  }, 800);
 
   btn.textContent = '✓ Gleich weiterleiten…';
   btn.disabled    = false;
-}
 
-async function sendGuideViaBrevo(name, email, guideId, guideTitle) {
-  const isNewsletter = guideId === 'newsletter';
-  const subject      = isNewsletter
-    ? 'Du wirst benachrichtigt — Averio Media Guides'
-    : `Dein Guide: ${guideTitle} — Averio Media`;
-
-  const htmlBody = isNewsletter ? buildNewsletterEmail(name) : buildGuideEmail(name, guideTitle);
-
-  const payload = {
-    sender:     { name: 'Averio Media', email: BREVO_SENDER_EMAIL },
-    to:         [{ email, name }],
-    subject,
-    htmlContent: htmlBody
-  };
-
-  const notifyPayload = {
-    sender:      { name: 'Averio Media System', email: BREVO_SENDER_EMAIL },
-    to:          [{ email: BREVO_NOTIFY_EMAIL }],
-    subject:     isNewsletter
-      ? `Neue Newsletter-Anmeldung: ${name}`
-      : `Guide-Download: ${guideTitle} — ${name}`,
-    htmlContent: `<p><strong>Name:</strong> ${name}<br><strong>E-Mail:</strong> ${email}<br><strong>Guide:</strong> ${guideTitle}</p>`
-  };
-
-  await Promise.all([
-    fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: { 'api-key': BREVO_API_KEY, 'content-type': 'application/json' },
-      body: JSON.stringify(payload)
-    }),
-    fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: { 'api-key': BREVO_API_KEY, 'content-type': 'application/json' },
-      body: JSON.stringify(notifyPayload)
-    })
-  ]);
-}
-
-// ── Newsletter Double Opt-In via Brevo ─────────────────────────────────────
-async function subscribeNewsletterDOI(name, email) {
-  // Nur ausführen wenn List-ID und Template-ID konfiguriert sind
-  if (!BREVO_NEWSLETTER_LIST_ID || !BREVO_DOI_TEMPLATE_ID) {
-    console.warn('Newsletter DOI: BREVO_NEWSLETTER_LIST_ID oder BREVO_DOI_TEMPLATE_ID nicht gesetzt.');
-    return;
-  }
-  try {
-    await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
-      method: 'POST',
-      headers: { 'api-key': BREVO_API_KEY, 'content-type': 'application/json' },
-      body: JSON.stringify({
-        email,
-        attributes:     { VORNAME: name },
-        includeListIds: [BREVO_NEWSLETTER_LIST_ID],
-        templateId:     BREVO_DOI_TEMPLATE_ID,
-        redirectionUrl: BREVO_DOI_REDIRECT_URL
-      })
-    });
-  } catch(e) {
-    console.error('Newsletter DOI Fehler:', e);
-  }
-}
-
-function buildGuideEmail(name, guideTitle) {
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8">
-  <style>body{font-family:'DM Sans',Arial,sans-serif;background:#090909;color:#e0e0e0;margin:0;padding:0;}
-  .wrap{max-width:560px;margin:0 auto;padding:40px 24px;}
-  .logo{font-family:'Syne',Arial,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:32px;}
-  .logo span{color:#FF4D00;}
-  h1{font-family:'Syne',Arial,sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;line-height:1.2;}
-  p{font-size:14px;line-height:1.8;color:#999;margin-bottom:16px;}
-  .cta{display:inline-block;background:#FF4D00;color:#fff;padding:14px 28px;border-radius:100px;font-size:13px;font-weight:700;text-decoration:none;margin-top:8px;}
-  .note{font-size:11px;color:#444;margin-top:32px;border-top:1px solid #1a1a1a;padding-top:16px;}</style><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Kostenlose Google Ads Guides & Checklisten",
-  "url": "https://averiomedia.de/guides",
-  "description": "Google Ads Guides zum kostenlosen Download von Averio Media.",
-  "hasPart": [
-    {
-      "@type": "DigitalDocument",
-      "name": "10 Budgetvernichtende Fehler, die dir kein Google Ads Experte verrät",
-      "description": "Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest.",
-      "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "6 Punkte Google Ads Checkliste für bessere Kampagnenperformance",
-      "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Step-by-Step Kampagnenoptimierung",
-      "url": "https://averiomedia.de/guides/averio-guide-3-optimierung.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Die Negative-Keyword-Bibel: 500+ ausschließende Keywords für 12 Branchen",
-      "url": "https://averiomedia.de/guides/averio-guide-4-negative-keywords.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "GA4 + Google Ads richtig verbinden – das vollständige Tracking-Setup",
-      "url": "https://averiomedia.de/guides/averio-guide-5-tracking.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  // Direkt zur Guide-Seite weiterleiten (kein E-Mail-Versand nötig)
+  setTimeout(() => {
+    if (isNewsletter) {
+      window.location.href = 'averio-danke.html?newsletter=1';
+    } else {
+      const guideUrl = GUIDE_URLS[currentGuideId] || 'averio-danke.html';
+      window.location.href = guideUrl;
     }
-  ]
-}
-<\/script>
-</head><body>
-  <div class="wrap">
-    <div class="logo">Averio <span>Media</span></div>
-    <h1>Dein Guide ist bereit, ${name}.</h1>
-    <p>Danke für dein Interesse — hier ist dein kostenloser Guide <strong style="color:#fff;">${guideTitle}</strong>.</p>
-    <p>Den Download-Link schicke ich dir persönlich zu, sobald die PDF fertig ist. Normalerweise dauert das nur wenige Minuten.</p>
-    <p style="color:#666;font-size:13px;">In der Zwischenzeit: Wenn du Fragen zu deiner Google Ads Situation hast — oder einfach wissen willst, was bei dir gerade möglich wäre — dann können wir das kostenlos in 15 Minuten besprechen.</p>
-    <a href="https://averiomedia.de/kontakt" class="cta">Kostenloser Kurzcheck →</a>
-    <div class="note">Du erhältst diese E-Mail, weil du einen Guide von Averio Media angefordert hast. Kein Newsletter, kein Spam.</div>
-  </div></body></html>`;
+  }, 600);
 }
 
-function buildNewsletterEmail(name) {
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8">
-  <style>body{font-family:'DM Sans',Arial,sans-serif;background:#090909;color:#e0e0e0;margin:0;padding:0;}
-  .wrap{max-width:560px;margin:0 auto;padding:40px 24px;}
-  .logo{font-family:'Syne',Arial,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:32px;}
-  .logo span{color:#FF4D00;}
-  h1{font-family:'Syne',Arial,sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
-  p{font-size:14px;line-height:1.8;color:#999;margin-bottom:16px;}
-  .note{font-size:11px;color:#444;margin-top:32px;border-top:1px solid #1a1a1a;padding-top:16px;}</style><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Kostenlose Google Ads Guides & Checklisten",
-  "url": "https://averiomedia.de/guides",
-  "description": "Google Ads Guides zum kostenlosen Download von Averio Media.",
-  "hasPart": [
-    {
-      "@type": "DigitalDocument",
-      "name": "10 Budgetvernichtende Fehler, die dir kein Google Ads Experte verrät",
-      "description": "Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest.",
-      "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "6 Punkte Google Ads Checkliste für bessere Kampagnenperformance",
-      "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Step-by-Step Kampagnenoptimierung",
-      "url": "https://averiomedia.de/guides/averio-guide-3-optimierung.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Die Negative-Keyword-Bibel: 500+ ausschließende Keywords für 12 Branchen",
-      "url": "https://averiomedia.de/guides/averio-guide-4-negative-keywords.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "GA4 + Google Ads richtig verbinden – das vollständige Tracking-Setup",
-      "url": "https://averiomedia.de/guides/averio-guide-5-tracking.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    }
-  ]
-}
-<\/script>
-</head><body>
-  <div class="wrap">
-    <div class="logo">Averio <span>Media</span></div>
-    <h1>Du bist dabei, ${name}.</h1>
-    <p>Ich benachrichtige dich, sobald ein neuer Guide auf averiomedia.de erscheint. Kein Newsletter, keine werblichen E-Mails — nur ein kurzer Hinweis wenn es etwas Neues gibt.</p>
-    <p style="color:#666;font-size:13px;">Bis dahin: Schau gerne bei den bereits verfügbaren Guides vorbei.</p>
-    <div class="note">Du erhältst diese E-Mail weil du dich für Guide-Benachrichtigungen von Averio Media eingetragen hast.</div>
-  </div></body></html>`;
-}
+// ── Alte API-Funktionen entfernt (kein API-Key mehr nötig) ──
+
 
 // ── Filter
 function filterGuides(cat, btn) {
