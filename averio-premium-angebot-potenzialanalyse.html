@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potenzialanalyse – Kostenlos | Averio Media</title>
@@ -1028,6 +1029,19 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
                 </span>
               </div>
 
+              <!-- Newsletter -->
+              <div class="checkbox-wrap" id="nl-wrap" onclick="toggleCheckbox('nl-wrap', 'nl-check')" style="margin-bottom:12px;">
+                <div class="checkbox-box" id="nl-check-box">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style="display:none" id="nl-check-icon">
+                    <path d="M2 5.5L4.5 8L9 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <input type="checkbox" id="nl-check" name="newsletter" style="display:none">
+                <span class="checkbox-text">
+                  Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span style="opacity:.55">(Optional — Abmeldung jederzeit möglich)</span>
+                </span>
+              </div>
+
               <!-- Submit -->
               <button type="submit" class="form-submit">
                 Kostenlose Potenzialanalyse anfragen →
@@ -1227,7 +1241,8 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
             Branche:   document.getElementById('pa-branche')?.value.trim()  || '–',
             Region:    document.getElementById('pa-region')?.value.trim()   || '–',
             Budget:    document.getElementById('budget-display')?.textContent.trim() || '–',
-            Erwartung: document.getElementById('pa-erwartung')?.value.trim() || '–'
+            Erwartung:  document.getElementById('pa-erwartung')?.value.trim() || '–',
+            Newsletter: document.getElementById('nl-check')?.checked ? 'Ja' : 'Nein'
           })
         });
       } catch(err) { console.warn('nForms:', err); }
@@ -1238,6 +1253,10 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
       } else {
         window.open('averio-danke-potenzialanalyse.html', '_blank');
       }
+
+      // Inline-Erfolgsanzeige auf der Hauptseite (Formular als abgeschlossen markieren)
+      document.getElementById('potenzial-form').style.display = 'none';
+      document.getElementById('success-state').classList.add('visible');
     }
 
     // ── FAQ ──

@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zusammenarbeit anfragen – Laufende Google Ads Betreuung | Averio Media</title>
@@ -1249,6 +1250,14 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
               </div>
             </div>
 
+            <!-- Newsletter -->
+            <div class="checkbox-wrap" id="nl-wrap" onclick="toggleCheckbox('nl-wrap')" style="margin-bottom:12px;">
+              <div class="checkbox-box"><span class="checkbox-tick">✓</span></div>
+              <div class="checkbox-text">
+                Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span style="opacity:.55">(Optional — Abmeldung jederzeit möglich)</span>
+              </div>
+            </div>
+
             <button type="submit" class="btn-submit">Zusammenarbeit anfragen →</button>
             <div class="form-note">Unverbindlich · Antwort innerhalb von 24h</div>
 
@@ -1419,7 +1428,8 @@ async function submitCollab(e) {
         Laufzeit:      laufzeit?.textContent.trim()                             || '–',
         Budget:        document.getElementById('zus-budget')?.value             || '–',
         Problem:       document.getElementById('zus-problem')?.value.trim()     || '–',
-        Erwartung:     document.getElementById('zus-erwartung')?.value.trim()   || '–'
+        Erwartung:     document.getElementById('zus-erwartung')?.value.trim()   || '–',
+        Newsletter:    document.getElementById('nl-wrap')?.classList.contains('checked') ? 'Ja' : 'Nein'
       })
     });
   } catch(err) { console.warn('nForms:', err); }
@@ -1430,6 +1440,10 @@ async function submitCollab(e) {
   } else {
     window.open('averio-danke-zusammenarbeit.html', '_blank');
   }
+
+  // Inline-Erfolgsanzeige auf der Hauptseite (Anfrage als abgeschlossen markieren)
+  document.getElementById('form-inner').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
 }
 
 /* ══ FAQ ACCORDION ══════════════════════════════════════════════ */

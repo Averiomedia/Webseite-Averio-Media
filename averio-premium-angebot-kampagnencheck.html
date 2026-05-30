@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kampagnencheck · 199 € — Averio Media</title>
@@ -1317,6 +1318,10 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
               <input type="checkbox" id="f-agb">
               <label for="f-agb">Ich akzeptiere die <a href="averio-agb.html" target="_blank" rel="noopener">Allgemeinen Geschäftsbedingungen</a> und bestätige, dass ich eine kostenpflichtige Buchung tätige (199 €).</label>
             </div>
+            <div class="form-check">
+              <input type="checkbox" id="f-newsletter">
+              <label for="f-newsletter">Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span class="form-opt">(Optional — Abmeldung jederzeit möglich)</span></label>
+            </div>
             <div class="form-actions">
               <button type="button" class="btn-back" onclick="prevStep(3)">← Zurück</button>
               <button type="button" class="btn-next" onclick="submitBooking()">Jetzt kostenpflichtig buchen ✓</button>
@@ -1563,7 +1568,8 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
             GoogleAdsKonto:    konto,
             Branche:           document.getElementById('f-branche').value.trim(),
             Werbebudget:       budget,
-            Problem:           document.getElementById('f-problem').value.trim()
+            Problem:           document.getElementById('f-problem').value.trim(),
+            Newsletter:        document.getElementById('f-newsletter').checked ? 'Ja' : 'Nein'
           })
         });
       } catch(err) { console.warn('nForms:', err); }
@@ -1574,6 +1580,16 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
       } else {
         window.open('averio-danke-kampagnencheck.html', '_blank');
       }
+
+      // Inline-Erfolgsanzeige auf der Hauptseite (Buchungsprozess als abgeschlossen markieren)
+      document.getElementById('step-3').classList.remove('active');
+      document.getElementById('step-indicators').style.display = 'none';
+      document.getElementById('invoice-preview').style.display = 'none';
+      document.getElementById('booking-success').classList.add('visible');
+      document.getElementById('si-3').classList.remove('active');
+      document.getElementById('si-3').classList.add('done');
+      document.getElementById('si-4').classList.add('active');
+      document.getElementById('buchung').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     /* ────────────────────────────────────────
