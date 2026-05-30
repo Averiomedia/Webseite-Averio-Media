@@ -694,9 +694,10 @@ html[data-theme="light"] .conf-footer a         { color: #495057 !important; }
   const eventType = p.get('event_type_name');
   if (eventType) document.getElementById('info-type').textContent = eventType;
 
-  // Name
-  const name = p.get('invitee_full_name') || (p.get('invitee_first_name') + ' ' + p.get('invitee_last_name')).trim();
-  if (name && name.trim()) {
+  // Name — null-sicher zusammensetzen
+  const nameParts = [p.get('invitee_first_name'), p.get('invitee_last_name')].filter(Boolean);
+  const name = p.get('invitee_full_name') || nameParts.join(' ');
+  if (name) {
     document.getElementById('info-name').textContent = name;
     document.getElementById('info-name-row').style.display = 'flex';
   }
