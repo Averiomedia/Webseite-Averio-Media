@@ -219,11 +219,12 @@ h1 span { color: #FF4D00; }
 <script>
 (function() {
   const GUIDE_MAP = {
-    'guide-1': { title: '10 Budgetvernichtende Google Ads Fehler',          url: 'guides/averio-guide-1-budgetfehler.html' },
-    'guide-2': { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', url: 'guides/averio-guide-2-checkliste.html' },
-    'guide-3': { title: 'Google Ads Step-by-Step Optimierung',               url: 'guides/averio-guide-3-optimierung.html' },
-    'guide-4': { title: 'Negative-Keyword-Bibel für 12 Branchen',            url: 'guides/averio-guide-4-negative-keywords.html' },
-    'guide-5': { title: 'GA4 & Conversion-Tracking Setup',                   url: 'guides/averio-guide-5-tracking.html' },
+    'guide-1':    { title: '10 Budgetvernichtende Google Ads Fehler',          url: 'guides/averio-guide-1-budgetfehler.html',  btnText: 'Guide öffnen & herunterladen' },
+    'guide-2':    { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', url: 'guides/averio-guide-2-checkliste.html',   btnText: 'Guide öffnen & herunterladen' },
+    'guide-3':    { title: 'Google Ads Step-by-Step Optimierung',               url: 'guides/averio-guide-3-optimierung.html',  btnText: 'Guide öffnen & herunterladen' },
+    'guide-4':    { title: 'Negative-Keyword-Bibel für 12 Branchen',            url: 'guides/averio-guide-4-negative-keywords.html', btnText: 'Guide öffnen & herunterladen' },
+    'guide-5':    { title: 'GA4 & Conversion-Tracking Setup',                   url: 'guides/averio-guide-5-tracking.html',    btnText: 'Guide öffnen & herunterladen' },
+    'preisliste': { title: 'Preisliste Averio Media',                            url: 'averio-preisliste-download.html',        btnText: 'Preisliste jetzt öffnen' },
   };
 
   let guideId = null;
@@ -234,20 +235,40 @@ h1 span { color: #FF4D00; }
     localStorage.removeItem('av_pendingGuide');
     localStorage.removeItem('av_pendingGuideName');
 
+    // Seite an Preisliste anpassen
+    const isPreisliste = guideId === 'preisliste';
+    if (isPreisliste) {
+      document.getElementById('page-title').innerHTML = 'Deine Preisliste ist<br><span>bereit.</span>';
+      document.getElementById('page-sub').textContent = 'Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst die vollständige Preisliste jetzt direkt öffnen.';
+    }
+
     // Name personalisieren wenn vorhanden
     if (name) {
       const sub = document.getElementById('page-sub');
-      if (sub) sub.textContent = 'Hallo ' + name + ', deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.';
+      if (sub) {
+        if (isPreisliste) {
+          sub.textContent = 'Hallo ' + name + ', deine E-Mail wurde bestätigt. Hier ist deine persönliche Preisliste mit allen Konditionen.';
+        } else {
+          sub.textContent = 'Hallo ' + name + ', deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.';
+        }
+      }
     }
   } catch(e) {}
 
   const guide = guideId ? GUIDE_MAP[guideId] : null;
 
   if (guide) {
-    // Spezifischer Guide bekannt → Single-Guide-Box anzeigen
+    // Spezifischer Guide / Preisliste bekannt → Single-Box anzeigen
     document.getElementById('single-guide-title').textContent = guide.title;
-    document.getElementById('single-guide-btn').href = guide.url;
+    const btn = document.getElementById('single-guide-btn');
+    btn.href = guide.url;
+    // Button-Text anpassen
+    btn.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ' + guide.btnText;
     document.getElementById('single-guide').style.display = 'block';
+    // Eyebrow anpassen
+    if (guideId === 'preisliste') {
+      document.querySelector('.guide-box-eyebrow').textContent = 'Deine Preisliste';
+    }
   } else {
     // Kein localStorage-Wert (z.B. E-Mail auf anderem Gerät geöffnet) → alle Guides anzeigen
     document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>deine <span>Guides</span> warten.';

@@ -559,14 +559,14 @@ html[data-theme="light"] .pl-mailto-btn        { color: #FF4D00 !important; bord
         <div class="pl-form-footer">Kein Spam · Einmaliger Versand · Jederzeit abmeldbar</div>
       </div>
 
-      <!-- Erfolg (automatisch) -->
+      <!-- Erfolg: Bestätigungslink gesendet -->
       <div class="pl-success" id="pl-success">
         <div class="pl-success-icon">📬</div>
-        <div class="pl-success-title">Preisliste gesendet!</div>
-        <div class="pl-success-text">Die Preisliste ist auf dem Weg zu dir. Schau in dein Postfach — und hier direkt eine Übersicht der Pakete.</div>
+        <div class="pl-success-title">Bestätigungslink gesendet!</div>
+        <div class="pl-success-text">Schau in dein Postfach und klicke den Bestätigungslink — erst danach öffnet sich die vollständige Preisliste mit allen Konditionen.<br><br><span style="font-size:11px;color:#555;">Manchmal landet er im Spam-Ordner.</span></div>
         <button onclick="document.getElementById('pl-pakete-section').scrollIntoView({behavior:'smooth'})"
-          style="margin-top:1.5rem;background:var(--o);color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);">
-          Pakete direkt ansehen ↓
+          style="margin-top:1.5rem;background:transparent;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.1);padding:10px 24px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--fb);">
+          Pakete schon mal ansehen ↓
         </button>
       </div>
 
@@ -727,125 +727,8 @@ html[data-theme="light"] .pl-mailto-btn        { color: #FF4D00 !important; bord
 <script src="cookie-banner.js"></script>
 
 <script>
-/* ════════════════════════════════════════════════════════
-   BREVO E-MAIL KONFIGURATION
-   ════════════════════════════════════════════════════════
-   1) Trag deinen Brevo API-Key ein (Brevo → Einstellungen → API-Keys)
-   2) Absender-E-Mail muss in Brevo als Absender verifiziert sein
-   3) Vollbetreuung-Preis in der E-Mail eintragen (PREIS_VOLLBETREUUNG)
-   ════════════════════════════════════════════════════════ */
-const NFORMS_URL           = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
-const PREIS_VOLLBETREUUNG  = 'ab 690 €';
-
-/* ── E-Mail HTML Template ─────────────────────────────── */
-function buildEmailHTML(name) {
-  return `<!DOCTYPE html>
-<html lang="de">
-<head><meta charset="UTF-8">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Deine Preise & Kosten – Google Ads Betreuung | Averio Media</title><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Preise & Kosten – Google Ads Betreuung | Averio Media",
-  "url": "https://averiomedia.de/preisliste",
-  "description": "Transparente Preise für Google Ads Betreuung bei Averio Media.",
-  "mainEntity": {
-    "@type": "OfferCatalog",
-    "name": "Preisliste Averio Media",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Kampagnencheck",
-        "price": "199",
-        "priceCurrency": "EUR",
-        "description": "Einmaliger Google Ads Audit mit PDF-Reporting"
-      },
-      {
-        "@type": "Offer",
-        "name": "Kostenlose Potenzialanalyse",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "description": "Unverbindliche Analyse des Marktpotenzials"
-      }
-    ]
-  }
-}
-<\/script>
-</head>
-<body style="margin:0;padding:0;background:#0d0d0d;font-family:'Helvetica Neue',Arial,sans-serif;">
-<div style="max-width:600px;margin:0 auto;padding:40px 20px;">
-  <div style="text-align:center;margin-bottom:32px;">
-    <div style="display:inline-block;background:#FF4D00;border-radius:10px;padding:12px 20px;">
-      <span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.5px;">Averio Media</span>
-    </div>
-  </div>
-  <div style="background:#111;border:1px solid #1a1a1a;border-radius:16px;overflow:hidden;">
-    <div style="background:linear-gradient(135deg,rgba(255,77,0,.15),transparent);padding:40px 36px 32px;">
-      <p style="color:#FF4D00;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;">Deine Preisliste</p>
-      <h1 style="color:#fff;font-size:28px;font-weight:800;margin:0 0 12px;line-height:1.2;">Hallo ${name},</h1>
-      <p style="color:#999;font-size:15px;line-height:1.7;margin:0;">hier ist deine persönliche Preisliste von Averio Media — transparent, vollständig, kein Verkaufsdruck.</p>
-    </div>
-    <div style="padding:0 36px 36px;">
-
-      <!-- Kampagnencheck -->
-      <div style="border:1px solid #222;border-radius:12px;padding:24px;margin-bottom:16px;">
-        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Einmalig</div>
-        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Kampagnencheck</div>
-        <div style="font-size:36px;font-weight:800;color:#FF4D00;margin-bottom:12px;line-height:1;">119 <span style="font-size:14px;color:#777;font-weight:400;">€ inkl. MwSt.</span></div>
-        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Vollständige Analyse deines bestehenden Google Ads Kontos — Struktur, Tracking, Performance, Copy. Priorisierter Maßnahmenplan als PDF in 2–4 Werktagen.</p>
-        <div style="font-size:12px;color:#999;">✓&nbsp; Vollständige Konto-Analyse<br>✓&nbsp; Tracking &amp; Datenbasis Check<br>✓&nbsp; Keyword &amp; Anzeigentext-Review<br>✓&nbsp; PDF-Report in 2–4 Werktagen</div>
-      </div>
-
-      <!-- Vollbetreuung -->
-      <div style="border:1px solid rgba(255,77,0,.3);border-radius:12px;padding:24px;margin-bottom:16px;background:rgba(255,77,0,.03);">
-        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Monatlich · Beliebt</div>
-        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Vollbetreuung</div>
-        <div style="font-size:36px;font-weight:800;color:#FF4D00;margin-bottom:12px;line-height:1;">${PREIS_VOLLBETREUUNG} <span style="font-size:14px;color:#777;font-weight:400;">/ Monat</span></div>
-        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Vollständige Übernahme: Strategie, Setup, laufende wöchentliche Optimierung, monatliches Reporting — alles aus einer Hand. Individuelle Konditionen nach Erstgespräch.</p>
-        <div style="font-size:12px;color:#999;">✓&nbsp; Konto-Übernahme &amp; Audit inklusive<br>✓&nbsp; Wöchentliche Optimierung<br>✓&nbsp; Monatliches Reporting &amp; Gespräch<br>✓&nbsp; Direkt mit Marie — immer erreichbar<br><span style="color:#666;">Laufzeit 3 Monate, Kündigung 1 Monat vor Quartalsende</span></div>
-      </div>
-
-      <!-- Potenzialanalyse -->
-      <div style="border:1px solid rgba(168,216,240,.12);border-radius:12px;padding:24px;margin-bottom:32px;background:rgba(168,216,240,.03);">
-        <div style="font-size:10px;color:#A8D8F0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;opacity:.7;">Kostenlos</div>
-        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;">Potenzialanalyse</div>
-        <div style="font-size:36px;font-weight:800;color:#A8D8F0;margin-bottom:12px;line-height:1;opacity:.7;">0 € <span style="font-size:14px;color:#777;font-weight:400;">kostenlos</span></div>
-        <p style="font-size:13px;color:#888;line-height:1.6;margin:0 0 16px;">Noch kein aktives Konto? Wir analysieren Suchvolumen, Wettbewerb und Budget-Bedarf — ehrliche Einschätzung, auch wenn die Antwort Nein ist.</p>
-        <div style="font-size:12px;color:#999;">✓&nbsp; Suchvolumen &amp; Wettbewerb<br>✓&nbsp; Realistische Budget-Einschätzung<br>✓&nbsp; Schriftliche Empfehlung</div>
-      </div>
-
-      <div style="text-align:center;">
-        <a href="https://averiomedia.de" style="display:inline-block;background:#FF4D00;color:#fff;padding:14px 32px;border-radius:100px;font-size:14px;font-weight:700;text-decoration:none;">Jetzt Gespräch buchen →</a>
-        <p style="font-size:11px;color:#555;margin-top:16px;">Kein Verkaufsdruck · Du meldest dich, wenn du bereit bist</p>
-      </div>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:11px;color:#444;margin-top:24px;">
-    Averio Media · Marie Böttiger · Bayern, Deutschland<br>
-    <a href="#" style="color:#555;">Datenschutz</a> · <a href="#" style="color:#555;">Impressum</a>
-  </p>
-</div>
-</body></html>`;
-}
-
-/* ── nForms Benachrichtigung ──────────────────────────── */
-async function sendViaNForms(name, email, branche, interest) {
-  const res = await fetch(NFORMS_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      Formular:  'Preisliste',
-      Name:      name,
-      Email:     email,
-      Branche:   branche || '–',
-      Interesse: interest
-    })
-  });
-  const data = await res.json();
-  if (!data.success) throw new Error('nForms error');
-}
+const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+const NFORMS_URL     = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
 /* ── Formular Submit ──────────────────────────────────── */
 async function submitPreisliste() {
@@ -862,21 +745,43 @@ async function submitPreisliste() {
     return;
   }
   errEl.classList.remove('visible');
-
   btn.disabled = true;
   btn.textContent = 'Wird gesendet …';
 
+  // localStorage speichern — Bestätigungsseite weiß, dass Preisliste angefragt wurde
   try {
-    await sendViaNForms(name, email, branche, interest);
-    document.getElementById('pl-form-inner').style.display = 'none';
-    document.getElementById('pl-success').classList.add('active');
-    const vb = document.getElementById('vb-price');
-    if (vb) { vb.classList.remove('blurred'); vb.textContent = PREIS_VOLLBETREUUNG; }
-  } catch(e) {
-    btn.disabled = false;
-    btn.textContent = 'Preisliste sofort erhalten →';
-    alert('Etwas ist schiefgelaufen. Bitte schreib uns direkt: kontakt@averiomedia.de');
-  }
+    localStorage.setItem('av_pendingGuide', 'preisliste');
+    localStorage.setItem('av_pendingGuideName', name);
+  } catch(e) {}
+
+  // Brevo DOI senden — Bestätigungslink kommt per E-Mail
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI:', e); }
+
+  // nForms — Benachrichtigung an Marie
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:  'Preisliste',
+        Name:      name,
+        Email:     email,
+        Branche:   branche || '–',
+        Interesse: interest
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
+  // Erfolg anzeigen
+  document.getElementById('pl-form-inner').style.display = 'none';
+  document.getElementById('pl-success').classList.add('active');
+  btn.disabled = false;
 }
 
 /* ── Radio-Buttons ────────────────────────────────────── */
