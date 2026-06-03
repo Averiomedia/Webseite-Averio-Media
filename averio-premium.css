@@ -1776,6 +1776,87 @@ html[data-theme="light"] .v1-testi-role { color: #868E96 !important; }
 /* CTA-Hinweis (v1) */
 html[data-theme="light"] .v1-cta-note { color: #868E96 !important; }
 
+/* ══════════════════════════════════════════════════════
+   LIGHT MODE WITH DARK ACCENTS
+   Hero, Preloader, CTA-Sektion & Footer bleiben dunkel.
+   Content-Sektionen (Cards, FAQ, Prozess etc.) → hell.
+   Ergibt: helle Seite mit dramatischen dunklen Ankern.
+══════════════════════════════════════════════════════ */
+
+/* ── Preloader — dunkel (nahtloser Übergang zum dunklen Hero) */
+html[data-theme="light"] #preloader              { background: #050505 !important; }
+html[data-theme="light"] .pl-logo               { color: #ffffff !important; }
+html[data-theme="light"] .pl-bar-track          { background: rgba(255,255,255,.08) !important; }
+html[data-theme="light"] .pl-label              { color: rgba(255,255,255,.25) !important; }
+
+/* ── Hero — dunkel behalten */
+html[data-theme="light"] #hero                  { background: #050505 !important; }
+html[data-theme="light"] .hero-parallax-bg::before {
+  background: radial-gradient(ellipse 900px 600px at 70% 30%, rgba(255,77,0,.10), transparent) !important;
+}
+html[data-theme="light"] .hero-parallax-bg::after {
+  background: radial-gradient(ellipse 600px 500px at 5% 80%, rgba(168,216,240,.05), transparent) !important;
+}
+html[data-theme="light"] .hero-grid             { filter: none !important; opacity: .025 !important; }
+html[data-theme="light"] #particleCanvas        { display: block !important; }
+html[data-theme="light"] .hero-eyebrow          { color: #D6EEFF !important; opacity: .8 !important; }
+html[data-theme="light"] .hero-eyebrow-v1       { color: #FF4D00 !important; }
+html[data-theme="light"] .hero-h1               { color: #ffffff !important; }
+html[data-theme="light"] .v1-h1                 { color: #ffffff !important; }
+html[data-theme="light"] .hero-sub              { color: rgba(255,255,255,.58) !important; }
+html[data-theme="light"] .v1-sub                { color: rgba(255,255,255,.58) !important; }
+html[data-theme="light"] .hero-stats            { border-top-color: rgba(255,255,255,.07) !important; }
+html[data-theme="light"] .v1-stat-num           { color: #ffffff !important; }
+html[data-theme="light"] .v1-stat-label         { color: rgba(255,255,255,.4) !important; }
+html[data-theme="light"] .hero-stat-num         { color: #ffffff !important; }
+html[data-theme="light"] .hero-stat-label       { color: rgba(255,255,255,.4) !important; opacity: 1 !important; }
+html[data-theme="light"] .hero-float-card {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.09) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html[data-theme="light"] .hero-float-card:hover  { border-color: rgba(255,77,0,.35) !important; }
+html[data-theme="light"] .hfc-name               { color: #ffffff !important; }
+html[data-theme="light"] .hfc-desc               { color: rgba(255,255,255,.42) !important; }
+html[data-theme="light"] .hfc-metric-unit        { color: rgba(255,255,255,.38) !important; }
+
+/* ── Ticker — bleibt orange (kein Override nötig) */
+
+/* ── Kunden-Logo-Ticker in Hell: Logos sichtbar machen */
+html[data-theme="light"] .tick-logo img         { filter: none !important; opacity: .65 !important; }
+
+/* ── CTA-Sektion (#cta / .cta-section) — dunkel */
+html[data-theme="light"] .cta-section {
+  background: #070707 !important;
+  border-top-color: #1e1e1e !important;
+}
+html[data-theme="light"] .cta-h                 { color: #ffffff !important; }
+html[data-theme="light"] .cta-sub               { color: rgba(255,255,255,.52) !important; }
+html[data-theme="light"] .cta-note              { color: rgba(255,255,255,.22) !important; }
+html[data-theme="light"] .cta-section .btn-ghost {
+  border-color: rgba(255,255,255,.14) !important;
+  color: rgba(255,255,255,.62) !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .cta-section .btn-ghost:hover {
+  border-color: rgba(255,255,255,.45) !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,.06) !important;
+}
+
+/* ── Footer — dunkel */
+html[data-theme="light"] .footer {
+  background: #050505 !important;
+  border-top-color: #1a1a1a !important;
+}
+html[data-theme="light"] .footer-logo-name      { color: #ffffff !important; }
+html[data-theme="light"] .footer-logo-sub       { color: #4a4a4a !important; }
+html[data-theme="light"] .footer-copy           { color: rgba(255,255,255,.18) !important; }
+html[data-theme="light"] .footer-links a        { color: rgba(255,255,255,.28) !important; }
+html[data-theme="light"] .footer-links a:hover  { color: var(--o) !important; }
+
 /* ── 18. PREISLISTE- & GUIDES-KARTEN (averio-premium.html) */
 
 /* Karten-Hintergrund: Glassmorphism → solide weiße Karten */
