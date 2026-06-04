@@ -404,28 +404,8 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
        z.B.: https://calendly.com/marie-averiomedia/erstgespraech
   ════════════════════════════════════════════════════════ -->
   <div class="calendly-wrap" id="calendly-wrap">
-
-    <!-- Consent-Placeholder (wird ausgeblendet sobald Calendly geladen) -->
-    <div class="calendly-consent-box" id="calendly-consent-box">
-      <div class="ccb-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4D00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-        </svg>
-      </div>
-      <h3 class="ccb-title">Termin buchen</h3>
-      <p class="ccb-text">
-        Das Buchungswidget wird von <strong>Calendly</strong> (USA) bereitgestellt. Beim Laden werden Daten – inkl. deiner IP-Adresse – an Calendly übertragen.
-        Weitere Infos in unserer <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a>.
-      </p>
-      <div class="ccb-buttons">
-        <button class="ccb-btn-accept" id="calendly-load-btn">Calendly laden &amp; Termin buchen</button>
-        <a class="ccb-btn-link" href="https://calendly.com/mb-topad-info/telefongesprach" target="_blank" rel="noopener">Direkt bei Calendly öffnen ↗</a>
-      </div>
-    </div>
-
-    <!-- Calendly Widget (wird dynamisch befüllt) -->
-    <div id="calendly-widget" style="display:none;min-width:320px;height:700px;"></div>
-
+    <!-- Calendly inline widget -->
+    <div id="calendly-widget" style="min-width:320px;height:700px;"></div>
   </div>
 
 </main>
@@ -444,29 +424,22 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
 <script src="js/ScrollTrigger.min.js"></script>
 <script src="js/lenis.min.js"></script>
 
-<!-- Calendly: erst nach Einwilligung laden -->
+<!-- Calendly: direkt laden -->
 <script>
 (function () {
   var CALENDLY_URL = 'https://calendly.com/mb-topad-info/telefongesprach';
 
   function loadCalendly() {
-    var consentBox  = document.getElementById('calendly-consent-box');
-    var widgetDiv   = document.getElementById('calendly-widget');
-    if (!consentBox || !widgetDiv) return;
+    var widgetDiv = document.getElementById('calendly-widget');
+    if (!widgetDiv) return;
 
-    // CSS laden
     var link = document.createElement('link');
-    link.rel = 'stylesheet';
+    link.rel  = 'stylesheet';
     link.href = 'https://assets.calendly.com/assets/external/widget.css';
     document.head.appendChild(link);
 
-    // Widget einblenden, Placeholder ausblenden
-    consentBox.style.display = 'none';
-    widgetDiv.style.display  = 'block';
-
-    // Calendly JS laden & Widget initialisieren
     var script = document.createElement('script');
-    script.src  = 'https://assets.calendly.com/assets/external/widget.js';
+    script.src   = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     script.onload = function () {
       Calendly.initInlineWidget({
@@ -477,21 +450,9 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
       });
     };
     document.body.appendChild(script);
-
-    // In localStorage merken damit Widget beim Reload direkt erscheint
-    try { localStorage.setItem('averio_calendly_consent', '1'); } catch(e) {}
   }
 
-  // Button-Klick
-  document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('calendly-load-btn');
-    if (btn) btn.addEventListener('click', loadCalendly);
-
-    // Bereits zugestimmt? Direkt laden
-    try {
-      if (localStorage.getItem('averio_calendly_consent') === '1') loadCalendly();
-    } catch(e) {}
-  });
+  document.addEventListener('DOMContentLoaded', loadCalendly);
 
   // Weiterleitung nach Buchung
   window.addEventListener('message', function (e) {
