@@ -1819,6 +1819,23 @@ html[data-theme="light"] .pl-count              { color: var(--o) !important; }
 html[data-theme="light"] .tick-logo img         { filter: none !important; opacity: .65 !important; }
 
 /* ── CTA-Sektion — dunkel */
+/* ── CTA-Strip (Zusammenarbeit & andere Seiten) */
+html[data-theme="light"] .cta-strip {
+  background: #F2EDE6 !important;
+  border-top-color: rgba(255,77,0,.12) !important;
+  text-align: center !important;
+}
+html[data-theme="light"] .cta-strip-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+html[data-theme="light"] .cta-strip h2  { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip p   { color: #495057 !important; }
+html[data-theme="light"] .cta-note      { color: #868E96 !important; text-align: center !important; }
+
+/* ── CTA-Sektion (index.html) — dunkel */
 html[data-theme="light"] .cta-section {
   background: #070707 !important;
   border-top-color: #1e1e1e !important;
