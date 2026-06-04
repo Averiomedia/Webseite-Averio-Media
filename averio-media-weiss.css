@@ -1812,38 +1812,8 @@ html[data-theme="light"] .pl-bar-track          { background: #DEE2E6 !important
 html[data-theme="light"] .pl-label              { color: #868E96 !important; }
 html[data-theme="light"] .pl-count              { color: var(--o) !important; }
 
-/* ── Hero — dunkel behalten */
-html[data-theme="light"] #hero                  { background: #050505 !important; }
-html[data-theme="light"] .hero-parallax-bg::before {
-  background: radial-gradient(ellipse 900px 600px at 70% 30%, rgba(255,77,0,.10), transparent) !important;
-}
-html[data-theme="light"] .hero-parallax-bg::after {
-  background: radial-gradient(ellipse 600px 500px at 5% 80%, rgba(168,216,240,.05), transparent) !important;
-}
-html[data-theme="light"] .hero-grid             { filter: none !important; opacity: .025 !important; }
-html[data-theme="light"] #particleCanvas        { display: block !important; }
-html[data-theme="light"] .hero-eyebrow          { color: #D6EEFF !important; opacity: .8 !important; }
-html[data-theme="light"] .hero-eyebrow-v1       { color: #FF4D00 !important; }
-html[data-theme="light"] .hero-h1               { color: #ffffff !important; }
-html[data-theme="light"] .v1-h1                 { color: #ffffff !important; }
-html[data-theme="light"] .hero-sub              { color: rgba(255,255,255,.58) !important; }
-html[data-theme="light"] .v1-sub                { color: rgba(255,255,255,.58) !important; }
-html[data-theme="light"] .hero-stats            { border-top-color: rgba(255,255,255,.07) !important; }
-html[data-theme="light"] .v1-stat-num           { color: #ffffff !important; }
-html[data-theme="light"] .v1-stat-label         { color: rgba(255,255,255,.4) !important; }
-html[data-theme="light"] .hero-stat-num         { color: #ffffff !important; }
-html[data-theme="light"] .hero-stat-label       { color: rgba(255,255,255,.4) !important; opacity: 1 !important; }
-html[data-theme="light"] .hero-float-card {
-  background: rgba(255,255,255,.055) !important;
-  border-color: rgba(255,255,255,.09) !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,.45) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-}
-html[data-theme="light"] .hero-float-card:hover  { border-color: rgba(255,77,0,.35) !important; }
-html[data-theme="light"] .hfc-name               { color: #ffffff !important; }
-html[data-theme="light"] .hfc-desc               { color: rgba(255,255,255,.42) !important; }
-html[data-theme="light"] .hfc-metric-unit        { color: rgba(255,255,255,.38) !important; }
+/* ── Hero — hell (einheitlich mit restlicher Seite) */
+/* Kein eigener Override nötig — light-mode Basisstyles greifen */
 
 /* ── Kunden-Logo-Ticker: Logos ohne Invertierung */
 html[data-theme="light"] .tick-logo img         { filter: none !important; opacity: .65 !important; }
