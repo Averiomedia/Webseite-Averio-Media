@@ -1848,5 +1848,112 @@ html[data-theme="light"] .footer-copy           { color: rgba(255,255,255,.18) !
 html[data-theme="light"] .footer-links a        { color: rgba(255,255,255,.28) !important; }
 html[data-theme="light"] .footer-links a:hover  { color: var(--o) !important; }
 
+/* ══════════════════════════════════════════════════════
+   VISUAL DEPTH — Light Mode Sektionen lebendiger machen
+   Klare Farbwechsel, orange Akzente, dekorative Formen
+══════════════════════════════════════════════════════ */
+
+/* ── Sektionen: stärkere Farbwechsel */
+html[data-theme="light"] .section-alt {
+  background: #F2EDE6 !important; /* warmes Leinen statt grau */
+}
+html[data-theme="light"] .section-dark {
+  background: #EBE6DF !important; /* etwas dunkler warm */
+}
+html[data-theme="light"] .pain-section {
+  background: linear-gradient(160deg, #FFF3EE 0%, #FFFFFF 55%) !important;
+  position: relative;
+}
+/* Dekorativer orange Glow — rechts oben in Pain-Sektion */
+html[data-theme="light"] .pain-section::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.07), transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Pain Cards: orange Akzentlinie oben + stärkerer Schatten */
+html[data-theme="light"] .pain-card {
+  border-top: 2px solid rgba(255,77,0,.25) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,.07), 0 1px 4px rgba(0,0,0,.04) !important;
+  transition: box-shadow .25s, transform .25s !important;
+}
+html[data-theme="light"] .pain-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,.1), 0 0 0 1px rgba(255,77,0,.12) !important;
+  transform: translateY(-3px);
+}
+html[data-theme="light"] .pain-grid {
+  background: transparent !important;
+  gap: 2px;
+}
+
+/* ── Service Cards: stärkerer Schatten, orangere Hover-Border */
+html[data-theme="light"] .service-card {
+  box-shadow: 0 6px 28px rgba(0,0,0,.07), 0 1px 6px rgba(0,0,0,.04) !important;
+}
+html[data-theme="light"] .service-card:hover {
+  box-shadow: 0 20px 56px rgba(0,0,0,.1), 0 0 0 1px rgba(255,77,0,.15) !important;
+}
+
+/* ── Angebote-Sektion: weißer Hintergrund mit orangem Streifen oben */
+html[data-theme="light"] #angebote {
+  border-top: 3px solid #FF4D00 !important;
+}
+
+/* ── Prozess-Sektion: warmer Hintergrund, orange Linie an Steps */
+html[data-theme="light"] .process-section {
+  background: #F5F0E8 !important;
+}
+html[data-theme="light"] .process-step {
+  border-top-color: rgba(255,77,0,.15) !important;
+}
+html[data-theme="light"] .process-step:last-child {
+  border-bottom-color: rgba(255,77,0,.15) !important;
+}
+html[data-theme="light"] .ps-circle {
+  border: 2px solid rgba(255,77,0,.2) !important;
+  background: #fff !important;
+}
+html[data-theme="light"] .process-step:hover .ps-circle {
+  background: rgba(255,77,0,.06) !important;
+  border-color: rgba(255,77,0,.5) !important;
+}
+
+/* ── Testimonials: warmes Sandbeige, Karte mit linkem Akzentbalken */
+html[data-theme="light"] .testi-card {
+  border-left: 3px solid rgba(255,77,0,.3) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06) !important;
+}
+html[data-theme="light"] .testi-card:hover {
+  border-left-color: #FF4D00 !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,.09) !important;
+}
+
+/* ── Sektions-Trennlinien: orange getönt statt grau */
+html[data-theme="light"] .section {
+  border-top-color: rgba(255,77,0,.1) !important;
+}
+
+/* ── FAQ-Sektion: leicht warmer Hintergrund */
+html[data-theme="light"] .faq-section {
+  background: #F7F3ED !important;
+}
+html[data-theme="light"] .faq-item {
+  border-color: rgba(255,77,0,.1) !important;
+}
+html[data-theme="light"] .faq-item.open {
+  background: rgba(255,77,0,.03) !important;
+}
+
+/* ── Dekorativer oranger Trennstrich vor sec-eyebrow */
+html[data-theme="light"] .sec-eyebrow::before {
+  background: #FF4D00 !important;
+  opacity: 1 !important;
+}
+
 /* Starke Elemente mit #aaa (zu wenig Kontrast auf Weiß) */
 html[data-theme="light"] strong[style*="color:#aaa"] { color: #212529 !important; }
