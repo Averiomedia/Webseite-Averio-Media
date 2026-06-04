@@ -119,9 +119,10 @@ function initEntryAnimations() {
       if (this.y < 0 || this.y > canvas.height)  this.vy *= -1;
     }
     draw() {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       ctx.save();
-      ctx.globalAlpha = this.a;
-      ctx.fillStyle = this.isOrange ? '#FF4D00' : '#A8D8F0';
+      ctx.globalAlpha = this.a * (isLight ? 2.2 : 1);
+      ctx.fillStyle   = this.isOrange ? '#FF4D00' : (isLight ? '#64748B' : '#A8D8F0');
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
       ctx.fill();
@@ -143,8 +144,9 @@ function initEntryAnimations() {
         const dy = particles[i].y - particles[j].y;
         const d  = Math.sqrt(dx * dx + dy * dy);
         if (d < maxDist) {
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
           ctx.save();
-          ctx.globalAlpha = (1 - d / maxDist) * .07;
+          ctx.globalAlpha = (1 - d / maxDist) * (isLight ? .13 : .07);
           ctx.strokeStyle = '#FF4D00';
           ctx.lineWidth = .6;
           ctx.beginPath();
