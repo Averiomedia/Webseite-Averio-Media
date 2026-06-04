@@ -1805,11 +1805,12 @@ html[data-theme="light"] #guides    [style*="color:#fff"] {
 /* ── Standard: Light Mode ist aktiv (kein Toggle nötig) */
 :root { --default-theme: light; }
 
-/* ── Preloader — dunkel */
-html[data-theme="light"] #preloader              { background: #050505 !important; }
-html[data-theme="light"] .pl-logo               { color: #ffffff !important; }
-html[data-theme="light"] .pl-bar-track          { background: rgba(255,255,255,.08) !important; }
-html[data-theme="light"] .pl-label              { color: rgba(255,255,255,.25) !important; }
+/* ── Preloader — hell (erster Eindruck ist weiß) */
+html[data-theme="light"] #preloader              { background: #ffffff !important; }
+html[data-theme="light"] .pl-logo               { color: #0D1117 !important; }
+html[data-theme="light"] .pl-bar-track          { background: #DEE2E6 !important; }
+html[data-theme="light"] .pl-label              { color: #868E96 !important; }
+html[data-theme="light"] .pl-count              { color: var(--o) !important; }
 
 /* ── Hero — dunkel behalten */
 html[data-theme="light"] #hero                  { background: #050505 !important; }
