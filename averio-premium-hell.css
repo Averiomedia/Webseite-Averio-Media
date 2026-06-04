@@ -1792,5 +1792,90 @@ html[data-theme="light"] #guides    [style*="color:#fff"] {
   color: #0D1117 !important;
 }
 
+/* ══════════════════════════════════════════════════════
+   HELL MIT DUNKLEN AKZENTEN — averio-premium-hell.css
+   Dieses File ist die eigenständige Light-Variante.
+   Hero, Preloader, CTA-Sektion & Footer bleiben dunkel.
+   Einbindung: <link rel="stylesheet" href="averio-premium-hell.css">
+   + Script im <head>:
+     if(localStorage.getItem('avTheme')!=='dark')
+       document.documentElement.setAttribute('data-theme','light');
+══════════════════════════════════════════════════════ */
+
+/* ── Standard: Light Mode ist aktiv (kein Toggle nötig) */
+:root { --default-theme: light; }
+
+/* ── Preloader — dunkel */
+html[data-theme="light"] #preloader              { background: #050505 !important; }
+html[data-theme="light"] .pl-logo               { color: #ffffff !important; }
+html[data-theme="light"] .pl-bar-track          { background: rgba(255,255,255,.08) !important; }
+html[data-theme="light"] .pl-label              { color: rgba(255,255,255,.25) !important; }
+
+/* ── Hero — dunkel behalten */
+html[data-theme="light"] #hero                  { background: #050505 !important; }
+html[data-theme="light"] .hero-parallax-bg::before {
+  background: radial-gradient(ellipse 900px 600px at 70% 30%, rgba(255,77,0,.10), transparent) !important;
+}
+html[data-theme="light"] .hero-parallax-bg::after {
+  background: radial-gradient(ellipse 600px 500px at 5% 80%, rgba(168,216,240,.05), transparent) !important;
+}
+html[data-theme="light"] .hero-grid             { filter: none !important; opacity: .025 !important; }
+html[data-theme="light"] #particleCanvas        { display: block !important; }
+html[data-theme="light"] .hero-eyebrow          { color: #D6EEFF !important; opacity: .8 !important; }
+html[data-theme="light"] .hero-eyebrow-v1       { color: #FF4D00 !important; }
+html[data-theme="light"] .hero-h1               { color: #ffffff !important; }
+html[data-theme="light"] .v1-h1                 { color: #ffffff !important; }
+html[data-theme="light"] .hero-sub              { color: rgba(255,255,255,.58) !important; }
+html[data-theme="light"] .v1-sub                { color: rgba(255,255,255,.58) !important; }
+html[data-theme="light"] .hero-stats            { border-top-color: rgba(255,255,255,.07) !important; }
+html[data-theme="light"] .v1-stat-num           { color: #ffffff !important; }
+html[data-theme="light"] .v1-stat-label         { color: rgba(255,255,255,.4) !important; }
+html[data-theme="light"] .hero-stat-num         { color: #ffffff !important; }
+html[data-theme="light"] .hero-stat-label       { color: rgba(255,255,255,.4) !important; opacity: 1 !important; }
+html[data-theme="light"] .hero-float-card {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.09) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html[data-theme="light"] .hero-float-card:hover  { border-color: rgba(255,77,0,.35) !important; }
+html[data-theme="light"] .hfc-name               { color: #ffffff !important; }
+html[data-theme="light"] .hfc-desc               { color: rgba(255,255,255,.42) !important; }
+html[data-theme="light"] .hfc-metric-unit        { color: rgba(255,255,255,.38) !important; }
+
+/* ── Kunden-Logo-Ticker: Logos ohne Invertierung */
+html[data-theme="light"] .tick-logo img         { filter: none !important; opacity: .65 !important; }
+
+/* ── CTA-Sektion — dunkel */
+html[data-theme="light"] .cta-section {
+  background: #070707 !important;
+  border-top-color: #1e1e1e !important;
+}
+html[data-theme="light"] .cta-h                 { color: #ffffff !important; }
+html[data-theme="light"] .cta-sub               { color: rgba(255,255,255,.52) !important; }
+html[data-theme="light"] .cta-note              { color: rgba(255,255,255,.22) !important; }
+html[data-theme="light"] .cta-section .btn-ghost {
+  border-color: rgba(255,255,255,.14) !important;
+  color: rgba(255,255,255,.62) !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .cta-section .btn-ghost:hover {
+  border-color: rgba(255,255,255,.45) !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,.06) !important;
+}
+
+/* ── Footer — dunkel */
+html[data-theme="light"] .footer {
+  background: #050505 !important;
+  border-top-color: #1a1a1a !important;
+}
+html[data-theme="light"] .footer-logo-name      { color: #ffffff !important; }
+html[data-theme="light"] .footer-logo-sub       { color: #4a4a4a !important; }
+html[data-theme="light"] .footer-copy           { color: rgba(255,255,255,.18) !important; }
+html[data-theme="light"] .footer-links a        { color: rgba(255,255,255,.28) !important; }
+html[data-theme="light"] .footer-links a:hover  { color: var(--o) !important; }
+
 /* Starke Elemente mit #aaa (zu wenig Kontrast auf Weiß) */
 html[data-theme="light"] strong[style*="color:#aaa"] { color: #212529 !important; }
