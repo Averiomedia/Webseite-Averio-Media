@@ -2003,6 +2003,19 @@ html[data-theme="light"] .btn-ghost:hover {
   background: #F8F9FA !important;
 }
 
+/* ── Ökosystem-Liste (oeko-list-item) */
+html[data-theme="light"] .oeko-list-item {
+  color: #374151 !important;
+  background: #FFFFFF !important;
+  border-color: #E5E7EB !important;
+}
+html[data-theme="light"] .oeko-list-item:hover {
+  background: #FFF5F0 !important;
+  border-color: rgba(255,77,0,.3) !important;
+}
+html[data-theme="light"] .oeko-ch-label        { color: #374151 !important; }
+html[data-theme="light"] .sec-ey               { color: #FF4D00 !important; opacity: 1 !important; }
+
 /* ── Metrics Strip */
 html[data-theme="light"] .metrics-strip {
   background: #F8F9FA !important;
