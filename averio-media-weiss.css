@@ -1955,5 +1955,61 @@ html[data-theme="light"] .sec-eyebrow::before {
   opacity: 1 !important;
 }
 
+/* ══════════════════════════════════════════════════════
+   SEITEN-SPEZIFISCHE OVERRIDES — weiße Texte unsichtbar
+   Betrifft: Zusammenarbeit, Angebote, weitere Seiten
+══════════════════════════════════════════════════════ */
+
+/* ── Fließtext & Labels */
+html[data-theme="light"] .sec-body              { color: #495057 !important; }
+html[data-theme="light"] .sec-body strong       { color: #212529 !important; }
+html[data-theme="light"] .leist-title           { color: #0D1117 !important; }
+html[data-theme="light"] .leist-text            { color: #495057 !important; }
+html[data-theme="light"] .process-text          { color: #495057 !important; }
+html[data-theme="light"] .metric-label          { color: #6C757D !important; }
+html[data-theme="light"] .fc-label              { color: #6C757D !important; }
+
+/* ── Paket-Karten */
+html[data-theme="light"] .paket {
+  background: #FFFFFF !important;
+  border-color: #DEE2E6 !important;
+}
+html[data-theme="light"] .paket:hover           { border-color: rgba(255,77,0,.3) !important; }
+html[data-theme="light"] .paket.featured        { border-color: #FF4D00 !important; }
+html[data-theme="light"] .paket-label           { color: #868E96 !important; }
+html[data-theme="light"] .paket-name            { color: #0D1117 !important; }
+html[data-theme="light"] .paket-tagline         { color: #495057 !important; }
+html[data-theme="light"] .paket-divider         { background: #DEE2E6 !important; }
+html[data-theme="light"] .pf                    { color: #495057 !important; }
+html[data-theme="light"] .paket-cta             { color: #495057 !important; border-color: #DEE2E6 !important; background: #F8F9FA !important; }
+html[data-theme="light"] .paket-cta:hover       { color: #0D1117 !important; border-color: #ADB5BD !important; }
+
+/* ── Leistungs-Karten */
+html[data-theme="light"] .leist-card {
+  background: #FFFFFF !important;
+  border-color: #E9ECEF !important;
+}
+html[data-theme="light"] .leist-card:hover      { background: #FFF5F0 !important; }
+
+/* ── Ghost-Buttons */
+html[data-theme="light"] .btn-ghost {
+  color: #495057 !important;
+  border-color: #DEE2E6 !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .btn-ghost:hover {
+  color: #0D1117 !important;
+  border-color: #ADB5BD !important;
+  background: #F8F9FA !important;
+}
+
+/* ── Metrics Strip */
+html[data-theme="light"] .metrics-strip {
+  background: #F8F9FA !important;
+  border-color: #DEE2E6 !important;
+}
+html[data-theme="light"] .metric-item          { border-color: #DEE2E6 !important; }
+html[data-theme="light"] .metric-num           { color: #0D1117 !important; }
+
 /* Starke Elemente mit #aaa (zu wenig Kontrast auf Weiß) */
 html[data-theme="light"] strong[style*="color:#aaa"] { color: #212529 !important; }
