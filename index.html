@@ -98,7 +98,7 @@
 </script>
 
 <!-- Theme init — vor CSS-Render, verhindert Flicker -->
-<script>if(localStorage.getItem('avTheme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
 
 <!-- Fonts -->
 
@@ -108,7 +108,7 @@
 <script src="js/lenis.min.js"></script>
 
 <!-- Shared Premium Styles -->
-<link rel="stylesheet" href="averio-premium.css">
+<link rel="stylesheet" href="averio-media-weiss.css">
 
 <!-- V1-specific overrides -->
 <style>
