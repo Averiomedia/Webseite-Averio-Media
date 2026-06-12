@@ -87,7 +87,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 }
 
 .hero-bg {
-  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 0;
   background:
     radial-gradient(ellipse 900px 700px at -10% 70%, rgba(255,77,0,.11), transparent),
     radial-gradient(ellipse 500px 500px at 110% 10%, rgba(168,216,240,.06), transparent),
@@ -96,7 +96,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 
 /* Subtle grid pattern */
 .hero-grid {
-  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 0;
   background-image:
     linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
@@ -430,7 +430,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 
 /* Featured ambient glow */
 .paket.featured::before {
-  content: ''; position: absolute; inset: 0;
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,77,0,.15), transparent);
   pointer-events: none; z-index: 0;
 }

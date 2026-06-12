@@ -67,7 +67,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
   background: var(--bg);
 }
 .ang-hero::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;
   background:
     radial-gradient(ellipse 700px 400px at 5% 80%, rgba(255,77,0,.08), transparent),
     radial-gradient(ellipse 400px 400px at 95% 10%, rgba(168,216,240,.04), transparent);
@@ -130,7 +130,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
   display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start;
   position: relative; overflow: hidden; background: var(--bg);
 }
-.product-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+.product-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;
   background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(255,77,0,.06), transparent); }
 .product-badge {
   display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
@@ -308,7 +308,7 @@ input[type=checkbox] { display: none; }
 .potential-section { border-top: 3px solid var(--border); }
 .potential-hero { padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr auto;
   gap: 2rem; align-items: start; position: relative; overflow: hidden; background: var(--bg); }
-.potential-hero::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+.potential-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;
   background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(168,216,240,.05), transparent); }
 .pot-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
   background: rgba(168,216,240,.07); border: 1px solid rgba(168,216,240,.18);
@@ -368,7 +368,7 @@ input[type=checkbox] { display: none; }
 .collab-section { border-top: 3px solid var(--border); }
 .collab-header  { padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr auto;
   gap: 3rem; align-items: start; position: relative; overflow: hidden; background: var(--bg); }
-.collab-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+.collab-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;
   background: radial-gradient(ellipse 600px 400px at 85% 50%, rgba(255,77,0,.07), transparent); }
 .collab-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
   background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2); color: var(--o);
@@ -930,7 +930,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
 
 <!-- ══ TRENNER 1 ══════════════════════════════════════════ -->
 <div style="padding:4rem 2.5rem;background:linear-gradient(135deg,rgba(168,216,240,.07) 0%,rgba(168,216,240,.02) 100%);border-top:2px solid rgba(168,216,240,.18);border-bottom:2px solid rgba(168,216,240,.18);text-align:center;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at 50% 50%,rgba(168,216,240,.06),transparent);pointer-events:none;"></div>
+  <div style="position:absolute;top: 0; left: 0; right: 0; bottom: 0;background:radial-gradient(ellipse 600px 300px at 50% 50%,rgba(168,216,240,.06),transparent);pointer-events:none;"></div>
   <div style="position:relative;z-index:1;">
     <div style="display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ice2);font-weight:700;margin-bottom:1rem;opacity:.8;">
       <span style="display:block;width:20px;height:1px;background:var(--ice2);opacity:.6;"></span>

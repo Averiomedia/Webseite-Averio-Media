@@ -181,7 +181,7 @@ function initEntryAnimations() {
 (function initCursor() {
   const cur = document.getElementById('cursor');
   const fol = document.getElementById('cursor-follower');
-  if (!cur || !fol || window.innerWidth < 768) return;
+  if (!cur || !fol || window.innerWidth < 768 || 'ontouchstart' in window || navigator.maxTouchPoints > 0) { if (cur) cur.style.display = 'none'; if (fol) fol.style.display = 'none'; return; }
 
   let mx = 0, my = 0, fx = 0, fy = 0;
 
@@ -497,8 +497,9 @@ function revealSplit(el) {
   });
 })();
 
-/* ── SERVICE CARD 3D TILT ─────────────────────────────── */
+/* ── SERVICE CARD 3D TILT (desktop only) ──────────────── */
 (function initCardTilt() {
+  if (window.innerWidth <= 768) return;
   document.querySelectorAll('.service-card, .testi-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r   = card.getBoundingClientRect();

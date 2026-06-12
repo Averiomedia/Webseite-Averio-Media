@@ -234,7 +234,7 @@ body { background: var(--bg); }
   filter: grayscale(15%) contrast(1.05);
 }
 .about-marie-img::before {
-  content: ''; position: absolute; inset: 0; z-index: 1;
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;
   background: linear-gradient(90deg, transparent 55%, var(--bg2) 100%);
 }
 .about-marie-img::after {
@@ -322,6 +322,7 @@ body { background: var(--bg); }
   display: flex; align-items: center; gap: 10px;
   background: rgba(10,10,10,.88);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 100px;
   padding: 11px 20px 11px 14px;

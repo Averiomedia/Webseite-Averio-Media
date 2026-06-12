@@ -34,20 +34,22 @@
   --fb:   'DM Sans', sans-serif;
 }
 
-html { scroll-behavior: auto; overflow-x: hidden; }
+html { scroll-behavior: auto; overflow-x: hidden; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body {
   background: var(--bg);
   font-family: var(--fb);
   color: #e8e8e8;
   overflow-x: hidden;
-  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+@media (pointer: fine) { body { cursor: none; } }
 
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   pointer-events: none;
   z-index: 9990;
   opacity: .018;
@@ -87,7 +89,7 @@ body::before {
 /* ── PRELOADER ────────────────────────────────────────── */
 #preloader {
   position: fixed;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: 99997;
   background: #030303;
   display: flex;
@@ -167,7 +169,7 @@ body::before {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  cursor: none;
+  cursor: auto;
 }
 .nav-logo-mark {
   position: relative;
@@ -217,7 +219,7 @@ body::before {
   padding: 7px 14px;
   border-radius: 100px;
   transition: all .2s;
-  cursor: none;
+  cursor: auto;
   letter-spacing: .02em;
 }
 .nav-links a:hover { color: #fff; background: rgba(255,255,255,.05); }
@@ -235,7 +237,7 @@ body::before {
   border-radius: 100px;
   font-size: 12px;
   font-weight: 700;
-  cursor: none;
+  cursor: auto;
   font-family: var(--fb);
   transition: all .25s;
   white-space: nowrap;
@@ -246,7 +248,7 @@ body::before {
 .nav-cta::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(135deg, rgba(255,255,255,.2), transparent);
   opacity: 0;
   transition: opacity .2s;
@@ -283,6 +285,7 @@ body::before {
   transform: translateX(-50%) translateY(-6px);
   background: rgba(10,10,10,.97);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255,255,255,.09);
   border-radius: 14px;
   padding: 8px;
@@ -339,6 +342,7 @@ body::before {
 #hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -346,7 +350,7 @@ body::before {
 
 #particleCanvas {
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -377,7 +381,7 @@ body::before {
 
 .hero-grid {
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: 1;
   opacity: .025;
   background-image:
@@ -748,7 +752,7 @@ body::before {
   transition: transform .35s cubic-bezier(.4,0,.2,1),
               border-color .35s,
               box-shadow .35s;
-  cursor: none;
+  cursor: auto;
 }
 .service-card:hover {
   transform: translateY(-8px);
@@ -1007,6 +1011,7 @@ body::before {
   bottom: -16px; left: 24px;
   background: rgba(5,5,5,.92);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255,77,0,.25);
   border-radius: 100px;
   padding: 10px 20px;
@@ -1115,7 +1120,7 @@ body::before {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.5rem 0;
-  cursor: none;
+  cursor: auto;
   font-size: 14px;
   font-weight: 600;
   color: #888;
@@ -1185,7 +1190,7 @@ body::before {
   border-radius: 100px;
   font-size: 13px;
   font-weight: 700;
-  cursor: none;
+  cursor: auto;
   font-family: var(--fb);
   text-decoration: none;
   transition: all .3s cubic-bezier(.4,0,.2,1);
@@ -1206,7 +1211,7 @@ body::before {
 .btn-primary::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(135deg, rgba(255,255,255,.2), transparent);
   opacity: 0;
   transition: opacity .2s;
@@ -1273,7 +1278,7 @@ body::before {
 /* ── MOBILE MENU ──────────────────────────────────────── */
 .nav-mobile {
   position: fixed;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: 9001;
   background: rgba(5,5,5,.97);
   backdrop-filter: blur(24px);
