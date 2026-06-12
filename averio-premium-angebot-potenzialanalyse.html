@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -205,18 +205,17 @@
       width: 100%;
       font-family: var(--fb);
       font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--ice2);
-      border: 1.5px solid rgba(168,216,240,0.35);
+      font-weight: 700;
+      color: #fff;
+      border: none;
       border-radius: 10px;
       padding: 0.9rem 1.5rem;
-      background: rgba(168,216,240,0.06);
-      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      background: #FF4D00;
+      transition: background 0.2s, transform 0.2s;
       cursor: pointer;
     }
     .price-cta:hover {
-      border-color: var(--ice2);
-      background: rgba(168,216,240,0.12);
+      background: #e64400;
       transform: translateY(-2px);
     }
 
@@ -740,7 +739,7 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
       <li class="nav-dropdown-wrap">
         <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
         <ul class="nav-dropdown">
-          <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 €</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+          <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
           <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
           <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
         </ul>
@@ -753,7 +752,7 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
     <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
-  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kostenloser Kurzcheck</a>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
   </nav>
 
   <!-- ═══════════════════════════════════════════════
@@ -803,7 +802,7 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
           <div class="price-big">0 €</div>
           <p class="price-sub">100% kostenlos &amp; unverbindlich</p>
           <a href="#anfrage" class="price-cta">
-            Kostenlos anfragen
+            Kurzes Gespräch buchen
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3.5 8H12.5M12.5 8L9 4.5M12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -920,177 +919,45 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       FORMULAR + SIDEBAR
+       KONTAKTFORMULAR
   ════════════════════════════════════════════════ -->
-  <section class="sec-alt" id="anfrage">
-    <div class="sec-inner">
-      <div class="form-sec-inner">
+  <section class="sec-alt" id="kontakt">
+    <div style="max-width:580px;margin:0 auto;padding:0 24px">
+      <p class="sec-ey" style="text-align:center">Kontakt</p>
+      <h2 class="sec-title" style="text-align:center">Lieber per <em>E-Mail</em>?</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:2.5rem;font-size:15px;line-height:1.6">Schreib uns direkt — wir melden uns innerhalb von 24 Stunden bei dir.</p>
 
-        <!-- Form -->
+      <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Name *</label>
+            <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+          </div>
+          <div>
+            <label for="k-email" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">E-Mail *</label>
+            <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+          </div>
+        </div>
         <div>
-          <div class="form-wrap" id="form-container">
-            <h2 class="form-title">Kostenlose Potenzialanalyse anfragen</h2>
-            <p class="form-sub">Beantworte ein paar Fragen — wir melden uns innerhalb von 24 Stunden.</p>
-
-            <form id="potenzial-form" onsubmit="submitPotenzial(event)">
-
-              <!-- Name -->
-              <div class="form-group">
-                <label class="form-label" for="pa-name">Name <span>*</span></label>
-                <input class="form-input" type="text" id="pa-name" name="name" placeholder="Dein Name" required>
-              </div>
-
-              <!-- Email + Telefon -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="pa-email">E-Mail <span>*</span></label>
-                  <input class="form-input" type="email" id="pa-email" name="email" placeholder="deine@email.de" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="pa-telefon">Telefon <span style="color:#555;font-size:0.65rem;text-transform:lowercase;letter-spacing:0">(optional)</span></label>
-                  <input class="form-input" type="tel" id="pa-telefon" name="telefon" placeholder="+49 123 456789">
-                </div>
-              </div>
-
-              <!-- Website -->
-              <div class="form-group">
-                <label class="form-label" for="pa-website">Website <span>*</span></label>
-                <input class="form-input" type="url" id="pa-website" name="website" placeholder="https://deine-website.de" required>
-              </div>
-
-              <!-- Branche -->
-              <div class="form-group">
-                <label class="form-label" for="pa-branche">Branche / Was du anbietest <span>*</span></label>
-                <input class="form-input" type="text" id="pa-branche" name="branche" placeholder="z.B. Steuerberater, Onlineshop, Handwerker..." required>
-              </div>
-
-              <!-- Region -->
-              <div class="form-group">
-                <label class="form-label" for="pa-region">Region</label>
-                <input class="form-input" type="text" id="pa-region" name="region" placeholder="z.B. Bayern, Nürnberg &amp; Umgebung, deutschlandweit...">
-              </div>
-
-              <!-- Radio: Google Ads Konto? -->
-              <div class="form-group">
-                <label class="form-label">Hast du bereits ein Google Ads Konto? <span>*</span></label>
-                <div class="radio-group" id="rg-konto">
-                  <div class="radio-option" onclick="selectRadio('rg-konto', this)" data-value="nein">
-                    <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                    <span class="radio-text">Nein — ich starte ganz neu mit Google Ads</span>
-                  </div>
-                  <div class="radio-option" onclick="selectRadio('rg-konto', this)" data-value="ja-unzufrieden">
-                    <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                    <span class="radio-text">Ja, aber es läuft nicht zufriedenstellend</span>
-                  </div>
-                  <div class="radio-option" onclick="selectRadio('rg-konto', this)" data-value="informiere-mich">
-                    <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                    <span class="radio-text">Ich informiere mich erst noch</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Budget Slider -->
-              <div class="form-group">
-                <label class="form-label">Vorgestelltes Monatsbudget</label>
-                <div class="budget-display" id="budget-display">1.000 €</div>
-                <p class="budget-sub">Ungefähre Vorstellung — kein Muss, kann sich noch ändern</p>
-                <input
-                  type="range"
-                  class="budget-slider"
-                  id="budget-slider"
-                  min="300"
-                  max="5000"
-                  step="100"
-                  value="1000"
-                  oninput="updateBudget(this.value)"
-                >
-                <div class="slider-labels">
-                  <span>300 €</span>
-                  <span>5.000 €</span>
-                </div>
-              </div>
-
-              <!-- Textarea -->
-              <div class="form-group">
-                <label class="form-label" for="pa-erwartung">Was erwartest du dir von Google Ads? <span style="color:#555;font-size:0.65rem;text-transform:lowercase;letter-spacing:0">(optional)</span></label>
-                <textarea class="form-textarea" id="pa-erwartung" name="erwartung" placeholder="Mehr Anfragen, mehr Umsatz, Bekanntheit aufbauen..."></textarea>
-              </div>
-
-              <!-- DSGVO -->
-              <div class="checkbox-wrap" id="dsgvo-wrap" onclick="toggleCheckbox('dsgvo-wrap', 'dsgvo-check')">
-                <div class="checkbox-box" id="dsgvo-check-box">
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style="display:none" id="dsgvo-check-icon">
-                    <path d="M2 5.5L4.5 8L9 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <input type="checkbox" id="dsgvo-check" name="dsgvo" required style="display:none">
-                <span class="checkbox-text">
-                  Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. <span style="color:var(--o)">*</span>
-                </span>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="checkbox-wrap" id="nl-wrap" onclick="toggleCheckbox('nl-wrap', 'nl-check')" style="margin-bottom:12px;">
-                <div class="checkbox-box" id="nl-check-box">
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style="display:none" id="nl-check-icon">
-                    <path d="M2 5.5L4.5 8L9 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <input type="checkbox" id="nl-check" name="newsletter" style="display:none">
-                <span class="checkbox-text">
-                  Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span style="opacity:.55">(Optional — Abmeldung jederzeit möglich)</span>
-                </span>
-              </div>
-
-              <!-- Submit -->
-              <button type="submit" class="form-submit">
-                Kostenlose Potenzialanalyse anfragen →
-              </button>
-
-            </form>
-
-            <!-- Success State -->
-            <div class="success-state" id="success-state">
-              <div class="success-icon">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <path d="M6 14L11.5 19.5L22 8.5" stroke="#A8D8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <h3 class="success-title">Anfrage erhalten!</h3>
-              <p class="success-body">
-                Danke für deine Anfrage! Wir melden uns innerhalb von 24 Stunden bei dir — mit einer ehrlichen Einschätzung deines Google-Ads-Potenzials.
-              </p>
-            </div>
-          </div>
+          <label for="k-telefon" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Telefon <span style="font-weight:400;opacity:.5">(optional)</span></label>
+          <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
         </div>
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-
-          <div class="sidebar-card">
-            <h3 class="sidebar-card-title">Was passiert nach der Anfrage?</h3>
-            <ul class="sidebar-list">
-              <li>Wir melden uns innerhalb von 24h (Werktage)</li>
-              <li>Kurzes Vorgespräch (10–15 Min.) um dein Business zu verstehen</li>
-              <li>Wir analysieren Suchvolumen, Wettbewerb &amp; Budget-Bedarf</li>
-              <li>Gemeinsamer Ergebnis-Call — wir gehen alles zusammen durch</li>
-              <li>Kein Sales-Druck, kein Abo-Modell</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card orange-tint">
-            <h3 class="sidebar-card-title">Für wen passt die Analyse?</h3>
-            <ul class="fit-list">
-              <li><span class="fit-check">✓</span> Unternehmer, die mit Google Ads starten wollen</li>
-              <li><span class="fit-check">✓</span> Selbstständige, die nicht wissen ob Ads sich lohnen</li>
-              <li><span class="fit-check">✓</span> Wer ein realistisches Budget-Gefühl braucht</li>
-              <li><span class="fit-check">✓</span> Wer eine ehrliche Einschätzung statt Hochdruck-Sales will</li>
-              <li class="fit-nope"><span class="fit-x">✕</span> Nicht geeignet: unter 500 € Monatsbudget</li>
-            </ul>
-          </div>
-
+        <div>
+          <label for="k-nachricht" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Nachricht *</label>
+          <textarea id="k-nachricht" rows="4" placeholder="Worum geht es? Erzähl uns kurz von deiner Situation …" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit;resize:vertical"></textarea>
         </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
+          <input type="checkbox" id="k-dsgvo" required style="margin-top:2px">
+          <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html" style="color:#FF4D00">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+        </div>
+        <button type="submit" id="k-submit" style="padding:14px 32px;border:none;border-radius:50px;background:#FF4D00;color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(255,77,0,.35)">Nachricht senden</button>
+        <p style="text-align:center;font-size:12px;color:var(--muted);margin:0">Antwort innerhalb von 24 Stunden · Kein Spam</p>
+      </form>
 
+      <div id="kontakt-success" style="display:none;text-align:center;padding:40px 0">
+        <div style="font-size:40px;margin-bottom:12px">✓</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 8px">Nachricht gesendet!</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6">Danke für deine Nachricht — wir melden uns innerhalb von 24 Stunden bei dir.</p>
       </div>
     </div>
   </section>
@@ -1187,76 +1054,31 @@ html[data-theme="light"] footer a               { color: #495057 !important; }
   <script src="averio-premium.js"></script>
 <script src="cookie-banner.js"></script>
   <script>
-    // ── Radio ──
-    function selectRadio(groupId, el) {
-      const group = document.getElementById(groupId);
-      group.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
-    // ── Budget Slider ──
-    function updateBudget(val) {
-      const num = parseInt(val);
-      const formatted = num.toLocaleString('de-DE') + ' €';
-      document.getElementById('budget-display').textContent = formatted;
-      // Update slider fill
-      const slider = document.getElementById('budget-slider');
-      const pct = ((num - 300) / (5000 - 300)) * 100;
-      slider.style.background = `linear-gradient(to right, var(--o) ${pct}%, var(--border2) ${pct}%)`;
-    }
-    // Init slider fill
-    updateBudget(1000);
-
-    // ── Checkbox ──
-    function toggleCheckbox(wrapId, inputId) {
-      const wrap = document.getElementById(wrapId);
-      const input = document.getElementById(inputId);
-      const box = document.getElementById(inputId + '-box');
-      const icon = document.getElementById(inputId + '-icon');
-      const checked = !input.checked;
-      input.checked = checked;
-      wrap.classList.toggle('checked', checked);
-      if (icon) icon.style.display = checked ? 'block' : 'none';
-    }
-
-    // ── Form Submit ──
+    // ── Kontaktformular ──
     const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
-    async function submitPotenzial(e) {
+    async function submitKontakt(e) {
       e.preventDefault();
-
-      // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
-      const thankYouWin = window.open('', '_blank');
+      var btn = document.getElementById('k-submit');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet …';
 
       try {
         await fetch(NFORMS_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            Formular:  'Potenzialanalyse',
-            Name:      document.getElementById('pa-name')?.value.trim()     || '–',
-            Email:     document.getElementById('pa-email')?.value.trim()    || '–',
-            Telefon:   document.getElementById('pa-telefon')?.value.trim()  || '–',
-            Website:   document.getElementById('pa-website')?.value.trim()  || '–',
-            Branche:   document.getElementById('pa-branche')?.value.trim()  || '–',
-            Region:    document.getElementById('pa-region')?.value.trim()   || '–',
-            Budget:    document.getElementById('budget-display')?.textContent.trim() || '–',
-            Erwartung:  document.getElementById('pa-erwartung')?.value.trim() || '–',
-            Newsletter: document.getElementById('nl-check')?.checked ? 'Ja' : 'Nein'
+            Formular:   'Kontakt – Potenzialanalyse',
+            Name:       document.getElementById('k-name').value.trim(),
+            Email:      document.getElementById('k-email').value.trim(),
+            Telefon:    document.getElementById('k-telefon').value.trim() || '–',
+            Nachricht:  document.getElementById('k-nachricht').value.trim()
           })
         });
       } catch(err) { console.warn('nForms:', err); }
 
-      // Danke-Seite im vorab geöffneten Tab laden
-      if (thankYouWin) {
-        thankYouWin.location.href = 'averio-danke-potenzialanalyse.html';
-      } else {
-        window.open('averio-danke-potenzialanalyse.html', '_blank');
-      }
-
-      // Inline-Erfolgsanzeige auf der Hauptseite (Formular als abgeschlossen markieren)
-      document.getElementById('potenzial-form').style.display = 'none';
-      document.getElementById('success-state').classList.add('visible');
+      document.getElementById('kontakt-form').style.display = 'none';
+      document.getElementById('kontakt-success').style.display = 'block';
     }
 
     // ── FAQ ──

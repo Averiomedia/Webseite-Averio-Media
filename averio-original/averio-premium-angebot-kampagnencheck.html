@@ -1,0 +1,1762 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampagnencheck · 199 € — Averio Media</title>
+  <meta name="description" content="Google Ads Audit für dein bestehendes Konto. Wir analysieren Struktur, Tracking, Performance und Anzeigentexte — und liefern dir ein klares PDF-Reporting in 2–4 Werktagen.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/kampagnencheck">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averiomedia.de/kampagnencheck">
+<meta property="og:title" content="Google Ads Kampagnencheck – 199 € Einmal-Audit | Averio Media">
+<meta property="og:description" content="Einmaliger Google Ads Audit für bestehende Konten: Struktur, Tracking, Anzeigentexte & Performance — inkl. PDF-Reporting in 2–4 Werktagen. Ab 1 Monat Laufzeit.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Ads Kampagnencheck – 199 € Einmal-Audit | Averio Media">
+<meta name="twitter:description" content="Einmaliger Google Ads Audit für bestehende Konten: Struktur, Tracking, Anzeigentexte & Performance — inkl. PDF-Reporting in 2–4 Werktagen. Ab 1 Monat Laufzeit.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/lenis.min.js"></script>
+  <link rel="stylesheet" href="averio-media-weiss.css?v=8">
+  <style>
+    /* ── CSS Custom Properties ── */
+    :root {
+      --o: #FF4D00;
+      --o2: #FF8A00;
+      --bg: #090909;
+      --bg2: #1e1e1e;
+      --bg3: #272727;
+      --border: #383838;
+      --border2: #444444;
+      --ice: #D6EEFF;
+      --fh: 'Syne', sans-serif;
+      --fb: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      font-family: var(--fb);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--fb); border: none; background: none; }
+
+    /* ── Nav overrides ── */
+    .nav-links a,
+    .nav-cta { white-space: nowrap; }
+
+    /* ── Section base ── */
+    .sec {
+      padding: 5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .sec-alt {
+      padding: 5rem 2.5rem;
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+    }
+    .sec-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .sec-ey {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ice);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .sec-ey::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--ice);
+      opacity: .5;
+    }
+    .sec-title {
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: clamp(26px, 3.5vw, 40px);
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .sec-title em { color: var(--o); font-style: normal; }
+    .sec-body {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.9;
+      max-width: 560px;
+    }
+
+    /* ──────────────────────────────
+       HERO
+    ────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 9rem 2.5rem 5rem;
+      align-items: start;
+    }
+    .hero-ey {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ice);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+    .hero-ey::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--ice);
+      opacity: .5;
+    }
+    .hero h1 {
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: clamp(40px, 5.5vw, 64px);
+      color: #fff;
+      letter-spacing: -2px;
+      line-height: 1.07;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em { color: var(--o); font-style: normal; }
+    .hero-tagline {
+      font-size: 15px;
+      color: #888;
+      line-height: 1.85;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-pill {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 12px;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--o);
+      box-shadow: 0 0 6px var(--o);
+      flex-shrink: 0;
+    }
+
+    /* Price box */
+    .hero-price-box {
+      background: var(--bg3);
+      border: 1px solid rgba(255, 77, 0, .25);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      top: 0;
+    }
+    .hpb-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ice);
+      margin-bottom: 1rem;
+    }
+    .hpb-price {
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: 56px;
+      color: var(--o);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+    .hpb-sub {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+    .hpb-divider {
+      border: none;
+      border-top: 1px solid var(--border2);
+      margin-bottom: 1.75rem;
+    }
+    .hpb-includes {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+    .hpb-list {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      margin-bottom: 2rem;
+    }
+    .hpb-list li {
+      font-size: 13px;
+      color: #aaa;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .hpb-list li::before {
+      content: '✓';
+      color: var(--o);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .btn-book {
+      display: block;
+      width: 100%;
+      background: var(--o);
+      color: #fff;
+      border-radius: 100px;
+      padding: 14px 28px;
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(255,77,0,.35);
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn-book:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(255,77,0,.45);
+      background: #ff6520;
+    }
+
+    /* ──────────────────────────────
+       WHAT'S INCLUDED
+    ────────────────────────────── */
+    .wi-head {
+      max-width: 1160px;
+      margin: 0 auto 3rem;
+    }
+    .whats-included {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .wi-card {
+      background: var(--bg);
+      padding: 2.5rem 2rem;
+      overflow: hidden;
+      position: relative;
+      transition: background .25s;
+    }
+    .wi-card:hover { background: var(--bg2); }
+    .wi-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--o);
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .wi-card:hover::after { opacity: 1; }
+    .wi-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 77, 0, .08);
+      border: 1px solid rgba(255, 77, 0, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .wi-icon svg { width: 20px; height: 20px; }
+    .wi-num {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ice);
+      margin-bottom: .5rem;
+    }
+    .wi-title {
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: .5rem;
+    }
+    .wi-text {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .wi-tag {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--o);
+      border: 1px solid rgba(255, 77, 0, .3);
+      background: rgba(255, 77, 0, .06);
+      border-radius: 100px;
+      padding: 4px 10px;
+      letter-spacing: .05em;
+    }
+
+    /* ──────────────────────────────
+       PROCESS FLOW
+    ────────────────────────────── */
+    .process-wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .process-head {
+      margin-bottom: 3.5rem;
+    }
+    .pf-flow {
+      display: flex;
+      position: relative;
+      align-items: flex-start;
+    }
+    .pf-line-track {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      right: 22px;
+      height: 1px;
+      overflow: hidden;
+      background: var(--border2);
+    }
+    .pf-line-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--o), var(--o2));
+    }
+    .pf-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 .75rem;
+      z-index: 1;
+    }
+    .pf-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 77, 0, .4);
+      background: var(--bg);
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: 14px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: background .3s, color .3s, box-shadow .3s;
+    }
+    .pf-circle.done {
+      background: var(--o);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 77, 0, .4);
+      border-color: var(--o);
+    }
+    .pf-title {
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: .4rem;
+    }
+    .pf-text {
+      font-size: 12px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* ──────────────────────────────
+       BOOKING SECTION
+    ────────────────────────────── */
+    .booking-sec {
+      padding: 5rem 2.5rem;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .booking-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .booking-head {
+      margin-bottom: 3rem;
+    }
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* Step indicators */
+    .step-indicators {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+    }
+    .step-ind {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      white-space: nowrap;
+    }
+    .step-ind-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 12px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .3s, border-color .3s, color .3s;
+      flex-shrink: 0;
+    }
+    .step-ind-label {
+      font-size: 12px;
+      color: #555;
+      font-weight: 500;
+      transition: color .3s;
+    }
+    .step-ind.active .step-ind-num {
+      background: var(--o);
+      border-color: var(--o);
+      color: #fff;
+    }
+    .step-ind.active .step-ind-label { color: #fff; }
+    .step-ind.done .step-ind-num {
+      background: rgba(255,77,0,.15);
+      border-color: rgba(255,77,0,.4);
+      color: var(--o);
+    }
+    .step-ind.done .step-ind-label { color: #888; }
+    .step-ind-sep {
+      flex: 1;
+      height: 1px;
+      background: var(--border2);
+      margin: 0 .75rem;
+      min-width: 20px;
+    }
+
+    /* Form steps */
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: .4rem;
+      letter-spacing: .02em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #f0f0f0;
+      font-family: var(--fb);
+      transition: border-color .2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(255, 77, 0, .5);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #444; }
+    .form-group select option { background: #1a1a1a; color: #f0f0f0; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-opt {
+      font-size: 11px;
+      color: #555;
+      margin-left: 4px;
+    }
+
+    /* Checkbox */
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .form-check input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--o);
+      margin-top: 1px;
+    }
+    .form-check label {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .form-check label a { color: var(--o); text-decoration: underline; }
+
+    /* Form nav buttons */
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn-next {
+      flex: 1;
+      background: var(--o);
+      color: #fff;
+      border-radius: 100px;
+      padding: 13px 24px;
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(255,77,0,.3);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-next:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(255,77,0,.4);
+    }
+    .btn-back {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      color: #888;
+      border-radius: 100px;
+      padding: 13px 20px;
+      font-family: var(--fh);
+      font-weight: 600;
+      font-size: 13px;
+      transition: color .2s, border-color .2s;
+    }
+    .btn-back:hover { color: #fff; border-color: #444; }
+
+    /* Success state */
+    .booking-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .booking-success.visible { display: block; }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255,77,0,.1);
+      border: 1px solid rgba(255,77,0,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 28px;
+    }
+    .success-title {
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: 28px;
+      color: #fff;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+    }
+    .success-body {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
+      max-width: 440px;
+      margin: 0 auto 2rem;
+    }
+    .success-steps {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .success-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: #aaa;
+    }
+    .success-step-n {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255,77,0,.15);
+      border: 1px solid rgba(255,77,0,.3);
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--o);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Invoice preview ── */
+    .invoice-preview {
+      background: var(--bg);
+      border: 1px solid var(--border2);
+      border-radius: 16px;
+      overflow: hidden;
+      position: sticky;
+      top: 100px;
+    }
+    .inv-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .inv-header-title {
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+    }
+    .inv-badge {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+    .inv-body { padding: 1.5rem; }
+    .inv-row {
+      margin-bottom: 1.25rem;
+    }
+    .inv-row-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #555;
+      margin-bottom: .3rem;
+    }
+    .inv-row-val {
+      font-size: 14px;
+      color: #ccc;
+      min-height: 20px;
+    }
+    .inv-row-val.placeholder { color: #444; font-style: italic; font-size: 13px; }
+    .inv-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.25rem 0;
+    }
+    .inv-pos-title {
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .inv-pos-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: .5rem;
+    }
+    .inv-pos-row.total {
+      font-family: var(--fh);
+      font-weight: 700;
+      color: #fff;
+      font-size: 15px;
+      border-top: 1px solid var(--border2);
+      padding-top: .75rem;
+      margin-top: .75rem;
+    }
+    .inv-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: #555;
+    }
+
+    /* ──────────────────────────────
+       FAQ
+    ────────────────────────────── */
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-head { margin-bottom: 2.5rem; }
+    .faq-item {
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: .75rem;
+      background: var(--bg3);
+    }
+    .faq-q {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: var(--fh);
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      background: none;
+      transition: color .2s;
+    }
+    .faq-q:hover { color: var(--o); }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: #888;
+      transition: transform .3s, background .2s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(255,77,0,.1);
+      border-color: rgba(255,77,0,.3);
+      color: var(--o);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-bottom: 1.25rem;
+    }
+    .faq-a p {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
+    }
+
+    /* ──────────────────────────────
+       CTA STRIP
+    ────────────────────────────── */
+    .cta-strip {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .cta-strip-title {
+      font-family: var(--fh);
+      font-weight: 800;
+      font-size: clamp(22px, 3vw, 34px);
+      color: #fff;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+    }
+    .cta-strip-body {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
+      max-width: 440px;
+      margin: 0 auto 2rem;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--o);
+      color: #fff;
+      border-radius: 100px;
+      padding: 14px 32px;
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 8px 28px rgba(255,77,0,.35);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(255,77,0,.45);
+    }
+
+    /* ──────────────────────────────
+       FOOTER
+    ────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: #555;
+    }
+    .footer a { color: #777; transition: color .2s; }
+    .footer a:hover { color: var(--o); }
+    .footer span { margin: 0 .4rem; }
+
+    /* ──────────────────────────────
+       RESPONSIVE
+    ────────────────────────────── */
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+      .whats-included { grid-template-columns: repeat(2, 1fr); }
+      .booking-grid { grid-template-columns: 1fr; }
+      .invoice-preview { position: static; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 7rem 1.25rem 3rem; }
+      .sec, .sec-alt, .booking-sec { padding: 4rem 1.25rem; }
+      .whats-included { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .pf-flow { flex-direction: column; gap: 2rem; align-items: flex-start; padding-left: 22px; }
+      .pf-line-track { top: 0; left: 22px; right: auto; bottom: 0; width: 1px; height: auto; }
+      .pf-step { text-align: left; display: flex; align-items: flex-start; gap: 1rem; }
+      .pf-circle { margin: 0; flex-shrink: 0; }
+      .step-indicators { gap: 0; }
+    }
+  
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .hero h1              { color: #0D1117 !important; }
+html[data-theme="light"] .hero-tagline         { color: #495057 !important; }
+html[data-theme="light"] .hero-pill            { background: #F8F9FA !important; border-color: #DEE2E6 !important; color: #495057 !important; }
+html[data-theme="light"] .hero-price-box       { background: #FFFFFF !important; border-color: rgba(255,77,0,.2) !important; }
+html[data-theme="light"] .hpb-label            { color: #868E96 !important; }
+html[data-theme="light"] .hpb-sub              { color: #495057 !important; }
+html[data-theme="light"] .hpb-includes         { color: #495057 !important; }
+html[data-theme="light"] .hpb-list li          { color: #495057 !important; }
+html[data-theme="light"] .sec-title            { color: #0D1117 !important; }
+html[data-theme="light"] .sec-body             { color: #495057 !important; }
+html[data-theme="light"] .wi-card              { background: #FFFFFF !important; }
+html[data-theme="light"] .wi-title             { color: #0D1117 !important; }
+html[data-theme="light"] .wi-text              { color: #495057 !important; }
+html[data-theme="light"] .pf-title             { color: #0D1117 !important; }
+html[data-theme="light"] .pf-text              { color: #495057 !important; }
+html[data-theme="light"] .form-group label      { color: #495057 !important; }
+html[data-theme="light"] .form-group input,
+html[data-theme="light"] .form-group select,
+html[data-theme="light"] .form-group textarea   { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .form-check label      { color: #495057 !important; }
+html[data-theme="light"] .step-ind-label        { color: #495057 !important; }
+html[data-theme="light"] .success-title         { color: #0D1117 !important; }
+html[data-theme="light"] .success-body          { color: #495057 !important; }
+html[data-theme="light"] .success-step          { color: #495057 !important; }
+html[data-theme="light"] .invoice-preview       { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .inv-header-title      { color: #0D1117 !important; }
+html[data-theme="light"] .inv-row-label         { color: #868E96 !important; }
+html[data-theme="light"] .inv-row-val           { color: #495057 !important; }
+html[data-theme="light"] .inv-pos-title         { color: #0D1117 !important; }
+html[data-theme="light"] .inv-pos-row           { color: #495057 !important; }
+html[data-theme="light"] .inv-pos-row.total     { color: #0D1117 !important; }
+html[data-theme="light"] .inv-footer            { color: #868E96 !important; }
+html[data-theme="light"] .faq-item              { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .faq-q                 { color: #0D1117 !important; }
+html[data-theme="light"] .faq-a p               { color: #495057 !important; }
+html[data-theme="light"] .cta-strip-title        { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip-body         { color: #495057 !important; }
+html[data-theme="light"] .footer                 { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .footer a               { color: #495057 !important; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Google Ads Kampagnencheck",
+  "url": "https://averiomedia.de/kampagnencheck",
+  "description": "Einmaliger Google Ads Audit: Struktur, Tracking, Anzeigentexte und Performance analysiert — inkl. PDF-Reporting in 2–4 Werktagen.",
+  "provider": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+  "offers": {
+    "@type": "Offer",
+    "price": "199",
+    "priceCurrency": "EUR",
+    "description": "Einmaliger Google Ads Audit mit PDF-Reporting"
+  },
+  "serviceType": "Google Ads Audit"
+}
+</script>
+</head>
+<body>
+
+  <!-- Cursor (handled by averio-premium.js) -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+          <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+          <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+      <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+      <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+      <li class="nav-dropdown-wrap">
+        <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
+        <ul class="nav-dropdown">
+          <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 €</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+          <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+          <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+        </ul>
+      </li>
+      <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+      <li><a href="averio-premium-guides.html">Guides</a></li>
+      <li><a href="averio-premium-faq.html">FAQ</a></li>
+    </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kostenloser Kurzcheck</a>
+  </nav>
+
+  <!-- ────────────────────────────────────────
+       1. HERO
+  ──────────────────────────────────────── -->
+  <section>
+    <div class="hero">
+      <!-- Left: copy -->
+      <div class="hero-left">
+        <div class="hero-ey" id="hero-ey">Kampagnencheck · Einmalig</div>
+        <h1 id="hero-h1">Dein Google-Ads-Konto <em>unter der Lupe.</em></h1>
+        <p class="hero-tagline" id="hero-tagline">Du hast Ads laufen — aber das Bauchgefühl sagt: da ist mehr drin. Wir schauen rein, finden die Schwachstellen und liefern dir ein klares, priorisiertes Reporting. Ohne Agentur-Kauderwelsch.</p>
+        <div class="hero-pills" id="hero-pills">
+          <span class="hero-pill"><span class="hero-pill-dot"></span>Bericht in 2–4 Werktagen</span>
+          <span class="hero-pill"><span class="hero-pill-dot"></span>PDF-Report inklusive</span>
+          <span class="hero-pill"><span class="hero-pill-dot"></span>Direkt mit Marie</span>
+        </div>
+        <a href="#buchung" class="btn-book" id="hero-cta" style="max-width:260px;">Jetzt buchen →</a>
+      </div>
+
+      <!-- Right: price box -->
+      <div class="hero-price-box" id="hero-price-box">
+        <div class="hpb-label">Einmaliger Preis</div>
+        <div class="hpb-price">199 €</div>
+        <div class="hpb-sub">Kein MwSt.-Ausweis gem. §19 UStG</div>
+        <hr class="hpb-divider">
+        <div class="hpb-includes">Was enthalten ist:</div>
+        <ul class="hpb-list">
+          <li>Vollständige Kontoanalyse (Struktur, Tracking, Performance)</li>
+          <li>Bewertung der Anzeigentexte & Extensions</li>
+          <li>Priorisierter Maßnahmenplan</li>
+          <li>Professionelles PDF-Reporting</li>
+          <li>Persönliche Bearbeitung durch Marie</li>
+          <li>Fertig in 2–4 Werktagen</li>
+        </ul>
+        <a href="#buchung" class="btn-book">Jetzt buchen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────
+       2. WAS ENTHALTEN IST
+  ──────────────────────────────────────── -->
+  <section class="sec">
+    <div class="wi-head">
+      <div class="sec-ey">Was du bekommst</div>
+      <h2 class="sec-title">Was im Kampagnencheck <em>steckt</em></h2>
+    </div>
+    <div class="whats-included">
+
+      <!-- Card 1 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="6" height="6" rx="1"/>
+            <rect x="11" y="3" width="6" height="6" rx="1"/>
+            <rect x="3" y="11" width="6" height="6" rx="1"/>
+            <rect x="11" y="11" width="6" height="6" rx="1"/>
+          </svg>
+        </div>
+        <div class="wi-num">01 · Struktur-Analyse</div>
+        <div class="wi-title">Kampagnenstruktur &amp; Keywords</div>
+        <p class="wi-text">Wir prüfen, wie dein Konto aufgebaut ist: Anzeigengruppen-Logik, Keyword-Typen, Negative-Listen, Qualitätsfaktoren. Du siehst sofort, wo strukturelle Probleme Budget verbrennen.</p>
+        <span class="wi-tag">Detailtiefe: hoch</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="10" cy="10" r="7"/>
+            <path d="M10 6v4l3 2"/>
+          </svg>
+        </div>
+        <div class="wi-num">02 · Tracking-Check</div>
+        <div class="wi-title">Conversion-Tracking &amp; Datenbasis</div>
+        <p class="wi-text">Misst du die richtigen Conversions? GA4, Google Tag Manager, Consent Mode — wir prüfen ob deine Datenbasis valide ist. Falsche Daten führen zu falschen Entscheidungen.</p>
+        <span class="wi-tag">GA4 + GTM</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3,14 7,9 11,12 17,5"/>
+            <path d="M14 5h3v3"/>
+          </svg>
+        </div>
+        <div class="wi-num">03 · Performance-Bewertung</div>
+        <div class="wi-title">Budget, CPC &amp; ROAS-Analyse</div>
+        <p class="wi-text">Wie effizient wird dein Budget eingesetzt? Wir analysieren CPC-Entwicklung, ROAS, Cost per Lead und zeigen dir, welche Kampagnen echte Ergebnisse liefern.</p>
+        <span class="wi-tag">Zahlen &amp; Fakten</span>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h12M4 10h8M4 14h5"/>
+          </svg>
+        </div>
+        <div class="wi-num">04 · Anzeigentexte</div>
+        <div class="wi-title">Copy &amp; Message-Market-Fit</div>
+        <p class="wi-text">Sprechen deine Anzeigen wirklich die Suchabsicht an? Wir bewerten Headlines, Beschreibungen und Extensions — und zeigen dir konkrete Verbesserungspotenziale.</p>
+        <span class="wi-tag">Copywriting-Review</span>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 10l4 4 6-8"/>
+          </svg>
+        </div>
+        <div class="wi-num">05 · Handlungsplan</div>
+        <div class="wi-title">Priorisierte Maßnahmen</div>
+        <p class="wi-text">Kein Lagebericht ohne Ausblick. Du bekommst eine priorisierte Liste der wichtigsten Maßnahmen — sortiert nach Impact und Aufwand.</p>
+        <span class="wi-tag">Sofort umsetzbar</span>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="wi-card">
+        <div class="wi-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h8l4 4v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/>
+            <path d="M12 4v4h4"/>
+          </svg>
+        </div>
+        <div class="wi-num">06 · Deliverable</div>
+        <div class="wi-title">Ausführliches PDF-Reporting</div>
+        <p class="wi-text">Alles gebündelt in einem professionellen Report — inkl. Screenshots, Kennzahlen, Bewertung und Empfehlungen. Für dich und dein Team verständlich aufbereitet.</p>
+        <span class="wi-tag">PDF-Report</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────
+       3. ABLAUF / PROCESS FLOW
+  ──────────────────────────────────────── -->
+  <section class="sec-alt">
+    <div class="process-wrap">
+      <div class="process-head">
+        <div class="sec-ey">So läuft es ab</div>
+        <h2 class="sec-title">Nach der Buchung <em>bis zum Report</em></h2>
+        <p class="sec-body">Du buchst, wir machen den Rest. Kein langes Hin und Her — klarer Prozess, klares Ergebnis.</p>
+      </div>
+
+      <div class="pf-flow" id="pf-flow">
+        <!-- Animated connecting line -->
+        <div class="pf-line-track">
+          <div class="pf-line-fill" id="pf-line-fill"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="pf-step">
+          <div class="pf-circle done">1</div>
+          <div class="pf-title">Buchung &amp; Zahlung</div>
+          <p class="pf-text">Formular ausfüllen, Rechnung erhalten, per Überweisung bezahlen</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="pf-step">
+          <div class="pf-circle done">2</div>
+          <div class="pf-title">Kontozugang</div>
+          <p class="pf-text">Du gibst uns Lesezugriff auf dein Google-Ads-Konto</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="pf-step">
+          <div class="pf-circle done">3</div>
+          <div class="pf-title">Analyse</div>
+          <p class="pf-text">Wir analysieren dein Konto systematisch — dauert 2–4 Werktage</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="pf-step">
+          <div class="pf-circle done">4</div>
+          <div class="pf-title">Report</div>
+          <p class="pf-text">Du erhältst deinen Report als PDF per E-Mail</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="pf-step">
+          <div class="pf-circle">5</div>
+          <div class="pf-title">Optional: Beratung</div>
+          <p class="pf-text">Gerne besprechen wir den Report in einem kurzen Call</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────
+       4. BUCHUNGSFORMULAR
+  ──────────────────────────────────────── -->
+  <section class="booking-sec" id="buchung">
+    <div class="booking-inner">
+      <div class="booking-head">
+        <div class="sec-ey">Buchung</div>
+        <h2 class="sec-title">Kampagnencheck <em>buchen</em></h2>
+        <p class="sec-body">Fülle das Formular aus — wir schicken dir eine Rechnung und starten sobald die Zahlung eingegangen ist.</p>
+      </div>
+
+      <div class="booking-grid" id="booking-grid">
+        <!-- LEFT: form -->
+        <div>
+          <!-- Step indicators -->
+          <div class="step-indicators" id="step-indicators">
+            <div class="step-ind active" id="si-1">
+              <div class="step-ind-num">1</div>
+              <div class="step-ind-label">Kontaktdaten</div>
+            </div>
+            <div class="step-ind-sep"></div>
+            <div class="step-ind" id="si-2">
+              <div class="step-ind-num">2</div>
+              <div class="step-ind-label">Rechnungsdaten</div>
+            </div>
+            <div class="step-ind-sep"></div>
+            <div class="step-ind" id="si-3">
+              <div class="step-ind-num">3</div>
+              <div class="step-ind-label">Google Ads</div>
+            </div>
+            <div class="step-ind-sep"></div>
+            <div class="step-ind" id="si-4">
+              <div class="step-ind-num">4</div>
+              <div class="step-ind-label">Bestätigung</div>
+            </div>
+          </div>
+
+          <!-- STEP 1: Kontaktdaten -->
+          <div class="form-step active" id="step-1">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-vorname">Vorname</label>
+                <input type="text" id="f-vorname" placeholder="Max" oninput="updatePreview()">
+              </div>
+              <div class="form-group">
+                <label for="f-nachname">Nachname</label>
+                <input type="text" id="f-nachname" placeholder="Mustermann" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-email">E-Mail-Adresse</label>
+              <input type="email" id="f-email" placeholder="max@musterunternehmen.de" oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+              <label for="f-tel">Telefon <span class="form-opt">(optional)</span></label>
+              <input type="tel" id="f-tel" placeholder="+49 151 00000000">
+            </div>
+            <div class="form-group">
+              <label for="f-firma">Unternehmensname</label>
+              <input type="text" id="f-firma" placeholder="Muster GmbH" oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+              <label for="f-website">Website-URL</label>
+              <input type="url" id="f-website" placeholder="https://www.muster.de">
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-next" onclick="nextStep(1)">Weiter: Rechnungsdaten →</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Rechnungsdaten -->
+          <div class="form-step" id="step-2">
+            <div class="form-group">
+              <label for="f-rechnungsempf">Rechnungsempfänger</label>
+              <input type="text" id="f-rechnungsempf" placeholder="Muster GmbH oder Max Mustermann" oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+              <label for="f-strasse">Straße &amp; Hausnummer</label>
+              <input type="text" id="f-strasse" placeholder="Musterstraße 1">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-plz">PLZ</label>
+                <input type="text" id="f-plz" placeholder="10115">
+              </div>
+              <div class="form-group">
+                <label for="f-ort">Ort</label>
+                <input type="text" id="f-ort" placeholder="Berlin">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-land">Land</label>
+              <select id="f-land">
+                <option value="DE">Deutschland</option>
+                <option value="AT">Österreich</option>
+                <option value="CH">Schweiz</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-ust">USt-IdNr. <span class="form-opt">(optional)</span></label>
+              <input type="text" id="f-ust" placeholder="DE123456789">
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-back" onclick="prevStep(2)">← Zurück</button>
+              <button type="button" class="btn-next" onclick="nextStep(2)">Weiter: Google Ads →</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Google Ads -->
+          <div class="form-step" id="step-3">
+            <div class="form-group">
+              <label for="f-konto">Google Ads Kundennummer</label>
+              <input type="text" id="f-konto" placeholder="123-456-7890" maxlength="12" oninput="formatKonto(this); updatePreview()">
+            </div>
+            <div class="form-group">
+              <label for="f-branche">Branche / Industrie</label>
+              <input type="text" id="f-branche" placeholder="z. B. SaaS, E-Commerce, Handwerk …">
+            </div>
+            <div class="form-group">
+              <label for="f-budget">Monatliches Werbebudget (ca.)</label>
+              <select id="f-budget">
+                <option value="">Bitte wählen …</option>
+                <option value="unter500">Unter 500 €</option>
+                <option value="500-1000">500 € – 1.000 €</option>
+                <option value="1000-2500">1.000 € – 2.500 €</option>
+                <option value="2500-5000">2.500 € – 5.000 €</option>
+                <option value="ueber5000">Über 5.000 €</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-problem">Was läuft aktuell nicht gut? <span class="form-opt">(optional)</span></label>
+              <textarea id="f-problem" placeholder="z. B. Hohe CPCs, kaum Conversions, schlechter ROAS, unklare Tracking-Daten …"></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="f-dsgvo">
+              <label for="f-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="f-agb">
+              <label for="f-agb">Ich akzeptiere die <a href="averio-agb.html" target="_blank" rel="noopener">Allgemeinen Geschäftsbedingungen</a> und bestätige, dass ich eine kostenpflichtige Buchung tätige (199 €).</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="f-newsletter">
+              <label for="f-newsletter">Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span class="form-opt">(Optional — Abmeldung jederzeit möglich)</span></label>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-back" onclick="prevStep(3)">← Zurück</button>
+              <button type="button" class="btn-next" onclick="submitBooking()">Jetzt kostenpflichtig buchen ✓</button>
+            </div>
+          </div>
+
+          <!-- Success state -->
+          <div class="booking-success" id="booking-success">
+            <div class="success-icon">✓</div>
+            <div class="success-title">Buchung eingegangen!</div>
+            <p class="success-body">Danke — wir haben deine Anfrage erhalten und melden uns innerhalb von 24 Stunden mit einer Rechnung. Sobald die Zahlung eingegangen ist, starten wir mit der Analyse.</p>
+            <div class="success-steps">
+              <div class="success-step">
+                <div class="success-step-n">1</div>
+                <span>Du erhältst eine Rechnung per E-Mail (innerhalb 24h)</span>
+              </div>
+              <div class="success-step">
+                <div class="success-step-n">2</div>
+                <span>Überweise den Betrag (199 €) per Banküberweisung</span>
+              </div>
+              <div class="success-step">
+                <div class="success-step-n">3</div>
+                <span>Wir nehmen Kontozugang auf und beginnen die Analyse</span>
+              </div>
+              <div class="success-step">
+                <div class="success-step-n">4</div>
+                <span>Dein PDF-Report kommt in 2–4 Werktagen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Invoice preview -->
+        <div>
+          <div class="invoice-preview" id="invoice-preview">
+            <div class="inv-header">
+              <div class="inv-header-title">Rechnungsvorschau</div>
+              <span class="inv-badge">VORSCHAU</span>
+            </div>
+            <div class="inv-body">
+              <div class="inv-row">
+                <div class="inv-row-label">Rechnungsempfänger</div>
+                <div class="inv-row-val" id="prev-empf"><span class="placeholder">Wird automatisch befüllt …</span></div>
+              </div>
+              <div class="inv-row">
+                <div class="inv-row-label">Kontakt</div>
+                <div class="inv-row-val" id="prev-email"><span class="placeholder">—</span></div>
+              </div>
+              <hr class="inv-divider">
+              <div class="inv-pos-title">Rechnungsposition</div>
+              <div class="inv-pos-row">
+                <span>Kampagnencheck (Audit)</span><span>199,00 €</span>
+              </div>
+              <div class="inv-pos-row"><span>MwSt.</span><span>entfällt (§19 UStG)</span></div>
+              <div class="inv-pos-row total">
+                <span>Gesamt</span>
+                <span>199,00 €</span>
+              </div>
+              <hr class="inv-divider">
+              <div class="inv-row">
+                <div class="inv-row-label">Google Ads Konto</div>
+                <div class="inv-row-val" id="prev-konto"><span class="placeholder">—</span></div>
+              </div>
+            </div>
+            <div class="inv-footer">
+              Averio Media · Marie Böttiger · Zahlungsziel 7 Tage
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────
+       5. FAQ
+  ──────────────────────────────────────── -->
+  <section class="sec">
+    <div class="faq-inner">
+      <div class="faq-head">
+        <div class="sec-ey">Häufige Fragen</div>
+        <h2 class="sec-title">Häufige <em>Fragen</em></h2>
+      </div>
+
+      <!-- Q1 -->
+      <div class="faq-item" id="faq-1">
+        <button class="faq-q" onclick="tog('faq-1')">
+          <span>Ich habe bereits eine Agentur — macht das trotzdem Sinn?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Absolut. Der Kampagnencheck ist unabhängig von deiner aktuellen Betreuung. Viele Kunden nutzen ihn als "zweite Meinung", um einzuschätzen ob ihre Agentur gute Arbeit leistet — oder um konkrete Verbesserungen einzufordern.</p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item" id="faq-2">
+        <button class="faq-q" onclick="tog('faq-2')">
+          <span>Ich habe nur ein kleines Budget (unter 500 €/Monat) — lohnt sich das?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Der Check macht auch bei kleinen Budgets Sinn, wenn du verstehen willst warum deine Kampagnen nicht performen. Ab 1.000 € monatlichem Werbebudget sehen wir den größten Hebel, aber für Konten ab 500 € ist der Report ebenfalls wertvoll.</p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item" id="faq-3">
+        <button class="faq-q" onclick="tog('faq-3')">
+          <span>Was brauche ich, um loszulegen?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Nur dein Google Ads Konto und 5 Minuten für das Formular. Wir kümmern uns um den Rest. Du gibst uns nach der Buchung temporären Lesezugriff (kein Schreibzugriff) — das kannst du jederzeit widerrufen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────
+       6. CTA STRIP
+  ──────────────────────────────────────── -->
+  <div class="cta-strip">
+    <div class="cta-strip-title">Noch Fragen? Ruf kurz an.</div>
+    <p class="cta-strip-body">Alternativ direkt ein kostenloser Kurzcheck buchen — wir klären alle offenen Punkte.</p>
+    <a href="averio-premium-kontakt.html" class="btn-cta">Kostenloser Kurzcheck</a>
+  </div>
+
+  <!-- ────────────────────────────────────────
+       7. FOOTER
+  ──────────────────────────────────────── -->
+  <footer class="footer">
+    <p>© 2025 Averio Media<span>·</span><a href="#">Marie Böttiger</a><span>·</span><a href="averio-premium-impressum.html">Impressum</a><span>·</span>
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a></p>
+  </footer>
+
+  <!-- ── Shared JS ── -->
+  <script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+
+  <script>
+    /* ────────────────────────────────────────
+       FORM NAVIGATION
+    ──────────────────────────────────────── */
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    function nextStep(from) {
+      if (from === totalSteps) return submitBooking();
+
+      // Basic validation per step
+      if (from === 1) {
+        const vorname = document.getElementById('f-vorname').value.trim();
+        const nachname = document.getElementById('f-nachname').value.trim();
+        const email = document.getElementById('f-email').value.trim();
+        const firma = document.getElementById('f-firma').value.trim();
+        if (!vorname || !nachname || !email || !firma) {
+          alert('Bitte fülle alle Pflichtfelder aus (Vorname, Nachname, E-Mail, Unternehmensname).');
+          return;
+        }
+      }
+      if (from === 2) {
+        const empf = document.getElementById('f-rechnungsempf').value.trim();
+        const strasse = document.getElementById('f-strasse').value.trim();
+        const plz = document.getElementById('f-plz').value.trim();
+        const ort = document.getElementById('f-ort').value.trim();
+        if (!empf || !strasse || !plz || !ort) {
+          alert('Bitte fülle alle Pflichtfelder der Rechnungsdaten aus.');
+          return;
+        }
+      }
+
+      goToStep(from + 1);
+    }
+
+    function prevStep(from) {
+      goToStep(from - 1);
+    }
+
+    function goToStep(target) {
+      // Hide current
+      document.getElementById('step-' + currentStep).classList.remove('active');
+      // Show target
+      document.getElementById('step-' + target).classList.add('active');
+      // Update indicators
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById('si-' + i);
+        el.classList.remove('active', 'done');
+        if (i < target) el.classList.add('done');
+        else if (i === target) el.classList.add('active');
+      }
+      currentStep = target;
+      // Scroll to form
+      document.getElementById('buchung').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+    async function submitBooking() {
+      const dsgvo = document.getElementById('f-dsgvo').checked;
+      const agb = document.getElementById('f-agb').checked;
+      const konto = document.getElementById('f-konto').value.trim();
+      const budget = document.getElementById('f-budget').value;
+
+      if (!konto) {
+        alert('Bitte gib deine Google Ads Kundennummer ein.');
+        return;
+      }
+      if (!budget) {
+        alert('Bitte wähle dein monatliches Werbebudget aus.');
+        return;
+      }
+      if (!dsgvo) {
+        alert('Bitte stimme der Datenschutzerklärung zu.');
+        return;
+      }
+      if (!agb) {
+        alert('Bitte akzeptiere die AGB, um die Buchung abzuschließen.');
+        return;
+      }
+
+      // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
+      const thankYouWin = window.open('', '_blank');
+
+      // Daten an nForms senden
+      try {
+        await fetch(NFORMS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            Formular:          'Kampagnencheck Buchung',
+            Vorname:           document.getElementById('f-vorname').value.trim(),
+            Nachname:          document.getElementById('f-nachname').value.trim(),
+            Email:             document.getElementById('f-email').value.trim(),
+            Telefon:           document.getElementById('f-tel').value.trim(),
+            Unternehmen:       document.getElementById('f-firma').value.trim(),
+            Website:           document.getElementById('f-website').value.trim(),
+            Rechnungsempf:     document.getElementById('f-rechnungsempf').value.trim(),
+            Strasse:           document.getElementById('f-strasse').value.trim(),
+            PLZ:               document.getElementById('f-plz').value.trim(),
+            Ort:               document.getElementById('f-ort').value.trim(),
+            Land:              document.getElementById('f-land').value,
+            UstNr:             document.getElementById('f-ust').value.trim(),
+            GoogleAdsKonto:    konto,
+            Branche:           document.getElementById('f-branche').value.trim(),
+            Werbebudget:       budget,
+            Problem:           document.getElementById('f-problem').value.trim(),
+            Newsletter:        document.getElementById('f-newsletter').checked ? 'Ja' : 'Nein'
+          })
+        });
+      } catch(err) { console.warn('nForms:', err); }
+
+      // Danke-Seite im vorab geöffneten Tab laden
+      if (thankYouWin) {
+        thankYouWin.location.href = 'averio-danke-kampagnencheck.html';
+      } else {
+        window.open('averio-danke-kampagnencheck.html', '_blank');
+      }
+
+      // Inline-Erfolgsanzeige auf der Hauptseite (Buchungsprozess als abgeschlossen markieren)
+      document.getElementById('step-3').classList.remove('active');
+      document.getElementById('step-indicators').style.display = 'none';
+      document.getElementById('invoice-preview').style.display = 'none';
+      document.getElementById('booking-success').classList.add('visible');
+      document.getElementById('si-3').classList.remove('active');
+      document.getElementById('si-3').classList.add('done');
+      document.getElementById('si-4').classList.add('active');
+      document.getElementById('buchung').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ────────────────────────────────────────
+       LIVE INVOICE PREVIEW
+    ──────────────────────────────────────── */
+    function updatePreview() {
+      const vorname = document.getElementById('f-vorname').value.trim();
+      const nachname = document.getElementById('f-nachname').value.trim();
+      const firma = document.getElementById('f-firma').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      const rechnungsempf = document.getElementById('f-rechnungsempf').value.trim();
+      const konto = document.getElementById('f-konto').value.trim();
+
+      const empfEl = document.getElementById('prev-empf');
+      const emailEl = document.getElementById('prev-email');
+      const kontoEl = document.getElementById('prev-konto');
+
+      // Rechnungsempfänger: prefer step-2 field, else derive from firma / name
+      const empfVal = rechnungsempf || firma || (vorname && nachname ? vorname + ' ' + nachname : '');
+      empfEl.innerHTML = empfVal
+        ? empfVal
+        : '<span class="placeholder">Wird automatisch befüllt …</span>';
+
+      emailEl.innerHTML = email
+        ? email
+        : '<span class="placeholder">—</span>';
+
+      kontoEl.innerHTML = konto
+        ? konto
+        : '<span class="placeholder">—</span>';
+    }
+
+    // Also watch step-2 rechnungsempf field
+    document.getElementById('f-rechnungsempf').addEventListener('input', updatePreview);
+
+    /* ────────────────────────────────────────
+       KONTO NUMBER FORMATTER  →  123-456-7890
+    ──────────────────────────────────────── */
+    function formatKonto(el) {
+      let digits = el.value.replace(/\D/g, '').slice(0, 10);
+      let formatted = '';
+      if (digits.length <= 3) {
+        formatted = digits;
+      } else if (digits.length <= 6) {
+        formatted = digits.slice(0, 3) + '-' + digits.slice(3);
+      } else {
+        formatted = digits.slice(0, 3) + '-' + digits.slice(3, 6) + '-' + digits.slice(6);
+      }
+      el.value = formatted;
+    }
+
+    /* ────────────────────────────────────────
+       FAQ ACCORDION
+    ──────────────────────────────────────── */
+    function tog(id) {
+      const item = document.getElementById(id);
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) item.classList.add('open');
+    }
+
+    /* ────────────────────────────────────────
+       GSAP ANIMATIONS
+    ──────────────────────────────────────── */
+    (function () {
+      // Smooth scroll für alle "Jetzt buchen"-Buttons → #buchung
+      document.querySelectorAll('.btn-book[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.querySelector(a.getAttribute('href'));
+          if (!target) return;
+          if (typeof lenis !== 'undefined') {
+            lenis.scrollTo(target, { offset: -100, duration: 1.4 });
+          } else {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Initial hero fade-up
+      gsap.set(['#hero-ey', '#hero-h1', '#hero-tagline', '#hero-pills', '#hero-cta', '#hero-price-box'], {
+        opacity: 0,
+        y: 24
+      });
+      gsap.to('#hero-ey', { opacity: 1, y: 0, duration: .6, ease: 'power2.out', delay: .1 });
+      gsap.to('#hero-h1', { opacity: 1, y: 0, duration: .7, ease: 'power2.out', delay: .22 });
+      gsap.to('#hero-tagline', { opacity: 1, y: 0, duration: .65, ease: 'power2.out', delay: .34 });
+      gsap.to('#hero-pills', { opacity: 1, y: 0, duration: .6, ease: 'power2.out', delay: .44 });
+      gsap.to('#hero-cta', { opacity: 1, y: 0, duration: .6, ease: 'power2.out', delay: .52 });
+      gsap.to('#hero-price-box', { opacity: 1, y: 0, duration: .7, ease: 'power2.out', delay: .3 });
+
+      // Cards stagger in
+      gsap.set('.wi-card', { opacity: 0, y: 26 });
+      ScrollTrigger.batch('.wi-card', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: .55,
+          ease: 'power2.out',
+          stagger: .07
+        }),
+        start: 'top 88%'
+      });
+
+      // Process flow: line draws, then steps pop in
+      gsap.set('.pf-step', { opacity: 0, y: 20 });
+      ScrollTrigger.create({
+        trigger: '#pf-flow',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.to('#pf-line-fill', {
+            width: '100%',
+            duration: 1.2,
+            ease: 'power2.inOut'
+          });
+          gsap.to('.pf-step', {
+            opacity: 1,
+            y: 0,
+            duration: .5,
+            ease: 'power2.out',
+            stagger: .12,
+            delay: .3
+          });
+        }
+      });
+
+      // FAQ items fade up
+      gsap.set('.faq-item', { opacity: 0, y: 18 });
+      ScrollTrigger.batch('.faq-item', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: .5,
+          ease: 'power2.out',
+          stagger: .1
+        }),
+        start: 'top 88%'
+      });
+
+    }());
+  </script>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+

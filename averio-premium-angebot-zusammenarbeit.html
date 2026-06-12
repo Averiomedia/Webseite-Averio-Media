@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -943,7 +943,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
     <li class="nav-dropdown-wrap">
       <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
       <ul class="nav-dropdown">
-        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">199 €</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
         <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
         <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
       </ul>
@@ -956,7 +956,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
     <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
-  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kostenloser Kurzcheck</a>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
 </nav>
 
 <!-- ══ 1. HERO ════════════════════════════════════════════════════════ -->
@@ -984,8 +984,8 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
     <div class="zus-entry-box" id="hero-entry-box">
       <div class="zus-entry-label">Anfrage</div>
       <div class="zus-entry-title">Zusammenarbeit anfragen</div>
-      <div class="zus-entry-sub">Unverbindlich · 2 Minuten · Formular ausfüllen</div>
-      <a href="#anfrage" class="btn-primary" onclick="smoothScroll('#anfrage')">Jetzt Formular ausfüllen →</a>
+      <div class="zus-entry-sub">Unverbindlich · Ca. 10–15 Minuten · Kostenlos</div>
+      <a href="averio-premium-kontakt.html" class="btn-primary">Kurzes Gespräch buchen →</a>
       <div class="zus-entry-divider"></div>
       <div class="zus-entry-note">Kein Pitch · Keine Verpflichtung · Klare Antworten</div>
     </div>
@@ -1120,192 +1120,43 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
 </section>
 
 <!-- ══ 5. KONTAKTFORMULAR ══════════════════════════════════════════════ -->
-<section class="sec-alt" id="anfrage">
-  <div class="sec-inner">
-    <div class="sec-ey">Anfrage</div>
-    <h2 class="sec-title">Zusammenarbeit <em>anfragen</em></h2>
+<section class="sec-alt" id="kontakt">
+  <div style="max-width:580px;margin:0 auto;padding:0 24px">
+    <div class="sec-ey" style="text-align:center">Kontakt</div>
+    <h2 class="sec-title" style="text-align:center">Lieber per <em>E-Mail</em>?</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:2.5rem;font-size:15px;line-height:1.6">Schreib uns direkt — wir melden uns innerhalb von 24 Stunden bei dir.</p>
 
-    <div class="anfrage-wrap">
-
-      <!-- Form -->
-      <div class="anfrage-form-box">
-        <div class="anfrage-form-title">Erzähl uns von deinem Konto</div>
-        <p class="anfrage-form-sub">Füll das Formular aus — je mehr wir wissen, desto gezielter können wir im ersten Gespräch auf deine Situation eingehen. Wir melden uns innerhalb von 24 Stunden.</p>
-
-        <div id="form-inner">
-          <form onsubmit="submitCollab(event)">
-
-            <!-- Name Row -->
-            <div class="form-row form-row-2">
-              <div class="form-group">
-                <label class="form-label">Vorname *</label>
-                <input class="form-input" id="zus-vorname" type="text" placeholder="Marie" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Nachname *</label>
-                <input class="form-input" id="zus-nachname" type="text" placeholder="Mustermann" required>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">E-Mail *</label>
-                <input class="form-input" id="zus-email" type="email" placeholder="marie@beispiel.de" required>
-              </div>
-            </div>
-
-            <!-- Phone + Company -->
-            <div class="form-row form-row-2">
-              <div class="form-group">
-                <label class="form-label">Telefon (optional)</label>
-                <input class="form-input" id="zus-telefon" type="tel" placeholder="+49 123 456789">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Unternehmen</label>
-                <input class="form-input" id="zus-unternehmen" type="text" placeholder="Beispiel GmbH">
-              </div>
-            </div>
-
-            <!-- Website -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Website *</label>
-                <input class="form-input" id="zus-website" type="url" placeholder="https://beispiel.de" required>
-              </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="form-divider">
-              <div class="form-divider-line"></div>
-              <div class="form-divider-label">Deine aktuelle Situation</div>
-              <div class="form-divider-line"></div>
-            </div>
-
-            <!-- Branche -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Branche / Was du verkaufst *</label>
-                <input class="form-input" id="zus-branche" type="text" placeholder="z.B. B2B-Software, Steuerberatung, Maschinenbau …" required>
-              </div>
-            </div>
-
-            <!-- Radio: Wie lange -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Wie lange läuft dein Google Ads Konto schon?</label>
-                <div class="radio-group" id="radio-laufzeit">
-                  <div class="radio-option" onclick="selectRadio('radio-laufzeit', this)">
-                    <div class="radio-circle"><div class="radio-dot"></div></div>
-                    <span>Weniger als 3 Monate</span>
-                  </div>
-                  <div class="radio-option" onclick="selectRadio('radio-laufzeit', this)">
-                    <div class="radio-circle"><div class="radio-dot"></div></div>
-                    <span>3–12 Monate</span>
-                  </div>
-                  <div class="radio-option" onclick="selectRadio('radio-laufzeit', this)">
-                    <div class="radio-circle"><div class="radio-dot"></div></div>
-                    <span>Mehr als 1 Jahr</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Select: Budget -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Monatliches Werbebudget</label>
-                <select class="form-select" id="zus-budget">
-                  <option value="" disabled selected>Bitte wählen …</option>
-                  <option value="u500">Unter 500 €</option>
-                  <option value="500-1500">500–1.500 €</option>
-                  <option value="1500-3000">1.500–3.000 €</option>
-                  <option value="3000-5000">3.000–5.000 €</option>
-                  <option value="o5000">Über 5.000 €</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Textarea: Was läuft nicht rund -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Was läuft aktuell nicht rund? *</label>
-                <textarea class="form-textarea" id="zus-problem" rows="4" placeholder="z.B. Zu wenige Anfragen, hohe Kosten pro Klick, kein Tracking …" required></textarea>
-              </div>
-            </div>
-
-            <!-- Textarea: Erwartungen (optional) -->
-            <div class="form-row form-row-1">
-              <div class="form-group">
-                <label class="form-label">Was erwartest du dir von einer Zusammenarbeit? (optional)</label>
-                <textarea class="form-textarea" id="zus-erwartung" rows="3" placeholder="Deine Wünsche, Ziele, offene Fragen …"></textarea>
-              </div>
-            </div>
-
-            <!-- DSGVO -->
-            <div class="checkbox-wrap" id="dsgvo-wrap" onclick="toggleCheckbox('dsgvo-wrap')">
-              <div class="checkbox-box"><span class="checkbox-tick">✓</span></div>
-              <div class="checkbox-text">
-                Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. *
-              </div>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="checkbox-wrap" id="nl-wrap" onclick="toggleCheckbox('nl-wrap')" style="margin-bottom:12px;">
-              <div class="checkbox-box"><span class="checkbox-tick">✓</span></div>
-              <div class="checkbox-text">
-                Ja, ich möchte kostenlose Google Ads Tipps &amp; neue Guides per E-Mail erhalten. <span style="opacity:.55">(Optional — Abmeldung jederzeit möglich)</span>
-              </div>
-            </div>
-
-            <button type="submit" class="btn-submit">Zusammenarbeit anfragen →</button>
-            <div class="form-note">Unverbindlich · Antwort innerhalb von 24h</div>
-
-          </form>
+    <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Name *</label>
+          <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
         </div>
-
-        <!-- Success State -->
-        <div class="form-success" id="form-success">
-          <div class="form-success-icon">✓</div>
-          <div class="form-success-title">Anfrage erhalten!</div>
-          <p class="form-success-body">Wir melden uns innerhalb von 24 Stunden bei dir für ein kurzes Erstgespräch.</p>
+        <div>
+          <label for="k-email" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">E-Mail *</label>
+          <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
         </div>
-
       </div>
+      <div>
+        <label for="k-telefon" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Telefon <span style="font-weight:400;opacity:.5">(optional)</span></label>
+        <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+      </div>
+      <div>
+        <label for="k-nachricht" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Nachricht *</label>
+        <textarea id="k-nachricht" rows="4" placeholder="Worum geht es? Erzähl uns kurz von deiner Situation …" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit;resize:vertical"></textarea>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
+        <input type="checkbox" id="k-dsgvo" required style="margin-top:2px">
+        <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html" style="color:#FF4D00">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+      </div>
+      <button type="submit" id="k-submit" style="padding:14px 32px;border:none;border-radius:50px;background:#FF4D00;color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(255,77,0,.35)">Nachricht senden</button>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin:0">Antwort innerhalb von 24 Stunden · Kein Spam</p>
+    </form>
 
-      <!-- Sidebar -->
-      <aside class="anfrage-sidebar">
-
-        <!-- What happens next -->
-        <div class="sidebar-card">
-          <div class="sidebar-card-title">Was passiert nach der Anfrage?</div>
-          <div class="sidebar-bullets">
-            <div class="sidebar-bullet"><span class="sb-dot"></span><span>Wir melden uns innerhalb von 24h (Werktage)</span></div>
-            <div class="sidebar-bullet"><span class="sb-dot"></span><span>Kostenloser Kurzcheck (15–20 Min.) mit Marie direkt</span></div>
-            <div class="sidebar-bullet"><span class="sb-dot"></span><span>Wir schauen uns dein Konto gemeinsam an</span></div>
-            <div class="sidebar-bullet"><span class="sb-dot"></span><span>Du bekommst ein konkretes Angebot — individuell</span></div>
-          </div>
-        </div>
-
-        <!-- Requirements -->
-        <div class="sidebar-card sidebar-card-orange">
-          <div class="sidebar-card-title">Mindestvoraussetzungen</div>
-          <div class="sidebar-bullets">
-            <div class="sidebar-bullet"><span class="sb-check">✓</span><span>Monatliches Werbebudget ab 1.000 €</span></div>
-            <div class="sidebar-bullet"><span class="sb-check">✓</span><span>Bestehendes Google Ads Konto</span></div>
-            <div class="sidebar-bullet"><span class="sb-cross">✕</span><span style="color:#555;">Nicht geeignet: Einmalige Kampagnen ohne Strategie</span></div>
-          </div>
-        </div>
-
-        <!-- Phone CTA -->
-        <div class="sidebar-cta-card" style="text-align:center;">
-          <div class="sidebar-cta-label">Lieber kurz telefonieren?</div>
-          <div class="sidebar-cta-title" style="margin-bottom:1.25rem;">Termin online buchen</div>
-          <a href="averio-premium-kontakt.html" class="sidebar-cta-btn">Jetzt Termin buchen →</a>
-        </div>
-
-      </aside>
-
+    <div id="kontakt-success" style="display:none;text-align:center;padding:40px 0">
+      <div style="font-size:40px;margin-bottom:12px">✓</div>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 8px">Nachricht gesendet!</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6">Danke für deine Nachricht — wir melden uns innerhalb von 24 Stunden bei dir.</p>
     </div>
   </div>
 </section>
@@ -1357,7 +1208,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
     <div class="cta-strip-label">Noch unsicher?</div>
     <h2 class="cta-strip-title">Buch ein kostenloses 15-Minuten-Gespräch</h2>
     <p class="cta-strip-sub">Kein Druck, keine Verpflichtung.</p>
-    <a href="averio-premium-kontakt.html" class="cta-strip-btn">Kostenloser Kurzcheck →</a>
+    <a href="averio-premium-kontakt.html" class="cta-strip-btn">Kurzes Gespräch buchen →</a>
   </div>
 </div>
 
@@ -1388,62 +1239,31 @@ function selectRadio(groupId, clicked) {
   clicked.classList.add('selected');
 }
 
-/* ══ CHECKBOX TOGGLE ════════════════════════════════════════════ */
-function toggleCheckbox(wrapId) {
-  const wrap = document.getElementById(wrapId);
-  if (wrap) wrap.classList.toggle('checked');
-}
-
-/* ══ FORM SUBMIT ════════════════════════════════════════════════ */
+/* ══ KONTAKTFORMULAR ════════════════════════════════════════════ */
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
-async function submitCollab(e) {
+async function submitKontakt(e) {
   e.preventDefault();
-  const dsgvo = document.getElementById('dsgvo-wrap');
-  if (!dsgvo.classList.contains('checked')) {
-    dsgvo.style.outline = '2px solid rgba(255,77,0,.5)';
-    dsgvo.style.borderRadius = '6px';
-    setTimeout(() => { dsgvo.style.outline = ''; }, 2000);
-    return;
-  }
-
-  const laufzeit = document.querySelector('#radio-laufzeit .radio-option.selected span');
-
-  // Neues Tab vorab öffnen (vor await, damit Popup-Blocker nicht greift)
-  const thankYouWin = window.open('', '_blank');
+  var btn = document.getElementById('k-submit');
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
 
   try {
     await fetch(NFORMS_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        Formular:      'Zusammenarbeit anfragen',
-        Vorname:       document.getElementById('zus-vorname')?.value.trim()     || '–',
-        Nachname:      document.getElementById('zus-nachname')?.value.trim()    || '–',
-        Email:         document.getElementById('zus-email')?.value.trim()       || '–',
-        Telefon:       document.getElementById('zus-telefon')?.value.trim()     || '–',
-        Unternehmen:   document.getElementById('zus-unternehmen')?.value.trim() || '–',
-        Website:       document.getElementById('zus-website')?.value.trim()     || '–',
-        Branche:       document.getElementById('zus-branche')?.value.trim()     || '–',
-        Laufzeit:      laufzeit?.textContent.trim()                             || '–',
-        Budget:        document.getElementById('zus-budget')?.value             || '–',
-        Problem:       document.getElementById('zus-problem')?.value.trim()     || '–',
-        Erwartung:     document.getElementById('zus-erwartung')?.value.trim()   || '–',
-        Newsletter:    document.getElementById('nl-wrap')?.classList.contains('checked') ? 'Ja' : 'Nein'
+        Formular:   'Kontakt – Zusammenarbeit',
+        Name:       document.getElementById('k-name').value.trim(),
+        Email:      document.getElementById('k-email').value.trim(),
+        Telefon:    document.getElementById('k-telefon').value.trim() || '–',
+        Nachricht:  document.getElementById('k-nachricht').value.trim()
       })
     });
   } catch(err) { console.warn('nForms:', err); }
 
-  // Danke-Seite im vorab geöffneten Tab laden
-  if (thankYouWin) {
-    thankYouWin.location.href = 'averio-danke-zusammenarbeit.html';
-  } else {
-    window.open('averio-danke-zusammenarbeit.html', '_blank');
-  }
-
-  // Inline-Erfolgsanzeige auf der Hauptseite (Anfrage als abgeschlossen markieren)
-  document.getElementById('form-inner').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  document.getElementById('kontakt-form').style.display = 'none';
+  document.getElementById('kontakt-success').style.display = 'block';
 }
 
 /* ══ FAQ ACCORDION ══════════════════════════════════════════════ */

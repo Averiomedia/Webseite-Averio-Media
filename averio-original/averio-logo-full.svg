@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" fill="none" width="300" height="64">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+      text { font-family: Syne, 'Arial Black', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Icon Mark -->
+  <rect x="0" y="4" width="56" height="56" rx="11" fill="#FF4D00"/>
+  <path d="M28 14.5L41 42.5H15L28 14.5Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="18.5" y1="36" x2="37.5" y2="36" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity="0.78"/>
+
+  <!-- Averio -->
+  <text x="70" y="42" font-size="28" font-weight="800" letter-spacing="-1" fill="#ffffff">Averio</text>
+  <!-- Media -->
+  <text x="180" y="42" font-size="28" font-weight="800" letter-spacing="-1" fill="#FF4D00">Media</text>
+</svg>

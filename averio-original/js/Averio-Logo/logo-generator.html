@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Averio Logo Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#1a1a1a; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; gap:32px; font-family:Syne,sans-serif; padding:40px; }
+  canvas { display:none; }
+  .preview { border-radius:14px; border:1px solid rgba(255,255,255,.1); overflow:hidden; }
+  .preview img { display:block; max-width:100%; }
+  .row { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+  .card { text-align:center; }
+  .label { font-size:11px; color:rgba(255,255,255,.35); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+  .btns { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
+  .btn { padding:10px 20px; border-radius:8px; font-family:Syne,sans-serif; font-size:12px; font-weight:800; cursor:pointer; border:none; letter-spacing:.05em; transition:opacity .2s; }
+  .btn:hover { opacity:.75; }
+  .btn-primary { background:#FF4D00; color:#fff; }
+  .btn-ghost { background:rgba(255,255,255,.08); color:rgba(255,255,255,.7); border:1px solid rgba(255,255,255,.15); }
+  h1 { color:#fff; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; opacity:.3; }
+  .section-title { color:rgba(255,255,255,.5); font-size:11px; letter-spacing:.14em; text-transform:uppercase; align-self:flex-start; margin-top:8px; }
+  #status { color:rgba(255,255,255,.4); font-size:12px; letter-spacing:.06em; }
+</style>
+</head>
+<body>
+
+<h1>Averio Media — Logo Export</h1>
+<div id="status">Wird geladen…</div>
+
+<div class="section-title">Logo</div>
+<div class="row" id="logo-row"></div>
+
+<div class="section-title">Favicon</div>
+<div class="row" id="fav-row"></div>
+
+<button class="btn btn-primary" id="dl-all-btn" onclick="dlAll()"
+  style="margin-top:8px;padding:14px 36px;font-size:14px;display:none">Alle herunterladen</button>
+
+<script>
+const ORANGE = '#FF4D00';
+const canvases = {};
+
+// ── Exakt gleiche SVGs wie auf der Website ───────────────────
+
+// Icon-Mark (aus averio-logo-full.svg, viewBox 0 0 56 64)
+function iconMarkSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64">
+    <rect x="0" y="4" width="56" height="56" rx="11" fill="${ORANGE}"/>
+    <path d="M28 14.5L41 42.5H15L28 14.5Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="18.5" y1="36" x2="37.5" y2="36" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity="0.78"/>
+  </svg>`;
+}
+
+// Favicon-Icon (aus averio-favicon.svg, viewBox 0 0 32 32)
+function faviconCoreSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="7" fill="${ORANGE}"/>
+    <path d="M16 6.5L26 25.5H6L16 6.5Z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+    <line x1="10" y1="20.5" x2="22" y2="20.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  </svg>`;
+}
+
+function svgToURL(svg) {
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+function loadImage(src) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.src = src;
+  });
+}
+
+// ── Logo auf Canvas zeichnen ──────────────────────────────────
+async function drawLogo(canvas, mode) {
+  const SCALE = 3;
+  const W = 420, H = 80;
+  canvas.width  = W * SCALE;
+  canvas.height = H * SCALE;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(SCALE, SCALE);
+
+  // Hintergrund (bei transparent-* kein Fill)
+  if (mode === 'dark')       { ctx.fillStyle = '#080808'; ctx.fillRect(0, 0, W, H); }
+  else if (mode === 'light') { ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, W, H); }
+
+  // SVG Icon-Mark (56x64, platziert bei x=10, y=8)
+  const iconImg = await loadImage(svgToURL(iconMarkSVG()));
+  ctx.drawImage(iconImg, 10, 8, 56, 64);
+
+  // Text in Syne 800
+  ctx.font         = '800 27px "Syne"';
+  ctx.textBaseline = 'middle';
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '-1px';
+
+  // Textfarbe: transparent-white = weiss (fuer dunkle Flaechen), transparent-black = dunkel
+  const textColor = (mode === 'dark' || mode === 'transparent-white') ? '#ffffff' : '#0a0a0a';
+  ctx.fillStyle = textColor;
+  ctx.fillText('Averio', 80, 41);
+
+  const avWidth   = ctx.measureText('Averio').width;
+  const spaceWidth = ctx.measureText(' ').width;
+
+  ctx.fillStyle = ORANGE;
+  ctx.fillText('Media', 80 + avWidth + spaceWidth, 41);
+}
+
+// ── Favicon auf Canvas zeichnen ───────────────────────────────
+async function drawFavicon(canvas, size, mode) {
+  canvas.width  = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+
+  const img = await loadImage(svgToURL(faviconCoreSVG()));
+
+  if (mode === 'transparent') {
+    // Nur das Icon, volle Groesse (orange abgerundetes Quadrat, transparent drumherum)
+    ctx.drawImage(img, 0, 0, size, size);
+  } else {
+    // Hintergrund fuellen, dann Icon leicht eingerueckt
+    ctx.fillStyle = mode === 'dark' ? '#080808' : '#ffffff';
+    ctx.fillRect(0, 0, size, size);
+    const pad = Math.round(size * 0.08);
+    ctx.drawImage(img, pad, pad, size - pad * 2, size - pad * 2);
+  }
+}
+
+// ── Download ─────────────────────────────────────────────────
+function dl(id, name, type) {
+  const c = canvases[id];
+  if (!c) return;
+  if (type === 'jpg') {
+    const tmp = document.createElement('canvas');
+    tmp.width  = c.width;
+    tmp.height = c.height;
+    const t = tmp.getContext('2d');
+    t.fillStyle = name.includes('light') ? '#fff' : '#080808';
+    t.fillRect(0, 0, tmp.width, tmp.height);
+    t.drawImage(c, 0, 0);
+    tmp.toBlob(b => { const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click(); }, 'image/jpeg', 0.95);
+  } else {
+    c.toBlob(b => { const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click(); }, 'image/png');
+  }
+}
+
+function dlAll() {
+  let delay = 0;
+  for (const id of Object.keys(canvases)) {
+    if (id.startsWith('logo-')) {
+      const mode = id.slice(5);
+      const hasJpg = mode === 'dark' || mode === 'light';
+      setTimeout(() => dl(id, `averio-logo-${mode}.png`, 'png'), delay); delay += 200;
+      if (hasJpg) { setTimeout(() => dl(id, `averio-logo-${mode}.jpg`, 'jpg'), delay); delay += 200; }
+    } else {
+      const parts = id.split('-');
+      const sz    = parts[1];
+      const mode  = parts[2];
+      const sfx   = mode === 'transparent' ? '' : `-${mode}`;
+      setTimeout(() => dl(id, `averio-favicon${sfx}-${sz}x${sz}.png`, 'png'), delay); delay += 200;
+      if (mode !== 'transparent') {
+        setTimeout(() => dl(id, `averio-favicon${sfx}-${sz}x${sz}.jpg`, 'jpg'), delay); delay += 200;
+      }
+    }
+  }
+}
+
+// ── Init ─────────────────────────────────────────────────────
+async function init() {
+  const logoRow = document.getElementById('logo-row');
+  const favRow  = document.getElementById('fav-row');
+
+  // Logos — mit und ohne Hintergrund
+  const logoModes = [
+    { id: 'dark',               label: 'Dark',                      bg: '#080808',                                                            jpg: true  },
+    { id: 'light',              label: 'Light',                     bg: '#efefef',                                                            jpg: true  },
+    { id: 'transparent-white',  label: 'Transparent · Weißer Text', bg: 'repeating-conic-gradient(#444 0% 25%,#222 0% 50%) 0 0/12px 12px',   jpg: false },
+    { id: 'transparent-black',  label: 'Transparent · Dunkler Text',bg: 'repeating-conic-gradient(#ccc 0% 25%,#eee 0% 50%) 0 0/12px 12px',   jpg: false },
+  ];
+
+  for (const m of logoModes) {
+    const id = `logo-${m.id}`;
+    const c  = document.createElement('canvas');
+    c.style.display = 'none';
+    document.body.appendChild(c);
+    canvases[id] = c;
+
+    await drawLogo(c, m.id);
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="label">${m.label}</div>
+      <div class="preview" style="background:${m.bg}">
+        <img src="${c.toDataURL()}" style="display:block;max-width:500px">
+      </div>
+      <div class="btns">
+        <button class="btn btn-primary" onclick="dl('${id}','averio-logo-${m.id}.png','png')">PNG</button>
+        ${m.jpg ? `<button class="btn btn-ghost" onclick="dl('${id}','averio-logo-${m.id}.jpg','jpg')">JPG</button>` : ''}
+      </div>`;
+    logoRow.appendChild(card);
+  }
+
+  // Favicons
+  const sizes = [16, 32, 64, 128, 512];
+  const modes = ['transparent', 'dark', 'light'];
+
+  for (const sz of sizes) {
+    for (const mode of modes) {
+      const id  = `fav-${sz}-${mode}`;
+      const c   = document.createElement('canvas');
+      c.style.display = 'none';
+      document.body.appendChild(c);
+      canvases[id] = c;
+
+      await drawFavicon(c, sz, mode);
+
+      const sfx   = mode === 'transparent' ? '' : `-${mode}`;
+      const label = mode === 'transparent' ? 'Transparent' : mode === 'dark' ? 'Dark' : 'Light';
+      const bg    = mode === 'transparent'
+        ? 'repeating-conic-gradient(#444 0% 25%,#222 0% 50%) 0 0/12px 12px'
+        : mode === 'dark' ? '#080808' : '#fff';
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="label">${sz}×${sz} · ${label}</div>
+        <div class="preview" style="background:${bg};padding:8px;border-radius:8px">
+          <img src="${c.toDataURL()}" style="display:block;image-rendering:${sz<=32?'pixelated':'auto'}">
+        </div>
+        <div class="btns">
+          <button class="btn btn-primary" onclick="dl('${id}','averio-favicon${sfx}-${sz}x${sz}.png','png')">PNG</button>
+          ${mode !== 'transparent' ? `<button class="btn btn-ghost" onclick="dl('${id}','averio-favicon${sfx}-${sz}x${sz}.jpg','jpg')">JPG</button>` : ''}
+        </div>`;
+      favRow.appendChild(card);
+    }
+  }
+
+  document.getElementById('status').style.display = 'none';
+  document.getElementById('dl-all-btn').style.display = '';
+}
+
+// Warte auf Syne-Font, dann zeichnen
+document.fonts.ready.then(init);
+</script>
+</body>
+</html>
