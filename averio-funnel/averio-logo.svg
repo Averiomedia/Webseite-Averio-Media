@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" fill="none" width="220" height="52">
+  <!-- Icon Mark -->
+  <rect width="52" height="52" rx="11" fill="#FF4D00"/>
+  <path d="M26 10L39.5 40H12.5L26 10Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="16" y1="33" x2="36" y2="33" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Wordmark -->
+  <text x="68" y="33"
+    font-family="'Syne', 'Arial Black', Arial, sans-serif"
+    font-size="22"
+    font-weight="800"
+    letter-spacing="-0.5"
+    fill="#FFFFFF">Averio</text>
+  <text x="148" y="33"
+    font-family="'Syne', 'Arial Black', Arial, sans-serif"
+    font-size="22"
+    font-weight="800"
+    letter-spacing="-0.5"
+    fill="#FF4D00">Media</text>
+</svg>

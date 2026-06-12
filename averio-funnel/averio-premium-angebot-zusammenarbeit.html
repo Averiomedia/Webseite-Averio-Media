@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zusammenarbeit anfragen – Laufende Google Ads Betreuung | Averio Media</title>
+<meta name="description" content="Professionelle monatliche Google Ads Betreuung für B2B-Unternehmen. Konto-Übernahme, wöchentliche Optimierung, monatliches Reporting. Jetzt kostenloser Kurzcheck buchen.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/zusammenarbeit-anfragen">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averiomedia.de/zusammenarbeit-anfragen">
+<meta property="og:title" content="Laufende Google Ads Betreuung anfragen | Averio Media">
+<meta property="og:description" content="Monatliche Google Ads Betreuung für B2B-Unternehmen: Konto-Übernahme, wöchentliche Optimierung & monatliches Reporting. Flexibel kündbar.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Laufende Google Ads Betreuung anfragen | Averio Media">
+<meta name="twitter:description" content="Monatliche Google Ads Betreuung für B2B-Unternehmen: Konto-Übernahme, wöchentliche Optimierung & monatliches Reporting. Flexibel kündbar.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<link rel="stylesheet" href="averio-media-weiss.css?v=8">
+
+<style>
+/* ══ VARIABLES ═══════════════════════════════════════════════════ */
+:root {
+  --o: #FF4D00; --o2: #FF8A00;
+  --bg: #090909; --bg2: #1e1e1e; --bg3: #272727;
+  --border: #383838; --border2: #444444;
+  --ice: #D6EEFF; --ice2: #A8D8F0;
+  --fh: 'Syne', sans-serif; --fb: 'DM Sans', sans-serif;
+}
+
+/* ══ RESET / BASE ════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  font-family: var(--fb);
+  color: #f0f0f0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ══ NAV OVERRIDES ═══════════════════════════════════════════════ */
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ══ SHARED SECTION PRIMITIVES ═══════════════════════════════════ */
+.sec {
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.sec-alt {
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+.sec-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sec-ey {
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: var(--ice);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: .75;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sec-ey::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--ice);
+  display: block;
+  opacity: .55;
+  flex-shrink: 0;
+}
+.sec-title {
+  font-family: var(--fh);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.sec-title em { color: var(--o); font-style: normal; }
+.sec-body {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.9;
+  max-width: 680px;
+}
+
+/* ══ HERO ════════════════════════════════════════════════════════ */
+.zus-hero {
+  padding: 140px 2.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.zus-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 800px 500px at 0% 100%, rgba(255,77,0,.07), transparent),
+    radial-gradient(ellipse 500px 400px at 100% 0%, rgba(168,216,240,.04), transparent);
+}
+.zus-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+.zus-hero-left {}
+.zus-eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--ice);
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: .8;
+}
+.zus-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--ice);
+  display: block;
+  opacity: .6;
+  flex-shrink: 0;
+}
+.zus-h1 {
+  font-family: var(--fh);
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 800;
+  line-height: .97;
+  color: #fff;
+  letter-spacing: -2px;
+  margin-bottom: 1.75rem;
+}
+.zus-h1 em {
+  color: var(--o);
+  font-style: normal;
+  text-shadow: 0 0 50px rgba(255,77,0,.25);
+}
+.zus-sub {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+.hero-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hero-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #bbb;
+}
+.hero-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--o);
+  box-shadow: 0 0 6px rgba(255,77,0,.6);
+  flex-shrink: 0;
+}
+
+/* ── Entry CTA Box ── */
+.zus-entry-box {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 18px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.zus-entry-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--o), var(--o2), transparent);
+}
+.zus-entry-label {
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--o);
+  font-weight: 600;
+  margin-bottom: .9rem;
+  opacity: .85;
+}
+.zus-entry-title {
+  font-family: var(--fh);
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  margin-bottom: .6rem;
+}
+.zus-entry-sub {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--o);
+  color: #fff;
+  font-family: var(--fh);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-align: center;
+  margin-bottom: .75rem;
+}
+.btn-primary:hover { background: var(--o2); transform: translateY(-1px); }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border2);
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+  text-align: center;
+}
+.btn-secondary:hover { border-color: #444; color: #eee; }
+.zus-entry-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1.5rem 0;
+}
+.zus-entry-note {
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+  letter-spacing: .04em;
+}
+
+/* ══ FEATURES (Was du bekommst) ══════════════════════════════════ */
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.feat-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: border-color .25s;
+}
+.feat-card:hover { border-color: rgba(255,77,0,.3); }
+.feat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: rgba(255,77,0,.1);
+  border: 1px solid rgba(255,77,0,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+.feat-icon svg { display: block; }
+.feat-name {
+  font-family: var(--fh);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .6rem;
+  letter-spacing: -.02em;
+}
+.feat-text {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.85;
+}
+
+/* ══ PROCESS (Wie die Zusammenarbeit läuft) ══════════════════════ */
+.proc-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.proc-item {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.proc-item:first-child { border-top: 1px solid var(--border); }
+.proc-num {
+  font-family: var(--fh);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--o);
+  opacity: .22;
+  letter-spacing: -.04em;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 56px;
+  text-align: right;
+  padding-top: 2px;
+  transition: opacity .3s;
+}
+.proc-item:hover .proc-num { opacity: .5; }
+.proc-content {
+  flex: 1;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--border);
+  transition: border-color .3s;
+}
+.proc-item:hover .proc-content { border-color: rgba(255,77,0,.3); }
+.proc-title {
+  font-family: var(--fh);
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .5rem;
+  letter-spacing: -.02em;
+}
+.proc-text {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.85;
+}
+
+/* ══ FIT / NOT FIT ═══════════════════════════════════════════════ */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.fit-col {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+.fit-col.fits { border-color: rgba(255,77,0,.15); }
+.fit-col.nope { border-color: rgba(255,255,255,.09); }
+.fit-col-title {
+  font-family: var(--fh);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.fit-col.fits .fit-col-title { color: var(--o); }
+.fit-col.nope .fit-col-title { color: #555; }
+.fit-list { display: flex; flex-direction: column; gap: .75rem; }
+.fit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.fit-icon-yes {
+  color: var(--o);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 14px;
+}
+.fit-icon-no {
+  color: #444;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 14px;
+}
+.fit-col.fits .fit-item { color: #bbb; }
+.fit-col.nope .fit-item { color: #666; }
+.fit-col.nope .fit-item a { color: var(--o); opacity: .8; }
+
+/* ══ FORM SECTION ════════════════════════════════════════════════ */
+.anfrage-wrap {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+/* ── Form ── */
+.anfrage-form-box {}
+.anfrage-form-title {
+  font-family: var(--fh);
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: .5rem;
+}
+.anfrage-form-sub {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.form-row {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-row-2 { grid-template-columns: 1fr 1fr; }
+.form-row-1 { grid-template-columns: 1fr; }
+.form-group { display: flex; flex-direction: column; gap: .4rem; }
+.form-label {
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 600;
+}
+.form-input,
+.form-select,
+.form-textarea {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 9px;
+  color: #f0f0f0;
+  font-family: var(--fb);
+  font-size: 14px;
+  padding: 12px 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-input::placeholder,
+.form-textarea::placeholder { color: #444; }
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--o);
+  box-shadow: 0 0 0 3px rgba(255,77,0,.1);
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+.form-select option { background: #111; color: #f0f0f0; }
+.form-textarea { resize: vertical; line-height: 1.7; }
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+}
+.form-divider-line { flex: 1; height: 1px; background: var(--border); }
+.form-divider-label {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* ── Radio Group ── */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-top: .2rem;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: 1px solid var(--border2);
+  background: var(--bg3);
+  transition: border-color .2s, background .2s;
+  font-size: 13px;
+  color: #aaa;
+  user-select: none;
+}
+.radio-option:hover { border-color: #333; color: #ccc; }
+.radio-option.selected {
+  border-color: rgba(255,77,0,.4);
+  background: rgba(255,77,0,.06);
+  color: #f0f0f0;
+}
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s;
+}
+.radio-option.selected .radio-circle { border-color: var(--o); }
+.radio-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--o);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.radio-option.selected .radio-dot { opacity: 1; }
+
+/* ── DSGVO Checkbox ── */
+.checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  user-select: none;
+}
+.checkbox-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 2px solid var(--border2);
+  background: var(--bg3);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s, background .2s;
+  margin-top: 1px;
+}
+.checkbox-wrap.checked .checkbox-box {
+  border-color: var(--o);
+  background: var(--o);
+}
+.checkbox-tick {
+  color: #fff;
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.checkbox-wrap.checked .checkbox-tick { opacity: 1; }
+.checkbox-text {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.7;
+}
+.checkbox-text a { color: #888; text-decoration: underline; }
+.checkbox-text a:hover { color: #bbb; }
+
+/* ── Submit Button & Success ── */
+.btn-submit {
+  width: 100%;
+  background: var(--o);
+  color: #fff;
+  font-family: var(--fh);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  padding: 16px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background .2s, transform .15s;
+}
+.btn-submit:hover { background: var(--o2); transform: translateY(-1px); }
+.form-note {
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+  margin-top: .75rem;
+  letter-spacing: .04em;
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.form-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,77,0,.1);
+  border: 2px solid rgba(255,77,0,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 22px;
+}
+.form-success-title {
+  font-family: var(--fh);
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .6rem;
+}
+.form-success-body { font-size: 14px; color: #777; line-height: 1.8; }
+
+/* ── Sidebar ── */
+.anfrage-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+.sidebar-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+.sidebar-card-orange {
+  background: rgba(255,77,0,.05);
+  border-color: rgba(255,77,0,.18);
+}
+.sidebar-card-title {
+  font-family: var(--fh);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+.sidebar-bullets { display: flex; flex-direction: column; gap: .6rem; }
+.sidebar-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.65;
+}
+.sb-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--o);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.sb-check { color: var(--o); font-size: 12px; flex-shrink: 0; font-weight: 700; }
+.sb-cross { color: #444; font-size: 12px; flex-shrink: 0; font-weight: 700; }
+.sidebar-cta-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.sidebar-cta-label {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: .5rem;
+  letter-spacing: .06em;
+}
+.sidebar-cta-title {
+  font-family: var(--fh);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.sidebar-cta-btn {
+  display: block;
+  background: transparent;
+  border: 1px solid rgba(255,77,0,.35);
+  color: var(--o);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 16px;
+  border-radius: 9px;
+  transition: background .2s, border-color .2s;
+  text-align: center;
+}
+.sidebar-cta-btn:hover { background: rgba(255,77,0,.08); border-color: rgba(255,77,0,.6); }
+
+/* ══ FAQ ════════════════════════════════════════════════════════ */
+.faq-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 800px;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  font-family: var(--fh);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.01em;
+  user-select: none;
+  transition: color .2s;
+}
+.faq-q:hover { color: var(--o); }
+.faq-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform .3s, border-color .2s;
+  font-size: 12px;
+  color: #666;
+}
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+  border-color: rgba(255,77,0,.3);
+  color: var(--o);
+}
+.faq-a {
+  display: none;
+  padding: 0 0 1.25rem;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.9;
+  max-width: 680px;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ══ CTA STRIP ═══════════════════════════════════════════════════ */
+.cta-strip {
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+  text-align: center;
+}
+.cta-strip-inner { max-width: 700px; margin: 0 auto; }
+.cta-strip-label {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.cta-strip-title {
+  font-family: var(--fh);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+  margin-bottom: .75rem;
+}
+.cta-strip-sub { font-size: 14px; color: #666; margin-bottom: 2rem; }
+.cta-strip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--o);
+  color: #fff;
+  font-family: var(--fh);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: background .2s, transform .15s;
+}
+.cta-strip-btn:hover { background: var(--o2); transform: translateY(-1px); }
+
+/* ══ FOOTER ══════════════════════════════════════════════════════ */
+.zus-footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  color: #444;
+  letter-spacing: .04em;
+}
+.zus-footer a { color: #555; transition: color .2s; }
+.zus-footer a:hover { color: #888; }
+
+/* ══ RESPONSIVE ══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .zus-hero-inner { grid-template-columns: 1fr; max-width: 680px; }
+  .zus-entry-box { max-width: 420px; }
+  .feat-grid { grid-template-columns: 1fr; }
+  .anfrage-wrap { grid-template-columns: 1fr; }
+  .anfrage-sidebar { grid-row: 1; }
+  .fit-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .sec, .sec-alt { padding: 3.5rem 1.25rem; }
+  .zus-hero { padding: 120px 1.25rem 3.5rem; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .cta-strip { padding: 3.5rem 1.25rem; }
+  .zus-footer { padding: 1.5rem 1.25rem; }
+}
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .zus-h1               { color: #0D1117 !important; }
+html[data-theme="light"] .zus-sub              { color: #495057 !important; }
+html[data-theme="light"] .sec-title            { color: #0D1117 !important; }
+html[data-theme="light"] .sec-body             { color: #495057 !important; }
+html[data-theme="light"] .zus-entry-box        { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .zus-entry-title      { color: #0D1117 !important; }
+html[data-theme="light"] .zus-entry-sub        { color: #495057 !important; }
+html[data-theme="light"] .feat-card            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .feat-name            { color: #0D1117 !important; }
+html[data-theme="light"] .feat-text            { color: #495057 !important; }
+html[data-theme="light"] .proc-title           { color: #0D1117 !important; }
+html[data-theme="light"] .proc-text            { color: #495057 !important; }
+html[data-theme="light"] .fit-col              { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fit-col.nope .fit-col-title { color: #868E96 !important; }
+html[data-theme="light"] .fit-col.fits .fit-item { color: #495057 !important; }
+html[data-theme="light"] .fit-col.nope .fit-item { color: #868E96 !important; }
+html[data-theme="light"] .anfrage-form-title   { color: #0D1117 !important; }
+html[data-theme="light"] .anfrage-form-sub     { color: #495057 !important; }
+html[data-theme="light"] .form-label           { color: #495057 !important; }
+html[data-theme="light"] .form-input,
+html[data-theme="light"] .form-select,
+html[data-theme="light"] .form-textarea        { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .radio-option         { background: #F8F9FA !important; border-color: #DEE2E6 !important; color: #495057 !important; }
+html[data-theme="light"] .radio-option.selected { color: #0D1117 !important; }
+html[data-theme="light"] .checkbox-text        { color: #495057 !important; }
+html[data-theme="light"] .sidebar-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .sidebar-card-title   { color: #0D1117 !important; }
+html[data-theme="light"] .sidebar-bullet       { color: #495057 !important; }
+html[data-theme="light"] .sidebar-cta-title    { color: #0D1117 !important; }
+html[data-theme="light"] .form-success-title   { color: #0D1117 !important; }
+html[data-theme="light"] .form-success-body    { color: #495057 !important; }
+html[data-theme="light"] .faq-q               { color: #0D1117 !important; }
+html[data-theme="light"] .faq-a               { color: #495057 !important; }
+html[data-theme="light"] .cta-strip-title      { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip-sub        { color: #495057 !important; }
+html[data-theme="light"] .zus-footer           { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Laufende Google Ads Betreuung",
+  "url": "https://averiomedia.de/zusammenarbeit-anfragen",
+  "description": "Monatliche Google Ads Betreuung für B2B-Unternehmen. Konto-Übernahme, wöchentliche Optimierung, monatliches Reporting.",
+  "provider": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+  "serviceType": "Google Ads Betreuung",
+  "termsOfService": "Flexibel kündbar — monatliche Zusammenarbeit ohne Vertragsfallen"
+}
+</script>
+</head>
+<body>
+
+<!-- ══ CURSOR ══════════════════════════════════════════════════════════ -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ══ NAV ════════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
+</nav>
+
+<!-- ══ 1. HERO ════════════════════════════════════════════════════════ -->
+<section class="zus-hero">
+  <div class="zus-hero-inner">
+
+    <!-- Left -->
+    <div class="zus-hero-left">
+      <div class="zus-eyebrow">Laufende Zusammenarbeit · Monatlich</div>
+      <h1 class="zus-h1">
+        Du schaltest bereits Ads.<br>
+        Lass sie <em>für dich arbeiten.</em>
+      </h1>
+      <p class="zus-sub">
+        Du hast ein laufendes Google-Ads-Konto, bist aber nicht zufrieden — oder willst nicht mehr allein dafür verantwortlich sein. Wir übernehmen die vollständige Betreuung: Strategie, Optimierung, Reporting. Du konzentrierst dich auf dein Business.
+      </p>
+      <div class="hero-pills">
+        <div class="hero-pill"><span class="hero-pill-dot"></span>Wöchentliche Optimierung</div>
+        <div class="hero-pill"><span class="hero-pill-dot"></span>Monatliches Reporting</div>
+        <div class="hero-pill"><span class="hero-pill-dot"></span>Direkte Ansprechpartnerin</div>
+      </div>
+    </div>
+
+    <!-- Right: Entry Box -->
+    <div class="zus-entry-box" id="hero-entry-box">
+      <div class="zus-entry-label">Anfrage</div>
+      <div class="zus-entry-title">Zusammenarbeit anfragen</div>
+      <div class="zus-entry-sub">Unverbindlich · Ca. 10–15 Minuten · Kostenlos</div>
+      <a href="averio-premium-kontakt.html" class="btn-primary">Kurzes Gespräch buchen →</a>
+      <div class="zus-entry-divider"></div>
+      <div class="zus-entry-note">Kein Pitch · Keine Verpflichtung · Klare Antworten</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 2. WAS DU BEKOMMST ══════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-ey">Leistungsumfang</div>
+    <h2 class="sec-title">Vollständige Google-Ads-Betreuung</h2>
+    <p class="sec-body">Kein Autopilot. Kein Agentur-Kauderwelsch. Aktive Arbeit an deinem Konto — jede Woche.</p>
+
+    <div class="feat-grid">
+
+      <!-- Card 1 -->
+      <div class="feat-card" id="feat-1">
+        <div class="feat-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke="#FF4D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feat-name">Konto-Übernahme &amp; Audit</div>
+        <p class="feat-text">Wir analysieren dein bestehendes Konto, identifizieren die wichtigsten Hebel und starten mit einem priorisierten Maßnahmenplan. Kein blinder Weiterlauf.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feat-card" id="feat-2">
+        <div class="feat-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+            <path d="M3 17l5-5 4 4 5-6 4 3" stroke="#FF4D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feat-name">Laufende Optimierung</div>
+        <p class="feat-text">Wöchentliche Optimierungsrunden: Gebotsanpassungen, Suchanfragen-Bereinigung, A/B-Tests, Budget-Steuerung. Kein Autopilot — aktive Arbeit am Konto.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feat-card" id="feat-3">
+        <div class="feat-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+            <rect x="4" y="3" width="16" height="18" rx="2" stroke="#FF4D00" stroke-width="2"/>
+            <path d="M8 8h8M8 12h8M8 16h5" stroke="#FF4D00" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="feat-name">Monatliches Reporting</div>
+        <p class="feat-text">Du bekommst jeden Monat ein verständliches Reporting — was wurde optimiert, was hat sich verändert, was sind die nächsten Schritte. Keine Zahlenfriedhöfe.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. PROZESS ══════════════════════════════════════════════════════ -->
+<section class="sec-alt">
+  <div class="sec-inner">
+    <div class="sec-ey">Ablauf</div>
+    <h2 class="sec-title">Wie die Zusammenarbeit <em>läuft</em></h2>
+    <p class="sec-body">Transparent, planbar, ohne Überraschungen.</p>
+
+    <div class="proc-list">
+
+      <div class="proc-item" id="proc-1">
+        <div class="proc-num">01</div>
+        <div class="proc-content">
+          <div class="proc-title">Kostenloser Kurzcheck (15–20 Min.)</div>
+          <p class="proc-text">Wir schauen uns gemeinsam dein Konto an und klären, ob und wie wir zusammenarbeiten können. Keine Pitches, keine Versprechen.</p>
+        </div>
+      </div>
+
+      <div class="proc-item" id="proc-2">
+        <div class="proc-num">02</div>
+        <div class="proc-content">
+          <div class="proc-title">Individuelles Angebot</div>
+          <p class="proc-text">Basierend auf deinem Budget, deinen Zielen und der Komplexität deines Kontos bekommst du ein konkretes Angebot — transparent und nachvollziehbar.</p>
+        </div>
+      </div>
+
+      <div class="proc-item" id="proc-3">
+        <div class="proc-num">03</div>
+        <div class="proc-content">
+          <div class="proc-title">Onboarding &amp; Übernahme</div>
+          <p class="proc-text">Wir übernehmen alle Zugänge, machen einen vollständigen Audit und starten mit einem klaren Maßnahmenplan. Kein Cold Start.</p>
+        </div>
+      </div>
+
+      <div class="proc-item" id="proc-4">
+        <div class="proc-num">04</div>
+        <div class="proc-content">
+          <div class="proc-title">Laufende Betreuung</div>
+          <p class="proc-text">Ab dann optimieren wir dein Konto wöchentlich, reporten monatlich und sind jederzeit erreichbar. Du weißt immer was passiert.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 4. FIT / NOT FIT ════════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-ey">Voraussetzungen</div>
+    <h2 class="sec-title">Für wen ist die Zusammenarbeit geeignet?</h2>
+
+    <div class="fit-grid">
+
+      <!-- Fits -->
+      <div class="fit-col fits">
+        <div class="fit-col-title">Passt gut</div>
+        <ul class="fit-list">
+          <li class="fit-item"><span class="fit-icon-yes">✓</span><span>Monatliches Werbebudget ab 1.000 €</span></li>
+          <li class="fit-item"><span class="fit-icon-yes">✓</span><span>Bestehendes Google Ads Konto</span></li>
+          <li class="fit-item"><span class="fit-icon-yes">✓</span><span>B2B- oder Dienstleistungsbereich</span></li>
+          <li class="fit-item"><span class="fit-icon-yes">✓</span><span>Wer eine Ansprechpartnerin will, nicht ein Ticket-System</span></li>
+        </ul>
+      </div>
+
+      <!-- Doesn't fit -->
+      <div class="fit-col nope">
+        <div class="fit-col-title">Passt (noch) nicht</div>
+        <ul class="fit-list">
+          <li class="fit-item"><span class="fit-icon-no">✕</span><span>Werbebudget unter 1.000 €/Monat</span></li>
+          <li class="fit-item"><span class="fit-icon-no">✕</span><span>Einmalige Kampagnen ohne Strategie</span></li>
+          <li class="fit-item"><span class="fit-icon-no">✕</span><span>Rein automatisierte Performance-Max-only Accounts ohne Ziele</span></li>
+          <li class="fit-item"><span class="fit-icon-no">✕</span><span>Kein Google Ads Konto vorhanden → <a href="averio-premium-angebot-potenzialanalyse.html">Potenzialanalyse</a></span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. KONTAKTFORMULAR ══════════════════════════════════════════════ -->
+<section class="sec-alt" id="kontakt">
+  <div style="max-width:580px;margin:0 auto;padding:0 24px">
+    <div class="sec-ey" style="text-align:center">Kontakt</div>
+    <h2 class="sec-title" style="text-align:center">Lieber per <em>E-Mail</em>?</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:2.5rem;font-size:15px;line-height:1.6">Schreib uns direkt — wir melden uns innerhalb von 24 Stunden bei dir.</p>
+
+    <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Name *</label>
+          <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+        </div>
+        <div>
+          <label for="k-email" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">E-Mail *</label>
+          <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+        </div>
+      </div>
+      <div>
+        <label for="k-telefon" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Telefon <span style="font-weight:400;opacity:.5">(optional)</span></label>
+        <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+      </div>
+      <div>
+        <label for="k-nachricht" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Nachricht *</label>
+        <textarea id="k-nachricht" rows="4" placeholder="Worum geht es? Erzähl uns kurz von deiner Situation …" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit;resize:vertical"></textarea>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
+        <input type="checkbox" id="k-dsgvo" required style="margin-top:2px">
+        <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html" style="color:#FF4D00">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+      </div>
+      <button type="submit" id="k-submit" style="padding:14px 32px;border:none;border-radius:50px;background:#FF4D00;color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(255,77,0,.35)">Nachricht senden</button>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin:0">Antwort innerhalb von 24 Stunden · Kein Spam</p>
+    </form>
+
+    <div id="kontakt-success" style="display:none;text-align:center;padding:40px 0">
+      <div style="font-size:40px;margin-bottom:12px">✓</div>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 8px">Nachricht gesendet!</h3>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6">Danke für deine Nachricht — wir melden uns innerhalb von 24 Stunden bei dir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. FAQ ══════════════════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-ey">FAQ</div>
+    <h2 class="sec-title">Häufige Fragen</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item" id="faq-1">
+        <div class="faq-q" onclick="tog('faq-1')">
+          <span>Was kostet die laufende Betreuung?</span>
+          <div class="faq-arrow">▾</div>
+        </div>
+        <div class="faq-a">
+          Die genauen Konditionen besprechen wir im kostenlosen Erstgespräch — sie hängen von deinem Budget, der Kontostruktur und dem Umfang ab. Was wir sagen können: Wir arbeiten nicht mit Prozentvergütung am Werbebudget. Du bekommst transparente Festpreise.
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-2">
+        <div class="faq-q" onclick="tog('faq-2')">
+          <span>Kann ich jederzeit kündigen?</span>
+          <div class="faq-arrow">▾</div>
+        </div>
+        <div class="faq-a">
+          Die Vertragslaufzeit beträgt jeweils 3 Monate und kann 1 Monat vor Ende des neuen Quartals gekündigt werden.</div>
+      </div>
+
+      <div class="faq-item" id="faq-3">
+        <div class="faq-q" onclick="tog('faq-3')">
+          <span>Ich habe bereits eine Agentur — können wir trotzdem zusammenarbeiten?</span>
+          <div class="faq-arrow">▾</div>
+        </div>
+        <div class="faq-a">
+          Das ist möglich, hängt aber von der Konstellation ab. In manchen Fällen macht ein sauberer Wechsel mehr Sinn als eine parallele Struktur. Das besprechen wir ehrlich im Erstgespräch.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. CTA STRIP ════════════════════════════════════════════════════ -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div class="cta-strip-label">Noch unsicher?</div>
+    <h2 class="cta-strip-title">Buch ein kostenloses 15-Minuten-Gespräch</h2>
+    <p class="cta-strip-sub">Kein Druck, keine Verpflichtung.</p>
+    <a href="averio-premium-kontakt.html" class="cta-strip-btn">Kurzes Gespräch buchen →</a>
+  </div>
+</div>
+
+<!-- ══ 8. FOOTER ═══════════════════════════════════════════════════════ -->
+<footer class="zus-footer">
+  © 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+  <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+  
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+</footer>
+
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+<script>
+/* ══ SMOOTH SCROLL ═══════════════════════════════════════════════ */
+function smoothScroll(target) {
+  const el = document.querySelector(target);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/* ══ RADIO SELECT ════════════════════════════════════════════════ */
+function selectRadio(groupId, clicked) {
+  const group = document.getElementById(groupId);
+  if (!group) return;
+  group.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+  clicked.classList.add('selected');
+}
+
+/* ══ KONTAKTFORMULAR ════════════════════════════════════════════ */
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+async function submitKontakt(e) {
+  e.preventDefault();
+  var btn = document.getElementById('k-submit');
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:   'Kontakt – Zusammenarbeit',
+        Name:       document.getElementById('k-name').value.trim(),
+        Email:      document.getElementById('k-email').value.trim(),
+        Telefon:    document.getElementById('k-telefon').value.trim() || '–',
+        Nachricht:  document.getElementById('k-nachricht').value.trim()
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
+  document.getElementById('kontakt-form').style.display = 'none';
+  document.getElementById('kontakt-success').style.display = 'block';
+}
+
+/* ══ FAQ ACCORDION ══════════════════════════════════════════════ */
+function tog(id) {
+  const item = document.getElementById(id);
+  if (!item) return;
+  const isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  // Toggle current
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ══ GSAP ANIMATIONS ════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero elements
+  gsap.from('.zus-eyebrow', { opacity: 0, y: 20, duration: .7, ease: 'power2.out', delay: .1 });
+  gsap.from('.zus-h1',      { opacity: 0, y: 30, duration: .8, ease: 'power3.out', delay: .2 });
+  gsap.from('.zus-sub',     { opacity: 0, y: 20, duration: .7, ease: 'power2.out', delay: .35 });
+  gsap.from('.hero-pills',  { opacity: 0, y: 16, duration: .6, ease: 'power2.out', delay: .5 });
+  gsap.from('.zus-entry-box', { opacity: 0, y: 24, duration: .8, ease: 'power2.out', delay: .4 });
+
+  // Feature cards stagger
+  gsap.from('.feat-card', {
+    scrollTrigger: { trigger: '.feat-grid', start: 'top 80%' },
+    opacity: 0, y: 30, duration: .6, stagger: .12, ease: 'power2.out'
+  });
+
+  // Process items stagger
+  gsap.from('.proc-item', {
+    scrollTrigger: { trigger: '.proc-list', start: 'top 80%' },
+    opacity: 0, x: -20, duration: .55, stagger: .1, ease: 'power2.out'
+  });
+
+  // Fit columns
+  gsap.from('.fit-col', {
+    scrollTrigger: { trigger: '.fit-grid', start: 'top 80%' },
+    opacity: 0, y: 24, duration: .6, stagger: .15, ease: 'power2.out'
+  });
+
+  // Section titles
+  document.querySelectorAll('.sec-title, .cta-strip-title').forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 85%' },
+      opacity: 0, y: 20, duration: .6, ease: 'power2.out'
+    });
+  });
+
+  // Sidebar cards
+  gsap.from('.sidebar-card, .sidebar-cta-card', {
+    scrollTrigger: { trigger: '.anfrage-sidebar', start: 'top 80%' },
+    opacity: 0, y: 20, duration: .5, stagger: .1, ease: 'power2.out'
+  });
+
+  // FAQ items
+  gsap.from('.faq-item', {
+    scrollTrigger: { trigger: '.faq-list', start: 'top 82%' },
+    opacity: 0, y: 16, duration: .45, stagger: .08, ease: 'power2.out'
+  });
+});
+</script>
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+

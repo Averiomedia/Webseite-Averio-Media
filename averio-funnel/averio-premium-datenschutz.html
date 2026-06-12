@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – Averio Media</title>
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Fonts -->
+
+<!-- Shared Styles -->
+<link rel="stylesheet" href="averio-media-weiss.css?v=8">
+
+<style>
+body { background: var(--bg); }
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ── HERO ── */
+.ds-hero {
+  padding: 160px 24px 60px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.ds-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: #FF4D00; font-weight: 600;
+  border: 1px solid rgba(255,77,0,.22); border-radius: 100px;
+  padding: 5px 14px 5px 8px; background: rgba(255,77,0,.06);
+  margin-bottom: 1.5rem;
+}
+
+.ds-h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800; letter-spacing: -.03em;
+  color: #fff; line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.ds-updated {
+  font-size: 13px; color: rgba(255,255,255,.3);
+  margin-bottom: 3rem;
+}
+
+/* ── CONTENT ── */
+.ds-content-wrap { background: var(--bg2); }
+.ds-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+}
+
+.ds-section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ds-section:last-child { border-bottom: none; }
+
+.ds-h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: #fff; margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+.ds-h2 .num {
+  color: #FF4D00; margin-right: 8px; font-size: 1rem;
+}
+
+.ds-h3 {
+  font-size: 1rem; font-weight: 600;
+  color: rgba(255,255,255,.85); margin: 1.5rem 0 .6rem;
+}
+
+.ds-p {
+  font-size: 15px; color: rgba(255,255,255,.55);
+  line-height: 1.8; margin-bottom: 1rem;
+}
+
+.ds-p a {
+  color: #FF4D00; text-decoration: none;
+}
+.ds-p a:hover { text-decoration: underline; }
+
+.ds-ul {
+  list-style: none; padding: 0; margin: 0 0 1rem;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.ds-ul li {
+  font-size: 15px; color: rgba(255,255,255,.55);
+  line-height: 1.7; padding-left: 18px; position: relative;
+}
+.ds-ul li::before {
+  content: '–'; position: absolute; left: 0; color: #FF4D00;
+}
+
+.ds-box {
+  background: rgba(255,77,0,.05);
+  border: 1px solid rgba(255,77,0,.18);
+  border-radius: 14px; padding: 20px 24px;
+  margin: 1.5rem 0;
+}
+.ds-box .ds-p { margin-bottom: 0; }
+
+/* ── FOOTER ── */
+.ds-footer {
+  text-align: center; padding: 40px 24px;
+  font-size: 12px; color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.ds-footer a { color: rgba(255,255,255,.35); text-decoration: none; margin: 0 8px; }
+.ds-footer a:hover { color: #FF4D00; }
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .ds-h1                { color: #0D1117 !important; }
+html[data-theme="light"] .ds-updated           { color: #868E96 !important; }
+html[data-theme="light"] .ds-h2                { color: #0D1117 !important; }
+html[data-theme="light"] .ds-h3                { color: #212529 !important; }
+html[data-theme="light"] .ds-p                 { color: #495057 !important; }
+html[data-theme="light"] .ds-ul li             { color: #495057 !important; }
+html[data-theme="light"] .ds-box               { background: rgba(255,77,0,.03) !important; border-color: rgba(255,77,0,.1) !important; }
+html[data-theme="light"] .ds-box .ds-p         { color: #495057 !important; }
+html[data-theme="light"] .ds-content-wrap      { background: #F8F9FA !important; }
+html[data-theme="light"] .ds-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .ds-footer a          { color: #495057 !important; }
+</style>
+</head>
+<body>
+
+<!-- ════ CURSOR ══════════════════════════════════════════ -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Averio Media</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
+</nav>
+
+<!-- ════ HERO ═══════════════════════════════════════════ -->
+<div class="ds-hero">
+  <div class="ds-eyebrow">
+    <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#FF4D00"/></svg>
+    Rechtliches
+  </div>
+  <h1 class="ds-h1">Datenschutzerklärung</h1>
+  <p class="ds-updated">Stand: Mai 2025</p>
+</div>
+
+<!-- ════ INHALT ══════════════════════════════════════════ -->
+<div class="ds-content-wrap">
+<div class="ds-content">
+
+  <!-- 1. Verantwortliche -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">1.</span> Verantwortliche</h2>
+    <p class="ds-p">Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+    <div class="ds-box">
+      <p class="ds-p">
+        <strong style="color:#fff">Averio Media</strong><br>
+        Marie Böttiger<br>
+        Weiboldshausenerstraße 3<br>
+        91781 Weißenburg<br><br>
+        E-Mail: <a href="mailto:kontakt@averiomedia.de">kontakt@averiomedia.de</a>
+      </p>
+    </div>
+    <p class="ds-p">Bei Fragen zum Datenschutz kannst du dich jederzeit direkt an uns wenden.</p>
+  </div>
+
+  <!-- 2. Allgemeines -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">2.</span> Allgemeines zur Datenverarbeitung</h2>
+    <p class="ds-p">Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Website nur im technisch notwendigen Umfang erhoben. In keinem Fall werden die erhobenen Daten verkauft oder aus anderen Gründen an Dritte weitergegeben, außer dies ist zur Leistungserbringung erforderlich oder du hast ausdrücklich eingewilligt.</p>
+    <p class="ds-p">Die Verarbeitung personenbezogener Daten erfolgt im Einklang mit der Datenschutz-Grundverordnung (DSGVO), dem Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG), dem Digitale-Dienste-Gesetz (DDG) sowie sonstigen anwendbaren Datenschutzvorschriften.</p>
+  </div>
+
+  <!-- 3. Hosting -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">3.</span> Hosting &amp; Server-Logfiles</h2>
+    <p class="ds-p">Diese Website wird über <strong style="color:rgba(255,255,255,.8)">GitHub Pages</strong> gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (ein Unternehmen von Microsoft). GitHub Inc. ist gemäß dem EU-US Data Privacy Framework (DPF, seit Juli 2023) zertifiziert. Der Datenschutzvertrag (Data Processing Agreement) ist Bestandteil der GitHub-Nutzungsbedingungen und erfüllt die Anforderungen eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+    <p class="ds-p">Domain-Registrierung und DNS-Verwaltung erfolgen über <strong style="color:rgba(255,255,255,.8)">IONOS SE</strong>, Elgendorfer Str. 57, 56410 Montabaur. Mit IONOS besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <p class="ds-p">Beim Besuch der Website werden automatisch folgende Daten in sogenannten Server-Logfiles gespeichert:</p>
+    <ul class="ds-ul">
+      <li>IP-Adresse des anfragenden Rechners</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Name und URL der abgerufenen Datei</li>
+      <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+      <li>Verwendeter Browser und Betriebssystem</li>
+    </ul>
+    <p class="ds-p">Diese Daten werden zur Sicherstellung eines störungsfreien Betriebs der Website sowie zur Verbesserung unseres Angebots ausgewertet. Sie erlauben uns keine Rückschlüsse auf deine Person. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+  </div>
+
+  <!-- 4. Webfonts & Bibliotheken (lokal) -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">4.</span> Webfonts &amp; JavaScript-Bibliotheken</h2>
+    <p class="ds-p">Diese Website verwendet die Schriftarten <strong style="color:rgba(255,255,255,.8)">Syne</strong> und <strong style="color:rgba(255,255,255,.8)">DM Sans</strong> sowie die Animationsbibliothek <strong style="color:rgba(255,255,255,.8)">GSAP</strong> und die Scroll-Bibliothek <strong style="color:rgba(255,255,255,.8)">Lenis</strong>. Alle Dateien sind lokal auf unserem Server gespeichert und werden direkt von dort ausgeliefert. Es findet keine Verbindung zu externen Servern (z.&nbsp;B. Google, Cloudflare oder jsDelivr) statt. Es werden dabei keine personenbezogenen Daten an Dritte übermittelt.</p>
+  </div>
+
+  <!-- 6. Cookies -->
+  <div class="ds-section">
+  <!-- 5. Cookies -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">5.</span> Cookies</h2>
+    <p class="ds-p">Diese Website verwendet Cookies. Cookies sind kleine Textdateien, die auf deinem Endgerät gespeichert werden. Sie richten keinen Schaden an und enthalten keine Viren.</p>
+    <h3 class="ds-h3">Technisch notwendige Cookies</h3>
+    <p class="ds-p">Einige Cookies sind technisch notwendig, um die Website korrekt darzustellen. Diese werden ohne deine Einwilligung gesetzt (§ 25 Abs. 2 TDDDG). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <h3 class="ds-h3">Analyse- und Marketing-Cookies</h3>
+    <p class="ds-p">Soweit wir Analyse- oder Marketing-Cookies einsetzen, erfolgt dies nur auf Basis deiner ausdrücklichen Einwilligung gemäß § 25 Abs. 1 TDDDG i. V. m. Art. 6 Abs. 1 lit. a DSGVO. Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+    <p class="ds-p">Du kannst die Verwendung von Cookies in deinen Browsereinstellungen jederzeit einschränken oder deaktivieren.</p>
+  </div>
+
+  <!-- 6. Kontaktformular -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">6.</span> Kontaktformular &amp; Anfragen</h2>
+    <p class="ds-p">Wenn du uns über das Kontaktformular oder per E-Mail kontaktierst, werden die von dir angegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage gespeichert. Diese Daten werden nicht ohne deine Einwilligung weitergegeben.</p>
+    <p class="ds-p">Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+    <p class="ds-p">Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind – in der Regel nach abgeschlossener Kommunikation, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+  </div>
+
+  <!-- 7. Calendly -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">7.</span> Terminbuchung via Calendly</h2>
+    <p class="ds-p">Auf unserer Kontaktseite ist ein Terminbuchungs-Widget des Anbieters Calendly, LLC, 271 17th St NW, Atlanta, GA 30363, USA, eingebunden. Das Widget wird beim Aufruf der Kontaktseite automatisch geladen. Dabei werden Daten – insbesondere deine IP-Adresse sowie technische Browserinformationen – an Server von Calendly in den USA übertragen.</p>
+    <p class="ds-p">Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer einfachen und effizienten Terminvereinbarung für potenzielle Kunden (Art. 6 Abs. 1 lit. f DSGVO) sowie zur Anbahnung eines Vertrages auf deine Anfrage hin (Art. 6 Abs. 1 lit. b DSGVO).</p>
+    <p class="ds-p">Calendly LLC ist gemäß dem EU-US Data Privacy Framework (DPF) zertifiziert, sodass ein angemessenes Datenschutzniveau gewährleistet ist. Ergänzend erfolgt die Übermittlung auf Basis von Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO.</p>
+    <p class="ds-p">Weitere Informationen zum Datenschutz bei Calendly findest du unter: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></p>
+  </div>
+
+  <!-- 8. Brevo -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">8.</span> E-Mail-Benachrichtigungen via Brevo</h2>
+    <p class="ds-p">Für die Übermittlung von Formular-Benachrichtigungen nutzen wir den Dienst Brevo (ehemals Sendinblue) der Brevo SAS, 7 rue de Madrid, 75008 Paris, Frankreich. Brevo ist ein in der EU ansässiger Anbieter und verarbeitet Daten auf europäischen Servern.</p>
+    <p class="ds-p">Die im Formular eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) werden beim Absenden per API an Brevo übermittelt, um eine interne Benachrichtigung auszulösen. Eine Speicherung der Daten in Brevo-Kontaktlisten oder eine Nutzung für eigene Marketingzwecke durch Brevo erfolgt nicht.</p>
+    <p class="ds-p">Mit Brevo besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der zuverlässigen Bearbeitung von Kontaktanfragen). Weitere Informationen: <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/de/legal/privacypolicy</a></p>
+    <p class="ds-p">Darüber hinaus nutzen wir Brevo für den automatisierten Versand von angeforderten Inhalten (z.&nbsp;B. Preislisten, Guides) an Nutzer, die sich über unsere Formulare registriert haben. Die dabei verarbeiteten Daten (Name, E-Mail-Adresse) werden ausschließlich für diesen Zweck verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Formular-Checkbox). Beim Absenden des Formulars wird eine direkte Verbindung vom Browser des Nutzers zu den Brevo-API-Servern hergestellt; dabei wird die IP-Adresse des Nutzers an Brevo übermittelt.</p>
+  </div>
+
+  <!-- 9. Kostenlose digitale Inhalte -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">9.</span> Kostenlose digitale Inhalte (Guides &amp; Preisliste)</h2>
+    <p class="ds-p">Auf unserer Website können kostenlose digitale Inhalte (z.&nbsp;B. Guides, Preislisten) angefordert werden. Da diese Inhalte im Austausch gegen personenbezogene Daten (Name, E-Mail-Adresse) bereitgestellt werden, handelt es sich rechtlich um einen Vertrag über digitale Inhalte im Sinne von § 327 ff. BGB.</p>
+    <p class="ds-p">Die angeforderten Inhalte sind ausschließlich zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Eine Weitergabe, Vervielfältigung oder Veröffentlichung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung von Averio Media nicht gestattet.</p>
+    <p class="ds-p">Rechtsgrundlage für die Datenverarbeitung im Rahmen des Downloads ist Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags über die Bereitstellung digitaler Inhalte). Die Daten werden ausschließlich für den Versand des angeforderten Inhalts verwendet und nicht für andere Zwecke weiterverarbeitet, es sei denn, du hast gesondert in den Newsletter-Versand eingewilligt (Art. 6 Abs. 1 lit. a DSGVO).</p>
+  </div>
+
+  <!-- 10. Google Ads -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">10.</span> Google Ads &amp; Conversion-Tracking</h2>
+    <p class="ds-p">Diese Website verwendet Google Ads, einen Online-Werbedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Im Rahmen von Google Ads setzen wir das sogenannte Conversion-Tracking ein.</p>
+    <p class="ds-p">Wenn du auf eine von Google geschaltete Anzeige klickst, wird ein Cookie für das Conversion-Tracking auf deinem Gerät gesetzt. Diese Cookies verlieren nach 30 Tagen ihre Gültigkeit und enthalten keine personenbezogenen Daten. Anhand dieser Cookies können wir und Google erkennen, dass jemand auf eine Anzeige geklickt hat und zu unserer Website weitergeleitet wurde.</p>
+    <p class="ds-p">Die mithilfe des Conversion-Cookies eingeholten Informationen dienen dazu, Conversion-Statistiken zu erstellen. Wir erfahren dabei die Gesamtanzahl der Nutzer, die auf eine unserer Anzeigen geklickt haben – jedoch keine personenbezogenen Daten.</p>
+    <p class="ds-p">Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Du kannst das Setzen von Cookies durch eine entsprechende Einstellung in deinem Browser verhindern oder personalisierte Werbung unter <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> deaktivieren.</p>
+
+    <h3 class="ds-h3">Google Remarketing</h3>
+    <p class="ds-p">Wir nutzen ggf. die Remarketing-Funktion von Google. Mit dieser Funktion können Nutzern unserer Website bei anderen Websites innerhalb des Google Werbenetzwerks interessenbezogene Werbeanzeigen präsentiert werden. Dazu wird beim Besuch unserer Website ein Cookie in deinem Browser gespeichert.</p>
+    <p class="ds-p">Google LLC ist gemäß EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenschutzerklärung von Google findest du unter: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+  </div>
+
+  <!-- 11. Externe Links -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">11.</span> Links zu externen Websites</h2>
+    <p class="ds-p">Unsere Website kann Links zu externen Websites Dritter enthalten. Wir haben keinen Einfluss auf deren Inhalte und Datenschutzpraktiken. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
+  </div>
+
+  <!-- 12. Deine Rechte -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">12.</span> Deine Rechte</h2>
+    <p class="ds-p">Dir stehen bezüglich deiner bei uns gespeicherten personenbezogenen Daten folgende Rechte zu:</p>
+    <ul class="ds-ul">
+      <li><strong style="color:rgba(255,255,255,.8)">Auskunft</strong> (Art. 15 DSGVO) — Du hast das Recht, Auskunft über die von uns verarbeiteten Daten zu erhalten.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Berichtigung</strong> (Art. 16 DSGVO) — Du hast das Recht auf Berichtigung unrichtiger Daten.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Löschung</strong> (Art. 17 DSGVO) — Du hast das Recht auf Löschung deiner Daten, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Einschränkung</strong> (Art. 18 DSGVO) — Du hast das Recht auf Einschränkung der Verarbeitung.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Datenübertragbarkeit</strong> (Art. 20 DSGVO) — Du hast das Recht, deine Daten in einem maschinenlesbaren Format zu erhalten.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Widerspruch</strong> (Art. 21 DSGVO) — Du hast das Recht, der Verarbeitung deiner Daten zu widersprechen.</li>
+      <li><strong style="color:rgba(255,255,255,.8)">Widerruf</strong> (Art. 7 Abs. 3 DSGVO) — Du kannst eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</li>
+    </ul>
+    <p class="ds-p">Zur Geltendmachung deiner Rechte wende dich bitte an: <a href="mailto:kontakt@averiomedia.de">kontakt@averiomedia.de</a></p>
+    <p class="ds-p">Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten zu beschweren. Die für uns zuständige Aufsichtsbehörde ist:</p>
+    <div class="ds-box">
+      <p class="ds-p">
+        <strong style="color:#fff">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong><br>
+        Promenade 18<br>
+        91522 Ansbach<br>
+        Telefon: +49 (0) 981 53-1300<br>
+        E-Mail: poststelle@lda.bayern.de<br>
+        Website: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 13. Aktualität -->
+  <div class="ds-section">
+    <h2 class="ds-h2"><span class="num">13.</span> Aktualität dieser Datenschutzerklärung</h2>
+    <p class="ds-p">Diese Datenschutzerklärung ist aktuell gültig (Stand: Mai 2025). Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Version ist stets auf dieser Seite abrufbar.</p>
+  </div>
+
+</div>
+</div><!-- /ds-content-wrap -->
+
+<!-- ════ FOOTER ══════════════════════════════════════════ -->
+<footer class="ds-footer">
+  <span>© 2025 Averio Media · Marie Böttiger</span>
+  <a href="averio-premium-impressum.html">Impressum</a>
+  <a href="averio-premium-datenschutz.html">Datenschutz</a>
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+</footer>
+
+<script>
+// Cursor
+const cursor   = document.getElementById('cursor');
+const follower = document.getElementById('cursor-follower');
+let fx = 0, fy = 0;
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+  fx += (e.clientX - fx) * .12;
+  fy += (e.clientY - fy) * .12;
+  follower.style.left = fx + 'px';
+  follower.style.top  = fy + 'px';
+});
+document.addEventListener('mousedown', () => cursor.classList.add('click'));
+document.addEventListener('mouseup',   () => cursor.classList.remove('click'));
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); follower.classList.add('hover'); });
+  el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
+});
+(function loop() {
+  fx += (parseFloat(cursor.style.left||0) - fx) * .1;
+  fy += (parseFloat(cursor.style.top||0)  - fy) * .1;
+  follower.style.left = fx + 'px';
+  follower.style.top  = fy + 'px';
+  requestAnimationFrame(loop);
+})();
+</script>
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+

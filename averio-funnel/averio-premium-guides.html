@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FF4D00">
+<title>Kostenlose Google Ads Guides & Checklisten zum Download | Averio Media</title>
+<meta name="description" content="5 kostenlose Google Ads Guides zum Download: Budgetfehler vermeiden, Kampagne optimieren, Negative Keywords & GA4 Tracking-Setup. Praxisnah, sofort umsetzbar.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/guides">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averiomedia.de/guides">
+<meta property="og:title" content="Kostenlose Google Ads Guides & Checklisten zum Download | Averio Media">
+<meta property="og:description" content="Google Ads Guides zum kostenlosen Download: 10 Budgetfehler, 6-Punkte-Checkliste, Negative Keywords für 12 Branchen, GA4 Tracking Setup & Step-by-Step Optimierung.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kostenlose Google Ads Guides & Checklisten | Averio Media">
+<meta name="twitter:description" content="Google Ads Guides zum kostenlosen Download: 10 Budgetfehler, 6-Punkte-Checkliste, Negative Keywords für 12 Branchen, GA4 Tracking Setup & Step-by-Step Optimierung.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 2, "name": "Kostenlose Google Ads Guides", "item": "https://averiomedia.de/guides" }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Kostenlose Google Ads Guides & Checklisten",
+      "description": "5 kostenlose Google Ads Guides zum Download von Averio Media — praxisnah und sofort umsetzbar.",
+      "url": "https://averiomedia.de/guides",
+      "hasPart": [
+        { "@type": "DigitalDocument", "name": "10 Google Ads Budgetfehler, die dich Geld kosten", "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html" },
+        { "@type": "DigitalDocument", "name": "Die 6-Punkte-Checkliste für profitable Google Ads", "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html" },
+        { "@type": "DigitalDocument", "name": "Google Ads Step-by-Step Optimierung", "url": "https://averiomedia.de/guides/averio-guide-3-optimierung.html" },
+        { "@type": "DigitalDocument", "name": "Negative Keywords für 12 Branchen", "url": "https://averiomedia.de/guides/averio-guide-4-negative-keywords.html" },
+        { "@type": "DigitalDocument", "name": "GA4 & Conversion-Tracking Setup", "url": "https://averiomedia.de/guides/averio-guide-5-tracking.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
+
+<!-- Shared Styles -->
+<link rel="stylesheet" href="averio-media-weiss.css?v=8">
+
+<style>
+/* ── PAGE SHELL ── */
+body { background: var(--bg); }
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ══ GUIDES HERO ══ */
+.guides-hero {
+  padding: 130px 2.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.guides-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 700px 500px at 70% 50%, rgba(255,77,0,.07), transparent),
+    radial-gradient(ellipse 400px 400px at 5% 80%, rgba(168,216,240,.04), transparent);
+}
+.guides-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .018;
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.guides-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.guides-eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: #D6EEFF;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: .8;
+}
+.guides-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #D6EEFF;
+  display: block;
+  opacity: .6;
+}
+.guides-h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 800;
+  line-height: .9;
+  color: #fff;
+  letter-spacing: -2.5px;
+  margin-bottom: 1.5rem;
+}
+.guides-h1 em {
+  color: #FF4D00;
+  font-style: normal;
+  text-shadow: 0 0 40px rgba(255,77,0,.4);
+}
+.guides-sub {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.85;
+  max-width: 580px;
+}
+.guides-count-box {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.gcb-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #FF4D00;
+  line-height: 1;
+}
+.gcb-label {
+  font-size: 11px;
+  color: #777;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-top: .4rem;
+}
+
+/* ══ FILTER BAR ══ */
+.guides-filter {
+  padding: 1.25rem 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: rgba(255,255,255,.09);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.gf-label {
+  font-size: 10px;
+  color: #777;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-right: .5rem;
+}
+.gf-btn {
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  border: 1px solid rgba(255,255,255,.1);
+  background: transparent;
+  color: #888;
+  transition: all .2s;
+}
+.gf-btn:hover { border-color: #777; color: #ccc; }
+.gf-btn.active {
+  background: #FF4D00;
+  border-color: #FF4D00;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255,77,0,.3);
+}
+
+/* ══ GUIDE CARDS ══ */
+.guides-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(255,255,255,.09);
+}
+.guides-list { background: var(--bg2); }
+
+.guide-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg2);
+  transition: background .25s;
+}
+.guide-card:hover { background: var(--bg3); }
+
+/* Locked state */
+.guide-card.locked .guide-img-col::after {
+  content: 'Nur für Kunden';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 4;
+  background: rgba(9,9,9,.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,77,0,.25);
+  border-radius: 100px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #FF4D00;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: .04em;
+}
+
+/* Image column */
+.guide-img-col {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+.guide-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.05) brightness(.9);
+  transition: transform .5s ease;
+}
+.guide-card:hover .guide-img-col img { transform: scale(1.04); }
+.guide-img-col::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, transparent 60%, #080808 100%);
+}
+.guide-cat-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  background: rgba(9,9,9,.8);
+  border: 1px solid rgba(255,77,0,.25);
+  color: #FF4D00;
+}
+.guide-cat-badge.free { border-color: rgba(0,204,102,.25); color: #00cc66; }
+.guide-cat-badge.starter { border-color: rgba(168,216,240,.25); color: #A8D8F0; }
+.guide-cat-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 5px currentColor;
+}
+
+/* Placeholder icon */
+.guide-img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  position: relative;
+}
+.guide-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, #080808 100%);
+  z-index: 1;
+}
+.guide-placeholder-icon {
+  font-size: 64px;
+  opacity: .06;
+  position: relative;
+  z-index: 0;
+}
+
+/* Text column */
+.guide-text-col {
+  padding: 3rem 3rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.guide-num {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: 'Syne', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  color: rgba(255,255,255,.08);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.guide-topic {
+  font-size: 10px;
+  color: #A8D8F0;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .5;
+  margin-bottom: .75rem;
+}
+.guide-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.3px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.guide-desc {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+.guide-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.guide-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #777;
+}
+.guide-meta-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #FF4D00;
+  opacity: .5;
+}
+.guide-cta-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  border: none;
+  transition: all .25s;
+  text-decoration: none;
+}
+.guide-btn.primary {
+  background: #FF4D00;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,77,0,.3);
+}
+.guide-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,77,0,.5);
+}
+.guide-btn.secondary {
+  background: transparent;
+  color: #888;
+  border: 1px solid rgba(255,255,255,.12);
+}
+.guide-btn.secondary:hover { color: #fff; border-color: #888; }
+.guide-btn.locked-btn {
+  background: #111;
+  color: #555;
+  border: 1px solid rgba(255,255,255,.06);
+  cursor: not-allowed;
+}
+.guide-pages {
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.guide-new-badge {
+  display: inline-block;
+  background: rgba(255,77,0,.12);
+  border: 1px solid rgba(255,77,0,.25);
+  color: #FF4D00;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 100px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* Coming soon */
+.guide-card.coming-soon { opacity: .4; pointer-events: none; }
+
+/* Upload slot */
+.guide-card.upload-slot {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,77,0,.15);
+  box-shadow: inset 0 0 60px rgba(255,77,0,.03), 0 0 0 1px rgba(255,77,0,.06);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.guide-card.upload-slot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 120%, rgba(255,77,0,.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.guide-card.upload-slot:hover {
+  border-color: rgba(255,77,0,.3);
+  box-shadow: inset 0 0 80px rgba(255,77,0,.05), 0 0 0 1px rgba(255,77,0,.12);
+}
+.upload-slot-inner { text-align: center; padding: 3rem; position: relative; z-index: 1; }
+.upload-slot-icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .75rem;
+}
+.upload-slot-icon svg { display: block; }
+.upload-slot-pulse {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #FF4D00; margin-bottom: .75rem;
+}
+.upload-slot-pulse-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #FF4D00;
+  box-shadow: 0 0 6px #FF4D00;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .4; transform: scale(.7); }
+}
+.upload-slot-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: .5rem;
+}
+.upload-slot-text { font-size: 13px; color: #666; line-height: 1.75; }
+
+/* ══ EMAIL GATE MODAL ══ */
+.guide-gate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+.guide-gate-overlay.active { display: flex; }
+.guide-gate-card {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 440px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,.6);
+}
+.guide-gate-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF4D00, transparent);
+}
+.guide-gate-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.08);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #888;
+  transition: all .2s;
+  line-height: 1;
+}
+.guide-gate-close:hover { color: #fff; border-color: #888; }
+.guide-gate-icon { font-size: 36px; margin-bottom: 1.25rem; }
+.guide-gate-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.3px;
+  margin-bottom: .5rem;
+}
+.guide-gate-sub { font-size: 13px; color: #888; line-height: 1.7; margin-bottom: 2rem; }
+
+.gate-form-group { margin-bottom: 1rem; }
+.gate-label { display: block; font-size: 12px; color: #888; margin-bottom: 6px; letter-spacing: .03em; }
+.gate-input {
+  width: 100%;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+.gate-input:focus { border-color: rgba(255,77,0,.4); }
+.gate-input::placeholder { color: rgba(255,255,255,.2); }
+.gate-check-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.gate-check-wrap input[type="checkbox"] { margin-top: 2px; accent-color: #FF4D00; flex-shrink: 0; }
+.gate-check-label { font-size: 12px; color: #666; line-height: 1.5; }
+.gate-check-label a { color: #FF4D00; text-decoration: none; }
+
+.gate-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #FF4D00;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 4px 20px rgba(255,77,0,.35);
+  transition: all .25s;
+  margin-top: .25rem;
+}
+.gate-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,77,0,.5); }
+.gate-fine-print { font-size: 11px; color: rgba(255,255,255,.15); text-align: center; margin-top: .75rem; }
+
+.guide-gate-success {
+  display: none;
+  text-align: center;
+  padding: 1rem 0;
+}
+.guide-gate-success.active { display: block; }
+.guide-gate-success-icon { font-size: 48px; margin-bottom: 1rem; }
+.guide-gate-success-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+.guide-gate-success-text { font-size: 13px; color: #888; line-height: 1.7; }
+
+/* ══ TICKER ══ */
+.guides-ticker {
+  background: #FF4D00;
+  padding: .55rem 0;
+  overflow: hidden;
+}
+.guides-ticker-track {
+  display: flex;
+  animation: gtick 30s linear infinite;
+  width: max-content;
+}
+.guides-tick-item {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.guides-tick-item::after { content: '▸'; font-size: 9px; opacity: .5; }
+@keyframes gtick { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+
+/* ══ CTA SECTION ══ */
+.guides-cta-sec {
+  padding: 5rem 2.5rem;
+  background: var(--bg3);
+  border-top: 1px solid rgba(255,255,255,.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+.guides-cta-sec::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.07), transparent 70%);
+  pointer-events: none;
+}
+.guides-cta-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 900px) {
+  .guides-hero-inner { grid-template-columns: 1fr; }
+  .guides-count-box { display: none; }
+  .guide-card { grid-template-columns: 1fr; }
+  .guide-img-col { min-height: 200px; }
+  .guide-img-placeholder { min-height: 180px; }
+  .guides-cta-sec { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 600px) {
+  .guides-hero { padding: 110px 1.25rem 3rem; }
+  .guides-filter { padding: 1rem 1.25rem; }
+  .guide-text-col { padding: 2rem 1.25rem; }
+}
+
+/* ══ FOOTER ══ */
+.guides-footer {
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.guides-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
+.guides-footer a:hover { color: #FF4D00; }
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .guides-h1             { color: #0D1117 !important; }
+html[data-theme="light"] .guides-sub            { color: #495057 !important; }
+html[data-theme="light"] .guides-count-box      { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .gcb-label             { color: #868E96 !important; }
+html[data-theme="light"] .guides-filter         { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .gf-label              { color: #868E96 !important; }
+html[data-theme="light"] .gf-btn                { color: #495057 !important; border-color: #DEE2E6 !important; background: #FFFFFF !important; }
+html[data-theme="light"] .gf-btn:hover          { color: #0D1117 !important; border-color: #ADB5BD !important; }
+html[data-theme="light"] .guide-card            { background: #FFFFFF !important; }
+html[data-theme="light"] .guide-text-col        { background: #FFFFFF !important; }
+html[data-theme="light"] .guide-title           { color: #0D1117 !important; }
+html[data-theme="light"] .guide-desc            { color: #495057 !important; }
+html[data-theme="light"] .guide-meta-item       { color: #868E96 !important; }
+html[data-theme="light"] .guide-btn.secondary   { color: #495057 !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .upload-slot-title     { color: #0D1117 !important; }
+html[data-theme="light"] .upload-slot-text      { color: #495057 !important; }
+html[data-theme="light"] .guide-gate-card       { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .guide-gate-title      { color: #0D1117 !important; }
+html[data-theme="light"] .guide-gate-sub        { color: #495057 !important; }
+html[data-theme="light"] .gate-label            { color: #495057 !important; }
+html[data-theme="light"] .gate-input            { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .gate-check-label      { color: #495057 !important; }
+html[data-theme="light"] .gate-fine-print       { color: #868E96 !important; }
+html[data-theme="light"] .guide-gate-success-title { color: #0D1117 !important; }
+html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Kostenlose Google Ads Guides & Checklisten",
+  "url": "https://averiomedia.de/guides",
+  "description": "Google Ads Guides zum kostenlosen Download von Averio Media.",
+  "hasPart": [
+    {
+      "@type": "DigitalDocument",
+      "name": "10 Budgetvernichtende Fehler, die dir kein Google Ads Experte verrät",
+      "description": "Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest.",
+      "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "6 Punkte Google Ads Checkliste für bessere Kampagnenperformance",
+      "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Step-by-Step Kampagnenoptimierung",
+      "url": "https://averiomedia.de/guides/averio-guide-3-optimierung.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Die Negative-Keyword-Bibel: 500+ ausschließende Keywords für 12 Branchen",
+      "url": "https://averiomedia.de/guides/averio-guide-4-negative-keywords.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "GA4 + Google Ads richtig verbinden – das vollständige Tracking-Setup",
+      "url": "https://averiomedia.de/guides/averio-guide-5-tracking.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ════ CUSTOM CURSOR ═══════════════════════════════════ -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Averio Media</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+    <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li class="nav-dropdown-wrap">
+      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger">Angebot</a>
+      <ul class="nav-dropdown">
+        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+      </ul>
+    </li>
+    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+    <li><a href="averio-premium-guides.html" class="active">Guides</a></li>
+    <li><a href="averio-premium-faq.html">FAQ</a></li>
+  </ul>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
+</nav>
+
+<!-- ════ HERO ════════════════════════════════════════════ -->
+<section class="guides-hero">
+  <div class="guides-hero-inner">
+    <div>
+      <div class="guides-eyebrow">Kostenlose Ressourcen</div>
+      <h1 class="guides-h1">Google Ads<br><em>Guides &amp;</em><br>Ressourcen.</h1>
+      <p class="guides-sub">Praxisnahe Guides, Checklisten und Vorlagen — von mir für dich. Kein Kurs-Bingo, keine leeren Versprechen. Nur das, was ich selbst täglich nutze.</p>
+    </div>
+    <div class="guides-count-box">
+      <div class="gcb-num" id="guide-count">5</div>
+      <div class="gcb-label">Guides verfügbar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FILTER BAR ════════════════════════════════════ -->
+<div class="guides-filter">
+  <span class="gf-label">Filter:</span>
+  <button class="gf-btn active" onclick="filterGuides('all',this)">Alle</button>
+  <button class="gf-btn" onclick="filterGuides('basics',this)">Grundlagen</button>
+  <button class="gf-btn" onclick="filterGuides('optimierung',this)">Optimierung</button>
+  <button class="gf-btn" onclick="filterGuides('tracking',this)">Tracking</button>
+  <button class="gf-btn" onclick="filterGuides('strategie',this)">Strategie</button>
+  <button class="gf-btn" onclick="filterGuides('free',this)">Kostenlos</button>
+</div>
+
+<!-- ════ TICKER ═════════════════════════════════════════ -->
+<div class="guides-ticker">
+  <div class="guides-ticker-track">
+    <div class="guides-tick-item">Kampagnenstruktur</div>
+    <div class="guides-tick-item">Conversion-Tracking</div>
+    <div class="guides-tick-item">Keyword-Recherche</div>
+    <div class="guides-tick-item">Negative Keywords</div>
+    <div class="guides-tick-item">Quality Score verbessern</div>
+    <div class="guides-tick-item">Budget-Strategie</div>
+    <div class="guides-tick-item">ROAS optimieren</div>
+    <div class="guides-tick-item">Kampagnenstruktur</div>
+    <div class="guides-tick-item">Conversion-Tracking</div>
+    <div class="guides-tick-item">Keyword-Recherche</div>
+    <div class="guides-tick-item">Negative Keywords</div>
+    <div class="guides-tick-item">Quality Score verbessern</div>
+    <div class="guides-tick-item">Budget-Strategie</div>
+    <div class="guides-tick-item">ROAS optimieren</div>
+  </div>
+</div>
+
+<!-- ════ GUIDES LIST ════════════════════════════════════ -->
+<div class="guides-list" id="guides-list">
+
+  <!-- GUIDE 1: Kampagnencheck-Checkliste (kostenlos) -->
+  <div class="guide-card" data-cat="basics free">
+    <div class="guide-img-col">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:320px;display:block;">
+        <rect width="380" height="320" fill="#0e0e0e"/>
+        <!-- Grid -->
+        <line x1="0" y1="80" x2="380" y2="80" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="0" y1="160" x2="380" y2="160" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="0" y1="240" x2="380" y2="240" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="95" y1="0" x2="95" y2="320" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="190" y1="0" x2="190" y2="320" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="285" y1="0" x2="285" y2="320" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <!-- Glow -->
+        <ellipse cx="130" cy="160" rx="130" ry="110" fill="rgba(255,77,0,.07)"/>
+        <!-- Warning triangles background -->
+        <polygon points="200,230 230,280 170,280" fill="rgba(255,77,0,.06)" stroke="rgba(255,77,0,.15)" stroke-width="1.5"/>
+        <polygon points="240,190 262,228 218,228" fill="rgba(255,77,0,.04)" stroke="rgba(255,77,0,.1)" stroke-width="1"/>
+        <!-- Big warning triangle -->
+        <polygon points="110,80 160,165 60,165" fill="none" stroke="#FF4D00" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="110" y1="105" x2="110" y2="140" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="110" cy="152" r="2.5" fill="#FF4D00"/>
+        <!-- Euro signs fading -->
+        <text x="195" y="110" font-family="'DM Sans',sans-serif" font-size="48" font-weight="700" fill="rgba(255,255,255,.06)">€</text>
+        <text x="240" y="150" font-family="'DM Sans',sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,.08)">€</text>
+        <text x="165" y="135" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="rgba(255,255,255,.08)">€</text>
+        <!-- Strike through euro -->
+        <text x="195" y="110" font-family="'DM Sans',sans-serif" font-size="48" font-weight="700" fill="rgba(255,77,0,.12)">€</text>
+        <line x1="192" y1="75" x2="228" y2="115" stroke="rgba(255,77,0,.3)" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Label -->
+        <text x="110" y="200" font-family="'DM Sans',sans-serif" font-size="10" font-weight="700" fill="rgba(255,77,0,.6)" text-anchor="middle" letter-spacing="2">10 FEHLER</text>
+        <!-- Dots -->
+        <circle cx="290" cy="60" r="3" fill="rgba(255,77,0,.2)"/>
+        <circle cx="310" cy="80" r="2" fill="rgba(255,77,0,.12)"/>
+        <circle cx="270" cy="90" r="1.5" fill="rgba(255,77,0,.15)"/>
+      </svg>
+      <div class="guide-cat-badge free"><div class="guide-cat-dot"></div>Kostenlos</div>
+    </div>
+    <div class="guide-text-col">
+      <div class="guide-num">01</div>
+      <div class="guide-topic">Grundlagen · Checkliste</div>
+      <div class="guide-title">10 Budgetvernichtende Fehler,<br>die dir kein Google Ads<br>Experte verrät</div>
+      <div class="guide-desc">Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest!</div>
+      <div class="guide-meta">
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>25 Prüfpunkte</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>PDF · sofort nutzbar</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Anfänger &amp; Fortgeschrittene</div>
+        <div class="guide-new-badge">Neu</div>
+      </div>
+      <div class="guide-cta-row">
+        <button class="guide-btn primary" onclick="openGuideGate('guide-1','10 Budgetvernichtende Fehler','📋')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlos herunterladen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIDE 2: Checkliste -->
+  <div class="guide-card" data-cat="basics strategie free">
+    <div class="guide-img-col">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:320px;display:block;">
+        <rect width="380" height="320" fill="#0e0e0e"/>
+        <!-- Glow -->
+        <ellipse cx="130" cy="160" rx="120" ry="120" fill="rgba(255,77,0,.06)"/>
+        <!-- Checklist card bg -->
+        <rect x="40" y="52" width="200" height="216" rx="12" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <!-- Header bar -->
+        <rect x="40" y="52" width="200" height="36" rx="12" fill="rgba(255,77,0,.12)"/>
+        <rect x="40" y="76" width="200" height="12" fill="rgba(255,77,0,.12)"/>
+        <circle cx="62" cy="70" r="5" fill="rgba(255,77,0,.5)"/>
+        <rect x="76" y="66" width="80" height="7" rx="3.5" fill="rgba(255,255,255,.15)"/>
+        <!-- Rows -->
+        <!-- Row 1 - checked -->
+        <rect x="56" y="104" width="16" height="16" rx="4" fill="#FF4D00"/>
+        <polyline points="59,112 63,116 70,108" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="82" y="108" width="100" height="6" rx="3" fill="rgba(255,255,255,.2)"/>
+        <!-- Row 2 - checked -->
+        <rect x="56" y="132" width="16" height="16" rx="4" fill="#FF4D00"/>
+        <polyline points="59,140 63,144 70,136" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="82" y="136" width="120" height="6" rx="3" fill="rgba(255,255,255,.2)"/>
+        <!-- Row 3 - checked -->
+        <rect x="56" y="160" width="16" height="16" rx="4" fill="#FF4D00"/>
+        <polyline points="59,168 63,172 70,164" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="82" y="164" width="90" height="6" rx="3" fill="rgba(255,255,255,.2)"/>
+        <!-- Row 4 - unchecked -->
+        <rect x="56" y="188" width="16" height="16" rx="4" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <rect x="82" y="192" width="110" height="6" rx="3" fill="rgba(255,255,255,.1)"/>
+        <!-- Row 5 - unchecked -->
+        <rect x="56" y="216" width="16" height="16" rx="4" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <rect x="82" y="220" width="75" height="6" rx="3" fill="rgba(255,255,255,.1)"/>
+        <!-- Row 6 - unchecked -->
+        <rect x="56" y="244" width="16" height="16" rx="4" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <rect x="82" y="248" width="95" height="6" rx="3" fill="rgba(255,255,255,.1)"/>
+        <!-- Floating badge -->
+        <rect x="210" y="160" width="110" height="44" rx="10" fill="rgba(255,77,0,.1)" stroke="rgba(255,77,0,.25)" stroke-width="1"/>
+        <text x="265" y="178" font-family="'DM Sans',sans-serif" font-size="18" font-weight="800" fill="#FF4D00" text-anchor="middle">6</text>
+        <text x="265" y="193" font-family="'DM Sans',sans-serif" font-size="9" fill="rgba(255,255,255,.4)" text-anchor="middle" letter-spacing="1">PUNKTE</text>
+        <!-- Dots -->
+        <circle cx="330" cy="60" r="3" fill="rgba(255,77,0,.15)"/>
+        <circle cx="350" cy="80" r="2" fill="rgba(255,77,0,.1)"/>
+      </svg>
+      <div class="guide-cat-badge free"><div class="guide-cat-dot"></div>Kostenlos</div>
+    </div>
+    <div class="guide-text-col">
+      <div class="guide-num">02</div>
+      <div class="guide-topic">Budget &amp; Kosten · Guide</div>
+      <div class="guide-title">6 Punkte Google Ads Checkliste<br>für bessere<br>Kampagnenperformance</div>
+      <div class="guide-desc">„Was kostet Google Ads im Monat?" — Die Antwort lautet: es kommt drauf an. Aber das hilft dir nicht weiter. Dieser Guide zeigt dir, welche Faktoren den Preis beeinflussen, wie du ein realistisches Budget kalkulierst und ab wann sich der Einstieg wirklich lohnt.</div>
+      <div class="guide-meta">
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Budgetrechner inklusive</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>PDF · mit Beispielen</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Für Einsteiger</div>
+      </div>
+      <div class="guide-cta-row">
+        <button class="guide-btn primary" onclick="openGuideGate('guide-2','Budget-Guide','💰')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlos herunterladen
+        </button>
+        <div class="guide-pages">PDF · 5 Seiten</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIDE 3: Kampagnenoptimierung Step-by-Step -->
+  <div class="guide-card" data-cat="optimierung">
+    <div class="guide-img-col">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:320px;display:block;">
+        <rect width="380" height="320" fill="#0e0e0e"/>
+        <!-- Grid lines -->
+        <line x1="40" y1="260" x2="300" y2="260" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+        <line x1="40" y1="210" x2="300" y2="210" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
+        <line x1="40" y1="160" x2="300" y2="160" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
+        <line x1="40" y1="110" x2="300" y2="110" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
+        <line x1="40" y1="60" x2="300" y2="60" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
+        <!-- Bars -->
+        <rect x="55" y="220" width="28" height="40" rx="4" fill="rgba(255,255,255,.06)"/>
+        <rect x="100" y="195" width="28" height="65" rx="4" fill="rgba(255,255,255,.06)"/>
+        <rect x="145" y="175" width="28" height="85" rx="4" fill="rgba(255,255,255,.07)"/>
+        <rect x="190" y="145" width="28" height="115" rx="4" fill="rgba(255,77,0,.15)"/>
+        <rect x="235" y="105" width="28" height="155" rx="4" fill="rgba(255,77,0,.25)"/>
+        <!-- Top glow on last bar -->
+        <rect x="235" y="105" width="28" height="20" rx="4" fill="rgba(255,77,0,.4)"/>
+        <!-- Trend line -->
+        <polyline points="69,240 114,218 159,192 204,162 249,118" fill="none" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Glow under line -->
+        <polyline points="69,240 114,218 159,192 204,162 249,118 249,260 69,260" fill="rgba(255,77,0,.06)" stroke="none"/>
+        <!-- Dots on line -->
+        <circle cx="69" cy="240" r="4" fill="#FF4D00" opacity=".5"/>
+        <circle cx="114" cy="218" r="4" fill="#FF4D00" opacity=".6"/>
+        <circle cx="159" cy="192" r="4" fill="#FF4D00" opacity=".7"/>
+        <circle cx="204" cy="162" r="4" fill="#FF4D00" opacity=".85"/>
+        <circle cx="249" cy="118" r="5" fill="#FF4D00"/>
+        <!-- Tooltip -->
+        <rect x="255" y="92" width="68" height="30" rx="6" fill="#FF4D00"/>
+        <polygon points="263,122 270,122 263,130" fill="#FF4D00"/>
+        <text x="289" y="112" font-family="'DM Sans',sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">+147%</text>
+        <!-- Y axis labels -->
+        <text x="35" y="264" font-family="'DM Sans',sans-serif" font-size="8" fill="rgba(255,255,255,.2)" text-anchor="end">0</text>
+        <text x="35" y="114" font-family="'DM Sans',sans-serif" font-size="8" fill="rgba(255,255,255,.2)" text-anchor="end">100</text>
+        <!-- Step badges -->
+        <rect x="295" y="200" width="60" height="22" rx="11" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <text x="325" y="215" font-family="'DM Sans',sans-serif" font-size="9" fill="rgba(255,255,255,.3)" text-anchor="middle" letter-spacing="1">7 STEPS</text>
+        <!-- Glow blob -->
+        <ellipse cx="180" cy="180" rx="80" ry="60" fill="rgba(255,77,0,.04)"/>
+      </svg>
+      <div class="guide-cat-badge starter"><div class="guide-cat-dot"></div>Für Fortgeschrittene</div>
+    </div>
+    <div class="guide-text-col">
+      <div class="guide-num">03</div>
+      <div class="guide-topic">Optimierung · Step-by-Step</div>
+      <div class="guide-title">Step-by-Step Guide zur<br>Kampagnenoptimierung —<br>mehr aus deinem Budget holen</div>
+      <div class="guide-desc">Die Optimierung deiner Google Ads Kampagnen ist der Schlüssel, um das Beste aus deinem Marketingbudget herauszuholen. In dieser Schritt-für-Schritt-Anleitung erfährst du, wie du Kampagnen systematisch verbesserst, um maximale Ergebnisse zu erzielen.</div>
+      <div class="guide-meta">
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Schritt-für-Schritt</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>PDF · mit Screenshots</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Fortgeschrittene</div>
+      </div>
+      <div class="guide-cta-row">
+        <button class="guide-btn primary" onclick="openGuideGate('guide-3','Kampagnenoptimierung Guide','📈')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlos herunterladen
+        </button>
+        <div class="guide-pages">PDF · 8 Seiten</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIDE 4: Negative Keywords -->
+  <div class="guide-card" data-cat="optimierung strategie">
+    <div class="guide-img-col">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:320px;display:block;">
+        <defs>
+          <linearGradient id="g4-fade" x1="0.55" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0e0e0e" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#0e0e0e" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <rect width="380" height="320" fill="#0e0e0e"/>
+        <!-- Row 1 -->
+        <g opacity="0.95"><rect x="20" y="28" width="65" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="52" y="45" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− jobs</text></g>
+        <g opacity="0.85"><rect x="97" y="28" width="93" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="143" y="45" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− kostenlos</text></g>
+        <g opacity="0.65"><rect x="202" y="28" width="62" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="233" y="45" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− gratis</text></g>
+        <g opacity="0.4"><rect x="276" y="28" width="72" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="312" y="45" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− student</text></g>
+        <!-- Row 2 -->
+        <g opacity="0.9"><rect x="20" y="66" width="98" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="69" y="83" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− ausbildung</text></g>
+        <g opacity="0.7"><rect x="130" y="66" width="68" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="164" y="83" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− selber</text></g>
+        <g opacity="0.5"><rect x="210" y="66" width="82" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="251" y="83" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− erfahrung</text></g>
+        <g opacity="0.3"><rect x="304" y="66" width="68" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="338" y="83" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− vorlage</text></g>
+        <!-- Row 3 -->
+        <g opacity="0.8"><rect x="20" y="104" width="78" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="59" y="121" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− studium</text></g>
+        <g opacity="0.55"><rect x="110" y="104" width="68" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="144" y="121" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− kosten</text></g>
+        <g opacity="0.38"><rect x="190" y="104" width="74" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="227" y="121" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− tutorial</text></g>
+        <g opacity="0.22"><rect x="276" y="104" width="88" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="320" y="121" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− praktikum</text></g>
+        <!-- Row 4 -->
+        <g opacity="0.5"><rect x="20" y="142" width="88" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="64" y="159" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− eigentümer</text></g>
+        <g opacity="0.32"><rect x="120" y="142" width="83" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="161" y="159" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− bewerbung</text></g>
+        <g opacity="0.18"><rect x="215" y="142" width="62" height="25" rx="12.5" fill="none" stroke="#FF4D00" stroke-width="1.5"/><text x="246" y="159" font-family="monospace" font-size="11" fill="#FF4D00" text-anchor="middle">− online</text></g>
+        <!-- Separator -->
+        <line x1="20" y1="183" x2="320" y2="183" stroke="#1e1e1e" stroke-width="1"/>
+        <!-- Big number -->
+        <text x="20" y="243" font-family="'Syne', sans-serif" font-size="54" font-weight="800" fill="#FF4D00" letter-spacing="-2">500+</text>
+        <text x="20" y="264" font-family="sans-serif" font-size="12" fill="#555">ausschließende Keywords</text>
+        <!-- Badges -->
+        <rect x="20" y="280" width="92" height="24" rx="5" fill="#1a1a1a" stroke="#FF4D00" stroke-width="1"/>
+        <text x="66" y="296" font-family="sans-serif" font-size="11" fill="#FF4D00" text-anchor="middle" font-weight="600">12 Branchen</text>
+        <rect x="122" y="280" width="112" height="24" rx="5" fill="#1a1a1a" stroke="#252525" stroke-width="1"/>
+        <text x="178" y="296" font-family="sans-serif" font-size="11" fill="#444" text-anchor="middle">Excel + Sheets</text>
+        <!-- Fade overlay right -->
+        <rect width="380" height="320" fill="url(#g4-fade)"/>
+      </svg>
+      <div class="guide-cat-badge"><div class="guide-cat-dot"></div>Kostenlos</div>
+    </div>
+    <div class="guide-text-col">
+      <div class="guide-num">04</div>
+      <div class="guide-topic">Optimierung · Fortgeschritten</div>
+      <div class="guide-title">Die Negative-Keyword-Bibel:<br>500+ ausschließende Keywords<br>für 12 Branchen</div>
+      <div class="guide-desc">Negative Keywords sind das mächtigste Werkzeug um Budgetverschwendung zu stoppen — aber kaum jemand macht es richtig. Diese Liste enthält über 500 vorqualifizierte ausschließende Keywords aus 12 verschiedenen Branchen, direkt einsetzbar.</div>
+      <div class="guide-meta">
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>500+ Keywords</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>12 Branchen</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Excel + Google Sheets</div>
+      </div>
+      <div class="guide-cta-row">
+        <button class="guide-btn primary" onclick="openGuideGate('guide-4','Negative-Keyword-Bibel','🚫')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlos herunterladen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIDE 5: Tracking Setup -->
+  <div class="guide-card" data-cat="tracking">
+    <div class="guide-img-col">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:320px;display:block;">
+        <defs>
+          <linearGradient id="g5-fade" x1="0.55" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0e0e0e" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#0e0e0e" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="g5-funnel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(255,77,0,.18)"/>
+            <stop offset="100%" stop-color="rgba(255,77,0,.04)"/>
+          </linearGradient>
+        </defs>
+        <rect width="380" height="320" fill="#0e0e0e"/>
+        <!-- Glow -->
+        <ellipse cx="136" cy="150" rx="120" ry="110" fill="rgba(255,77,0,.05)"/>
+        <!-- Connection chain: GA4 → Google Ads → Conversions -->
+        <rect x="20" y="22" width="60" height="32" rx="7" fill="#1a1a1a" stroke="rgba(255,77,0,.3)" stroke-width="1.5"/>
+        <text x="50" y="36" font-family="sans-serif" font-size="9" fill="#FF4D00" text-anchor="middle" font-weight="700">GA4</text>
+        <text x="50" y="47" font-family="sans-serif" font-size="8" fill="#884422" text-anchor="middle">Analytics</text>
+        <line x1="82" y1="38" x2="100" y2="38" stroke="rgba(255,77,0,.4)" stroke-width="1.5"/>
+        <polygon points="100,34 108,38 100,42" fill="rgba(255,77,0,.4)"/>
+        <rect x="110" y="22" width="74" height="32" rx="7" fill="#1a1a1a" stroke="rgba(255,77,0,.2)" stroke-width="1.5"/>
+        <text x="147" y="36" font-family="sans-serif" font-size="9" fill="#cc6633" text-anchor="middle" font-weight="700">Google Ads</text>
+        <text x="147" y="47" font-family="sans-serif" font-size="8" fill="#663322" text-anchor="middle">Kampagnen</text>
+        <line x1="186" y1="38" x2="204" y2="38" stroke="rgba(255,77,0,.25)" stroke-width="1.5"/>
+        <polygon points="204,34 212,38 204,42" fill="rgba(255,77,0,.25)"/>
+        <rect x="214" y="22" width="78" height="32" rx="7" fill="#1a1a1a" stroke="rgba(255,77,0,.15)" stroke-width="1.5"/>
+        <text x="253" y="36" font-family="sans-serif" font-size="9" fill="#995533" text-anchor="middle" font-weight="700">Conversions</text>
+        <text x="253" y="47" font-family="sans-serif" font-size="8" fill="#553322" text-anchor="middle">Events</text>
+        <!-- Funnel with orange tint -->
+        <polygon points="20,70 260,70 244,102 36,102" fill="url(#g5-funnel)" stroke="rgba(255,77,0,.12)" stroke-width="1"/>
+        <text x="140" y="91" font-family="sans-serif" font-size="11" fill="#886655" text-anchor="middle">Impressionen</text>
+        <polygon points="36,106 244,106 226,138 54,138" fill="rgba(255,77,0,.07)" stroke="rgba(255,77,0,.08)" stroke-width="1"/>
+        <text x="140" y="127" font-family="sans-serif" font-size="11" fill="#775544" text-anchor="middle">Klicks</text>
+        <polygon points="54,142 226,142 206,174 74,174" fill="rgba(255,77,0,.05)" stroke="rgba(255,77,0,.06)" stroke-width="1"/>
+        <text x="140" y="163" font-family="sans-serif" font-size="11" fill="#664433" text-anchor="middle">Leads</text>
+        <polygon points="74,178 206,178 182,210 98,210" fill="rgba(255,77,0,.1)" stroke="rgba(255,77,0,.2)" stroke-width="1"/>
+        <text x="140" y="199" font-family="sans-serif" font-size="11" fill="#FF4D00" text-anchor="middle" font-weight="600">Conversions</text>
+        <!-- Separator -->
+        <line x1="20" y1="226" x2="310" y2="226" stroke="#1e1e1e" stroke-width="1"/>
+        <!-- Labels row -->
+        <rect x="20" y="238" width="112" height="24" rx="5" fill="#1a1a1a" stroke="rgba(255,77,0,.2)" stroke-width="1"/>
+        <text x="76" y="254" font-family="sans-serif" font-size="10" fill="#FF4D00" text-anchor="middle">Consent Mode v2</text>
+        <rect x="142" y="238" width="78" height="24" rx="5" fill="#1a1a1a" stroke="#252525" stroke-width="1"/>
+        <text x="181" y="254" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">GA4 + GTM</text>
+        <!-- TRACKING SETUP label -->
+        <text x="20" y="298" font-family="'Syne', sans-serif" font-size="13" font-weight="800" fill="rgba(255,77,0,.35)" letter-spacing="2">TRACKING SETUP</text>
+        <!-- Fade overlay right -->
+        <rect width="380" height="320" fill="url(#g5-fade)"/>
+      </svg>
+      <div class="guide-cat-badge"><div class="guide-cat-dot"></div>Kostenlos</div>
+    </div>
+    <div class="guide-text-col">
+      <div class="guide-num">05</div>
+      <div class="guide-topic">Tracking · GA4</div>
+      <div class="guide-title">GA4 + Google Ads richtig<br>verbinden — das vollständige<br>Tracking-Setup</div>
+      <div class="guide-desc">Schritt-für-Schritt Anleitung wie du GA4 mit Google Ads korrekt verknüpfst, Conversion-Events einrichtest und Consent Mode v2 konfigurierst — damit du weißt, was wirklich konvertiert.</div>
+      <div class="guide-meta">
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>GA4 + GTM</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Consent Mode v2</div>
+        <div class="guide-meta-item"><div class="guide-meta-dot"></div>Step-by-Step</div>
+      </div>
+      <div class="guide-cta-row">
+        <button class="guide-btn primary" onclick="openGuideGate('guide-5','GA4 Tracking Setup','📊')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlos herunterladen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPLOAD SLOT -->
+  <div class="guide-card upload-slot" data-cat="all">
+    <div class="upload-slot-inner">
+      <div class="upload-slot-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 4v8M6 8l4-4 4 4" stroke="#FF4D00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 14v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#FF4D00" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="upload-slot-pulse"><div class="upload-slot-pulse-dot"></div>In Arbeit</div>
+      <div class="upload-slot-title">Nächster Guide kommt bald</div>
+      <div class="upload-slot-text">Hier erscheint bald ein weiterer Guide.<br>Trag dich ein, um als Erste informiert zu werden.</div>
+      <button onclick="openGuideGate('newsletter','Newsletter','📬')" style="margin-top:1.5rem;background:rgba(255,77,0,.08);color:#FF4D00;border:1px solid rgba(255,77,0,.3);padding:10px 24px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;letter-spacing:.03em;" onmouseover="this.style.background='rgba(255,77,0,.15)';this.style.borderColor='rgba(255,77,0,.5)'" onmouseout="this.style.background='rgba(255,77,0,.08)';this.style.borderColor='rgba(255,77,0,.3)'">
+        Benachrichtigen →
+      </button>
+    </div>
+  </div>
+
+</div><!-- /guides-list -->
+
+<!-- ════ CTA SECTION ═══════════════════════════════════ -->
+<section style="padding:5rem 2.5rem;background:var(--bg2);border-top:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,0,.07),transparent 70%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
+    <div style="font-size:10px;letter-spacing:.18em;color:#D6EEFF;text-transform:uppercase;margin-bottom:1rem;font-weight:600;opacity:.75;display:flex;align-items:center;gap:8px;"><span style="width:16px;height:1px;background:#D6EEFF;display:block;opacity:.55;"></span>Mehr als Guides</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:#fff;margin-bottom:1.25rem;letter-spacing:-.5px;line-height:1.05;">Bereit für <em style="color:#FF4D00;font-style:normal;">planbare</em><br>Kundengewinnung?</h2>
+    <p style="font-size:14px;color:#888;line-height:1.9;max-width:480px;">Die Guides zeigen dir, was möglich ist. Wenn du es professionell umgesetzt haben möchtest — ohne es selbst machen zu müssen — dann frag eine Zusammenarbeit an.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;position:relative;z-index:1;">
+    <a href="averio-premium-angebot-zusammenarbeit.html" class="btn btn-primary magnetic" style="text-decoration:none;">Zusammenarbeit anfragen →</a>
+    <a href="averio-premium-angebote.html" class="btn btn-ghost" style="text-decoration:none;">Alle Angebote ansehen</a>
+    <div style="font-size:11px;color:rgba(168,216,240,.3);">Kostenlos · Unverbindlich · Direkt mit Marie</div>
+  </div>
+</section>
+
+<!-- ════ EMAIL GATE MODAL ═══════════════════════════════ -->
+<div class="guide-gate-overlay" id="guide-gate-overlay" onclick="closeGate(event)">
+  <div class="guide-gate-card">
+    <div class="guide-gate-close" onclick="closeGateForce()">✕</div>
+    <div id="guide-gate-form-inner">
+      <div class="guide-gate-icon" id="gate-icon">📋</div>
+      <div class="guide-gate-title" id="gate-title">Guide herunterladen</div>
+      <div class="guide-gate-sub" id="gate-sub">Trag deine E-Mail ein — der Download-Link kommt sofort in dein Postfach. Kein Spam, nur dieser Guide.</div>
+      <div class="gate-form-group">
+        <label class="gate-label">Dein Name *</label>
+        <input class="gate-input" id="gate-name" type="text" placeholder="Max Mustermann">
+      </div>
+      <div class="gate-form-group">
+        <label class="gate-label">E-Mail-Adresse *</label>
+        <input class="gate-input" id="gate-email" type="email" placeholder="deine@email.de">
+      </div>
+      <div class="gate-check-wrap">
+        <input type="checkbox" id="gate-dsgvo">
+        <label class="gate-check-label" for="gate-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</label>
+      </div>
+      <div class="gate-check-wrap" style="margin-top:8px;">
+        <input type="checkbox" id="gate-newsletter">
+        <label class="gate-check-label" for="gate-newsletter">Ja, ich möchte auch über neue Guides &amp; Tipps informiert werden. (Optional — Abmeldung jederzeit möglich)</label>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,.18);margin:10px 0 4px;line-height:1.5;">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+      <button class="gate-submit-btn" onclick="submitGate()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:6px;"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Jetzt herunterladen
+      </button>
+      <div class="gate-fine-print" id="gate-fine-print">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
+    </div>
+    <div class="guide-gate-success" id="guide-gate-success">
+      <div class="guide-gate-success-icon">✅</div>
+      <div class="guide-gate-success-title">Link gesendet!</div>
+      <div class="guide-gate-success-text">Der Download-Link ist auf dem Weg zu dir. Schau in dein Postfach — und ggf. in den Spam-Ordner.</div>
+      <button onclick="closeGateForce()" style="margin-top:1.5rem;background:#FF4D00;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FOOTER ════════════════════════════════════════ -->
+<footer class="guides-footer">
+  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+    
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </p>
+</footer>
+
+<!-- CDN Libraries -->
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+
+<!-- Shared JS -->
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script>
+// ── Brevo-Formular für E-Mail-Verifizierung (DOI, kein API-Key nötig)
+const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+
+// ── nForms für Marie's Benachrichtigungen
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+// ── Guide-URLs (direkter Zugang nach E-Mail-Eingabe)
+const GUIDE_URLS = {
+  'guide-1': 'guides/averio-guide-1-budgetfehler.html',
+  'guide-2': 'guides/averio-guide-2-checkliste.html',
+  'guide-3': 'guides/averio-guide-3-optimierung.html',
+  'guide-4': 'guides/averio-guide-4-negative-keywords.html',
+  'guide-5': 'guides/averio-guide-5-tracking.html',
+};
+
+// ── Guide gate logic
+let currentGuideId = '';
+let currentGuideTitle = '';
+
+function openGuideGate(guideId, title, icon) {
+  const isNewsletter = guideId === 'newsletter';
+  currentGuideId    = guideId;
+  currentGuideTitle = title;
+  document.getElementById('gate-icon').textContent  = icon;
+  document.getElementById('gate-title').textContent = isNewsletter ? 'Newsletter abonnieren' : title + ' herunterladen';
+  document.getElementById('gate-sub').textContent   = isNewsletter
+    ? 'Trag dich ein — du bekommst eine Bestätigungs-E-Mail. Nach dem Klick auf den Link darin bist du dabei.'
+    : 'Trag deine E-Mail ein — du bekommst eine Bestätigungs-E-Mail. Erst nach dem Klick auf den Link öffnet sich dein Guide.';
+  document.getElementById('gate-name').value        = '';
+  document.getElementById('gate-email').value       = '';
+  document.getElementById('gate-dsgvo').checked     = false;
+  // Newsletter-Modus: Checkbox automatisch angehakt, Button-Text anpassen
+  const nlCheck = document.getElementById('gate-newsletter');
+  const finePrint = document.getElementById('gate-fine-print');
+  const btn = document.querySelector('.gate-submit-btn');
+  if (isNewsletter) {
+    nlCheck.checked = true;
+    nlCheck.parentElement.style.display = 'none'; // ausblenden, da offensichtlich
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:6px;"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Jetzt anmelden';
+    finePrint.textContent = 'Double Opt-In · Du erhältst eine Bestätigungs-E-Mail · Abmeldung jederzeit';
+  } else {
+    nlCheck.checked = false;
+    nlCheck.parentElement.style.display = '';
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:6px;"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Jetzt herunterladen';
+    finePrint.textContent = 'Einmaliger Versand · Kein Spam · Abmeldung jederzeit';
+  }
+  document.getElementById('guide-gate-form-inner').style.display = 'block';
+  document.getElementById('guide-gate-success').classList.remove('active');
+  document.getElementById('guide-gate-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGate(e) {
+  if (e.target === document.getElementById('guide-gate-overlay')) closeGateForce();
+}
+function closeGateForce() {
+  document.getElementById('guide-gate-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+async function submitGate() {
+  const name         = document.getElementById('gate-name').value.trim();
+  const email        = document.getElementById('gate-email').value.trim();
+  const dsgvo        = document.getElementById('gate-dsgvo').checked;
+  const newsletter   = document.getElementById('gate-newsletter').checked;
+  const isNewsletter = currentGuideId === 'newsletter';
+
+  if (!name || !email) { alert('Bitte Name und E-Mail ausfüllen.'); return; }
+  if (!dsgvo)          { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+
+  const btn = document.querySelector('.gate-submit-btn');
+  btn.innerHTML = 'Wird gesendet…';
+  btn.disabled  = true;
+
+  // Guide-ID in localStorage speichern, damit die Bestätigungsseite weiß welcher Guide gemeint war.
+  // (Funktioniert wenn die E-Mail im selben Browser geöffnet wird — Fallback: alle Guides werden angezeigt)
+  if (!isNewsletter) {
+    try {
+      localStorage.setItem('av_pendingGuide', currentGuideId);
+      localStorage.setItem('av_pendingGuideName', name);
+    } catch(e) {}
+  }
+
+  // Immer via Brevo DOI senden — für alle (Newsletter oder nicht).
+  // Der Bestätigungslink in der E-Mail öffnet erst dann den Guide.
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI Fehler:', e); }
+
+  // nForms-Eintrag damit Marie sieht, wer welchen Guide angefragt hat
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:   isNewsletter ? 'Newsletter Anmeldung' : 'Guide Download Anfrage',
+        Name:       name,
+        Email:      email,
+        Guide:      isNewsletter ? '–' : currentGuideTitle,
+        Newsletter: newsletter ? 'Ja' : 'Nein'
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
+  // ── Formular ausblenden, Warte-Hinweis anzeigen ──
+  // Guide öffnet sich NICHT sofort — erst nach Klick auf Bestätigungslink in der E-Mail!
+  document.getElementById('guide-gate-form-inner').style.display = 'none';
+
+  const successEl    = document.getElementById('guide-gate-success');
+  const successTitle = successEl.querySelector('.guide-gate-success-title');
+  const successText  = successEl.querySelector('.guide-gate-success-text');
+  if (successTitle) successTitle.textContent = 'Bestätigungslink gesendet!';
+  if (successText) successText.textContent  = isNewsletter
+    ? 'Schau in dein Postfach und klicke den Bestätigungslink — dann bist du dabei. Manchmal landet er im Spam-Ordner.'
+    : 'Schau in dein Postfach und klicke den Bestätigungslink. Erst danach öffnet sich dein Guide — so stellen wir sicher, dass deine E-Mail-Adresse korrekt ist.';
+
+  successEl.classList.add('active');
+  btn.disabled = false;
+}
+
+// ── Alte API-Funktionen entfernt (kein API-Key mehr nötig) ──
+
+
+// ── Filter
+function filterGuides(cat, btn) {
+  document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  let count = 0;
+  document.querySelectorAll('#guides-list .guide-card:not(.upload-slot)').forEach(card => {
+    const cats = card.dataset.cat || '';
+    const show = cat === 'all' || cats.includes(cat);
+    card.style.display = show ? '' : 'none';
+    if (show) {
+      // GSAP setzt opacity:0 als from-Wert beim Seitenaufruf.
+      // Wenn die Karte noch nicht in den Viewport gescrollt hat,
+      // bleibt sie unsichtbar → Inline-Styles sofort clearen.
+      gsap.killTweensOf(card);
+      gsap.set(card, { clearProps: 'opacity,y,transform' });
+    }
+    if (show && !card.classList.contains('coming-soon')) count++;
+  });
+  document.getElementById('guide-count').textContent =
+    count || document.querySelectorAll('#guides-list .guide-card:not(.upload-slot)').length;
+}
+
+// ── GSAP Animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero
+gsap.from('.guides-eyebrow', { opacity: 0, y: 20, duration: .7, delay: .15 });
+gsap.from('.guides-h1',      { opacity: 0, y: 30, duration: .8, delay: .3 });
+gsap.from('.guides-sub',     { opacity: 0, y: 20, duration: .7, delay: .5 });
+gsap.from('.guides-count-box', { opacity: 0, scale: .9, duration: .7, delay: .55 });
+
+// Guide cards — stagger as they enter viewport
+gsap.utils.toArray('.guide-card').forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 88%',
+      toggleActions: 'play none none none'
+    },
+    opacity: 0,
+    y: 40,
+    duration: .65,
+    ease: 'power2.out',
+    delay: i * .04
+  });
+});
+
+// Filter bar
+gsap.from('.guides-filter', {
+  scrollTrigger: { trigger: '.guides-filter', start: 'top 90%' },
+  opacity: 0, y: 16, duration: .5
+});
+</script>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+

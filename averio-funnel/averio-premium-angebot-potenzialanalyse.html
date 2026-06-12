@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potenzialanalyse – Kostenlos | Averio Media</title>
+  <meta name="description" content="Kostenlose Google Ads Potenzialanalyse von Averio Media. Wir analysieren Suchvolumen, Wettbewerb und Budget-Bedarf – ehrlich & unverbindlich.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/potenzialanalyse">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averiomedia.de/potenzialanalyse">
+<meta property="og:title" content="Kostenlose Google Ads Potenzialanalyse – Unverbindlich | Averio Media">
+<meta property="og:description" content="Kostenlose Google Ads Potenzialanalyse: Suchvolumen, Wettbewerb & Budget-Bedarf — ehrlich eingeschätzt. Nur für B2B-Dienstleister, Handwerk & lokale Unternehmen.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kostenlose Google Ads Potenzialanalyse – Unverbindlich | Averio Media">
+<meta name="twitter:description" content="Kostenlose Google Ads Potenzialanalyse: Suchvolumen, Wettbewerb & Budget-Bedarf — ehrlich eingeschätzt. Nur für B2B-Dienstleister, Handwerk & lokale Unternehmen.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/lenis.min.js"></script>
+  <link rel="stylesheet" href="averio-media-weiss.css?v=8">
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --o: #FF4D00;
+      --o2: #FF8A00;
+      --bg: #090909;
+      --bg2: #1e1e1e;
+      --bg3: #272727;
+      --border: #383838;
+      --border2: #444444;
+      --ice: #D6EEFF;
+      --ice2: #A8D8F0;
+      --fh: 'Syne', sans-serif;
+      --fb: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: #fff;
+      font-family: var(--fb);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* nav-links no-wrap override */
+    .nav-links a { white-space: nowrap; }
+    .nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+    /* ── Sections ── */
+    .sec { padding: 7rem 2.5rem; }
+    .sec-alt { padding: 7rem 2.5rem; background: var(--bg2); }
+    .sec-inner { max-width: 1300px; margin: 0 auto; }
+
+    .sec-ey {
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ice2);
+      margin-bottom: 1rem;
+    }
+    .sec-title {
+      font-family: var(--fh);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+    }
+    .sec-title em { color: var(--o); font-style: normal; }
+    .sec-body {
+      font-size: 1rem;
+      color: #aaa;
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      padding: 9rem 2.5rem 5rem;
+      display: flex; align-items: center;
+    }
+    .hero-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ice2);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-h1 {
+      font-family: var(--fh);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      color: #fff;
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+    }
+    .hero-h1 em {
+      color: var(--ice2);
+      font-style: normal;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: #aaa;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 0.65rem;
+    }
+    .hero-badge {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-family: var(--fb);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #ccc;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 0.35rem 0.85rem;
+    }
+    .hero-badge svg { flex-shrink: 0; }
+    .hero-badge.ice svg { color: var(--ice2); }
+
+    /* Price Box */
+    .hero-price-box {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-price-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--ice2), transparent);
+      opacity: 0.6;
+    }
+    .price-label {
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
+    .price-big {
+      font-family: var(--fh);
+      font-size: clamp(80px, 12vw, 112px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -4px;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .price-sub {
+      font-size: 0.88rem;
+      color: var(--ice2);
+      margin-bottom: 2.5rem;
+    }
+    .price-cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+      width: 100%;
+      font-family: var(--fb);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.9rem 1.5rem;
+      background: #FF4D00;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .price-cta:hover {
+      background: #e64400;
+      transform: translateY(-2px);
+    }
+
+    /* ── Analysis Grid ── */
+    .ag-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      gap: 1px;
+    }
+    .ag-card {
+      display: flex; gap: 1.25rem;
+      padding: 2rem 1.75rem;
+      background: var(--bg);
+      transition: background 0.2s;
+    }
+    .ag-card:hover { background: #0c0c0c; }
+    .ag-icon {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: rgba(168,216,240,0.08);
+      border: 1px solid rgba(168,216,240,0.15);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ag-content {}
+    .ag-title {
+      font-family: var(--fh);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .ag-body {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.65;
+    }
+    .ag-header {
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── Process Steps ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .process-card {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      position: relative;
+    }
+    .process-num {
+      font-family: var(--fh);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--o);
+      letter-spacing: -2px;
+      margin-bottom: 1rem;
+      line-height: 1;
+      opacity: 0.35;
+    }
+    .process-title {
+      font-family: var(--fh);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .process-body {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* ── Form Section ── */
+    .form-sec-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .form-wrap {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+    .form-title {
+      font-family: var(--fh);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .form-sub {
+      font-size: 0.88rem;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-family: var(--fb);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 0.45rem;
+    }
+    .form-label span { color: var(--o); }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 9px;
+      padding: 0.75rem 1rem;
+      color: #fff;
+      font-family: var(--fb);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: #555; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--o);
+      box-shadow: 0 0 0 3px rgba(255,77,0,0.1);
+    }
+    .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+
+    /* Radio Group */
+    .radio-group { display: flex; flex-direction: column; gap: 0.55rem; }
+    .radio-option {
+      display: flex; align-items: center; gap: 0.75rem;
+      cursor: pointer;
+      padding: 0.65rem 1rem;
+      border-radius: 9px;
+      border: 1px solid var(--border2);
+      background: var(--bg3);
+      transition: border-color 0.2s, background 0.2s;
+      user-select: none;
+    }
+    .radio-option:hover { border-color: #333; background: #131313; }
+    .radio-option.selected { border-color: var(--o); background: rgba(255,77,0,0.06); }
+    .radio-dot {
+      width: 18px; height: 18px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 1.5px solid #444;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s;
+    }
+    .radio-option.selected .radio-dot { border-color: var(--o); }
+    .radio-dot-inner {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--o);
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .radio-option.selected .radio-dot-inner { opacity: 1; transform: scale(1); }
+    .radio-text { font-size: 0.88rem; color: #ccc; }
+    .radio-option.selected .radio-text { color: #fff; }
+
+    /* Budget Slider */
+    .budget-display {
+      font-family: var(--fh);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 0.75rem;
+    }
+    .budget-sub { font-size: 0.78rem; color: #666; margin-bottom: 0.75rem; }
+    .budget-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border2);
+      outline: none;
+    }
+    .budget-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--o);
+      cursor: pointer;
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 1px var(--o);
+    }
+    .budget-slider::-moz-range-thumb {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--o);
+      cursor: pointer;
+      border: 3px solid var(--bg);
+    }
+    .slider-labels {
+      display: flex; justify-content: space-between;
+      font-size: 0.72rem; color: #555; margin-top: 0.4rem;
+    }
+
+    /* Checkbox */
+    .checkbox-wrap {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      cursor: pointer;
+      margin-bottom: 1.25rem;
+      user-select: none;
+    }
+    .checkbox-box {
+      width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
+      border: 1.5px solid #444;
+      border-radius: 5px;
+      background: var(--bg3);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .checkbox-wrap.checked .checkbox-box { border-color: var(--o); background: var(--o); }
+    .checkbox-text { font-size: 0.82rem; color: #888; line-height: 1.5; }
+    .checkbox-text a { color: var(--ice2); text-decoration: underline; text-decoration-color: rgba(168,216,240,0.3); }
+
+    /* Submit button */
+    .form-submit {
+      width: 100%;
+      background: var(--o);
+      color: #fff;
+      font-family: var(--fb);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: -0.2px;
+    }
+    .form-submit:hover { background: var(--o2); transform: translateY(-1px); }
+
+    /* Success state */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .success-state.visible { display: block; }
+    .success-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(168,216,240,0.1);
+      border: 2px solid var(--ice2);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .success-title {
+      font-family: var(--fh);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .success-body { font-size: 0.92rem; color: #888; line-height: 1.7; }
+
+    /* Sidebar */
+    .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .sidebar-card {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 1.75rem;
+    }
+    .sidebar-card-title {
+      font-family: var(--fh);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.3px;
+    }
+    .sidebar-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .sidebar-list li {
+      display: flex; gap: 0.6rem;
+      font-size: 0.85rem; color: #aaa; line-height: 1.5;
+    }
+    .sidebar-list li::before { content: '—'; color: var(--ice2); flex-shrink: 0; }
+
+    .sidebar-card.orange-tint {
+      background: rgba(255,77,0,0.04);
+      border-color: rgba(255,77,0,0.18);
+    }
+    .fit-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .fit-list li {
+      display: flex; gap: 0.6rem;
+      font-size: 0.85rem; line-height: 1.5;
+    }
+    .fit-check { color: var(--o); flex-shrink: 0; }
+    .fit-x { color: #555; flex-shrink: 0; }
+    .fit-list li.fit-nope { color: #666; font-style: italic; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 780px; margin: 3rem auto 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border2);
+    }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.35rem 0;
+      cursor: pointer;
+      font-family: var(--fh);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e8e8;
+      gap: 1rem;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: #fff; }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border: 1.5px solid #333;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.25s ease, border-color 0.2s;
+      color: #666;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); border-color: var(--o); color: var(--o); }
+    .faq-a {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+    .faq-a-inner {
+      padding: 0 0 1.35rem;
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { max-height: 300px; }
+
+    /* ── CTA Strip ── */
+    .cta-strip {
+      padding: 5rem 2.5rem;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-strip-inner {
+      max-width: 800px; margin: 0 auto;
+      text-align: center;
+    }
+    .cta-strip-eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ice2);
+      margin-bottom: 0.75rem;
+    }
+    .cta-strip-title {
+      font-family: var(--fh);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+    .cta-strip-body {
+      font-size: 0.95rem; color: #888;
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--fb); font-size: 0.95rem; font-weight: 600;
+      color: #fff;
+      background: var(--o);
+      border-radius: 10px;
+      padding: 0.9rem 2rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover { background: var(--o2); transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem 2.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    footer a { color: #666; transition: color 0.2s; }
+    footer a:hover { color: #aaa; }
+
+    /* ── Utilities ── */
+    .text-ice { color: var(--ice2); }
+    .mt-3 { margin-top: 3rem; }
+
+    /* ── Animations base ── */
+    .anim-fade-up { opacity: 0; transform: translateY(24px); }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-price-box { max-width: 480px; }
+      .form-sec-inner { grid-template-columns: 1fr; }
+      .sidebar { flex-direction: row; flex-wrap: wrap; }
+      .sidebar-card { flex: 1 1 280px; }
+      .nav-links { gap: 0; }
+      .nav-links a { padding: 0.4rem 0.5rem; font-size: 0.78rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .hero { padding: 8rem 1.25rem 4rem; }
+      .sec, .sec-alt { padding: 5rem 1.25rem; }
+      .ag-wrap { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .cta-strip { padding: 4rem 1.25rem; }
+      footer { padding: 1.5rem 1.25rem; }
+    }
+
+/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+html[data-theme="light"] .hero-h1              { color: #0D1117 !important; }
+html[data-theme="light"] .hero-tagline         { color: #495057 !important; }
+html[data-theme="light"] .hero-badge           { background: #F8F9FA !important; border-color: #DEE2E6 !important; color: #495057 !important; }
+html[data-theme="light"] .hero-price-box       { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .price-label          { color: #868E96 !important; }
+html[data-theme="light"] .price-big            { color: #0D1117 !important; }
+html[data-theme="light"] .sec-title            { color: #0D1117 !important; }
+html[data-theme="light"] .sec-body             { color: #495057 !important; }
+html[data-theme="light"] .ag-card              { background: #FFFFFF !important; }
+html[data-theme="light"] .ag-title             { color: #0D1117 !important; }
+html[data-theme="light"] .ag-body              { color: #495057 !important; }
+html[data-theme="light"] .process-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .process-title        { color: #0D1117 !important; }
+html[data-theme="light"] .process-body         { color: #495057 !important; }
+html[data-theme="light"] .form-wrap            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .form-title           { color: #0D1117 !important; }
+html[data-theme="light"] .form-sub             { color: #495057 !important; }
+html[data-theme="light"] .form-label           { color: #495057 !important; }
+html[data-theme="light"] .form-input,
+html[data-theme="light"] .form-textarea,
+html[data-theme="light"] .form-select          { background: #FFFFFF !important; border-color: #CED4DA !important; color: #212529 !important; }
+html[data-theme="light"] .radio-option         { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .radio-text           { color: #495057 !important; }
+html[data-theme="light"] .radio-option.selected .radio-text { color: #0D1117 !important; }
+html[data-theme="light"] .budget-display       { color: #0D1117 !important; }
+html[data-theme="light"] .budget-sub           { color: #868E96 !important; }
+html[data-theme="light"] .checkbox-text        { color: #495057 !important; }
+html[data-theme="light"] .success-title        { color: #0D1117 !important; }
+html[data-theme="light"] .success-body         { color: #495057 !important; }
+html[data-theme="light"] .sidebar-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .sidebar-card-title   { color: #0D1117 !important; }
+html[data-theme="light"] .sidebar-list li      { color: #495057 !important; }
+html[data-theme="light"] .faq-q               { color: #0D1117 !important; }
+html[data-theme="light"] .faq-a-inner          { color: #495057 !important; }
+html[data-theme="light"] .cta-strip-title       { color: #0D1117 !important; }
+html[data-theme="light"] .cta-strip-body        { color: #495057 !important; }
+html[data-theme="light"] footer                 { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] footer a               { color: #495057 !important; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kostenlose Google Ads Potenzialanalyse",
+  "url": "https://averiomedia.de/potenzialanalyse",
+  "description": "Kostenlose, unverbindliche Google Ads Potenzialanalyse: Suchvolumen, Wettbewerb und Budget-Bedarf — ehrlich eingeschätzt.",
+  "provider": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Kostenlose und unverbindliche Potenzialanalyse"
+  },
+  "serviceType": "Google Ads Beratung"
+}
+</script>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+          <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+          <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+      <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+      <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+      <li class="nav-dropdown-wrap">
+        <a href="averio-premium-angebote.html" class="nav-dropdown-trigger active">Angebot</a>
+        <ul class="nav-dropdown">
+          <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
+          <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
+          <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
+        </ul>
+      </li>
+      <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
+      <li><a href="averio-premium-guides.html">Guides</a></li>
+      <li><a href="averio-premium-faq.html">FAQ</a></li>
+    </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <p class="hero-eyebrow">Potenzialanalyse · Kostenlos &amp; Unverbindlich</p>
+        <h1 class="hero-h1">
+          Lohnt sich Google Ads<br><em>für dich?</em>
+        </h1>
+        <p class="hero-tagline">
+          Du denkst über Google Ads nach, aber weißt nicht ob es passt — oder wie viel Budget du brauchst? In der kostenlosen Potenzialanalyse schauen wir uns dein Business, deine Zielgruppe und den Wettbewerb an und sagen dir ehrlich, was realistisch drin ist.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge ice">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:var(--ice2)">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            100% kostenlos
+          </span>
+          <span class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:#666">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Antwort in 24h
+          </span>
+          <span class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:#666">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Direkt mit Marie
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Price Box -->
+      <div class="hero-right">
+        <div class="hero-price-box">
+          <p class="price-label">Dein Investment</p>
+          <div class="price-big">0 €</div>
+          <p class="price-sub">100% kostenlos &amp; unverbindlich</p>
+          <a href="#anfrage" class="price-cta">
+            Kurzes Gespräch buchen
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3.5 8H12.5M12.5 8L9 4.5M12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WAS WIRD ANALYSIERT
+  ════════════════════════════════════════════════ -->
+  <section class="sec-alt">
+    <div class="sec-inner">
+      <div class="ag-header">
+        <p class="sec-ey">Was wir analysieren</p>
+        <h2 class="sec-title">Was in der Analyse steckt</h2>
+        <p class="sec-body">Wir melden uns innerhalb von 24 Stunden — dann schauen wir uns das Ergebnis gemeinsam an. Kostenlos und ohne Verkaufsdruck.</p>
+      </div>
+
+      <div class="ag-wrap">
+
+        <!-- Card 1 -->
+        <div class="ag-card">
+          <div class="ag-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <circle cx="11" cy="11" r="8.5" stroke="#A8D8F0" stroke-width="1.5"/>
+              <path d="M7.5 11L10 13.5L14.5 8.5" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ag-content">
+            <h3 class="ag-title">Suchvolumen &amp; Nachfrage</h3>
+            <p class="ag-body">Wie oft wird nach deinem Angebot gesucht? Wir schauen uns das monatliche Suchvolumen relevanter Keywords in deiner Region an.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ag-card">
+          <div class="ag-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M5 11H17M17 11L12.5 6.5M17 11L12.5 15.5" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ag-content">
+            <h3 class="ag-title">Wettbewerbsanalyse</h3>
+            <p class="ag-body">Wer schaltet schon Ads in deiner Branche und Region? Wie stark ist der Wettbewerb — und ist Luft nach oben?</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ag-card">
+          <div class="ag-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="3.5" y="13" width="3" height="5.5" rx="1" stroke="#A8D8F0" stroke-width="1.5"/>
+              <rect x="9.5" y="9" width="3" height="9.5" rx="1" stroke="#A8D8F0" stroke-width="1.5"/>
+              <rect x="15.5" y="5" width="3" height="13.5" rx="1" stroke="#A8D8F0" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="ag-content">
+            <h3 class="ag-title">Budget-Einschätzung</h3>
+            <p class="ag-body">Was kostet ein Klick in deiner Branche? Wie viel Budget brauchst du für spürbare Ergebnisse? Wir sagen dir ehrlich, was nötig ist.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="ag-card">
+          <div class="ag-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M11 3.5V18.5M3.5 11H18.5" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 7L15 15M15 7L7 15" stroke="#A8D8F0" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="ag-content">
+            <h3 class="ag-title">Potenzial-Einschätzung</h3>
+            <p class="ag-body">Lohnt sich Google Ads für dich? Welche Kampagnenarten machen Sinn? Du bekommst eine klare Empfehlung — auch wenn die Antwort mal Nein ist.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WAS PASSIERT DANACH
+  ════════════════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec-inner">
+      <p class="sec-ey">Dein nächster Schritt</p>
+      <h2 class="sec-title">Von der Anfrage zur Einschätzung</h2>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3 class="process-title">Anfrage absenden</h3>
+          <p class="process-body">Füll das Formular aus. Dauert 3 Minuten.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3 class="process-title">Kurzes Vorgespräch</h3>
+          <p class="process-body">Wir melden uns innerhalb von 24h für ein 10-minütiges Telefonat.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3 class="process-title">Gemeinsamer Ergebnis-Call</h3>
+          <p class="process-body">Wir gehen die Analyse zusammen durch — so bleibst du nicht mit Fragen allein.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       KONTAKTFORMULAR
+  ════════════════════════════════════════════════ -->
+  <section class="sec-alt" id="kontakt">
+    <div style="max-width:580px;margin:0 auto;padding:0 24px">
+      <p class="sec-ey" style="text-align:center">Kontakt</p>
+      <h2 class="sec-title" style="text-align:center">Lieber per <em>E-Mail</em>?</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:2.5rem;font-size:15px;line-height:1.6">Schreib uns direkt — wir melden uns innerhalb von 24 Stunden bei dir.</p>
+
+      <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Name *</label>
+            <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+          </div>
+          <div>
+            <label for="k-email" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">E-Mail *</label>
+            <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+          </div>
+        </div>
+        <div>
+          <label for="k-telefon" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Telefon <span style="font-weight:400;opacity:.5">(optional)</span></label>
+          <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit">
+        </div>
+        <div>
+          <label for="k-nachricht" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Nachricht *</label>
+          <textarea id="k-nachricht" rows="4" placeholder="Worum geht es? Erzähl uns kurz von deiner Situation …" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--card);color:var(--text);font-size:14px;font-family:inherit;resize:vertical"></textarea>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
+          <input type="checkbox" id="k-dsgvo" required style="margin-top:2px">
+          <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html" style="color:#FF4D00">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+        </div>
+        <button type="submit" id="k-submit" style="padding:14px 32px;border:none;border-radius:50px;background:#FF4D00;color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(255,77,0,.35)">Nachricht senden</button>
+        <p style="text-align:center;font-size:12px;color:var(--muted);margin:0">Antwort innerhalb von 24 Stunden · Kein Spam</p>
+      </form>
+
+      <div id="kontakt-success" style="display:none;text-align:center;padding:40px 0">
+        <div style="font-size:40px;margin-bottom:12px">✓</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 8px">Nachricht gesendet!</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6">Danke für deine Nachricht — wir melden uns innerhalb von 24 Stunden bei dir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec-inner">
+      <p class="sec-ey" style="text-align:center">Häufige Fragen</p>
+      <h2 class="sec-title" style="text-align:center;margin:0 auto 0;">Noch offene Fragen?</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Was genau bekomme ich am Ende?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Wir rufen dich innerhalb von 24 Stunden an, besprechen kurz deinen Stand — und vereinbaren dann einen Call, in dem wir das Ergebnis gemeinsam durchgehen. Du bekommst eine ehrliche Einschätzung, ob und wie Google Ads für dich sinnvoll ist. Kein Pitch, keine leeren Versprechen.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Wirklich kostenlos — was ist der Haken?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Es gibt keinen. Wir machen das, weil wir keine Kunden wollen, für die Google Ads keinen Sinn macht. Wenn wir sehen, dass es passt, sprechen wir danach über eine mögliche Zusammenarbeit — ohne Druck.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Wie lange dauert das?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Das Formular dauert 3 Minuten. Wir rufen dich innerhalb von 24 Stunden an — kurzes Erstgespräch, um dein Business zu verstehen. Danach vereinbaren wir einen gemeinsamen Call, in dem wir die Analyse zusammen durchgehen.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CTA STRIP
+  ════════════════════════════════════════════════ -->
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <p class="cta-strip-eyebrow">Lieber direkt sprechen?</p>
+      <h2 class="cta-strip-title">Direkt einen Termin buchen?</h2>
+      <p class="cta-strip-body">Lieber gleich im Gespräch? Buch dir ein kostenloses 15-Minuten-Telefonat.</p>
+      <a href="averio-premium-kontakt.html" class="cta-btn">
+        Termin vereinbaren
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3.5 8H12.5M12.5 8L9 4.5M12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer>
+    © 2025 Averio Media · Marie Böttiger ·
+    <a href="averio-premium-impressum.html">Impressum</a> ·
+    
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </footer>
+
+  <script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+  <script>
+    // ── Kontaktformular ──
+    const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+    async function submitKontakt(e) {
+      e.preventDefault();
+      var btn = document.getElementById('k-submit');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet …';
+
+      try {
+        await fetch(NFORMS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            Formular:   'Kontakt – Potenzialanalyse',
+            Name:       document.getElementById('k-name').value.trim(),
+            Email:      document.getElementById('k-email').value.trim(),
+            Telefon:    document.getElementById('k-telefon').value.trim() || '–',
+            Nachricht:  document.getElementById('k-nachricht').value.trim()
+          })
+        });
+      } catch(err) { console.warn('nForms:', err); }
+
+      document.getElementById('kontakt-form').style.display = 'none';
+      document.getElementById('kontakt-success').style.display = 'block';
+    }
+
+    // ── FAQ ──
+    function faqTog(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ── GSAP Animations ──
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero fade up sequence
+    gsap.from('.hero-eyebrow', { opacity: 0, y: 20, duration: 0.7, ease: 'power2.out', delay: 0.15 });
+    gsap.from('.hero-h1',      { opacity: 0, y: 28, duration: 0.7, ease: 'power2.out', delay: 0.28 });
+    gsap.from('.hero-tagline', { opacity: 0, y: 20, duration: 0.7, ease: 'power2.out', delay: 0.42 });
+    gsap.from('.hero-badges',  { opacity: 0, y: 16, duration: 0.6, ease: 'power2.out', delay: 0.56 });
+    gsap.from('.hero-price-box', { opacity: 0, y: 32, duration: 0.8, ease: 'power3.out', delay: 0.3 });
+
+    // Analysis cards
+    ScrollTrigger.batch('.ag-card', {
+      onEnter: batch => gsap.from(batch, {
+        opacity: 0, y: 30, duration: 0.6, stagger: 0.1, ease: 'power2.out'
+      }),
+      start: 'top 88%',
+      once: true
+    });
+
+    // Process cards
+    gsap.from('.process-card', {
+      scrollTrigger: { trigger: '.process-grid', start: 'top 85%', once: true },
+      opacity: 0, y: 28, duration: 0.6, stagger: 0.15, ease: 'power2.out'
+    });
+
+    // Section titles
+    document.querySelectorAll('.sec-ey, .sec-title, .sec-body, .form-wrap, .sidebar-card, .faq-item').forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        opacity: 0, y: 20, duration: 0.55, ease: 'power2.out'
+      });
+    });
+
+    // CTA strip
+    gsap.from('.cta-strip-title, .cta-strip-body, .cta-btn', {
+      scrollTrigger: { trigger: '.cta-strip', start: 'top 88%', once: true },
+      opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power2.out'
+    });
+  </script>
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script></body>
+</html>
+
+
+
+
+
+
+
+

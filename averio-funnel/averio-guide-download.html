@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Guide – Download | Averio Media</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.12), transparent 60%);
+  pointer-events: none;
+}
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -200px; left: 20%;
+  width: 500px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.06), transparent 60%);
+  pointer-events: none;
+}
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 56px; text-decoration: none;
+}
+.logo-mark {
+  width: 36px; height: 36px; background: #FF4D00;
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+}
+.logo-name {
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800;
+  color: #fff; letter-spacing: -.02em;
+}
+.card {
+  position: relative; z-index: 2; text-align: center;
+  max-width: 560px; width: 100%;
+}
+.check-circle {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(255,77,0,.12); border: 2px solid rgba(255,77,0,.3);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 32px;
+  animation: popIn .5s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+@keyframes popIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid rgba(255,77,0,.3); background: rgba(255,77,0,.08);
+  color: #FF4D00; font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px; margin-bottom: 24px;
+}
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #FF4D00; box-shadow: 0 0 6px #FF4D00; }
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(26px, 4.5vw, 38px); font-weight: 800;
+  letter-spacing: -.03em; line-height: 1.15; margin-bottom: 14px; color: #fff;
+}
+h1 span { color: #FF4D00; }
+.sub {
+  font-size: 15px; color: rgba(255,255,255,.5); line-height: 1.75;
+  margin-bottom: 36px; max-width: 420px; margin-left: auto; margin-right: auto;
+}
+
+/* Single guide card */
+.guide-box {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,77,0,.2);
+  border-radius: 16px; padding: 28px 32px; margin-bottom: 28px;
+  text-align: left;
+}
+.guide-box-eyebrow {
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.3); margin-bottom: 10px;
+}
+.guide-box-title {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(16px, 2.5vw, 20px); color: #fff;
+  letter-spacing: -.02em; line-height: 1.25; margin-bottom: 20px;
+}
+.btn-guide {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #FF4D00; color: #fff; text-decoration: none;
+  border-radius: 100px; padding: 14px 28px;
+  font-size: 14px; font-weight: 700; font-family: 'DM Sans', sans-serif;
+  transition: background .2s; cursor: pointer;
+  box-shadow: 0 8px 28px rgba(255,77,0,.35);
+}
+.btn-guide:hover { background: #e04300; }
+
+/* All guides list (fallback) */
+.guides-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.guide-item {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px; padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  text-decoration: none; color: #fff;
+  transition: border-color .2s, background .2s;
+  cursor: pointer;
+}
+.guide-item:hover { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.05); }
+.guide-item-title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); text-align: left; }
+.guide-item-tag {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .1em;
+  color: #FF4D00; border: 1px solid rgba(255,77,0,.25);
+  background: rgba(255,77,0,.06); border-radius: 100px;
+  padding: 3px 10px; white-space: nowrap; flex-shrink: 0;
+}
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,.35); text-decoration: none;
+  font-size: 13px; transition: color .2s;
+}
+.btn-secondary:hover { color: rgba(255,255,255,.7); }
+
+.divider { width: 48px; height: 1px; background: rgba(255,255,255,.08); margin: 32px auto; }
+.footer-text { font-size: 11px; color: rgba(255,255,255,.18); line-height: 1.7; }
+.footer-text a { color: rgba(255,255,255,.3); text-decoration: none; }
+.footer-text a:hover { color: rgba(255,255,255,.6); }
+</style>
+</head>
+<body>
+
+<a href="https://averiomedia.de/" class="logo">
+  <div class="logo-mark">
+    <svg viewBox="0 0 36 36" fill="none" width="22" height="22">
+      <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+  </div>
+  <span class="logo-name">Averio Media</span>
+</a>
+
+<div class="card">
+  <div class="check-circle">
+    <svg width="36" height="36" fill="none" viewBox="0 0 24 24">
+      <path d="M5 13l4 4L19 7" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="badge"><div class="badge-dot"></div>E-Mail bestätigt</div>
+
+  <h1 id="page-title">Dein Guide ist<br><span>bereit.</span></h1>
+  <p class="sub" id="page-sub">Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.</p>
+
+  <!-- Single guide (wird per JS befüllt wenn localStorage vorhanden) -->
+  <div class="guide-box" id="single-guide" style="display:none;">
+    <div class="guide-box-eyebrow">Dein Guide</div>
+    <div class="guide-box-title" id="single-guide-title">—</div>
+    <a href="#" id="single-guide-btn" class="btn-guide" target="_blank" rel="noopener">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Guide öffnen &amp; herunterladen
+    </a>
+  </div>
+
+  <!-- Alle Guides (Fallback wenn kein localStorage) -->
+  <div id="all-guides" style="display:none;">
+    <div class="guides-list">
+      <a href="guides/averio-guide-1-budgetfehler.html" class="guide-item" target="_blank" rel="noopener">
+        <span class="guide-item-title">10 Budgetvernichtende Google Ads Fehler</span>
+        <span class="guide-item-tag">Öffnen</span>
+      </a>
+      <a href="guides/averio-guide-2-checkliste.html" class="guide-item" target="_blank" rel="noopener">
+        <span class="guide-item-title">Die 6-Punkte-Checkliste für profitable Google Ads</span>
+        <span class="guide-item-tag">Öffnen</span>
+      </a>
+      <a href="guides/averio-guide-3-optimierung.html" class="guide-item" target="_blank" rel="noopener">
+        <span class="guide-item-title">Google Ads Step-by-Step Optimierung</span>
+        <span class="guide-item-tag">Öffnen</span>
+      </a>
+      <a href="guides/averio-guide-4-negative-keywords.html" class="guide-item" target="_blank" rel="noopener">
+        <span class="guide-item-title">Negative-Keyword-Bibel für 12 Branchen</span>
+        <span class="guide-item-tag">Öffnen</span>
+      </a>
+      <a href="guides/averio-guide-5-tracking.html" class="guide-item" target="_blank" rel="noopener">
+        <span class="guide-item-title">GA4 &amp; Conversion-Tracking Setup</span>
+        <span class="guide-item-tag">Öffnen</span>
+      </a>
+    </div>
+  </div>
+
+  <a href="averio-premium-guides.html" class="btn-secondary">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Alle Guides ansehen
+  </a>
+
+  <div class="divider"></div>
+  <p class="footer-text">
+    Averio Media · Marie Böttiger ·
+    <a href="https://averiomedia.de/averio-premium-impressum.html">Impressum</a> ·
+    <a href="https://averiomedia.de/averio-premium-datenschutz.html">Datenschutz</a>
+  </p>
+</div>
+
+<script>
+(function() {
+  const GUIDE_MAP = {
+    'guide-1':    { title: '10 Budgetvernichtende Google Ads Fehler',          url: 'guides/averio-guide-1-budgetfehler.html',  btnText: 'Guide öffnen & herunterladen' },
+    'guide-2':    { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', url: 'guides/averio-guide-2-checkliste.html',   btnText: 'Guide öffnen & herunterladen' },
+    'guide-3':    { title: 'Google Ads Step-by-Step Optimierung',               url: 'guides/averio-guide-3-optimierung.html',  btnText: 'Guide öffnen & herunterladen' },
+    'guide-4':    { title: 'Negative-Keyword-Bibel für 12 Branchen',            url: 'guides/averio-guide-4-negative-keywords.html', btnText: 'Guide öffnen & herunterladen' },
+    'guide-5':    { title: 'GA4 & Conversion-Tracking Setup',                   url: 'guides/averio-guide-5-tracking.html',    btnText: 'Guide öffnen & herunterladen' },
+    'preisliste': { title: 'Preisliste Averio Media',                            url: 'averio-preisliste-download.html',        btnText: 'Preisliste jetzt öffnen' },
+  };
+
+  let guideId = null;
+  try {
+    guideId = localStorage.getItem('av_pendingGuide');
+    const name = localStorage.getItem('av_pendingGuideName');
+    // Nach dem Lesen sofort löschen
+    localStorage.removeItem('av_pendingGuide');
+    localStorage.removeItem('av_pendingGuideName');
+
+    // Seite an Preisliste anpassen
+    const isPreisliste = guideId === 'preisliste';
+    if (isPreisliste) {
+      document.getElementById('page-title').innerHTML = 'Deine Preisliste ist<br><span>bereit.</span>';
+      document.getElementById('page-sub').textContent = 'Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst die vollständige Preisliste jetzt direkt öffnen.';
+    }
+
+    // Name personalisieren wenn vorhanden
+    if (name) {
+      const sub = document.getElementById('page-sub');
+      if (sub) {
+        if (isPreisliste) {
+          sub.textContent = 'Hallo ' + name + ', deine E-Mail wurde bestätigt. Hier ist deine persönliche Preisliste mit allen Konditionen.';
+        } else {
+          sub.textContent = 'Hallo ' + name + ', deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.';
+        }
+      }
+    }
+  } catch(e) {}
+
+  const guide = guideId ? GUIDE_MAP[guideId] : null;
+
+  if (guide) {
+    // Spezifischer Guide / Preisliste bekannt → Single-Box anzeigen
+    document.getElementById('single-guide-title').textContent = guide.title;
+    const btn = document.getElementById('single-guide-btn');
+    btn.href = guide.url;
+    // Button-Text anpassen
+    btn.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ' + guide.btnText;
+    document.getElementById('single-guide').style.display = 'block';
+    // Eyebrow anpassen
+    if (guideId === 'preisliste') {
+      document.querySelector('.guide-box-eyebrow').textContent = 'Deine Preisliste';
+    }
+  } else {
+    // Kein localStorage-Wert (z.B. E-Mail auf anderem Gerät geöffnet) → alle Guides anzeigen
+    document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>deine <span>Guides</span> warten.';
+    document.getElementById('page-sub').textContent = 'Deine E-Mail wurde erfolgreich bestätigt. Öffne einfach den Guide, den du angefragt hast:';
+    document.getElementById('all-guides').style.display = 'block';
+  }
+})();
+</script>
+
+</body>
+</html>

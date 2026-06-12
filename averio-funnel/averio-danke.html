@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dein Guide ist gesichert – Averio Media</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; line-height: 1.7; overflow-x: hidden; }
+
+/* ── NAV ── */
+.nav {
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+  width: calc(100% - 40px); max-width: 900px; z-index: 100;
+  background: rgba(10,10,10,.85); backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.07); border-radius: 100px;
+  padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-mark { width: 30px; height: 30px; background: #FF4D00; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+.nav-logo-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+.nav-back { font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+.nav-back:hover { color: rgba(255,255,255,.7); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; text-align: center; padding: 120px 24px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,77,0,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+  background: linear-gradient(to bottom, transparent, #080808);
+  pointer-events: none;
+}
+
+.confirm-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.25);
+  border-radius: 100px; padding: 7px 16px; margin-bottom: 28px;
+}
+.confirm-icon {
+  width: 20px; height: 20px; border-radius: 50%; background: #FF4D00;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.confirm-icon svg { display: block; }
+.confirm-text { font-size: 12px; font-weight: 700; color: #FF4D00; letter-spacing: .06em; text-transform: uppercase; }
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800; line-height: 1.0; letter-spacing: -.03em;
+  color: #fff; margin-bottom: 20px; max-width: 700px;
+}
+.hero-title em { color: #FF4D00; font-style: normal; }
+
+.hero-sub {
+  font-size: clamp(15px, 2vw, 17px); color: rgba(255,255,255,.5);
+  line-height: 1.75; max-width: 500px; margin: 0 auto 40px;
+}
+
+.hero-arrow {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: rgba(255,255,255,.2); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  animation: bounce-down 2s ease-in-out infinite;
+}
+.hero-arrow svg { opacity: .3; }
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ── BRIDGE ── */
+.bridge {
+  background: #0d0d0d; border-top: 1px solid rgba(255,255,255,.09);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  padding: 80px 24px; text-align: center;
+}
+.bridge-label {
+  font-size: 11px; font-weight: 700; color: #FF4D00;
+  letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px;
+}
+.bridge-title {
+  font-family: 'Syne', sans-serif; font-size: clamp(24px, 4vw, 38px);
+  font-weight: 800; letter-spacing: -.025em; line-height: 1.1;
+  color: #fff; max-width: 640px; margin: 0 auto 16px;
+}
+.bridge-title em { color: #FF4D00; font-style: normal; }
+.bridge-text {
+  font-size: 15px; color: rgba(255,255,255,.45); max-width: 500px;
+  margin: 0 auto; line-height: 1.8;
+}
+
+/* ── VALUE SECTION ── */
+.value-sec {
+  max-width: 900px; margin: 0 auto; padding: 80px 24px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.value-left {}
+.value-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; font-weight: 700; color: #FF4D00;
+  letter-spacing: .12em; text-transform: uppercase; margin-bottom: 16px;
+}
+.value-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #FF4D00; box-shadow: 0 0 6px #FF4D00; }
+.value-title {
+  font-family: 'Syne', sans-serif; font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800; letter-spacing: -.025em; line-height: 1.15;
+  color: #fff; margin-bottom: 16px;
+}
+.value-desc { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.85; margin-bottom: 28px; }
+.value-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.value-point {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.6;
+}
+.value-point-dot {
+  width: 20px; height: 20px; min-width: 20px; border-radius: 50%;
+  background: rgba(255,77,0,.12); border: 1px solid rgba(255,77,0,.25);
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.value-point-dot svg { display: block; }
+.value-note {
+  margin-top: 20px; font-size: 12px; color: rgba(255,255,255,.2);
+  border-left: 2px solid rgba(255,77,0,.25); padding-left: 12px; line-height: 1.6;
+}
+
+/* Steps card */
+.value-right {}
+.steps-card {
+  background: #111; border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 0;
+}
+.step-row {
+  display: flex; gap: 20px; padding: 20px 0; position: relative;
+}
+.step-row:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,.09); }
+.step-num-col { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.step-num {
+  width: 36px; height: 36px; border-radius: 50%; background: #0d0d0d;
+  border: 1px solid rgba(255,77,0,.3); display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #FF4D00;
+  flex-shrink: 0;
+}
+.step-connector {
+  width: 1px; flex: 1; background: rgba(255,77,0,.1); margin-top: 6px;
+}
+.step-body { padding-top: 6px; }
+.step-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.step-text { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.65; }
+.step-tag {
+  display: inline-block; font-size: 10px; font-weight: 600;
+  color: rgba(255,255,255,.3); background: rgba(255,255,255,.09);
+  border-radius: 100px; padding: 2px 9px; margin-top: 6px; letter-spacing: .03em;
+}
+
+/* ── CTA SECTION ── */
+.cta-sec {
+  background: #0d0d0d; border-top: 1px solid rgba(255,255,255,.09);
+  padding: 80px 24px;
+}
+.cta-inner {
+  max-width: 580px; margin: 0 auto; text-align: center;
+}
+.cta-label { font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+.cta-title {
+  font-family: 'Syne', sans-serif; font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 800; letter-spacing: -.025em; line-height: 1.1;
+  color: #fff; margin-bottom: 12px;
+}
+.cta-sub { font-size: 14px; color: rgba(255,255,255,.4); line-height: 1.8; margin-bottom: 40px; }
+
+.cta-form {
+  background: #111; border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px; padding: 32px; text-align: left;
+  position: relative; overflow: hidden;
+}
+.cta-form::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,77,0,.5), transparent);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.form-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .05em; text-transform: uppercase; }
+.form-input, .form-select, .form-textarea {
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px; padding: 12px 14px; font-size: 14px; color: #fff;
+  font-family: 'DM Sans', sans-serif; width: 100%; outline: none; transition: border-color .2s;
+}
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,.2); }
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: rgba(255,77,0,.4); background: rgba(255,77,0,.03);
+}
+.form-select { appearance: none; cursor: pointer; color: rgba(255,255,255,.5); }
+.form-select option { background: #1a1a1a; color: #fff; }
+.form-textarea { resize: vertical; min-height: 90px; }
+.form-dsgvo {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 12px; color: rgba(255,255,255,.3); line-height: 1.6; margin: 16px 0;
+}
+.form-dsgvo input { margin-top: 2px; accent-color: #FF4D00; flex-shrink: 0; }
+.form-dsgvo a { color: rgba(255,255,255,.4); }
+.form-submit {
+  width: 100%; background: #FF4D00; color: #fff; border: none;
+  border-radius: 100px; padding: 15px 28px; font-size: 15px; font-weight: 700;
+  font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: -.01em;
+  transition: opacity .2s, transform .15s; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-submit:hover { opacity: .88; transform: translateY(-1px); }
+.form-submit:active { transform: translateY(0); }
+.form-fine { font-size: 11px; color: rgba(255,255,255,.15); text-align: center; margin-top: 12px; }
+
+/* ── SUCCESS STATE ── */
+.form-success {
+  display: none; text-align: center; padding: 20px 0;
+}
+.form-success.active { display: block; }
+.success-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.3);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.success-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+.success-text { font-size: 14px; color: rgba(255,255,255,.4); line-height: 1.75; }
+
+/* ── SOCIAL PROOF ── */
+.proof-sec {
+  max-width: 900px; margin: 0 auto; padding: 64px 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+.proof-item { padding: 32px 28px; position: relative; }
+.proof-item:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 20%; bottom: 20%;
+  width: 1px; background: rgba(255,255,255,.09);
+}
+.proof-num {
+  font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800;
+  color: #FF4D00; letter-spacing: -.03em; line-height: 1; margin-bottom: 6px;
+}
+.proof-label { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.5; }
+
+/* ── FOOTER ── */
+.page-footer {
+  border-top: 1px solid rgba(255,255,255,.09); padding: 24px;
+  text-align: center; font-size: 12px; color: rgba(255,255,255,.2);
+}
+.page-footer a { color: rgba(255,255,255,.3); text-decoration: none; }
+.page-footer a:hover { color: rgba(255,255,255,.5); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .value-sec { grid-template-columns: 1fr; gap: 40px; }
+  .proof-sec { grid-template-columns: 1fr; }
+  .proof-item::after { display: none; }
+  .proof-item { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.09); }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="averio-premium-guides.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="9" width="4" height="7" rx="1" fill="#fff"/><rect x="7" y="5" width="4" height="11" rx="1" fill="#fff"/><rect x="12" y="1" width="4" height="15" rx="1" fill="rgba(255,255,255,.4)"/></svg>
+    </div>
+    <div class="nav-logo-name">Averio Media</div>
+  </a>
+  <a href="averio-premium-guides.html" class="nav-back">← Zurück zu den Guides</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="confirm-badge">
+    <div class="confirm-icon">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="confirm-text">Guide gesichert</div>
+  </div>
+  <h1 class="hero-title">Dein Guide ist<br><em>auf dem Weg</em> zu dir.</h1>
+  <p class="hero-sub">Schau in dein Postfach — der Download-Link ist bereits unterwegs. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.</p>
+  <div class="hero-arrow">
+    <span>Noch eine Sache</span>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M4 10l5 5 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<!-- ── BRIDGE ── -->
+<section class="bridge">
+  <div class="bridge-label">Bevor du weitermachst</div>
+  <h2 class="bridge-title">Weißt du, wie viel Potenzial<br>in deinen Google Ads steckt?</h2>
+  <p class="bridge-text">Die meisten Kampagnen lassen 30–60 % ihres Budgets liegen — nicht aus Unwissen, sondern weil niemand genau hinschaut. Das können wir ändern.</p>
+</section>
+
+<!-- ── VALUE ── -->
+<section class="value-sec">
+  <div class="value-left">
+    <div class="value-tag"><div class="value-tag-dot"></div>Kostenlos · Unverbindlich</div>
+    <h3 class="value-title">Kostenlose Potenzial&shy;analyse für deine Google Ads</h3>
+    <p class="value-desc">In einem kurzen Gespräch schaue ich mir deine aktuelle Situation an — und zeige dir konkret, wo Budgetverschwendung passiert und was sofort besser werden kann.</p>
+    <ul class="value-points">
+      <li class="value-point">
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>Ich analysiere dein Google Ads-Konto oder deine Ausgangssituation</span>
+      </li>
+      <li class="value-point">
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>Du bekommst konkrete Verbesserungspotenziale — keine Floskeln</span>
+      </li>
+      <li class="value-point">
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>Kein Verkaufsgespräch — nur ehrliche Einschätzung</span>
+      </li>
+      <li class="value-point">
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>30 Minuten — vollständig kostenlos und unverbindlich</span>
+      </li>
+    </ul>
+    <p class="value-note">Passt die Zusammenarbeit danach für beide Seiten? Dann besprechen wir nächste Schritte. Wenn nicht, hast du zumindest Klarheit.</p>
+  </div>
+  <div class="value-right">
+    <div class="steps-card">
+      <div class="step-row">
+        <div class="step-num-col">
+          <div class="step-num">1</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Kurzanalyse</div>
+          <div class="step-text">Du trägst dich ein und teilst mir kurz deine Situation. Ich bereite mich vor — kein Cold Call, kein Script.</div>
+          <div class="step-tag">5 Minuten für dich</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num-col">
+          <div class="step-num">2</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Erstgespräch</div>
+          <div class="step-text">Wir sprechen 30 Minuten über deine Kampagnen, dein Budget und wo das meiste Potenzial liegt.</div>
+          <div class="step-tag">30 Min · Video oder Telefon</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num-col">
+          <div class="step-num">3</div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Konkrete Empfehlung</div>
+          <div class="step-text">Du bekommst eine klare Einschätzung — was sofort optimiert werden kann, was es kostet und ob wir zusammenpassen.</div>
+          <div class="step-tag">Ohne Verpflichtung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF ── -->
+<div class="proof-sec">
+  <div class="proof-item">
+    <div class="proof-num">-40%</div>
+    <div class="proof-label">Durchschnittliche Kosteneinsparung<br>im ersten Quartal</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-num">30 Min</div>
+    <div class="proof-label">Analyse — vollständig<br>kostenlos und unverbindlich</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-num">B2B</div>
+    <div class="proof-label">Fokus auf Dienstleister, Handwerk<br>und lokale Unternehmen</div>
+  </div>
+</div>
+
+<!-- ── CTA FORM ── -->
+<section class="cta-sec">
+  <div class="cta-inner">
+    <div class="cta-label">Jetzt eintragen</div>
+    <h2 class="cta-title">Potenzialanalyse<br>sichern — kostenlos</h2>
+    <p class="cta-sub">Trag dich ein. Ich melde mich innerhalb von 24 Stunden mit einem Terminvorschlag.</p>
+
+    <div class="cta-form">
+      <div id="pa-form-inner">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Vorname *</label>
+            <input class="form-input" type="text" id="pa-name" placeholder="Max" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Unternehmen</label>
+            <input class="form-input" type="text" id="pa-company" placeholder="Mustermann GmbH" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-Mail-Adresse *</label>
+          <input class="form-input" type="email" id="pa-email" placeholder="max@mustermann.de" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Monatliches Google Ads Budget</label>
+          <select class="form-select" id="pa-budget">
+            <option value="" disabled selected>Bitte wählen…</option>
+            <option value="unter-500">Noch kein aktives Budget</option>
+            <option value="500-1000">500 – 1.000 €</option>
+            <option value="1000-3000">1.000 – 3.000 €</option>
+            <option value="3000-5000">3.000 – 5.000 €</option>
+            <option value="5000+">5.000 € +</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Was ist deine größte Herausforderung? (optional)</label>
+          <textarea class="form-textarea" id="pa-message" placeholder="z.B. Zu viel Budget, zu wenige Anfragen. Oder: Ich weiß nicht, ob meine Kampagnen überhaupt funktionieren."></textarea>
+        </div>
+        <label class="form-dsgvo">
+          <input type="checkbox" id="pa-dsgvo">
+          Ich habe die <a href="averio-premium-datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten für die Kontaktaufnahme zu.
+        </label>
+        <button class="form-submit" onclick="submitPA()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlose Potenzialanalyse anfragen
+        </button>
+        <p class="form-fine">Kein Spam · Kein Verkaufsdruck · Antwort innerhalb 24 h</p>
+      </div>
+
+      <div class="form-success" id="pa-success">
+        <div class="success-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l5.5 5.5L22 8" stroke="#FF4D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="success-title">Perfekt — ich melde mich bald!</div>
+        <p class="success-text">Deine Anfrage ist angekommen. Ich schaue mir deine Situation vor dem Gespräch an und melde mich innerhalb von 24 Stunden mit einem Terminvorschlag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="page-footer">
+  © 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
+  <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
+  
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="cookie-banner.js"></script>
+<script>
+// ── nForms Konfiguration
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+
+// ── Lese Guide-Name aus URL-Parameter
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const guide  = params.get('guide');
+  if (guide) {
+    const map = {
+      'guide-1': '10 Budgetvernichtende Fehler',
+      'guide-2': '6 Punkte Checkliste',
+      'guide-3': 'Step-by-Step Optimierung',
+      'guide-4': 'Negative-Keyword-Bibel',
+      'guide-5': 'GA4 Tracking Setup'
+    };
+    if (map[guide]) {
+      const sub = document.querySelector('.hero-sub');
+      if (sub) sub.innerHTML = `„<em style="color:rgba(255,255,255,.7);font-style:normal;">${map[guide]}</em>" — der Download-Link ist bereits auf dem Weg. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.`;
+    }
+  }
+})();
+
+// ── Formular absenden
+async function submitPA() {
+  const name  = document.getElementById('pa-name').value.trim();
+  const email = document.getElementById('pa-email').value.trim();
+  const dsgvo = document.getElementById('pa-dsgvo').checked;
+
+  if (!name || !email) { alert('Bitte Vorname und E-Mail ausfüllen.'); return; }
+  if (!dsgvo) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+
+  const btn = document.querySelector('.form-submit');
+  btn.style.opacity = '.6';
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="animation:spin 1s linear infinite"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20" stroke-dashoffset="5"/></svg> Wird gesendet…';
+
+  const company = document.getElementById('pa-company')?.value.trim() || '';
+  const budget  = document.getElementById('pa-budget')?.value || '';
+  const msg     = document.getElementById('pa-message')?.value.trim() || '';
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular:        'Potenzialanalyse (Danke-Seite)',
+        Name:            name,
+        Email:           email,
+        Unternehmen:     company || '—',
+        Budget:          budget  || '—',
+        Herausforderung: msg     || '—'
+      })
+    });
+  } catch(err) { console.warn('nForms:', err); }
+
+  document.getElementById('pa-form-inner').style.display = 'none';
+  document.getElementById('pa-success').classList.add('active');
+}
+
+// ── Animationen
+gsap.from('.confirm-badge', { opacity: 0, y: -16, duration: .6, ease: 'power2.out' });
+gsap.from('.hero-title',    { opacity: 0, y: 24, duration: .75, delay: .15, ease: 'power2.out' });
+gsap.from('.hero-sub',      { opacity: 0, y: 20, duration: .7, delay: .3, ease: 'power2.out' });
+gsap.from('.hero-arrow',    { opacity: 0, duration: .6, delay: .7, ease: 'power2.out' });
+
+const style = document.createElement('style');
+style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+document.head.appendChild(style);
+</script>
+</body>
+</html>
+
+
+

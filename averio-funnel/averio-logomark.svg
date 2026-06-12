@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" width="512" height="512">
+  <!-- Orange rounded square background -->
+  <rect width="512" height="512" rx="112" fill="#FF4D00"/>
+  <!-- Triangle / A-Shape -->
+  <path d="M256 96L384 384H128L256 96Z" fill="none" stroke="#FFFFFF" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Horizontal bar (crossbar of the A) -->
+  <line x1="166" y1="308" x2="346" y2="308" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" opacity="0.8"/>
+</svg>
