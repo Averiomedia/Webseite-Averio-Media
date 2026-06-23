@@ -409,15 +409,54 @@ body {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DigitalDocument",
-  "name": "10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide",
-  "description": "Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen — und wie du sie ab sofort vermeidest. Von Averio Media.",
-  "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
-  "author": { "@type": "Person", "name": "Marie Böttiger" },
-  "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-  "inLanguage": "de-DE",
-  "keywords": "Google Ads, SEA, Kampagnenoptimierung, Freelancer"
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html#article",
+      "headline": "10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide",
+      "description": "Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen — und wie du sie ab sofort vermeidest.",
+      "url": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
+      "inLanguage": "de-DE",
+      "author": {
+        "@type": "Person",
+        "name": "Marie Böttiger",
+        "jobTitle": "Google Ads Freelancerin",
+        "url": "https://averiomedia.de/averio-premium-ueber-uns.html",
+        "worksFor": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+        "knowsAbout": ["Google Ads", "B2B Marketing", "Suchmaschinenmarketing", "Conversion Tracking", "GA4", "Kampagnenoptimierung"]
+      },
+      "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de", "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/averio-media-logo.png" } },
+      "datePublished": "2025-01-15",
+      "dateModified": "2026-06-23",
+      "mainEntityOfPage": "https://averiomedia.de/guides/averio-guide-1-budgetfehler.html",
+      "keywords": ["Google Ads Fehler", "Google Ads Budget", "Kampagnenoptimierung", "Conversion Tracking", "Negative Keywords", "Smart Bidding"],
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".error-title", ".error-desc", ".error-fix-text"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://averiomedia.de/averio-premium-guides.html" },
+        { "@type": "ListItem", "position": 3, "name": "10 Budgetvernichtende Fehler" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Google Ads Budget-Fehler vermeiden",
+      "description": "10 häufige Fehler in Google Ads Kampagnen erkennen und beheben",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Conversion-Tracking einrichten", "text": "Richte in Google Ads Conversion-Aktionen ein: Formulareinsendungen, Anrufe, Terminbuchungen. Prüfe unter Ziele, dass deine Conversions aktiv und korrekt zählen." },
+        { "@type": "HowToStep", "position": 2, "name": "Broad Match kontrollieren", "text": "Nutze bewusst Exact Match und Phrase Match. Bei Broad Match kontrolliere täglich den Suchbegriffsbericht und schließe irrelevante Begriffe aus." },
+        { "@type": "HowToStep", "position": 3, "name": "Negative Keywords pflegen", "text": "Erstelle vor Kampagnenstart eine Negative-Keyword-Liste. Pflege sie wöchentlich anhand des Suchbegriffsberichts." },
+        { "@type": "HowToStep", "position": 4, "name": "Netzwerke trennen", "text": "Erstelle immer separate Kampagnen für Suchnetzwerk und Display-Netzwerk. Display-Klicks haben 5-10x niedrigere Conversion-Rate." },
+        { "@type": "HowToStep", "position": 5, "name": "Smart Bidding richtig einsetzen", "text": "Wechsle erst zu Smart Bidding, wenn du mindestens 30 Conversions in 30 Tagen hast. Vorher: Manueller CPC oder Klicks maximieren." }
+      ]
+    }
+  ]
 }
 </script>
 </head>

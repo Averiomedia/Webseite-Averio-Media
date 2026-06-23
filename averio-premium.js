@@ -8,10 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ── LENIS SMOOTH SCROLL ──────────────────────────────── */
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: 1.0,
   easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smooth: true,
   smoothTouch: false,
+  syncTouch: false,
 });
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add(time => lenis.raf(time * 1000));
@@ -131,32 +132,34 @@ function initEntryAnimations() {
   }
 
   function build() {
-    const count = Math.max(40, Math.floor(canvas.width * canvas.height / 7000));
+    const isMobile = window.innerWidth <= 768;
+    const count = isMobile ? 25 : Math.max(40, Math.floor(canvas.width * canvas.height / 7000));
     particles = Array.from({ length: count }, () => new Particle());
   }
   build();
 
   function drawConnections() {
     const maxDist = 110;
+    const maxDist2 = maxDist * maxDist;
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const baseAlpha = isLight ? .13 : .07;
+    ctx.strokeStyle = '#FF4D00';
+    ctx.lineWidth = .6;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
-        const d  = Math.sqrt(dx * dx + dy * dy);
-        if (d < maxDist) {
-          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-          ctx.save();
-          ctx.globalAlpha = (1 - d / maxDist) * (isLight ? .13 : .07);
-          ctx.strokeStyle = '#FF4D00';
-          ctx.lineWidth = .6;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < maxDist2) {
+          ctx.globalAlpha = (1 - Math.sqrt(d2) / maxDist) * baseAlpha;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
           ctx.stroke();
-          ctx.restore();
         }
       }
     }
+    ctx.globalAlpha = 1;
   }
 
   let running = true;

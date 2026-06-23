@@ -206,15 +206,42 @@ body {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DigitalDocument",
-  "name": "6 Punkte Google Ads Checkliste – Kostenloser Download",
-  "description": "Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance. Kostenlos von Averio Media.",
-  "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
-  "author": { "@type": "Person", "name": "Marie Böttiger" },
-  "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-  "inLanguage": "de-DE",
-  "keywords": "Google Ads, SEA, Kampagnenoptimierung, Freelancer"
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://averiomedia.de/guides/averio-guide-2-checkliste.html#article",
+      "headline": "6 Punkte Google Ads Checkliste",
+      "description": "Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance.",
+      "url": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
+      "inLanguage": "de-DE",
+      "author": {
+        "@type": "Person",
+        "name": "Marie Böttiger",
+        "jobTitle": "Google Ads Freelancerin",
+        "url": "https://averiomedia.de/averio-premium-ueber-uns.html",
+        "worksFor": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+        "knowsAbout": ["Google Ads", "B2B Marketing", "Suchmaschinenmarketing", "Conversion Tracking", "GA4", "Kampagnenoptimierung"]
+      },
+      "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de", "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/averio-media-logo.png" } },
+      "datePublished": "2025-01-15",
+      "dateModified": "2026-06-23",
+      "mainEntityOfPage": "https://averiomedia.de/guides/averio-guide-2-checkliste.html",
+      "keywords": ["Google Ads Checkliste", "Kampagnen-Audit", "Google Ads Prüfpunkte", "Kampagnenperformance"],
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".check-title", ".check-desc"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://averiomedia.de/averio-premium-guides.html" },
+        { "@type": "ListItem", "position": 3, "name": "6 Punkte Checkliste" }
+      ]
+    }
+  ]
 }
 </script>
 </head>
