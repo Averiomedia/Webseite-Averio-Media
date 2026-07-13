@@ -1139,6 +1139,7 @@ html[data-theme="light"] .zus-footer a         { color: #495057 !important; }
     <p style="text-align:center;color:var(--muted);margin-bottom:2.5rem;font-size:15px;line-height:1.6">Schreib uns direkt — wir melden uns innerhalb von 24 Stunden bei dir.</p>
 
     <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+      <input type="text" name="website" id="k-website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div>
           <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px">Name *</label>
@@ -1253,9 +1254,14 @@ function selectRadio(groupId, clicked) {
 
 /* ══ KONTAKTFORMULAR ════════════════════════════════════════════ */
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+const FORM_LOADED = Date.now();
 
 async function submitKontakt(e) {
   e.preventDefault();
+
+  if (document.getElementById('k-website').value) return;
+  if (Date.now() - FORM_LOADED < 3000) return;
+
   var btn = document.getElementById('k-submit');
   btn.disabled = true;
   btn.textContent = 'Wird gesendet …';
