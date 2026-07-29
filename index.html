@@ -323,6 +323,28 @@
 .cta-sub { color: #999 !important; }
 .cta-note { color: rgba(168,216,240,.45) !important; }
 .faq-a-inner { color: #aaa !important; }
+
+/* ── Kontakt-Section ── */
+#kontakt input, #kontakt textarea { outline: none; }
+#kontakt input:focus, #kontakt textarea:focus { border-color: #2563EB !important; }
+@media (max-width: 768px) {
+  #kontakt .section-head { flex-direction: column; }
+  #kontakt [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  #kontakt [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+}
+html[data-theme="light"] #kontakt input,
+html[data-theme="light"] #kontakt textarea {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  border-color: #e0e0e0 !important;
+}
+html[data-theme="light"] #kontakt label { color: #555 !important; }
+html[data-theme="light"] #kontakt [style*="color:#fff"] { color: #1a1a1a !important; }
+html[data-theme="light"] #kontakt [style*="color:#888"] { color: #666 !important; }
+html[data-theme="light"] #kontakt [style*="background:var(--card-bg"] {
+  background: rgba(0,0,0,.02) !important;
+  border-color: #e5e7eb !important;
+}
 </style>
 
 <!-- ── Cookie Banner CSS ── -->
@@ -468,17 +490,9 @@
     <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
     <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
     <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
-    <li class="nav-dropdown-wrap">
-      <a href="averio-premium-angebote.html" class="nav-dropdown-trigger">Angebot</a>
-      <ul class="nav-dropdown">
-        <li><a href="averio-premium-angebot-kampagnencheck.html"><span class="ndd-title">Kampagnencheck</span><span class="ndd-badge">Auf Anfrage</span><span class="ndd-sub">Audit deines bestehenden Kontos</span></a></li>
-        <li><a href="averio-premium-angebot-potenzialanalyse.html"><span class="ndd-title">Potenzialanalyse</span><span class="ndd-badge">Kostenlos</span><span class="ndd-sub">Für Einsteiger &amp; Neustarter</span></a></li>
-        <li><a href="averio-premium-angebot-zusammenarbeit.html"><span class="ndd-title">Zusammenarbeit anfragen</span><span class="ndd-badge">Laufend</span><span class="ndd-sub">Professionelle monatliche Betreuung</span></a></li>
-      </ul>
-    </li>
-    <li><a href="averio-premium-preisliste.html">Preisliste</a></li>
     <li><a href="averio-premium-guides.html">Guides</a></li>
     <li><a href="averio-premium-faq.html">FAQ</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
   </ul>
 
   <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
@@ -486,7 +500,7 @@
     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
 
-  <a href="averio-premium-kontakt.html" target="_blank" rel="noopener" class="nav-cta magnetic" style="text-decoration:none">Kurzes Gespräch buchen</a>
+  <a href="#kontakt" class="nav-cta magnetic" style="text-decoration:none">Kurzes Gespräch buchen</a>
 
   <!-- Hamburger (nur Mobile) -->
   <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
@@ -501,13 +515,12 @@
     <li><a href="averio-premium-ueber-uns.html"   onclick="closeMobileMenu()">Über uns</a></li>
     <li><a href="averio-premium-zusammenarbeit.html" onclick="closeMobileMenu()">Zusammenarbeit</a></li>
     <li><a href="averio-premium-ergebnisse.html"  onclick="closeMobileMenu()">Ergebnisse</a></li>
-    <li><a href="averio-premium-angebote.html"    onclick="closeMobileMenu()">Angebot</a></li>
-    <li><a href="averio-premium-preisliste.html"  onclick="closeMobileMenu()">Preisliste</a></li>
     <li><a href="averio-premium-guides.html"      onclick="closeMobileMenu()">Guides</a></li>
     <li><a href="averio-premium-faq.html"         onclick="closeMobileMenu()">FAQ</a></li>
+    <li><a href="#kontakt"                        onclick="closeMobileMenu()">Kontakt</a></li>
   </ul>
   <div class="nav-mobile-divider"></div>
-  <a href="averio-premium-kontakt.html" class="nav-mobile-cta" target="_blank" rel="noopener">Kurzes Gespräch buchen</a>
+  <a href="#kontakt" class="nav-mobile-cta" onclick="closeMobileMenu()">Kurzes Gespräch buchen</a>
 </div>
 
 <!-- ════ HERO ════════════════════════════════════════════ -->
@@ -538,8 +551,7 @@
       </p>
 
       <div class="v1-cta-group">
-        <a href="averio-premium-kontakt.html" target="_blank" rel="noopener" class="btn btn-primary btn-arrow magnetic">Kurzes Gespräch buchen</a>
-        <a href="averio-premium-angebote.html" class="btn btn-ghost">Angebote ansehen →</a>
+        <a href="#kontakt" class="btn btn-primary btn-arrow magnetic">Kurzes Gespräch buchen</a>
       </div>
       <p class="v1-cta-note">Bau · Immobilien · Industrie · Handwerk & Unternehmen ab 1.000 € monatlichem Werbebudget</p>
 
@@ -694,91 +706,88 @@
 </section>
 
 <!-- ════ ANGEBOTE ════════════════════════════════════════ -->
-<section id="angebote" class="section section-alt">
+<section id="kontakt" class="section section-alt">
   <div class="max-w">
-    <div class="section-head" style="margin-bottom:4rem">
+    <div class="section-head" style="margin-bottom:3rem">
       <div>
-        <div class="sec-eyebrow reveal">Angebote</div>
+        <div class="sec-eyebrow reveal">Kontakt</div>
         <h2 class="sec-title reveal reveal-d1">
-          Drei Wege, wie ich<br><em>dein Business</em> nach vorne bringe
+          Lass uns kurz<br><em>sprechen</em>
         </h2>
       </div>
       <p class="sec-body reveal reveal-d2">
-        Von der einmaligen Analyse bis zur vollständigen Betreuung —
-        flexibel, transparent, ohne lange Vertragsbindung.
-        Geeignet für Unternehmen ab 1.000 € monatlichem Werbebudget.
+        Ob Google Ads f&uuml;r dich Sinn macht, kl&auml;ren wir in einem kurzen Gespr&auml;ch.
+        Kein Verkaufsdruck, keine versteckten Kosten — nur eine ehrliche Einsch&auml;tzung.
       </p>
     </div>
 
-    <div class="v1-services-list reveal">
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start">
 
-      <!-- Angebot 1 -->
-      <div class="v1-svc featured">
-        <div class="v1-svc-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path d="M9 11l3 3L22 4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      <!-- Calendly -->
+      <div style="background:var(--card-bg, rgba(255,255,255,.03));border:1px solid var(--border-line, rgba(255,255,255,.08));border-radius:16px;padding:2rem;min-height:500px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#2563EB" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="#2563EB" stroke-width="1.5"/></svg>
+          <span style="font-family:var(--fh);font-weight:700;font-size:16px;color:#fff">Termin buchen</span>
         </div>
-        <div class="v1-svc-body">
-          <div class="v1-svc-tag">Bestseller · Einmalig</div>
-          <div class="v1-svc-title">Kampagnencheck</div>
-          <div class="v1-svc-desc">Ich analysiere dein bestehendes Google Ads Konto und zeige dir, wo Budget verloren geht — mit konkretem Ma&szlig;nahmenplan und Reporting der Ergebnisse.</div>
-        </div>
-        <div class="v1-svc-price">
-          <div class="v1-svc-amount">Auf Anfrage</div>
-          <span class="v1-svc-unit">im Gespräch besprechen</span>
-          <div style="margin-top:1rem">
-            <a href="averio-kampagnenanalyse-buchen.html" class="btn btn-primary magnetic" style="white-space:nowrap">Kurzes Gespräch buchen</a>
-          </div>
-        </div>
+        <p style="font-size:13px;color:#888;margin-bottom:1.5rem">W&auml;hle einen freien Termin — ca. 15&ndash;20 Minuten, kostenlos &amp; unverbindlich.</p>
+        <div id="calendly-widget" style="min-width:280px;height:420px;border-radius:10px;overflow:hidden"></div>
       </div>
 
-      <!-- Angebot 2 -->
-      <div class="v1-svc">
-        <div class="v1-svc-icon ice">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="8" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="v1-svc-body">
-          <div class="v1-svc-tag" style="color:#A8D8F0">Analyse · Kostenlos</div>
-          <div class="v1-svc-title">Potenzialanalyse</div>
-          <div class="v1-svc-desc">Du startest neu mit Google Ads oder wei&szlig;t nicht, ob es sich lohnt? Ich analysiere dein Potenzial und gebe dir eine ehrliche Einsch&auml;tzung — komplett kostenlos.</div>
-        </div>
-        <div class="v1-svc-price">
-          <div class="v1-svc-amount" style="color:#A8D8F0">Kostenlos</div>
-          <span class="v1-svc-unit">unverbindlich</span>
-          <div style="margin-top:1rem">
-            <a href="averio-premium-angebot-potenzialanalyse.html" class="btn btn-ghost magnetic" style="white-space:nowrap">Mehr erfahren</a>
+      <!-- Formular + E-Mail -->
+      <div style="display:flex;flex-direction:column;gap:2rem">
+
+        <!-- Kontaktformular -->
+        <div style="background:var(--card-bg, rgba(255,255,255,.03));border:1px solid var(--border-line, rgba(255,255,255,.08));border-radius:16px;padding:2rem">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#2563EB" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="#2563EB" stroke-width="1.5"/></svg>
+            <span style="font-family:var(--fh);font-weight:700;font-size:16px;color:#fff">Nachricht schreiben</span>
+          </div>
+          <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:14px">
+            <input type="text" name="website" id="k-website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div>
+                <label for="k-name" style="display:block;font-size:12px;font-weight:600;color:#aaa;margin-bottom:5px">Name *</label>
+                <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border-line, rgba(255,255,255,.12));background:var(--input-bg, rgba(255,255,255,.04));color:#fff;font-size:14px;font-family:inherit">
+              </div>
+              <div>
+                <label for="k-email" style="display:block;font-size:12px;font-weight:600;color:#aaa;margin-bottom:5px">E-Mail *</label>
+                <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border-line, rgba(255,255,255,.12));background:var(--input-bg, rgba(255,255,255,.04));color:#fff;font-size:14px;font-family:inherit">
+              </div>
+            </div>
+            <div>
+              <label for="k-telefon" style="display:block;font-size:12px;font-weight:600;color:#aaa;margin-bottom:5px">Telefon</label>
+              <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border-line, rgba(255,255,255,.12));background:var(--input-bg, rgba(255,255,255,.04));color:#fff;font-size:14px;font-family:inherit">
+            </div>
+            <div>
+              <label for="k-nachricht" style="display:block;font-size:12px;font-weight:600;color:#aaa;margin-bottom:5px">Nachricht</label>
+              <textarea id="k-nachricht" rows="3" placeholder="Worum geht es?" style="width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border-line, rgba(255,255,255,.12));background:var(--input-bg, rgba(255,255,255,.04));color:#fff;font-size:14px;font-family:inherit;resize:vertical"></textarea>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:8px">
+              <input type="checkbox" id="k-dsgvo" required style="margin-top:3px">
+              <label for="k-dsgvo" style="font-size:11px;color:#777;line-height:1.5">Ich habe die <a href="averio-premium-datenschutz.html" style="color:#2563EB;text-decoration:underline">Datenschutzerkl&auml;rung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+            </div>
+            <button type="submit" id="k-submit" style="padding:12px 28px;border:none;border-radius:50px;background:#2563EB;color:#fff;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(37,99,235,.3)">Nachricht senden</button>
+          </form>
+          <div id="kontakt-success" style="display:none;text-align:center;padding:2rem 0">
+            <div style="font-size:28px;margin-bottom:10px">&#10003;</div>
+            <h3 style="font-family:var(--fh);font-size:20px;font-weight:700;color:#fff;margin-bottom:8px">Nachricht gesendet</h3>
+            <p style="font-size:14px;color:#888">Ich melde mich innerhalb von 24 Stunden bei dir.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Angebot 3 -->
-      <div class="v1-svc">
-        <div class="v1-svc-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="9" cy="7" r="4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="v1-svc-body">
-          <div class="v1-svc-tag">Laufend · Pers&ouml;nlich</div>
-          <div class="v1-svc-title">Zusammenarbeit anfragen</div>
-          <div class="v1-svc-desc">Ich &uuml;bernehme das vollst&auml;ndige Management deiner Google Ads — w&ouml;chentliche Optimierung, monatliches Reporting und direkter Draht zu mir.</div>
-        </div>
-        <div class="v1-svc-price">
-          <div class="v1-svc-amount">Individuell</div>
-          <span class="v1-svc-unit">nach Absprache</span>
-          <div style="margin-top:1rem">
-            <a href="averio-premium-angebot-zusammenarbeit.html" class="btn btn-primary btn-arrow magnetic" style="white-space:nowrap">Kurzes Gespräch buchen</a>
+        <!-- E-Mail direkt -->
+        <a href="mailto:kontakt@averiomedia.de" style="display:flex;align-items:center;gap:14px;background:var(--card-bg, rgba(255,255,255,.03));border:1px solid var(--border-line, rgba(255,255,255,.08));border-radius:16px;padding:1.5rem 2rem;text-decoration:none;transition:border-color .2s">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#2563EB" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="#2563EB" stroke-width="1.5"/></svg>
           </div>
-        </div>
-      </div>
+          <div>
+            <div style="font-family:var(--fh);font-weight:700;font-size:15px;color:#fff">Direkt per E-Mail</div>
+            <div style="font-size:13px;color:#888">kontakt@averiomedia.de</div>
+          </div>
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" style="margin-left:auto;flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
 
+      </div>
     </div>
   </div>
 </section>
@@ -832,7 +841,7 @@
     </div>
 
     <div style="display:flex;justify-content:flex-end;margin-top:3.5rem;transform:translateX(265px)" class="reveal">
-      <a href="averio-premium-kontakt.html" class="btn btn-primary btn-arrow magnetic">Kurzes Gespr&auml;ch buchen</a>
+      <a href="#kontakt" class="btn btn-primary btn-arrow magnetic">Kurzes Gespr&auml;ch buchen</a>
     </div>
   </div>
 </section>
@@ -920,8 +929,8 @@
         Kein Verkaufsgespräch, keine versteckten Kosten.
       </p>
       <div class="cta-btns" style="display:flex;gap:14px;flex-wrap:wrap">
-        <a href="averio-premium-kontakt.html" target="_blank" rel="noopener" class="btn btn-primary btn-arrow magnetic">Kurzes Gespr&auml;ch buchen</a>
-        <a href="averio-premium-angebote.html" class="btn btn-ghost">Angebote ansehen</a>
+        <a href="#kontakt" class="btn btn-primary btn-arrow magnetic">Kurzes Gespr&auml;ch buchen</a>
+        <a href="mailto:kontakt@averiomedia.de" class="btn btn-ghost">E-Mail schreiben</a>
       </div>
       <p class="cta-note">Bau · Immobilien · Industrie · Handwerk & Unternehmen ab 1.000 € monatlichem Werbebudget</p>
     </div>
@@ -1087,6 +1096,60 @@
     </div>
   </div>
 </div>
+
+<!-- Calendly laden -->
+<script>
+(function () {
+  var CALENDLY_URL = 'https://calendly.com/mb-topad-info/telefongesprach';
+  function loadCalendly() {
+    var w = document.getElementById('calendly-widget');
+    if (!w) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    document.head.appendChild(link);
+    var script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.onload = function () {
+      Calendly.initInlineWidget({ url: CALENDLY_URL, parentElement: w, prefill: {}, utm: {} });
+    };
+    document.body.appendChild(script);
+  }
+  document.addEventListener('DOMContentLoaded', loadCalendly);
+})();
+</script>
+
+<!-- Kontaktformular -->
+<script>
+var NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+var FORM_LOADED = Date.now();
+
+function submitKontakt(e) {
+  e.preventDefault();
+  if (document.getElementById('k-website').value) return;
+  if (Date.now() - FORM_LOADED < 3000) return;
+
+  var btn = document.getElementById('k-submit');
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+
+  fetch(NFORMS_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      Formular:  'Kontakt – Startseite (Simple)',
+      Name:      document.getElementById('k-name').value.trim(),
+      Email:     document.getElementById('k-email').value.trim(),
+      Telefon:   document.getElementById('k-telefon').value.trim() || '–',
+      Nachricht: document.getElementById('k-nachricht').value.trim()
+    })
+  }).catch(function(err) { console.warn('nForms:', err); });
+
+  document.getElementById('kontakt-form').style.display = 'none';
+  document.getElementById('kontakt-success').style.display = 'block';
+}
+</script>
 
 <!-- Premium JS (shared) -->
 <script src="averio-premium.js"></script>
