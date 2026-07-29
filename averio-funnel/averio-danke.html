@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -20,7 +20,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
   padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav-logo-mark { width: 30px; height: 30px; background: #FF4D00; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+.nav-logo-mark { width: 30px; height: 30px; background: #2563EB; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
 .nav-logo-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
 .nav-back { font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
 .nav-back:hover { color: rgba(255,255,255,.7); }
@@ -34,7 +34,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 .hero::before {
   content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
   width: 700px; height: 700px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,77,0,.12) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(37,99,235,.12) 0%, transparent 65%);
   pointer-events: none;
 }
 .hero::after {
@@ -45,15 +45,15 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 
 .confirm-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.25);
+  background: rgba(37,99,235,.08); border: 1px solid rgba(37,99,235,.25);
   border-radius: 100px; padding: 7px 16px; margin-bottom: 28px;
 }
 .confirm-icon {
-  width: 20px; height: 20px; border-radius: 50%; background: #FF4D00;
+  width: 20px; height: 20px; border-radius: 50%; background: #2563EB;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .confirm-icon svg { display: block; }
-.confirm-text { font-size: 12px; font-weight: 700; color: #FF4D00; letter-spacing: .06em; text-transform: uppercase; }
+.confirm-text { font-size: 12px; font-weight: 700; color: #2563EB; letter-spacing: .06em; text-transform: uppercase; }
 
 .hero-title {
   font-family: 'Syne', sans-serif;
@@ -61,7 +61,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
   font-weight: 800; line-height: 1.0; letter-spacing: -.03em;
   color: #fff; margin-bottom: 20px; max-width: 700px;
 }
-.hero-title em { color: #FF4D00; font-style: normal; }
+.hero-title em { color: #2563EB; font-style: normal; }
 
 .hero-sub {
   font-size: clamp(15px, 2vw, 17px); color: rgba(255,255,255,.5);
@@ -86,7 +86,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
   padding: 80px 24px; text-align: center;
 }
 .bridge-label {
-  font-size: 11px; font-weight: 700; color: #FF4D00;
+  font-size: 11px; font-weight: 700; color: #2563EB;
   letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px;
 }
 .bridge-title {
@@ -94,7 +94,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
   font-weight: 800; letter-spacing: -.025em; line-height: 1.1;
   color: #fff; max-width: 640px; margin: 0 auto 16px;
 }
-.bridge-title em { color: #FF4D00; font-style: normal; }
+.bridge-title em { color: #2563EB; font-style: normal; }
 .bridge-text {
   font-size: 15px; color: rgba(255,255,255,.45); max-width: 500px;
   margin: 0 auto; line-height: 1.8;
@@ -108,10 +108,10 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 .value-left {}
 .value-tag {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: 10px; font-weight: 700; color: #FF4D00;
+  font-size: 10px; font-weight: 700; color: #2563EB;
   letter-spacing: .12em; text-transform: uppercase; margin-bottom: 16px;
 }
-.value-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #FF4D00; box-shadow: 0 0 6px #FF4D00; }
+.value-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #2563EB; box-shadow: 0 0 6px #2563EB; }
 .value-title {
   font-family: 'Syne', sans-serif; font-size: clamp(22px, 3vw, 30px);
   font-weight: 800; letter-spacing: -.025em; line-height: 1.15;
@@ -125,13 +125,13 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 }
 .value-point-dot {
   width: 20px; height: 20px; min-width: 20px; border-radius: 50%;
-  background: rgba(255,77,0,.12); border: 1px solid rgba(255,77,0,.25);
+  background: rgba(37,99,235,.12); border: 1px solid rgba(37,99,235,.25);
   display: flex; align-items: center; justify-content: center; margin-top: 1px;
 }
 .value-point-dot svg { display: block; }
 .value-note {
   margin-top: 20px; font-size: 12px; color: rgba(255,255,255,.2);
-  border-left: 2px solid rgba(255,77,0,.25); padding-left: 12px; line-height: 1.6;
+  border-left: 2px solid rgba(37,99,235,.25); padding-left: 12px; line-height: 1.6;
 }
 
 /* Steps card */
@@ -147,12 +147,12 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 .step-num-col { display: flex; flex-direction: column; align-items: center; gap: 0; }
 .step-num {
   width: 36px; height: 36px; border-radius: 50%; background: #0d0d0d;
-  border: 1px solid rgba(255,77,0,.3); display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #FF4D00;
+  border: 1px solid rgba(37,99,235,.3); display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #2563EB;
   flex-shrink: 0;
 }
 .step-connector {
-  width: 1px; flex: 1; background: rgba(255,77,0,.1); margin-top: 6px;
+  width: 1px; flex: 1; background: rgba(37,99,235,.1); margin-top: 6px;
 }
 .step-body { padding-top: 6px; }
 .step-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
@@ -171,7 +171,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 .cta-inner {
   max-width: 580px; margin: 0 auto; text-align: center;
 }
-.cta-label { font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+.cta-label { font-size: 11px; font-weight: 700; color: #2563EB; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
 .cta-title {
   font-family: 'Syne', sans-serif; font-size: clamp(22px, 3.5vw, 32px);
   font-weight: 800; letter-spacing: -.025em; line-height: 1.1;
@@ -186,7 +186,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 }
 .cta-form::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,77,0,.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(37,99,235,.5), transparent);
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
@@ -198,7 +198,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 }
 .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,.2); }
 .form-input:focus, .form-select:focus, .form-textarea:focus {
-  border-color: rgba(255,77,0,.4); background: rgba(255,77,0,.03);
+  border-color: rgba(37,99,235,.4); background: rgba(37,99,235,.03);
 }
 .form-select { appearance: none; cursor: pointer; color: rgba(255,255,255,.5); }
 .form-select option { background: #1a1a1a; color: #fff; }
@@ -207,10 +207,10 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
   display: flex; align-items: flex-start; gap: 10px;
   font-size: 12px; color: rgba(255,255,255,.3); line-height: 1.6; margin: 16px 0;
 }
-.form-dsgvo input { margin-top: 2px; accent-color: #FF4D00; flex-shrink: 0; }
+.form-dsgvo input { margin-top: 2px; accent-color: #2563EB; flex-shrink: 0; }
 .form-dsgvo a { color: rgba(255,255,255,.4); }
 .form-submit {
-  width: 100%; background: #FF4D00; color: #fff; border: none;
+  width: 100%; background: #2563EB; color: #fff; border: none;
   border-radius: 100px; padding: 15px 28px; font-size: 15px; font-weight: 700;
   font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: -.01em;
   transition: opacity .2s, transform .15s; display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -226,7 +226,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 .form-success.active { display: block; }
 .success-icon {
   width: 64px; height: 64px; border-radius: 50%;
-  background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.3);
+  background: rgba(37,99,235,.1); border: 1px solid rgba(37,99,235,.3);
   display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
 }
 .success-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px; }
@@ -245,7 +245,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 }
 .proof-num {
   font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800;
-  color: #FF4D00; letter-spacing: -.03em; line-height: 1; margin-bottom: 6px;
+  color: #2563EB; letter-spacing: -.03em; line-height: 1; margin-bottom: 6px;
 }
 .proof-label { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.5; }
 
@@ -311,19 +311,19 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
     <p class="value-desc">In einem kurzen Gespräch schaue ich mir deine aktuelle Situation an — und zeige dir konkret, wo Budgetverschwendung passiert und was sofort besser werden kann.</p>
     <ul class="value-points">
       <li class="value-point">
-        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <span>Ich analysiere dein Google Ads-Konto oder deine Ausgangssituation</span>
       </li>
       <li class="value-point">
-        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <span>Du bekommst konkrete Verbesserungspotenziale — keine Floskeln</span>
       </li>
       <li class="value-point">
-        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <span>Kein Verkaufsgespräch — nur ehrliche Einschätzung</span>
       </li>
       <li class="value-point">
-        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="value-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2.5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <span>30 Minuten — vollständig kostenlos und unverbindlich</span>
       </li>
     </ul>
@@ -434,7 +434,7 @@ body { font-family: 'DM Sans', sans-serif; background: #080808; color: #fff; lin
 
       <div class="form-success" id="pa-success">
         <div class="success-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l5.5 5.5L22 8" stroke="#FF4D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l5.5 5.5L22 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="success-title">Perfekt — ich melde mich bald!</div>
         <p class="success-text">Deine Anfrage ist angekommen. Ich schaue mir deine Situation vor dem Gespräch an und melde mich innerhalb von 24 Stunden mit einem Terminvorschlag.</p>

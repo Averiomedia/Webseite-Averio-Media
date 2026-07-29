@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -36,7 +36,7 @@
 
 <style>
 :root {
-  --o: #FF4D00; --o2: #FF8A00;
+  --o: #2563EB; --o2: #3B82F6;
   --bg: #090909; --bg2: #1e1e1e; --bg3: #272727;
   --border: #383838; --border2: #444444;
   --ice: #D6EEFF; --ice2: #A8D8F0;
@@ -69,7 +69,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .ang-hero::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 700px 400px at 5% 80%, rgba(255,77,0,.08), transparent),
+    radial-gradient(ellipse 700px 400px at 5% 80%, rgba(37,99,235,.08), transparent),
     radial-gradient(ellipse 400px 400px at 95% 10%, rgba(168,216,240,.04), transparent);
 }
 .ang-hero-inner {
@@ -82,7 +82,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .ang-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--ice); display: block; opacity: .6; }
 .ang-h1 { font-family: var(--fh); font-size: clamp(40px, 5.5vw, 64px); font-weight: 800;
   line-height: .95; color: #fff; letter-spacing: -2px; margin-bottom: 1.5rem; }
-.ang-h1 em { color: var(--o); font-style: normal; text-shadow: 0 0 40px rgba(255,77,0,.3); }
+.ang-h1 em { color: var(--o); font-style: normal; text-shadow: 0 0 40px rgba(37,99,235,.3); }
 .ang-sub { font-size: 15px; color: #888; line-height: 1.85; margin-bottom: 2.5rem; max-width: 480px; }
 .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; }
 .hero-pill { display: flex; align-items: center; gap: 7px;
@@ -98,11 +98,11 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
   padding: 18px 20px; cursor: pointer; transition: border-color .2s, background .2s;
   text-decoration: none;
 }
-.hero-card-preview:hover { border-color: rgba(255,77,0,.35); background: rgba(255,77,0,.03); }
-.hero-card-preview.featured { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.04); }
+.hero-card-preview:hover { border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.03); }
+.hero-card-preview.featured { border-color: rgba(37,99,235,.3); background: rgba(37,99,235,.04); }
 .hcp-icon { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; }
-.hcp-icon.orange { background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.2); }
+.hcp-icon.orange { background: rgba(37,99,235,.1); border: 1px solid rgba(37,99,235,.2); }
 .hcp-icon.ice    { background: rgba(168,216,240,.07); border: 1px solid rgba(168,216,240,.15); }
 .hcp-text { flex: 1; }
 .hcp-label { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--o); opacity: .7; margin-bottom: .25rem; }
@@ -131,10 +131,10 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
   position: relative; overflow: hidden; background: var(--bg);
 }
 .product-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(255,77,0,.06), transparent); }
+  background: radial-gradient(ellipse 500px 300px at 80% 50%, rgba(37,99,235,.06), transparent); }
 .product-badge {
   display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
-  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2);
+  background: rgba(37,99,235,.08); border: 1px solid rgba(37,99,235,.2);
   color: var(--o); font-size: 11px; font-weight: 600; letter-spacing: .1em;
   text-transform: uppercase; padding: 6px 16px; border-radius: 100px; width: fit-content;
 }
@@ -156,8 +156,8 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .ppb-mwst  { font-size: 10px; color: #666; margin-top: .25rem; }
 .ppb-cta   { width: 100%; margin-top: 1.5rem; background: var(--o); color: #fff; border: none;
   padding: 13px; border-radius: 100px; font-size: 13px; font-weight: 700; cursor: pointer;
-  font-family: var(--fb); box-shadow: 0 4px 20px rgba(255,77,0,.35); transition: all .25s; }
-.ppb-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,77,0,.5); }
+  font-family: var(--fb); box-shadow: 0 4px 20px rgba(37,99,235,.35); transition: all .25s; }
+.ppb-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,99,235,.5); }
 
 /* ══ WHAT'S INCLUDED ════════════════════════════════════ */
 .whats-included { display: grid; grid-template-columns: repeat(3, 1fr);
@@ -167,26 +167,26 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .wi-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, var(--o), transparent); opacity: 0; transition: opacity .25s; }
 .wi-card:hover::after { opacity: 1; }
-.wi-icon { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(255,77,0,.2);
-  background: rgba(255,77,0,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.wi-icon { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(37,99,235,.2);
+  background: rgba(37,99,235,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
 .wi-num   { font-family: var(--fh); font-size: 11px; font-weight: 700; color: var(--o); letter-spacing: .1em; margin-bottom: .5rem; }
 .wi-title { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: .75rem; }
 .wi-text  { font-size: 13px; color: #888; line-height: 1.7; }
-.wi-tag   { display: inline-block; margin-top: 1rem; background: rgba(255,77,0,.08);
-  border: 1px solid rgba(255,77,0,.18); color: var(--o); font-size: 10px;
+.wi-tag   { display: inline-block; margin-top: 1rem; background: rgba(37,99,235,.08);
+  border: 1px solid rgba(37,99,235,.18); color: var(--o); font-size: 10px;
   font-weight: 700; padding: 4px 12px; border-radius: 100px; letter-spacing: .06em; text-transform: uppercase; }
 
 /* ══ PROZESS TIMELINE ════════════════════════════════════ */
 .process-flow { display: flex; align-items: flex-start; gap: 0; margin-top: 3rem; position: relative; }
 .pf-line-track { position: absolute; top: 22px; left: 22px; right: 22px; height: 1px; overflow: hidden; pointer-events: none; z-index: 0; }
-.pf-line-fill  { height: 100%; width: 0; background: linear-gradient(90deg, var(--o) 0%, rgba(255,77,0,.35) 70%, transparent 100%); }
+.pf-line-fill  { height: 100%; width: 0; background: linear-gradient(90deg, var(--o) 0%, rgba(37,99,235,.35) 70%, transparent 100%); }
 .pf-step { flex: 1; position: relative; z-index: 1; text-align: center; padding: 0 .75rem; }
 .pf-circle { width: 44px; height: 44px; border-radius: 50%;
-  border: 1.5px solid rgba(255,77,0,.4); background: var(--bg);
+  border: 1.5px solid rgba(37,99,235,.4); background: var(--bg);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--fh); font-size: 14px; font-weight: 800; color: #888;
   margin: 0 auto 1rem; }
-.pf-circle.done { background: var(--o); color: #fff; border-color: var(--o); box-shadow: 0 0 16px rgba(255,77,0,.4); }
+.pf-circle.done { background: var(--o); color: #fff; border-color: var(--o); box-shadow: 0 0 16px rgba(37,99,235,.4); }
 .pf-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: #fff; margin-bottom: .5rem; }
 .pf-text  { font-size: 12px; color: #777; line-height: 1.5; }
 
@@ -200,7 +200,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .si-circle { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border2);
   display: flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 600; color: #777; transition: all .3s; font-family: var(--fh); }
-.si.active .si-circle { background: var(--o); border-color: var(--o); color: #fff; box-shadow: 0 0 12px rgba(255,77,0,.3); }
+.si.active .si-circle { background: var(--o); border-color: var(--o); color: #fff; box-shadow: 0 0 12px rgba(37,99,235,.3); }
 .si.done   .si-circle { background: #1a1a1a; border-color: #555; color: var(--o); }
 .si-label { font-size: 11px; color: #666; transition: color .3s; }
 .si.active .si-label { color: #ccc; }
@@ -231,8 +231,8 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 .form-btn-row { display: flex; gap: 12px; margin-top: 1.75rem; }
 .form-btn  { padding: 13px 28px; border-radius: 100px; font-size: 13px; font-weight: 600;
   cursor: pointer; font-family: var(--fb); border: none; transition: all .25s; }
-.form-btn-primary   { background: var(--o); color: #fff; box-shadow: 0 4px 20px rgba(255,77,0,.3); }
-.form-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,77,0,.5); }
+.form-btn-primary   { background: var(--o); color: #fff; box-shadow: 0 4px 20px rgba(37,99,235,.3); }
+.form-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,.5); }
 .form-btn-secondary { background: transparent; color: #999; border: 1px solid var(--border2); }
 .form-btn-secondary:hover { color: #fff; border-color: #888; }
 
@@ -253,8 +253,8 @@ input[type=checkbox] { display: none; }
 .radio-option input[type=radio] { display: none; }
 .radio-circle { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #444;
   flex-shrink: 0; transition: all .2s; }
-.radio-option.selected { border-color: rgba(255,77,0,.3); background: rgba(255,77,0,.04); }
-.radio-option.selected .radio-circle { background: var(--o); border-color: var(--o); box-shadow: 0 0 6px rgba(255,77,0,.4); }
+.radio-option.selected { border-color: rgba(37,99,235,.3); background: rgba(37,99,235,.04); }
+.radio-option.selected .radio-circle { background: var(--o); border-color: var(--o); box-shadow: 0 0 6px rgba(37,99,235,.4); }
 .radio-text { font-size: 13px; color: #bbb; }
 .radio-option.selected .radio-text { color: #fff; }
 
@@ -263,7 +263,7 @@ input[type=checkbox] { display: none; }
 .form-success.active { display: block; }
 .success-icon  { width: 56px; height: 56px; background: var(--o); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px; color: #fff; margin: 0 auto 1.5rem; box-shadow: 0 0 24px rgba(255,77,0,.4); }
+  font-size: 22px; color: #fff; margin: 0 auto 1.5rem; box-shadow: 0 0 24px rgba(37,99,235,.4); }
 .success-title { font-family: var(--fh); font-size: 22px; font-weight: 800; color: #fff; margin-bottom: .75rem; }
 .success-text  { font-size: 14px; color: #888; line-height: 1.7; max-width: 400px; margin: 0 auto; }
 
@@ -276,7 +276,7 @@ input[type=checkbox] { display: none; }
   display: flex; align-items: center; justify-content: center; }
 .inv-logo-name { font-family: var(--fh); font-size: 13px; font-weight: 800; color: #fff; }
 .inv-logo-sub  { font-size: 9px; color: #888; letter-spacing: .1em; text-transform: uppercase; }
-.inv-badge { background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.2);
+.inv-badge { background: rgba(37,99,235,.1); border: 1px solid rgba(37,99,235,.2);
   color: var(--o); font-size: 10px; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
 .inv-section-title { font-size: 10px; color: #888; letter-spacing: .14em; text-transform: uppercase;
   margin-bottom: .75rem; margin-top: 1.5rem; }
@@ -287,7 +287,7 @@ input[type=checkbox] { display: none; }
   padding: .75rem 0; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
 .inv-line-label { color: #888; max-width: 220px; line-height: 1.5; }
 .inv-line-val   { color: #fff; font-weight: 600; font-family: var(--fh); font-size: 14px; white-space: nowrap; }
-.inv-total { background: var(--bg); border: 1px solid rgba(255,77,0,.2); border-radius: 12px;
+.inv-total { background: var(--bg); border: 1px solid rgba(37,99,235,.2); border-radius: 12px;
   padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
 .inv-total-label { font-size: 13px; color: #888; }
 .inv-total-val   { font-family: var(--fh); font-size: 24px; font-weight: 800; color: var(--o); }
@@ -350,8 +350,8 @@ input[type=checkbox] { display: none; }
 .poc-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
 .poc-items { display: flex; flex-direction: column; gap: 1rem; }
 .poc-item  { display: flex; align-items: center; gap: 12px; }
-.poc-icon  { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(255,77,0,.2);
-  background: rgba(255,77,0,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.poc-icon  { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(37,99,235,.2);
+  background: rgba(37,99,235,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .poc-text  { font-size: 12px; color: #999; }
 .poc-text strong { color: #ccc; display: block; font-size: 11px; margin-bottom: 1px; }
 
@@ -361,7 +361,7 @@ input[type=checkbox] { display: none; }
 .range-input { width: 100%; -webkit-appearance: none; background: var(--border); height: 4px;
   border-radius: 2px; outline: none; cursor: pointer; }
 .range-input::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px;
-  border-radius: 50%; background: var(--o); cursor: pointer; box-shadow: 0 0 8px rgba(255,77,0,.5); }
+  border-radius: 50%; background: var(--o); cursor: pointer; box-shadow: 0 0 8px rgba(37,99,235,.5); }
 .range-labels { display: flex; justify-content: space-between; font-size: 10px; color: #555; margin-top: .4rem; }
 
 /* ══ ZUSAMMENARBEIT ANFRAGE ══════════════════════════════ */
@@ -369,9 +369,9 @@ input[type=checkbox] { display: none; }
 .collab-header  { padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr auto;
   gap: 3rem; align-items: start; position: relative; overflow: hidden; background: var(--bg); }
 .collab-header::before { content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse 600px 400px at 85% 50%, rgba(255,77,0,.07), transparent); }
+  background: radial-gradient(ellipse 600px 400px at 85% 50%, rgba(37,99,235,.07), transparent); }
 .collab-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.25rem;
-  background: rgba(255,77,0,.08); border: 1px solid rgba(255,77,0,.2); color: var(--o);
+  background: rgba(37,99,235,.08); border: 1px solid rgba(37,99,235,.2); color: var(--o);
   font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   padding: 6px 16px; border-radius: 100px; width: fit-content; }
 .collab-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--o);
@@ -384,8 +384,8 @@ input[type=checkbox] { display: none; }
   padding: 2rem; text-align: center; min-width: 200px; position: relative; z-index: 1; flex-shrink: 0; }
 .collab-3cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
 .collab-col { background: var(--bg2); padding: 2.5rem 2rem; }
-.collab-col-icon { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,77,0,.2);
-  background: rgba(255,77,0,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.collab-col-icon { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(37,99,235,.2);
+  background: rgba(37,99,235,.06); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
 .collab-col-title { font-family: var(--fh); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: .75rem; }
 .collab-col-text  { font-size: 12px; color: #888; line-height: 1.7; }
 
@@ -503,7 +503,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">
       <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
-        <rect width="36" height="36" rx="8" fill="#FF4D00"/>
+        <rect width="36" height="36" rx="8" fill="#2563EB"/>
         <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
         <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
       </svg>
@@ -554,7 +554,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
       <!-- Card 1: Kampagnencheck -->
       <a class="hero-card-preview featured" href="#kampagnencheck">
         <div class="hcp-icon orange">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 12l5-5 4 4 7-7" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 5h3v3" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 12l5-5 4 4 7-7" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 5h3v3" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="hcp-text">
           <div class="hcp-label">Einmalig · Bezahlt</div>
@@ -582,7 +582,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
       <!-- Card 3: Zusammenarbeit -->
       <a class="hero-card-preview" href="#collab-anfrage">
         <div class="hcp-icon orange">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 11l3 3 5-5" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="8" stroke="#FF4D00" stroke-width="1.5"/></svg>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 11l3 3 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="8" stroke="#2563EB" stroke-width="1.5"/></svg>
         </div>
         <div class="hcp-text">
           <div class="hcp-label">Laufend · Monatlich</div>
@@ -639,42 +639,42 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
     <h2 class="sec-title">Was im <em>Kampagnencheck</em> steckt</h2>
     <div class="whats-included" style="margin-top:2.5rem;">
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l4-4 4 4 6-6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l4-4 4 4 6-6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="wi-num">01 · Struktur-Analyse</div>
         <div class="wi-title">Kampagnenstruktur &amp; Keywords</div>
         <div class="wi-text">Wir prüfen, wie dein Konto aufgebaut ist: Anzeigengruppen-Logik, Keyword-Typen, Negative-Listen, Qualitätsfaktoren. Du siehst sofort, wo strukturelle Probleme Budget verbrennen.</div>
         <div class="wi-tag">Detailtiefe: hoch</div>
       </div>
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#FF4D00" stroke-width="1.5"/><path d="M10 6v4l2 2" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#2563EB" stroke-width="1.5"/><path d="M10 6v4l2 2" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div class="wi-num">02 · Tracking-Check</div>
         <div class="wi-title">Conversion-Tracking &amp; Datenbasis</div>
         <div class="wi-text">Wir pr&#252;fen ob ein Tracking eingerichtet ist und geben dir Impulse zum richtigen Tracking &#8212; damit deine Datenbasis valide ist und du fundierte Entscheidungen treffen kannst.</div>
         <div class="wi-tag">GA4 + GTM</div>
       </div>
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="12" width="4" height="6" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="8" y="7" width="4" height="11" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="14" y="2" width="4" height="16" rx="1" stroke="#FF4D00" stroke-width="1.5"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="12" width="4" height="6" rx="1" stroke="#2563EB" stroke-width="1.5"/><rect x="8" y="7" width="4" height="11" rx="1" stroke="#2563EB" stroke-width="1.5"/><rect x="14" y="2" width="4" height="16" rx="1" stroke="#2563EB" stroke-width="1.5"/></svg></div>
         <div class="wi-num">03 · Performance-Bewertung</div>
         <div class="wi-title">Budget, CPC &amp; ROAS-Analyse</div>
         <div class="wi-text">Wir analysieren Keywords und Budget, um unn&#246;tigen Budgetverlust zu vermeiden &#8212; und zeigen dir konkret, wo dein Geld sinnvoll eingesetzt ist und wo es verloren geht.</div>
         <div class="wi-tag">Zahlen &amp; Fakten</div>
       </div>
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 6h12M4 10h8M4 14h6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 6h12M4 10h8M4 14h6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div class="wi-num">04 · Anzeigentexte</div>
         <div class="wi-title">Copy &amp; Message-Market-Fit</div>
         <div class="wi-text">Sprechen deine Anzeigen wirklich die Suchabsicht an? Wir bewerten Headlines, Beschreibungen und Extensions — und zeigen dir konkrete Verbesserungspotenziale.</div>
         <div class="wi-tag">Copywriting-Review</div>
       </div>
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 10h16M10 2l8 8-8 8" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 10h16M10 2l8 8-8 8" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="wi-num">05 · Handlungsplan</div>
         <div class="wi-title">Priorisierte Maßnahmen</div>
         <div class="wi-text">Kein Lagebericht ohne Ausblick. Du bekommst eine priorisierte Liste der wichtigsten Maßnahmen — sortiert nach Impact und Aufwand. Damit du sofort weißt, wo du anfangen sollst.</div>
         <div class="wi-tag">Sofort umsetzbar</div>
       </div>
       <div class="wi-card">
-        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 16l4-4 4 4 8-10" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wi-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 16l4-4 4 4 8-10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="wi-num">06 · Deliverable</div>
         <div class="wi-title">Ausführliches PDF-Reporting</div>
         <div class="wi-text">Alles gebündelt in einem professionellen Report — inkl. Screenshots, Kennzahlen, Bewertung und Empfehlungen. Für dich und dein Team verständlich aufbereitet. Keine Zahlenfriedhöfe.</div>
@@ -913,7 +913,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
           <div class="inv-total-val">199,00 &#8364;</div>
         </div>
 
-        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:8px;">
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(37,99,235,.05);border:1px solid rgba(37,99,235,.15);border-radius:8px;">
           <div style="font-size:11px;color:var(--o);font-weight:600;margin-bottom:.25rem;">Google Ads Konto</div>
           <div style="font-size:12px;color:#888;" id="inv-konto"><span class="inv-placeholder">Wird in Schritt 3 ergänzt</span></div>
         </div>
@@ -1088,21 +1088,21 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
           <div class="poc-title">Oder direkt melden:</div>
           <div class="poc-items">
             <div class="poc-item">
-              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="#2563EB" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div class="poc-text"><strong>E-Mail</strong>kontakt@averiomedia.de</div>
             </div>
             <div class="poc-item">
-              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h2l1 3-1.5 1.5c1 2 2.5 3.5 4.5 4.5L10.5 10l3 1v2a1 1 0 01-1 1C5.4 14 2 7.6 2 4a1 1 0 011-1z" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h2l1 3-1.5 1.5c1 2 2.5 3.5 4.5 4.5L10.5 10l3 1v2a1 1 0 01-1 1C5.4 14 2 7.6 2 4a1 1 0 011-1z" stroke="#2563EB" stroke-width="1.2" stroke-linecap="round"/></svg></div>
               <div class="poc-text"><strong>Telefon</strong>Mo–Fr, 9–18 Uhr</div>
             </div>
             <div class="poc-item">
-              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C4.7 1 2 3.7 2 7c0 2 1 3.8 2.5 5L8 15l3.5-3C13 10.8 14 9 14 7c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" stroke="#FF4D00" stroke-width="1.2"/></svg></div>
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C4.7 1 2 3.7 2 7c0 2 1 3.8 2.5 5L8 15l3.5-3C13 10.8 14 9 14 7c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" stroke="#2563EB" stroke-width="1.2"/></svg></div>
               <div class="poc-text"><strong>Region</strong>Bayern &amp; deutschlandweit</div>
             </div>
           </div>
         </div>
 
-        <div style="background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:14px;padding:1.75rem;">
+        <div style="background:rgba(37,99,235,.05);border:1px solid rgba(37,99,235,.15);border-radius:14px;padding:1.75rem;">
           <div style="font-size:10px;color:var(--o);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem;">Für wen passt die Analyse?</div>
           <div style="font-size:12px;color:#999;line-height:2;">
             <span style="color:var(--o);">✓</span> Unternehmer, die mit Google Ads starten wollen<br>
@@ -1122,7 +1122,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
 <div class="trenner">
   <div class="trenner-label">Ads laufen bereits — du willst professionelle Betreuung?</div>
   <div class="trenner-title">Dann frag jetzt eine <span class="orange">Zusammenarbeit</span> an.</div>
-  <a href="#collab-anfrage" style="background:var(--o);color:#fff;border:none;padding:11px 26px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(255,77,0,.3);transition:all .2s;text-decoration:none;display:inline-block;">Zusammenarbeit anfragen ↓</a>
+  <a href="#collab-anfrage" style="background:var(--o);color:#fff;border:none;padding:11px 26px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(37,99,235,.3);transition:all .2s;text-decoration:none;display:inline-block;">Zusammenarbeit anfragen ↓</a>
 </div>
 
 
@@ -1142,28 +1142,28 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
       <div style="font-family:var(--fh);font-size:36px;font-weight:800;color:#fff;line-height:1;">Kostenlos</div>
       <div style="font-size:11px;color:#888;margin-top:.4rem;">Erstgespräch unverbindlich</div>
       <div style="font-size:11px;color:#666;margin-top:.2rem;">Individuelle Konditionen danach</div>
-      <a href="averio-premium-kontakt.html" style="display:block;width:100%;margin-top:1.5rem;background:var(--o);color:#fff;border:none;padding:13px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(255,77,0,.35);transition:all .25s;text-decoration:none;text-align:center;">Termin buchen →</a>
+      <a href="averio-premium-kontakt.html" style="display:block;width:100%;margin-top:1.5rem;background:var(--o);color:#fff;border:none;padding:13px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--fb);box-shadow:0 4px 20px rgba(37,99,235,.35);transition:all .25s;text-decoration:none;text-align:center;">Termin buchen →</a>
     </div>
   </div>
 
   <div class="collab-3cols">
     <div class="collab-col">
       <div class="collab-col-icon">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h14M9 2l7 7-7 7" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h14M9 2l7 7-7 7" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <div class="collab-col-title">Konto-Übernahme &amp; Audit</div>
       <div class="collab-col-text">Wir analysieren dein bestehendes Konto, identifizieren die wichtigsten Hebel und starten mit einem priorisierten Maßnahmenplan. Kein blinder Weiterlauf.</div>
     </div>
     <div class="collab-col">
       <div class="collab-col-icon">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="10" width="3" height="6" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="7" y="6" width="3" height="10" rx="1" stroke="#FF4D00" stroke-width="1.5"/><rect x="12" y="2" width="3" height="14" rx="1" stroke="#FF4D00" stroke-width="1.5"/></svg>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="10" width="3" height="6" rx="1" stroke="#2563EB" stroke-width="1.5"/><rect x="7" y="6" width="3" height="10" rx="1" stroke="#2563EB" stroke-width="1.5"/><rect x="12" y="2" width="3" height="14" rx="1" stroke="#2563EB" stroke-width="1.5"/></svg>
       </div>
       <div class="collab-col-title">Laufende Optimierung</div>
       <div class="collab-col-text">Wöchentliche Optimierungsrunden: Gebotsanpassungen, Suchanfragen-Bereinigung, A/B-Tests, Budget-Steuerung. Kein Autopilot — aktive Arbeit am Konto.</div>
     </div>
     <div class="collab-col">
       <div class="collab-col-icon">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h9M2 14h6" stroke="#FF4D00" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h9M2 14h6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="collab-col-title">Monatliches Reporting</div>
       <div class="collab-col-text">Du bekommst jeden Monat ein verständliches Reporting — was wurde optimiert, was hat sich verändert, was sind die nächsten Schritte. Keine Zahlenfriedhöfe.</div>
@@ -1274,7 +1274,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
             <div class="pic-item"><div class="pic-dot"></div>Du bekommst ein konkretes Angebot — individuell</div>
           </div>
         </div>
-        <div style="background:rgba(255,77,0,.05);border:1px solid rgba(255,77,0,.15);border-radius:14px;padding:1.75rem;">
+        <div style="background:rgba(37,99,235,.05);border:1px solid rgba(37,99,235,.15);border-radius:14px;padding:1.75rem;">
           <div style="font-size:10px;color:var(--o);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem;">Mindestvoraussetzungen</div>
           <div style="font-size:12px;color:#999;line-height:2;">
             <span style="color:var(--o);">✓</span> Monatliches Werbebudget ab 1.000 €<br>
@@ -1286,7 +1286,7 @@ html[data-theme="light"] .ang-footer a         { color: #495057 !important; }
           <div class="poc-title">Lieber direkt Termin buchen?</div>
           <div class="poc-items">
             <div class="poc-item">
-              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="2" stroke="#FF4D00" stroke-width="1.2"/><path d="M2 7h12M5 1v4M11 1v4" stroke="#FF4D00" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+              <div class="poc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="2" stroke="#2563EB" stroke-width="1.2"/><path d="M2 7h12M5 1v4M11 1v4" stroke="#2563EB" stroke-width="1.2" stroke-linecap="round"/></svg></div>
               <div class="poc-text"><strong>Calendly</strong><a href="averio-premium-kontakt.html" style="color:var(--o);text-decoration:none;">Direkt buchen →</a></div>
             </div>
           </div>

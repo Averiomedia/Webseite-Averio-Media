@@ -123,7 +123,7 @@ function initEntryAnimations() {
       const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       ctx.save();
       ctx.globalAlpha = this.a * (isLight ? 2.2 : 1);
-      ctx.fillStyle   = this.isOrange ? '#FF4D00' : (isLight ? '#64748B' : '#A8D8F0');
+      ctx.fillStyle   = this.isOrange ? '#2563EB' : (isLight ? '#64748B' : '#A8D8F0');
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
       ctx.fill();
@@ -143,7 +143,7 @@ function initEntryAnimations() {
     const maxDist2 = maxDist * maxDist;
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     const baseAlpha = isLight ? .13 : .07;
-    ctx.strokeStyle = '#FF4D00';
+    ctx.strokeStyle = '#2563EB';
     ctx.lineWidth = .6;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -475,7 +475,7 @@ function revealSplit(el) {
     const d = document.createElement('div');
     d.style.cssText = `
       position:fixed;width:4px;height:4px;border-radius:50%;
-      background:rgba(255,77,0,${0.6 - i * .07});
+      background:rgba(37,99,235,${0.6 - i * .07});
       pointer-events:none;z-index:99996;transform:translate(-50%,-50%);
       will-change:transform;
     `;
