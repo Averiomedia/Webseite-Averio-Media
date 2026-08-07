@@ -54,6 +54,7 @@
   -webkit-backdrop-filter: blur(8px);
   opacity: 0; pointer-events: none;
   transition: opacity .35s ease;
+  cursor: auto;
 }
 #cb-overlay.cb-show { opacity: 1; pointer-events: auto; }
 
@@ -61,6 +62,7 @@
 #cb-banner {
   position: fixed; bottom: 0; left: 0; right: 0;
   z-index: 99999;
+  cursor: auto;
   background: #111;
   border-top: 2px solid #2563EB;
   box-shadow: 0 -24px 80px rgba(0,0,0,.85), 0 0 120px rgba(37,99,235,.06);
