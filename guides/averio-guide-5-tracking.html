@@ -304,7 +304,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
   ════════════════════════════════════════════════════ -->
   <div class="page-intro">
     <h2>Warum Tracking so entscheidend ist</h2>
-    <p>Ohne sauberes Tracking schießt du blind. Du weißt nicht, welche Keywords wirklich Anfragen bringen, welche Anzeigen konvertieren und wo Budget sinnlos verpufft. Google Ads optimiert seine KI-Algorithmen auf die Daten, die du lieferst — und wenn diese Daten fehlerhaft oder unvollständig sind, optimiert der Algorithmus in die falsche Richtung.</p>
+    <p>Ohne sauberes Tracking schießt du blind. Du weißt nicht, welche Keywords wirklich Anfragen bringen, welche Anzeigen konvertieren und wo Budget sinnlos verpufft. Google Ads optimiert seine KI-Algorithmen auf die Daten, die du lieferst. Und wenn diese Daten fehlerhaft oder unvollständig sind, optimiert der Algorithmus in die falsche Richtung.</p>
     <p>Dieser Guide zeigt dir Schritt für Schritt, wie du ein lückenloses Tracking-Fundament aufbaust: GA4 einrichten, mit Google Ads verknüpfen, Conversions korrekt zählen und Consent Mode v2 rechtskonform konfigurieren.</p>
     <div class="flow-diagram">
       <div class="flow-node">Website</div>
@@ -332,7 +332,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">1</div>
       <div class="step-body">
         <div class="step-title">Neue GA4 Property anlegen</div>
-        <div class="step-text">Öffne <strong>analytics.google.com</strong> und navigiere zu <em>Verwaltung → Property erstellen</em>. Wähle Google Analytics 4 (nicht Universal Analytics — der wurde 2023 eingestellt). Gib deinen Unternehmensname, die Zeitzone (Europa/Berlin) und die Währung (EUR) ein.</div>
+        <div class="step-text">Öffne <strong>analytics.google.com</strong> und navigiere zu <em>Verwaltung → Property erstellen</em>. Wähle Google Analytics 4 (nicht Universal Analytics. Der wurde 2023 eingestellt). Gib deinen Unternehmensname, die Zeitzone (Europa/Berlin) und die Währung (EUR) ein.</div>
         <div class="tip-box"><strong>Wichtig:</strong> Stelle sicher, dass du dieselbe Google-Konto-E-Mail nutzt, mit der dein Google Ads-Konto verknüpft ist. Das vereinfacht die Verlinkung erheblich.</div>
       </div>
     </div>
@@ -341,11 +341,11 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">2</div>
       <div class="step-body">
         <div class="step-title">Datenstrom für die Website erstellen</div>
-        <div class="step-text">In der Property-Einrichtung: <em>Datenstrom → Web → URL deiner Website eingeben</em>. Aktiviere <strong>Erweiterte Messung</strong> — damit werden Seitenaufrufe, Scrolltiefe, Klicks auf externe Links und Dateidownloads automatisch erfasst.</div>
+        <div class="step-text">In der Property-Einrichtung: <em>Datenstrom → Web → URL deiner Website eingeben</em>. Aktiviere <strong>Erweiterte Messung</strong>. Damit werden Seitenaufrufe, Scrolltiefe, Klicks auf externe Links und Dateidownloads automatisch erfasst.</div>
         <ul class="substep-list">
-          <li>Notiere die <strong>Mess-ID</strong> (Format: G-XXXXXXXXXX) — du brauchst sie für GTM</li>
+          <li>Notiere die <strong>Mess-ID</strong> (Format: G-XXXXXXXXXX). Du brauchst sie für GTM</li>
           <li>Aktiviere: Seitenaufrufe, Bildlauf, ausgehende Klicks, Sitesuche, Videointeraktion</li>
-          <li>Deaktiviere vorläufig "Formularinteraktionen" — das erzeugt ohne Konfiguration unnötige Events</li>
+          <li>Deaktiviere vorläufig "Formularinteraktionen". Das erzeugt ohne Konfiguration unnötige Events</li>
   </ul>
       </div>
     </div>
@@ -421,7 +421,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
         <div class="step-title">Verknüpfung in GA4 herstellen</div>
         <div class="step-text">In GA4: <em>Verwaltung → Property → Produkt-Links → Google Ads-Links → Verknüpfen</em>. Wähle dein Google Ads-Konto aus der Liste. Aktiviere <strong>Personalisierte Anzeigen aktivieren</strong> und <strong>Auto-Tagging bestätigen</strong>.</div>
         <ul class="substep-list">
-          <li>Die Verknüpfung ist kostenlos und bidirektional — Daten fließen in beide Richtungen</li>
+          <li>Die Verknüpfung ist kostenlos und bidirektional. Daten fließen in beide Richtungen</li>
           <li>GA4-Zielgruppen werden in Google Ads verfügbar (Remarketing)</li>
           <li>Conversion-Daten aus GA4 können in Google Ads als Conversion-Aktionen genutzt werden</li>
   </ul>
@@ -432,7 +432,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">2</div>
       <div class="step-body">
         <div class="step-title">Auto-Tagging prüfen</div>
-        <div class="step-text">In Google Ads: <em>Einstellungen → Konto → Auto-Tagging</em> muss aktiviert sein. Ohne Auto-Tagging fügt Google Ads keine <code>gclid</code>-Parameter an URLs an — und GA4 kann keine Klicks korrekt Google Ads zuordnen.</div>
+        <div class="step-text">In Google Ads: <em>Einstellungen → Konto → Auto-Tagging</em> muss aktiviert sein. Ohne Auto-Tagging fügt Google Ads keine <code>gclid</code>-Parameter an URLs an. Und GA4 kann keine Klicks korrekt Google Ads zuordnen.</div>
         <div class="tip-box"><strong>Kontrollcheck:</strong> Klicke auf eine deiner eigenen Anzeigen und prüfe die URL. Sie sollte einen <code>?gclid=...</code> Parameter enthalten. Fehlt er, ist Auto-Tagging deaktiviert.</div>
       </div>
     </div>
@@ -459,7 +459,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">1</div>
       <div class="step-body">
         <div class="step-title">Was zählt als Conversion?</div>
-        <div class="step-text">Definiere zuerst, welche Aktionen für dein Geschäftsmodell wirklich relevant sind. Nicht jeder Klick ist eine Conversion — messe nur, was Umsatz-relevant ist.</div>
+        <div class="step-text">Definiere zuerst, welche Aktionen für dein Geschäftsmodell wirklich relevant sind. Nicht jeder Klick ist eine Conversion. Messe nur, was Umsatz-relevant ist.</div>
         <table class="data-table">
           <thead>
             <tr><th>Conversion-Typ</th><th>Event-Name</th><th>Priorität</th></tr>
@@ -482,7 +482,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-body">
         <div class="step-title">Events als Conversions markieren</div>
         <div class="step-text">In GA4: <em>Verwaltung → Events → [Event auswählen] → Als Conversion markieren</em>. Alternativ unter <em>Verwaltung → Conversions → Neue Conversion-Ereignis erstellen</em>. Der Event-Name muss exakt mit dem gesendeten Event übereinstimmen.</div>
-        <div class="warn-box"><strong>Achtung: Doppeltes Tracking vermeiden!</strong> Wenn du GA4-Conversions <em>und</em> eigenständige Google Ads Conversion-Tags verwendest, zählt jede Conversion doppelt. Entscheide dich für eine Methode — empfohlen: <strong>GA4-Import in Google Ads</strong>.</div>
+        <div class="warn-box"><strong>Achtung: Doppeltes Tracking vermeiden!</strong> Wenn du GA4-Conversions <em>und</em> eigenständige Google Ads Conversion-Tags verwendest, zählt jede Conversion doppelt. Entscheide dich für eine Methode. Empfohlen: <strong>GA4-Import in Google Ads</strong>.</div>
       </div>
     </div>
 
@@ -490,7 +490,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">3</div>
       <div class="step-body">
         <div class="step-title">Conversions in Google Ads importieren</div>
-        <div class="step-text">In Google Ads: <em>Ziele → Conversions → Neue Conversion-Aktion → Aus Google Analytics importieren</em>. Wähle deine GA4-Property und die gewünschten Conversion-Events aus. Setze <strong>Primäre Conversions</strong> nur für wirklich kaufrelevante Events — alles andere als "Sekundär".</div>
+        <div class="step-text">In Google Ads: <em>Ziele → Conversions → Neue Conversion-Aktion → Aus Google Analytics importieren</em>. Wähle deine GA4-Property und die gewünschten Conversion-Events aus. Setze <strong>Primäre Conversions</strong> nur für wirklich kaufrelevante Events. Alles andere als "Sekundär".</div>
         <div class="tip-box"><strong>Best Practice:</strong> Setze für Formular-Submissions einen realistischen Conversion-Wert (z.B. 150 € für einen qualifizierten B2B-Lead). So kann Google Ads den tROAS-Algorithmus korrekt optimieren.</div>
       </div>
     </div>
@@ -509,7 +509,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">1</div>
       <div class="step-body">
         <div class="step-title">Was ist Consent Mode v2?</div>
-        <div class="step-text">Consent Mode v2 (CM v2) ist Googles Lösung für DSGVO-konformes Tracking. Wenn ein Nutzer Cookies ablehnt, sendet CM v2 statt gar keine Daten sogenannte "Pings" ohne personenbezogene Informationen. Google modelliert daraus Schätzwerte — so bleibt die Kampagnenoptimierung auch ohne vollständige Zustimmung funktionsfähig.</div>
+        <div class="step-text">Consent Mode v2 (CM v2) ist Googles Lösung für DSGVO-konformes Tracking. Wenn ein Nutzer Cookies ablehnt, sendet CM v2 statt gar keine Daten sogenannte "Pings" ohne personenbezogene Informationen. Google modelliert daraus Schätzwerte. So bleibt die Kampagnenoptimierung auch ohne vollständige Zustimmung funktionsfähig.</div>
         <div class="flow-diagram">
           <div class="flow-node">Nutzer stimmt zu</div>
           <div class="flow-arrow">→</div>
@@ -566,7 +566,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">1</div>
       <div class="step-body">
         <div class="step-title">End-to-End Test durchführen</div>
-        <div class="step-text">Öffne GTM im Vorschaumodus, akzeptiere im Cookie-Banner alle Cookies, führe jede definierte Conversion-Aktion durch (Formular ausfüllen und abschicken, Telefonnummer anklicken, E-Mail-Link klicken). Prüfe in der GTM-Vorschau, ob die entsprechenden Events feuern — und in GA4 Echtzeit, ob sie ankommen.</div>
+        <div class="step-text">Öffne GTM im Vorschaumodus, akzeptiere im Cookie-Banner alle Cookies, führe jede definierte Conversion-Aktion durch (Formular ausfüllen und abschicken, Telefonnummer anklicken, E-Mail-Link klicken). Prüfe in der GTM-Vorschau, ob die entsprechenden Events feuern. Und in GA4 Echtzeit, ob sie ankommen.</div>
         <div class="kpi-tags">
           <div class="kpi-tag">GTM Debug Mode</div>
           <div class="kpi-tag">GA4 DebugView</div>
@@ -580,7 +580,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
       <div class="step-bubble">2</div>
       <div class="step-body">
         <div class="step-title">GA4 DebugView nutzen</div>
-        <div class="step-text">In GA4: <em>Verwaltung → DebugView</em>. Installiere die Chrome-Extension "GA Debugger" — damit wird dein Browser als Debug-Gerät registriert und alle Events erscheinen live im DebugView. So siehst du exakt, welche Parameter mit jedem Event mitgesendet werden.</div>
+        <div class="step-text">In GA4: <em>Verwaltung → DebugView</em>. Installiere die Chrome-Extension "GA Debugger". Damit wird dein Browser als Debug-Gerät registriert und alle Events erscheinen live im DebugView. So siehst du exakt, welche Parameter mit jedem Event mitgesendet werden.</div>
       </div>
     </div>
 
@@ -590,9 +590,9 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
         <div class="step-title">Regelmäßige Tracking-Audits</div>
         <div class="step-text">Tracking bricht häufig nach Website-Updates, Theme-Wechseln oder CMS-Updates. Etabliere eine monatliche Routine:</div>
         <ul class="substep-list">
-          <li><strong>Monatlich:</strong> Conversion-Zahlen in GA4 und Google Ads vergleichen — starke Abweichungen deuten auf Tracking-Fehler hin</li>
+          <li><strong>Monatlich:</strong> Conversion-Zahlen in GA4 und Google Ads vergleichen. Starke Abweichungen deuten auf Tracking-Fehler hin</li>
           <li><strong>Nach jedem Website-Update:</strong> End-to-End Test wiederholen</li>
-          <li><strong>Quartalsweise:</strong> GA4 Audit — prüfen ob alle Events noch korrekt feuern und keine doppelten Conversions gezählt werden</li>
+          <li><strong>Quartalsweise:</strong> GA4 Audit. Prüfen ob alle Events noch korrekt feuern und keine doppelten Conversions gezählt werden</li>
           <li><strong>Sofort bei Auffälligkeiten:</strong> Plötzlicher Conversion-Einbruch ohne Änderung der Kampagnen deutet auf Tracking-Ausfall hin</li>
   </ul>
       </div>
@@ -644,7 +644,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
   <div class="cta-page">
     <div class="cta-label">Averio Media · Google Ads Betreuung</div>
     <div class="cta-title">Tracking richtig aufgesetzt —<br>jetzt Kampagnen auf Basis echter Daten schalten</div>
-    <div class="cta-text">Ein sauberes Tracking-Fundament ist die Voraussetzung für profitable Google Ads Kampagnen. Wenn du möchtest, dass ich dein Tracking auditiere, korrekt aufsetze und darauf aufbauend Kampagnen betreue — meld dich.</div>
+    <div class="cta-text">Ein sauberes Tracking-Fundament ist die Voraussetzung für profitable Google Ads Kampagnen. Wenn du möchtest, dass ich dein Tracking auditiere, korrekt aufsetze und darauf aufbauend Kampagnen betreue. Meld dich.</div>
     <hr class="cta-divider">
     <div class="cta-contact">
       <div class="cta-contact-item"><strong>Website:</strong> averiomedia.de</div>
