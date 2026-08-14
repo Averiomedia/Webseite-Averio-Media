@@ -70,7 +70,7 @@
   transform: translateY(110%);
   pointer-events: none;
   transition: transform .48s cubic-bezier(.22,1,.36,1);
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 #cb-banner.cb-show { transform: translateY(0); pointer-events: auto; }
 
@@ -87,7 +87,7 @@
 
 /* ── Titel ── */
 .cb-title {
-  font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: .95rem; font-weight: 700; letter-spacing: -.01em;
   color: #fff; margin-bottom: 12px;
   display: flex; align-items: center; gap: 10px;
@@ -174,7 +174,7 @@
   flex: 1; min-width: 130px;
   padding: 13px 22px;
   border-radius: 50px; cursor: pointer;
-  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-family: 'Figtree', -apple-system, sans-serif;
   font-size: 13px; font-weight: 600;
   letter-spacing: .03em;
   transition: all .22s ease;

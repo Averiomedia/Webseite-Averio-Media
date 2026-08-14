@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Averio Logo Generator</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#1a1a1a; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; gap:32px; font-family:Syne,sans-serif; padding:40px; }
+  body { background:#1a1a1a; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; gap:32px; font-family:Figtree,sans-serif; padding:40px; }
   canvas { display:none; }
   .preview { border-radius:14px; border:1px solid rgba(255,255,255,.1); overflow:hidden; }
   .preview img { display:block; max-width:100%; }
@@ -14,7 +14,7 @@
   .card { text-align:center; }
   .label { font-size:11px; color:rgba(255,255,255,.35); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
   .btns { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
-  .btn { padding:10px 20px; border-radius:8px; font-family:Syne,sans-serif; font-size:12px; font-weight:800; cursor:pointer; border:none; letter-spacing:.05em; transition:opacity .2s; }
+  .btn { padding:10px 20px; border-radius:8px; font-family:Figtree,sans-serif; font-size:12px; font-weight:800; cursor:pointer; border:none; letter-spacing:.05em; transition:opacity .2s; }
   .btn:hover { opacity:.75; }
   .btn-primary { background:#2563EB; color:#fff; }
   .btn-ghost { background:rgba(255,255,255,.08); color:rgba(255,255,255,.7); border:1px solid rgba(255,255,255,.15); }
@@ -90,8 +90,8 @@ async function drawLogo(canvas, mode) {
   const iconImg = await loadImage(svgToURL(iconMarkSVG()));
   ctx.drawImage(iconImg, 10, 8, 56, 64);
 
-  // Text in Syne 800
-  ctx.font         = '800 27px "Syne"';
+  // Text in Figtree 800
+  ctx.font         = '800 27px "Figtree"';
   ctx.textBaseline = 'middle';
   if ('letterSpacing' in ctx) ctx.letterSpacing = '-1px';
 
@@ -241,7 +241,7 @@ async function init() {
   document.getElementById('dl-all-btn').style.display = '';
 }
 
-// Warte auf Syne-Font, dann zeichnen
+// Warte auf Figtree-Font, dann zeichnen
 document.fonts.ready.then(init);
 </script>
 </body>
