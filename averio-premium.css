@@ -44,7 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media (pointer: fine) { body { cursor: none; } }
+
 
 body::before {
   content: '';
@@ -57,7 +57,9 @@ body::before {
 }
 
 /* ── CURSOR ───────────────────────────────────────────── */
-#cursor {
+#cursor, #cursor-follower { display: none !important; }
+/* Original cursor styles kept for reference */
+#cursor-hidden {
   position: fixed;
   width: 10px; height: 10px;
   background: var(--o);
@@ -1178,7 +1180,7 @@ body::before {
 .footer-logo-name { font-family: var(--fh); font-size: 13px; font-weight: 800; color: #555; }
 .footer-copy { font-size: 11px; color: #444; }
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.footer-links a { font-size: 11px; color: #444; text-decoration: none; cursor: none; transition: color .2s; }
+.footer-links a { font-size: 11px; color: #444; text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: #888; }
 
 /* ── BUTTONS ──────────────────────────────────────────── */

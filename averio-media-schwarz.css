@@ -41,7 +41,7 @@ body {
   font-family: var(--fb);
   color: #e8e8e8;
   overflow-x: hidden;
-  cursor: none;
+  cursor: pointer;
 }
 
 body::before {
@@ -55,7 +55,9 @@ body::before {
 }
 
 /* ── CURSOR ───────────────────────────────────────────── */
-#cursor {
+#cursor, #cursor-follower { display: none !important; }
+/* Original cursor styles kept for reference */
+#cursor-hidden {
   position: fixed;
   width: 10px; height: 10px;
   background: var(--o);
@@ -167,7 +169,7 @@ body::before {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  cursor: none;
+  cursor: pointer;
 }
 .nav-logo-mark {
   position: relative;
@@ -217,7 +219,7 @@ body::before {
   padding: 7px 14px;
   border-radius: 100px;
   transition: all .2s;
-  cursor: none;
+  cursor: pointer;
   letter-spacing: .02em;
 }
 .nav-links a:hover { color: #fff; background: rgba(255,255,255,.05); }
@@ -235,7 +237,7 @@ body::before {
   border-radius: 100px;
   font-size: 12px;
   font-weight: 700;
-  cursor: none;
+  cursor: pointer;
   font-family: var(--fb);
   transition: all .25s;
   white-space: nowrap;
@@ -748,7 +750,7 @@ body::before {
   transition: transform .35s cubic-bezier(.4,0,.2,1),
               border-color .35s,
               box-shadow .35s;
-  cursor: none;
+  cursor: pointer;
 }
 .service-card:hover {
   transform: translateY(-8px);
@@ -1115,7 +1117,7 @@ body::before {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.5rem 0;
-  cursor: none;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 600;
   color: #888;
@@ -1173,7 +1175,7 @@ body::before {
 .footer-logo-name { font-family: var(--fh); font-size: 13px; font-weight: 800; color: #555; }
 .footer-copy { font-size: 11px; color: #444; }
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.footer-links a { font-size: 11px; color: #444; text-decoration: none; cursor: none; transition: color .2s; }
+.footer-links a { font-size: 11px; color: #444; text-decoration: none; cursor: pointer; transition: color .2s; }
 .footer-links a:hover { color: #888; }
 
 /* ── BUTTONS ──────────────────────────────────────────── */
@@ -1185,7 +1187,7 @@ body::before {
   border-radius: 100px;
   font-size: 13px;
   font-weight: 700;
-  cursor: none;
+  cursor: pointer;
   font-family: var(--fb);
   text-decoration: none;
   transition: all .3s cubic-bezier(.4,0,.2,1);
