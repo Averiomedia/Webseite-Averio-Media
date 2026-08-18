@@ -6,26 +6,23 @@
 <script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#016B4F">
-<title>Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media</title>
-<meta name="description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
-<!-- SEO -->
+<title>Kontakt – Google Ads Beratung | Averio Media</title>
+<meta name="description" content="Jetzt kostenlosen Google Ads-Check oder Potenzialanalyse buchen. Persönliche Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
 <link rel="canonical" href="https://averiomedia.de/kontakt">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://averiomedia.de/kontakt">
-<meta property="og:title" content="Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media">
-<meta property="og:description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
+<meta property="og:title" content="Kontakt – Google Ads Beratung | Averio Media">
+<meta property="og:description" content="Jetzt kostenlosen Google Ads-Check oder Potenzialanalyse buchen. Persönliche Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kostenloser Kurzcheck buchen – Google Ads Beratung | Averio Media">
-<meta name="twitter:description" content="Jetzt kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister, Handwerk & lokale Unternehmen. Kein Verkaufsdruck, klare Einschätzung.">
+<meta name="twitter:title" content="Kontakt – Google Ads Beratung | Averio Media">
+<meta name="twitter:description" content="Jetzt kostenlosen Google Ads-Check oder Potenzialanalyse buchen.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
 
 <script type="application/ld+json">
@@ -36,261 +33,214 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
-        { "@type": "ListItem", "position": 2, "name": "Kontakt & Kurzcheck", "item": "https://averiomedia.de/kontakt" }
+        { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://averiomedia.de/kontakt" }
       ]
     },
     {
       "@type": "ContactPage",
-      "name": "Google Ads Beratung – Kostenloser Erstcheck",
+      "name": "Kontakt – Averio Media",
       "url": "https://averiomedia.de/kontakt",
-      "description": "Jetzt kostenloses 30-Minuten-Erstgespräch mit Google Ads Freelancerin Marie Böttiger buchen. Kein Verkaufsdruck, direkte Einschätzung.",
+      "description": "Kostenlosen Google Ads-Check oder Potenzialanalyse buchen.",
       "mainEntity": {
-        "@type": "LocalBusiness",
-        "@id": "https://averiomedia.de/#business"
+        "@type": "ProfessionalService",
+        "name": "Averio Media",
+        "email": "kontakt@averiomedia.de",
+        "telephone": "+4917490442007",
+        "url": "https://averiomedia.de",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "kontakt@averiomedia.de",
+          "contactType": "customer service",
+          "availableLanguage": "Deutsch"
+        }
       }
     }
   ]
 }
 </script>
 
-<!-- Fonts -->
-
-<!-- Calendly CSS wird erst nach Einwilligung dynamisch geladen -->
-
-<!-- Shared Styles -->
 <link rel="stylesheet" href="averio-media-weiss.css?v=8">
 
 <style>
-/* ── PAGE SHELL ── */
 body { background: var(--bg); }
 
-/* ── NAV: vollbreit wie Hauptseite, kein Umbrechen ── */
+/* Nav */
 .nav-links a { white-space: nowrap; }
 .nav-cta { white-space: nowrap; flex-shrink: 0; }
 
 /* ── KONTAKT HERO ── */
-.kontakt-hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 140px 24px 80px;
+.k-hero {
+  padding: 140px 24px 60px;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
-
-/* Subtle background glow */
-.kontakt-hero::before {
+.k-hero::before {
   content: '';
   position: absolute;
-  top: -200px;
-  left: 50%;
+  top: -200px; left: 50%;
   transform: translateX(-50%);
-  width: 800px;
-  height: 600px;
+  width: 800px; height: 600px;
   background: radial-gradient(ellipse, rgba(1,107,79,.08) 0%, transparent 70%);
   pointer-events: none;
 }
-
-.kontakt-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #016B4F;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(1,107,79,.22);
-  border-radius: 100px;
-  padding: 6px 18px 6px 10px;
-  background: rgba(1,107,79,.06);
+.k-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--o); font-weight: 600; margin-bottom: 1.5rem;
+  border: 1px solid rgba(1,107,79,.22); border-radius: 100px;
+  padding: 6px 18px 6px 12px; background: rgba(1,107,79,.06);
 }
-
-.kontakt-h1 {
-  font-family: 'Figtree', sans-serif;
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 1.25rem;
-  max-width: 700px;
+.k-h1 {
+  font-family: var(--fh); font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800; line-height: 1.08; letter-spacing: -.03em;
+  color: #fff; margin: 0 auto 1.2rem; max-width: 720px;
 }
-
-.kontakt-h1 .accent { color: #016B4F; }
-
-.kontakt-sub {
+.k-h1 em { color: var(--light); font-style: normal; }
+.k-sub {
   font-size: clamp(.95rem, 1.4vw, 1.1rem);
-  color: rgba(255,255,255,.48);
-  line-height: 1.7;
-  text-align: center;
-  max-width: 520px;
-  margin-bottom: 3rem;
+  color: rgba(255,255,255,.5); line-height: 1.7;
+  max-width: 560px; margin: 0 auto 2.5rem;
 }
 
-/* Trust badges */
-.kontakt-trust {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 3rem;
+/* ── KONTAKT-INFO CARDS ── */
+.k-info-row {
+  display: flex; justify-content: center; gap: 1.5rem;
+  flex-wrap: wrap; margin-bottom: 3.5rem; padding: 0 1rem;
 }
-.kontakt-trust-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: rgba(255,255,255,.45);
+.k-info-card {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px; padding: 16px 24px;
+  text-decoration: none; transition: border-color .2s, background .2s;
 }
-.kontakt-trust-item svg { flex-shrink: 0; }
-.kontakt-trust-sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.2); }
+.k-info-card:hover { border-color: rgba(1,107,79,.3); background: rgba(1,107,79,.04); }
+.k-info-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  background: rgba(1,107,79,.1); border: 1px solid rgba(1,107,79,.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.k-info-label { font-size: 11px; color: rgba(255,255,255,.4); letter-spacing: .04em; }
+.k-info-val { font-family: var(--fh); font-weight: 700; font-size: 14px; color: #fff; }
 
-/* Calendly container */
-.calendly-wrap {
-  width: 100%;
-  max-width: 900px;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+/* ── MAIN GRID: Form + Calendly ── */
+.k-main {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px 60px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;
 }
-
-/* Placeholder anzeigen wenn Calendly-URL noch nicht gesetzt */
-.calendly-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 40px;
-  text-align: center;
-  gap: 16px;
+.k-card {
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px; padding: 2rem; position: relative;
 }
-.calendly-placeholder h3 {
-  font-family: 'Figtree', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff;
-}
-.calendly-placeholder p {
-  font-size: 14px;
-  color: rgba(255,255,255,.4);
-  max-width: 400px;
-  line-height: 1.6;
-}
-.calendly-placeholder code {
-  background: rgba(1,107,79,.1);
-  border: 1px solid rgba(1,107,79,.2);
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-size: 13px;
-  color: #016B4F;
-  font-family: monospace;
+.k-card-title {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--fh); font-weight: 700; font-size: 17px; color: #fff;
+  margin-bottom: 1.5rem;
 }
 
-/* ── Calendly Consent-Box ── */
-.calendly-consent-box {
-  display: flex; flex-direction: column; align-items: center;
-  justify-content: center; text-align: center;
-  padding: 64px 40px; gap: 20px;
+/* ── FORM ── */
+.k-form { display: flex; flex-direction: column; gap: 16px; }
+.k-form label { display: block; font-size: 12px; font-weight: 600; color: #aaa; margin-bottom: 5px; }
+.k-form input[type="text"],
+.k-form input[type="email"],
+.k-form input[type="tel"],
+.k-form input[type="url"],
+.k-form textarea,
+.k-form select {
+  width: 100%; padding: 11px 14px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04);
+  color: #fff; font-size: 14px; font-family: inherit; transition: border-color .2s;
 }
-.ccb-icon {
-  width: 64px; height: 64px; border-radius: 16px;
-  background: rgba(1,107,79,.08); border: 1px solid rgba(1,107,79,.18);
-  display: flex; align-items: center; justify-content: center;
+.k-form input:focus, .k-form textarea:focus, .k-form select:focus {
+  outline: none; border-color: var(--o);
 }
-.ccb-title {
-  font-family: 'Figtree', sans-serif; font-size: 1.4rem;
-  font-weight: 700; color: #fff; margin: 0;
+.k-form select { appearance: none; cursor: pointer; }
+.k-form select option { background: #1a1a1a; color: #fff; }
+.k-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.k-group-title {
+  font-size: 12px; font-weight: 600; color: #aaa; margin-bottom: 8px;
 }
-.ccb-text {
-  font-size: 14px; color: rgba(255,255,255,.45);
-  max-width: 420px; line-height: 1.7; margin: 0;
-}
-.ccb-text strong { color: rgba(255,255,255,.75); }
-.ccb-text a { color: #016B4F; text-decoration: underline; }
-.ccb-buttons {
-  display: flex; flex-wrap: wrap; gap: 12px;
-  justify-content: center; margin-top: 8px;
-}
-.ccb-btn-accept {
-  padding: .75rem 1.8rem; border-radius: 50px; border: none;
-  background: #016B4F; color: #fff; cursor: pointer;
-  font-family: 'Figtree', sans-serif; font-size: .85rem;
-  font-weight: 700; letter-spacing: .05em;
-  box-shadow: 0 6px 20px rgba(1,107,79,.35);
-  transition: all .25s ease;
-}
-.ccb-btn-accept:hover { background: #ff6120; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(1,107,79,.5); }
-.ccb-btn-link {
-  padding: .75rem 1.4rem; border-radius: 50px;
-  border: 1.5px solid rgba(255,255,255,.2);
-  color: rgba(255,255,255,.6); font-size: .85rem;
-  font-family: 'Figtree', sans-serif; font-weight: 500;
-  text-decoration: none; transition: all .25s ease;
-}
-.ccb-btn-link:hover { border-color: rgba(255,255,255,.4); color: #fff; }
 
-/* ── FOOTER MINI ── */
-.kontakt-footer {
-  text-align: center;
-  padding: 40px 24px;
-  font-size: 12px;
-  color: rgba(255,255,255,.2);
-  border-top: 1px solid rgba(255,255,255,.06);
+/* Checkbox options */
+.k-check-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.k-check-opt {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px; padding: 10px 16px; cursor: pointer; transition: all .2s;
+  font-size: 13px; color: rgba(255,255,255,.7);
 }
-.kontakt-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
-.kontakt-footer a:hover { color: #016B4F; }
+.k-check-opt:has(input:checked) {
+  border-color: var(--o); background: rgba(1,107,79,.08); color: #fff;
+}
+.k-check-opt input[type="radio"],
+.k-check-opt input[type="checkbox"] { accent-color: var(--o); }
 
-/* ── LIGHT MODE ───────────────────────────────────────── */
-html[data-theme="light"] body { color: #0D1117 !important; }
-html[data-theme="light"] .kontakt-h1,
-html[data-theme="light"] .k-h { color: #0D1117 !important; }
-html[data-theme="light"] .kontakt-sub,
-html[data-theme="light"] .k-sub { color: #495057 !important; }
-html[data-theme="light"] .kontakt-eyebrow { color: var(--ice) !important; opacity: .85 !important; }
-html[data-theme="light"] .step-title,
-html[data-theme="light"] .ccb-title { color: #0D1117 !important; }
-html[data-theme="light"] .step-desc,
-html[data-theme="light"] .ccb-text { color: #495057 !important; }
-html[data-theme="light"] .ccb-text strong { color: #212529 !important; }
-html[data-theme="light"] .consent-box { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
-html[data-theme="light"] .consent-text { color: #495057 !important; }
-html[data-theme="light"] .kontakt-note { color: #868E96 !important; }
-html[data-theme="light"] .kontakt-footer { color: #ADB5BD !important; border-top-color: #E9ECEF !important; }
-html[data-theme="light"] .kontakt-footer a { color: #868E96 !important; }
-html[data-theme="light"] [style*="color:#fff"][style*="font-weight:600"],
-html[data-theme="light"] [style*="color:#fff"][style*="font-weight: 600"] { color: #0D1117 !important; }
-html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 !important; }
+/* Budget pills */
+.k-budget-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.k-budget-pill {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 100px; padding: 8px 16px; cursor: pointer; transition: all .2s;
+  font-size: 13px; color: rgba(255,255,255,.6);
+}
+.k-budget-pill:has(input:checked) {
+  border-color: var(--o); background: rgba(1,107,79,.1); color: #fff;
+}
+.k-budget-pill input { accent-color: var(--o); }
+
+.k-submit {
+  padding: 13px 28px; border: none; border-radius: 50px;
+  background: var(--o); color: #fff; font-size: 14px; font-weight: 700;
+  font-family: inherit; cursor: pointer; transition: all .25s;
+  box-shadow: 0 6px 20px rgba(1,107,79,.3); width: 100%;
+}
+.k-submit:hover { background: var(--o2); box-shadow: 0 10px 28px rgba(1,107,79,.4); transform: translateY(-1px); }
+
+.k-dsgvo { display: flex; align-items: flex-start; gap: 8px; }
+.k-dsgvo label { font-size: 11px; color: #777; line-height: 1.5; margin-bottom: 0; }
+.k-dsgvo a { color: var(--o); text-decoration: underline; }
+
+/* Calendly */
+.k-calendly { min-height: 520px; }
+
+/* ── FOOTER ── */
+.k-footer {
+  text-align: center; padding: 40px 24px; font-size: 12px;
+  color: rgba(255,255,255,.2); border-top: 1px solid rgba(255,255,255,.06);
+}
+.k-footer a { color: rgba(255,255,255,.35); text-decoration: none; }
+.k-footer a:hover { color: var(--o); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .k-main { grid-template-columns: 1fr; }
+  .k-info-row { flex-direction: column; align-items: center; }
+  .k-row { grid-template-columns: 1fr; }
+  .k-check-row { flex-direction: column; }
+  .k-budget-row { flex-direction: column; }
+}
+
+/* ── LIGHT MODE ── */
+html[data-theme="light"] .k-h1 { color: #0D1117; }
+html[data-theme="light"] .k-sub { color: #495057; }
+html[data-theme="light"] .k-info-val { color: #0D1117; }
+html[data-theme="light"] .k-info-label { color: #868E96; }
+html[data-theme="light"] .k-card-title { color: #0D1117; }
+html[data-theme="light"] .k-form label { color: #495057; }
+html[data-theme="light"] .k-form input,
+html[data-theme="light"] .k-form textarea,
+html[data-theme="light"] .k-form select {
+  background: #F8F9FA; border-color: #DEE2E6; color: #212529;
+}
+html[data-theme="light"] .k-check-opt { color: #495057; background: #F8F9FA; border-color: #DEE2E6; }
+html[data-theme="light"] .k-budget-pill { color: #495057; background: #F8F9FA; border-color: #DEE2E6; }
+html[data-theme="light"] .k-dsgvo label { color: #868E96; }
+html[data-theme="light"] .k-footer { color: #ADB5BD; border-top-color: #E9ECEF; }
+html[data-theme="light"] .k-footer a { color: #868E96; }
+html[data-theme="light"] .k-info-card { background: #F8F9FA; border-color: #E9ECEF; }
+html[data-theme="light"] .k-card { background: #fff; border-color: #E9ECEF; }
+html[data-theme="light"] .k-group-title { color: #495057; }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Kostenloser Kurzcheck – Averio Media",
-  "url": "https://averiomedia.de/kontakt",
-  "description": "Kostenloses 30-Minuten-Erstgespräch buchen. Google Ads Beratung für B2B-Dienstleister und Handwerk.",
-  "mainEntity": {
-    "@type": "ProfessionalService",
-    "name": "Averio Media",
-    "email": "kontakt@averiomedia.de",
-    "url": "https://averiomedia.de",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "kontakt@averiomedia.de",
-      "contactType": "customer service",
-      "availableLanguage": "Deutsch"
-    }
-  }
-}
-</script>
 </head>
 <body>
 
@@ -312,148 +262,220 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
       <span class="nav-logo-name">Averio Media</span>
     </div>
   </a>
-
   <ul class="nav-links">
-    <li><a href="/#hero">Home</a></li>
+    <li><a href="index.html#hero">Home</a></li>
     <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
     <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
     <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
     <li><a href="averio-premium-guides.html">Guides</a></li>
     <li><a href="averio-premium-faq.html">FAQ</a></li>
-    <li><a href="/#kontakt">Kontakt</a></li>
+    <li><a href="#" class="active">Kontakt</a></li>
   </ul>
   <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
     <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
-  <a href="/#kontakt" class="nav-cta magnetic">Kurzes Gespräch buchen</a>
+  <a href="#kontakt-form" class="nav-cta magnetic">Jetzt kontaktieren</a>
 </nav>
 
-<!-- ════ HAUPTBEREICH ══════════════════════════════════ -->
-<main class="kontakt-hero">
-
-  <div class="kontakt-eyebrow">
+<!-- ════ HERO ════════════════════════════════════════ -->
+<section class="k-hero">
+  <div class="k-eyebrow">
     <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#016B4F"/></svg>
-    Kostenlos · Kein Verkaufsdruck · Ehrliches Feedback
+    Kostenlos &middot; Unverbindlich &middot; Persönlich
   </div>
 
-  <h1 class="kontakt-h1">
-    Ist Google Ads gerade<br>
-    <span class="accent">die richtige Lösung für dich?</span>
+  <h1 class="k-h1">
+    Bereit, <em>mehr</em> aus deinem Business mit Google Ads rauszuholen?
   </h1>
 
-  <p class="kontakt-sub">
-    In einem kurzen Telefonat finden wir gemeinsam heraus, ob und in welcher Form Google Ads aktuell Sinn für dein Unternehmen macht. Ohne Verkaufsdruck, ohne leere Versprechen.
+  <p class="k-sub">
+    Lass uns persönlich sprechen. In einem kurzen Austausch klären wir, wo du stehst, was möglich ist und welcher nächste Schritt für dich Sinn macht.
   </p>
 
-  <!-- Was passiert in dem Telefonat -->
-  <div style="display:flex;flex-direction:column;gap:12px;max-width:560px;width:100%;margin-bottom:2.5rem">
-    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
-      <span style="color:#016B4F;font-family:'Figtree',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">01</span>
-      <div>
-        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Situation verstehen</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Ich höre mir kurz an, was du machst, wen du erreichst und was dein Ziel ist.</div>
+  <!-- Kontaktinfos -->
+  <div class="k-info-row">
+    <a href="tel:+4917490442007" class="k-info-card">
+      <div class="k-info-icon">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
-      <span style="color:#016B4F;font-family:'Figtree',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">02</span>
       <div>
-        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Ehrliche Einschätzung</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Ich sage dir direkt, ob Google Ads für dich gerade Sinn macht. Oder nicht. Kein Pitch, kein Rumdrucksen.</div>
+        <div class="k-info-label">Telefon</div>
+        <div class="k-info-val">+49 174 904 420 07</div>
       </div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px">
-      <span style="color:#016B4F;font-family:'Figtree',sans-serif;font-weight:800;font-size:18px;line-height:1;flex-shrink:0">03</span>
+    </a>
+    <a href="mailto:kontakt@averiomedia.de" class="k-info-card">
+      <div class="k-info-icon">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#016B4F" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="#016B4F" stroke-width="1.5"/></svg>
+      </div>
       <div>
-        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:3px">Nächster Schritt</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.5">Wenn es passt, besprechen wir wie eine Zusammenarbeit konkret aussehen könnte.</div>
+        <div class="k-info-label">E-Mail</div>
+        <div class="k-info-val">kontakt@averiomedia.de</div>
+      </div>
+    </a>
+    <div class="k-info-card">
+      <div class="k-info-icon">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#016B4F" stroke-width="1.5"/><polyline points="12 6 12 12 16 14" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="k-info-label">Erreichbarkeit</div>
+        <div class="k-info-val">Mo–Fr, 9:00–18:00</div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="kontakt-trust">
-    <div class="kontakt-trust-item">
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Telefonat
+<!-- ════ MAIN: Form + Calendly ════════════════════════ -->
+<div class="k-main">
+
+  <!-- LINKE SPALTE: Kontaktformular -->
+  <div class="k-card">
+    <div class="k-card-title">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#016B4F" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="#016B4F" stroke-width="1.5"/></svg>
+      Anfrage senden
     </div>
-    <div class="kontakt-trust-sep"></div>
-    <div class="kontakt-trust-item">
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#016B4F" stroke-width="1.5"/><polyline points="12 6 12 12 16 14" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/></svg>
-      Ca. 15–20 Minuten
-    </div>
-    <div class="kontakt-trust-sep"></div>
-    <div class="kontakt-trust-item">
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Ab 1.000 € Werbebudget
+
+    <form id="kontakt-form" class="k-form" onsubmit="submitKontakt(event)">
+      <!-- Honeypot -->
+      <input type="text" name="website" id="k-website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+
+      <!-- Name + E-Mail -->
+      <div class="k-row">
+        <div>
+          <label for="k-name">Name *</label>
+          <input type="text" id="k-name" placeholder="Max Mustermann" required>
+        </div>
+        <div>
+          <label for="k-email">E-Mail *</label>
+          <input type="email" id="k-email" placeholder="max@firma.de" required>
+        </div>
+      </div>
+
+      <!-- Telefon + Website -->
+      <div class="k-row">
+        <div>
+          <label for="k-telefon">Telefon</label>
+          <input type="tel" id="k-telefon" placeholder="+49 151 00000000">
+        </div>
+        <div>
+          <label for="k-url">Website-URL</label>
+          <input type="url" id="k-url" placeholder="https://deine-firma.de">
+        </div>
+      </div>
+
+      <!-- Wo stehst du? -->
+      <div>
+        <div class="k-group-title">Wobei kann ich dir helfen?</div>
+        <div class="k-check-row">
+          <label class="k-check-opt">
+            <input type="radio" name="hilfe" value="ads-check"> Bereits Google Ads &ndash; Ads-Check
+          </label>
+          <label class="k-check-opt">
+            <input type="radio" name="hilfe" value="starten"> Mit Google Ads starten
+          </label>
+        </div>
+      </div>
+
+      <!-- Werbebudget -->
+      <div>
+        <div class="k-group-title">Monatliches Werbebudget</div>
+        <div class="k-budget-row">
+          <label class="k-budget-pill">
+            <input type="radio" name="budget" value="1000-2000"> 1.000–2.000 €
+          </label>
+          <label class="k-budget-pill">
+            <input type="radio" name="budget" value="2000-5000"> 2.000–5.000 €
+          </label>
+          <label class="k-budget-pill">
+            <input type="radio" name="budget" value="5000-10000"> 5.000–10.000 €
+          </label>
+          <label class="k-budget-pill">
+            <input type="radio" name="budget" value="10000+"> Über 10.000 €
+          </label>
+        </div>
+      </div>
+
+      <!-- Nachricht -->
+      <div>
+        <label for="k-nachricht">Nachricht</label>
+        <textarea id="k-nachricht" rows="4" placeholder="Beschreibe kurz deine aktuelle Situation und was du dir von Google Ads erhoffst..."></textarea>
+      </div>
+
+      <!-- DSGVO -->
+      <div class="k-dsgvo">
+        <input type="checkbox" id="k-dsgvo" required style="margin-top:3px;accent-color:#016B4F">
+        <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerkl&auml;rung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+      </div>
+
+      <button type="submit" id="k-submit" class="k-submit">Anfrage senden</button>
+    </form>
+
+    <div id="kontakt-success" style="display:none;text-align:center;padding:2.5rem 0">
+      <div style="font-size:32px;margin-bottom:12px;color:#016B4F">&#10003;</div>
+      <h3 style="font-family:var(--fh);font-size:20px;font-weight:700;color:#fff;margin-bottom:8px">Anfrage gesendet!</h3>
+      <p style="font-size:14px;color:#888;max-width:360px;margin:0 auto;line-height:1.6">Ich melde mich innerhalb von 24 Stunden persönlich bei dir. Bis dahin kannst du auch direkt einen Termin buchen.</p>
     </div>
   </div>
 
-  <!-- ══ CALENDLY EMBED ══════════════════════════════════
-       Ersetze DEIN-CALENDLY-LINK mit deinem echten Calendly-Link,
-       z.B.: https://calendly.com/marie-averiomedia/erstgespraech
-  ════════════════════════════════════════════════════════ -->
-  <div class="calendly-wrap" id="calendly-wrap">
-    <!-- Calendly inline widget -->
-    <div id="calendly-widget" style="min-width:320px;height:700px;"></div>
+  <!-- RECHTE SPALTE: Calendly -->
+  <div class="k-card k-calendly">
+    <div class="k-card-title">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#016B4F" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="6" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="#016B4F" stroke-width="1.5"/></svg>
+      Termin buchen
+    </div>
+    <p style="font-size:13px;color:#888;margin-bottom:1.5rem;line-height:1.6">
+      W&auml;hle direkt einen freien Termin. Ca. 15&ndash;20 Minuten, kostenlos &amp; unverbindlich. Per Telefon oder Video.
+    </p>
+    <div id="calendly-widget" style="min-width:280px;height:480px;border-radius:10px;overflow:hidden"></div>
   </div>
 
-</main>
+</div>
 
 <!-- ════ FOOTER ═══════════════════════════════════════ -->
-<footer class="kontakt-footer">
-  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp;
-    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp;
-    
-  <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+<footer class="k-footer">
+  <p>&copy; 2025 Averio Media &middot; Marie B&ouml;ttiger &nbsp;&middot;&nbsp;
+    <a href="averio-premium-impressum.html">Impressum</a> &nbsp;&middot;&nbsp;
+    <a href="averio-premium-datenschutz.html">Datenschutz</a> &nbsp;&middot;&nbsp;
+    <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
   </p>
 </footer>
 
-<!-- CDN Libraries (für Cursor & Animationen) -->
+<!-- CDN Libraries -->
 <script src="js/gsap.min.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
 <script src="js/lenis.min.js"></script>
 
-<!-- Calendly: direkt laden -->
+<!-- Calendly -->
 <script>
 (function () {
   var CALENDLY_URL = 'https://calendly.com/mb-topad-info/telefongesprach';
-
   function loadCalendly() {
-    var widgetDiv = document.getElementById('calendly-widget');
-    if (!widgetDiv) return;
-
+    var w = document.getElementById('calendly-widget');
+    if (!w) return;
     var link = document.createElement('link');
-    link.rel  = 'stylesheet';
+    link.rel = 'stylesheet';
     link.href = 'https://assets.calendly.com/assets/external/widget.css';
     document.head.appendChild(link);
-
     var script = document.createElement('script');
-    script.src   = 'https://assets.calendly.com/assets/external/widget.js';
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     script.onload = function () {
-      Calendly.initInlineWidget({
-        url: CALENDLY_URL,
-        parentElement: widgetDiv,
-        prefill: {},
-        utm: {}
-      });
+      Calendly.initInlineWidget({ url: CALENDLY_URL, parentElement: w, prefill: {}, utm: {} });
     };
     document.body.appendChild(script);
   }
-
   document.addEventListener('DOMContentLoaded', loadCalendly);
 
-  // Weiterleitung nach Buchung
   window.addEventListener('message', function (e) {
     if (e.data && e.data.event === 'calendly.event_scheduled') {
       var p = e.data.payload || {};
       var params = new URLSearchParams({
         assigned_to:       (p.event_type && p.event_type.owner && p.event_type.owner.name) || 'Marie Böttiger',
-        event_type_name:   (p.event_type && p.event_type.name) || 'Telefonsgespräch',
-        event_start_time:  (p.event && p.event.start_time)     || '',
-        event_end_time:    (p.event && p.event.end_time)        || '',
-        invitee_full_name: (p.invitee && p.invitee.name)        || '',
-        invitee_email:     (p.invitee && p.invitee.email)       || '',
+        event_type_name:   (p.event_type && p.event_type.name) || 'Telefongespräch',
+        event_start_time:  (p.event && p.event.start_time) || '',
+        event_end_time:    (p.event && p.event.end_time) || '',
+        invitee_full_name: (p.invitee && p.invitee.name) || '',
+        invitee_email:     (p.invitee && p.invitee.email) || '',
       });
       window.location.href = 'averio-premium-termin-bestaetigung.html?' + params.toString();
     }
@@ -461,7 +483,44 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
 })();
 </script>
 
-<!-- Shared JS (Cursor etc.) -->
+<!-- Kontaktformular -->
+<script>
+var NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+var FORM_LOADED = Date.now();
+
+function submitKontakt(e) {
+  e.preventDefault();
+  if (document.getElementById('k-website').value) return;
+  if (Date.now() - FORM_LOADED < 3000) return;
+
+  var btn = document.getElementById('k-submit');
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+
+  var hilfe = document.querySelector('input[name="hilfe"]:checked');
+  var budget = document.querySelector('input[name="budget"]:checked');
+
+  fetch(NFORMS_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      Formular:  'Kontakt – Kontaktseite (Conversion)',
+      Name:      document.getElementById('k-name').value.trim(),
+      Email:     document.getElementById('k-email').value.trim(),
+      Telefon:   document.getElementById('k-telefon').value.trim() || '–',
+      Website:   document.getElementById('k-url').value.trim() || '–',
+      Hilfe:     hilfe ? hilfe.value : '–',
+      Budget:    budget ? budget.value : '–',
+      Nachricht: document.getElementById('k-nachricht').value.trim()
+    })
+  }).catch(function(err) { console.warn('nForms:', err); });
+
+  document.getElementById('kontakt-form').style.display = 'none';
+  document.getElementById('kontakt-success').style.display = 'block';
+}
+</script>
+
+<!-- Shared JS -->
 <script src="averio-premium.js"></script>
 <script src="cookie-banner.js"></script>
 
@@ -476,13 +535,6 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.4)"] { color: #495057 
     else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
   });
 })();
-</script></body>
+</script>
+</body>
 </html>
-
-
-
-
-
-
-
-
