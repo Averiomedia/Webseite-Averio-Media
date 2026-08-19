@@ -1296,22 +1296,35 @@ function submitKontakt(e) {
 }
 </script>
 
-<!-- Hero auto-scale: zoom passt Layout + Rendering an -->
+<!-- Hero auto-scale: fixiert .hero-content auf 1440px und zoomt runter -->
 <script>
 (function() {
   var REF = 1440;
-  var hero = document.getElementById('hero');
-  if (!hero) return;
-  function zoomHero() {
+  var content = document.querySelector('#hero .hero-content');
+  if (!content) return;
+  function scaleHero() {
     var w = window.innerWidth;
-    if (w >= REF || w <= 1024) {
-      hero.style.zoom = '';
+    // Ab 1440px: kein Zoom nötig, Content passt
+    if (w >= REF) {
+      content.style.zoom = '';
+      content.style.maxWidth = '';
+      content.style.width = '';
       return;
     }
-    hero.style.zoom = (w / REF);
+    // Unter 1024px: Tablet/Mobile-Layout greift (hero-right hidden)
+    if (w <= 1024) {
+      content.style.zoom = '';
+      content.style.maxWidth = '';
+      content.style.width = '';
+      return;
+    }
+    // Zwischen 1025px und 1439px: fixiere auf 1440px und zoome
+    content.style.maxWidth = 'none';
+    content.style.width = REF + 'px';
+    content.style.zoom = (w / REF);
   }
-  zoomHero();
-  window.addEventListener('resize', zoomHero);
+  scaleHero();
+  window.addEventListener('resize', scaleHero);
 })();
 </script>
 
