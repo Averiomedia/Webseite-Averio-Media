@@ -105,7 +105,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 }
 
 .hero-left {
-  padding: 4rem 3rem 4rem 5vw;
+  padding: 4rem 3rem 4rem calc(5vw + 2cm);
   display: flex; flex-direction: column; justify-content: center;
   position: relative; z-index: 2;
 }
@@ -194,7 +194,7 @@ body { background: var(--bg); font-family: var(--fb); color: #f0f0f0; overflow-x
 
 .hero-phone-scene {
   position: relative; width: 280px;
-  transform: translate(-76px, 114px);
+  transform: translate(calc(-76px - 2cm), 114px);
 }
 
 .phone-glow {
