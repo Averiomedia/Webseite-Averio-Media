@@ -124,6 +124,27 @@
    BANNER AUFGEFÄCHERT + VERBINDUNGSLINIEN
 ══════════════════════════════════════════════════ */
 
+/* ── Hero auto-scale: immer vollständig sichtbar ── */
+#hero .hero-content {
+  transform-origin: top left;
+  width: 1440px;
+  max-width: none !important;
+}
+@media (min-width: 1441px) {
+  #hero .hero-content {
+    transform: none !important;
+    width: 100%;
+    max-width: 1400px !important;
+  }
+}
+@media (max-width: 1024px) {
+  #hero .hero-content {
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
 /* hero-right: relativ damit Canvas + Karten darin positionierbar */
 .hero-right {
   position: relative;
@@ -1292,6 +1313,22 @@ function submitKontakt(e) {
   document.getElementById('kontakt-form').style.display = 'none';
   document.getElementById('kontakt-success').style.display = 'block';
 }
+</script>
+
+<!-- Hero auto-scale -->
+<script>
+(function() {
+  var REF = 1440;
+  var hc = document.querySelector('#hero .hero-content');
+  if (!hc) return;
+  function scaleHero() {
+    var w = window.innerWidth;
+    if (w >= 1441 || w <= 1024) { hc.style.transform = ''; return; }
+    hc.style.transform = 'scale(' + (w / REF) + ')';
+  }
+  scaleHero();
+  window.addEventListener('resize', scaleHero);
+})();
 </script>
 
 <!-- Premium JS (shared) -->
