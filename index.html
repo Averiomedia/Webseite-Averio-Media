@@ -125,25 +125,6 @@
 ══════════════════════════════════════════════════ */
 
 /* ── Hero auto-scale: immer vollständig sichtbar ── */
-#hero .hero-content {
-  transform-origin: top left;
-  width: 1440px;
-  max-width: none !important;
-}
-@media (min-width: 1441px) {
-  #hero .hero-content {
-    transform: none !important;
-    width: 100%;
-    max-width: 1400px !important;
-  }
-}
-@media (max-width: 1024px) {
-  #hero .hero-content {
-    transform: none !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
-}
 
 /* hero-right: relativ damit Canvas + Karten darin positionierbar */
 .hero-right {
@@ -1315,19 +1296,22 @@ function submitKontakt(e) {
 }
 </script>
 
-<!-- Hero auto-scale -->
+<!-- Hero auto-scale: zoom passt Layout + Rendering an -->
 <script>
 (function() {
   var REF = 1440;
-  var hc = document.querySelector('#hero .hero-content');
-  if (!hc) return;
-  function scaleHero() {
+  var hero = document.getElementById('hero');
+  if (!hero) return;
+  function zoomHero() {
     var w = window.innerWidth;
-    if (w >= 1441 || w <= 1024) { hc.style.transform = ''; return; }
-    hc.style.transform = 'scale(' + (w / REF) + ')';
+    if (w >= REF || w <= 1024) {
+      hero.style.zoom = '';
+      return;
+    }
+    hero.style.zoom = (w / REF);
   }
-  scaleHero();
-  window.addEventListener('resize', scaleHero);
+  zoomHero();
+  window.addEventListener('resize', zoomHero);
 })();
 </script>
 
