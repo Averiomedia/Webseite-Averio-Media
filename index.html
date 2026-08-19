@@ -1296,33 +1296,45 @@ function submitKontakt(e) {
 }
 </script>
 
-<!-- Hero auto-scale: fixiert .hero-content auf 1440px und zoomt runter -->
+<!-- Hero auto-scale: passt .hero-content an Viewport-Breite UND -Höhe an -->
 <script>
 (function() {
-  var REF = 1440;
+  var REF_W = 1440;   // ideale Breite
+  var REF_H = 1000;   // natürliche Content-Höhe bei 1440px
   var content = document.querySelector('#hero .hero-content');
   if (!content) return;
+
   function scaleHero() {
     var w = window.innerWidth;
-    // Ab 1440px: kein Zoom nötig, Content passt
-    if (w >= REF) {
-      content.style.zoom = '';
-      content.style.maxWidth = '';
-      content.style.width = '';
-      return;
-    }
-    // Unter 1024px: Tablet/Mobile-Layout greift (hero-right hidden)
+    var h = window.innerHeight;
+
+    // Mobile/Tablet: kein Zoom, normales Responsive-Layout
     if (w <= 1024) {
       content.style.zoom = '';
       content.style.maxWidth = '';
       content.style.width = '';
       return;
     }
-    // Zwischen 1025px und 1439px: fixiere auf 1440px und zoome
+
+    // Zoom-Faktoren für Breite und Höhe
+    var zoomW = (w >= REF_W) ? 1 : (w / REF_W);
+    var zoomH = (h >= REF_H) ? 1 : (h / REF_H);
+    var zoom = Math.min(zoomW, zoomH);
+
+    // Kein Zoom nötig
+    if (zoom >= 0.99) {
+      content.style.zoom = '';
+      content.style.maxWidth = '';
+      content.style.width = '';
+      return;
+    }
+
+    // Fixiere auf 1440px Breite und zoome proportional
     content.style.maxWidth = 'none';
-    content.style.width = REF + 'px';
-    content.style.zoom = (w / REF);
+    content.style.width = REF_W + 'px';
+    content.style.zoom = zoom;
   }
+
   scaleHero();
   window.addEventListener('resize', scaleHero);
 })();
