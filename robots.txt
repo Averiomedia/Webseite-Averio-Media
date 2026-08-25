@@ -6,6 +6,17 @@ Disallow: /averio-premium-datenschutz.html
 Disallow: /averio-premium-impressum.html
 Disallow: /averio-premium-termin-bestaetigung.html
 Disallow: /averio-danke.html
+Disallow: /averio-danke-kampagnencheck.html
+Disallow: /averio-danke-kurzcheck.html
+Disallow: /averio-danke-potenzialanalyse.html
+Disallow: /averio-danke-zusammenarbeit.html
+Disallow: /averio-anfrage-bestaetigt.html
+Disallow: /averio-newsletter-bestaetigt.html
+Disallow: /averio-guide-download.html
+Disallow: /averio-preisliste-download.html
+Disallow: /averio-kampagnenanalyse-buchen.html
+Disallow: /index-hell.html
+Disallow: /index-standalone.html
 
 # Interne Angebots-/Proposal-Seiten (nicht indexieren)
 Disallow: /averio-premium-angebote.html
