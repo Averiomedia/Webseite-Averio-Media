@@ -1383,20 +1383,10 @@ async function submitGate() {
     });
   } catch(err) { console.warn('nForms:', err); }
 
-  // ── Formular ausblenden, Warte-Hinweis anzeigen ──
-  // Guide öffnet sich NICHT sofort. Erst nach Klick auf Bestätigungslink in der E-Mail!
-  document.getElementById('guide-gate-form-inner').style.display = 'none';
-
-  const successEl    = document.getElementById('guide-gate-success');
-  const successTitle = successEl.querySelector('.guide-gate-success-title');
-  const successText  = successEl.querySelector('.guide-gate-success-text');
-  if (successTitle) successTitle.textContent = 'Bestätigungslink gesendet!';
-  if (successText) successText.textContent  = isNewsletter
-    ? 'Schau in dein Postfach und klicke den Bestätigungslink. Dann bist du dabei. Manchmal landet er im Spam-Ordner.'
-    : 'Schau in dein Postfach und klicke den Bestätigungslink. Erst danach öffnet sich dein Guide. So stellen wir sicher, dass deine E-Mail-Adresse korrekt ist.';
-
-  successEl.classList.add('active');
+  // ── Weiterleitung zur Dankeseite ──
   btn.disabled = false;
+  var guideParam = currentGuideId ? '?guide=' + currentGuideId : '';
+  window.location.href = 'averio-danke.html' + guideParam;
 }
 
 // ── Alte API-Funktionen entfernt (kein API-Key mehr nötig) ──
