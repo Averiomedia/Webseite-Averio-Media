@@ -514,9 +514,12 @@ function submitKontakt(e) {
       Budget:    budget ? budget.value : '–',
       Nachricht: document.getElementById('k-nachricht').value.trim()
     })
-  }).catch(function(err) { console.warn('nForms:', err); });
-
-  window.location.href = 'averio-anfrage-bestaetigt.html';
+  }).then(function() {
+    window.location.href = 'averio-anfrage-bestaetigt.html';
+  }).catch(function(err) {
+    console.warn('nForms:', err);
+    window.location.href = 'averio-anfrage-bestaetigt.html';
+  });
 }
 </script>
 

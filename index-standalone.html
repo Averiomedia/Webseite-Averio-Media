@@ -3352,9 +3352,12 @@ function submitKontakt(e) {
       Telefon:   document.getElementById('k-telefon').value.trim() || '–',
       Nachricht: document.getElementById('k-nachricht').value.trim()
     })
-  }).catch(function(err) { console.warn('nForms:', err); });
-
-  window.location.href = 'averio-danke.html';
+  }).then(function() {
+    window.location.href = 'averio-danke.html';
+  }).catch(function(err) {
+    console.warn('nForms:', err);
+    window.location.href = 'averio-danke.html';
+  });
 }
 </script>
 
