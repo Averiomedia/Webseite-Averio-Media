@@ -1233,11 +1233,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
       </div>
       <div class="gate-check-wrap">
         <input type="checkbox" id="gate-dsgvo">
-        <label class="gate-check-label" for="gate-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</label>
-      </div>
-      <div class="gate-check-wrap" style="margin-top:8px;">
-        <input type="checkbox" id="gate-newsletter">
-        <label class="gate-check-label" for="gate-newsletter">Ja, ich möchte auch über neue Guides &amp; Tipps informiert werden. (Optional. Abmeldung jederzeit möglich)</label>
+        <label class="gate-check-label" for="gate-dsgvo">Ich habe die <a href="https://www.dennisjedlicka.com/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme und für Rückfragen verarbeitet werden. Ich kann meine Einwilligung jederzeit widerrufen. *</label>
       </div>
       <p style="font-size:11px;color:rgba(255,255,255,.18);margin:10px 0 4px;line-height:1.5;">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
       <button class="gate-submit-btn" onclick="submitGate()">
@@ -1306,18 +1302,13 @@ function openGuideGate(guideId, title, icon) {
   document.getElementById('gate-name').value        = '';
   document.getElementById('gate-email').value       = '';
   document.getElementById('gate-dsgvo').checked     = false;
-  // Newsletter-Modus: Checkbox automatisch angehakt, Button-Text anpassen
-  const nlCheck = document.getElementById('gate-newsletter');
+  // Button-Text je nach Modus anpassen
   const finePrint = document.getElementById('gate-fine-print');
   const btn = document.querySelector('.gate-submit-btn');
   if (isNewsletter) {
-    nlCheck.checked = true;
-    nlCheck.parentElement.style.display = 'none'; // ausblenden, da offensichtlich
     btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:6px;"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Jetzt anmelden';
     finePrint.textContent = 'Double Opt-In · Du erhältst eine Bestätigungs-E-Mail · Abmeldung jederzeit';
   } else {
-    nlCheck.checked = false;
-    nlCheck.parentElement.style.display = '';
     btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:6px;"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Jetzt herunterladen';
     finePrint.textContent = 'Einmaliger Versand · Kein Spam · Abmeldung jederzeit';
   }
@@ -1339,7 +1330,6 @@ async function submitGate() {
   const name         = document.getElementById('gate-name').value.trim();
   const email        = document.getElementById('gate-email').value.trim();
   const dsgvo        = document.getElementById('gate-dsgvo').checked;
-  const newsletter   = document.getElementById('gate-newsletter').checked;
   const isNewsletter = currentGuideId === 'newsletter';
 
   if (!name || !email) { alert('Bitte Name und E-Mail ausfüllen.'); return; }
@@ -1378,7 +1368,7 @@ async function submitGate() {
         Name:       name,
         Email:      email,
         Guide:      isNewsletter ? '–' : currentGuideTitle,
-        Newsletter: newsletter ? 'Ja' : 'Nein'
+        Newsletter: 'Nein'
       })
     });
   } catch(err) { console.warn('nForms:', err); }
