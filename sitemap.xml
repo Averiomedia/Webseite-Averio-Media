@@ -65,6 +65,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ═══ BRANCHEN-LANDINGPAGES ════════════════════════════ -->
+  <url>
+    <loc>https://averiomedia.de/averio-premium-sachverstaendige.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- ═══ ANGEBOTS-SEITEN ════════════════════════════════ -->
   <url>
     <loc>https://averiomedia.de/averio-premium-angebot-kampagnencheck.html</loc>
