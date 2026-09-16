@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
+  <title>Google Ads für Sachverständige – Mehr Gutachten-Aufträge | Averio Media</title>
+  <meta name="description" content="Google Ads speziell für Immobiliensachverständige & Gutachter. Planbare Aufträge für Wertgutachten — mit echtem Conversion-Tracking, ohne aufgeblähte Zahlen.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/averio-premium-sachverstaendige.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://averiomedia.de/averio-premium-sachverstaendige.html">
+<meta property="og:title" content="Google Ads für Sachverständige – Planbar mehr Gutachten-Aufträge">
+<meta property="og:description" content="Mehr Anfragen für Wertgutachten durch Google Ads. Spezialisiert auf Immobiliensachverständige. Transparentes Tracking, persönliche Betreuung, echte Ergebnisse.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Ads für Sachverständige – Planbar mehr Gutachten-Aufträge">
+<meta name="twitter:description" content="Mehr Anfragen für Wertgutachten durch Google Ads. Spezialisiert auf Immobiliensachverständige. Transparentes Tracking, echte Ergebnisse.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/lenis.min.js"></script>
+  <link rel="stylesheet" href="averio-media-weiss.css?v=8">
+  <style>
+    :root {
+      --o: #016B4F;
+      --o2: #2B6552;
+      --bg: #090909;
+      --bg2: #1e1e1e;
+      --bg3: #272727;
+      --border: #383838;
+      --border2: #444444;
+      --ice: #D6EEFF;
+      --ice2: #A8D8F0;
+      --fh: 'Figtree', sans-serif;
+      --fb: 'Figtree', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: #fff;
+      font-family: var(--fb);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .nav-links a { white-space: nowrap; }
+    .nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+    /* ── Sections ── */
+    .sec { padding: 7rem 2.5rem; }
+    .sec-alt { padding: 7rem 2.5rem; background: var(--bg2); }
+    .sec-inner { max-width: 1300px; margin: 0 auto; }
+
+    .sec-ey {
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ice2);
+      margin-bottom: 1rem;
+    }
+    .sec-title {
+      font-family: var(--fh);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+    }
+    .sec-title em { color: var(--o); font-style: normal; }
+    .sec-body {
+      font-size: 1rem;
+      color: #aaa;
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      padding: 9rem 2.5rem 5rem;
+      display: flex; align-items: center;
+    }
+    .hero-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ice2);
+      margin-bottom: 1.25rem;
+    }
+    .hero-h1 {
+      font-family: var(--fh);
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      color: #fff;
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+    }
+    .hero-h1 em { color: var(--ice2); font-style: normal; }
+    .hero-tagline {
+      font-size: 1rem;
+      color: #aaa;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 0.65rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-badge {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-family: var(--fb);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #ccc;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 0.35rem 0.85rem;
+    }
+    .hero-badge svg { flex-shrink: 0; }
+    .hero-badge.ice svg { color: var(--ice2); }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--fb); font-size: 0.95rem; font-weight: 700;
+      color: #fff;
+      background: var(--o);
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover { background: var(--o2); transform: translateY(-2px); }
+
+    /* Hero Right — Stat Box */
+    .stat-box {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--ice2), transparent);
+      opacity: 0.6;
+    }
+    .stat-row {
+      display: flex; align-items: baseline; gap: 0.75rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .stat-row:first-child { padding-top: 0; }
+    .stat-num {
+      font-family: var(--fh);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -2px;
+      line-height: 1;
+      min-width: 100px;
+    }
+    .stat-num span { color: var(--ice2); font-size: 0.6em; }
+    .stat-label {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    /* ── Pain Points ── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .pain-card {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      transition: border-color 0.2s;
+    }
+    .pain-card:hover { border-color: #555; }
+    .pain-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(168,216,240,0.08);
+      border: 1px solid rgba(168,216,240,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .pain-title {
+      font-family: var(--fh);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .pain-body {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* ── Solution Cards ── */
+    .sol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .sol-card {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      position: relative;
+    }
+    .sol-num {
+      font-family: var(--fh);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--o);
+      letter-spacing: -2px;
+      margin-bottom: 1rem;
+      line-height: 1;
+      opacity: 0.35;
+    }
+    .sol-title {
+      font-family: var(--fh);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .sol-body {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* ── Comparison ── */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 3rem;
+    }
+    .comp-table th, .comp-table td {
+      text-align: left;
+      padding: 1.1rem 1.5rem;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-table thead th {
+      font-family: var(--fh);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+      border-bottom: 2px solid var(--border2);
+      padding-bottom: 0.75rem;
+    }
+    .comp-table thead th:nth-child(3) { color: var(--o); }
+    .comp-table tbody td { color: #aaa; }
+    .comp-table tbody td:first-child { color: #ccc; font-weight: 600; }
+    .comp-table tbody td:nth-child(3) { color: var(--ice2); }
+    .comp-check { color: var(--o); }
+    .comp-x { color: #555; }
+
+    /* ── Process ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .process-card {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+    }
+    .process-num {
+      font-family: var(--fh);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--o);
+      letter-spacing: -2px;
+      margin-bottom: 1rem;
+      line-height: 1;
+      opacity: 0.35;
+    }
+    .process-title {
+      font-family: var(--fh);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .process-body {
+      font-size: 0.88rem;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 780px; margin: 3rem auto 0; }
+    .faq-item { border-bottom: 1px solid var(--border2); }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.35rem 0;
+      cursor: pointer;
+      font-family: var(--fh);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e8e8;
+      gap: 1rem;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: #fff; }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border: 1.5px solid #333;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.25s ease, border-color 0.2s;
+      color: #666;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); border-color: var(--o); color: var(--o); }
+    .faq-a {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+    .faq-a-inner {
+      padding: 0 0 1.35rem;
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* ── CTA Strip ── */
+    .cta-strip {
+      padding: 5rem 2.5rem;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-strip-inner {
+      max-width: 800px; margin: 0 auto;
+      text-align: center;
+    }
+    .cta-strip-eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ice2);
+      margin-bottom: 0.75rem;
+    }
+    .cta-strip-title {
+      font-family: var(--fh);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+    .cta-strip-body {
+      font-size: 0.95rem; color: #888;
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--fb); font-size: 0.95rem; font-weight: 600;
+      color: #fff;
+      background: var(--o);
+      border-radius: 10px;
+      padding: 0.9rem 2rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover { background: var(--o2); transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem 2.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    footer a { color: #666; transition: color 0.2s; }
+    footer a:hover { color: #aaa; }
+
+    .text-ice { color: var(--ice2); }
+    .anim-fade-up { opacity: 0; transform: translateY(24px); }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .stat-box { max-width: 480px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .comp-table { font-size: 0.82rem; }
+      .comp-table th, .comp-table td { padding: 0.9rem 1rem; }
+      .nav-links { gap: 0; }
+      .nav-links a { padding: 0.4rem 0.5rem; font-size: 0.78rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .hero { padding: 8rem 1.25rem 4rem; }
+      .sec, .sec-alt { padding: 5rem 1.25rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .sol-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .cta-strip { padding: 4rem 1.25rem; }
+      footer { padding: 1.5rem 1.25rem; }
+      .comp-table { display: block; overflow-x: auto; }
+    }
+
+    /* ── LIGHT MODE ── */
+    html[data-theme="light"] .hero-h1              { color: #0D1117 !important; }
+    html[data-theme="light"] .hero-tagline         { color: #495057 !important; }
+    html[data-theme="light"] .hero-badge           { background: #F8F9FA !important; border-color: #DEE2E6 !important; color: #495057 !important; }
+    html[data-theme="light"] .stat-box             { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+    html[data-theme="light"] .stat-num             { color: #0D1117 !important; }
+    html[data-theme="light"] .stat-label           { color: #495057 !important; }
+    html[data-theme="light"] .stat-row             { border-color: #E9ECEF !important; }
+    html[data-theme="light"] .sec-title            { color: #0D1117 !important; }
+    html[data-theme="light"] .sec-body             { color: #495057 !important; }
+    html[data-theme="light"] .pain-card            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+    html[data-theme="light"] .pain-title           { color: #0D1117 !important; }
+    html[data-theme="light"] .pain-body            { color: #495057 !important; }
+    html[data-theme="light"] .sol-card             { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+    html[data-theme="light"] .sol-title            { color: #0D1117 !important; }
+    html[data-theme="light"] .sol-body             { color: #495057 !important; }
+    html[data-theme="light"] .process-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+    html[data-theme="light"] .process-title        { color: #0D1117 !important; }
+    html[data-theme="light"] .process-body         { color: #495057 !important; }
+    html[data-theme="light"] .comp-table tbody td  { color: #495057 !important; }
+    html[data-theme="light"] .comp-table tbody td:first-child { color: #0D1117 !important; }
+    html[data-theme="light"] .comp-table th        { color: #868E96 !important; border-color: #DEE2E6 !important; }
+    html[data-theme="light"] .comp-table thead th:nth-child(3) { color: var(--o) !important; }
+    html[data-theme="light"] .comp-table td        { border-color: #E9ECEF !important; }
+    html[data-theme="light"] .faq-q                { color: #0D1117 !important; }
+    html[data-theme="light"] .faq-a-inner          { color: #495057 !important; }
+    html[data-theme="light"] .cta-strip            { background: #F8F9FA !important; border-color: #E9ECEF !important; }
+    html[data-theme="light"] .cta-strip-title      { color: #0D1117 !important; }
+    html[data-theme="light"] .cta-strip-body       { color: #495057 !important; }
+    html[data-theme="light"] body                  { background: #FFFFFF !important; }
+    html[data-theme="light"] .sec-alt              { background: #F8F9FA !important; }
+
+    /* form light */
+    html[data-theme="light"] #kontakt label        { color: #0D1117 !important; }
+    html[data-theme="light"] #kontakt input,
+    html[data-theme="light"] #kontakt textarea      { background: #F8F9FA !important; border-color: #DEE2E6 !important; color: #0D1117 !important; }
+    html[data-theme="light"] #kontakt input::placeholder,
+    html[data-theme="light"] #kontakt textarea::placeholder { color: #868E96 !important; }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Google Ads für Immobiliensachverständige",
+  "url": "https://averiomedia.de/averio-premium-sachverstaendige.html",
+  "description": "Google Ads Betreuung speziell für Immobiliensachverständige und Gutachter. Planbare Aufträge für Wertgutachten mit echtem Conversion-Tracking.",
+  "provider": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+  "serviceType": "Google Ads Management für Sachverständige",
+  "areaServed": { "@type": "Country", "name": "DE" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+    { "@type": "ListItem", "position": 2, "name": "Google Ads für Sachverständige" }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+          <rect width="36" height="36" rx="8" fill="#016B4F"/>
+          <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
+      <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
+      <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+      <li><a href="averio-premium-guides.html">Guides</a></li>
+      <li><a href="averio-premium-faq.html">FAQ</a></li>
+      <li><a href="averio-premium-kontakt.html">Kontakt</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="#kontakt" class="nav-cta magnetic">Kostenlose Erstberatung</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <p class="hero-eyebrow">Für Immobiliensachverständige &amp; Gutachter</p>
+        <h1 class="hero-h1">
+          Planbar mehr Aufträge<br>für <em>Wertgutachten</em>
+        </h1>
+        <p class="hero-tagline">
+          Sie sind Sachverständiger und kennen das: Mal laufen die Anfragen, mal ist es still. Empfehlungen allein reichen nicht für eine planbare Auftragslage. Mit gezielter Google Ads Werbung erscheinen Sie genau dann, wenn jemand aktiv nach einem Gutachter sucht — in Ihrer Region, für Ihre Leistung.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge ice">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:var(--ice2)">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Spezialisiert auf Sachverständige
+          </span>
+          <span class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:#666">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Echtes Conversion-Tracking
+          </span>
+          <span class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:#666">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4.5 7L6.5 9L9.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Persönliche Betreuung
+          </span>
+        </div>
+        <a href="#kontakt" class="hero-cta">
+          Kostenlose Erstberatung anfragen
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3.5 8H12.5M12.5 8L9 4.5M12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-right">
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-num">73%</div>
+            <div class="stat-label">der Auftraggeber suchen ihren Gutachter über Google</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-num">Top 3</div>
+            <div class="stat-label">Positionen bei Google erhalten über 75% aller Klicks</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-num">24h</div>
+            <div class="stat-label">nach Kampagnenstart können die ersten Anfragen eingehen</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PAIN POINTS
+  ════════════════════════════════════════════════ -->
+  <section class="sec-alt">
+    <div class="sec-inner">
+      <p class="sec-ey">Kommt Ihnen das bekannt vor?</p>
+      <h2 class="sec-title">Typische Herausforderungen für <em>Sachverständige</em></h2>
+      <p class="sec-body">Die meisten Gutachter kennen mindestens zwei dieser Situationen. Das muss nicht so bleiben.</p>
+
+      <div class="pain-grid">
+
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M11 3v4M11 15v4M3 11h4M15 11h4" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="pain-title">Unplanbare Auftragslage</h3>
+          <p class="pain-body">Mal drei Anfragen in einer Woche, mal wochenlang nichts. Sie wissen nie, ob nächsten Monat genug hereinkommt. Urlaub planen, Mitarbeiter einstellen — alles ein Risiko.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <circle cx="8" cy="8" r="4" stroke="#A8D8F0" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="4" stroke="#A8D8F0" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="pain-title">Abhängig von Empfehlungen</h3>
+          <p class="pain-body">Steuerberater, Anwälte und Makler empfehlen Sie weiter — aber nur wenn sie gerade an Sie denken. Wenn die Empfehlung ausbleibt, bleibt das Telefon still.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M5 17L17 5M17 5H9M17 5V13" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="pain-title">Aufträge an schlechtere Kollegen verlieren</h3>
+          <p class="pain-body">Fachlich sind Sie besser — aber der Kollege erscheint bei Google oben. Kunden wählen den, den sie zuerst finden. Nicht den besten Gutachter, sondern den sichtbarsten.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="4" y="4" width="14" height="14" rx="2" stroke="#A8D8F0" stroke-width="1.5"/>
+              <path d="M4 9h14" stroke="#A8D8F0" stroke-width="1.5"/>
+              <path d="M9 9v9" stroke="#A8D8F0" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="pain-title">Geringe Margen als Sub-Unternehmer</h3>
+          <p class="pain-body">Sie übernehmen die volle Arbeit — Besichtigung, Gutachten, Haftung — aber der Großteil des Honorars bleibt beim Auftraggeber. Eigene Kunden direkt zu gewinnen würde Ihre Marge verdoppeln.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       LÖSUNG
+  ════════════════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec-inner">
+      <p class="sec-ey">So funktioniert es</p>
+      <h2 class="sec-title">In 3 Schritten zu <em>planbaren</em> Gutachten-Aufträgen</h2>
+
+      <div class="sol-grid">
+
+        <div class="sol-card">
+          <div class="sol-num">01</div>
+          <h3 class="sol-title">Analyse & Strategie</h3>
+          <p class="sol-body">Wir analysieren Ihr Einzugsgebiet, die Konkurrenz und das Suchvolumen für Gutachter-Keywords in Ihrer Region. Sie erfahren ehrlich, was realistisch möglich ist.</p>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-num">02</div>
+          <h3 class="sol-title">Kampagne & Landingpage</h3>
+          <p class="sol-body">Wir erstellen Ihre Google Ads Kampagne mit Keywords wie „Immobiliengutachter [Ihre Stadt]" und bauen eine Landingpage, die aus Suchenden Anfragen macht.</p>
+        </div>
+
+        <div class="sol-card">
+          <div class="sol-num">03</div>
+          <h3 class="sol-title">Tracking & Optimierung</h3>
+          <p class="sol-body">Echtes Conversion-Tracking zeigt Ihnen, welche Anfragen wirklich über Google kamen. Keine aufgeblähten Zahlen — nur echte Ergebnisse, die Sie nachvollziehen können.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       VERGLEICH
+  ════════════════════════════════════════════════ -->
+  <section class="sec-alt">
+    <div class="sec-inner">
+      <p class="sec-ey">Transparenz statt Versprechen</p>
+      <h2 class="sec-title">Was uns von typischen <em>Nischen-Agenturen</em> unterscheidet</h2>
+      <p class="sec-body">Viele Agenturen verpacken Standard-Marketing als „proprietäre Methode" und verlangen Premium-Preise. Wir arbeiten anders.</p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Typische Agentur</th>
+            <th>Averio Media</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conversion-Tracking</td>
+            <td>Eigene Tools, die Zahlen aufblähen</td>
+            <td>GA4 + Google Tag Manager — branchenstandard, transparent</td>
+          </tr>
+          <tr>
+            <td>Betreuung</td>
+            <td>Wechselnde Account-Manager</td>
+            <td>Direkt mit Marie — eine Ansprechpartnerin</td>
+          </tr>
+          <tr>
+            <td>Vertragslaufzeit</td>
+            <td>12 Monate Mindestlaufzeit</td>
+            <td>Monatlich kündbar</td>
+          </tr>
+          <tr>
+            <td>Reporting</td>
+            <td>Eigene Dashboards mit geschönten KPIs</td>
+            <td>Google Ads Dashboard — Sie sehen was wir sehen</td>
+          </tr>
+          <tr>
+            <td>Upselling</td>
+            <td>Verkaufscoaching, Social Recruiting, Omnipräsenz…</td>
+            <td>Nur das, was für Sie funktioniert</td>
+          </tr>
+          <tr>
+            <td>Kosten</td>
+            <td>Premium-Preise für Agentur-Overhead</td>
+            <td>Faire Preise ohne Büro- und Team-Zuschlag</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABLAUF
+  ════════════════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec-inner">
+      <p class="sec-ey">Ihr nächster Schritt</p>
+      <h2 class="sec-title">So starten wir die <em>Zusammenarbeit</em></h2>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3 class="process-title">Kostenloses Erstgespräch</h3>
+          <p class="process-body">15 Minuten am Telefon. Wir besprechen Ihre Situation, Ihr Einzugsgebiet und Ihre Ziele.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3 class="process-title">Potenzialanalyse</h3>
+          <p class="process-body">Wir prüfen Suchvolumen, Wettbewerb und Klickpreise in Ihrer Region. Sie bekommen eine ehrliche Einschätzung.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3 class="process-title">Kampagnenstart</h3>
+          <p class="process-body">Google Ads Kampagne, Landingpage und Tracking werden eingerichtet. Erste Anfragen oft innerhalb weniger Tage.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h3 class="process-title">Laufende Optimierung</h3>
+          <p class="process-body">Monatliche Optimierung, transparentes Reporting und direkte Abstimmung. Kein Autopilot.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       KONTAKTFORMULAR
+  ════════════════════════════════════════════════ -->
+  <section class="sec-alt" id="kontakt">
+    <div style="max-width:580px;margin:0 auto;padding:0 24px">
+      <p class="sec-ey" style="text-align:center">Kontakt</p>
+      <h2 class="sec-title" style="text-align:center">Kostenlose <em>Erstberatung</em> anfragen</h2>
+      <p style="text-align:center;color:#888;margin-bottom:2.5rem;font-size:15px;line-height:1.6">Erzählen Sie uns kurz von Ihrer Situation. Wir melden uns innerhalb von 24 Stunden mit einer ehrlichen Einschätzung.</p>
+
+      <form id="kontakt-form" onsubmit="submitKontakt(event)" style="display:flex;flex-direction:column;gap:16px">
+        <input type="text" name="website" id="k-website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="k-name" style="display:block;font-size:13px;font-weight:600;color:#ccc;margin-bottom:6px">Name *</label>
+            <input type="text" id="k-name" placeholder="Max Mustermann" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--bg3);color:#fff;font-size:14px;font-family:inherit">
+          </div>
+          <div>
+            <label for="k-email" style="display:block;font-size:13px;font-weight:600;color:#ccc;margin-bottom:6px">E-Mail *</label>
+            <input type="email" id="k-email" placeholder="max@firma.de" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--bg3);color:#fff;font-size:14px;font-family:inherit">
+          </div>
+        </div>
+        <div>
+          <label for="k-telefon" style="display:block;font-size:13px;font-weight:600;color:#ccc;margin-bottom:6px">Telefon <span style="font-weight:400;opacity:.5">(optional)</span></label>
+          <input type="tel" id="k-telefon" placeholder="+49 151 00000000" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--bg3);color:#fff;font-size:14px;font-family:inherit">
+        </div>
+        <div>
+          <label for="k-region" style="display:block;font-size:13px;font-weight:600;color:#ccc;margin-bottom:6px">Region / Einzugsgebiet *</label>
+          <input type="text" id="k-region" placeholder="z.B. Raum München, Nordbayern, bundesweit…" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--bg3);color:#fff;font-size:14px;font-family:inherit">
+        </div>
+        <div>
+          <label for="k-nachricht" style="display:block;font-size:13px;font-weight:600;color:#ccc;margin-bottom:6px">Nachricht *</label>
+          <textarea id="k-nachricht" rows="4" placeholder="Erzählen Sie kurz: Was für Gutachten erstellen Sie? Wie sieht Ihre aktuelle Auftragslage aus?" required style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--bg3);color:#fff;font-size:14px;font-family:inherit;resize:vertical"></textarea>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#888">
+          <input type="checkbox" id="k-dsgvo" required style="margin-top:2px">
+          <label for="k-dsgvo">Ich habe die <a href="averio-premium-datenschutz.html" style="color:var(--ice2)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+        </div>
+        <button type="submit" id="k-submit" style="padding:14px 32px;border:none;border-radius:50px;background:#016B4F;color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .25s ease;box-shadow:0 6px 20px rgba(1,107,79,.35)">Erstberatung anfragen</button>
+        <p style="text-align:center;font-size:12px;color:#666;margin:0">Antwort innerhalb von 24 Stunden · Kostenlos &amp; unverbindlich</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec-inner">
+      <p class="sec-ey" style="text-align:center">Häufige Fragen</p>
+      <h2 class="sec-title" style="text-align:center">Noch offene Fragen?</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Wie viele Anfragen kann ich pro Monat erwarten?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Das hängt von Ihrer Region, dem Wettbewerb und Ihrem Budget ab. In einer typischen mittelgroßen Stadt sehen wir 5–15 qualifizierte Anfragen pro Monat. In Ballungsräumen deutlich mehr. Wir sagen Ihnen vorab ehrlich, was in Ihrer Region realistisch ist.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Was kostet Google Ads für Sachverständige?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Die Klickpreise für „Immobiliengutachter" oder „Wertgutachten" liegen typischerweise bei 3–8 € pro Klick. Mit einem monatlichen Werbebudget ab 500–1.000 € sind bereits gute Ergebnisse möglich. Dazu kommt unser Betreuungshonorar — das besprechen wir transparent im Erstgespräch.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Was unterscheidet Sie von spezialisierten Gutachter-Agenturen?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Wir arbeiten mit echtem Conversion-Tracking (GA4 + Google Tag Manager), nicht mit eigenen Tools, die Ergebnisse aufblähen. Sie sehen im Google Ads Dashboard genau das, was wir sehen. Keine geschönten Zahlen. Dazu: persönliche Betreuung direkt mit mir, keine wechselnden Account-Manager, und monatlich kündbar.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Brauche ich eine eigene Website?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Nicht unbedingt. Wir erstellen bei Bedarf eine eigene Landingpage, die speziell für Google Ads optimiert ist. Diese Seite ist darauf ausgelegt, aus Besuchern Anfragen zu machen. Ihre bestehende Website kann parallel weiterlaufen.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Wie schnell sehe ich Ergebnisse?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Google Ads wirkt sofort — Ihre Anzeige erscheint, sobald die Kampagne live ist. Die ersten Anfragen kommen oft innerhalb der ersten Woche. Für eine stabile, optimierte Kampagne rechnen Sie mit 4–6 Wochen Anlaufzeit.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="faqTog(this)">
+            <span>Funktioniert das auch in ländlichen Regionen?</span>
+            <div class="faq-chevron">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Ja, gerade in ländlichen Regionen ist der Wettbewerb oft geringer und die Klickpreise niedriger. Wir vergrößern in dem Fall das Einzugsgebiet und targeting die umliegenden Landkreise mit. Im Erstgespräch prüfen wir, ob genug Suchvolumen in Ihrer Region vorhanden ist.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CTA STRIP
+  ════════════════════════════════════════════════ -->
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <p class="cta-strip-eyebrow">Bereit für planbare Aufträge?</p>
+      <h2 class="cta-strip-title">Lassen Sie uns über Ihre Situation sprechen</h2>
+      <p class="cta-strip-body">Kostenlos, unverbindlich und ohne Verkaufsdruck. Wenn Google Ads für Sie keinen Sinn macht, sagen wir das auch.</p>
+      <a href="#kontakt" class="cta-btn">
+        Erstberatung anfragen
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3.5 8H12.5M12.5 8L9 4.5M12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer>
+    © 2025 Averio Media · Marie Böttiger ·
+    <a href="averio-premium-impressum.html">Impressum</a> ·
+    <a href="averio-premium-datenschutz.html">Datenschutz</a> ·
+    <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
+  </footer>
+
+  <script src="averio-premium.js"></script>
+  <script src="cookie-banner.js"></script>
+  <script>
+    const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+    const FORM_LOADED = Date.now();
+
+    async function submitKontakt(e) {
+      e.preventDefault();
+
+      if (document.getElementById('k-website').value) return;
+      if (Date.now() - FORM_LOADED < 3000) return;
+
+      var btn = document.getElementById('k-submit');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet …';
+
+      try {
+        await fetch(NFORMS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            Formular:   'Kontakt – Sachverständige Landingpage',
+            Name:       document.getElementById('k-name').value.trim(),
+            Email:      document.getElementById('k-email').value.trim(),
+            Telefon:    document.getElementById('k-telefon').value.trim() || '–',
+            Region:     document.getElementById('k-region').value.trim(),
+            Nachricht:  document.getElementById('k-nachricht').value.trim()
+          })
+        });
+      } catch(err) { console.warn('nForms:', err); }
+
+      window.location.href = 'averio-anfrage-bestaetigt.html';
+    }
+
+    function faqTog(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
