@@ -30,7 +30,7 @@
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/lenis.min.js"></script>
-  <link rel="stylesheet" href="averio-media-weiss.css?v=8">
+  <link rel="stylesheet" href="averio-media-weiss.css?v=13">
   <style>
     /* ── CSS Custom Properties ── */
     :root {
@@ -978,14 +978,39 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
       </div>
       <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html#hero">Home</a></li>
-      <li><a href="averio-premium-ueber-uns.html">Über uns</a></li>
-      <li><a href="averio-premium-zusammenarbeit.html">Zusammenarbeit</a></li>
-      <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
-      <li><a href="averio-premium-guides.html">Guides</a></li>
-      <li><a href="averio-premium-sachverstaendige.html">Branchenfokus</a></li>
-      <li><a href="averio-premium-faq.html">FAQ</a></li>
+      <ul class="nav-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li class="has-mega">
+      <a href="averio-premium-angebote.html" class="active">Leistungen &amp; Preise<svg class="mega-chev" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="mega">
+        <div class="mega-col">
+          <div class="mega-h">Übersicht</div>
+          <a href="averio-premium-preisliste.html">Preise</a>
+          <div class="mega-h">Branchenfokus</div>
+          <a href="averio-premium-sachverstaendige.html">Google Ads f&#252;r Gutachter</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Sichtbarkeit bei Google</div>
+          <a href="averio-premium-zusammenarbeit.html">Google Ads (Performance Marketing)</a>
+          <a href="averio-premium-angebote.html">ChatGPT Ads<span class="mega-note">(erscheint bald – bei Fragen wenden Sie sich gern an uns)</span></a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Sichtbarkeit in KI</div>
+          <a href="averio-premium-geo-optimierung.html">GEO-Optimierung (KI)</a>
+          <div class="mega-h">Tools</div>
+          <a href="averio-premium-sichtbarkeitscheck.html">Sichtbarkeitscheck</a>
+          <a href="averio-premium-ki-sichtbarkeit.html">KI-Sichtbarkeitscheck</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Weitere Angebote</div>
+          <a>Webseite</a>
+          <a>Landingpage</a>
+          <a>Funnelbuilding</a><span class="mega-note">Noch Fragen? <a href="averio-premium-kontakt.html">Sprechen Sie uns gern an</a>.</span>
+        </div>
+      </div>
+    </li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
     <li><a href="averio-premium-kontakt.html">Kontakt</a></li>
   </ul>
   <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
@@ -993,7 +1018,40 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
   <a href="averio-premium-kontakt.html" class="nav-cta magnetic">Jetzt kontaktieren</a>
-  </nav>
+    <!-- Hamburger (nur Mobile) -->
+  <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menü -->
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul class="nav-mobile-links">
+    <li><a href="index.html#hero" onclick="closeMobileMenu()">Home</a></li>
+    <li class="nmm-h">Leistungen &amp; Preise</li>
+    <li class="nmm-h">Übersicht</li>
+    <li class="nmm-sub"><a href="averio-premium-preisliste.html" onclick="closeMobileMenu()">Preise</a></li>
+    <li class="nmm-sub"><a href="averio-premium-sachverstaendige.html" onclick="closeMobileMenu()">Google Ads für Gutachter</a></li>
+    <li class="nmm-h">Sichtbarkeit bei Google</li>
+    <li class="nmm-sub"><a href="averio-premium-zusammenarbeit.html" onclick="closeMobileMenu()">Google Ads (Performance Marketing)</a></li>
+    <li class="nmm-sub"><a href="averio-premium-angebote.html" onclick="closeMobileMenu()">ChatGPT Ads<span class="mega-note">(erscheint bald – bei Fragen wenden Sie sich gern an uns)</span></a></li>
+    <li class="nmm-h">Sichtbarkeit in KI</li>
+    <li class="nmm-sub"><a href="averio-premium-geo-optimierung.html" onclick="closeMobileMenu()">GEO-Optimierung (KI)</a></li>
+    <li class="nmm-h">Tools</li>
+    <li class="nmm-sub"><a href="averio-premium-sichtbarkeitscheck.html" onclick="closeMobileMenu()">Sichtbarkeitscheck</a></li>
+    <li class="nmm-sub"><a href="averio-premium-ki-sichtbarkeit.html" onclick="closeMobileMenu()">KI-Sichtbarkeitscheck</a></li>
+    <li class="nmm-h">Weitere Angebote</li>
+    <li class="nmm-sub"><a>Webseite</a></li>
+    <li class="nmm-sub"><a>Landingpage</a></li>
+    <li class="nmm-sub"><a>Funnelbuilding</a><span class="mega-note">Noch Fragen? <a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Sprechen Sie uns gern an</a>.</span></li>
+    <li><a href="averio-premium-ergebnisse.html" onclick="closeMobileMenu()">Ergebnisse</a></li>
+    <li><a href="averio-premium-guides.html" onclick="closeMobileMenu()">Guides</a></li>
+    <li><a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Kontakt</a></li>
+  </ul>
+  <div class="nav-mobile-divider"></div>
+  <a href="averio-premium-kontakt.html" class="nav-mobile-cta" onclick="closeMobileMenu()">Jetzt kontaktieren</a>
+</div>
+
 
   <!-- ────────────────────────────────────────
        1. HERO
@@ -1434,7 +1492,41 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
     else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
   });
 })();
-</script></body>
+</script><!-- Mobile Menu JS -->
+<script>
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var menu   = document.getElementById('nav-mobile');
+  if (!burger || !menu) return;
+
+  function openMobileMenu() {
+    burger.classList.add('open');
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeMobileMenu = function () {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  burger.addEventListener('click', function () {
+    if (menu.classList.contains('open')) { closeMobileMenu(); }
+    else { openMobileMenu(); }
+  });
+
+  // Schließen bei Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+})();
+</script>
+</body>
 </html>
 
 

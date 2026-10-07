@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
 <meta name="robots" content="noindex, nofollow">
-<title>Dein Guide ist gesichert – Averio Media</title>
+<title>Ihr Guide ist gesichert – Averio Media</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -25,6 +25,149 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
 .nav-logo-name { font-family: 'Figtree', sans-serif; font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
 .nav-back { font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
 .nav-back:hover { color: rgba(255,255,255,.7); }
+
+/* ── HAMBURGER ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 9px 10px;
+  z-index: 9002;
+  flex-shrink: 0;
+  transition: border-color .2s;
+}
+.nav-burger:hover { border-color: rgba(1,107,79,.5); }
+.nav-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease, width .3s ease;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; width: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE MENÜ ── */
+.nav-mobile {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9001;
+  background: rgba(5,5,5,.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5rem 2rem 4rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity .3s ease, transform .3s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-mobile.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.nav-mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+.nav-mobile > .nav-mobile-cta { margin-bottom: auto; }
+.nav-mobile-links li a {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+  text-align: center;
+  padding: .5rem 1rem;
+  border-radius: 12px;
+  letter-spacing: -.02em;
+  transition: color .2s, background .2s;
+}
+.nav-mobile-links li a:hover { color: #fff; background: rgba(255,255,255,.04); }
+.nav-mobile-links li a:not([href]):hover { color: rgba(255,255,255,.65); background: transparent; }
+.nav-mobile-links .nmm-h {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #0f9e73;
+  padding: 1.1rem 0 .2rem;
+  pointer-events: none;
+}
+.nav-mobile-links .nmm-h:first-child { padding-top: 0; }
+.nav-mobile-links .nmm-sub a {
+  font-size: 1.05rem !important;
+  padding: .3rem 1rem !important;
+  opacity: .78;
+}
+.nav-mobile-divider {
+  width: 48px; height: 1px;
+  background: rgba(255,255,255,.07);
+  margin: 1.25rem 0;
+}
+.nav-mobile-cta {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  padding: 15px 28px;
+  background: #016B4F;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(1,107,79,.35);
+  transition: background .25s, box-shadow .25s, transform .2s;
+}
+.nav-mobile-cta:hover {
+  background: #2B6552;
+  box-shadow: 0 10px 32px rgba(1,107,79,.5);
+  transform: translateY(-2px);
+}
+.nav-mobile-links .mega-note {
+  display: block;
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: rgba(255,255,255,.45);
+  padding: .15rem 1rem .5rem;
+}
+.nav-mobile-links a .mega-note { padding-top: .2rem; }
+.nav-mobile-links .mega-note a {
+  display: inline !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,.75);
+  text-decoration: underline;
+}
+.nav-mobile-links .mega-note a:hover { color: #fff; background: transparent; }
+@media (max-height: 720px) {
+  .nav-mobile { padding: 4rem 1.5rem 3rem; }
+  .nav-mobile-links li a { font-size: 1.35rem; padding: .32rem .75rem; }
+  .nav-mobile-links .nmm-sub a { font-size: .95rem !important; padding: .2rem .75rem !important; }
+  .nav-mobile-links .mega-note { font-size: 11px; padding-bottom: .35rem; }
+}
 
 /* ── HERO ── */
 .hero {
@@ -260,6 +403,8 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .nav-burger { display: flex; }
+  .nav-back { display: none; }
   .value-sec { grid-template-columns: 1fr; gap: 40px; }
   .proof-sec { grid-template-columns: 1fr; }
   .proof-item::after { display: none; }
@@ -279,7 +424,40 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
     <div class="nav-logo-name">Averio Media</div>
   </a>
   <a href="averio-premium-guides.html" class="nav-back">← Zurück zu den Guides</a>
+  <!-- Hamburger (nur Mobile) -->
+  <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile Menü -->
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul class="nav-mobile-links">
+    <li><a href="index.html#hero" onclick="closeMobileMenu()">Home</a></li>
+    <li class="nmm-h">Leistungen &amp; Preise</li>
+    <li class="nmm-h">Übersicht</li>
+    <li class="nmm-sub"><a href="averio-premium-preisliste.html" onclick="closeMobileMenu()">Preise</a></li>
+    <li class="nmm-sub"><a href="averio-premium-sachverstaendige.html" onclick="closeMobileMenu()">Google Ads für Gutachter</a></li>
+    <li class="nmm-h">Sichtbarkeit bei Google</li>
+    <li class="nmm-sub"><a href="averio-premium-zusammenarbeit.html" onclick="closeMobileMenu()">Google Ads (Performance Marketing)</a></li>
+    <li class="nmm-sub"><a href="averio-premium-angebote.html" onclick="closeMobileMenu()">ChatGPT Ads<span class="mega-note">(erscheint bald – bei Fragen wenden Sie sich gern an uns)</span></a></li>
+    <li class="nmm-h">Sichtbarkeit in KI</li>
+    <li class="nmm-sub"><a href="averio-premium-geo-optimierung.html" onclick="closeMobileMenu()">GEO-Optimierung (KI)</a></li>
+    <li class="nmm-h">Tools</li>
+    <li class="nmm-sub"><a href="averio-premium-sichtbarkeitscheck.html" onclick="closeMobileMenu()">Sichtbarkeitscheck</a></li>
+    <li class="nmm-sub"><a href="averio-premium-ki-sichtbarkeit.html" onclick="closeMobileMenu()">KI-Sichtbarkeitscheck</a></li>
+    <li class="nmm-h">Weitere Angebote</li>
+    <li class="nmm-sub"><a>Webseite</a></li>
+    <li class="nmm-sub"><a>Landingpage</a></li>
+    <li class="nmm-sub"><a>Funnelbuilding</a><span class="mega-note">Noch Fragen? <a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Sprechen Sie uns gern an</a>.</span></li>
+    <li><a href="averio-premium-ergebnisse.html" onclick="closeMobileMenu()">Ergebnisse</a></li>
+    <li><a href="averio-premium-guides.html" onclick="closeMobileMenu()">Guides</a></li>
+    <li><a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Kontakt</a></li>
+  </ul>
+  <div class="nav-mobile-divider"></div>
+  <a href="averio-premium-kontakt.html" class="nav-mobile-cta" onclick="closeMobileMenu()">Jetzt kontaktieren</a>
+</div>
+
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -289,8 +467,8 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
     </div>
     <div class="confirm-text">Guide gesichert</div>
   </div>
-  <h1 class="hero-title">Dein Guide ist<br><em>auf dem Weg</em> zu dir.</h1>
-  <p class="hero-sub">Schau in dein Postfach. Der Download-Link ist bereits unterwegs. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.</p>
+<h1 class="hero-title">Ihr Guide ist<br><em>auf dem Weg</em> zu Ihnen.</h1>
+<p class="hero-sub">Schauen Sie in Ihr Postfach. Der Download-Link ist bereits unterwegs. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.</p>
   <div class="hero-arrow">
     <span>Noch eine Sache</span>
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M4 10l5 5 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -468,11 +646,31 @@ const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q'
       'guide-2': '6 Punkte Checkliste',
       'guide-3': 'Step-by-Step Optimierung',
       'guide-4': 'Negative-Keyword-Bibel',
-      'guide-5': 'GA4 Tracking Setup'
+      'guide-5': 'GA4 Tracking Setup',
+      'preisliste': 'Preisliste'
     };
     if (map[guide]) {
+      let label = map[guide];
+      if (guide === 'preisliste') {
+        let thema = '';
+        try { thema = localStorage.getItem('av_preislisteThema') || ''; } catch (e) {}
+        const bt = document.querySelector('.confirm-text');
+        if (bt) bt.textContent = 'Preisliste angefordert';
+        const h1 = document.querySelector('.hero-title');
+        if (h1) {
+          if (thema === 'Google Ads') {
+            h1.innerHTML = 'Ihre Google-Ads-Preisliste ist<br><em>auf dem Weg</em> zu Ihnen.';
+            label = 'Google-Ads-Preisliste';
+          } else if (thema === 'GEO-Integration') {
+            h1.innerHTML = 'Ihre Preisliste f&#252;r die GEO-Integration ist<br><em>auf dem Weg</em> zu Ihnen.';
+            label = 'Preisliste f&#252;r die GEO-Integration';
+          } else {
+            h1.innerHTML = 'Ihre Preisliste ist<br><em>auf dem Weg</em> zu Ihnen.';
+          }
+        }
+      }
       const sub = document.querySelector('.hero-sub');
-      if (sub) sub.innerHTML = `„<em style="color:rgba(255,255,255,.7);font-style:normal;">${map[guide]}</em>". Der Download-Link ist bereits auf dem Weg. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.`;
+      if (sub) sub.innerHTML = `„<em style="color:rgba(255,255,255,.7);font-style:normal;">${label}</em>". Bitte bestätigen Sie Ihre Anfrage in der E-Mail, die soeben unterwegs ist – erst nach dem Klick auf den Bestätigungslink öffnet sich der Download. Manchmal landet sie im Spam-Ordner, also kurz dort nachschauen.`;
     }
   }
 })();
@@ -523,6 +721,40 @@ gsap.from('.hero-arrow',    { opacity: 0, duration: .6, delay: .7, ease: 'power2
 const style = document.createElement('style');
 style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
 document.head.appendChild(style);
+</script>
+<!-- Mobile Menu JS -->
+<script>
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var menu   = document.getElementById('nav-mobile');
+  if (!burger || !menu) return;
+
+  function openMobileMenu() {
+    burger.classList.add('open');
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeMobileMenu = function () {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  burger.addEventListener('click', function () {
+    if (menu.classList.contains('open')) { closeMobileMenu(); }
+    else { openMobileMenu(); }
+  });
+
+  // Schließen bei Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+})();
 </script>
 </body>
 </html>

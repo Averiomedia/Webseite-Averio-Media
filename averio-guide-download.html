@@ -5,7 +5,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
-<title>Dein Guide – Download | Averio Media</title>
+<title>Ihr Guide – Download | Averio Media</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,41 +165,41 @@ h1 span { color: #016B4F; }
 
   <div class="badge"><div class="badge-dot"></div>E-Mail bestätigt</div>
 
-  <h1 id="page-title">Dein Guide ist<br><span>bereit.</span></h1>
-  <p class="sub" id="page-sub">Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.</p>
+  <h1 id="page-title">Ihr Guide ist<br><span>bereit.</span></h1>
+  <p class="sub" id="page-sub">Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können Ihren Guide jetzt direkt öffnen und herunterladen.</p>
 
   <!-- Single guide (wird per JS befüllt wenn localStorage vorhanden) -->
   <div class="guide-box" id="single-guide" style="display:none;">
-    <div class="guide-box-eyebrow">Dein Guide</div>
+    <div class="guide-box-eyebrow">Ihr Guide</div>
     <div class="guide-box-title" id="single-guide-title">—</div>
     <a href="#" id="single-guide-btn" class="btn-guide" target="_blank" rel="noopener">
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Guide öffnen &amp; herunterladen
+      PDF herunterladen
     </a>
   </div>
 
   <!-- Alle Guides (Fallback wenn kein localStorage) -->
   <div id="all-guides" style="display:none;">
     <div class="guides-list">
-      <a href="guides/averio-guide-1-budgetfehler.html" class="guide-item" target="_blank" rel="noopener">
+      <a href="guides/averio-guide-1-budgetfehler.pdf" class="guide-item" target="_blank" rel="noopener">
         <span class="guide-item-title">10 Budgetvernichtende Google Ads Fehler</span>
-        <span class="guide-item-tag">Öffnen</span>
+        <span class="guide-item-tag">PDF laden</span>
       </a>
-      <a href="guides/averio-guide-2-checkliste.html" class="guide-item" target="_blank" rel="noopener">
+      <a href="guides/averio-guide-2-checkliste.pdf" class="guide-item" target="_blank" rel="noopener">
         <span class="guide-item-title">Die 6-Punkte-Checkliste für profitable Google Ads</span>
-        <span class="guide-item-tag">Öffnen</span>
+        <span class="guide-item-tag">PDF laden</span>
       </a>
-      <a href="guides/averio-guide-3-optimierung.html" class="guide-item" target="_blank" rel="noopener">
+      <a href="guides/averio-guide-3-optimierung.pdf" class="guide-item" target="_blank" rel="noopener">
         <span class="guide-item-title">Google Ads Step-by-Step Optimierung</span>
-        <span class="guide-item-tag">Öffnen</span>
+        <span class="guide-item-tag">PDF laden</span>
       </a>
-      <a href="guides/averio-guide-4-negative-keywords.html" class="guide-item" target="_blank" rel="noopener">
+      <a href="guides/averio-guide-4-negative-keywords.pdf" class="guide-item" target="_blank" rel="noopener">
         <span class="guide-item-title">Negative-Keyword-Bibel für 12 Branchen</span>
-        <span class="guide-item-tag">Öffnen</span>
+        <span class="guide-item-tag">PDF laden</span>
       </a>
-      <a href="guides/averio-guide-5-tracking.html" class="guide-item" target="_blank" rel="noopener">
+      <a href="guides/averio-guide-5-tracking.pdf" class="guide-item" target="_blank" rel="noopener">
         <span class="guide-item-title">GA4 &amp; Conversion-Tracking Setup</span>
-        <span class="guide-item-tag">Öffnen</span>
+        <span class="guide-item-tag">PDF laden</span>
       </a>
     </div>
   </div>
@@ -220,11 +220,11 @@ h1 span { color: #016B4F; }
 <script>
 (function() {
   const GUIDE_MAP = {
-    'guide-1':    { title: '10 Budgetvernichtende Google Ads Fehler',          url: 'guides/averio-guide-1-budgetfehler.html',  btnText: 'Guide öffnen & herunterladen' },
-    'guide-2':    { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', url: 'guides/averio-guide-2-checkliste.html',   btnText: 'Guide öffnen & herunterladen' },
-    'guide-3':    { title: 'Google Ads Step-by-Step Optimierung',               url: 'guides/averio-guide-3-optimierung.html',  btnText: 'Guide öffnen & herunterladen' },
-    'guide-4':    { title: 'Negative-Keyword-Bibel für 12 Branchen',            url: 'guides/averio-guide-4-negative-keywords.html', btnText: 'Guide öffnen & herunterladen' },
-    'guide-5':    { title: 'GA4 & Conversion-Tracking Setup',                   url: 'guides/averio-guide-5-tracking.html',    btnText: 'Guide öffnen & herunterladen' },
+    'guide-1':    { title: '10 Budgetvernichtende Google Ads Fehler',          url: 'guides/averio-guide-1-budgetfehler.pdf',  btnText: 'PDF herunterladen' },
+    'guide-2':    { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', url: 'guides/averio-guide-2-checkliste.pdf',   btnText: 'PDF herunterladen' },
+    'guide-3':    { title: 'Google Ads Step-by-Step Optimierung',               url: 'guides/averio-guide-3-optimierung.pdf',  btnText: 'PDF herunterladen' },
+    'guide-4':    { title: 'Negative-Keyword-Bibel für 12 Branchen',            url: 'guides/averio-guide-4-negative-keywords.pdf', btnText: 'PDF herunterladen' },
+    'guide-5':    { title: 'GA4 & Conversion-Tracking Setup',                   url: 'guides/averio-guide-5-tracking.pdf',      btnText: 'PDF herunterladen' },
     'preisliste': { title: 'Preisliste Averio Media',                            url: 'averio-preisliste-download.html',        btnText: 'Preisliste jetzt öffnen' },
   };
 
@@ -239,8 +239,8 @@ h1 span { color: #016B4F; }
     // Seite an Preisliste anpassen
     const isPreisliste = guideId === 'preisliste';
     if (isPreisliste) {
-      document.getElementById('page-title').innerHTML = 'Deine Preisliste ist<br><span>bereit.</span>';
-      document.getElementById('page-sub').textContent = 'Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst die vollständige Preisliste jetzt direkt öffnen.';
+      document.getElementById('page-title').innerHTML = 'Ihre Preisliste ist<br><span>bereit.</span>';
+      document.getElementById('page-sub').textContent = 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können die vollständige Preisliste jetzt direkt öffnen.';
     }
 
     // Name personalisieren wenn vorhanden
@@ -248,9 +248,9 @@ h1 span { color: #016B4F; }
       const sub = document.getElementById('page-sub');
       if (sub) {
         if (isPreisliste) {
-          sub.textContent = 'Hallo ' + name + ', deine E-Mail wurde bestätigt. Hier ist deine persönliche Preisliste mit allen Konditionen.';
+          sub.textContent = 'Hallo ' + name + ', Ihre E-Mail wurde bestätigt. Hier ist Ihre persönliche Preisliste mit allen Konditionen.';
         } else {
-          sub.textContent = 'Hallo ' + name + ', deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.';
+          sub.textContent = 'Hallo ' + name + ', Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können Ihren Guide jetzt direkt öffnen und herunterladen.';
         }
       }
     }
@@ -268,12 +268,12 @@ h1 span { color: #016B4F; }
     document.getElementById('single-guide').style.display = 'block';
     // Eyebrow anpassen
     if (guideId === 'preisliste') {
-      document.querySelector('.guide-box-eyebrow').textContent = 'Deine Preisliste';
+      document.querySelector('.guide-box-eyebrow').textContent = 'Ihre Preisliste';
     }
   } else {
     // Kein localStorage-Wert (z.B. E-Mail auf anderem Gerät geöffnet) → alle Guides anzeigen
-    document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>deine <span>Guides</span> warten.';
-    document.getElementById('page-sub').textContent = 'Deine E-Mail wurde erfolgreich bestätigt. Öffne einfach den Guide, den du angefragt hast:';
+    document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>Ihre <span>Guides</span> warten.';
+    document.getElementById('page-sub').textContent = 'Ihre E-Mail wurde erfolgreich bestätigt. Öffnen Sie einfach den Guide, den Sie angefragt haben:';
     document.getElementById('all-guides').style.display = 'block';
   }
 })();

@@ -84,12 +84,6 @@ function initEntryAnimations() {
   resize();
   window.addEventListener('resize', () => { resize(); build(); });
 
-  canvas.parentElement.addEventListener('mousemove', e => {
-    const r = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - r.left;
-    mouse.y = e.clientY - r.top;
-  });
-  canvas.parentElement.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
 
   class Particle {
     constructor() { this.init(); }
@@ -178,35 +172,6 @@ function initEntryAnimations() {
     if (running) loop();
   });
   obs.observe(canvas);
-})();
-
-/* ── CUSTOM CURSOR ────────────────────────────────────── */
-(function initCursor() {
-  const cur = document.getElementById('cursor');
-  const fol = document.getElementById('cursor-follower');
-  if (!cur || !fol || window.innerWidth < 768 || 'ontouchstart' in window || navigator.maxTouchPoints > 0) { if (cur) cur.style.display = 'none'; if (fol) fol.style.display = 'none'; return; }
-
-  let mx = 0, my = 0, fx = 0, fy = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    gsap.set(cur, { x: mx, y: my });
-  });
-
-  gsap.ticker.add(() => {
-    fx += (mx - fx) * .075;
-    fy += (my - fy) * .075;
-    gsap.set(fol, { x: fx, y: fy });
-  });
-
-  document.addEventListener('mousedown', () => cur.classList.add('click'));
-  document.addEventListener('mouseup',   () => cur.classList.remove('click'));
-
-  const interactives = document.querySelectorAll('a, button, .service-card, .testi-card, .faq-q, .magnetic');
-  interactives.forEach(el => {
-    el.addEventListener('mouseenter', () => { cur.classList.add('hover'); fol.classList.add('hover'); });
-    el.addEventListener('mouseleave', () => { cur.classList.remove('hover'); fol.classList.remove('hover'); });
-  });
 })();
 
 /* ── MAGNETIC BUTTONS ─────────────────────────────────── */
@@ -460,42 +425,6 @@ function revealSplit(el) {
           );
         }
       }
-    });
-  });
-})();
-
-/* ── HOVER TRAIL ──────────────────────────────────────── */
-(function initTrail() {
-  const hero = document.getElementById('hero');
-  if (!hero || window.innerWidth < 768) return;
-
-  const trail = [];
-  const maxDots = 8;
-  for (let i = 0; i < maxDots; i++) {
-    const d = document.createElement('div');
-    d.style.cssText = `
-      position:fixed;width:4px;height:4px;border-radius:50%;
-      background:rgba(37,99,235,${0.6 - i * .07});
-      pointer-events:none;z-index:99996;transform:translate(-50%,-50%);
-      will-change:transform;
-    `;
-    document.body.appendChild(d);
-    trail.push({ el: d, x: 0, y: 0 });
-  }
-
-  let headX = 0, headY = 0;
-  document.addEventListener('mousemove', e => { headX = e.clientX; headY = e.clientY; });
-
-  gsap.ticker.add(() => {
-    trail[0].x += (headX - trail[0].x) * .4;
-    trail[0].y += (headY - trail[0].y) * .4;
-    for (let i = 1; i < trail.length; i++) {
-      trail[i].x += (trail[i-1].x - trail[i].x) * .35;
-      trail[i].y += (trail[i-1].y - trail[i].y) * .35;
-    }
-    trail.forEach((t, i) => {
-      const scale = 1 - i * .1;
-      gsap.set(t.el, { x: t.x, y: t.y, scale });
     });
   });
 })();
