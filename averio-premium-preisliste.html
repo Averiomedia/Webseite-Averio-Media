@@ -561,6 +561,13 @@ html[data-theme="light"] .pl-stats             { border-top-color: #DEE2E6 !impo
             <span class="check-label">Ich habe die <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
           </label>
         </div>
+        <div class="form-group" style="margin-top:.5rem;">
+          <label class="form-check">
+            <input type="checkbox" id="pl-newsletter">
+            <div class="check-box"></div>
+            <span class="check-label">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</span>
+          </label>
+        </div>
         <div class="form-error" id="pl-error">Bitte füllen Sie alle Pflichtfelder aus und stimmen der Datenschutzerklärung zu.</div>
         <p class="pl-fine">Die Preisliste ist zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
 
@@ -633,6 +640,11 @@ html[data-theme="light"] .pl-stats             { border-top-color: #DEE2E6 !impo
 // ── Dienste ──
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
+// ── Newsletter-Sammel-Formular in Brevo ──
+//    Trägt nur bei ausdrücklichem Häkchen Kontakte in die Newsletter-Liste ein.
+//    (Vom Newsletter-Gate der Guides-Seite – URL dort kopieren.)
+const NEWSLETTER_BREVO_URL = '';
+
 // ⚠️ Brevo-Doppelopt-in für die Preisliste: Hier die URL des eigenen
 //    Brevo-Formulars eintragen (Redirect nach Bestätigung:
 //    https://averiomedia.de/averio-preisliste-download.html).
@@ -646,6 +658,7 @@ async function submitPreisliste() {
   const tel   = document.getElementById('pl-tel').value.trim();
   const thema = document.getElementById('pl-thema').value;
   const dsgvo = document.getElementById('pl-dsgvo').checked;
+  const nl    = document.getElementById('pl-newsletter').checked;
   const errEl = document.getElementById('pl-error');
   const btn   = document.getElementById('pl-btn');
 
@@ -671,11 +684,22 @@ async function submitPreisliste() {
       fd.append('EMAIL', email);
       fd.append('email_address_check', '');
       fd.append('locale', 'de');
-      // Hinweis: In Brevo das Textfeld/Select-Feld "thema" anlegen
+      // Hinweis: In Brevo das Kategorie-Attribut PREISLISTE_THEMA anlegen
       // (Optionen: Google Ads / GEO-Integration), sonst wird der Wert ignoriert.
-      fd.append('thema', thema);
+      fd.append('PREISLISTE_THEMA', thema);
       fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
     } catch (e) { console.warn('Brevo:', e); }
+  }
+
+  // Newsletter – nur bei ausdrücklichem Häkchen in die Brevo-Liste
+  if (nl && NEWSLETTER_BREVO_URL) {
+    try {
+      const nfd = new FormData();
+      nfd.append('EMAIL', email);
+      nfd.append('email_address_check', '');
+      nfd.append('locale', 'de');
+      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+    } catch (e) { console.warn('Newsletter:', e); }
   }
 
   // nForms – Benachrichtigung mit den Kontaktdaten
@@ -690,7 +714,7 @@ async function submitPreisliste() {
         Telefon:  tel || '–',
         Thema:    thema,
         Quelle:   location.pathname,
-        Newsletter: 'Nein'
+        Newsletter: nl ? 'Ja' : 'Nein'
       })
     });
   } catch (e) { console.warn('nForms:', e); }

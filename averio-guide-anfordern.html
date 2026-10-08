@@ -204,6 +204,11 @@ html[data-theme="light"] .ag-input { background: #F8F9FA; border-color: #DEE2E6;
         gelesen und willige ein, dass meine Angaben zur Zusendung des Guides und zur dazugehörigen Bestätigungs-E-Mail verarbeitet werden. Die Einwilligung kann jederzeit widerrufen werden.</span>
       </label>
 
+      <label class="ag-check">
+        <input type="checkbox" id="ag-newsletter">
+        <span>Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</span>
+      </label>
+
       <button class="ag-submit" id="ag-submit" onclick="submitGuide()">
         <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Guide anfordern
@@ -295,6 +300,10 @@ html[data-theme="light"] .ag-input { background: #F8F9FA; border-color: #DEE2E6;
 const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
 const NFORMS_URL   = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
+// ── Newsletter-Sammel-Formular in Brevo ──
+//    Trägt nur bei ausdrücklichem Häkchen Kontakte in die Newsletter-Liste ein.
+const NEWSLETTER_BREVO_URL = '';
+
 const GUIDE_MAP = {
   'guide-1': { title: '10 Budgetvernichtende Google Ads Fehler', h1: 'Zehn Fehler, die Ihr Budget <span class="accent">verbrennen.</span>' },
   'guide-2': { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', h1: 'Sechs Bereiche, <span class="accent">23 Prüfpunkte.</span>' },
@@ -323,6 +332,7 @@ async function submitGuide() {
   const name  = document.getElementById('ag-name').value.trim();
   const email = document.getElementById('ag-email').value.trim();
   const dsgvo = document.getElementById('ag-dsgvo').checked;
+  const nl    = document.getElementById('ag-newsletter').checked;
 
   if (!name) { alert('Bitte geben Sie Ihren Namen an.'); return; }
   if (!email || !email.includes('@')) { alert('Bitte geben Sie eine gültige E-Mail-Adresse an.'); return; }
@@ -349,6 +359,17 @@ async function submitGuide() {
     fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch (e) { console.warn('Brevo:', e); }
 
+  // Newsletter – nur bei ausdrücklichem Häkchen in die Brevo-Liste
+  if (nl && NEWSLETTER_BREVO_URL) {
+    try {
+      const nfd = new FormData();
+      nfd.append('EMAIL', email);
+      nfd.append('email_address_check', '');
+      nfd.append('locale', 'de');
+      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+    } catch (e) { console.warn('Newsletter:', e); }
+  }
+
   // nForms – Benachrichtigung mit den Kontaktdaten
   try {
     await fetch(NFORMS_URL, {
@@ -360,7 +381,7 @@ async function submitGuide() {
         Email: email,
         Guide: guideTitle,
         Quelle: location.pathname + (location.search || ''),
-        Newsletter: 'Nein'
+        Newsletter: nl ? 'Ja' : 'Nein'
       })
     });
   } catch (e) { console.warn('nForms:', e); }
