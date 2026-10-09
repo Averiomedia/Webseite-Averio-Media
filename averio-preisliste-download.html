@@ -156,6 +156,16 @@ h1 span { color: #016B4F; }
 }
 
 .divider { width: 48px; height: 1px; background: rgba(255,255,255,.08); margin: 36px auto; }
+.dl-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: rgba(1,107,79,.06);
+  border: 1px solid rgba(1,107,79,.2);
+  border-radius: 16px; padding: 24px 28px;
+}
+.dl-text { flex: 1; }
+.dl-title { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.dl-sub { font-size: 12px; color: rgba(255,255,255,.5); line-height: 1.6; }
+@media (max-width: 600px) { .dl-box { flex-direction: column; align-items: flex-start; } }
 .footer-text { font-size: 11px; color: rgba(255,255,255,.18); line-height: 1.7; text-align: center; }
 .footer-text a { color: rgba(255,255,255,.3); text-decoration: none; }
 .footer-text a:hover { color: rgba(255,255,255,.6); }
@@ -244,6 +254,19 @@ h1 span { color: #016B4F; }
       </div>
     </div>
 
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="dl-box">
+    <div class="dl-text">
+      <div class="dl-title">Preisliste als PDF</div>
+      <div class="dl-sub">Alle Pakete, Leistungen und Konditionen in einem Dokument – zum Speichern und Weitergeben.</div>
+    </div>
+    <a href="averio-preisliste-2025.pdf" class="card-cta" download="averio-preisliste-2025.pdf">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M6 11l6 6 6-6"/><path d="M4 21h16"/></svg>
+      PDF herunterladen
+    </a>
   </div>
 
   <div class="divider"></div>
