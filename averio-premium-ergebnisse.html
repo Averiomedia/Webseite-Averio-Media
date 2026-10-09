@@ -528,6 +528,115 @@ html[data-theme="light"] .erg-cta-sub               { color: #495057 !important;
 /* Footer */
 html[data-theme="light"] .erg-footer                { color: #ADB5BD !important; border-top-color: #E9ECEF !important; }
 html[data-theme="light"] .erg-footer a              { color: #868E96 !important; }
+
+/* ── Hero subtitle + CTA ── */
+.erg-hero-sub {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.6;
+  color: rgba(255,255,255,.5); max-width: 620px;
+  margin: 0 auto 2.25rem;
+}
+.erg-hero-cta { display: flex; justify-content: center; }
+html[data-theme="light"] .erg-hero-sub { color: #495057 !important; }
+
+/* ── Filter ── */
+.cs-filter {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px; margin: 0 0 2.75rem;
+}
+.cs-filter-btn {
+  font-family: 'Figtree', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .01em;
+  color: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 100px; padding: 9px 20px;
+  cursor: pointer; transition: all .25s ease;
+}
+.cs-filter-btn:hover { color: #fff; border-color: rgba(1,107,79,.4); }
+.cs-filter-btn.active {
+  color: #fff; background: rgba(1,107,79,.14);
+  border-color: rgba(1,107,79,.5);
+}
+html[data-theme="light"] .cs-filter-btn { color: #495057; background: #F0F1F3; border-color: #DEE2E6; }
+html[data-theme="light"] .cs-filter-btn.active { color: #016B4F; background: rgba(1,107,79,.1); border-color: rgba(1,107,79,.4); }
+
+/* ── Card grid ── */
+.cs-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 720px) { .cs-grid { grid-template-columns: 1fr; } }
+
+.cs-card {
+  position: relative; display: flex; flex-direction: column;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 18px; overflow: hidden;
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+.cs-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(1,107,79,.35);
+  box-shadow: 0 20px 50px -20px rgba(1,107,79,.25);
+}
+.cs-card-link {
+  position: absolute; inset: 0; z-index: 5;
+}
+.cs-card-visual {
+  position: relative; height: 165px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg,#0f2a20,#0a1512);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.lavue-visual { background: linear-gradient(135deg,#2a1a2e,#150a18); }
+.cs-card-metric {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  text-align: center;
+}
+.cs-card-metric-num {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2.4rem; font-weight: 800; color: #fff;
+  letter-spacing: -.03em; line-height: 1;
+}
+.cs-card-metric-key {
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+}
+.cs-card-body {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 1.5rem 1.5rem 1.6rem; flex: 1;
+}
+.cs-card-tags { display: flex; gap: 7px; flex-wrap: wrap; }
+.cs-card-tags .case-tag { font-size: 10px; padding: 3px 10px; }
+.cs-card-title {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.3rem; font-weight: 700; color: #fff;
+  letter-spacing: -.02em; line-height: 1.15; margin: 0;
+}
+.cs-card-teaser {
+  font-size: .9rem; line-height: 1.55;
+  color: rgba(255,255,255,.45); margin: 0; flex: 1;
+}
+.cs-card-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: #016B4F;
+  margin-top: 4px;
+}
+.cs-card:hover .cs-card-cta svg { transform: translateX(3px); }
+.cs-card-cta svg { transition: transform .25s ease; }
+
+/* Light theme cards */
+html[data-theme="light"] .cs-card { background: #fff; border-color: #E9ECEF; }
+html[data-theme="light"] .cs-card-title { color: #0D1117; }
+html[data-theme="light"] .cs-card-teaser { color: #495057; }
+html[data-theme="light"] .cs-card-metric-key { color: #868E96; }
+
+.cs-empty {
+  text-align: center; color: rgba(255,255,255,.4);
+  font-size: .95rem; margin: 2rem 0;
+}
+html[data-theme="light"] .cs-empty { color: #868E96 !important; }
 </style>
 <script type="application/ld+json">
 {
@@ -669,12 +778,18 @@ html[data-theme="light"] .erg-footer a              { color: #868E96 !important;
 <section class="erg-hero">
   <div class="erg-eyebrow">
     <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#016B4F"/></svg>
-    Echte Kundenprojekte · Direkt aus der Praxis
+    Case Studies · Echte Ergebnisse aus der Praxis
   </div>
   <h1 class="erg-h1 reveal">
-    Was passiert, wenn Google Ads<br>
-    <span class="accent">wirklich funktioniert.</span>
+    Erfolgsstories<br>
+    <span class="accent">unserer Kunden.</span>
   </h1>
+  <p class="erg-hero-sub reveal reveal-d1">
+    Von leeren Terminen zu zweistelligen Neubuchungen, von teuren Klicks zu planbaren Anfragen: Diese Case Studies zeigen, wie Google Ads für B2B-Dienstleister und Handwerk wirklich funktioniert.
+  </p>
+  <div class="erg-hero-cta reveal reveal-d2">
+    <a href="averio-premium-kontakt.html" class="btn btn-primary btn-arrow magnetic">Profitiere auch du</a>
+  </div>
 </section>
 
 <!-- ════ STATS STRIP ════════════════════════════════════ -->
@@ -701,289 +816,102 @@ html[data-theme="light"] .erg-footer a              { color: #868E96 !important;
 <div class="erg-section-wrap">
 <div class="erg-section">
 
-  <!-- ══ ECHTE KUNDENPROJEKTE ══════════════════════════════ -->
   <div class="erg-section-label">Echte Kundenprojekte</div>
 
-  <!-- ── FEATURED CASE 1: La vue Beauty Bern ── -->
-  <div class="case-featured reveal" style="position:relative">
-    <a href="averio-premium-case-lavue.html" class="case-link-overlay"></a>
-    <div class="case-featured-visual lavue-visual">
-      <div class="case-metric-float float-1">
-        <div class="case-metric-float-num">25+</div>
-        <div class="case-metric-float-label">Conversions / Monat</div>
-      </div>
-      <div class="case-metric-float float-2">
-        <div class="case-metric-float-num">0–5</div>
-        <div class="case-metric-float-label">vorher</div>
-      </div>
-      <div class="case-metric-float float-3">
-        <div class="case-metric-float-num">2. Monat</div>
-        <div class="case-metric-float-label">Ergebnis sichtbar</div>
-      </div>
-      <div class="case-visual-icon">
-        <div class="lavue-logo-wrap">
-          <img src="Bilder/Screenshot 2026-05-20 135711.jpg" alt="La vue Beauty Logo" class="lavue-logo">
-        </div>
-      </div>
-    </div>
-    <div class="case-featured-content">
-      <div class="case-tags">
-        <span class="case-tag accent">Kosmetikstudio</span>
-        <span class="case-tag">Google Ads Search</span>
-        <span class="case-tag">500 € Budget / Mo.</span>
-        <span class="case-tag">Bern, Schweiz</span>
-      </div>
-      <h2 class="case-headline">La vue Beauty: Von 0–5 Conversions zu zweistelligen Ergebnissen. Bereits ab dem 2. Monat.</h2>
-      <p class="case-challenge">
-        Das Studio hatte eine selbst erstellte Kampagne am Laufen. Inklusive Performance Max, der nur Budget verbrannte. Trotz 500 € monatlichem Einsatz blieben die Ergebnisse bei 0 bis 5 Conversions. Alle automatischen Google-Empfehlungen waren umgesetzt, aber ohne strategische Basis. Nach vollständiger Überarbeitung der Kampagnenarchitektur, sauberem Keyword- und Conversion-Tracking-Setup sowie optimierten Anzeigentexten änderte sich das Bild grundlegend.
-      </p>
-      <div class="case-metrics-row">
-        <div class="case-metric-pill">
-          <div class="case-metric-pill-val">25+</div>
-          <div class="case-metric-pill-key">Conversions / Mo.</div>
-        </div>
-        <div class="case-metric-pill">
-          <div class="case-metric-pill-val">0–5</div>
-          <div class="case-metric-pill-key">Conversions vorher</div>
-        </div>
-        <div class="case-metric-pill" style="min-width:110px">
-          <div class="case-metric-pill-val" style="font-size:1rem;white-space:nowrap">2. Monat</div>
-          <div class="case-metric-pill-key">Erstes Ergebnis</div>
-        </div>
-        <div class="case-metric-pill">
-          <div class="case-metric-pill-val">&#8679;</div>
-          <div class="case-metric-pill-key">Budget skaliert</div>
-        </div>
-      </div>
-      <div class="case-anon" style="color:rgba(255,255,255,.35)">
-        <svg width="12" height="12" fill="none" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Echte Fallstudie · La vue Beauty, Bern · Kosmetikstudio
-      </div>
-      <a href="averio-premium-case-lavue.html" class="case-cta-arrow">
-        Zur Fallstudie
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
+  <!-- ── FILTER ── -->
+  <div class="cs-filter reveal" id="csFilter">
+    <button class="cs-filter-btn active" data-branch="alle">Alle</button>
+    <button class="cs-filter-btn" data-branch="beauty">Kosmetik &amp; Beauty</button>
+    <button class="cs-filter-btn" data-branch="handwerk">Handwerk</button>
+    <button class="cs-filter-btn" data-branch="b2b">Ingenieur &amp; B2B</button>
   </div>
 
-  <!-- ── WIDE CASE: Fliesenwerk Odelzhausen ── -->
-  <div class="case-wide reveal" style="position:relative">
-    <a href="averio-premium-case-fliesenwerk.html" class="case-link-overlay"></a>
-    <div class="case-wide-accent" style="position:relative;overflow:hidden;padding:0;border-right:1px solid rgba(255,255,255,.06)">
-      <!-- Logo-Bild als Hintergrund -->
-      <img src="Bilder/Fliesenwerk.jpg" alt="Fliesenwerk Odelzhausen"
-        style="position:absolute;top: 0; left: 0; right: 0; bottom: 0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.35) saturate(.6);">
-      <!-- Gradient-Overlay für Lesbarkeit -->
-      <div style="position:absolute;top: 0; left: 0; right: 0; bottom: 0;background:linear-gradient(135deg,rgba(1,107,79,.18) 0%,rgba(8,8,8,.6) 100%);"></div>
-      <!-- Kennzahl oben drauf -->
-      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:160px;padding:2rem;gap:6px;text-align:center;">
-        <div class="case-wide-accent-num" style="text-shadow:0 2px 20px rgba(0,0,0,.8)">&lt; 4 Wo.</div>
-        <div class="case-wide-accent-label" style="text-shadow:0 1px 8px rgba(0,0,0,.9)">bis erste<br>qualifizierte Anfragen</div>
-      </div>
-    </div>
-    <div class="case-wide-content">
-      <div class="case-tags" style="margin-bottom:1rem">
-        <span class="case-tag accent" style="font-size:10px">Fliesenleger / Handwerk</span>
-        <span class="case-tag" style="font-size:10px">Google Ads Search + Remarketing</span>
-        <span class="case-tag" style="font-size:10px">Odelzhausen, Bayern</span>
-      </div>
-      <h3 class="case-wide-headline">Fliesenwerk Odelzhausen: Von Empfehlungen zu planbarem Wachstum. Neue Aufträge und ein neuer Mitarbeiter.</h3>
-      <a href="averio-premium-case-fliesenwerk.html" class="case-cta-arrow" style="margin-top:1rem;margin-bottom:.5rem">
-        Zur Fallstudie
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p class="case-wide-sub">Das Unternehmen wuchs bisher über Mundpropaganda. Solide, aber nicht skalierbar. Mit einer regional ausgerichteten Google Ads Kampagne (Badsanierung, Neubau, Renovierung) plus Remarketing wurden innerhalb von Wochen qualifizierte Anfragen generiert. Nach drei Monaten: mehrere neue Aufträge, Teamaufbau, stabiler Neukundenzufluss.</p>
-    </div>
-    <div class="case-wide-metrics">
-      <div class="case-wide-metric">
-        <div class="case-wide-metric-val">3 Mo.</div>
-        <div class="case-wide-metric-key">bis neue Aufträge</div>
-      </div>
-      <div class="case-wide-metric">
-        <div class="case-wide-metric-val">+1</div>
-        <div class="case-wide-metric-key">Neuer Mitarbeiter</div>
-      </div>
-    </div>
-  </div>
+  <!-- ── CARD GRID ── -->
+  <div class="cs-grid" id="csGrid">
 
-  <!-- ── GRID: Kosmetikkultur + Alpha Engineering ── -->
-  <div class="erg-grid" style="margin-top:20px">
-
-    <!-- Kosmetikkultur Weißenburg -->
-    <div class="case-card reveal" style="position:relative">
-      <a href="averio-premium-case-kosmetikkultur.html" class="case-link-overlay"></a>
-      <div class="case-card-header">
-        <div class="case-card-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26C17.81 13.47 19 11.38 19 9c0-3.87-3.13-7-7-7z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 21h6" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="case-card-tags">
-          <span class="case-tag accent" style="font-size:10px">Kosmetikstudio</span>
-          <span class="case-tag" style="font-size:10px">Weißenburg · Lokal</span>
-        </div>
+    <!-- La vue Beauty -->
+    <article class="cs-card reveal" data-branch="beauty">
+      <a href="averio-premium-case-lavue.html" class="cs-card-link" aria-label="Case Study La vue Beauty"></a>
+      <div class="cs-card-visual lavue-visual">
+        <div class="cs-card-metric"><span class="cs-card-metric-num">25+</span><span class="cs-card-metric-key">Conversions / Monat</span></div>
       </div>
-      <div class="case-card-body">
-        <h3 class="case-card-headline">Kosmetikkultur Weißenburg: Leere Termine zu zweistelligen Neubuchungen. Ab dem ersten Monat.</h3>
-        <p class="case-card-sub">
-          Neu eröffnetes Studio, bisher nur organische Reichweite. Lokale Suchkampagne auf Buchungsintent (z.&nbsp;B. „Wimpernverlängerung Weißenburg") plus Remarketing. Schon im ersten Monat zweistellige Buchungsanfragen von Neukundinnen.
-        </p>
-        <div class="case-card-metrics">
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">10+</div>
-            <div class="case-card-metric-key">Neubuchungen Mo. 1</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">Lokal</div>
-            <div class="case-card-metric-key">Ausrichtung</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#8679;</div>
-            <div class="case-card-metric-key">Auslastung</div>
-          </div>
+      <div class="cs-card-body">
+        <div class="cs-card-tags">
+          <span class="case-tag accent">Kosmetikstudio</span>
+          <span class="case-tag">Google Ads Search</span>
         </div>
-        <div class="case-anon" style="margin-top:1rem;color:rgba(255,255,255,.3);font-size:11px;display:flex;align-items:center;gap:6px">
-          <svg width="11" height="11" fill="none" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Echte Fallstudie · Kosmetikkultur, Weißenburg
-        </div>
-        <a href="averio-premium-case-kosmetikkultur.html" class="case-cta-arrow">
-          Zur Fallstudie
+        <h3 class="cs-card-title">La vue Beauty</h3>
+        <p class="cs-card-teaser">Von 0–5 Conversions zu zweistelligen Ergebnissen – bereits ab dem 2. Monat. Mit 500 € Monatsbudget in Bern.</p>
+        <span class="cs-card-cta">Case Study ansehen
           <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        </span>
       </div>
-    </div>
+    </article>
 
-    <!-- Alpha Engineering Düsseldorf -->
-    <div class="case-card reveal reveal-d1" style="position:relative">
-      <a href="averio-premium-case-alphaengineering.html" class="case-link-overlay"></a>
-      <div class="case-card-header">
-        <div class="case-card-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#016B4F" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#016B4F" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="case-card-tags">
-          <span class="case-tag accent" style="font-size:10px">Ingenieurbüro</span>
-          <span class="case-tag" style="font-size:10px">Düsseldorf · B2B</span>
-        </div>
+    <!-- Kosmetikkultur -->
+    <article class="cs-card reveal reveal-d1" data-branch="beauty">
+      <a href="averio-premium-case-kosmetikkultur.html" class="cs-card-link" aria-label="Case Study Kosmetikkultur"></a>
+      <div class="cs-card-visual" style="background:linear-gradient(135deg,#12352a,#0a1f18)">
+        <div class="cs-card-metric"><span class="cs-card-metric-num">10+</span><span class="cs-card-metric-key">Neubuchungen Monat 1</span></div>
       </div>
-      <div class="case-card-body">
-        <h3 class="case-card-headline">Ingenieurbüro Düsseldorf: &#8722;40% Kosten pro Lead. Nur noch Anfragen mit echter Kaufabsicht.</h3>
-        <p class="case-card-sub">
-          Inhaber verwaltete Ads selbst: hohe Kosten, schlechte Leadqualität. Nach vollständiger Überarbeitung und konsequentem Ausschluss irrelevanter Keywords fließt das Budget nur noch dorthin, wo echte Interessenten suchen.
-        </p>
-        <div class="case-card-metrics">
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#8722;40%</div>
-            <div class="case-card-metric-key">Kosten / Lead</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">0</div>
-            <div class="case-card-metric-key">Budget-Verlust</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#8679;</div>
-            <div class="case-card-metric-key">Lead-Qualität</div>
-          </div>
+      <div class="cs-card-body">
+        <div class="cs-card-tags">
+          <span class="case-tag accent">Kosmetikstudio</span>
+          <span class="case-tag">Lokale Kampagne</span>
         </div>
-        <div class="case-anon" style="margin-top:1rem;color:rgba(255,255,255,.3);font-size:11px;display:flex;align-items:center;gap:6px">
-          <svg width="11" height="11" fill="none" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Echte Fallstudie · Ingenierb&#252;ro, D&#252;sseldorf
-        </div>
-        <a href="averio-premium-case-alphaengineering.html" class="case-cta-arrow">
-          Zur Fallstudie
+        <h3 class="cs-card-title">Kosmetikkultur Weißenburg</h3>
+        <p class="cs-card-teaser">Leere Termine zu zweistelligen Neubuchungen. Lokale Suchkampagne auf Buchungsintent – ab dem ersten Monat.</p>
+        <span class="cs-card-cta">Case Study ansehen
           <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        </span>
       </div>
-    </div>
+    </article>
 
-  </div><!-- /erg-grid real 2 -->
-
-  <!-- ══ WEITERE BEISPIELE ══════════════════════════════════ -->
-
-  <!-- ── GRID: Beispiel Cases ── -->
-  <div class="erg-grid">
-
-    <!-- IT-Dienstleister -->
-    <div class="case-card reveal">
-      <div class="case-card-header">
-        <div class="case-card-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#016B4F" stroke-width="1.5"/>
-            <path d="M8 21h8M12 17v4" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="case-card-tags">
-          <span class="case-tag accent" style="font-size:10px">IT & Software</span>
-          <span class="case-tag" style="font-size:10px">B2B · 1.500 €/Mo.</span>
-        </div>
+    <!-- Fliesenwerk -->
+    <article class="cs-card reveal reveal-d2" data-branch="handwerk">
+      <a href="averio-premium-case-fliesenwerk.html" class="cs-card-link" aria-label="Case Study Fliesenwerk"></a>
+      <div class="cs-card-visual" style="background:linear-gradient(135deg,#1a2e1e,#0c1610)">
+        <div class="cs-card-metric"><span class="cs-card-metric-num">&lt; 4 Wo.</span><span class="cs-card-metric-key">bis ersten Anfragen</span></div>
       </div>
-      <div class="case-card-body">
-        <h3 class="case-card-headline">Von teuren Klicks ohne Wirkung zu 3 qualifizierten Leads pro Woche.</h3>
-        <p class="case-card-sub">
-          Hohe CPCs für Keywords, die kaum konvertierten. Durch präzise Keyword-Segmentierung und überarbeitete Anzeigentexte stiegen Qualität und Menge der Anfragen deutlich.
-        </p>
-        <div class="case-card-metrics">
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">7,1x</div>
-            <div class="case-card-metric-key">ROAS</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#8722;42%</div>
-            <div class="case-card-metric-key">CPC</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">3/Wo.</div>
-            <div class="case-card-metric-key">Leads</div>
-          </div>
+      <div class="cs-card-body">
+        <div class="cs-card-tags">
+          <span class="case-tag accent">Fliesenleger</span>
+          <span class="case-tag">Search + Remarketing</span>
         </div>
+        <h3 class="cs-card-title">Fliesenwerk Odelzhausen</h3>
+        <p class="cs-card-teaser">Von Empfehlungen zu planbarem Wachstum. Neue Aufträge und ein neuer Mitarbeiter – bei regionalem Fokus.</p>
+        <span class="cs-card-cta">Case Study ansehen
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </div>
-    </div>
+    </article>
 
-    <!-- Unternehmensberatung -->
-    <div class="case-card reveal reveal-d1">
-      <div class="case-card-header">
-        <div class="case-card-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="9" cy="7" r="4" stroke="#016B4F" stroke-width="1.5"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="case-card-tags">
-          <span class="case-tag accent" style="font-size:10px">Consulting</span>
-          <span class="case-tag" style="font-size:10px">B2B · 1.200 €/Mo.</span>
-        </div>
+    <!-- Alpha Engineering -->
+    <article class="cs-card reveal reveal-d3" data-branch="b2b">
+      <a href="averio-premium-case-alphaengineering.html" class="cs-card-link" aria-label="Case Study Alpha Engineering"></a>
+      <div class="cs-card-visual" style="background:linear-gradient(135deg,#14283a,#0a1520)">
+        <div class="cs-card-metric"><span class="cs-card-metric-num">&#8722;40%</span><span class="cs-card-metric-key">Kosten pro Lead</span></div>
       </div>
-      <div class="case-card-body">
-        <h3 class="case-card-headline">Neukundengewinnung über Google Ads. Trotz langem Sales Cycle.</h3>
-        <p class="case-card-sub">
-          Kampagnenaufbau von Grund auf mit klarer Zielgruppenlogik für lange B2B-Entscheidungsprozesse. Leads verdreifacht, CPA halbiert.
-        </p>
-        <div class="case-card-metrics">
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#8722;51%</div>
-            <div class="case-card-metric-key">CPA</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">&#215;3</div>
-            <div class="case-card-metric-key">Leads</div>
-          </div>
-          <div class="case-card-metric">
-            <div class="case-card-metric-val">+89%</div>
-            <div class="case-card-metric-key">CTR</div>
-          </div>
+      <div class="cs-card-body">
+        <div class="cs-card-tags">
+          <span class="case-tag accent">Ingenieurb&uuml;ro</span>
+          <span class="case-tag">B2B · D&uuml;sseldorf</span>
         </div>
+        <h3 class="cs-card-title">Alpha Engineering</h3>
+        <p class="cs-card-teaser">Nur noch Anfragen mit echter Kaufabsicht. Konsequenter Keyword-Ausschluss senkte die Lead-Kosten um 40 %.</p>
+        <span class="cs-card-cta">Case Study ansehen
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#016B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </div>
-    </div>
+    </article>
 
-  </div><!-- /erg-grid -->
+  </div><!-- /cs-grid -->
 
+  <p class="cs-empty" id="csEmpty" style="display:none">Für diese Branche gibt es gerade noch keine Case Study – schau dir alle an.</p>
 
 </div><!-- /erg-section -->
 </div><!-- /erg-section-wrap -->
+
 
 <!-- ════ CTA ══════════════════════════════════════════════ -->
 <section class="erg-cta">
@@ -1064,6 +992,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script>
+/* Case study branch filter */
+(function() {
+  var filter = document.getElementById('csFilter');
+  var grid = document.getElementById('csGrid');
+  var empty = document.getElementById('csEmpty');
+  if (!filter || !grid) return;
+  var btns = filter.querySelectorAll('.cs-filter-btn');
+  var cards = grid.querySelectorAll('.cs-card');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var branch = btn.getAttribute('data-branch');
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var visible = 0;
+      cards.forEach(function(card) {
+        var match = branch === 'alle' || card.getAttribute('data-branch') === branch;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      if (empty) empty.style.display = visible === 0 ? '' : 'none';
+    });
+  });
+})();
+</script>
 <script>
 (function() {
   var html = document.documentElement;
