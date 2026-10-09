@@ -152,6 +152,19 @@
 
 <!-- V1-specific overrides -->
 <style>
+/* ── Google-Logo im Header ── */
+.nav-google{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;margin-left:auto;margin-right:12px;
+  border-radius:10px;border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  transition:background .25s,border-color .25s,transform .25s;flex-shrink:0;
+}
+.nav-google:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);transform:translateY(-1px);}
+html[data-theme="light"] .nav-google{border-color:#DEE2E6;background:#F8F9FA;}
+html[data-theme="light"] .nav-google:hover{background:#F1F3F5;border-color:#CED4DA;}
+@media(max-width:900px){.nav-google{display:none;}}
+
 /* ══════════════════════════════════════════════════
    BANNER AUFGEFÄCHERT + VERBINDUNGSLINIEN
 ══════════════════════════════════════════════════ */
@@ -743,6 +756,16 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
     <li><a href="averio-premium-kontakt.html">Kontakt</a></li>
   </ul>
 
+  <!-- Google-Logo (kleines Trust-Signal im Header) -->
+  <a href="https://www.google.com/partners/" target="_blank" rel="noopener" class="nav-google" aria-label="Google">
+    <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true">
+      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+    </svg>
+  </a>
+
   <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -810,7 +833,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
       </h1>
 
       <p class="v1-sub">
-        Hallo! Ich bin Marie B&#246;ttiger von Averio Media. Ich helfe Dienstleistern, planbar und messbar neue Kunden zu gewinnen &#8211; mit Google Ads, GEO &amp; Landingpages, die wirklich konvertieren. Das willst du auch?
+        Hallo! Ich bin Marie von Averio Media. Ich helfe Dienstleistern, planbar und messbar neue Kunden zu gewinnen &#8211; mit Google Ads, GEO &amp; Landingpages, die wirklich konvertieren. Das willst du auch?
       </p>
 
       <!-- Google-Bewertung Badge -->
@@ -863,7 +886,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
           <div class="hero-photo-badge">
             <span class="hpb-dot" aria-hidden="true"></span>
             <div>
-              <b>Marie Böttiger</b>
+              <b>Marie</b>
               <small>Google Ads Freelancerin</small>
             </div>
           </div>
@@ -876,12 +899,12 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
             <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="hfc-label">Kampagnen-Performance</div>
-        <div class="hfc-name">Ingenieurbüro Frankfurt, Düsseldorf</div>
+        <div class="hfc-label">Ingenieurb&uuml;ro</div>
+        <div class="hfc-name">Mehr als 25 Anfragen pro Monat</div>
         <div class="hfc-desc">Google Search · Lead-Kampagne</div>
         <div class="hfc-metric">
-          <span class="hfc-metric-val">+214</span>
-          <span class="hfc-trend">% mehr Anfragen</span>
+          <span class="hfc-metric-val">25+</span>
+          <span class="hfc-trend">Anfragen / Monat</span>
         </div>
       </div>
 
@@ -892,12 +915,12 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
             <polyline points="16 7 22 7 22 13" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="hfc-label">Kosten pro Anfrage</div>
-        <div class="hfc-name">Immobilienmakler München</div>
-        <div class="hfc-desc">Google Search · Lokal</div>
+        <div class="hfc-label">Immobilienmakler Raum N&uuml;rnberg</div>
+        <div class="hfc-name">Sichtbar vor der Konkurrenz</div>
+        <div class="hfc-desc">In den Google-Anfragen ganz vorn</div>
         <div class="hfc-metric">
-          <span class="hfc-metric-val" style="color:#A8D8F0">–61</span>
-          <span class="hfc-metric-unit">% günstiger als vorher</span>
+          <span class="hfc-metric-val" style="color:#A8D8F0">#1</span>
+          <span class="hfc-metric-unit">bei lokalen Anfragen</span>
         </div>
       </div>
 
@@ -907,12 +930,12 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="hfc-label">Kampagnencheck abgeschlossen</div>
-        <div class="hfc-name">Sachverständigenbüro</div>
-        <div class="hfc-desc">9 Optimierungspunkte gefunden</div>
+        <div class="hfc-label">Sachverst&auml;ndigenb&uuml;ro</div>
+        <div class="hfc-name">&Uuml;ber 15 Anfragen pro Monat</div>
+        <div class="hfc-desc">schon ab 30 &euro; Ads-Budget</div>
         <div class="hfc-metric">
-          <span class="hfc-metric-val">–38</span>
-          <span class="hfc-trend">% Kosten pro Klick</span>
+          <span class="hfc-metric-val">15+</span>
+          <span class="hfc-trend">Anfragen / Monat</span>
         </div>
       </div>
     </div>
@@ -1425,6 +1448,44 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
     <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
+
+<!-- ── WhatsApp-Chat-Widget (unten links) ── -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-bubble" id="waBubble">
+    <button class="wa-close" id="waClose" aria-label="Schlie&szlig;en">&times;</button>
+    <div class="wa-avatar">M</div>
+    <div class="wa-text">
+      <b>Hallo, haben Sie Fragen?</b><br>
+      Schreiben Sie uns bitte hier.
+    </div>
+  </div>
+  <a class="wa-fab" id="waFab" href="https://wa.me/4917490442007?text=Hallo%20Marie%2C%20ich%20habe%20eine%20Frage" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35z"/><path d="M12.04 2C6.56 2 2.1 6.45 2.1 11.93c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.86 9.86 0 004.79 1.22h.01c5.48 0 9.94-4.45 9.94-9.93S17.52 2 12.04 2zm0 18.13h-.01a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 012.41 5.82c0 4.54-3.7 8.22-8.25 8.22z"/></svg>
+  </a>
+</div>
+
+<style>
+.wa-widget{position:fixed;left:22px;bottom:22px;z-index:9500;display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
+.wa-bubble{position:relative;display:flex;align-items:center;gap:12px;background:#fff;color:#111;border-radius:16px;padding:14px 40px 14px 14px;max-width:290px;box-shadow:0 12px 40px rgba(0,0,0,.28);transform-origin:bottom left;animation:waPop .4s cubic-bezier(.34,1.4,.64,1) both;}
+.wa-bubble.wa-hide{display:none;}
+@keyframes waPop{from{opacity:0;transform:scale(.7) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.wa-close{position:absolute;top:6px;right:8px;width:22px;height:22px;border:none;border-radius:50%;background:#e9ecef;color:#495057;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.wa-close:hover{background:#dee2e6;}
+.wa-avatar{width:42px;height:42px;flex-shrink:0;border-radius:50%;background:linear-gradient(135deg,#016B4F,#0FA96D);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;}
+.wa-text{font-size:14px;line-height:1.45;}
+.wa-text b{font-weight:700;}
+.wa-fab{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 26px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s;text-decoration:none;}
+.wa-fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 34px rgba(37,211,102,.6);}
+@media(max-width:600px){.wa-widget{left:14px;bottom:14px;}.wa-bubble{max-width:230px;font-size:13px;}.wa-fab{width:50px;height:50px;}}
+</style>
+
+<script>
+(function(){
+  var bubble=document.getElementById('waBubble');
+  var close=document.getElementById('waClose');
+  if(close&&bubble){close.addEventListener('click',function(e){e.preventDefault();bubble.classList.add('wa-hide');});}
+})();
+</script>
 
 <!-- ── Cookie Banner HTML ── -->
 <div id="cb-overlay" aria-hidden="true"></div>
