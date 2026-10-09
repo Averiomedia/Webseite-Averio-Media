@@ -1451,7 +1451,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
 
 <!-- ── WhatsApp-Chat-Widget (unten links) ── -->
 <div class="wa-widget" id="waWidget">
-  <div class="wa-bubble" id="waBubble">
+  <div class="wa-bubble wa-hide" id="waBubble">
     <button class="wa-close" id="waClose" aria-label="Schlie&szlig;en">&times;</button>
     <div class="wa-avatar">M</div>
     <div class="wa-text">
@@ -1476,14 +1476,33 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
 .wa-text b{font-weight:700;}
 .wa-fab{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 26px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s;text-decoration:none;}
 .wa-fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 34px rgba(37,211,102,.6);}
+/* Chat-Button startet ohne Sprechblase (kein Overlap im Hero) */
+.wa-widget:not(.wa-revealed) .wa-bubble{display:none;}
 @media(max-width:600px){.wa-widget{left:14px;bottom:14px;}.wa-bubble{max-width:230px;font-size:13px;}.wa-fab{width:50px;height:50px;}}
 </style>
 
 <script>
 (function(){
+  var widget=document.getElementById('waWidget');
   var bubble=document.getElementById('waBubble');
   var close=document.getElementById('waClose');
-  if(close&&bubble){close.addEventListener('click',function(e){e.preventDefault();bubble.classList.add('wa-hide');});}
+  if(!widget||!bubble) return;
+  var dismissed=false;
+  try{ dismissed=sessionStorage.getItem('waDismissed')==='1'; }catch(e){}
+  function onScroll(){
+    if(dismissed) return;
+    if(window.scrollY > window.innerHeight*0.9){
+      widget.classList.add('wa-revealed');
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  if(close){close.addEventListener('click',function(e){
+    e.preventDefault();
+    widget.classList.remove('wa-revealed');
+    dismissed=true;
+    try{ sessionStorage.setItem('waDismissed','1'); }catch(err){}
+  });}
 })();
 </script>
 
