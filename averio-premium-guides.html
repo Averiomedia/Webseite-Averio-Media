@@ -1338,8 +1338,11 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 <script>
-// ── Brevo-Formular für E-Mail-Verifizierung (DOI, kein API-Key nötig)
+// ── Brevo-Formulare für E-Mail-Verifizierung (DOI, kein API-Key nötig) ──
+//    Newsletter-Gate → bestehendes Newsletter-Formular (Liste „Averio Media Newsletter")
 const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+//    Guide-Download → eigenes Formular (Liste „Downloads")
+const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
 
 // ── nForms für Marie's Benachrichtigungen
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
@@ -1425,14 +1428,14 @@ async function submitGate() {
     } catch(e) {}
   }
 
-  // Immer via Brevo DOI senden. Für alle (Newsletter oder nicht).
+  // Immer via Brevo DOI senden. Guide und Newsletter nutzen eigene Formulare.
   // Der Bestätigungslink in der E-Mail öffnet erst dann den Guide.
   try {
     const fd = new FormData();
     fd.append('EMAIL', email);
     fd.append('email_address_check', '');
     fd.append('locale', 'de');
-    fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+    fetch(isNewsletter ? BREVO_FORM_URL : BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI Fehler:', e); }
 
   // Newsletter – nur bei ausdrücklichem Häkchen in die Brevo-Liste
