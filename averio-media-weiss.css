@@ -239,10 +239,12 @@ body::before {
   background: var(--o);
   color: #fff;
   border: none;
-  padding: 10px 22px;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 700;
+  padding: 15px 26px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
   cursor: auto;
   font-family: var(--fb);
   transition: all .25s;
@@ -250,6 +252,13 @@ body::before {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(1,107,79,.5);
+  animation: navCtaPulse 2.2s ease-out infinite;
+}
+@keyframes navCtaPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(1,107,79,.5); }
+  70%  { box-shadow: 0 0 0 16px rgba(1,107,79,0); }
+  100% { box-shadow: 0 0 0 0 rgba(1,107,79,0); }
 }
 .nav-cta::before {
   content: '';
