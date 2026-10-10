@@ -358,6 +358,8 @@ async function submitGuide() {
     fd.append('EMAIL', email);
     fd.append('email_address_check', '');
     fd.append('locale', 'de');
+    // OPT_IN ist bei Brevo eine Pflicht-Checkbox (value=1) – ohne sie 400.
+    fd.append('OPT_IN', '1');
     fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch (e) { console.warn('Brevo:', e); }
 

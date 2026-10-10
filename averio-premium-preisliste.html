@@ -685,9 +685,10 @@ async function submitPreisliste() {
       fd.append('EMAIL', email);
       fd.append('email_address_check', '');
       fd.append('locale', 'de');
-      // Hinweis: In Brevo das Kategorie-Attribut PREISLISTE_THEMA anlegen
-      // (Optionen: Google Ads / GEO-Integration), sonst wird der Wert ignoriert.
-      fd.append('PREISLISTE_THEMA', thema);
+      // OPT_IN ist bei Brevo eine Pflicht-Checkbox (value=1) – ohne sie 400.
+      fd.append('OPT_IN', '1');
+      // PREISLISTE_THEMA ist bei Brevo ein Radio: 1=Google Ads, 2=GEO-Integration.
+      fd.append('PREISLISTE_THEMA', thema === 'GEO-Integration' ? '2' : '1');
       fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
     } catch (e) { console.warn('Brevo:', e); }
   }
