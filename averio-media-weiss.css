@@ -218,7 +218,7 @@ body::before {
   gap: 4px;
   list-style: none;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 22px;
 }
 .nav-links a {
   font-size: 17px;
@@ -243,9 +243,9 @@ body::before {
   background-size: 200% 200%;
   color: #fff;
   border: none;
-  padding: 15px 26px;
-  border-radius: 6px;
-  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -256,7 +256,7 @@ body::before {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0 0 rgba(1,169,109,.6), 0 0 18px rgba(1,169,109,.35);
+  box-shadow: 0 0 0 0 rgba(1,169,109,.6), 0 0 14px rgba(1,169,109,.3);
   animation: navCtaPulse 2.2s ease-out infinite, navCtaShift 4s ease-in-out infinite;
 }
 @keyframes navCtaPulse {
@@ -1464,7 +1464,7 @@ body::before {
   transition: all .25s;
   flex-shrink: 0;
   color: rgba(255,255,255,.65);
-  margin-right: 4px;
+  margin-right: 14px;
 }
 .theme-toggle:hover {
   border-color: rgba(1,107,79,.45);
