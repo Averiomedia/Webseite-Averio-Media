@@ -260,10 +260,10 @@ h1 span { color: #016B4F; }
 
   <div class="dl-box">
     <div class="dl-text">
-      <div class="dl-title">Preisliste als PDF</div>
-      <div class="dl-sub">Alle Pakete, Leistungen und Konditionen in einem Dokument – zum Speichern und Weitergeben.</div>
+      <div class="dl-title" id="dl-title">Preisliste als PDF</div>
+      <div class="dl-sub" id="dl-sub">Alle Pakete, Leistungen und Konditionen in einem Dokument – zum Speichern und Weitergeben.</div>
     </div>
-    <a href="averio-preisliste-2025.pdf" class="card-cta" download="averio-preisliste-2025.pdf">
+    <a href="averio-preisliste-ads.pdf" class="card-cta" id="dl-pdf" download="averio-preisliste-ads.pdf">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M6 11l6 6 6-6"/><path d="M4 21h16"/></svg>
       PDF herunterladen
     </a>
@@ -293,6 +293,18 @@ h1 span { color: #016B4F; }
       sub.textContent = 'Hallo ' + name + ', hier sind alle Pakete und Konditionen. Transparent, ohne Verkaufsdruck.';
     } else if (themaText) {
       sub.textContent = 'Hier ist die Preisliste ' + themaText + ' – alle Pakete und Konditionen im Überblick. Transparent, ohne Verkaufsdruck.';
+    }
+    // Passende PDF je nach gewähltem Thema ausspielen (default: Google Ads)
+    const pdfLink = document.getElementById('dl-pdf');
+    const pdfTitle = document.getElementById('dl-title');
+    if (pdfLink && thema === 'GEO-Integration') {
+      pdfLink.href = 'averio-preisliste-geo.pdf';
+      pdfLink.setAttribute('download', 'averio-preisliste-geo.pdf');
+      if (pdfTitle) pdfTitle.textContent = 'Preisliste GEO-Integration als PDF';
+    } else if (pdfLink && thema === 'Google Ads') {
+      pdfLink.href = 'averio-preisliste-ads.pdf';
+      pdfLink.setAttribute('download', 'averio-preisliste-ads.pdf');
+      if (pdfTitle) pdfTitle.textContent = 'Preisliste Google Ads als PDF';
     }
   } catch(e) {}
 })();
