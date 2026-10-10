@@ -546,69 +546,8 @@ body::before {
   letter-spacing: .04em;
 }
 
-/* Hero right — floating cards */
+/* Hero right — Portrait-Container */
 .hero-right { position: relative; height: 520px; }
-
-.hero-float-card {
-  position: absolute;
-  background: rgba(15,15,15,.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: 20px;
-  padding: 1.5rem;
-  transition: transform .3s, border-color .3s;
-}
-.hero-float-card:hover { border-color: rgba(1,107,79,.3); }
-.hero-float-card.card-1 { top: 8%; right: 5%; width: 240px; animation: float1 5s ease-in-out infinite; }
-.hero-float-card.card-2 { top: 38%; right: 12%; width: 210px; animation: float2 6s ease-in-out infinite; }
-.hero-float-card.card-3 { bottom: 8%; right: 3%; width: 230px; animation: float1 7s ease-in-out infinite .5s; }
-
-@keyframes float1 { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-12px)} }
-@keyframes float2 { 0%,100%{transform:translateY(-6px)} 50%{transform:translateY(6px)}  }
-
-.hfc-icon {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: rgba(1,107,79,.1);
-  border: 1px solid rgba(1,107,79,.2);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 1rem;
-}
-.hfc-label {
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--o);
-  opacity: .7;
-  margin-bottom: .3rem;
-}
-.hfc-name {
-  font-family: var(--fh);
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: .25rem;
-}
-.hfc-desc { font-size: 12px; color: #666; }
-
-.hero-float-card.card-2 .hfc-icon { background: rgba(168,216,240,.08); border-color: rgba(168,216,240,.15); }
-.hero-float-card.card-2 .hfc-label { color: var(--ice2); }
-
-.hfc-metric {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin-top: .75rem;
-}
-.hfc-metric-val {
-  font-family: var(--fh);
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--o);
-}
-.hfc-metric-unit { font-size: 12px; color: #666; }
-.hfc-trend { font-size: 11px; color: #00cc66; }
 
 /* ── KUNDEN-LOGOS (Adpacker-Stil) ─────────────────────── */
 .clients-section {
@@ -1641,19 +1580,6 @@ html[data-theme="light"] .hero-stats   { border-top-color: #DEE2E6; }
 html[data-theme="light"] .hero-stat-num   { color: #0D1117; }
 html[data-theme="light"] .hero-stat-label { color: #868E96; opacity: 1; }
 
-/* Floating Cards — weiß mit Schatten */
-html[data-theme="light"] .hero-float-card {
-  background: #FFFFFF !important;
-  border-color: #E9ECEF !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,.1), 0 2px 8px rgba(0,0,0,.06) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-html[data-theme="light"] .hero-float-card:hover { border-color: rgba(1,107,79,.25) !important; }
-html[data-theme="light"] .hfc-name        { color: #0D1117 !important; }
-html[data-theme="light"] .hfc-desc        { color: #868E96 !important; }
-html[data-theme="light"] .hfc-metric-unit { color: #868E96 !important; }
-
 /* ── 6. BUTTONS ───────────────────────────────────────── */
 html[data-theme="light"] .btn-ghost {
   border-color: #DEE2E6 !important;
@@ -1823,9 +1749,6 @@ html[data-theme="light"] .ps-label {
   color: var(--ice) !important;
   opacity: 0.85 !important;
 }
-
-/* Hfc-desc war #666 — explizit setzen für Sicherheit */
-html[data-theme="light"] .hfc-desc { color: #868E96 !important; }
 
 /* Sec-body base color auf #666 — explizit sichern */
 html[data-theme="light"] .sec-body { color: #495057 !important; }

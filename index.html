@@ -148,7 +148,7 @@
 <script src="js/lenis.min.js"></script>
 
 <!-- Shared Premium Styles -->
-  <link rel="stylesheet" href="averio-media-weiss.css?v=16">
+  <link rel="stylesheet" href="averio-media-weiss.css?v=17">
 
 <!-- V1-specific overrides -->
 <style>
@@ -171,7 +171,7 @@ html[data-theme="light"] .nav-google:hover{background:#F1F3F5;border-color:#CED4
 
 /* ── Hero auto-scale: immer vollständig sichtbar ── */
 
-/* hero-right: relativ damit die Kacheln darin positionierbar */
+/* hero-right: relativ für Portrait-Positionierung */
 .hero-right {
   position: relative;
   overflow: visible;
@@ -179,39 +179,7 @@ html[data-theme="light"] .nav-google:hover{background:#F1F3F5;border-color:#CED4
   transform-origin: top right;
 }
 
-/* Alle Kacheln vor dem Portrait */
-.hero-float-card {
-  position: absolute !important;
-  z-index: 6;
-}
-
-/* Karte 1. Oben rechts, an der Bildkante */
-.hero-float-card.card-1 {
-  top: 3% !important;
-  right: -12% !important;
-  width: 278px !important;
-  z-index: 6 !important;
-}
-
-/* Karte 2. Mitte-links, vor der Bildkante */
-.hero-float-card.card-2 {
-  top: 30% !important;
-  right: 70% !important;
-  left: auto !important;
-  width: 245px !important;
-  z-index: 6 !important;
-}
-
-/* Karte 3. Unten rechts, an der Bildkante */
-.hero-float-card.card-3 {
-  top: 76% !important;
-  right: -12% !important;
-  width: 264px !important;
-  bottom: auto !important;
-  z-index: 6 !important;
-}
-
-/* ── HERO PORTRAIT: Marie Böttiger (Wow-Layer über den Karten) ── */
+/* ── HERO PORTRAIT: Marie Böttiger (Wow-Layer) ── */
 .hero-right { height: 800px; }
 .hero-photo {
   position: absolute;
@@ -340,7 +308,6 @@ html[data-theme="light"] .hero-photo-badge small { color: #6C757D; }
     height: calc(min(468px, calc(66vw + 1cm)) * 1.5 + 80px);
     margin-top: 2.5rem;
   }
-  .hero-float-card { display: none; }
   .hero-photo-inner { width: min(468px, calc(66vw + 1cm)); }
 }
 
@@ -532,8 +499,6 @@ html[data-theme="light"] .hero-photo-badge small { color: #6C757D; }
 /* ── Grautext +20% heller (page-spezifisch) ── */
 .sec-body { color: #999 !important; }
 .pain-text { color: #aaa !important; }
-.hfc-desc { color: #999 !important; }
-.hfc-metric-unit { color: #999 !important; }
 .cta-sub { color: #999 !important; }
 .cta-note { color: rgba(168,216,240,.45) !important; }
 .faq-a-inner { color: #aaa !important; }
@@ -890,52 +855,6 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
               <small>Google Ads Freelancerin</small>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="hero-float-card card-1">
-        <div class="hfc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="hfc-label">Ingenieurb&uuml;ro</div>
-        <div class="hfc-name">Mehr als 25 Anfragen pro Monat</div>
-        <div class="hfc-desc">Google Search · Lead-Kampagne</div>
-        <div class="hfc-metric">
-          <span class="hfc-metric-val">25+</span>
-          <span class="hfc-trend">Anfragen / Monat</span>
-        </div>
-      </div>
-
-      <div class="hero-float-card card-2">
-        <div class="hfc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <polyline points="16 7 22 7 22 13" stroke="#A8D8F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="hfc-label">Immobilienmakler Raum N&uuml;rnberg</div>
-        <div class="hfc-name">Sichtbar vor der Konkurrenz</div>
-        <div class="hfc-desc">In den Google-Anfragen ganz vorn</div>
-        <div class="hfc-metric">
-          <span class="hfc-metric-val" style="color:#A8D8F0">#1</span>
-          <span class="hfc-metric-unit">bei lokalen Anfragen</span>
-        </div>
-      </div>
-
-      <div class="hero-float-card card-3">
-        <div class="hfc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="hfc-label">Sachverst&auml;ndigenb&uuml;ro</div>
-        <div class="hfc-name">&Uuml;ber 15 Anfragen pro Monat</div>
-        <div class="hfc-desc">schon ab 30 &euro; Ads-Budget</div>
-        <div class="hfc-metric">
-          <span class="hfc-metric-val">15+</span>
-          <span class="hfc-trend">Anfragen / Monat</span>
         </div>
       </div>
     </div>
