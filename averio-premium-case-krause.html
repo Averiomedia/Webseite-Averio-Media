@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>if(localStorage.getItem('avTheme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
+<title>Krause Immobilien Bamberg – Fallstudie | Averio Media</title>
+<meta name="description" content="Wie für Angela Krause zwei maßgeschneiderte Websites entstanden: immobilienbewertung-krause.de und krauseimmo.com. Webentwicklung-Fallstudie von Averio Media.">
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Marie Böttiger – Averio Media">
+<link rel="canonical" href="https://averiomedia.de/fallstudie-krause">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://averiomedia.de/fallstudie-krause">
+<meta property="og:title" content="Krause Immobilien Bamberg – Fallstudie | Averio Media">
+<meta property="og:description" content="Wie für Angela Krause zwei maßgeschneiderte Websites entstanden: immobilienbewertung-krause.de und krauseimmo.com. Webentwicklung-Fallstudie von Averio Media.">
+<meta property="og:image" content="https://averiomedia.de/og-image.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Averio Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Krause Immobilien Bamberg – Fallstudie | Averio Media">
+<meta name="twitter:description" content="Wie für Angela Krause zwei maßgeschneiderte Websites entstanden: immobilienbewertung-krause.de und krauseimmo.com. Webentwicklung-Fallstudie von Averio Media.">
+<meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
+<link rel="stylesheet" href="averio-media-weiss.css?v=18">
+<style>
+body { background: var(--bg); }
+.nav-links a { white-space: nowrap; }
+.nav-cta { white-space: nowrap; flex-shrink: 0; }
+
+/* ── CASE HERO ── */
+.ch-hero {
+  min-height: 70vh; display: flex; align-items: flex-end;
+  padding: 140px 5vw 80px; position: relative; overflow: hidden;
+}
+.ch-hero::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 20% 80%, rgba(1,107,79,.12), transparent),
+    radial-gradient(ellipse 500px 400px at 80% 20%, rgba(1,107,79,.06), transparent);
+  pointer-events: none;
+}
+.ch-hero-inner { position: relative; z-index: 1; max-width: 820px; }
+.ch-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none;
+  letter-spacing: .08em; text-transform: uppercase;
+  margin-bottom: 2rem; transition: color .2s;
+}
+.ch-back:hover { color: #016B4F; }
+.ch-back svg { transition: transform .2s; }
+.ch-back:hover svg { transform: translateX(-4px); }
+.ch-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.ch-tag {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 100px;
+  border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.4);
+}
+.ch-tag.accent { border-color: rgba(1,107,79,.35); color: #016B4F; background: rgba(1,107,79,.07); }
+.ch-h1 {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800; line-height: 1.05;
+  letter-spacing: -.035em; color: #fff;
+  margin-bottom: 2.5rem;
+}
+.ch-h1 em { font-style: normal; color: #016B4F; }
+.ch-hero-metrics {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+}
+.ch-hero-metric { text-align: left; }
+.ch-hero-metric-num {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2.4rem; font-weight: 800;
+  color: #016B4F; line-height: 1; letter-spacing: -.03em;
+}
+.ch-hero-metric-label {
+  font-size: 12px; color: rgba(255,255,255,.35);
+  margin-top: 4px; letter-spacing: .04em;
+}
+
+/* ── CONTENT ── */
+.ch-content { max-width: 780px; margin: 0 auto; padding: 80px 5vw; }
+.ch-section { margin-bottom: 70px; }
+.ch-section-num {
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: #016B4F; margin-bottom: 1rem; font-weight: 600;
+  display: flex; align-items: center; gap: 10px;
+}
+.ch-section-num::after { content: ''; flex: 0 0 30px; height: 1px; background: rgba(1,107,79,.4); }
+.ch-section h2 {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800; color: #fff;
+  letter-spacing: -.03em; line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.ch-section p {
+  font-size: 1rem; color: rgba(255,255,255,.55);
+  line-height: 1.85; margin-bottom: 1rem;
+}
+.ch-list { list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 12px; }
+.ch-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  font-size: .95rem; color: rgba(255,255,255,.55); line-height: 1.65;
+}
+.ch-list li::before {
+  content: ''; flex-shrink: 0;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(1,107,79,.1); border: 1px solid rgba(1,107,79,.3);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12' stroke='%23016B4F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center;
+  margin-top: 2px;
+}
+
+/* ── RESULTS ── */
+.ch-results-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.07); border-radius: 16px;
+  overflow: hidden; margin: 2.5rem 0;
+}
+.ch-result-item {
+  background: rgba(255,255,255,.09);
+  padding: 2rem 1.5rem; text-align: center;
+}
+.ch-result-num {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2.8rem; font-weight: 800;
+  color: #016B4F; line-height: 1; letter-spacing: -.04em;
+  margin-bottom: .5rem;
+}
+.ch-result-label {
+  font-size: 12px; color: rgba(255,255,255,.35);
+  letter-spacing: .06em; text-transform: uppercase;
+}
+.ch-quote {
+  background: rgba(1,107,79,.05); border-left: 3px solid #016B4F;
+  border-radius: 0 12px 12px 0; padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+.ch-quote p {
+  font-size: 1.05rem; color: rgba(255,255,255,.7);
+  font-style: italic; line-height: 1.75; margin: 0;
+}
+
+/* ── DIVIDER ── */
+.ch-divider {
+  height: 1px; background: rgba(255,255,255,.07);
+  margin: 0 0 70px;
+}
+
+/* ── MORE CASES ── */
+.ch-more { background: rgba(255,255,255,.08); border-top: 1px solid rgba(255,255,255,.1); padding: 70px 5vw; }
+.ch-more-label {
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.25); margin-bottom: 2.5rem;
+  display: flex; align-items: center; gap: 14px;
+}
+.ch-more-label::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,.07); }
+.ch-more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1200px; margin: 0 auto; }
+.ch-more-card {
+  border: 1px solid rgba(255,255,255,.08); border-radius: 16px;
+  padding: 1.75rem; background: rgba(255,255,255,.09);
+  text-decoration: none; transition: border-color .25s, transform .25s;
+  display: block;
+}
+.ch-more-card:hover { border-color: rgba(1,107,79,.3); transform: translateY(-4px); }
+.ch-more-card-tag { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #016B4F; margin-bottom: .75rem; }
+.ch-more-card-title { font-family: 'Figtree', sans-serif; font-size: 1rem; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: .5rem; }
+.ch-more-card-metric { font-size: 12px; color: rgba(255,255,255,.35); }
+
+/* ── CTA ── */
+.ch-cta { text-align: center; padding: 80px 24px; }
+.ch-cta h2 { font-family: 'Figtree', sans-serif; font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 800; color: #fff; letter-spacing: -.03em; margin-bottom: 1rem; }
+.ch-cta h2 em { font-style: normal; color: #016B4F; }
+.ch-cta p { font-size: 1rem; color: rgba(255,255,255,.4); margin-bottom: 2.5rem; }
+
+/* ── FOOTER ── */
+.ch-footer { text-align: center; padding: 30px 24px; font-size: 12px; color: rgba(255,255,255,.2); border-top: 1px solid rgba(255,255,255,.06); }
+.ch-footer a { color: rgba(255,255,255,.3); text-decoration: none; }
+.ch-footer a:hover { color: #016B4F; }
+
+@media (max-width: 768px) {
+  .ch-results-grid { grid-template-columns: 1fr; }
+  .ch-more-grid { grid-template-columns: 1fr; }
+  .ch-hero-metrics { gap: 1.5rem; }
+}
+
+/* ── SHOWCASE / MOCKUPS ── */
+.fw-showcase { position: relative; padding: 10px 5vw 100px; overflow: hidden; }
+.fw-showcase::before {
+  content:''; position:absolute; left:50%; top:18%; transform:translateX(-50%);
+  width:min(900px,92vw); height:420px;
+  background:radial-gradient(ellipse at center, rgba(1,107,79,.15), transparent 70%);
+  pointer-events:none;
+}
+.fw-sc-label {
+  text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-bottom:40px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.fw-sc-label::before,.fw-sc-label::after{content:'';width:36px;height:1px;background:rgba(255,255,255,.15);}
+.mock-stage { position:relative; max-width:960px; margin:0 auto; perspective:1500px; }
+.mock-browser {
+  position:relative; border-radius:16px; overflow:hidden; background:#151515;
+  box-shadow:0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.09), 0 0 90px rgba(1,107,79,.12);
+  transform:rotateX(14deg) rotateY(-4deg); transform-origin:50% 100%; will-change:transform;
+}
+.mock-bar { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#1d1d1f; border-bottom:1px solid rgba(255,255,255,.06); }
+.mock-dots { display:flex; gap:7px; }
+.mock-dots span { width:11px;height:11px;border-radius:50%; }
+.mock-dots span:nth-child(1){background:#ff5f57;} .mock-dots span:nth-child(2){background:#febc2e;} .mock-dots span:nth-child(3){background:#28c840;}
+.mock-url {
+  flex:1; max-width:320px; margin:0 auto; text-align:center;
+  font-size:11.5px; color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.06); border-radius:6px; padding:5px 12px;
+}
+.mock-view img { display:block; width:100%; height:auto; }
+.mock-mobile {
+  position:absolute; right:0; bottom:-9%; width:190px; z-index:3;
+  border-radius:28px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
+  box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.1);
+  will-change:transform;
+}
+.mock-mobile img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;}
+.mm-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:100px;background:#000;z-index:2;opacity:.85;}
+@media (max-width:768px){ .mock-mobile{display:none;} }
+
+/* ── PERSON CARD ── */
+.fw-person{
+  display:flex;align-items:center;gap:16px;margin:0 0 1.8rem;padding:14px 18px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;
+}
+.fw-person img{width:56px;height:56px;border-radius:12px;object-fit:cover;object-position:top;}
+.fw-person b{font-family:'Figtree',sans-serif;color:#fff;font-size:.95rem;display:block;line-height:1.3;}
+.fw-person span{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* ── MASSNAHMEN-KARTEN ── */
+.fw-meas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.8rem 0 1.6rem;}
+.fw-meas-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.4rem 1rem;text-align:center;transition:border-color .25s,transform .25s;}
+.fw-meas-card:hover{border-color:rgba(1,107,79,.35);transform:translateY(-3px);}
+.fw-meas-ic{width:42px;height:42px;border-radius:12px;background:rgba(1,107,79,.12);display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;}
+.fw-meas-card b{display:block;font-family:'Figtree',sans-serif;font-size:.85rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.3;}
+.fw-meas-card span{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5;display:block;}
+@media(max-width:768px){.fw-meas{grid-template-columns:repeat(2,1fr);}}
+
+/* ── PROJEKTGALERIE ── */
+.fw-gal-sec{padding:10px 5vw 90px;}
+.fw-gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:140px;gap:12px;max-width:1160px;margin:0 auto;}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.6,.2,1);}
+.gal-item:hover img{transform:scale(1.06);}
+.gal-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%);opacity:0;transition:opacity .4s;}
+.gal-item:hover::after{opacity:1;}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2;opacity:0;transform:translateY(10px);transition:.4s;}
+.gal-item:hover .gal-cap{opacity:1;transform:none;}
+.gal-cap b{display:block;font-family:'Figtree',sans-serif;font-size:.9rem;font-weight:800;color:#fff;}
+.gal-cap span{font-size:11px;color:rgba(255,255,255,.6);}
+.g1{grid-column:1;grid-row:1/span 3;}
+.g2{grid-column:2/span 2;grid-row:1/span 2;}
+.g3{grid-column:4;grid-row:1/span 2;}
+.g4{grid-column:2;grid-row:3/span 2;}
+.g5{grid-column:3/span 2;grid-row:3/span 2;}
+@media(max-width:900px){
+  .fw-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .g1{grid-column:1;grid-row:1/span 3;}
+  .g2{grid-column:2;grid-row:1/span 2;}
+  .g3{grid-column:2;grid-row:3/span 2;}
+  .g4{grid-column:1;grid-row:4/span 3;}
+  .g5{grid-column:2;grid-row:5/span 2;}
+}
+
+
+html[data-theme="light"] .ch-h1                { color: #0D1117 !important; }
+html[data-theme="light"] .ch-back              { color: #868E96 !important; }
+html[data-theme="light"] .ch-tag               { color: #868E96 !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .ch-hero-metric-label { color: #868E96 !important; }
+html[data-theme="light"] .ch-section h2        { color: #0D1117 !important; }
+html[data-theme="light"] .ch-section p         { color: #495057 !important; }
+html[data-theme="light"] .ch-list li           { color: #495057 !important; }
+html[data-theme="light"] .ch-quote             { background: rgba(1,107,79,.03) !important; }
+html[data-theme="light"] .ch-quote p           { color: #495057 !important; }
+html[data-theme="light"] .ch-results-grid      { background: #E9ECEF !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .ch-result-item       { background: #FFFFFF !important; }
+html[data-theme="light"] .ch-result-label      { color: #868E96 !important; }
+html[data-theme="light"] .ch-more              { background: #F8F9FA !important; border-color: #DEE2E6 !important; }
+html[data-theme="light"] .ch-more-label        { color: #868E96 !important; }
+html[data-theme="light"] .ch-more-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .ch-more-card-title   { color: #0D1117 !important; }
+html[data-theme="light"] .ch-more-card-metric  { color: #868E96 !important; }
+html[data-theme="light"] .ch-cta h2            { color: #0D1117 !important; }
+html[data-theme="light"] .ch-cta p             { color: #495057 !important; }
+html[data-theme="light"] .ch-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
+html[data-theme="light"] .fw-sc-label          { color: #868E96 !important; }
+html[data-theme="light"] .fw-sc-label::before,
+html[data-theme="light"] .fw-sc-label::after   { background: #DEE2E6 !important; }
+html[data-theme="light"] .mock-url             { color: #868E96 !important; background: rgba(0,0,0,.05) !important; }
+html[data-theme="light"] .mock-browser         { box-shadow: 0 40px 90px rgba(0,0,0,.15), 0 0 0 1px #DEE2E6 !important; }
+html[data-theme="light"] .fw-person            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-person b          { color: #0D1117 !important; }
+html[data-theme="light"] .fw-person span       { color: #868E96 !important; }
+html[data-theme="light"] .fw-meas-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-meas-card b       { color: #0D1117 !important; }
+html[data-theme="light"] .fw-meas-card span    { color: #868E96 !important; }
+html[data-theme="light"] .gal-item             { background: #F1F3F5 !important; border-color: #E9ECEF !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Krause Immobilien Bamberg – Fallstudie",
+  "description": "Wie für Angela Krause zwei maßgeschneiderte Websites entstanden: immobilienbewertung-krause.de und krauseimmo.com. Webentwicklung-Fallstudie von Averio Media.",
+  "url": "https://averiomedia.de/fallstudie-krause",
+  "author": { "@type": "Person", "name": "Marie Böttiger" },
+  "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
+  "about": { "@type": "Organization", "name": "Krause Immobilien Bamberg" },
+  "keywords": ["Google Ads", "Fallstudie", "Averio Media"]
+}
+</script>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="#016B4F"/>
+        <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text"><span class="nav-logo-name">Averio Media</span></div>
+  </a>
+    <ul class="nav-links">
+    <li><a href="index.html#hero">Home</a></li>
+    <li class="has-mega">
+      <a href="averio-premium-angebote.html">Leistungen &amp; Preise<svg class="mega-chev" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="mega">
+        <div class="mega-col">
+          <div class="mega-h">Übersicht</div>
+          <a href="averio-premium-preisliste.html">Preise</a>
+          <a href="averio-premium-ueber-uns.html">&#220;ber uns</a>
+          <a href="averio-premium-faq.html">FAQ</a>
+          <div class="mega-h">Branchenfokus</div>
+          <a href="averio-premium-sachverstaendige.html">Google Ads f&#252;r Gutachter</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Sichtbarkeit bei Google</div>
+          <a href="averio-premium-zusammenarbeit.html">Google Ads (Performance Marketing)</a>
+          <a href="averio-premium-angebote.html">ChatGPT Ads<span class="mega-note">(erscheint bald – bei Fragen melde dich gern bei uns)</span></a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Sichtbarkeit in KI</div>
+          <a href="averio-premium-geo-optimierung.html">GEO-Optimierung (KI)</a>
+          <div class="mega-h">Tools</div>
+          <a href="averio-premium-sichtbarkeitscheck.html">Sichtbarkeitscheck</a>
+          <a href="averio-premium-ki-sichtbarkeit.html">KI-Sichtbarkeitscheck</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-h">Weitere Angebote</div>
+          <a>Webseite</a>
+          <a>Landingpage</a>
+          <a>Funnelbuilding</a><span class="mega-note">Noch Fragen? <a href="averio-premium-kontakt.html">Sprich uns gern an</a>.</span>
+        </div>
+      </div>
+    </li>
+    <li><a href="averio-premium-ergebnisse.html">Ergebnisse</a></li>
+    <li><a href="averio-premium-guides.html">Guides</a></li>
+    <li><a href="averio-premium-kontakt.html">Kontakt</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Design wechseln" title="Hell/Dunkel wechseln">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <a href="averio-premium-sichtbarkeitscheck.html" class="nav-cta magnetic">Google-Sichtbarkeitscheck</a>
+  <!-- Hamburger (nur Mobile) -->
+  <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menü -->
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul class="nav-mobile-links">
+    <li><a href="index.html#hero" onclick="closeMobileMenu()">Home</a></li>
+    <li class="nmm-h">Leistungen &amp; Preise</li>
+    <li class="nmm-h">Übersicht</li>
+    <li class="nmm-sub"><a href="averio-premium-preisliste.html" onclick="closeMobileMenu()">Preise</a></li>
+    <li class="nmm-sub"><a href="averio-premium-ueber-uns.html" onclick="closeMobileMenu()">&#220;ber uns</a></li>
+    <li class="nmm-sub"><a href="averio-premium-faq.html" onclick="closeMobileMenu()">FAQ</a></li>
+    <li class="nmm-sub"><a href="averio-premium-sachverstaendige.html" onclick="closeMobileMenu()">Google Ads für Gutachter</a></li>
+    <li class="nmm-h">Sichtbarkeit bei Google</li>
+    <li class="nmm-sub"><a href="averio-premium-zusammenarbeit.html" onclick="closeMobileMenu()">Google Ads (Performance Marketing)</a></li>
+    <li class="nmm-sub"><a href="averio-premium-angebote.html" onclick="closeMobileMenu()">ChatGPT Ads<span class="mega-note">(erscheint bald – bei Fragen melde dich gern bei uns)</span></a></li>
+    <li class="nmm-h">Sichtbarkeit in KI</li>
+    <li class="nmm-sub"><a href="averio-premium-geo-optimierung.html" onclick="closeMobileMenu()">GEO-Optimierung (KI)</a></li>
+    <li class="nmm-h">Tools</li>
+    <li class="nmm-sub"><a href="averio-premium-sichtbarkeitscheck.html" onclick="closeMobileMenu()">Sichtbarkeitscheck</a></li>
+    <li class="nmm-sub"><a href="averio-premium-ki-sichtbarkeit.html" onclick="closeMobileMenu()">KI-Sichtbarkeitscheck</a></li>
+    <li class="nmm-h">Weitere Angebote</li>
+    <li class="nmm-sub"><a>Webseite</a></li>
+    <li class="nmm-sub"><a>Landingpage</a></li>
+    <li class="nmm-sub"><a>Funnelbuilding</a><span class="mega-note">Noch Fragen? <a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Sprich uns gern an</a>.</span></li>
+    <li><a href="averio-premium-ergebnisse.html" onclick="closeMobileMenu()">Ergebnisse</a></li>
+    <li><a href="averio-premium-guides.html" onclick="closeMobileMenu()">Guides</a></li>
+    <li><a href="averio-premium-kontakt.html" onclick="closeMobileMenu()">Kontakt</a></li>
+  </ul>
+  <div class="nav-mobile-divider"></div>
+  <a href="averio-premium-sichtbarkeitscheck.html" class="nav-mobile-cta" onclick="closeMobileMenu()">Google-Sichtbarkeitscheck</a>
+</div>
+
+
+<!-- HERO -->
+<section class="ch-hero">
+  <div class="ch-hero-inner">
+    <a href="averio-premium-ergebnisse.html" class="ch-back">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Alle Cases
+    </a>
+    <div class="ch-tags">
+      <span class="ch-tag accent">Immobilien · Maklerin & Gutachterin</span>
+      <span class="ch-tag">Webentwicklung (2 Projekte)</span>
+      <span class="ch-tag">Bamberg & Franken</span>
+    </div>
+    <h1 class="ch-h1">
+      Krause Immobilien:<br>
+      Zwei Websites für<br>
+      <em>eine Expertin</em>. Komplett neu gebaut.
+    </h1>
+    <div class="ch-hero-metrics">
+      <div class="ch-hero-metric">
+        <div class="ch-hero-metric-num">2</div>
+        <div class="ch-hero-metric-label">Websites umgesetzt</div>
+      </div>
+      <div class="ch-hero-metric">
+        <div class="ch-hero-metric-num">24+</div>
+        <div class="ch-hero-metric-label">Jahre Erfahrung</div>
+      </div>
+      <div class="ch-hero-metric">
+        <div class="ch-hero-metric-num">DEKRA</div>
+        <div class="ch-hero-metric-label">3-fach zertifiziert</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE: Website-Mockup -->
+<section class="fw-showcase">
+  <div class="fw-sc-label reveal">Die Websites von Krause Immobilien</div>
+  <div class="mock-stage reveal">
+    <div class="mock-browser" id="mockBrowser">
+      <div class="mock-bar">
+        <div class="mock-dots"><span></span><span></span><span></span></div>
+        <div class="mock-url">krauseimmo.com</div>
+      </div>
+      <div class="mock-view">
+        <img src="case-kr-hero.webp" alt="Startseite von krauseimmo.com – Immobilienmaklerin Bamberg" width="1440" height="900" loading="lazy">
+      </div>
+    </div>
+    <div class="mock-browser" id="mockBrowser2" style="margin-top:32px;transform:rotateX(12deg) rotateY(3deg)">
+      <div class="mock-bar">
+        <div class="mock-dots"><span></span><span></span><span></span></div>
+        <div class="mock-url">immobilienbewertung-krause.de</div>
+      </div>
+      <div class="mock-view">
+        <img src="case-kg-hero.webp" alt="Startseite von immobilienbewertung-krause.de – Immobiliengutachterin Bamberg" width="1440" height="900" loading="lazy">
+      </div>
+    </div>
+    <div class="mock-mobile" id="mockMobile">
+      <div class="mm-notch"></div>
+      <img src="case-kr-mobile.webp" alt="krauseimmo.com auf dem Smartphone" width="390" height="844" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="ch-content">
+
+  <div class="ch-section reveal">
+    <div class="ch-section-num">01 · Hintergrund</div>
+    <h2>Zwei Geschäftsmodelle. Eine Frau. Kein passender Webauftritt.</h2>
+    <div class="fw-person">
+      <img src="case-kr-angela.webp" alt="Angela Krause (M.Sc.)" width="480" height="480" loading="lazy">
+      <div>
+        <b>Angela Krause (M.Sc.)</b>
+        <span>Immobilienmaklerin & Gutachterin · Bamberg</span>
+      </div>
+    </div>
+    <p>Angela Krause ist mit über 24 Jahren Erfahrung eine der erfahrensten Immobiliengutachterinnen der Region Bamberg – dreifach DEKRA- und IQ-ZERT-zertifiziert. Ihre Expertise reichte bisher online jedoch nicht aus: Für ihre zwei Geschäftsmodelle – unabhängige Immobiliengutachten und persönliche Immobilienvermittlung – fehlten zwei eigenständige, vertrauenswürdige digitale Auftritte.</p>
+    <p>Gutachten und Maklerei stellen völlig unterschiedliche Anforderungen an Struktur, Tonalität und Conversion-Elemente. Eine einzige Website für beides wäre Kompromiss gewesen – und genau der wollte Angela Krause nicht eingehen.</p>
+  </div>
+  <div class="ch-divider"></div>
+
+  <div class="ch-section reveal">
+    <div class="ch-section-num">02 · Maßnahmen</div>
+    <h2>Zwei spezialisierte Websites – jede für ihr Geschäftsmodell.</h2>
+    <p>Wir entschieden uns für zwei eigenständige Webauftritte, die jeweils eine Zielgruppe perfekt ansprechen: die Gutachten-Seite auf FunnelCockpit mit Lead-Funnel, die Makler-Seite als maßgeschneiderte Custom-Website.</p>
+    <div class="fw-meas">
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/><polyline points="2 17 12 22 22 17" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/><polyline points="2 12 12 17 22 12" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <b>FunnelCockpit-Seite</b>
+        <span>immobilienbewertung-krause.de mit qualifizierendem Lead-Funnel</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Custom Website</b>
+        <span>krauseimmo.com mit Bewertungsrechner & Objektpräsentation</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#016B4F" stroke-width="1.8"/><line x1="12" y1="18" x2="12" y2="18.01" stroke="#016B4F" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </div>
+        <b>Conversion-Elemente</b>
+        <span>Anlass-Baum, FAQ, Multi-Select-Formulare, WhatsApp</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="1.4" fill="#016B4F"/></svg>
+        </div>
+        <b>Regionale Verankerung</b>
+        <span>Bamberg, Forchheim, Erlangen & 150-km-Umkreis</span>
+      </div>
+    </div>
+    <p>Beide Seiten sprechen dieselbe Sprache: Vertrauen, Regionalität, Professionalität. Die Gutachten-Seite qualifiziert Anfragen bereits vor dem Erstgespräch – Anlass, Objektart und Erreichbarkeit werden im Formular abgefragt. Die Makler-Seite holt Verkäufer mit einem kostenlosen Bewertungs-Funnel und präsentiert die Region emotional.</p>
+  </div>
+  <div class="ch-divider"></div>
+
+  <div class="ch-section reveal">
+    <div class="ch-section-num">03 · Ergebnis</div>
+    <h2>Zwei Websites, zwei Zielgruppen, eine Handschrift.</h2>
+    <div class="ch-results-grid">
+      <div class="ch-result-item">
+        <div class="ch-result-num">2</div>
+        <div class="ch-result-label">Websites live</div>
+      </div>
+      <div class="ch-result-item">
+        <div class="ch-result-num">Funnel</div>
+        <div class="ch-result-label">Cockpit + Custom</div>
+      </div>
+      <div class="ch-result-item">
+        <div class="ch-result-num">&#10003;</div>
+        <div class="ch-result-label">Zielgruppen-optimiert</div>
+      </div>
+    </div>
+    <p>Beide Websites sind live gegangen und spezialisiert auf ihre jeweilige Zielgruppe: Immobilieneigentümer, die ein rechtssicheres Gutachten brauchen – und Verkäufer, die ihre Immobilie erfolgreich vermarkten lassen wollen. Die FunnelCockpit-Seite qualifiziert Anfragen automatisch, die Makler-Seite baut Vertrauen über Region, Persönlichkeit und Bewertungen auf.</p>
+    <div class="ch-quote">
+      <p>Angela Krauses Expertise ist messbar – dreifach DEKRA-zertifiziert, 24+ Jahre Erfahrung. Jetzt ist sie auch online sichtbar: auf zwei Websites, die genau das glaubwürdig transportieren, was sie auszeichnet.</p>
+    </div>
+    <p>Für Expertinnen und Experten mit mehreren Geschäftsmodellen zeigt dieser Case: Zwei spezialisierte Webauftritte schlagen einen Kompromiss-Auftritt – immer dann, wenn die Zielgruppen und Conversion-Ziele klar getrennt sind.</p>
+  </div>
+
+</div>
+
+<!-- PROJEKTGALERIE -->
+<section class="fw-gal-sec">
+  <div class="fw-sc-label reveal">Krause Immobilien in Bamberg & Franken</div>
+  <div class="fw-gal">
+    <div class="gal-item g1 reveal">
+      <img src="case-kr-g1.webp" alt="Bamberg – Einflussgebiet von Krause Immobilien" loading="lazy" width="900" height="610">
+      <div class="gal-cap"><b>Bamberg</b><span>Historische Altstadt & Traumregion</span></div>
+    </div>
+    <div class="gal-item g2 reveal">
+      <img src="case-kr-g2.webp" alt="Angela Krause mit DEKRA- und IQ-ZERT-Siegeln" loading="lazy" width="600" height="600">
+      <div class="gal-cap"><b>Zertifiziert</b><span>DEKRA & IQ-ZERT</span></div>
+    </div>
+    <div class="gal-item g3 reveal">
+      <img src="case-kr-g5.webp" alt="Sachverständige bei der Arbeit vor Ort" loading="lazy" width="800" height="533">
+      <div class="gal-cap"><b>Vor Ort</b><span>Persönliche Besichtigung</span></div>
+    </div>
+    <div class="gal-item g4 reveal">
+      <img src="case-kg-angela.webp" alt="Angela Krause – Gutachten & Wertermittlung" loading="lazy" width="480" height="359">
+      <div class="gal-cap"><b>Gutachten</b><span>Rechtssicher & gerichtsfest</span></div>
+    </div>
+    <div class="gal-item g5 reveal">
+      <img src="case-kr-g4.webp" alt="Immobilienberatung in Bamberg" loading="lazy" width="800" height="601">
+      <div class="gal-cap"><b>Beratung</b><span>Individuell & transparent</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE CASES -->
+<div class="ch-more">
+  <div class="ch-more-label" style="max-width:1200px;margin:0 auto 2.5rem">Weitere Fallstudien</div>
+  <div class="ch-more-grid" style="grid-template-columns:repeat(4,1fr)">
+    <a href="averio-premium-case-fliesenwerk.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Handwerk · Bayern</div>
+      <div class="ch-more-card-title">Fliesenwerk Odelzhausen: Von Empfehlungen zu planbarem Wachstum.</div>
+      <div class="ch-more-card-metric">Erste Anfragen &lt; 4 Wochen · +1 Mitarbeiter</div>
+    </a>
+    <a href="averio-premium-case-kosmetikkultur.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Kosmetikstudio · Weißenburg</div>
+      <div class="ch-more-card-title">Kosmetikkultur: Leere Termine zu zweistelligen Neubuchungen.</div>
+      <div class="ch-more-card-metric">10+ Neubuchungen im ersten Monat</div>
+    </a>
+    <a href="averio-premium-case-lavue.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Kosmetikstudio · Bern</div>
+      <div class="ch-more-card-title">La vue Beauty: Von 0–5 zu zweistelligen Conversions.</div>
+      <div class="ch-more-card-metric">25+ Conversions ab 2. Monat · 500 € Budget</div>
+    </a>
+    <a href="averio-premium-case-krause.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Immobilien · Bamberg</div>
+      <div class="ch-more-card-title">Krause Immobilien: Zwei Websites, eine Handschrift.</div>
+      <div class="ch-more-card-metric">Gutachten + Maklerei · FunnelCockpit + Custom</div>
+    </a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="ch-cta">
+  <h2>Ähnliche Ergebnisse für <em>dein Unternehmen?</em></h2>
+  <p>In einem kostenlosen Erstgespräch schauen wir gemeinsam, was in deinem Konto möglich ist.</p>
+  <a href="averio-premium-kontakt.html" class="btn btn-primary btn-arrow magnetic">Jetzt kontaktieren</a>
+</section>
+
+<footer class="ch-footer">
+  <p>© 2025 Averio Media · Marie Böttiger &nbsp;·&nbsp; <a href="averio-premium-impressum.html">Impressum</a> &nbsp;·&nbsp; 
+  <a href="#" id="cookie-settings">Cookie-Einstellungen</a></p>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<script src="averio-premium.js"></script>
+<script src="cookie-banner.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof gsap === 'undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .7, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+    });
+  });
+
+  gsap.utils.toArray('.mock-browser').forEach(mb => {
+    gsap.fromTo(mb,
+      { rotateX: 14, rotateY: -4, y: 40 },
+      { rotateX: 0, rotateY: 0, y: 0, ease: 'none',
+        scrollTrigger: { trigger: mb.closest('.mock-stage') || mb.parentElement, start: 'top 85%', end: 'top 25%', scrub: 1 } }
+    );
+  });
+  const mm = document.getElementById('mockMobile');
+  if (mm && window.matchMedia('(min-width: 769px)').matches) {
+    gsap.to(mm, { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  }
+  gsap.utils.toArray('.gal-item img').forEach(img => {
+    gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: 'none',
+      scrollTrigger: { trigger: img.closest('.gal-item'), start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+});
+</script>
+<script>
+(function() {
+  var html = document.documentElement;
+  var btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var isLight = html.getAttribute('data-theme') === 'light';
+    if (isLight) { html.removeAttribute('data-theme'); localStorage.setItem('avTheme', 'dark'); }
+    else { html.setAttribute('data-theme', 'light'); localStorage.setItem('avTheme', 'light'); }
+  });
+})();
+</script><!-- Mobile Menu JS -->
+<script>
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var menu   = document.getElementById('nav-mobile');
+  if (!burger || !menu) return;
+
+  function openMobileMenu() {
+    burger.classList.add('open');
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeMobileMenu = function () {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  burger.addEventListener('click', function () {
+    if (menu.classList.contains('open')) { closeMobileMenu(); }
+    else { openMobileMenu(); }
+  });
+
+  // Schließen bei Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

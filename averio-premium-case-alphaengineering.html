@@ -7,25 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
 <title>Alpha Engineering Düsseldorf – Fallstudie | Averio Media</title>
-<meta name="description" content="Wie Alpha Engineering Düsseldorf die Kosten pro Lead um 40% senkte und nur noch qualifizierte B2B-Anfragen erhält. Fallstudie von Averio Media.">
+<meta name="description" content="Wie Alpha Engineering mit sauberer Google-Ads-Struktur die Kosten pro Lead um 40 % senkte und nur noch echte Anfragen erhielt. Fallstudie von Averio Media.">
 <!-- SEO -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
-<link rel="canonical" href="https://averiomedia.de/fallstudie-alpha-engineering">
+<link rel="canonical" href="https://averiomedia.de/fallstudie-alphaengineering">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://averiomedia.de/fallstudie-alpha-engineering">
-<meta property="og:title" content="Fallstudie Alpha Engineering Düsseldorf – Google Ads | Averio Media">
-<meta property="og:description" content="Wie Alpha Engineering Düsseldorf die Kosten pro Lead um 40 % senkte und nur noch qualifizierte B2B-Anfragen erhält. Google Ads Fallstudie von Averio Media.">
+<meta property="og:url" content="https://averiomedia.de/fallstudie-alphaengineering">
+<meta property="og:title" content="Alpha Engineering Düsseldorf – Fallstudie | Averio Media">
+<meta property="og:description" content="Wie Alpha Engineering mit sauberer Google-Ads-Struktur die Kosten pro Lead um 40 % senkte und nur noch echte Anfragen erhielt. Fallstudie von Averio Media.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fallstudie Alpha Engineering Düsseldorf – Google Ads | Averio Media">
-<meta name="twitter:description" content="Wie Alpha Engineering Düsseldorf die Kosten pro Lead um 40 % senkte und nur noch qualifizierte B2B-Anfragen erhält. Google Ads Fallstudie von Averio Media.">
+<meta name="twitter:title" content="Alpha Engineering Düsseldorf – Fallstudie | Averio Media">
+<meta name="twitter:description" content="Wie Alpha Engineering mit sauberer Google-Ads-Struktur die Kosten pro Lead um 40 % senkte und nur noch echte Anfragen erhielt. Fallstudie von Averio Media.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
 <link rel="stylesheet" href="averio-media-weiss.css?v=18">
 <style>
@@ -192,7 +192,91 @@ body { background: var(--bg); }
   .ch-hero-metrics { gap: 1.5rem; }
 }
 
-/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+/* ── SHOWCASE / MOCKUPS ── */
+.fw-showcase { position: relative; padding: 10px 5vw 100px; overflow: hidden; }
+.fw-showcase::before {
+  content:''; position:absolute; left:50%; top:18%; transform:translateX(-50%);
+  width:min(900px,92vw); height:420px;
+  background:radial-gradient(ellipse at center, rgba(1,107,79,.15), transparent 70%);
+  pointer-events:none;
+}
+.fw-sc-label {
+  text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-bottom:40px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.fw-sc-label::before,.fw-sc-label::after{content:'';width:36px;height:1px;background:rgba(255,255,255,.15);}
+.mock-stage { position:relative; max-width:960px; margin:0 auto; perspective:1500px; }
+.mock-browser {
+  position:relative; border-radius:16px; overflow:hidden; background:#151515;
+  box-shadow:0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.09), 0 0 90px rgba(1,107,79,.12);
+  transform:rotateX(14deg) rotateY(-4deg); transform-origin:50% 100%; will-change:transform;
+}
+.mock-bar { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#1d1d1f; border-bottom:1px solid rgba(255,255,255,.06); }
+.mock-dots { display:flex; gap:7px; }
+.mock-dots span { width:11px;height:11px;border-radius:50%; }
+.mock-dots span:nth-child(1){background:#ff5f57;} .mock-dots span:nth-child(2){background:#febc2e;} .mock-dots span:nth-child(3){background:#28c840;}
+.mock-url {
+  flex:1; max-width:320px; margin:0 auto; text-align:center;
+  font-size:11.5px; color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.06); border-radius:6px; padding:5px 12px;
+}
+.mock-view img { display:block; width:100%; height:auto; }
+.mock-mobile {
+  position:absolute; right:0; bottom:-9%; width:190px; z-index:3;
+  border-radius:28px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
+  box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.1);
+  will-change:transform;
+}
+.mock-mobile img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;}
+.mm-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:100px;background:#000;z-index:2;opacity:.85;}
+@media (max-width:768px){ .mock-mobile{display:none;} }
+
+/* ── PERSON CARD ── */
+.fw-person{
+  display:flex;align-items:center;gap:16px;margin:0 0 1.8rem;padding:14px 18px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;
+}
+.fw-person img{width:56px;height:56px;border-radius:12px;object-fit:cover;object-position:top;}
+.fw-person b{font-family:'Figtree',sans-serif;color:#fff;font-size:.95rem;display:block;line-height:1.3;}
+.fw-person span{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* ── MASSNAHMEN-KARTEN ── */
+.fw-meas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.8rem 0 1.6rem;}
+.fw-meas-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.4rem 1rem;text-align:center;transition:border-color .25s,transform .25s;}
+.fw-meas-card:hover{border-color:rgba(1,107,79,.35);transform:translateY(-3px);}
+.fw-meas-ic{width:42px;height:42px;border-radius:12px;background:rgba(1,107,79,.12);display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;}
+.fw-meas-card b{display:block;font-family:'Figtree',sans-serif;font-size:.85rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.3;}
+.fw-meas-card span{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5;display:block;}
+@media(max-width:768px){.fw-meas{grid-template-columns:repeat(2,1fr);}}
+
+/* ── PROJEKTGALERIE ── */
+.fw-gal-sec{padding:10px 5vw 90px;}
+.fw-gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:140px;gap:12px;max-width:1160px;margin:0 auto;}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.6,.2,1);}
+.gal-item:hover img{transform:scale(1.06);}
+.gal-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%);opacity:0;transition:opacity .4s;}
+.gal-item:hover::after{opacity:1;}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2;opacity:0;transform:translateY(10px);transition:.4s;}
+.gal-item:hover .gal-cap{opacity:1;transform:none;}
+.gal-cap b{display:block;font-family:'Figtree',sans-serif;font-size:.9rem;font-weight:800;color:#fff;}
+.gal-cap span{font-size:11px;color:rgba(255,255,255,.6);}
+.g1{grid-column:1;grid-row:1/span 3;}
+.g2{grid-column:2/span 2;grid-row:1/span 2;}
+.g3{grid-column:4;grid-row:1/span 2;}
+.g4{grid-column:2;grid-row:3/span 2;}
+.g5{grid-column:3/span 2;grid-row:3/span 2;}
+@media(max-width:900px){
+  .fw-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .g1{grid-column:1;grid-row:1/span 3;}
+  .g2{grid-column:2;grid-row:1/span 2;}
+  .g3{grid-column:2;grid-row:3/span 2;}
+  .g4{grid-column:1;grid-row:4/span 3;}
+  .g5{grid-column:2;grid-row:5/span 2;}
+}
+
+
 html[data-theme="light"] .ch-h1                { color: #0D1117 !important; }
 html[data-theme="light"] .ch-back              { color: #868E96 !important; }
 html[data-theme="light"] .ch-tag               { color: #868E96 !important; border-color: #DEE2E6 !important; }
@@ -214,18 +298,30 @@ html[data-theme="light"] .ch-cta h2            { color: #0D1117 !important; }
 html[data-theme="light"] .ch-cta p             { color: #495057 !important; }
 html[data-theme="light"] .ch-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
 html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
+html[data-theme="light"] .fw-sc-label          { color: #868E96 !important; }
+html[data-theme="light"] .fw-sc-label::before,
+html[data-theme="light"] .fw-sc-label::after   { background: #DEE2E6 !important; }
+html[data-theme="light"] .mock-url             { color: #868E96 !important; background: rgba(0,0,0,.05) !important; }
+html[data-theme="light"] .mock-browser         { box-shadow: 0 40px 90px rgba(0,0,0,.15), 0 0 0 1px #DEE2E6 !important; }
+html[data-theme="light"] .fw-person            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-person b          { color: #0D1117 !important; }
+html[data-theme="light"] .fw-person span       { color: #868E96 !important; }
+html[data-theme="light"] .fw-meas-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-meas-card b       { color: #0D1117 !important; }
+html[data-theme="light"] .fw-meas-card span    { color: #868E96 !important; }
+html[data-theme="light"] .gal-item             { background: #F1F3F5 !important; border-color: #E9ECEF !important; }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Fallstudie Alpha Engineering Düsseldorf – Google Ads Optimierung",
-  "description": "Wie Alpha Engineering Düsseldorf die Kosten pro Lead um 40 % senkte und nur noch qualifizierte B2B-Anfragen erhält.",
-  "url": "https://averiomedia.de/fallstudie-alpha-engineering",
+  "headline": "Alpha Engineering Düsseldorf – Fallstudie",
+  "description": "Wie Alpha Engineering mit sauberer Google-Ads-Struktur die Kosten pro Lead um 40 % senkte und nur noch echte Anfragen erhielt. Fallstudie von Averio Media.",
+  "url": "https://averiomedia.de/fallstudie-alphaengineering",
   "author": { "@type": "Person", "name": "Marie Böttiger" },
   "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
   "about": { "@type": "Organization", "name": "Alpha Engineering Düsseldorf" },
-  "keywords": ["Google Ads", "Fallstudie", "Kampagnenoptimierung", "B2B Marketing"]
+  "keywords": ["Google Ads", "Fallstudie", "Averio Media"]
 }
 </script>
 </head>
@@ -358,35 +454,82 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
   </div>
 </section>
 
+<!-- SHOWCASE: Website-Mockup -->
+<section class="fw-showcase">
+  <div class="fw-sc-label reveal">Die Website von alphabau-ing.de</div>
+  <div class="mock-stage reveal">
+    <div class="mock-browser" id="mockBrowser">
+      <div class="mock-bar">
+        <div class="mock-dots"><span></span><span></span><span></span></div>
+        <div class="mock-url">alphabau-ing.de</div>
+      </div>
+      <div class="mock-view">
+        <img src="case-al-hero.webp" alt="Startseite der Alpha Engineering Website – Ingenieurbüro Düsseldorf" width="1440" height="900" loading="lazy">
+      </div>
+    </div>
+    <div class="mock-mobile" id="mockMobile">
+      <div class="mm-notch"></div>
+      <img src="case-al-mobile.webp" alt="Alpha Engineering Website auf dem Smartphone" width="390" height="844" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <!-- CONTENT -->
 <div class="ch-content">
 
-  <!-- 01 Herausforderung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">01 · Herausforderung</div>
+    <div class="ch-section-num">01 · Hintergrund</div>
     <h2>Hohe Kosten, schlechte Leads. Selbst verwaltet.</h2>
+    <div class="fw-person">
+      <img src="case-al-logo.webp" alt="Alpha Engineering" width="480" height="480" loading="lazy">
+      <div>
+        <b>Alpha Engineering</b>
+        <span>Ingenieurbüro · B2B · Düsseldorf</span>
+      </div>
+    </div>
     <p>Der Inhaber von Alpha Engineering verwaltete seine Google Ads Kampagne selbst. Das Konto lief schon eine Weile. Doch die Ergebnisse frustrierten: hohe Kosten pro Anfrage, viele unqualifizierte Leads, zu viel Zeitaufwand für zu wenig Ertrag.</p>
     <p>Das eigentliche Problem war nicht fehlendes Budget, sondern fehlende Struktur. Irrelevante Keywords fraßen das Budget, die Anzeigen wurden für Suchanfragen ausgespielt, die nie zu echten Kunden werden würden, und ohne professionelles Conversion-Tracking war kaum nachvollziehbar, welche Maßnahmen überhaupt funktionierten.</p>
   </div>
   <div class="ch-divider"></div>
 
-  <!-- 02 Lösung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">02 · Lösung</div>
+    <div class="ch-section-num">02 · Maßnahmen</div>
     <h2>Komplette Überarbeitung. Weg mit Streuverlusten.</h2>
     <p>Ich übernahm das Konto, analysierte es vollständig und baute die Kampagne von Grund auf neu. Statt breiter Sichtbarkeit stand ein klares Ziel im Vordergrund: Qualifizierte B2B-Anfragen von echten Entscheidern.</p>
-    <ul class="ch-list">
-      <li>Vollständige Kampagnenüberarbeitung. Bestehende Strukturen wurden aufgelöst und sinnvoll neu aufgebaut</li>
-      <li>Konsequente Ausschluss-Keyword-Liste: Alle irrelevanten Suchbegriffe wurden identifiziert und gesperrt</li>
-      <li>Budget gezielt auf die Anfragen konzentriert, die tatsächlich zu Projekten führen</li>
-      <li>Anzeigentexte auf B2B-Entscheider ausgerichtet. Klare Kommunikation von Expertise und Leistungsversprechen</li>
-      <li>Conversion-Tracking korrekt eingerichtet: Jede qualifizierte Anfrage wird sauber erfasst</li>
-  </ul>
+    <div class="fw-meas">
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/><polyline points="2 17 12 22 22 17" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/><polyline points="2 12 12 17 22 12" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Kampagnenstruktur</b>
+        <span>Bestehende Strukturen aufgelöst und neu aufgebaut</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" stroke="#016B4F" stroke-width="1.8"/><path d="M15.5 15.5L20 20" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <b>Negative Keywords</b>
+        <span>Irrelevante Suchbegriffe konsequent gesperrt</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17v3z" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <b>B2B-Anzeigentexte</b>
+        <span>Auf Entscheider ausgerichtet, mit Expertise-Fokus</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Conversion-Tracking</b>
+        <span>Jede qualifizierte Anfrage sauber erfasst</span>
+      </div>
+    </div>
     <p>Das Ergebnis: Das gleiche Budget, aber deutlich weniger Streuverlust, und damit signifikant mehr Effizienz pro eingesetztem Euro.</p>
   </div>
   <div class="ch-divider"></div>
 
-  <!-- 03 Ergebnis -->
   <div class="ch-section reveal">
     <div class="ch-section-num">03 · Ergebnis</div>
     <h2>-40% Kosten pro Lead – und kein verschwendetes Budget mehr.</h2>
@@ -413,15 +556,37 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
 
 </div>
 
+<!-- PROJEKTGALERIE -->
+<section class="fw-gal-sec">
+  <div class="fw-sc-label reveal">Projekte von Alpha Engineering</div>
+  <div class="fw-gal">
+    <div class="gal-item g1 reveal">
+      <img src="case-al-g3.webp" alt="Innenraum-Projekt von Alpha Engineering" loading="lazy" width="900" height="578">
+      <div class="gal-cap"><b>Innenarchitektur</b><span>Modernes Wohnkonzept</span></div>
+    </div>
+    <div class="gal-item g2 reveal">
+      <img src="case-al-g4.webp" alt="Bauprojekt von Alpha Engineering" loading="lazy" width="900" height="600">
+      <div class="gal-cap"><b>Bauprojekt</b><span>Von der Vision zur Umsetzung</span></div>
+    </div>
+    <div class="gal-item g3 reveal">
+      <img src="case-al-g5.webp" alt="Architekturvisualisierung" loading="lazy" width="900" height="596">
+      <div class="gal-cap"><b>Visualisierung</b><span>3D-Planung & Rendering</span></div>
+    </div>
+    <div class="gal-item g4 reveal">
+      <img src="case-al-g6.webp" alt="Projektfoto Alpha Engineering" loading="lazy" width="900" height="622">
+      <div class="gal-cap"><b>Realisierung</b><span>Qualität in der Ausführung</span></div>
+    </div>
+    <div class="gal-item g5 reveal">
+      <img src="case-al-g2.webp" alt="Interieur eines abgeschlossenen Projekts" loading="lazy" width="900" height="595">
+      <div class="gal-cap"><b>Interieur</b><span>Detailverliebte Planung</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- MORE CASES -->
 <div class="ch-more">
   <div class="ch-more-label" style="max-width:1200px;margin:0 auto 2.5rem">Weitere Fallstudien</div>
-  <div class="ch-more-grid">
-    <a href="averio-premium-case-lavue.html" class="ch-more-card">
-      <div class="ch-more-card-tag">Kosmetikstudio · Bern</div>
-      <div class="ch-more-card-title">La vue Beauty: Von 0–5 zu zweistelligen Conversions im ersten Monat.</div>
-      <div class="ch-more-card-metric">10+ Conversions / Monat 1 · Budget skaliert</div>
-    </a>
+  <div class="ch-more-grid" style="grid-template-columns:repeat(4,1fr)">
     <a href="averio-premium-case-fliesenwerk.html" class="ch-more-card">
       <div class="ch-more-card-tag">Handwerk · Bayern</div>
       <div class="ch-more-card-title">Fliesenwerk Odelzhausen: Von Empfehlungen zu planbarem Wachstum.</div>
@@ -431,6 +596,16 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
       <div class="ch-more-card-tag">Kosmetikstudio · Weißenburg</div>
       <div class="ch-more-card-title">Kosmetikkultur: Leere Termine zu zweistelligen Neubuchungen.</div>
       <div class="ch-more-card-metric">10+ Neubuchungen im ersten Monat</div>
+    </a>
+    <a href="averio-premium-case-lavue.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Kosmetikstudio · Bern</div>
+      <div class="ch-more-card-title">La vue Beauty: Von 0–5 zu zweistelligen Conversions.</div>
+      <div class="ch-more-card-metric">25+ Conversions ab 2. Monat · 500 € Budget</div>
+    </a>
+    <a href="averio-premium-case-krause.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Immobilien · Bamberg</div>
+      <div class="ch-more-card-title">Krause Immobilien: Zwei Websites, eine Handschrift.</div>
+      <div class="ch-more-card-metric">Gutachten + Maklerei · FunnelCockpit + Custom</div>
     </a>
   </div>
 </div>
@@ -460,6 +635,22 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .7, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
     });
+  });
+
+  gsap.utils.toArray('.mock-browser').forEach(mb => {
+    gsap.fromTo(mb,
+      { rotateX: 14, rotateY: -4, y: 40 },
+      { rotateX: 0, rotateY: 0, y: 0, ease: 'none',
+        scrollTrigger: { trigger: mb.closest('.mock-stage') || mb.parentElement, start: 'top 85%', end: 'top 25%', scrub: 1 } }
+    );
+  });
+  const mm = document.getElementById('mockMobile');
+  if (mm && window.matchMedia('(min-width: 769px)').matches) {
+    gsap.to(mm, { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  }
+  gsap.utils.toArray('.gal-item img').forEach(img => {
+    gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: 'none',
+      scrollTrigger: { trigger: img.closest('.gal-item'), start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 });
 </script>

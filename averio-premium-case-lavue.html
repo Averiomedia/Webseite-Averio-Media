@@ -7,25 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
 <title>La vue Beauty Bern – Fallstudie | Averio Media</title>
-<meta name="description" content="Wie La vue Beauty Bern mit Google Ads von 0–5 auf 10+ Conversions im ersten Monat kam. Vollständige Fallstudie von Averio Media.">
+<meta name="description" content="Wie La vue Beauty Bern mit einem 500 € Google Ads Budget von 0–5 auf 25+ Conversions pro Monat kam. Fallstudie von Averio Media.">
 <!-- SEO -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
-<link rel="canonical" href="https://averiomedia.de/fallstudie-lavue-beauty">
+<link rel="canonical" href="https://averiomedia.de/fallstudie-lavue">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://averiomedia.de/fallstudie-lavue-beauty">
-<meta property="og:title" content="Fallstudie La vue Beauty Bern – Google Ads | Averio Media">
-<meta property="og:description" content="Wie La vue Beauty Bern mit Google Ads von 0 auf 10+ Conversions im ersten Monat kam. Vollständige Google Ads Fallstudie von Averio Media.">
+<meta property="og:url" content="https://averiomedia.de/fallstudie-lavue">
+<meta property="og:title" content="La vue Beauty Bern – Fallstudie | Averio Media">
+<meta property="og:description" content="Wie La vue Beauty Bern mit einem 500 € Google Ads Budget von 0–5 auf 25+ Conversions pro Monat kam. Fallstudie von Averio Media.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fallstudie La vue Beauty Bern – Google Ads | Averio Media">
-<meta name="twitter:description" content="Wie La vue Beauty Bern mit Google Ads von 0 auf 10+ Conversions im ersten Monat kam. Vollständige Google Ads Fallstudie von Averio Media.">
+<meta name="twitter:title" content="La vue Beauty Bern – Fallstudie | Averio Media">
+<meta name="twitter:description" content="Wie La vue Beauty Bern mit einem 500 € Google Ads Budget von 0–5 auf 25+ Conversions pro Monat kam. Fallstudie von Averio Media.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
 <link rel="stylesheet" href="averio-media-weiss.css?v=18">
 <style>
@@ -192,7 +192,91 @@ body { background: var(--bg); }
   .ch-hero-metrics { gap: 1.5rem; }
 }
 
-/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+/* ── SHOWCASE / MOCKUPS ── */
+.fw-showcase { position: relative; padding: 10px 5vw 100px; overflow: hidden; }
+.fw-showcase::before {
+  content:''; position:absolute; left:50%; top:18%; transform:translateX(-50%);
+  width:min(900px,92vw); height:420px;
+  background:radial-gradient(ellipse at center, rgba(1,107,79,.15), transparent 70%);
+  pointer-events:none;
+}
+.fw-sc-label {
+  text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-bottom:40px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.fw-sc-label::before,.fw-sc-label::after{content:'';width:36px;height:1px;background:rgba(255,255,255,.15);}
+.mock-stage { position:relative; max-width:960px; margin:0 auto; perspective:1500px; }
+.mock-browser {
+  position:relative; border-radius:16px; overflow:hidden; background:#151515;
+  box-shadow:0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.09), 0 0 90px rgba(1,107,79,.12);
+  transform:rotateX(14deg) rotateY(-4deg); transform-origin:50% 100%; will-change:transform;
+}
+.mock-bar { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#1d1d1f; border-bottom:1px solid rgba(255,255,255,.06); }
+.mock-dots { display:flex; gap:7px; }
+.mock-dots span { width:11px;height:11px;border-radius:50%; }
+.mock-dots span:nth-child(1){background:#ff5f57;} .mock-dots span:nth-child(2){background:#febc2e;} .mock-dots span:nth-child(3){background:#28c840;}
+.mock-url {
+  flex:1; max-width:320px; margin:0 auto; text-align:center;
+  font-size:11.5px; color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.06); border-radius:6px; padding:5px 12px;
+}
+.mock-view img { display:block; width:100%; height:auto; }
+.mock-mobile {
+  position:absolute; right:0; bottom:-9%; width:190px; z-index:3;
+  border-radius:28px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
+  box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.1);
+  will-change:transform;
+}
+.mock-mobile img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;}
+.mm-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:100px;background:#000;z-index:2;opacity:.85;}
+@media (max-width:768px){ .mock-mobile{display:none;} }
+
+/* ── PERSON CARD ── */
+.fw-person{
+  display:flex;align-items:center;gap:16px;margin:0 0 1.8rem;padding:14px 18px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;
+}
+.fw-person img{width:56px;height:56px;border-radius:12px;object-fit:cover;object-position:top;}
+.fw-person b{font-family:'Figtree',sans-serif;color:#fff;font-size:.95rem;display:block;line-height:1.3;}
+.fw-person span{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* ── MASSNAHMEN-KARTEN ── */
+.fw-meas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.8rem 0 1.6rem;}
+.fw-meas-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.4rem 1rem;text-align:center;transition:border-color .25s,transform .25s;}
+.fw-meas-card:hover{border-color:rgba(1,107,79,.35);transform:translateY(-3px);}
+.fw-meas-ic{width:42px;height:42px;border-radius:12px;background:rgba(1,107,79,.12);display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;}
+.fw-meas-card b{display:block;font-family:'Figtree',sans-serif;font-size:.85rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.3;}
+.fw-meas-card span{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5;display:block;}
+@media(max-width:768px){.fw-meas{grid-template-columns:repeat(2,1fr);}}
+
+/* ── PROJEKTGALERIE ── */
+.fw-gal-sec{padding:10px 5vw 90px;}
+.fw-gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:140px;gap:12px;max-width:1160px;margin:0 auto;}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.6,.2,1);}
+.gal-item:hover img{transform:scale(1.06);}
+.gal-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%);opacity:0;transition:opacity .4s;}
+.gal-item:hover::after{opacity:1;}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2;opacity:0;transform:translateY(10px);transition:.4s;}
+.gal-item:hover .gal-cap{opacity:1;transform:none;}
+.gal-cap b{display:block;font-family:'Figtree',sans-serif;font-size:.9rem;font-weight:800;color:#fff;}
+.gal-cap span{font-size:11px;color:rgba(255,255,255,.6);}
+.g1{grid-column:1;grid-row:1/span 3;}
+.g2{grid-column:2/span 2;grid-row:1/span 2;}
+.g3{grid-column:4;grid-row:1/span 2;}
+.g4{grid-column:2;grid-row:3/span 2;}
+.g5{grid-column:3/span 2;grid-row:3/span 2;}
+@media(max-width:900px){
+  .fw-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .g1{grid-column:1;grid-row:1/span 3;}
+  .g2{grid-column:2;grid-row:1/span 2;}
+  .g3{grid-column:2;grid-row:3/span 2;}
+  .g4{grid-column:1;grid-row:4/span 3;}
+  .g5{grid-column:2;grid-row:5/span 2;}
+}
+
+
 html[data-theme="light"] .ch-h1                { color: #0D1117 !important; }
 html[data-theme="light"] .ch-back              { color: #868E96 !important; }
 html[data-theme="light"] .ch-tag               { color: #868E96 !important; border-color: #DEE2E6 !important; }
@@ -214,18 +298,30 @@ html[data-theme="light"] .ch-cta h2            { color: #0D1117 !important; }
 html[data-theme="light"] .ch-cta p             { color: #495057 !important; }
 html[data-theme="light"] .ch-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
 html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
+html[data-theme="light"] .fw-sc-label          { color: #868E96 !important; }
+html[data-theme="light"] .fw-sc-label::before,
+html[data-theme="light"] .fw-sc-label::after   { background: #DEE2E6 !important; }
+html[data-theme="light"] .mock-url             { color: #868E96 !important; background: rgba(0,0,0,.05) !important; }
+html[data-theme="light"] .mock-browser         { box-shadow: 0 40px 90px rgba(0,0,0,.15), 0 0 0 1px #DEE2E6 !important; }
+html[data-theme="light"] .fw-person            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-person b          { color: #0D1117 !important; }
+html[data-theme="light"] .fw-person span       { color: #868E96 !important; }
+html[data-theme="light"] .fw-meas-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-meas-card b       { color: #0D1117 !important; }
+html[data-theme="light"] .fw-meas-card span    { color: #868E96 !important; }
+html[data-theme="light"] .gal-item             { background: #F1F3F5 !important; border-color: #E9ECEF !important; }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Fallstudie La vue Beauty Bern – Google Ads Conversions",
-  "description": "Wie La vue Beauty Bern mit Google Ads von 0 auf 10+ Conversions im ersten Monat kam.",
-  "url": "https://averiomedia.de/fallstudie-lavue-beauty",
+  "headline": "La vue Beauty Bern – Fallstudie",
+  "description": "Wie La vue Beauty Bern mit einem 500 € Google Ads Budget von 0–5 auf 25+ Conversions pro Monat kam. Fallstudie von Averio Media.",
+  "url": "https://averiomedia.de/fallstudie-lavue",
   "author": { "@type": "Person", "name": "Marie Böttiger" },
   "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
   "about": { "@type": "Organization", "name": "La vue Beauty Bern" },
-  "keywords": ["Google Ads", "Fallstudie", "Kampagnenoptimierung", "B2B Marketing"]
+  "keywords": ["Google Ads", "Fallstudie", "Averio Media"]
 }
 </script>
 </head>
@@ -359,35 +455,82 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
   </div>
 </section>
 
+<!-- SHOWCASE: Website-Mockup -->
+<section class="fw-showcase">
+  <div class="fw-sc-label reveal">Die Website von lavuebeauty.ch</div>
+  <div class="mock-stage reveal">
+    <div class="mock-browser" id="mockBrowser">
+      <div class="mock-bar">
+        <div class="mock-dots"><span></span><span></span><span></span></div>
+        <div class="mock-url">lavuebeauty.ch</div>
+      </div>
+      <div class="mock-view">
+        <img src="case-lv-hero.webp" alt="Startseite der La vue Beauty Website – Permanent Make-up in Bern & Zürich" width="1440" height="900" loading="lazy">
+      </div>
+    </div>
+    <div class="mock-mobile" id="mockMobile">
+      <div class="mm-notch"></div>
+      <img src="case-lv-mobile.webp" alt="La vue Beauty Website auf dem Smartphone" width="390" height="844" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <!-- CONTENT -->
 <div class="ch-content">
 
-  <!-- 01 Herausforderung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">01 · Herausforderung</div>
+    <div class="ch-section-num">01 · Hintergrund</div>
     <h2>Zu viel Budget, zu wenig Ergebnis.</h2>
+    <div class="fw-person">
+      <img src="case-lv-danijela.webp" alt="Danijela Atanasovska" width="480" height="480" loading="lazy">
+      <div>
+        <b>Danijela Atanasovska</b>
+        <span>Artist & Gründerin · La vue Beauty, Bern</span>
+      </div>
+    </div>
     <p>Das Kosmetikstudio La vue Beauty in Bern hatte über einen längeren Zeitraum eine selbst erstellte Google Ads Kampagne aktiv. Trotz einem monatlichen Werbebudget von 500 € blieben die Ergebnisse deutlich unter den Erwartungen: Zwischen 0 und 5 Conversions pro Monat. Eine klare Indikation, dass die Kampagne weder strategisch noch technisch optimal ausgerichtet war.</p>
     <p>Alle automatischen Empfehlungen von Google waren umgesetzt worden. Einschließlich einer Performance Max Kampagne, die jedoch nur Budget verbrauchte, ohne nennenswerte Ergebnisse zu liefern. Das Studio wusste, dass Potenzial vorhanden war, aber nicht wie es ausgeschöpft werden konnte.</p>
   </div>
   <div class="ch-divider"></div>
 
-  <!-- 02 Lösung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">02 · Lösung</div>
+    <div class="ch-section-num">02 · Maßnahmen</div>
     <h2>Kompletter Neuaufbau – mit Strategie statt Auto-Pilot.</h2>
     <p>Nach der Übernahme der Kampagne führte ich zunächst eine umfassende Analyse der bisherigen Maßnahmen durch. Meine Bewertung war eindeutig: Die bestehende Kampagne musste vollständig überarbeitet werden.</p>
-    <ul class="ch-list">
-      <li>Neue, strukturierte Kampagnenarchitektur aufgebaut. Weg von Performance Max, hin zu gezielten Suchkampagnen</li>
-      <li>Gründliche Keyword- und Zielgruppenanalyse für relevante Behandlungsanfragen</li>
-      <li>Anzeigentexte optimiert mit klaren Alleinstellungsmerkmalen und Call-to-Actions</li>
-      <li>Gebotsstrategien auf Conversion-Ziele ausgerichtet statt auf Klickvolumen</li>
-      <li>Conversion-Tracking vollständig neu eingerichtet und validiert. Damit jede Buchungsanfrage korrekt gemessen wird</li>
-  </ul>
-    <p>Der Fokus lag auf einer klaren Zielausrichtung: mehr qualifizierte Anfragen für Behandlungen und eine bessere Effizienz der Werbeausgaben.</p>
+    <div class="fw-meas">
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round"/><path d="M17 3v4h-4M7 21v-4h4" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Neuaufbau</b>
+        <span>Weg von Performance Max, hin zu Suchkampagnen</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" stroke="#016B4F" stroke-width="1.8"/><path d="M15.5 15.5L20 20" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <b>Keywordanalyse</b>
+        <span>Relevante Behandlungsanfragen gezielt abgedeckt</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="1.4" fill="#016B4F"/></svg>
+        </div>
+        <b>Gebotsstrategien</b>
+        <span>Auf Conversion-Ziele statt Klickvolumen</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Conversion-Tracking</b>
+        <span>Vollständig neu eingerichtet und validiert</span>
+      </div>
+    </div>
+    <p>Anzeigentexte wurden mit klaren Alleinstellungsmerkmalen und Call-to-Actions optimiert. Der Fokus lag auf einer klaren Zielausrichtung: mehr qualifizierte Anfragen für Behandlungen und eine bessere Effizienz der Werbeausgaben.</p>
   </div>
   <div class="ch-divider"></div>
 
-  <!-- 03 Ergebnis -->
   <div class="ch-section reveal">
     <div class="ch-section-num">03 · Ergebnis</div>
     <h2>25+ Conversions. Bereits ab dem 2. Monat.</h2>
@@ -401,7 +544,7 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
         <div class="ch-result-label">Conversions vorher</div>
       </div>
       <div class="ch-result-item">
-        <div class="ch-result-num" style="font-size:2rem;white-space:nowrap">2. Monat</div>
+        <div class="ch-result-num"><span style="font-size:2rem;white-space:nowrap">2. Monat</span></div>
         <div class="ch-result-label">Ergebnis sichtbar</div>
       </div>
     </div>
@@ -409,15 +552,42 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
     <div class="ch-quote">
       <p>Diese Entwicklung zeigt eindrucksvoll, dass eine strategisch geplante und datenbasierte Kampagnenstruktur auch mit einem moderaten Budget von 500 € messbare und skalierbare Ergebnisse erzielen kann.</p>
     </div>
-    <p>Das Werbebudget wurde sukzessive erhöht, da die Rentabilität der Kampagne klar gegeben war. Der Kunde ist mit den Resultaten äußerst zufrieden, und die Kampagne bietet nun eine solide Basis für weiteres Wachstum.</p>
+    <p>Das Werbebudget wurde sukzessive erhöht, da die Rentabilität der Kampagne klar gegeben war. Die Kampagne bietet nun eine solide Basis für weiteres Wachstum.</p>
   </div>
 
 </div>
 
+<!-- PROJEKTGALERIE -->
+<section class="fw-gal-sec">
+  <div class="fw-sc-label reveal">Ergebnisse von La vue Beauty</div>
+  <div class="fw-gal">
+    <div class="gal-item g1 reveal">
+      <img src="case-lv-g3.webp" alt="Microblading Ergebnis bei La vue Beauty" loading="lazy" width="819" height="1024">
+      <div class="gal-cap"><b>Microblading</b><span>Natürliche Härchenzeichnung</span></div>
+    </div>
+    <div class="gal-item g2 reveal">
+      <img src="case-lv-g4.webp" alt="Powder Brows Ergebnis" loading="lazy" width="819" height="1024">
+      <div class="gal-cap"><b>Powder Brows</b><span>Ombré mit Vollschattierung</span></div>
+    </div>
+    <div class="gal-item g3 reveal">
+      <img src="case-lv-g5.webp" alt="Augenbrauen-Kontur mit Teilschattierung" loading="lazy" width="819" height="1024">
+      <div class="gal-cap"><b>Kontur & Schattierung</b><span>Präzise Augenbrauen-Form</span></div>
+    </div>
+    <div class="gal-item g4 reveal">
+      <img src="case-lv-g3b.webp" alt="Sommersprossen Tattoo Nase & Wangen" loading="lazy" width="768" height="411">
+      <div class="gal-cap"><b>Freckles</b><span>Natürlich wirkende Sommersprossen</span></div>
+    </div>
+    <div class="gal-item g5 reveal">
+      <img src="case-lv-treat.webp" alt="Behandlung bei La vue Beauty" loading="lazy" width="683" height="1024">
+      <div class="gal-cap"><b>Im Studio</b><span>Professionelle Behandlung</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- MORE CASES -->
 <div class="ch-more">
   <div class="ch-more-label" style="max-width:1200px;margin:0 auto 2.5rem">Weitere Fallstudien</div>
-  <div class="ch-more-grid">
+  <div class="ch-more-grid" style="grid-template-columns:repeat(4,1fr)">
     <a href="averio-premium-case-fliesenwerk.html" class="ch-more-card">
       <div class="ch-more-card-tag">Handwerk · Bayern</div>
       <div class="ch-more-card-title">Fliesenwerk Odelzhausen: Von Empfehlungen zu planbarem Wachstum.</div>
@@ -428,10 +598,15 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
       <div class="ch-more-card-title">Kosmetikkultur: Leere Termine zu zweistelligen Neubuchungen.</div>
       <div class="ch-more-card-metric">10+ Neubuchungen im ersten Monat</div>
     </a>
-    <a href="averio-premium-case-alphaengineering.html" class="ch-more-card">
-      <div class="ch-more-card-tag">Ingenieurbüro · Düsseldorf</div>
-      <div class="ch-more-card-title">Alpha Engineering: −40% Kosten pro Lead.</div>
-      <div class="ch-more-card-metric">Nur noch Anfragen mit echter Kaufabsicht</div>
+    <a href="averio-premium-case-lavue.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Kosmetikstudio · Bern</div>
+      <div class="ch-more-card-title">La vue Beauty: Von 0–5 zu zweistelligen Conversions.</div>
+      <div class="ch-more-card-metric">25+ Conversions ab 2. Monat · 500 € Budget</div>
+    </a>
+    <a href="averio-premium-case-krause.html" class="ch-more-card">
+      <div class="ch-more-card-tag">Immobilien · Bamberg</div>
+      <div class="ch-more-card-title">Krause Immobilien: Zwei Websites, eine Handschrift.</div>
+      <div class="ch-more-card-metric">Gutachten + Maklerei · FunnelCockpit + Custom</div>
     </a>
   </div>
 </div>
@@ -461,6 +636,22 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .7, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
     });
+  });
+
+  gsap.utils.toArray('.mock-browser').forEach(mb => {
+    gsap.fromTo(mb,
+      { rotateX: 14, rotateY: -4, y: 40 },
+      { rotateX: 0, rotateY: 0, y: 0, ease: 'none',
+        scrollTrigger: { trigger: mb.closest('.mock-stage') || mb.parentElement, start: 'top 85%', end: 'top 25%', scrub: 1 } }
+    );
+  });
+  const mm = document.getElementById('mockMobile');
+  if (mm && window.matchMedia('(min-width: 769px)').matches) {
+    gsap.to(mm, { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  }
+  gsap.utils.toArray('.gal-item img').forEach(img => {
+    gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: 'none',
+      scrollTrigger: { trigger: img.closest('.gal-item'), start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 });
 </script>
