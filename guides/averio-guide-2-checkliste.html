@@ -1,206 +1,184 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
+<title>6 Punkte Google Ads Checkliste – Kostenloser Download | Averio Media</title>
 <meta name="description" content="Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance. Kostenlos von Averio Media.">
-<!-- SEO -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
-<link rel="canonical" href="https://averiomedia.de/guides/averio-guide-2-checkliste">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://averiomedia.de/guides/checkliste">
 
-<!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://averiomedia.de/guides/averio-guide-2-checkliste">
+<meta property="og:url" content="https://averiomedia.de/guides/checkliste">
 <meta property="og:title" content="6 Punkte Google Ads Checkliste – Kostenloser Download | Averio Media">
 <meta property="og:description" content="Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance. Kostenlos von Averio Media.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="6 Punkte Google Ads Checkliste – Kostenloser Download | Averio Media">
 <meta name="twitter:description" content="Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance. Kostenlos von Averio Media.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
-<title>6 Punkte Google Ads Checkliste – Averio Media Guide</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: #f5f5f3;
-  color: #1a1a1a;
-  line-height: 1.7;
+:root {
+  --g: #016B4F;
+  --g-light: rgba(1,107,79,.08);
+  --g-border: rgba(1,107,79,.25);
+  --dark: #0d0d0d;
+  --dark2: #1a1a1a;
+  --text: #1a1a1a;
+  --muted: #666;
+  --light-bg: #f5f5f3;
+  --card: #ffffff;
+  --border: #e8e8e6;
 }
-.print-bar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: #1a1a1a; padding: 10px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-}
-.print-bar-text { font-size: 12px; color: rgba(255,255,255,.5); }
-.print-bar-text strong { color: #fff; }
-.print-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #016B4F; color: #fff; border: none;
-  border-radius: 100px; padding: 8px 20px;
-  font-size: 12px; font-weight: 700; font-family: 'DM Sans', sans-serif;
-  cursor: pointer; transition: all .2s;
-}
-.print-btn:hover { background: #e04300; }
-.doc { max-width: 794px; margin: 60px auto 40px; background: #fff; box-shadow: 0 4px 40px rgba(0,0,0,.1); }
+html { scroll-behavior: smooth; }
+body { font-family: 'Figtree', sans-serif; background: var(--light-bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
-/* COVER */
-.cover {
-  background: #0d0d0d; padding: 64px 64px 56px;
+/* TOP BAR */
+.topbar {
+  background: var(--dark); padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.topbar-mark { width: 28px; height: 28px; background: var(--g); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.topbar-name { font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+.topbar-badge {
+  font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  background: var(--dark); padding: 72px 24px 64px;
   position: relative; overflow: hidden;
-  min-height: 480px; display: flex; flex-direction: column; justify-content: space-between;
 }
-.cover::before {
-  content: ''; position: absolute; top: -100px; right: -100px;
-  width: 450px; height: 450px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,107,79,.15), transparent 65%);
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -120px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(1,107,79,.12), transparent 65%);
+  pointer-events: none;
 }
-.cover-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; position: relative; z-index: 2; }
-.cover-logo-mark {
-  width: 36px; height: 36px; background: #016B4F; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-}
-.cover-logo-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
-.cover-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.08);
-  color: #016B4F; font-size: 10px; font-weight: 700; letter-spacing: .12em;
-  text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px;
-}
-.cover-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #016B4F; box-shadow: 0 0 6px #016B4F; }
-.cover-title {
-  font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800;
-  color: #fff; line-height: 1.08; letter-spacing: -.03em; margin-bottom: 18px;
-  position: relative; z-index: 2;
-}
-.cover-title em { color: #016B4F; font-style: normal; }
-.cover-subtitle { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.75; max-width: 500px; position: relative; z-index: 2; margin-bottom: 48px; }
-.cover-meta { display: flex; gap: 28px; position: relative; z-index: 2; border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; }
-.cover-meta-item { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .04em; }
-.cover-meta-item strong { color: rgba(255,255,255,.65); font-weight: 600; }
-
-/* INTRO */
-.page-intro { padding: 44px 64px 36px; border-bottom: 1px solid #f0f0ee; background: #fafaf8; }
-.page-intro-label { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #016B4F; font-weight: 700; margin-bottom: 14px; }
-.page-intro-text { font-size: 14px; color: #555; line-height: 1.85; max-width: 600px; }
-.page-intro-text strong { color: #1a1a1a; font-weight: 600; }
-
-/* CHECKLIST POINTS */
-.checklist-section { padding: 48px 64px; }
-.cl-point {
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid #f0f0ee;
-  page-break-inside: avoid;
-}
-.cl-point:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.cl-point-header {
-  display: flex; align-items: flex-start; gap: 20px; margin-bottom: 18px;
-}
-.cl-number-wrap {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  flex-shrink: 0;
-}
-.cl-number {
-  width: 44px; height: 44px;
-  background: #016B4F;
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; color: #fff;
-}
-.cl-number-line { width: 1.5px; flex: 1; min-height: 20px; background: #ebebea; }
-.cl-title-area { padding-top: 8px; }
-.cl-topic { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: #bbb; font-weight: 700; margin-bottom: 6px; }
-.cl-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #1a1a1a; letter-spacing: -.02em; line-height: 1.2; }
-
-.cl-body { padding-left: 64px; }
-.cl-desc { font-size: 13px; color: #555; line-height: 1.85; margin-bottom: 20px; }
-
-/* Checklist items within each point */
-.cl-items { display: flex; flex-direction: column; gap: 0; }
-.cl-item {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 11px 0;
-  border-bottom: 1px solid #f5f5f3;
-}
-.cl-item:last-child { border-bottom: none; }
-.cl-checkbox {
-  width: 20px; height: 20px; flex-shrink: 0;
-  border: 1.5px solid #ddd; border-radius: 5px;
-  margin-top: 1px; cursor: pointer;
-  transition: all .15s;
-}
-.cl-item-text { font-size: 13px; color: #333; line-height: 1.6; }
-.cl-item-text strong { color: #1a1a1a; font-weight: 600; }
-.cl-item-sub { font-size: 11px; color: #999; margin-top: 2px; }
-
-/* TIP BOX */
-.cl-tip {
-  background: #fff9f6;
-  border: 1px solid rgba(1,107,79,.15);
-  border-left: 3px solid #016B4F;
-  border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
-  margin-top: 16px;
-}
-.cl-tip-label { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: #016B4F; font-weight: 800; margin-bottom: 5px; }
-.cl-tip-text { font-size: 12px; color: #444; line-height: 1.7; }
-.cl-tip-text strong { color: #1a1a1a; }
-
-/* SCORE PAGE */
-.score-page { padding: 44px 64px; background: #fafaf8; border-top: 1px solid #f0f0ee; page-break-before: always; }
-.score-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
-.score-sub { font-size: 13px; color: #888; margin-bottom: 28px; line-height: 1.65; }
-.score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.score-card {
-  background: #fff; border: 1px solid #ebebea;
-  border-radius: 12px; padding: 18px 16px; text-align: center;
-}
-.score-range { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #016B4F; margin-bottom: 6px; }
-.score-label { font-size: 11px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
-.score-desc { font-size: 11px; color: #888; line-height: 1.5; }
-
-/* CTA */
-.cta-page { background: #0d0d0d; padding: 56px 64px; }
-.cta-eyebrow { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(1,107,79,.7); font-weight: 700; margin-bottom: 20px; }
-.cta-h2 { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 14px; }
-.cta-h2 em { color: #016B4F; font-style: normal; }
-.cta-text { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.85; max-width: 460px; margin-bottom: 32px; }
-.cta-link {
+.hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: #016B4F; color: #fff; text-decoration: none;
-  border-radius: 100px; padding: 14px 28px; font-size: 13px; font-weight: 700;
+  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.1);
+  color: var(--g); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
 }
-.cta-note { font-size: 11px; color: rgba(255,255,255,.2); margin-top: 14px; }
-.cta-divider { height: 1px; background: rgba(255,255,255,.06); margin: 36px 0; }
-.cta-footer { display: flex; justify-content: space-between; align-items: center; }
-.cta-footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: rgba(255,255,255,.25); }
-.cta-footer-brand span { color: #016B4F; }
-.cta-footer-url { font-size: 11px; color: rgba(255,255,255,.2); }
+.hero-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--g); box-shadow: 0 0 6px var(--g); }
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #fff;
+  line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px;
+}
+.hero h1 em { color: var(--g); font-style: normal; }
+.hero-desc { font-size: 16px; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 560px; margin-bottom: 40px; }
+.hero-stats { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+.hero-stat-num { font-size: 32px; font-weight: 800; color: var(--g); line-height: 1; }
+.hero-stat-label { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .06em; margin-top: 6px; }
 
-@media print {
-  .print-bar { display: none !important; }
-  body { background: #fff; }
-  .doc { max-width: 100%; margin: 0; box-shadow: none; }
-  .cl-point, .score-page { page-break-inside: avoid; }
-  .cta-page { page-break-before: always; }
+/* INSIDE */
+.inside { padding: 72px 24px; }
+.inside-inner { max-width: 720px; margin: 0 auto; }
+.inside-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--g); font-weight: 700; margin-bottom: 12px; }
+.inside h2 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 32px; }
+.inside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.inside-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 18px 22px; font-size: 15px; color: #333; line-height: 1.6;
 }
-@media (max-width: 860px) {
-  .doc { margin: 52px 0 0; }
-  .cover, .page-intro, .checklist-section, .score-page, .cta-page { padding: 32px 24px; }
-  .cl-body { padding-left: 0; }
-  .score-grid { grid-template-columns: 1fr 1fr; }
+.inside-check {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--g-light); border: 1px solid var(--g-border);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.inside-check svg { width: 12px; height: 12px; }
+
+/* VALUE BOX */
+.value-box {
+  background: var(--dark); border-radius: 20px; padding: 36px;
+  margin-top: 48px; position: relative; overflow: hidden;
+}
+.value-box::before {
+  content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
+}
+.value-box h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.value-box p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.8; }
+
+/* DOWNLOAD GATE */
+.gate-section { padding: 72px 24px 96px; }
+.gate-card {
+  max-width: 520px; margin: 0 auto;
+  background: var(--card); border: 1px solid var(--border); border-radius: 24px;
+  padding: 48px 40px; position: relative; overflow: hidden;
+}
+.gate-card::before {
+  content: ''; position: absolute; top: -1px; left: 15%; right: 15%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
+}
+.gate-icon { font-size: 40px; margin-bottom: 16px; }
+.gate-title { font-size: 24px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 8px; }
+.gate-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.gate-group { margin-bottom: 16px; }
+.gate-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: .03em; font-weight: 500; }
+.gate-input {
+  width: 100%; background: #f8f8f7; border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 16px; font-size: 15px; color: var(--text); font-family: 'Figtree', sans-serif;
+  outline: none; transition: border-color .2s;
+}
+.gate-input:focus { border-color: var(--g); background: #fff; }
+.gate-input::placeholder { color: #bbb; }
+.gate-check { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
+.gate-check input { margin-top: 3px; accent-color: var(--g); flex-shrink: 0; }
+.gate-check label { font-size: 12px; color: #888; line-height: 1.55; }
+.gate-check label a { color: var(--g); text-decoration: none; }
+.gate-legal { font-size: 11px; color: #aaa; margin: 12px 0 4px; line-height: 1.5; }
+.gate-btn {
+  width: 100%; padding: 15px; background: var(--g); color: #fff;
+  border: none; border-radius: 100px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: 'Figtree', sans-serif;
+  box-shadow: 0 4px 20px rgba(1,107,79,.3);
+  transition: all .25s; margin-top: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.gate-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.45); }
+.gate-btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.gate-fine { font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; }
+
+/* FOOTER CTA */
+.footer-cta {
+  background: var(--dark); padding: 64px 24px; text-align: center;
+}
+.footer-cta p { font-size: 14px; color: rgba(255,255,255,.4); margin-bottom: 20px; }
+.footer-cta a {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--g); color: #fff; text-decoration: none;
+  padding: 14px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
+  transition: all .25s; font-family: 'Figtree', sans-serif;
+}
+.footer-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.4); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.2); margin-top: 32px; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 44px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat-num { font-size: 26px; }
+  .inside { padding: 48px 20px; }
+  .gate-card { padding: 36px 24px; }
+  .gate-section { padding: 48px 20px 64px; }
 }
 </style>
 
@@ -210,36 +188,25 @@ body {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://averiomedia.de/guides//2-checkliste#article",
-      "headline": "6 Punkte Google Ads Checkliste",
-      "description": "Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance.",
-      "url": "https://averiomedia.de/guides//2-checkliste",
-      "inLanguage": "de-DE",
-      "author": {
-        "@type": "Person",
-        "name": "Marie Böttiger",
-        "jobTitle": "Google Ads Freelancerin",
-        "url": "https://averiomedia.de/ueber-uns",
-        "worksFor": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
-        "knowsAbout": ["Google Ads", "B2B Marketing", "Suchmaschinenmarketing", "Conversion Tracking", "GA4", "Kampagnenoptimierung"]
+      "headline": "6 Punkte Google Ads Checkliste – Kostenloser Download",
+      "description": "Google Ads Checkliste mit 6 Bereichen und 23 Prüfpunkten für bessere Kampagnenperformance. Kostenlos von Averio Media.",
+      "author": { "@type": "Person", "name": "Marie Böttiger" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Averio Media",
+        "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/og-image.jpg" }
       },
-      "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de", "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/averio-media-logo.png" } },
       "datePublished": "2025-01-15",
-      "dateModified": "2026-06-23",
-      "mainEntityOfPage": "https://averiomedia.de/guides//2-checkliste",
-      "keywords": ["Google Ads Checkliste", "Kampagnen-Audit", "Google Ads Prüfpunkte", "Kampagnenperformance"],
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".check-title", ".check-desc"]
-      }
+      "dateModified": "2026-10-11",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de/" },
         { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://averiomedia.de/guides" },
-        { "@type": "ListItem", "position": 3, "name": "6 Punkte Checkliste" }
+        { "@type": "ListItem", "position": 3, "name": "6 Punkte Google Ads Checkliste" }
       ]
     }
   ]
@@ -248,225 +215,159 @@ body {
 </head>
 <body>
 
-<div class="print-bar">
-  <span class="print-bar-text"><strong>Averio Media Guide</strong> · Als PDF speichern: Drucken → Ziel: PDF speichern</span>
-  <button class="print-btn" onclick="window.print()">
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4V1h6v3M2 4h8a1 1 0 011 1v3H1V5a1 1 0 011-1zM3 8v3h6V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Als PDF speichern
-  </button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <a class="topbar-brand" href="/">
+    <div class="topbar-mark">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10L7 3l5 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span class="topbar-name">Averio Media</span>
+  </a>
+  <span class="topbar-badge">Kostenloser Guide 02</span>
 </div>
 
-<div class="doc">
-
-  <!-- COVER -->
-  <div class="cover">
-    <div>
-      <div class="cover-logo">
-        <div class="cover-logo-mark">
-          <svg viewBox="0 0 36 36" fill="none" width="22" height="22">
-            <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
-            <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
-        <span class="cover-logo-name">Averio Media</span>
-      </div>
-      <div class="cover-badge"><div class="cover-badge-dot"></div>Kostenlose Checkliste</div>
-      <div class="cover-title"><em>6 Punkte</em> Google Ads Checkliste<br>für bessere Kampagnen&shy;performance</div>
-      <div class="cover-subtitle">Die 6 Bereiche, die über Erfolg oder Misserfolg deiner Google Ads entscheiden. Mit konkreten Prüffragen und sofort umsetzbaren Maßnahmen.</div>
-    </div>
-    <div class="cover-meta">
-      <div class="cover-meta-item"><strong>Geeignet für</strong><br>Einsteiger &amp; Fortgeschrittene</div>
-      <div class="cover-meta-item"><strong>Format</strong><br>Checkliste · sofort nutzbar</div>
-      <div class="cover-meta-item"><strong>Von</strong><br>Marie Böttiger, Averio Media</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Kostenlos · Direkt nutzbar</div>
+    <h1><em>6 Punkte</em> Google Ads Checkliste<br>für bessere Kampagnen­performance</h1>
+    <p class="hero-desc">Die 6 Bereiche, die über Erfolg oder Misserfolg deiner Google Ads entscheiden. Mit konkreten Prüffragen und sofort umsetzbaren Maßnahmen.</p>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">6</div><div class="hero-stat-label">Bereiche</div></div>
+      <div><div class="hero-stat-num">23</div><div class="hero-stat-label">Prüfpunkte</div></div>
+      <div><div class="hero-stat-num">0–23</div><div class="hero-stat-label">Score-System</div></div>
     </div>
   </div>
+</section>
 
-  <!-- INTRO -->
-  <div class="page-intro">
-    <div class="page-intro-label">So nutzt du diese Checkliste</div>
-    <div class="page-intro-text">
-      Geh die 6 Bereiche nacheinander durch. Für jede Frage: Haken wenn erfüllt, leer lassen wenn nicht. <strong>Jeder offene Punkt ist ein direktes Verbesserungspotenzial.</strong> Am Ende siehst du auf einen Blick, wo dein Konto steht. Und was als nächstes angepackt werden sollte. Empfehlung: Führe diese Checkliste einmal pro Monat durch.
+<!-- WAS DRIN IST -->
+<section class="inside">
+  <div class="inside-inner">
+    <div class="inside-label">Inhalt</div>
+    <h2>Was du in diesem Guide findest</h2>
+    <ul class="inside-list">
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Tracking & Conversion-Messung als Fundament prüfen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Keyword-Strategie und Match Types systematisch bewerten</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Kampagnen- und Anzeigengruppenstruktur auf Herz und Nieren testen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Anzeigentexte und Assets gegen Best Practices halten</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Gebotsstrategie und Budget-Verteilung optimieren</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Am Ende: dein persönlicher Score und die Einordnung deines Kontos</span></li>
+    </ul>
+    <div class="value-box">
+      <h3>Für wen ist diese Checkliste?</h3>
+      <p>Ideal als Self-Audit vor einer Beratungsanfrage. In 30 Minuten weißt du, wo dein Konto steht und wo du zuerst ansetzen solltest.</p>
     </div>
   </div>
+</section>
 
-  <!-- CHECKLIST POINTS -->
-  <div class="checklist-section">
-
-    <!-- PUNKT 1 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap">
-          <div class="cl-number">1</div>
-        </div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Grundlage</div>
-          <div class="cl-title">Tracking &amp; Conversion-Messung</div>
-        </div>
+<!-- DOWNLOAD GATE -->
+<section class="gate-section">
+  <div class="gate-card" id="gate-card">
+    <div id="gate-form-area">
+      <div class="gate-icon">📥</div>
+      <div class="gate-title">Guide kostenlos laden</div>
+      <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-name">Dein Name *</label>
+        <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
       </div>
-      <div class="cl-body">
-        <div class="cl-desc">Ohne sauberes Tracking weißt du nicht, was funktioniert. Das ist die Grundlage für jede Optimierung und für alle Smart-Bidding-Strategien.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Conversion-Aktionen eingerichtet</strong></div><div class="cl-item-sub">Formular, Anruf, Terminbuchung. Mindestens eine Conversion-Aktion aktiv</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Conversions werden korrekt gezählt</strong></div><div class="cl-item-sub">Test-Conversion durchgeführt und in Google Ads sichtbar</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Google Analytics 4 verknüpft</strong></div><div class="cl-item-sub">GA4 mit Google Ads verbunden, Import aktiv</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Anruf-Tracking eingerichtet</strong></div><div class="cl-item-sub">Falls Telefon relevant: Google Forwarding Number oder Tag aktiv</div></div></div>
-        </div>
-        <div class="cl-tip">
-          <div class="cl-tip-label">Wichtig</div>
-          <div class="cl-tip-text">Prüfe in Google Ads unter <strong>Ziele → Conversions</strong>, ob deine Conversion-Aktionen den Status „Aktiv" und „Aufzeichnung" zeigen. Nicht nur „Keine aktuellen Conversions".</div>
-        </div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
+        <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
       </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-dsgvo">
+        <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *</label>
+      </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-nl">
+        <label for="g-nl">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</label>
+      </div>
+      <p class="gate-legal">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+      <button class="gate-btn" id="g-submit" onclick="submitGuideGate()">
+        <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Jetzt herunterladen
+      </button>
+      <div class="gate-fine">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
     </div>
-
-    <!-- PUNKT 2 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap"><div class="cl-number">2</div></div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Keywords</div>
-          <div class="cl-title">Keyword-Strategie &amp; Match Types</div>
-        </div>
-      </div>
-      <div class="cl-body">
-        <div class="cl-desc">Welche Keywords du bucht und wie du sie buchst, bestimmt, wer deine Anzeigen zu sehen bekommt. Falsch eingestellt, verbrennst du Budget für das falsche Publikum.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Match Types bewusst ausgewählt</strong></div><div class="cl-item-sub">Mix aus Exact und Phrase Match, kein unkontrollierter Broad Match</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Suchbegriffsbericht wöchentlich geprüft</strong></div><div class="cl-item-sub">Neue irrelevante Suchanfragen werden als Negatives hinzugefügt</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Negative-Keyword-Liste vorhanden</strong></div><div class="cl-item-sub">Allgemeine Ausschlüsse (kostenlos, Job, Ausbildung etc.) hinterlegt</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Keyword-Qualitätsfaktor geprüft</strong></div><div class="cl-item-sub">Keywords mit Qualitätsfaktor unter 5 identifiziert und optimiert</div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PUNKT 3 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap"><div class="cl-number">3</div></div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Struktur</div>
-          <div class="cl-title">Kampagnen- &amp; Anzeigengruppenstruktur</div>
-        </div>
-      </div>
-      <div class="cl-body">
-        <div class="cl-desc">Eine saubere Struktur ist die Voraussetzung dafür, dass deine Anzeigen zur Suchanfrage passen. Und dass du deine Daten sinnvoll auswerten kannst.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Suchnetzwerk von Display getrennt</strong></div><div class="cl-item-sub">Keine gemischten Kampagnen (Display deaktiviert in Suchkampagnen)</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Anzeigengruppen thematisch sauber</strong></div><div class="cl-item-sub">Eine Anzeigengruppe = ein Thema / eine Suchintention</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Kampagnen nach Zielen getrennt</strong></div><div class="cl-item-sub">Brand, generisch, Wettbewerb. In separaten Kampagnen</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Geo-Targeting korrekt konfiguriert</strong></div><div class="cl-item-sub">„Personen in meinen Zielregionen" (nicht Standard-Einstellung)</div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PUNKT 4 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap"><div class="cl-number">4</div></div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Anzeigen</div>
-          <div class="cl-title">Anzeigentexte &amp; Assets</div>
-        </div>
-      </div>
-      <div class="cl-body">
-        <div class="cl-desc">Deine Anzeige ist der erste Kontaktpunkt mit dem Nutzer. Relevanz, Klarheit und eine starke Handlungsaufforderung entscheiden über Klickrate und Conversion.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Mindestens 1 RSA pro Anzeigengruppe</strong></div><div class="cl-item-sub">Responsive Suchanzeige mit „Gut" oder „Ausgezeichnet" Anzeigenstärke</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Sitelinks ausgefüllt (mindestens 4)</strong></div><div class="cl-item-sub">Mit aussagekräftigen Titeln und Beschreibungen</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Callouts hinterlegt (mindestens 4)</strong></div><div class="cl-item-sub">USPs und Vorteile als kurze Stichpunkte</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Anruf-Asset aktiv (für Dienstleister)</strong></div><div class="cl-item-sub">Telefonnummer im Asset hinterlegt und korrekt</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Keyword im Anzeigentitel vorhanden</strong></div><div class="cl-item-sub">Mindestens ein Titel enthält das wichtigste Keyword</div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PUNKT 5 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap"><div class="cl-number">5</div></div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Budget &amp; Gebote</div>
-          <div class="cl-title">Gebotsstrategie &amp; Budget</div>
-        </div>
-      </div>
-      <div class="cl-body">
-        <div class="cl-desc">Die richtige Gebotsstrategie zur richtigen Zeit zu verwenden ist entscheidend. Zu früh auf Smart Bidding umzustellen kostet mehr als es bringt.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Gebotsstrategie zur Datenlage passend</strong></div><div class="cl-item-sub">Unter 30 Conv./Monat: Manuell CPC oder eCPC; darüber: Smart Bidding</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Tagesbudget realistisch kalkuliert</strong></div><div class="cl-item-sub">Budget hoch genug für statistisch aussagekräftige Daten</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Budget-Auslastung geprüft</strong></div><div class="cl-item-sub">Kampagnen laufen nicht dauerhaft im „begrenzt durch Budget"-Status</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Gebotsanpassungen sinnvoll gesetzt</strong></div><div class="cl-item-sub">Gerät, Standort, Tageszeit. Wo sinnvoll angepasst</div></div></div>
-        </div>
-        <div class="cl-tip">
-          <div class="cl-tip-label">Faustregel</div>
-          <div class="cl-tip-text">Dein Tagesbudget sollte mindestens <strong>dem 10-fachen deines Ziel-CPC</strong> entsprechen. Sonst bekommt deine Kampagne zu wenig Impressionen, um statistisch zu lernen.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PUNKT 6 -->
-    <div class="cl-point">
-      <div class="cl-point-header">
-        <div class="cl-number-wrap"><div class="cl-number">6</div></div>
-        <div class="cl-title-area">
-          <div class="cl-topic">Routine</div>
-          <div class="cl-title">Regelmäßige Optimierungsroutine</div>
-        </div>
-      </div>
-      <div class="cl-body">
-        <div class="cl-desc">Google Ads ist kein Set-and-Forget. Regelmäßige Pflege ist der Unterschied zwischen einem Konto, das wächst, und einem, das still und leise Budget verbrennt.</div>
-        <div class="cl-items">
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Wöchentlicher Suchbegriffsbericht</strong></div><div class="cl-item-sub">Neue irrelevante Begriffe als Negatives hinzufügen</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Monatliches Performance-Reporting</strong></div><div class="cl-item-sub">CTR, Conversion-Rate, CPA, ROAS. Trend beobachten</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Anzeigentests laufen regelmäßig</strong></div><div class="cl-item-sub">Immer mindestens 2 RSA-Varianten pro Anzeigengruppe testen</div></div></div>
-          <div class="cl-item"><div class="cl-checkbox"></div><div><div class="cl-item-text"><strong>Google-Empfehlungen kritisch geprüft</strong></div><div class="cl-item-sub">Nicht blind annehmen. Jede Empfehlung einzeln bewerten</div></div></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SCORE -->
-  <div class="score-page">
-    <div class="score-title">Wie steht dein Konto da?</div>
-    <div class="score-sub">Zähle deine Haken zusammen (max. 23 Punkte) und ordne dein Konto ein.</div>
-    <div class="score-grid">
-      <div class="score-card">
-        <div class="score-range">0 – 8</div>
-        <div class="score-label">Dringender Handlungsbedarf</div>
-        <div class="score-desc">Mehrere kritische Grundlagen fehlen. Budget wird ineffizient eingesetzt. Sofort anpacken.</div>
-      </div>
-      <div class="score-card">
-        <div class="score-range">9 – 16</div>
-        <div class="score-label">Solide Basis, Luft nach oben</div>
-        <div class="score-desc">Wichtige Grundlagen vorhanden, aber gezielte Optimierungen können viel herausholen.</div>
-      </div>
-      <div class="score-card">
-        <div class="score-range">17 – 23</div>
-        <div class="score-label">Gut aufgestellt</div>
-        <div class="score-desc">Dein Konto ist solide. Fokus auf Skalierung und feinere Optimierungsebenen.</div>
-      </div>
+    <div id="gate-success" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="font-size:48px;margin-bottom:1rem;">✅</div>
+      <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
+      <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach.</span></div>
+      <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
     </div>
   </div>
+</section>
 
-  <!-- CTA -->
-  <div class="cta-page">
-    <div class="cta-eyebrow">Nächster Schritt</div>
-    <div class="cta-h2">Punkte offen?<br>Lass uns <em>gemeinsam</em> schauen.</div>
-    <div class="cta-text">Wenn du offene Punkte in deiner Checkliste hast. Oder einfach wissen möchtest, was in deinem konkreten Konto möglich ist. Dann buche ein kostenloses 15-Minuten-Gespräch. Kein Verkaufsgespräch, kein Druck. Einfach schauen, ob und wie ich helfen kann.</div>
-    <a href="https://averiomedia.de/kontakt" class="cta-link">
-      Jetzt kontaktieren
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <div class="cta-note">Kostenlos · Unverbindlich · Direkt mit Marie</div>
-    <div class="cta-divider"></div>
-    <div class="cta-footer">
-      <div class="cta-footer-brand">Averio <span>Media</span> · Marie Böttiger</div>
-      <div class="cta-footer-url">averiomedia.de · kontakt@averiomedia.de</div>
-    </div>
-  </div>
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+  <p>Brauchst du Hilfe bei deinen Google Ads?</p>
+  <a href="/kontakt">Kostenloses Erstgespräch buchen →</a>
+  <div class="footer-copy">© 2026 Averio Media · Marie Böttiger</div>
+</footer>
 
-</div>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
+const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+const GUIDE_ID = 'guide-2';
+const GUIDE_TITLE = '6 Punkte Google Ads Checkliste';
+
+async function submitGuideGate() {
+  const name  = document.getElementById('g-name').value.trim();
+  const email = document.getElementById('g-email').value.trim();
+  const dsgvo = document.getElementById('g-dsgvo').checked;
+  const nl    = document.getElementById('g-nl').checked;
+
+  if (!name)  { alert('Bitte gib deinen Namen ein.'); return; }
+  if (!email || !email.includes('@')) { alert('Bitte gib eine gültige E-Mail-Adresse ein.'); return; }
+  if (!dsgvo) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+
+  const btn = document.getElementById('g-submit');
+  btn.innerHTML = 'Wird gesendet…';
+  btn.disabled = true;
+
+  try { localStorage.setItem('av_pendingGuide', GUIDE_ID); localStorage.setItem('av_pendingGuideName', name); } catch(e) {}
+
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fd.append('OPT_IN', '1');
+    fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI:', e); }
+
+  if (nl) {
+    try {
+      const nfd = new FormData();
+      nfd.append('EMAIL', email);
+      nfd.append('email_address_check', '');
+      nfd.append('locale', 'de');
+      nfd.append('OPT_IN', '1');
+      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+    } catch(e) { console.warn('Newsletter:', e); }
+  }
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular: 'Guide Download (Teaser-Seite)',
+        Name: name,
+        Email: email,
+        Guide: GUIDE_TITLE,
+        Newsletter: nl ? 'Ja' : 'Nein'
+      })
+    });
+  } catch(e) { console.warn('nForms:', e); }
+
+  document.getElementById('gate-form-area').style.display = 'none';
+  document.getElementById('gate-success').style.display = 'block';
+}
+</script>
+
 </body>
 </html>
-
-

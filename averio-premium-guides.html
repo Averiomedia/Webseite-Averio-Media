@@ -970,7 +970,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <div class="guide-new-badge">Neu</div>
       </div>
       <div class="guide-cta-row">
-        <a class="guide-btn primary" href="/guides/averio-guide-1-budgetfehler.html">
+        <a class="guide-btn primary" href="/guides/budgetfehler">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Kostenlos herunterladen
         </a>
@@ -1035,7 +1035,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <div class="guide-meta-item"><div class="guide-meta-dot"></div>Für Einsteiger</div>
       </div>
       <div class="guide-cta-row">
-        <a class="guide-btn primary" href="/guides/averio-guide-2-checkliste.html">
+        <a class="guide-btn primary" href="/guides/checkliste">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Kostenlos herunterladen
         </a>
@@ -1099,7 +1099,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <div class="guide-meta-item"><div class="guide-meta-dot"></div>Fortgeschrittene</div>
       </div>
       <div class="guide-cta-row">
-        <a class="guide-btn primary" href="/guides/averio-guide-3-optimierung.html">
+        <a class="guide-btn primary" href="/guides/optimierung">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Kostenlos herunterladen
         </a>
@@ -1164,7 +1164,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <div class="guide-meta-item"><div class="guide-meta-dot"></div>Excel + Google Sheets</div>
       </div>
       <div class="guide-cta-row">
-        <a class="guide-btn primary" href="/guides/averio-guide-4-negative-keywords.html">
+        <a class="guide-btn primary" href="/guides/negative-keywords">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Kostenlos herunterladen
         </a>
@@ -1237,7 +1237,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <div class="guide-meta-item"><div class="guide-meta-dot"></div>Step-by-Step</div>
       </div>
       <div class="guide-cta-row">
-        <a class="guide-btn primary" href="/guides/averio-guide-5-tracking.html">
+        <a class="guide-btn primary" href="/guides/tracking">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Kostenlos herunterladen
         </a>
@@ -1352,15 +1352,6 @@ const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q'
 //    „Averio Media Newsletter" ein (nicht beim Newsletter-Gate selbst –
 //    dort läuft die Anmeldung bereits über BREVO_FORM_URL).
 const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
-
-// ── Guide-URLs (direkter Zugang nach E-Mail-Eingabe)
-const GUIDE_URLS = {
-  'guide-1': 'guides//1-budgetfehler',
-  'guide-2': 'guides//2-checkliste',
-  'guide-3': 'guides//3-optimierung',
-  'guide-4': 'guides//4-negative-keywords',
-  'guide-5': 'guides//5-tracking',
-};
 
 // ── Guide gate logic
 let currentGuideId = '';

@@ -1,202 +1,184 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
+<title>Step-by-Step Google Ads Optimierung – Kostenloser Guide | Averio Media</title>
 <meta name="description" content="7-Schritte-Guide zur Google Ads Kampagnenoptimierung: Qualitätsfaktor, Gebote, Anzeigen, Negative Keywords. Kostenlos von Averio Media.">
-<!-- SEO -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
-<link rel="canonical" href="https://averiomedia.de/guides/averio-guide-3-optimierung">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://averiomedia.de/guides/optimierung">
 
-<!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://averiomedia.de/guides/averio-guide-3-optimierung">
+<meta property="og:url" content="https://averiomedia.de/guides/optimierung">
 <meta property="og:title" content="Step-by-Step Google Ads Optimierung – Kostenloser Guide | Averio Media">
 <meta property="og:description" content="7-Schritte-Guide zur Google Ads Kampagnenoptimierung: Qualitätsfaktor, Gebote, Anzeigen, Negative Keywords. Kostenlos von Averio Media.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Step-by-Step Google Ads Optimierung – Kostenloser Guide | Averio Media">
 <meta name="twitter:description" content="7-Schritte-Guide zur Google Ads Kampagnenoptimierung: Qualitätsfaktor, Gebote, Anzeigen, Negative Keywords. Kostenlos von Averio Media.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
-<title>Step-by-Step Kampagnenoptimierung – Averio Media Guide</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; line-height: 1.7; }
-.print-bar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: #1a1a1a; padding: 10px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+:root {
+  --g: #016B4F;
+  --g-light: rgba(1,107,79,.08);
+  --g-border: rgba(1,107,79,.25);
+  --dark: #0d0d0d;
+  --dark2: #1a1a1a;
+  --text: #1a1a1a;
+  --muted: #666;
+  --light-bg: #f5f5f3;
+  --card: #ffffff;
+  --border: #e8e8e6;
 }
-.print-bar-text { font-size: 12px; color: rgba(255,255,255,.5); }
-.print-bar-text strong { color: #fff; }
-.print-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #016B4F; color: #fff; border: none; border-radius: 100px;
-  padding: 8px 20px; font-size: 12px; font-weight: 700;
-  font-family: 'DM Sans', sans-serif; cursor: pointer;
-}
-.doc { max-width: 794px; margin: 60px auto 40px; background: #fff; box-shadow: 0 4px 40px rgba(0,0,0,.1); }
+html { scroll-behavior: smooth; }
+body { font-family: 'Figtree', sans-serif; background: var(--light-bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
-/* COVER */
-.cover {
-  background: #0d0d0d; padding: 64px;
+/* TOP BAR */
+.topbar {
+  background: var(--dark); padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.topbar-mark { width: 28px; height: 28px; background: var(--g); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.topbar-name { font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+.topbar-badge {
+  font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  background: var(--dark); padding: 72px 24px 64px;
   position: relative; overflow: hidden;
-  min-height: 480px; display: flex; flex-direction: column; justify-content: space-between;
 }
-.cover::before {
-  content: ''; position: absolute; top: -80px; right: -80px;
-  width: 420px; height: 420px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,107,79,.16), transparent 65%);
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -120px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(1,107,79,.12), transparent 65%);
+  pointer-events: none;
 }
-.cover-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; position: relative; z-index: 2; }
-.cover-logo-mark { width: 36px; height: 36px; background: #016B4F; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-.cover-logo-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
-.cover-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.08); color: #016B4F;
-  font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  padding: 5px 12px; border-radius: 100px; margin-bottom: 20px;
+.hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.1);
+  color: var(--g); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
 }
-.cover-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #016B4F; box-shadow: 0 0 6px #016B4F; }
-.cover-title {
-  font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800;
-  color: #fff; line-height: 1.05; letter-spacing: -.03em; margin-bottom: 18px; position: relative; z-index: 2;
+.hero-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--g); box-shadow: 0 0 6px var(--g); }
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #fff;
+  line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px;
 }
-.cover-title em { color: #016B4F; font-style: normal; }
-.cover-subtitle { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.75; max-width: 500px; position: relative; z-index: 2; margin-bottom: 48px; }
-.cover-meta { display: flex; gap: 28px; position: relative; z-index: 2; border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; }
-.cover-meta-item { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .04em; }
-.cover-meta-item strong { color: rgba(255,255,255,.65); font-weight: 600; }
+.hero h1 em { color: var(--g); font-style: normal; }
+.hero-desc { font-size: 16px; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 560px; margin-bottom: 40px; }
+.hero-stats { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+.hero-stat-num { font-size: 32px; font-weight: 800; color: var(--g); line-height: 1; }
+.hero-stat-label { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .06em; margin-top: 6px; }
 
-/* INTRO */
-.page-intro { padding: 44px 64px; background: #fafaf8; border-bottom: 1px solid #f0f0ee; }
-.page-intro-label { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #016B4F; font-weight: 700; margin-bottom: 14px; }
-.page-intro-text { font-size: 14px; color: #555; line-height: 1.85; max-width: 600px; }
-.page-intro-text strong { color: #1a1a1a; }
-
-/* STEP */
-.steps-section { padding: 48px 64px; }
-.step {
-  display: grid; grid-template-columns: 80px 1fr;
-  gap: 0 24px; margin-bottom: 48px; padding-bottom: 48px;
-  border-bottom: 1px solid #f0f0ee;
-  page-break-inside: avoid;
+/* INSIDE */
+.inside { padding: 72px 24px; }
+.inside-inner { max-width: 720px; margin: 0 auto; }
+.inside-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--g); font-weight: 700; margin-bottom: 12px; }
+.inside h2 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 32px; }
+.inside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.inside-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 18px 22px; font-size: 15px; color: #333; line-height: 1.6;
 }
-.step:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.step-left { display: flex; flex-direction: column; align-items: center; gap: 0; }
-.step-bubble {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: #0d0d0d;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.step-bubble-label { font-family: 'Syne', sans-serif; font-size: 8px; font-weight: 800; color: #016B4F; letter-spacing: .08em; text-transform: uppercase; }
-.step-bubble-num { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #fff; line-height: 1; }
-.step-connector { flex: 1; width: 1.5px; background: #ebebea; margin: 8px 0; min-height: 24px; }
-.step-right { padding-top: 8px; }
-.step-label { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: #bbb; font-weight: 700; margin-bottom: 6px; }
-.step-title { font-family: 'Syne', sans-serif; font-size: 19px; font-weight: 800; color: #1a1a1a; letter-spacing: -.02em; margin-bottom: 12px; line-height: 1.2; }
-.step-desc { font-size: 13px; color: #555; line-height: 1.85; margin-bottom: 18px; }
-
-/* Action list within step */
-.step-actions { display: flex; flex-direction: column; gap: 0; margin-bottom: 16px; }
-.step-action {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 10px 0; border-bottom: 1px solid #f5f5f3;
-  font-size: 13px; color: #333;
-}
-.step-action:last-child { border-bottom: none; }
-.step-action-icon {
-  width: 20px; height: 20px; flex-shrink: 0;
-  background: rgba(1,107,79,.08);
-  border-radius: 50%;
+.inside-check {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--g-light); border: 1px solid var(--g-border);
   display: flex; align-items: center; justify-content: center;
   margin-top: 1px;
 }
-.step-action-icon svg { display: block; }
-.step-action-text { line-height: 1.6; }
-.step-action-text strong { color: #1a1a1a; font-weight: 600; }
+.inside-check svg { width: 12px; height: 12px; }
 
-/* KPI box */
-.step-kpi {
-  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
+/* VALUE BOX */
+.value-box {
+  background: var(--dark); border-radius: 20px; padding: 36px;
+  margin-top: 48px; position: relative; overflow: hidden;
 }
-.kpi-tag {
-  background: #f5f5f3; border: 1px solid #ebebea;
-  border-radius: 100px; padding: 5px 12px;
-  font-size: 11px; color: #666; font-weight: 500;
+.value-box::before {
+  content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
 }
-.kpi-tag.highlight { background: rgba(1,107,79,.06); border-color: rgba(1,107,79,.2); color: #016B4F; font-weight: 600; }
+.value-box h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.value-box p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.8; }
 
-/* TIP */
-.step-tip {
-  background: #fff9f6; border: 1px solid rgba(1,107,79,.15);
-  border-left: 3px solid #016B4F; border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
+/* DOWNLOAD GATE */
+.gate-section { padding: 72px 24px 96px; }
+.gate-card {
+  max-width: 520px; margin: 0 auto;
+  background: var(--card); border: 1px solid var(--border); border-radius: 24px;
+  padding: 48px 40px; position: relative; overflow: hidden;
 }
-.step-tip-label { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: #016B4F; font-weight: 800; margin-bottom: 5px; }
-.step-tip-text { font-size: 12px; color: #444; line-height: 1.7; }
-.step-tip-text strong { color: #1a1a1a; }
-
-/* WARNING */
-.step-warn {
-  background: #fff8f0; border: 1px solid rgba(255,150,0,.2);
-  border-left: 3px solid #ff9500; border-radius: 0 8px 8px 0;
-  padding: 12px 16px; margin-top: 12px;
+.gate-card::before {
+  content: ''; position: absolute; top: -1px; left: 15%; right: 15%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
 }
-.step-warn-label { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: #cc7000; font-weight: 800; margin-bottom: 5px; }
-.step-warn-text { font-size: 12px; color: #555; line-height: 1.7; }
-
-/* TIMELINE */
-.timeline-page { padding: 44px 64px; background: #fafaf8; border-top: 1px solid #f0f0ee; page-break-before: always; }
-.timeline-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
-.timeline-sub { font-size: 13px; color: #888; margin-bottom: 28px; line-height: 1.6; }
-.timeline-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.timeline-card { background: #fff; border: 1px solid #ebebea; border-radius: 12px; padding: 16px; }
-.timeline-when { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #016B4F; font-weight: 700; margin-bottom: 8px; }
-.timeline-items { display: flex; flex-direction: column; gap: 6px; }
-.timeline-item { font-size: 11px; color: #555; display: flex; gap: 6px; align-items: flex-start; line-height: 1.5; }
-.timeline-dot { width: 4px; height: 4px; border-radius: 50%; background: #016B4F; flex-shrink: 0; margin-top: 5px; }
-
-/* CTA */
-.cta-page { background: #0d0d0d; padding: 56px 64px; }
-.cta-eyebrow { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(1,107,79,.7); font-weight: 700; margin-bottom: 20px; }
-.cta-h2 { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 14px; }
-.cta-h2 em { color: #016B4F; font-style: normal; }
-.cta-text { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.85; max-width: 460px; margin-bottom: 32px; }
-.cta-link { display: inline-flex; align-items: center; gap: 8px; background: #016B4F; color: #fff; text-decoration: none; border-radius: 100px; padding: 14px 28px; font-size: 13px; font-weight: 700; }
-.cta-note { font-size: 11px; color: rgba(255,255,255,.2); margin-top: 14px; }
-.cta-divider { height: 1px; background: rgba(255,255,255,.06); margin: 36px 0; }
-.cta-footer { display: flex; justify-content: space-between; align-items: center; }
-.cta-footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: rgba(255,255,255,.25); }
-.cta-footer-brand span { color: #016B4F; }
-.cta-footer-url { font-size: 11px; color: rgba(255,255,255,.2); }
-
-@media print {
-  .print-bar { display: none !important; }
-  body { background: #fff; }
-  .doc { max-width: 100%; margin: 0; box-shadow: none; }
-  .step { page-break-inside: avoid; }
-  .timeline-page { page-break-before: always; }
-  .cta-page { page-break-before: always; }
+.gate-icon { font-size: 40px; margin-bottom: 16px; }
+.gate-title { font-size: 24px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 8px; }
+.gate-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.gate-group { margin-bottom: 16px; }
+.gate-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: .03em; font-weight: 500; }
+.gate-input {
+  width: 100%; background: #f8f8f7; border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 16px; font-size: 15px; color: var(--text); font-family: 'Figtree', sans-serif;
+  outline: none; transition: border-color .2s;
 }
-@media (max-width: 860px) {
-  .doc { margin: 52px 0 0; }
-  .cover, .page-intro, .steps-section, .timeline-page, .cta-page { padding: 32px 24px; }
-  .step { grid-template-columns: 1fr; }
-  .step-left { flex-direction: row; align-items: center; margin-bottom: 16px; }
-  .step-connector { display: none; }
-  .timeline-grid { grid-template-columns: 1fr 1fr; }
+.gate-input:focus { border-color: var(--g); background: #fff; }
+.gate-input::placeholder { color: #bbb; }
+.gate-check { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
+.gate-check input { margin-top: 3px; accent-color: var(--g); flex-shrink: 0; }
+.gate-check label { font-size: 12px; color: #888; line-height: 1.55; }
+.gate-check label a { color: var(--g); text-decoration: none; }
+.gate-legal { font-size: 11px; color: #aaa; margin: 12px 0 4px; line-height: 1.5; }
+.gate-btn {
+  width: 100%; padding: 15px; background: var(--g); color: #fff;
+  border: none; border-radius: 100px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: 'Figtree', sans-serif;
+  box-shadow: 0 4px 20px rgba(1,107,79,.3);
+  transition: all .25s; margin-top: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.gate-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.45); }
+.gate-btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.gate-fine { font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; }
+
+/* FOOTER CTA */
+.footer-cta {
+  background: var(--dark); padding: 64px 24px; text-align: center;
+}
+.footer-cta p { font-size: 14px; color: rgba(255,255,255,.4); margin-bottom: 20px; }
+.footer-cta a {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--g); color: #fff; text-decoration: none;
+  padding: 14px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
+  transition: all .25s; font-family: 'Figtree', sans-serif;
+}
+.footer-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.4); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.2); margin-top: 32px; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 44px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat-num { font-size: 26px; }
+  .inside { padding: 48px 20px; }
+  .gate-card { padding: 36px 24px; }
+  .gate-section { padding: 48px 20px 64px; }
 }
 </style>
 
@@ -206,36 +188,25 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://averiomedia.de/guides//3-optimierung#article",
-      "headline": "Step-by-Step Kampagnenoptimierung",
-      "description": "Schritt-für-Schritt Google Ads Kampagnen optimieren: Budget, Keywords, Anzeigen, Gebote, Tracking.",
-      "url": "https://averiomedia.de/guides//3-optimierung",
-      "inLanguage": "de-DE",
-      "author": {
-        "@type": "Person",
-        "name": "Marie Böttiger",
-        "jobTitle": "Google Ads Freelancerin",
-        "url": "https://averiomedia.de/ueber-uns",
-        "worksFor": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
-        "knowsAbout": ["Google Ads", "B2B Marketing", "Suchmaschinenmarketing", "Conversion Tracking", "GA4", "Kampagnenoptimierung"]
+      "headline": "Step-by-Step Guide zur Kampagnenoptimierung",
+      "description": "7-Schritte-Guide zur Google Ads Kampagnenoptimierung: Qualitätsfaktor, Gebote, Anzeigen, Negative Keywords. Kostenlos von Averio Media.",
+      "author": { "@type": "Person", "name": "Marie Böttiger" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Averio Media",
+        "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/og-image.jpg" }
       },
-      "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de", "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/averio-media-logo.png" } },
       "datePublished": "2025-01-15",
-      "dateModified": "2026-06-23",
-      "mainEntityOfPage": "https://averiomedia.de/guides//3-optimierung",
-      "keywords": ["Google Ads Optimierung", "Kampagnenoptimierung", "Budget optimieren", "Keywords optimieren", "Anzeigen optimieren"],
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".step-title", ".step-desc"]
-      }
+      "dateModified": "2026-10-11",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de/" },
         { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://averiomedia.de/guides" },
-        { "@type": "ListItem", "position": 3, "name": "Kampagnenoptimierung" }
+        { "@type": "ListItem", "position": 3, "name": "Step-by-Step Kampagnenoptimierung" }
       ]
     }
   ]
@@ -244,350 +215,160 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f5f3; color: #1a1a1a; 
 </head>
 <body>
 
-<div class="print-bar">
-  <span class="print-bar-text"><strong>Averio Media Guide</strong> · Als PDF speichern: Drucken → Ziel: PDF speichern</span>
-  <button class="print-btn" onclick="window.print()">
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4V1h6v3M2 4h8a1 1 0 011 1v3H1V5a1 1 0 011-1zM3 8v3h6V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Als PDF speichern
-  </button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <a class="topbar-brand" href="/">
+    <div class="topbar-mark">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10L7 3l5 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span class="topbar-name">Averio Media</span>
+  </a>
+  <span class="topbar-badge">Kostenloser Guide 03</span>
 </div>
 
-<div class="doc">
-
-  <!-- COVER -->
-  <div class="cover">
-    <div>
-      <div class="cover-logo">
-        <div class="cover-logo-mark">
-          <svg viewBox="0 0 36 36" fill="none" width="22" height="22">
-            <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
-            <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
-        <span class="cover-logo-name">Averio Media</span>
-      </div>
-      <div class="cover-badge"><div class="cover-badge-dot"></div>Guide für Fortgeschrittene</div>
-      <div class="cover-title">Step-by-Step Guide<br>zur <em>Kampagnen&shy;optimierung</em> —<br>mehr aus deinem Budget holen</div>
-      <div class="cover-subtitle">7 konkrete Schritte, wie du bestehende Google Ads Kampagnen systematisch verbesserst. Mit klaren Handlungsempfehlungen für jeden Bereich.</div>
-    </div>
-    <div class="cover-meta">
-      <div class="cover-meta-item"><strong>Niveau</strong><br>Fortgeschrittene</div>
-      <div class="cover-meta-item"><strong>Format</strong><br>Step-by-Step · 7 Schritte</div>
-      <div class="cover-meta-item"><strong>Von</strong><br>Marie Böttiger, Averio Media</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Kostenlos · Direkt nutzbar</div>
+    <h1>Step-by-Step Guide zur<br><em>Kampagnen­optimierung</em></h1>
+    <p class="hero-desc">7 konkrete Schritte, wie du bestehende Google Ads Kampagnen systematisch verbesserst. Mit klaren Handlungsempfehlungen für jeden Bereich.</p>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">7</div><div class="hero-stat-label">Schritte</div></div>
+      <div><div class="hero-stat-num">10</div><div class="hero-stat-label">Seiten</div></div>
+      <div><div class="hero-stat-num">50–60%</div><div class="hero-stat-label">weniger CPC</div></div>
     </div>
   </div>
+</section>
 
-  <!-- INTRO -->
-  <div class="page-intro">
-    <div class="page-intro-label">Was dieser Guide leistet</div>
-    <div class="page-intro-text">
-      Google Ads aufsetzen ist der einfache Teil. <strong>Kampagnen wirklich zu optimieren</strong>. Systematisch, datenbasiert, ohne Bauchgefühl. Das ist das, was den Unterschied zwischen „Konto läuft so" und „Konto liefert verlässlich Leads" macht. Dieser Guide zeigt dir jeden Schritt, in der richtigen Reihenfolge, mit konkreten Metriken und Schwellenwerten. Kein Agentur-Sprech, nur das was ich selbst wöchentlich anwende.
+<!-- WAS DRIN IST -->
+<section class="inside">
+  <div class="inside-inner">
+    <div class="inside-label">Inhalt</div>
+    <h2>Die 7 Schritte im Überblick</h2>
+    <ul class="inside-list">
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Performance-Daten analysieren & Ausgangssituation verstehen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Suchbegriffsbericht auswerten & Keywords bereinigen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Anzeigentexte analysieren & schwache Varianten ersetzen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Qualitätsfaktor verbessern, Klickkosten senken</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Landing Page für Conversions optimieren</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Gebotsstrategien anpassen & Budget effizient verteilen</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Testen, skalieren & Routine aufbauen</span></li>
+    </ul>
+    <div class="value-box">
+      <h3>Für wen ist dieser Guide?</h3>
+      <p>Für Fortgeschrittene mit laufenden Kampagnen. Du hast schon Traffic, aber die Leads kommen nicht zuverlässig? Dann ist dieser Guide für dich.</p>
     </div>
   </div>
+</section>
 
-  <!-- STEPS -->
-  <div class="steps-section">
-
-    <!-- STEP 1 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">01</div></div>
-        <div class="step-connector"></div>
+<!-- DOWNLOAD GATE -->
+<section class="gate-section">
+  <div class="gate-card" id="gate-card">
+    <div id="gate-form-area">
+      <div class="gate-icon">📥</div>
+      <div class="gate-title">Guide kostenlos laden</div>
+      <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-name">Dein Name *</label>
+        <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
       </div>
-      <div class="step-right">
-        <div class="step-label">Analyse</div>
-        <div class="step-title">Performance-Daten analysieren &amp; Ausgangssituation verstehen</div>
-        <div class="step-desc">Bevor du irgendetwas änderst, brauchst du ein klares Bild der Ausgangslage. Optimierung ohne Analyse ist Raten. Schau dir immer mindestens 30 Tage Daten an. Bei kleinen Budgets 60–90 Tage.</div>
-        <div class="step-kpi">
-          <span class="kpi-tag highlight">CTR (Klickrate)</span>
-          <span class="kpi-tag highlight">Conversion-Rate</span>
-          <span class="kpi-tag highlight">CPA (Kosten pro Conversion)</span>
-          <span class="kpi-tag">Impressions</span>
-          <span class="kpi-tag">Qualitätsfaktor</span>
-        </div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Segmentiere nach Kampagne, Anzeigengruppe, Keyword.</strong> Welcher Bereich hat die schlechteste Performance?</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Prüfe Conversion-Daten auf Plausibilität.</strong> Werden Conversions korrekt gezählt? Kein Doppel-Tracking?</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Identifiziere die Top-5-Ausgaben-Keywords</strong> und ihren jeweiligen CPA. Lohnt sich jeder dieser Keywords?</div>
-          </div>
-        </div>
-        <div class="step-tip">
-          <div class="step-tip-label">Referenzwerte</div>
-          <div class="step-tip-text">CTR Suchnetzwerk B2B: <strong>3–7 %</strong> ist solide. Darunter: Anzeigenrelevanz prüfen. Conversion-Rate Leadgen: <strong>2–8 %</strong>. Je nach Branche und Landing Page.</div>
-        </div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
+        <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
       </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-dsgvo">
+        <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *</label>
+      </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-nl">
+        <label for="g-nl">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</label>
+      </div>
+      <p class="gate-legal">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+      <button class="gate-btn" id="g-submit" onclick="submitGuideGate()">
+        <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Jetzt herunterladen
+      </button>
+      <div class="gate-fine">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
     </div>
-
-    <!-- STEP 2 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">02</div></div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Keywords</div>
-        <div class="step-title">Suchbegriffsbericht auswerten &amp; Keywords bereinigen</div>
-        <div class="step-desc">Der Suchbegriffsbericht ist die Goldgrube der Optimierung. Hier siehst du, für welche echten Suchanfragen deine Anzeigen ausgespielt wurden. Und was du davon ausschließen oder behalten solltest.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Öffne: Kampagnen → Keywords → Suchbegriffe.</strong> Zeitraum: letzte 30 Tage.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Markiere alle irrelevanten Begriffe</strong> (Ausbildung, kostenlos, Job, Forum, Wikipedia) → Als negatives Keyword hinzufügen.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Identifiziere gut performende Begriffe</strong> → Als eigene Exact-Match-Keywords hinzufügen und gezielt bieten.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Keywords mit hohen Kosten &amp; null Conversions</strong> pausieren oder ausschließen (nach ausreichend Daten, mind. 50–100 Klicks).</div>
-          </div>
-        </div>
-        <div class="step-warn">
-          <div class="step-warn-label">Achtung</div>
-          <div class="step-warn-text">Pausiere ein Keyword nie nach nur 5–10 Klicks. Warte auf ausreichend Daten. Faustregel: <strong>50 Klicks ohne Conversion</strong> = klares Signal zum Handeln.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">03</div></div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Anzeigen</div>
-        <div class="step-title">Anzeigentexte analysieren &amp; schwache Varianten ersetzen</div>
-        <div class="step-desc">Deine Anzeige ist der erste Eindruck. Eine schlechte Anzeige bedeutet: niedrige CTR, schlechter Qualitätsfaktor, höhere Klickkosten. Immer zwei Varianten laufen lassen und kontinuierlich testen.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Prüfe „Anzeigenstärke" jeder RSA.</strong> Ziel: „Gut" oder „Ausgezeichnet". „Schwach" sofort überarbeiten.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Titel-Formel: Keyword + Benefit + Call-to-Action.</strong> Beispiel: „Hausverwaltung München | Persönliche Betreuung | Jetzt anfragen"</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Unterschiedliche Winkelpunkte testen:</strong> Preis vs. Qualität, Geschwindigkeit vs. Sicherheit, Problem vs. Lösung.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Assets vollständig ausfüllen:</strong> 4+ Sitelinks, 4+ Callouts, Snippets, Anruf-Asset. Jeden Slot nutzen.</div>
-          </div>
-        </div>
-        <div class="step-tip">
-          <div class="step-tip-label">Pro-Tipp</div>
-          <div class="step-tip-text">Nutze im ersten Titel immer das <strong>Haupt-Keyword der Anzeigengruppe</strong>. Google fett das Keyword in der Anzeige hervor, wenn es mit der Suchanfrage übereinstimmt. Das steigert die CTR messbar.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 4 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">04</div></div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Qualitätsfaktor</div>
-        <div class="step-title">Qualitätsfaktor verbessern. Klickkosten senken</div>
-        <div class="step-desc">Der Qualitätsfaktor (1–10) bestimmt maßgeblich deinen tatsächlichen CPC. Ein Qualitätsfaktor von 8 kann bedeuten, dass du 50–60 % weniger pro Klick zahlst als ein Wettbewerber mit Qualitätsfaktor 4. Bei gleicher Position.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Zeige Qualitätsfaktor-Spalte an</strong> (Keywords-Ansicht → Spalten → Qualitätsfaktor). Filtere auf unter 7.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Erwartete CTR niedrig?</strong> → Anzeigentext überarbeiten, Keyword prominenter einsetzen.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Anzeigenrelevanz niedrig?</strong> → Keyword und Anzeigentext thematisch enger zusammenbringen.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Landing Page-Relevanz niedrig?</strong> → Stelle sicher, dass das Keyword auf der Landing Page vorkommt und der Inhalt zur Suchanfrage passt.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 5 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">05</div></div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Landing Page</div>
-        <div class="step-title">Landing Page für Conversions optimieren</div>
-        <div class="step-desc">Google Ads bringt Klicks. Aber die Landing Page entscheidet, ob daraus Leads werden. Selbst die beste Kampagne kann eine schlechte Landing Page nicht retten. Das ist der meistunterschätzte Hebel.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Übereinstimmung prüfen:</strong> Anzeige verspricht X → Landing Page liefert genau X (gleiche Sprache, gleiches Angebot).</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Call-to-Action above the fold:</strong> Der wichtigste CTA (Formular, Button, Telefon) muss ohne scrollen sichtbar sein.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Ladezeit prüfen:</strong> Jede Sekunde über 3 Sekunden kostet ca. 20 % Conversion-Rate. Google PageSpeed Insights nutzen.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Vertrauen aufbauen:</strong> Referenzen, Kundenstimmen, Zertifikate, Fotos. Direkt auf der Landing Page sichtbar.</div>
-          </div>
-        </div>
-        <div class="step-tip">
-          <div class="step-tip-label">Schnell-Test</div>
-          <div class="step-tip-text">Zeig jemandem deine Landing Page für <strong>5 Sekunden</strong>. Kann er danach sagen: Was wird angeboten? Für wen? Was soll ich tun? Wenn nicht. Sofort überarbeiten.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 6 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">06</div></div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Gebote</div>
-        <div class="step-title">Gebotsstrategien anpassen &amp; Budget effizient verteilen</div>
-        <div class="step-desc">Mit genug Conversiondaten kann Smart Bidding sehr effektiv arbeiten. Ohne Daten ist es teuer. Die Kunst liegt darin, zum richtigen Zeitpunkt auf die richtige Strategie umzustellen.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Unter 30 Conv./Monat:</strong> Manuell CPC oder erweiterter CPC. Kein Smart Bidding.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>30–50 Conv./Monat:</strong> „Conversions maximieren" testen. Mit realistischem Tagesbudget, kein Ziel-CPA in der Anfangsphase.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>50+ Conv./Monat:</strong> Ziel-CPA oder Ziel-ROAS einsetzen. Ziel-CPA = realistisch kalkulierter Wert, nicht Wunschzahl.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Budget-Verteilung prüfen:</strong> Gut performende Kampagnen mehr Budget geben, schwache drosseln oder pausieren.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 7 -->
-    <div class="step">
-      <div class="step-left">
-        <div class="step-bubble"><div class="step-bubble-label">Step</div><div class="step-bubble-num">07</div></div>
-      </div>
-      <div class="step-right">
-        <div class="step-label">Skalierung</div>
-        <div class="step-title">Testen, skalieren &amp; Routine aufbauen</div>
-        <div class="step-desc">Einmalige Optimierung bringt einmalige Verbesserung. Kontinuierliche Optimierung bringt Wachstum. Der letzte Schritt ist, eine Routine zu etablieren, die du wirklich durchhältst.</div>
-        <div class="step-actions">
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Immer nur eine Änderung gleichzeitig testen</strong>. Sonst weißt du nicht, was geholfen hat.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Änderungen im Änderungsverlauf dokumentieren</strong>. So erkennst du Ursache-Wirkung bei Performance-Veränderungen.</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Wöchentlich: 30 Min. Pflege</strong> (Keywords, Anzeigen). Monatlich: 90 Min. Deep Dive (Struktur, Gebote, Budget).</div>
-          </div>
-          <div class="step-action">
-            <div class="step-action-icon"><svg width="10" height="10" fill="none" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#016B4F"/></svg></div>
-            <div class="step-action-text"><strong>Erfolgreiche Kampagnen nicht anfassen.</strong> „Never touch a running system" gilt. Bis Daten klar zeigen, dass Optimierung nötig ist.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- TIMELINE -->
-  <div class="timeline-page">
-    <div class="timeline-title">Dein Optimierungs-Rhythmus auf einen Blick</div>
-    <div class="timeline-sub">Was machst du wann. Damit dein Konto dauerhaft gut läuft.</div>
-    <div class="timeline-grid">
-      <div class="timeline-card">
-        <div class="timeline-when">Täglich</div>
-        <div class="timeline-items">
-          <div class="timeline-item"><div class="timeline-dot"></div>Budget-Auslastung prüfen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Conversion-Tracking aktiv?</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Anomalien erkennen</div>
-        </div>
-      </div>
-      <div class="timeline-card">
-        <div class="timeline-when">Wöchentlich</div>
-        <div class="timeline-items">
-          <div class="timeline-item"><div class="timeline-dot"></div>Suchbegriffsbericht</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Negatives hinzufügen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Anzeigenperformance</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Gebote grob prüfen</div>
-        </div>
-      </div>
-      <div class="timeline-card">
-        <div class="timeline-when">Monatlich</div>
-        <div class="timeline-items">
-          <div class="timeline-item"><div class="timeline-dot"></div>Keyword-Analyse</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Gebotsstrategie anpassen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Anzeigentest auswerten</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Landing Page prüfen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Reporting erstellen</div>
-        </div>
-      </div>
-      <div class="timeline-card">
-        <div class="timeline-when">Quartalsweise</div>
-        <div class="timeline-items">
-          <div class="timeline-item"><div class="timeline-dot"></div>Strategie überprüfen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Strukturelle Änderungen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Budget neu verteilen</div>
-          <div class="timeline-item"><div class="timeline-dot"></div>Wettbewerb analysieren</div>
-        </div>
-      </div>
+    <div id="gate-success" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="font-size:48px;margin-bottom:1rem;">✅</div>
+      <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
+      <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach.</span></div>
+      <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
     </div>
   </div>
+</section>
 
-  <!-- CTA -->
-  <div class="cta-page">
-    <div class="cta-eyebrow">Nächster Schritt</div>
-    <div class="cta-h2">Optimierung ist <em>Handwerk</em> —<br>nicht Zauberei.</div>
-    <div class="cta-text">Du hast jetzt das Handwerkszeug. Wenn du es lieber in erfahrene Hände geben möchtest. Oder wenn du willst, dass ich einmal draufschaue, was in deinem Konto konkret steckt. Dann buchen wir einfach ein kostenloses Gespräch.</div>
-    <a href="https://averiomedia.de/kontakt" class="cta-link">
-      Jetzt kontaktieren
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <div class="cta-note">Kostenlos · Unverbindlich · Direkt mit Marie</div>
-    <div class="cta-divider"></div>
-    <div class="cta-footer">
-      <div class="cta-footer-brand">Averio <span>Media</span> · Marie Böttiger</div>
-      <div class="cta-footer-url">averiomedia.de · kontakt@averiomedia.de</div>
-    </div>
-  </div>
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+  <p>Brauchst du Hilfe bei deinen Google Ads?</p>
+  <a href="/kontakt">Kostenloses Erstgespräch buchen →</a>
+  <div class="footer-copy">© 2026 Averio Media · Marie Böttiger</div>
+</footer>
 
-</div>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
+const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+const GUIDE_ID = 'guide-3';
+const GUIDE_TITLE = 'Step-by-Step Kampagnenoptimierung';
+
+async function submitGuideGate() {
+  const name  = document.getElementById('g-name').value.trim();
+  const email = document.getElementById('g-email').value.trim();
+  const dsgvo = document.getElementById('g-dsgvo').checked;
+  const nl    = document.getElementById('g-nl').checked;
+
+  if (!name)  { alert('Bitte gib deinen Namen ein.'); return; }
+  if (!email || !email.includes('@')) { alert('Bitte gib eine gültige E-Mail-Adresse ein.'); return; }
+  if (!dsgvo) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+
+  const btn = document.getElementById('g-submit');
+  btn.innerHTML = 'Wird gesendet…';
+  btn.disabled = true;
+
+  try { localStorage.setItem('av_pendingGuide', GUIDE_ID); localStorage.setItem('av_pendingGuideName', name); } catch(e) {}
+
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fd.append('OPT_IN', '1');
+    fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI:', e); }
+
+  if (nl) {
+    try {
+      const nfd = new FormData();
+      nfd.append('EMAIL', email);
+      nfd.append('email_address_check', '');
+      nfd.append('locale', 'de');
+      nfd.append('OPT_IN', '1');
+      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+    } catch(e) { console.warn('Newsletter:', e); }
+  }
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular: 'Guide Download (Teaser-Seite)',
+        Name: name,
+        Email: email,
+        Guide: GUIDE_TITLE,
+        Newsletter: nl ? 'Ja' : 'Nein'
+      })
+    });
+  } catch(e) { console.warn('nForms:', e); }
+
+  document.getElementById('gate-form-area').style.display = 'none';
+  document.getElementById('gate-success').style.display = 'block';
+}
+</script>
+
 </body>
 </html>
-
-

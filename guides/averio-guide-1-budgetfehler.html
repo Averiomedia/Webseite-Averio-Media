@@ -1,409 +1,184 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="jFGC69MfEhZ9O3P9BA9rQZNZ8BiQnLwm8tjbjpLkxxc" />
+<title>10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide | Averio Media</title>
 <meta name="description" content="Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen. Und wie du sie ab sofort vermeidest. Von Averio Media.">
-<!-- SEO -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Marie Böttiger – Averio Media">
-<link rel="canonical" href="https://averiomedia.de/guides/averio-guide-1-budgetfehler">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://averiomedia.de/guides/budgetfehler">
 
-<!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://averiomedia.de/guides/averio-guide-1-budgetfehler">
+<meta property="og:url" content="https://averiomedia.de/guides/budgetfehler">
 <meta property="og:title" content="10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide | Averio Media">
 <meta property="og:description" content="Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen. Und wie du sie ab sofort vermeidest. Von Averio Media.">
 <meta property="og:image" content="https://averiomedia.de/og-image.jpg">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Averio Media">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide | Averio Media">
 <meta name="twitter:description" content="Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen. Und wie du sie ab sofort vermeidest. Von Averio Media.">
 <meta name="twitter:image" content="https://averiomedia.de/og-image.jpg">
-<title>10 Budgetvernichtende Fehler – Averio Media Guide</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+
 <style>
-/* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body {
-  font-family: 'Figtree', sans-serif;
-  background: #f5f5f3;
-  color: #1a1a1a;
-  line-height: 1.7;
+:root {
+  --g: #016B4F;
+  --g-light: rgba(1,107,79,.08);
+  --g-border: rgba(1,107,79,.25);
+  --dark: #0d0d0d;
+  --dark2: #1a1a1a;
+  --text: #1a1a1a;
+  --muted: #666;
+  --light-bg: #f5f5f3;
+  --card: #ffffff;
+  --border: #e8e8e6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Figtree', sans-serif; background: var(--light-bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* TOP BAR */
+.topbar {
+  background: var(--dark); padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.topbar-mark { width: 28px; height: 28px; background: var(--g); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.topbar-name { font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+.topbar-badge {
+  font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase;
 }
 
-/* ── PRINT BUTTON ── */
-.print-bar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: #1a1a1a;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+/* HERO */
+.hero {
+  background: var(--dark); padding: 72px 24px 64px;
+  position: relative; overflow: hidden;
 }
-.print-bar-text { font-size: 12px; color: rgba(255,255,255,.5); }
-.print-bar-text strong { color: #fff; }
-.print-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #016B4F;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  padding: 8px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: 'Figtree', sans-serif;
-  cursor: pointer;
-  transition: all .2s;
-}
-.print-btn:hover { background: #e04300; }
-
-/* ── DOCUMENT ── */
-.doc {
-  max-width: 794px;
-  margin: 60px auto 40px;
-  background: #fff;
-  box-shadow: 0 4px 40px rgba(0,0,0,.1);
-}
-
-/* ── COVER ── */
-.cover {
-  background: #0d0d0d;
-  padding: 64px 64px 56px;
-  position: relative;
-  overflow: hidden;
-  page-break-after: always;
-  min-height: 540px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.cover::before {
-  content: '';
-  position: absolute;
-  top: -120px; right: -120px;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,107,79,.18), transparent 65%);
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -120px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(1,107,79,.12), transparent 65%);
   pointer-events: none;
 }
-.cover::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -80px;
-  width: 350px; height: 350px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,107,79,.08), transparent 65%);
-  pointer-events: none;
+.hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.1);
+  color: var(--g); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
 }
-.cover-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 48px;
-  position: relative;
-  z-index: 2;
+.hero-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--g); box-shadow: 0 0 6px var(--g); }
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #fff;
+  line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px;
 }
-.cover-logo-mark {
-  width: 36px; height: 36px;
-  background: #016B4F;
-  border-radius: 8px;
+.hero h1 em { color: var(--g); font-style: normal; }
+.hero-desc { font-size: 16px; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 560px; margin-bottom: 40px; }
+.hero-stats { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+.hero-stat-num { font-size: 32px; font-weight: 800; color: var(--g); line-height: 1; }
+.hero-stat-label { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .06em; margin-top: 6px; }
+
+/* INSIDE */
+.inside { padding: 72px 24px; }
+.inside-inner { max-width: 720px; margin: 0 auto; }
+.inside-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--g); font-weight: 700; margin-bottom: 12px; }
+.inside h2 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 32px; }
+.inside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.inside-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 18px 22px; font-size: 15px; color: #333; line-height: 1.6;
+}
+.inside-check {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--g-light); border: 1px solid var(--g-border);
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
+  margin-top: 1px;
 }
-.cover-logo-name {
-  font-family: 'Figtree', sans-serif;
-  font-size: 15px; font-weight: 800;
-  color: #fff; letter-spacing: -.02em;
-}
-.cover-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid rgba(1,107,79,.35);
-  background: rgba(1,107,79,.08);
-  color: #016B4F;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  margin-bottom: 24px;
-}
-.cover-badge-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #016B4F;
-  box-shadow: 0 0 6px #016B4F;
-}
-.cover-title {
-  font-family: 'Figtree', sans-serif;
-  font-size: 38px; font-weight: 800;
-  color: #fff;
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  margin-bottom: 20px;
-  position: relative; z-index: 2;
-}
-.cover-title em { color: #016B4F; font-style: normal; }
-.cover-subtitle {
-  font-size: 14px; color: rgba(255,255,255,.55);
-  line-height: 1.75; max-width: 520px;
-  position: relative; z-index: 2;
-  margin-bottom: 48px;
-}
-.cover-meta {
-  display: flex;
-  gap: 28px;
-  position: relative; z-index: 2;
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 20px;
-}
-.cover-meta-item {
-  font-size: 11px; color: rgba(255,255,255,.3);
-  letter-spacing: .04em;
-}
-.cover-meta-item strong { color: rgba(255,255,255,.65); font-weight: 600; }
+.inside-check svg { width: 12px; height: 12px; }
 
-/* ── PAGE (content pages) ── */
-.page {
-  padding: 56px 64px;
-  page-break-inside: avoid;
+/* VALUE BOX */
+.value-box {
+  background: var(--dark); border-radius: 20px; padding: 36px;
+  margin-top: 48px; position: relative; overflow: hidden;
 }
-.page + .page {
-  border-top: 1px solid #f0f0ee;
+.value-box::before {
+  content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
 }
-.page-intro {
-  padding: 48px 64px 40px;
-  border-bottom: 1px solid #f0f0ee;
-  background: #fafaf8;
-}
-.page-intro-label {
-  font-size: 10px; letter-spacing: .18em;
-  text-transform: uppercase; color: #016B4F;
-  font-weight: 700; margin-bottom: 16px;
-}
-.page-intro-text {
-  font-size: 15px; color: #555; line-height: 1.85;
-  max-width: 620px;
-}
-.page-intro-text strong { color: #1a1a1a; font-weight: 600; }
+.value-box h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.value-box p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.8; }
 
-/* ── SECTION HEADER ── */
-.section-hdr {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 36px;
+/* DOWNLOAD GATE */
+.gate-section { padding: 72px 24px 96px; }
+.gate-card {
+  max-width: 520px; margin: 0 auto;
+  background: var(--card); border: 1px solid var(--border); border-radius: 24px;
+  padding: 48px 40px; position: relative; overflow: hidden;
 }
-.section-hdr-line {
-  flex: 1;
-  height: 1px;
-  background: #ebebea;
+.gate-card::before {
+  content: ''; position: absolute; top: -1px; left: 15%; right: 15%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--g), transparent);
 }
-.section-hdr-label {
-  font-size: 10px; letter-spacing: .18em;
-  text-transform: uppercase; color: #bbb; font-weight: 600;
+.gate-icon { font-size: 40px; margin-bottom: 16px; }
+.gate-title { font-size: 24px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 8px; }
+.gate-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.gate-group { margin-bottom: 16px; }
+.gate-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: .03em; font-weight: 500; }
+.gate-input {
+  width: 100%; background: #f8f8f7; border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 16px; font-size: 15px; color: var(--text); font-family: 'Figtree', sans-serif;
+  outline: none; transition: border-color .2s;
 }
+.gate-input:focus { border-color: var(--g); background: #fff; }
+.gate-input::placeholder { color: #bbb; }
+.gate-check { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
+.gate-check input { margin-top: 3px; accent-color: var(--g); flex-shrink: 0; }
+.gate-check label { font-size: 12px; color: #888; line-height: 1.55; }
+.gate-check label a { color: var(--g); text-decoration: none; }
+.gate-legal { font-size: 11px; color: #aaa; margin: 12px 0 4px; line-height: 1.5; }
+.gate-btn {
+  width: 100%; padding: 15px; background: var(--g); color: #fff;
+  border: none; border-radius: 100px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: 'Figtree', sans-serif;
+  box-shadow: 0 4px 20px rgba(1,107,79,.3);
+  transition: all .25s; margin-top: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.gate-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.45); }
+.gate-btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.gate-fine { font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; }
 
-/* ── ERROR ITEM ── */
-.error-item {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 0 24px;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #f0f0ee;
-  page-break-inside: avoid;
+/* FOOTER CTA */
+.footer-cta {
+  background: var(--dark); padding: 64px 24px; text-align: center;
 }
-.error-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.error-num {
-  font-family: 'Figtree', sans-serif;
-  font-size: 11px; font-weight: 800;
-  color: #016B4F;
-  letter-spacing: .08em;
-  padding-top: 4px;
-  border-right: 2px solid #016B4F;
-  padding-right: 16px;
-  text-align: right;
-  height: fit-content;
-  line-height: 1;
-  padding-top: 6px;
+.footer-cta p { font-size: 14px; color: rgba(255,255,255,.4); margin-bottom: 20px; }
+.footer-cta a {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--g); color: #fff; text-decoration: none;
+  padding: 14px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
+  transition: all .25s; font-family: 'Figtree', sans-serif;
 }
-.error-body { }
-.error-title {
-  font-family: 'Figtree', sans-serif;
-  font-size: 17px; font-weight: 800;
-  color: #1a1a1a; margin-bottom: 10px;
-  letter-spacing: -.02em; line-height: 1.2;
-}
-.error-desc {
-  font-size: 13px; color: #666;
-  line-height: 1.8; margin-bottom: 14px;
-}
-.error-fix {
-  background: #fff9f6;
-  border: 1px solid rgba(1,107,79,.15);
-  border-left: 3px solid #016B4F;
-  border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
-}
-.error-fix-label {
-  font-size: 9px; letter-spacing: .14em;
-  text-transform: uppercase; color: #016B4F;
-  font-weight: 800; margin-bottom: 6px;
-}
-.error-fix-text {
-  font-size: 12px; color: #444; line-height: 1.7;
-}
-.error-fix-text strong { color: #1a1a1a; }
+.footer-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.4); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.2); margin-top: 32px; }
 
-/* ── SEVERITY BADGE ── */
-.severity {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-.severity.high { background: rgba(1,107,79,.1); color: #016B4F; }
-.severity.medium { background: rgba(255,180,0,.1); color: #cc8800; }
-.severity-dot { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
-
-/* ── CTA PAGE ── */
-.cta-page {
-  background: #0d0d0d;
-  padding: 56px 64px;
-  page-break-before: always;
-}
-.cta-eyebrow {
-  font-size: 10px; letter-spacing: .18em;
-  text-transform: uppercase; color: rgba(1,107,79,.7);
-  font-weight: 700; margin-bottom: 20px;
-}
-.cta-h2 {
-  font-family: 'Figtree', sans-serif;
-  font-size: 28px; font-weight: 800;
-  color: #fff; letter-spacing: -.03em;
-  line-height: 1.1; margin-bottom: 14px;
-}
-.cta-h2 em { color: #016B4F; font-style: normal; }
-.cta-text {
-  font-size: 13px; color: rgba(255,255,255,.5);
-  line-height: 1.85; max-width: 480px;
-  margin-bottom: 32px;
-}
-.cta-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #016B4F;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 100px;
-  padding: 14px 28px;
-  font-size: 13px; font-weight: 700;
-}
-.cta-note {
-  font-size: 11px; color: rgba(255,255,255,.2);
-  margin-top: 16px;
-}
-.cta-divider {
-  height: 1px; background: rgba(255,255,255,.06);
-  margin: 36px 0;
-}
-.cta-footer {
-  display: flex; justify-content: space-between;
-  align-items: center;
-}
-.cta-footer-brand {
-  font-family: 'Figtree', sans-serif;
-  font-size: 13px; font-weight: 800;
-  color: rgba(255,255,255,.25);
-}
-.cta-footer-brand span { color: #016B4F; }
-.cta-footer-url {
-  font-size: 11px; color: rgba(255,255,255,.2);
-}
-
-/* ── CHECKLIST SUMMARY (last page before CTA) ── */
-.summary-page {
-  padding: 48px 64px;
-  background: #fafaf8;
-  page-break-before: always;
-}
-.summary-title {
-  font-family: 'Figtree', sans-serif;
-  font-size: 18px; font-weight: 800;
-  color: #1a1a1a; margin-bottom: 6px;
-}
-.summary-sub {
-  font-size: 12px; color: #888;
-  margin-bottom: 28px;
-}
-.summary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.summary-item {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 12px; color: #444;
-  background: #fff;
-  border: 1px solid #ebebea;
-  border-radius: 8px;
-  padding: 10px 14px;
-}
-.summary-num {
-  font-family: 'Figtree', sans-serif;
-  font-size: 10px; font-weight: 800;
-  color: #016B4F; min-width: 24px;
-}
-.check-box {
-  width: 18px; height: 18px;
-  border: 1.5px solid #ddd;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
-
-/* ── PRINT STYLES ── */
-@media print {
-  .print-bar { display: none !important; }
-  body { background: #fff; margin: 0; }
-  .doc {
-    max-width: 100%;
-    margin: 0;
-    box-shadow: none;
-  }
-  .cover { min-height: 0; }
-  .page-intro, .page, .summary-page { page-break-inside: avoid; }
-  .error-item { page-break-inside: avoid; }
-  .cta-page { page-break-before: always; }
-}
-@media (max-width: 860px) {
-  .doc { margin: 52px 0 0; }
-  .cover, .page, .page-intro, .summary-page, .cta-page { padding: 36px 24px; }
-  .error-item { grid-template-columns: 48px 1fr; }
-  .summary-grid { grid-template-columns: 1fr; }
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 44px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat-num { font-size: 26px; }
+  .inside { padding: 48px 20px; }
+  .gate-card { padding: 36px 24px; }
+  .gate-section { padding: 48px 20px 64px; }
 }
 </style>
 
@@ -413,48 +188,25 @@ body {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://averiomedia.de/guides//1-budgetfehler#article",
       "headline": "10 Budgetvernichtende Google Ads Fehler – Kostenloser Guide",
-      "description": "Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen. Und wie du sie ab sofort vermeidest.",
-      "url": "https://averiomedia.de/guides//1-budgetfehler",
-      "inLanguage": "de-DE",
-      "author": {
-        "@type": "Person",
-        "name": "Marie Böttiger",
-        "jobTitle": "Google Ads Freelancerin",
-        "url": "https://averiomedia.de/ueber-uns",
-        "worksFor": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de" },
-        "knowsAbout": ["Google Ads", "B2B Marketing", "Suchmaschinenmarketing", "Conversion Tracking", "GA4", "Kampagnenoptimierung"]
+      "description": "Kostenloser Google Ads Guide: 10 häufige Fehler, die dein Budget verbrennen. Und wie du sie ab sofort vermeidest. Von Averio Media.",
+      "author": { "@type": "Person", "name": "Marie Böttiger" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Averio Media",
+        "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/og-image.jpg" }
       },
-      "publisher": { "@type": "Organization", "name": "Averio Media", "url": "https://averiomedia.de", "logo": { "@type": "ImageObject", "url": "https://averiomedia.de/averio-media-logo.png" } },
       "datePublished": "2025-01-15",
-      "dateModified": "2026-06-23",
-      "mainEntityOfPage": "https://averiomedia.de/guides//1-budgetfehler",
-      "keywords": ["Google Ads Fehler", "Google Ads Budget", "Kampagnenoptimierung", "Conversion Tracking", "Negative Keywords", "Smart Bidding"],
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".error-title", ".error-desc", ".error-fix-text"]
-      }
+      "dateModified": "2026-10-11",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de" },
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://averiomedia.de/" },
         { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://averiomedia.de/guides" },
-        { "@type": "ListItem", "position": 3, "name": "10 Budgetvernichtende Fehler" }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "name": "Google Ads Budget-Fehler vermeiden",
-      "description": "10 häufige Fehler in Google Ads Kampagnen erkennen und beheben",
-      "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Conversion-Tracking einrichten", "text": "Richte in Google Ads Conversion-Aktionen ein: Formulareinsendungen, Anrufe, Terminbuchungen. Prüfe unter Ziele, dass deine Conversions aktiv und korrekt zählen." },
-        { "@type": "HowToStep", "position": 2, "name": "Broad Match kontrollieren", "text": "Nutze bewusst Exact Match und Phrase Match. Bei Broad Match kontrolliere täglich den Suchbegriffsbericht und schließe irrelevante Begriffe aus." },
-        { "@type": "HowToStep", "position": 3, "name": "Negative Keywords pflegen", "text": "Erstelle vor Kampagnenstart eine Negative-Keyword-Liste. Pflege sie wöchentlich anhand des Suchbegriffsberichts." },
-        { "@type": "HowToStep", "position": 4, "name": "Netzwerke trennen", "text": "Erstelle immer separate Kampagnen für Suchnetzwerk und Display-Netzwerk. Display-Klicks haben 5-10x niedrigere Conversion-Rate." },
-        { "@type": "HowToStep", "position": 5, "name": "Smart Bidding richtig einsetzen", "text": "Wechsle erst zu Smart Bidding, wenn du mindestens 30 Conversions in 30 Tagen hast. Vorher: Manueller CPC oder Klicks maximieren." }
+        { "@type": "ListItem", "position": 3, "name": "10 Budgetvernichtende Google Ads Fehler" }
       ]
     }
   ]
@@ -463,244 +215,158 @@ body {
 </head>
 <body>
 
-<!-- PRINT BAR -->
-<div class="print-bar">
-  <span class="print-bar-text"><strong>Averio Media Guide</strong> · Als PDF speichern: Drucken → Ziel: PDF speichern</span>
-  <button class="print-btn" onclick="window.print()">
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4V1h6v3M2 4h8a1 1 0 011 1v3H1V5a1 1 0 011-1zM3 8v3h6V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Als PDF speichern
-  </button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <a class="topbar-brand" href="/">
+    <div class="topbar-mark">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10L7 3l5 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span class="topbar-name">Averio Media</span>
+  </a>
+  <span class="topbar-badge">Kostenloser Guide 01</span>
 </div>
 
-<div class="doc">
-
-  <!-- ══ COVER ══ -->
-  <div class="cover">
-    <div>
-      <div class="cover-logo">
-        <div class="cover-logo-mark">
-          <svg viewBox="0 0 36 36" fill="none" width="22" height="22">
-            <path d="M18 7L29 27H7L18 7Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
-            <line x1="11" y1="22" x2="25" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
-        <span class="cover-logo-name">Averio Media</span>
-      </div>
-      <div class="cover-badge"><div class="cover-badge-dot"></div>Kostenloser Guide</div>
-      <div class="cover-title">10 Budget&shy;vernichtende<br>Fehler, die dir kein<br>Google Ads Experte <em>verrät</em></div>
-      <div class="cover-subtitle">Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest. Praxisnah, direkt und ohne Agentur-Sprech.</div>
-    </div>
-    <div class="cover-meta">
-      <div class="cover-meta-item"><strong>Geeignet für</strong><br>Einsteiger &amp; Fortgeschrittene</div>
-      <div class="cover-meta-item"><strong>Format</strong><br>PDF · 10 Fehler + Fixes</div>
-      <div class="cover-meta-item"><strong>Von</strong><br>Marie Böttiger, Averio Media</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Kostenlos · Direkt nutzbar</div>
+    <h1>10 Budget­vernichtende Fehler,<br>die dir kein Google Ads Experte <em>verrät</em></h1>
+    <p class="hero-desc">Warum die meisten Google Ads Kampagnen Geld verbrennen – und wie du es ab sofort vermeidest. Praxisnah, direkt und ohne Agentur-Sprech.</p>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">10</div><div class="hero-stat-label">Fehler & Fixes</div></div>
+      <div><div class="hero-stat-num">8</div><div class="hero-stat-label">Seiten</div></div>
+      <div><div class="hero-stat-num">1</div><div class="hero-stat-label">Selbst-Check</div></div>
     </div>
   </div>
+</section>
 
-  <!-- ══ INTRO ══ -->
-  <div class="page-intro">
-    <div class="page-intro-label">Warum dieser Guide existiert</div>
-    <div class="page-intro-text">
-      Ich schaue mir regelmäßig Google Ads Konten an. Von Selbstverwalteten bis hin zu Konten, die Agenturen jahrelang betreut haben. Und immer wieder begegnen mir dieselben Fehler. <strong>Fehler, die still und leise Hunderte bis Tausende Euro verbrennen.</strong> Niemand spricht offen darüber. Weder Google selbst noch die meisten Agenturen, weil gut laufende Kampagnen keine Beratungsleistung brauchen.<br><br>
-      Dieser Guide zeigt dir die 10 häufigsten Fehler. Und wie du sie behebst. Hak ab, was du bereits richtig machst. Markiere, was du sofort angehen musst.
+<!-- WAS DRIN IST -->
+<section class="inside">
+  <div class="inside-inner">
+    <div class="inside-label">Inhalt</div>
+    <h2>Was du in diesem Guide findest</h2>
+    <ul class="inside-list">
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Die 5 kritischsten Fehler: fehlendes Conversion-Tracking, unkontrolliertes Broad Match, fehlende Negative Keywords</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Warum Display und Suchnetzwerk niemals in einer Kampagne zusammengehören</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Smart Bidding erst ab 30 Conversions – und was du vorher tun solltest</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Konkrete „So behebst du es"-Lösungen für jeden Fehler</span></li>
+      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>10-Punkte-Selbst-Check zum direkten Abhaken</span></li>
+    </ul>
+    <div class="value-box">
+      <h3>Für wen ist dieser Guide?</h3>
+      <p>Für Einsteiger und Fortgeschrittene, die selbst Google Ads verwalten oder ihr Konto auditieren wollen. Praxisbeispiele aus dem echten Agentur-Alltag.</p>
     </div>
   </div>
+</section>
 
-  <!-- ══ FEHLER 01–05 ══ -->
-  <div class="page">
-    <div class="section-hdr">
-      <span class="section-hdr-label">Fehler 01 – 05</span>
-      <div class="section-hdr-line"></div>
-    </div>
-
-    <!-- Fehler 01 -->
-    <div class="error-item">
-      <div class="error-num">01</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Kein (funktionierendes) Conversion-Tracking</div>
-        <div class="error-desc">Ohne Conversion-Tracking tappst du im Dunkeln. Google weiß nicht, welche Klicks zu Anfragen, Anrufen oder Buchungen führen. Und kann daher nicht lernen, wen es ansprechen soll. Das Ergebnis: Der Algorithmus optimiert auf Klicks statt auf echte Ergebnisse. Jeder Euro ist rausgeworfenes Geld.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Richte in Google Ads Conversion-Aktionen ein: Formulareinsendungen, Anrufe, Terminbuchungen. Prüfe in der Google Ads Oberfläche unter <strong>„Ziele"</strong>, dass deine Conversions aktiv und korrekt zählen. Teste mit einem echten Test-Submit nach der Einrichtung.</div>
-        </div>
+<!-- DOWNLOAD GATE -->
+<section class="gate-section">
+  <div class="gate-card" id="gate-card">
+    <div id="gate-form-area">
+      <div class="gate-icon">📥</div>
+      <div class="gate-title">Guide kostenlos laden</div>
+      <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-name">Dein Name *</label>
+        <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
       </div>
-    </div>
-
-    <!-- Fehler 02 -->
-    <div class="error-item">
-      <div class="error-num">02</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Broad Match Keywords ohne Kontrolle</div>
-        <div class="error-desc">Broad Match (weitgehend passend) bringt Traffic. Aber oft den völlig falschen. „Hausverwaltung München" kann für „Hausverwaltung Stellenangebote München" oder „Hausverwaltung Software Vergleich" ausgespielt werden. Du bezahlst für Klicks, die niemals zu Kunden werden.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Nutze bewusst <strong>Exact Match [Keyword]</strong> und <strong>Phrase Match „Keyword"</strong>. Wenn du Broad Match einsetzt, kontrolliere täglich den <strong>Suchbegriffsbericht</strong> und schließe irrelevante Begriffe sofort aus.</div>
-        </div>
+      <div class="gate-group">
+        <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
+        <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
       </div>
-    </div>
-
-    <!-- Fehler 03 -->
-    <div class="error-item">
-      <div class="error-num">03</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Kein systematisches Negative-Keyword-Konzept</div>
-        <div class="error-desc">Ohne Ausschluss-Keywords bezahlst du für Suchanfragen, die niemals zu Kunden werden: „kostenlos", „Ausbildung", „Erfahrungsbericht", „Stellenangebote", „selbst machen". Bei einem Budget von 1.000 € gehen schnell 200–300 € für Klicks drauf, die null Chance auf Conversion haben.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Erstelle <strong>vor dem Kampagnenstart</strong> eine Negative-Keyword-Liste. Pflege sie wöchentlich anhand des Suchbegriffsberichts. Nutze Negative-Keyword-Listen auf Konto-Ebene, damit du nicht jede Kampagne einzeln pflegen musst.</div>
-        </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-dsgvo">
+        <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *</label>
       </div>
-    </div>
-
-    <!-- Fehler 04 -->
-    <div class="error-item">
-      <div class="error-num">04</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Such- und Display-Netzwerk in einer Kampagne</div>
-        <div class="error-desc">Google aktiviert standardmäßig „Suchnetzwerk + Displaynetzwerk" in einer Kampagne. Das ist einer der gravierendsten Einrichtungsfehler. Display-Klicks haben eine 5–10x niedrigere Conversion-Rate als Suchklicks, vermischen deine Daten und fressen dein Such-Budget.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Erstelle <strong>immer separate Kampagnen</strong> für Suchnetzwerk und Display-Netzwerk. Beim Erstellen einer Suchkampagne: Haken bei <strong>„Display-Netzwerk einschließen" deaktivieren</strong>. Sofort prüfen bei allen laufenden Kampagnen.</div>
-        </div>
+      <div class="gate-check">
+        <input type="checkbox" id="g-nl">
+        <label for="g-nl">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</label>
       </div>
+      <p class="gate-legal">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+      <button class="gate-btn" id="g-submit" onclick="submitGuideGate()">
+        <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Jetzt herunterladen
+      </button>
+      <div class="gate-fine">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
     </div>
-
-    <!-- Fehler 05 -->
-    <div class="error-item">
-      <div class="error-num">05</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Smart Bidding ohne ausreichende Datenbasis</div>
-        <div class="error-desc">„Conversions maximieren" und „Ziel-CPA" klingen gut. Funktionieren aber nur, wenn der Algorithmus genug Daten hat, um zu lernen. Ohne mindestens 30–50 Conversions pro Monat rät Google, optimiert aber faktisch ins Leere. Budget-Verschwendung ist das Ergebnis.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Starte mit <strong>Manuell CPC</strong> oder erweitertem CPC, bis du genug Conversion-Daten gesammelt hast. Erst dann wechsle schrittweise zu Smart Bidding. Faustformel: Mindestens <strong>30 Conversions in 30 Tagen</strong> vor dem Wechsel.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ══ FEHLER 06–10 ══ -->
-  <div class="page">
-    <div class="section-hdr">
-      <span class="section-hdr-label">Fehler 06 – 10</span>
-      <div class="section-hdr-line"></div>
-    </div>
-
-    <!-- Fehler 06 -->
-    <div class="error-item">
-      <div class="error-num">06</div>
-      <div class="error-body">
-        <div class="severity medium"><div class="severity-dot"></div>Hoch</div>
-        <div class="error-title">Anzeigengruppen-Chaos: Zu viele, zu gemischte Keywords</div>
-        <div class="error-desc">Wenn „Hausverwaltung München", „Hausverwaltung Preise" und „Facility Management kostenlos" in einer Anzeigengruppe liegen, können deine Anzeigen unmöglich für jede Suchanfrage relevant sein. Der Qualitätsfaktor sinkt, die Klickkosten steigen.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Gruppiere Keywords nach <strong>enger thematischer Intention</strong>: Eine Anzeigengruppe = ein Thema = eine Nutzerabsicht. Das verbessert Relevanz, Qualitätsfaktor und Klickrate spürbar.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fehler 07 -->
-    <div class="error-item">
-      <div class="error-num">07</div>
-      <div class="error-body">
-        <div class="severity medium"><div class="severity-dot"></div>Hoch</div>
-        <div class="error-title">Fehlende oder unvollständige Anzeigen-Assets</div>
-        <div class="error-desc">Sitelinks, Callouts, strukturierte Snippets, Anruf-Assets. Wer diese nicht nutzt, verschenkt wertvolle Anzeigenfläche. Vollständige Assets bedeuten mehr Sichtbarkeit, höhere Klickrate und bessere Ad Strength. Google bevorzugt Anzeigen mit vollständigen Assets aktiv bei der Ausspielung.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Mindestens: <strong>4 Sitelinks, 4 Callouts, strukturierte Snippets</strong>. Für Dienstleister unbedingt: <strong>Anruf-Asset</strong> aktivieren. Für lokale Anbieter: <strong>Standort-Asset</strong> aus Google Business verknüpfen.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fehler 08 -->
-    <div class="error-item">
-      <div class="error-num">08</div>
-      <div class="error-body">
-        <div class="severity high"><div class="severity-dot"></div>Kritisch</div>
-        <div class="error-title">Landing Page passt nicht zur Anzeige</div>
-        <div class="error-desc">Deine Anzeige verspricht „Hausverwaltung München". Und der Nutzer landet auf der Homepage. Ergebnis: sofortiger Absprung. Google Ads zahlt für den Klick, aber ohne Conversion ist jeder Klick verschwendetes Budget. Landing Page Relevanz beeinflusst auch direkt den Qualitätsfaktor.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Jede Anzeigengruppe braucht eine <strong>thematisch passende Zielseite</strong>. Die Regel: Keyword in der Anzeige → dasselbe Keyword prominent auf der Landing Page → klarer Call-to-Action. Die <strong>Botschaft muss sich nahtlos fortsetzen</strong>.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fehler 09 -->
-    <div class="error-item">
-      <div class="error-num">09</div>
-      <div class="error-body">
-        <div class="severity medium"><div class="severity-dot"></div>Hoch</div>
-        <div class="error-title">Geografisches Targeting falsch konfiguriert</div>
-        <div class="error-desc">Googles Standard-Einstellung zeigt Anzeigen auch für Nutzer, die sich für deine Region interessieren, aber sich nicht dort befinden. Für lokale Dienstleister bedeutet das: ein Münchner Sachverständiger bezahlt für Klicks aus Hamburg. Die Standard-Einstellung ist selten die richtige.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Ändere das geografische Targeting in den Kampagneneinstellungen auf: <strong>„Personen in meinen Zielregionen"</strong> (nicht: „Personen in oder mit Interesse an"). Für regionale Dienstleister meistens die korrekte Einstellung.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fehler 10 -->
-    <div class="error-item">
-      <div class="error-num">10</div>
-      <div class="error-body">
-        <div class="severity medium"><div class="severity-dot"></div>Hoch</div>
-        <div class="error-title">Keine strukturierte wöchentliche Optimierungsroutine</div>
-        <div class="error-desc">Google Ads läuft nicht auf Autopilot. Kampagnen anlegen und dann Monate nichts tun bedeutet: veraltete Gebote, wachsende Streuverluste, sinkende Qualitätsfaktoren. Der stille Budgetkiller Nummer 1. Weil er sich schleichend entfaltet.</div>
-        <div class="error-fix">
-          <div class="error-fix-label">So behebst du es</div>
-          <div class="error-fix-text">Erstelle eine <strong>wöchentliche Optimierungsroutine</strong> (30–60 Min): Suchbegriffsbericht prüfen → neue Negatives hinzufügen → Gebote anpassen → Anzeigenperformance vergleichen → Budgetauslastung prüfen. Konsequent. Jede Woche.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ══ SCHNELL-CHECKLISTE ══ -->
-  <div class="summary-page">
-    <div class="summary-title">Deine Selbst-Check Checkliste</div>
-    <div class="summary-sub">Hak ab, was du bereits richtig machst. Alles ohne Haken: sofort anpacken.</div>
-    <div class="summary-grid">
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">01</span>Conversion-Tracking aktiv &amp; getestet</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">02</span>Keine unkontrollierten Broad Match Keywords</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">03</span>Negative-Keyword-Liste vorhanden &amp; gepflegt</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">04</span>Display-Netzwerk deaktiviert (in Suchkampagnen)</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">05</span>Gebotsstrategie passend zur Datenlage</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">06</span>Anzeigengruppen thematisch sauber</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">07</span>Alle verfügbaren Assets ausgefüllt</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">08</span>Landing Page zur Anzeige passend</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">09</span>Geo-Targeting korrekt konfiguriert</div>
-      <div class="summary-item"><div class="check-box"></div><span class="summary-num">10</span>Wöchentliche Optimierungsroutine etabliert</div>
+    <div id="gate-success" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="font-size:48px;margin-bottom:1rem;">✅</div>
+      <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
+      <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach.</span></div>
+      <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
     </div>
   </div>
+</section>
 
-  <!-- ══ CTA ══ -->
-  <div class="cta-page">
-    <div class="cta-eyebrow">Nächster Schritt</div>
-    <div class="cta-h2">Fehler erkannt —<br>und jetzt?</div>
-    <div class="cta-text">Wenn du in deinem Konto Fehler erkannt hast, die dich Geld kosten. Lass uns gemeinsam draufschauen. In einem kostenlosen 15-Minuten-Gespräch sehen wir direkt, wo das größte Potenzial liegt und was als erstes angepackt werden sollte.</div>
-    <a href="https://averiomedia.de/kontakt" class="cta-link">
-      Jetzt kontaktieren
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <div class="cta-note">Kostenlos · Unverbindlich · Direkt mit Marie</div>
-    <div class="cta-divider"></div>
-    <div class="cta-footer">
-      <div class="cta-footer-brand">Averio <span>Media</span> · Marie Böttiger</div>
-      <div class="cta-footer-url">averiomedia.de · kontakt@averiomedia.de</div>
-    </div>
-  </div>
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+  <p>Brauchst du Hilfe bei deinen Google Ads?</p>
+  <a href="/kontakt">Kostenloses Erstgespräch buchen →</a>
+  <div class="footer-copy">© 2026 Averio Media · Marie Böttiger</div>
+</footer>
 
-</div>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
+const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
+const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
+const GUIDE_ID = 'guide-1';
+const GUIDE_TITLE = '10 Budgetvernichtende Google Ads Fehler';
+
+async function submitGuideGate() {
+  const name  = document.getElementById('g-name').value.trim();
+  const email = document.getElementById('g-email').value.trim();
+  const dsgvo = document.getElementById('g-dsgvo').checked;
+  const nl    = document.getElementById('g-nl').checked;
+
+  if (!name)  { alert('Bitte gib deinen Namen ein.'); return; }
+  if (!email || !email.includes('@')) { alert('Bitte gib eine gültige E-Mail-Adresse ein.'); return; }
+  if (!dsgvo) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+
+  const btn = document.getElementById('g-submit');
+  btn.innerHTML = 'Wird gesendet…';
+  btn.disabled = true;
+
+  try { localStorage.setItem('av_pendingGuide', GUIDE_ID); localStorage.setItem('av_pendingGuideName', name); } catch(e) {}
+
+  try {
+    const fd = new FormData();
+    fd.append('EMAIL', email);
+    fd.append('email_address_check', '');
+    fd.append('locale', 'de');
+    fd.append('OPT_IN', '1');
+    fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+  } catch(e) { console.warn('Brevo DOI:', e); }
+
+  if (nl) {
+    try {
+      const nfd = new FormData();
+      nfd.append('EMAIL', email);
+      nfd.append('email_address_check', '');
+      nfd.append('locale', 'de');
+      nfd.append('OPT_IN', '1');
+      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+    } catch(e) { console.warn('Newsletter:', e); }
+  }
+
+  try {
+    await fetch(NFORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Formular: 'Guide Download (Teaser-Seite)',
+        Name: name,
+        Email: email,
+        Guide: GUIDE_TITLE,
+        Newsletter: nl ? 'Ja' : 'Nein'
+      })
+    });
+  } catch(e) { console.warn('nForms:', e); }
+
+  document.getElementById('gate-form-area').style.display = 'none';
+  document.getElementById('gate-success').style.display = 'block';
+}
+</script>
+
 </body>
 </html>
-
-
