@@ -4,69 +4,69 @@
   <!-- ═══ HAUPTSEITEN ═══════════════════════════════════ -->
   <url>
     <loc>https://averiomedia.de/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-geo-optimierung.html</loc>
+    <loc>https://averiomedia.de/geo-optimierung</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-zusammenarbeit.html</loc>
+    <loc>https://averiomedia.de/zusammenarbeit</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-ergebnisse.html</loc>
+    <loc>https://averiomedia.de/ergebnisse</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://averiomedia.de/kontakt</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-kontakt.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-premium-ueber-uns.html</loc>
+    <loc>https://averiomedia.de/ueber-uns</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-guides.html</loc>
+    <loc>https://averiomedia.de/guides</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-faq.html</loc>
+    <loc>https://averiomedia.de/faq</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-angebote.html</loc>
+    <loc>https://averiomedia.de/angebote</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-preisliste.html</loc>
+    <loc>https://averiomedia.de/preisliste</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -74,14 +74,14 @@
 
   <!-- ═══ CHECKS ═════════════════════════════════════════ -->
   <url>
-    <loc>https://averiomedia.de/averio-premium-sichtbarkeitscheck.html</loc>
+    <loc>https://averiomedia.de/sichtbarkeitscheck</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-ki-sichtbarkeit.html</loc>
+    <loc>https://averiomedia.de/ki-sichtbarkeit</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -89,7 +89,7 @@
 
   <!-- ═══ BRANCHEN-LANDINGPAGES ════════════════════════════ -->
   <url>
-    <loc>https://averiomedia.de/averio-premium-sachverstaendige.html</loc>
+    <loc>https://averiomedia.de/sachverstaendige</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -97,14 +97,14 @@
 
   <!-- ═══ ANGEBOTS-SEITEN ════════════════════════════════ -->
   <url>
-    <loc>https://averiomedia.de/averio-premium-angebot-kampagnencheck.html</loc>
+    <loc>https://averiomedia.de/angebot-kampagnencheck</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-angebot-potenzialanalyse.html</loc>
+    <loc>https://averiomedia.de/angebot-potenzialanalyse</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -112,36 +112,36 @@
 
   <!-- ═══ FALLSTUDIEN ════════════════════════════════════ -->
   <url>
-    <loc>https://averiomedia.de/averio-premium-case-alphaengineering.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-premium-case-fliesenwerk.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-premium-case-kosmetikkultur.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-premium-case-krause.html</loc>
+    <loc>https://averiomedia.de/case-alphaengineering</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-case-lavue.html</loc>
-    <lastmod>2026-08-25</lastmod>
+    <loc>https://averiomedia.de/case-fliesenwerk</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://averiomedia.de/case-kosmetikkultur</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://averiomedia.de/case-krause</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://averiomedia.de/case-lavue</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -149,94 +149,59 @@
   <!-- ═══ GUIDES ═════════════════════════════════════════ -->
   <url>
     <loc>https://averiomedia.de/guides/averio-guide-1-budgetfehler.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://averiomedia.de/guides/averio-guide-2-checkliste.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://averiomedia.de/guides/averio-guide-3-optimierung.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://averiomedia.de/guides/averio-guide-4-negative-keywords.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://averiomedia.de/guides/averio-guide-5-tracking.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ═══ RECHTLICHES ════════════════════════════════════ -->
   <url>
-    <loc>https://averiomedia.de/averio-premium-impressum.html</loc>
+    <loc>https://averiomedia.de/impressum</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-premium-datenschutz.html</loc>
+    <loc>https://averiomedia.de/datenschutz</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://averiomedia.de/averio-agb.html</loc>
+    <loc>https://averiomedia.de/agb</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-guide-1-budgetfehler.html</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-guide-2-checkliste.html</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-guide-3-optimierung.html</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-guide-4-negative-keywords.html</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/averio-guide-5-tracking.html</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
