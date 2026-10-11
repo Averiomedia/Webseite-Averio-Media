@@ -223,12 +223,12 @@ body { background: var(--bg); }
 }
 .mock-view img { display:block; width:100%; height:auto; }
 .mock-mobile {
-  position:absolute; right:-1%; bottom:-7%; width:168px; z-index:3;
-  border-radius:26px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
+  position:absolute; right:0; bottom:-9%; width:190px; z-index:3;
+  border-radius:28px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
   box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.1);
   will-change:transform;
 }
-.mock-mobile img{display:block;width:100%;}
+.mock-mobile img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;}
 .mm-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:100px;background:#000;z-index:2;opacity:.85;}
 @media (max-width:768px){ .mock-mobile{display:none;} }
 
