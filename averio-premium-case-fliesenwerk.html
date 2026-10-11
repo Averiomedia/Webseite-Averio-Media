@@ -192,7 +192,91 @@ body { background: var(--bg); }
   .ch-hero-metrics { gap: 1.5rem; }
 }
 
-/* ── LIGHT MODE ───────────────────────────────────────────────────────── */
+/* ── SHOWCASE / MOCKUPS ── */
+.fw-showcase { position: relative; padding: 10px 5vw 100px; overflow: hidden; }
+.fw-showcase::before {
+  content:''; position:absolute; left:50%; top:18%; transform:translateX(-50%);
+  width:min(900px,92vw); height:420px;
+  background:radial-gradient(ellipse at center, rgba(1,107,79,.15), transparent 70%);
+  pointer-events:none;
+}
+.fw-sc-label {
+  text-align:center; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-bottom:40px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.fw-sc-label::before,.fw-sc-label::after{content:'';width:36px;height:1px;background:rgba(255,255,255,.15);}
+.mock-stage { position:relative; max-width:960px; margin:0 auto; perspective:1500px; }
+.mock-browser {
+  position:relative; border-radius:16px; overflow:hidden; background:#151515;
+  box-shadow:0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.09), 0 0 90px rgba(1,107,79,.12);
+  transform:rotateX(14deg) rotateY(-4deg); transform-origin:50% 100%; will-change:transform;
+}
+.mock-bar { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#1d1d1f; border-bottom:1px solid rgba(255,255,255,.06); }
+.mock-dots { display:flex; gap:7px; }
+.mock-dots span { width:11px;height:11px;border-radius:50%; }
+.mock-dots span:nth-child(1){background:#ff5f57;} .mock-dots span:nth-child(2){background:#febc2e;} .mock-dots span:nth-child(3){background:#28c840;}
+.mock-url {
+  flex:1; max-width:320px; margin:0 auto; text-align:center;
+  font-size:11.5px; color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.06); border-radius:6px; padding:5px 12px;
+}
+.mock-view img { display:block; width:100%; height:auto; }
+.mock-mobile {
+  position:absolute; right:-1%; bottom:-7%; width:168px; z-index:3;
+  border-radius:26px; overflow:hidden; background:#111; border:5px solid #2a2a2c;
+  box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.1);
+  will-change:transform;
+}
+.mock-mobile img{display:block;width:100%;}
+.mm-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:100px;background:#000;z-index:2;opacity:.85;}
+@media (max-width:768px){ .mock-mobile{display:none;} }
+
+/* ── PERSON CARD ── */
+.fw-person{
+  display:flex;align-items:center;gap:16px;margin:0 0 1.8rem;padding:14px 18px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;
+}
+.fw-person img{width:56px;height:56px;border-radius:12px;object-fit:cover;object-position:top;}
+.fw-person b{font-family:'Figtree',sans-serif;color:#fff;font-size:.95rem;display:block;line-height:1.3;}
+.fw-person span{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* ── MASSNAHMEN-KARTEN ── */
+.fw-meas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.8rem 0 1.6rem;}
+.fw-meas-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.4rem 1rem;text-align:center;transition:border-color .25s,transform .25s;}
+.fw-meas-card:hover{border-color:rgba(1,107,79,.35);transform:translateY(-3px);}
+.fw-meas-ic{width:42px;height:42px;border-radius:12px;background:rgba(1,107,79,.12);display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;}
+.fw-meas-card b{display:block;font-family:'Figtree',sans-serif;font-size:.85rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.3;}
+.fw-meas-card span{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5;display:block;}
+@media(max-width:768px){.fw-meas{grid-template-columns:repeat(2,1fr);}}
+
+/* ── PROJEKTGALERIE ── */
+.fw-gal-sec{padding:10px 5vw 90px;}
+.fw-gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:140px;gap:12px;max-width:1160px;margin:0 auto;}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.6,.2,1);}
+.gal-item:hover img{transform:scale(1.06);}
+.gal-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%);opacity:0;transition:opacity .4s;}
+.gal-item:hover::after{opacity:1;}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2;opacity:0;transform:translateY(10px);transition:.4s;}
+.gal-item:hover .gal-cap{opacity:1;transform:none;}
+.gal-cap b{display:block;font-family:'Figtree',sans-serif;font-size:.9rem;font-weight:800;color:#fff;}
+.gal-cap span{font-size:11px;color:rgba(255,255,255,.6);}
+.g1{grid-column:1;grid-row:1/span 3;}
+.g2{grid-column:2/span 2;grid-row:1/span 2;}
+.g3{grid-column:4;grid-row:1/span 2;}
+.g4{grid-column:2;grid-row:3/span 2;}
+.g5{grid-column:3/span 2;grid-row:3/span 2;}
+@media(max-width:900px){
+  .fw-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .g1{grid-column:1;grid-row:1/span 3;}
+  .g2{grid-column:2;grid-row:1/span 2;}
+  .g3{grid-column:2;grid-row:3/span 2;}
+  .g4{grid-column:1;grid-row:4/span 3;}
+  .g5{grid-column:2;grid-row:5/span 2;}
+}
+
+
 html[data-theme="light"] .ch-h1                { color: #0D1117 !important; }
 html[data-theme="light"] .ch-back              { color: #868E96 !important; }
 html[data-theme="light"] .ch-tag               { color: #868E96 !important; border-color: #DEE2E6 !important; }
@@ -214,6 +298,18 @@ html[data-theme="light"] .ch-cta h2            { color: #0D1117 !important; }
 html[data-theme="light"] .ch-cta p             { color: #495057 !important; }
 html[data-theme="light"] .ch-footer            { color: #868E96 !important; border-color: #E9ECEF !important; }
 html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
+html[data-theme="light"] .fw-sc-label          { color: #868E96 !important; }
+html[data-theme="light"] .fw-sc-label::before,
+html[data-theme="light"] .fw-sc-label::after   { background: #DEE2E6 !important; }
+html[data-theme="light"] .mock-url             { color: #868E96 !important; background: rgba(0,0,0,.05) !important; }
+html[data-theme="light"] .mock-browser         { box-shadow: 0 40px 90px rgba(0,0,0,.15), 0 0 0 1px #DEE2E6 !important; }
+html[data-theme="light"] .fw-person            { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-person b          { color: #0D1117 !important; }
+html[data-theme="light"] .fw-person span       { color: #868E96 !important; }
+html[data-theme="light"] .fw-meas-card         { background: #FFFFFF !important; border-color: #E9ECEF !important; }
+html[data-theme="light"] .fw-meas-card b       { color: #0D1117 !important; }
+html[data-theme="light"] .fw-meas-card span    { color: #868E96 !important; }
+html[data-theme="light"] .gal-item             { background: #F1F3F5 !important; border-color: #E9ECEF !important; }
 </style>
 <script type="application/ld+json">
 {
@@ -358,13 +454,40 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
   </div>
 </section>
 
+<!-- SHOWCASE: Website-Mockup -->
+<section class="fw-showcase">
+  <div class="fw-sc-label reveal">Die Website von fliesenwerk.org</div>
+  <div class="mock-stage reveal">
+    <div class="mock-browser" id="mockBrowser">
+      <div class="mock-bar">
+        <div class="mock-dots"><span></span><span></span><span></span></div>
+        <div class="mock-url">fliesenwerk.org</div>
+      </div>
+      <div class="mock-view">
+        <img src="case-fw-hero.webp" alt="Startseite der Fliesenwerk-Website – Fliesenleger Dachau & München" width="1440" height="900" loading="lazy">
+      </div>
+    </div>
+    <div class="mock-mobile" id="mockMobile">
+      <div class="mm-notch"></div>
+      <img src="case-fw-mobile.webp" alt="Fliesenwerk-Website auf dem Smartphone" width="390" height="844" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <!-- CONTENT -->
 <div class="ch-content">
 
   <!-- 01 Herausforderung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">01 · Herausforderung</div>
+    <div class="ch-section-num">01 · Hintergrund</div>
     <h2>Gute Arbeit, aber nicht skalierbar.</h2>
+    <div class="fw-person">
+      <img src="case-fw-domenik.webp" alt="Domenik Höller – Fliesenlegermeister" width="480" height="647" loading="lazy">
+      <div>
+        <b>Domenik Höller</b>
+        <span>Fliesenlegermeister · Fliesenwerk UG, Odelzhausen</span>
+      </div>
+    </div>
     <p>Das Fliesenwerk Odelzhausen hatte eine solide Auftragslage aufgebaut. Fast ausschließlich über Mundpropaganda und Empfehlungen. Die Qualität der Arbeit war unbestritten, doch das Wachstum hing vollständig von Zufällen und persönlichen Netzwerken ab. Der Inhaber wollte mehr: mehr planbare Anfragen, mehr Wachstum, und letztlich einen neuen Mitarbeiter einstellen.</p>
     <p>Die bisherigen Maßnahmen beschränkten sich auf gelegentliche Social-Media-Beiträge und eben jene Mundpropaganda. Eine gezielte digitale Kundengewinnung fehlte komplett. Ohne systematischen Zulauf neuer Anfragen war skaliertes Wachstum schlicht nicht möglich.</p>
   </div>
@@ -372,16 +495,39 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
 
   <!-- 02 Lösung -->
   <div class="ch-section reveal">
-    <div class="ch-section-num">02 · Lösung</div>
+    <div class="ch-section-num">02 · Maßnahmen</div>
     <h2>Regionale Suchkampagne mit klarer Zielausrichtung.</h2>
     <p>Ich entwickelte eine regionale Google Ads Kampagne, die gezielt Menschen in der Region anspricht, die aktiv nach Fliesenlegerleistungen suchen. Zum richtigen Zeitpunkt, mit der richtigen Botschaft.</p>
-    <ul class="ch-list">
-      <li>Sorgfältige Keywordrecherche für relevante Suchanfragen: Badsanierung, Fliesenlegen Neubau, Renovierung</li>
-      <li>Überzeugende Anzeigentexte, die die Stärken des Handwerksbetriebs klar kommunizieren</li>
-      <li>Geografisch präzise Aussteuerung auf die relevante Zielregion rund um Odelzhausen</li>
-      <li>Remarketing-Kampagne für Nutzer, die die Website bereits besucht hatten</li>
-      <li>Optimale Budgetverteilung zwischen Kampagnentypen für maximale Reichweite und Effizienz</li>
-  </ul>
+    <div class="fw-meas">
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#016B4F" stroke-width="1.8"/><circle cx="12" cy="12" r="1.4" fill="#016B4F"/></svg>
+        </div>
+        <b>Regionaler Fokus</b>
+        <span>Präzise Aussteuerung auf Odelzhausen und Umkreis</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" stroke="#016B4F" stroke-width="1.8"/><path d="M15.5 15.5L20 20" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <b>Keywordrecherche</b>
+        <span>Badsanierung, Fliesenlegen, Renovierung & mehr</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17v3z" stroke="#016B4F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Anzeigentexte</b>
+        <span>Die Stärken des Handwerks klar kommuniziert</span>
+      </div>
+      <div class="fw-meas-card">
+        <div class="fw-meas-ic">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round"/><path d="M17 3v4h-4M7 21v-4h4" stroke="#016B4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Remarketing</b>
+        <span>Zweite Chance für Website-Besucher</span>
+      </div>
+    </div>
     <p>Der Fokus lag nicht auf möglichst vielen Klicks, sondern auf möglichst vielen qualifizierten Anfragen von Menschen mit konkretem Auftragsbedarf.</p>
   </div>
   <div class="ch-divider"></div>
@@ -412,6 +558,33 @@ html[data-theme="light"] .ch-footer a          { color: #495057 !important; }
   </div>
 
 </div>
+
+<!-- PROJEKTGALERIE -->
+<section class="fw-gal-sec">
+  <div class="fw-sc-label reveal">Projekte von Fliesenwerk</div>
+  <div class="fw-gal">
+    <div class="gal-item g1 reveal">
+      <img src="case-fw-bad.webp" alt="Modernes Badezimmer – Fliesenwerk" loading="lazy" width="900" height="1200">
+      <div class="gal-cap"><b>Modernes Badezimmer</b><span>Traumbad vom Meister</span></div>
+    </div>
+    <div class="gal-item g2 reveal">
+      <img src="case-fw-terrasse.webp" alt="Gartenterrasse in München – Fliesenwerk" loading="lazy" width="900" height="900">
+      <div class="gal-cap"><b>Gartenterrasse München</b><span>Splittbett mit Drainage</span></div>
+    </div>
+    <div class="gal-item g3 reveal">
+      <img src="case-fw-wohn.webp" alt="Badezimmer-Modernisierung in Karlsfeld – Fliesenwerk" loading="lazy" width="900" height="778">
+      <div class="gal-cap"><b>Modernisierung Karlsfeld</b><span>Mosaikfliesen &amp; Wandnischen</span></div>
+    </div>
+    <div class="gal-item g4 reveal">
+      <img src="case-fw-wintergarten.webp" alt="Wintergarten in Fürstenfeldbruck – Hexagon-Fliesen" loading="lazy" width="900" height="1200">
+      <div class="gal-cap"><b>Wintergarten FFB</b><span>Kunstvolle Hexagon-Fliesen</span></div>
+    </div>
+    <div class="gal-item g5 reveal">
+      <img src="case-fw-aussen.webp" alt="Außenbereich in Altomünster – Großformatfliesen" loading="lazy" width="900" height="900">
+      <div class="gal-cap"><b>Außenbereich Altomünster</b><span>Frostsiche Großformatfliesen</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- MORE CASES -->
 <div class="ch-more">
@@ -460,6 +633,26 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .7, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
     });
+  });
+
+  // 3D-Mockup: kippt beim Scrollen flach (Parallax-Tilt)
+  const mb = document.getElementById('mockBrowser');
+  if (mb) {
+    gsap.fromTo(mb,
+      { rotateX: 14, rotateY: -4, y: 40 },
+      { rotateX: 0, rotateY: 0, y: 0, ease: 'none',
+        scrollTrigger: { trigger: '.mock-stage', start: 'top 85%', end: 'top 25%', scrub: 1 } }
+    );
+  }
+  // Mobiles Mockup: sanftes Schweben (Loop)
+  const mm = document.getElementById('mockMobile');
+  if (mm && window.matchMedia('(min-width: 769px)').matches) {
+    gsap.to(mm, { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  }
+  // Galerie-Bilder: leichter Parallax beim Scrollen
+  gsap.utils.toArray('.gal-item img').forEach(img => {
+    gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: 'none',
+      scrollTrigger: { trigger: img.closest('.gal-item'), start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 });
 </script>
