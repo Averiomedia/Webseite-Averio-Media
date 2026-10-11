@@ -1448,6 +1448,7 @@ async function submitGate() {
       nfd.append('EMAIL', email);
       nfd.append('email_address_check', '');
       nfd.append('locale', 'de');
+      nfd.append('OPT_IN', '1');
       fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
     } catch(e) { console.warn('Newsletter:', e); }
   }
