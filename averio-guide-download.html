@@ -168,7 +168,7 @@ h1 span { color: #016B4F; }
   <h1 id="page-title">Dein Guide ist<br><span>bereit.</span></h1>
   <p class="sub" id="page-sub">Deine E-Mail-Adresse wurde erfolgreich bestätigt. Du kannst deinen Guide jetzt direkt öffnen und herunterladen.</p>
 
-  <!-- Single guide (wird per JS befüllt wenn localStorage vorhanden) -->
+  <!-- Nur der ausgewählte Guide (wird per JS befüllt) -->
   <div class="guide-box" id="single-guide" style="display:none;">
     <div class="guide-box-eyebrow">dein Guide</div>
     <div class="guide-box-title" id="single-guide-title">—</div>
@@ -178,30 +178,12 @@ h1 span { color: #016B4F; }
     </a>
   </div>
 
-  <!-- Alle Guides (Fallback wenn kein localStorage) -->
-  <div id="all-guides" style="display:none;">
-    <div class="guides-list">
-      <a href="guides/averio-guide-1-budgetfehler.pdf" class="guide-item" target="_blank" rel="noopener">
-        <span class="guide-item-title">10 Budgetvernichtende Google Ads Fehler</span>
-        <span class="guide-item-tag">PDF laden</span>
-      </a>
-      <a href="guides/averio-guide-2-checkliste.pdf" class="guide-item" target="_blank" rel="noopener">
-        <span class="guide-item-title">Die 6-Punkte-Checkliste für profitable Google Ads</span>
-        <span class="guide-item-tag">PDF laden</span>
-      </a>
-      <a href="guides/averio-guide-3-optimierung.pdf" class="guide-item" target="_blank" rel="noopener">
-        <span class="guide-item-title">Google Ads Step-by-Step Optimierung</span>
-        <span class="guide-item-tag">PDF laden</span>
-      </a>
-      <a href="guides/averio-guide-4-negative-keywords.pdf" class="guide-item" target="_blank" rel="noopener">
-        <span class="guide-item-title">Negative-Keyword-Bibel für 12 Branchen</span>
-        <span class="guide-item-tag">PDF laden</span>
-      </a>
-      <a href="guides/averio-guide-5-tracking.pdf" class="guide-item" target="_blank" rel="noopener">
-        <span class="guide-item-title">GA4 &amp; Conversion-Tracking Setup</span>
-        <span class="guide-item-tag">PDF laden</span>
-      </a>
-    </div>
+  <!-- Meldung wenn kein Guide bekannt -->
+  <div id="no-guide" style="display:none;">
+    <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:1.5rem;">Wir konnten deinen Guide nicht automatisch zuordnen. Bitte wähle ihn unten aus:</p>
+    <a href="/guides" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;background:#016B4F;color:#fff;border:none;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;font-family:'Figtree',sans-serif;">
+      Zu den Guides →
+    </a>
   </div>
 
   <a href="/guides" class="btn-secondary">
@@ -229,32 +211,43 @@ h1 span { color: #016B4F; }
   };
 
   let guideId = null;
+  let name = null;
+
+  // 1. URL-Parameter zuerst (durchreichbar über DOI-Redirect)
   try {
-    guideId = localStorage.getItem('av_pendingGuide');
-    const name = localStorage.getItem('av_pendingGuideName');
-    // Nach dem Lesen sofort löschen
+    const params = new URLSearchParams(window.location.search);
+    const urlGuide = params.get('guide');
+    if (urlGuide && GUIDE_MAP[urlGuide]) guideId = urlGuide;
+  } catch(e) {}
+
+  // 2. localStorage als Fallback (gleicher Browser)
+  try {
+    if (!guideId) {
+      guideId = localStorage.getItem('av_pendingGuide');
+    }
+    name = localStorage.getItem('av_pendingGuideName');
     localStorage.removeItem('av_pendingGuide');
     localStorage.removeItem('av_pendingGuideName');
+  } catch(e) {}
 
-    // Seite an Preisliste anpassen
-    const isPreisliste = guideId === 'preisliste';
-    if (isPreisliste) {
-      document.getElementById('page-title').innerHTML = 'Ihre Preisliste ist<br><span>bereit.</span>';
-      document.getElementById('page-sub').textContent = 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können die vollständige Preisliste jetzt direkt öffnen.';
-    }
+  // Seite an Preisliste anpassen
+  const isPreisliste = guideId === 'preisliste';
+  if (isPreisliste) {
+    document.getElementById('page-title').innerHTML = 'Ihre Preisliste ist<br><span>bereit.</span>';
+    document.getElementById('page-sub').textContent = 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können die vollständige Preisliste jetzt direkt öffnen.';
+  }
 
-    // Name personalisieren wenn vorhanden
-    if (name) {
-      const sub = document.getElementById('page-sub');
-      if (sub) {
-        if (isPreisliste) {
-          sub.textContent = 'Hallo ' + name + ', Ihre E-Mail wurde bestätigt. Hier ist Ihre persönliche Preisliste mit allen Konditionen.';
-        } else {
-          sub.textContent = 'Hallo ' + name + ', Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können Ihren Guide jetzt direkt öffnen und herunterladen.';
-        }
+  // Name personalisieren wenn vorhanden
+  if (name) {
+    const sub = document.getElementById('page-sub');
+    if (sub) {
+      if (isPreisliste) {
+        sub.textContent = 'Hallo ' + name + ', Ihre E-Mail wurde bestätigt. Hier ist Ihre persönliche Preisliste mit allen Konditionen.';
+      } else {
+        sub.textContent = 'Hallo ' + name + ', Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können Ihren Guide jetzt direkt öffnen und herunterladen.';
       }
     }
-  } catch(e) {}
+  }
 
   const guide = guideId ? GUIDE_MAP[guideId] : null;
 
@@ -263,18 +256,16 @@ h1 span { color: #016B4F; }
     document.getElementById('single-guide-title').textContent = guide.title;
     const btn = document.getElementById('single-guide-btn');
     btn.href = guide.url;
-    // Button-Text anpassen
     btn.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ' + guide.btnText;
     document.getElementById('single-guide').style.display = 'block';
-    // Eyebrow anpassen
     if (guideId === 'preisliste') {
       document.querySelector('.guide-box-eyebrow').textContent = 'Ihre Preisliste';
     }
   } else {
-    // Kein localStorage-Wert (z.B. E-Mail auf anderem Gerät geöffnet) → alle Guides anzeigen
-    document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>Ihre <span>Guides</span> warten.';
-    document.getElementById('page-sub').textContent = 'Ihre E-Mail wurde erfolgreich bestätigt. Öffnen Sie einfach den Guide, den Sie angefragt haben:';
-    document.getElementById('all-guides').style.display = 'block';
+    // Kein Guide bekannt → Hinweis mit Link zu den Guides
+    document.getElementById('page-title').innerHTML = 'E-Mail bestätigt —<br>Guide <span>auswählen.</span>';
+    document.getElementById('page-sub').textContent = 'Deine E-Mail-Adresse wurde erfolgreich bestätigt. Wähle jetzt den Guide aus, den du herunterladen möchtest:';
+    document.getElementById('no-guide').style.display = 'block';
   }
 })();
 </script>
