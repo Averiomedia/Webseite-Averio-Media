@@ -86,53 +86,7 @@ h1 {
 h1 span { color: #016B4F; }
 .sub { font-size: 15px; color: rgba(255,255,255,.5); line-height: 1.75; }
 
-/* Preiskarten */
-.price-cards { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
-.price-card {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 16px; padding: 28px 32px;
-}
-.price-card.featured {
-  border-color: rgba(1,107,79,.3);
-  background: rgba(1,107,79,.04);
-  position: relative;
-}
-.price-card.featured::before {
-  content: 'Beliebt';
-  position: absolute; top: 16px; right: 20px;
-  background: #016B4F; color: #fff;
-  font-size: 9px; font-weight: 700; letter-spacing: .08em;
-  padding: 3px 10px; border-radius: 100px;
-}
-.price-card.free-card { border-color: rgba(168,216,240,.15); background: rgba(168,216,240,.03); }
-.card-eyebrow {
-  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
-  color: rgba(255,255,255,.3); margin-bottom: 8px;
-}
-.card-name {
-  font-family: 'Figtree', sans-serif; font-size: 20px; font-weight: 800;
-  color: #fff; margin-bottom: 6px;
-}
-.card-price {
-  font-family: 'Figtree', sans-serif; font-size: 42px; font-weight: 800;
-  color: #016B4F; line-height: 1; margin-bottom: 14px;
-  display: flex; align-items: baseline; gap: 6px;
-}
-.price-card.free-card .card-price { color: rgba(168,216,240,.7); }
-.card-price-unit { font-size: 14px; color: rgba(255,255,255,.3); font-family: 'Figtree', sans-serif; font-weight: 400; }
-.card-desc { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.7; margin-bottom: 18px; }
-.card-features { display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px; }
-.card-feat {
-  display: flex; align-items: flex-start; gap: 9px;
-  font-size: 12px; color: rgba(255,255,255,.65);
-}
-.feat-dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: #016B4F; box-shadow: 0 0 4px #016B4F;
-  flex-shrink: 0; margin-top: 5px;
-}
-.price-card.free-card .feat-dot { background: #A8D8F0; box-shadow: 0 0 4px #A8D8F0; }
+/* Download */
 .card-cta {
   display: inline-flex; align-items: center; gap: 8px;
   background: #016B4F; color: #fff; text-decoration: none;
@@ -142,18 +96,6 @@ h1 span { color: #016B4F; }
   transition: all .2s; cursor: pointer; border: none; font-family: 'Figtree', sans-serif;
 }
 .card-cta:hover { background: #e04300; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.5); }
-.card-cta.ghost {
-  background: transparent; color: rgba(168,216,240,.7);
-  border: 1px solid rgba(168,216,240,.2);
-  box-shadow: none;
-}
-.card-cta.ghost:hover { border-color: rgba(168,216,240,.4); background: rgba(168,216,240,.05); box-shadow: none; }
-.card-note {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 11px; color: rgba(1,107,79,.7);
-  background: rgba(1,107,79,.06); border: 1px solid rgba(1,107,79,.12);
-  border-radius: 8px; padding: 10px 14px; margin-bottom: 16px;
-}
 
 .divider { width: 48px; height: 1px; background: rgba(255,255,255,.08); margin: 36px auto; }
 .dl-box {
@@ -169,10 +111,6 @@ h1 span { color: #016B4F; }
 .footer-text { font-size: 11px; color: rgba(255,255,255,.18); line-height: 1.7; text-align: center; }
 .footer-text a { color: rgba(255,255,255,.3); text-decoration: none; }
 .footer-text a:hover { color: rgba(255,255,255,.6); }
-
-@media (max-width: 600px) {
-  .price-card { padding: 22px 20px; }
-}
 </style>
 </head>
 <body>
@@ -196,64 +134,7 @@ h1 span { color: #016B4F; }
     </div>
     <div class="badge"><div class="badge-dot"></div>E-Mail bestätigt</div>
     <h1 id="page-title">Deine Preisliste ist<br><span>bereit.</span></h1>
-    <p class="sub" id="page-sub">Deine E-Mail-Adresse wurde erfolgreich bestätigt. Hier sind alle Pakete und Konditionen im Überblick. Transparent, ohne Verkaufsdruck.</p>
-  </div>
-
-  <div class="price-cards">
-
-    <!-- Kampagnencheck -->
-    <div class="price-card">
-      <div class="card-eyebrow">Einmalig</div>
-      <div class="card-name">Kampagnencheck</div>
-      <div class="card-price">
-        Auf Anfrage
-      </div>
-      <div class="card-desc">Vollständige Analyse deines bestehenden Google Ads Kontos. Struktur, Tracking, Performance, Anzeigentexte. Priorisierter Maßnahmenplan als PDF in 2–4 Werktagen.</div>
-      <div class="card-features">
-        <div class="card-feat"><div class="feat-dot"></div>Vollständige Konto-Analyse (Struktur, Keywords, Copy)</div>
-        <div class="card-feat"><div class="feat-dot"></div>Tracking & Datenbasis-Check</div>
-        <div class="card-feat"><div class="feat-dot"></div>Priorisierter Handlungsplan als PDF</div>
-        <div class="card-feat"><div class="feat-dot"></div>Lieferung in 2–4 Werktagen</div>
-      </div>
-      <a href="/kampagnenanalyse-buchen" class="card-cta">Jetzt kontaktieren →</a>
-    </div>
-
-    <!-- Vollbetreuung -->
-    <div class="price-card featured">
-      <div class="card-eyebrow">Monatlich · Laufende Betreuung</div>
-      <div class="card-name">Google Ads Vollbetreuung</div>
-      <div class="card-price" id="vb-price-display">
-        ab 690 <span class="card-price-unit">€ / Monat</span>
-      </div>
-      <div class="card-note">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6" width="8" height="7" rx="1.5" stroke="#016B4F" stroke-width="1.2"/><path d="M5 6V4.5a2 2 0 014 0V6" stroke="#016B4F" stroke-width="1.2" stroke-linecap="round"/></svg>
-        Finaler Preis individuell nach Erstgespräch. Abhängig von Kontoumfang & Budget.
-      </div>
-      <div class="card-desc">Vollständige Übernahme: Strategie, Setup, wöchentliche Optimierung, monatliches Reporting. Alles aus einer Hand. Direkt mit Marie.</div>
-      <div class="card-features">
-        <div class="card-feat"><div class="feat-dot"></div>Konto-Übernahme & Erstaudit inklusive</div>
-        <div class="card-feat"><div class="feat-dot"></div>Wöchentliche Optimierung & Monitoring</div>
-        <div class="card-feat"><div class="feat-dot"></div>Monatliches Reporting & Strategiegespräch</div>
-        <div class="card-feat"><div class="feat-dot"></div>Direkt mit Marie. Kein Account-Manager-Spiel</div>
-        <div class="card-feat"><div class="feat-dot"></div>Laufzeit 3 Monate, Kündigung 1 Monat vor Quartalsende</div>
-      </div>
-    </div>
-
-    <!-- Potenzialanalyse -->
-    <div class="price-card free-card">
-      <div class="card-eyebrow">Kostenlos & unverbindlich</div>
-      <div class="card-name">Potenzialanalyse</div>
-      <div class="card-price">
-        0 <span class="card-price-unit">€ kostenlos</span>
-      </div>
-      <div class="card-desc">Noch kein aktives Konto? Wir analysieren Suchvolumen, Wettbewerb und Budget-Bedarf. Ehrliche Einschätzung, auch wenn die Antwort Nein ist.</div>
-      <div class="card-features">
-        <div class="card-feat"><div class="feat-dot"></div>Suchvolumen & Wettbewerb-Analyse</div>
-        <div class="card-feat"><div class="feat-dot"></div>Realistische Budget-Einschätzung</div>
-        <div class="card-feat"><div class="feat-dot"></div>Schriftliche Empfehlung, auch wenn es sich nicht lohnt</div>
-      </div>
-    </div>
-
+    <p class="sub" id="page-sub">Deine E-Mail-Adresse wurde erfolgreich bestätigt. Lade dir jetzt die vollständige Preisliste als PDF herunter – transparent, ohne Verkaufsdruck.</p>
   </div>
 
   <div class="divider"></div>
@@ -288,11 +169,11 @@ h1 span { color: #016B4F; }
                     : thema === 'GEO-Integration' ? 'für die GEO-Integration' : '';
     const sub = document.getElementById('page-sub');
     if (name && themaText) {
-      sub.textContent = 'Hallo ' + name + ', hier ist die Preisliste ' + themaText + ' – alle Pakete und Konditionen im Überblick. Transparent, ohne Verkaufsdruck.';
+      sub.textContent = 'Hallo ' + name + ', hier ist die Preisliste ' + themaText + ' – jetzt als PDF zum Herunterladen.';
     } else if (name) {
-      sub.textContent = 'Hallo ' + name + ', hier sind alle Pakete und Konditionen. Transparent, ohne Verkaufsdruck.';
+      sub.textContent = 'Hallo ' + name + ', hier ist deine vollständige Preisliste als PDF.';
     } else if (themaText) {
-      sub.textContent = 'Hier ist die Preisliste ' + themaText + ' – alle Pakete und Konditionen im Überblick. Transparent, ohne Verkaufsdruck.';
+      sub.textContent = 'Hier ist die Preisliste ' + themaText + ' – jetzt als PDF zum Herunterladen.';
     }
     // Passende PDF je nach gewähltem Thema ausspielen (default: Google Ads)
     const pdfLink = document.getElementById('dl-pdf');
