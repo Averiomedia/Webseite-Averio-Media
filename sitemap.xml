@@ -182,26 +182,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ═══ RECHTLICHES ════════════════════════════════════ -->
-  <url>
-    <loc>https://averiomedia.de/impressum</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/datenschutz</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://averiomedia.de/agb</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- Rechtliches (Impressum/Datenschutz/AGB) bewusst NICHT in der Sitemap: noindex -->
 
 </urlset>
