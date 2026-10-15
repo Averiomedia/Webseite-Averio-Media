@@ -31,154 +31,148 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --g: #016B4F;
-  --g-light: rgba(1,107,79,.08);
-  --g-border: rgba(1,107,79,.25);
-  --dark: #0d0d0d;
-  --dark2: #1a1a1a;
-  --text: #1a1a1a;
-  --muted: #666;
-  --light-bg: #f5f5f3;
+  --g-dark: #015a42;
+  --ink: #111111;
+  --muted: #6b6b6b;
+  --bg: #f6f5f3;
   --card: #ffffff;
-  --border: #e8e8e6;
+  --border: #e9e8e4;
 }
 html { scroll-behavior: smooth; }
-body { font-family: 'Figtree', sans-serif; background: var(--light-bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Figtree', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
 
-/* TOP BAR */
-.topbar {
-  background: var(--dark); padding: 12px 24px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 100;
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* BRAND + KICKER + HEADLINE */
+.head { text-align: center; padding: 56px 0 40px; }
+.brand {
+  display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink); text-decoration: none; margin-bottom: 34px;
 }
-.topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.topbar-mark { width: 28px; height: 28px; background: var(--g); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-.topbar-name { font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
-.topbar-badge {
-  font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase;
+.kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: #8a8a8a; margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(25px, 3.4vw, 37px); font-weight: 800; letter-spacing: -.02em;
+  line-height: 1.2; max-width: 820px; margin: 0 auto; color: var(--ink);
 }
 
-/* HERO */
-.hero {
-  background: var(--dark); padding: 72px 24px 64px;
-  position: relative; overflow: hidden;
+/* 2-Spalten: Dokument + Vorteilskarte */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 12px 0 8px; }
+.doc-col { text-align: center; }
+.doc {
+  position: relative; background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 30px 28px 34px; text-align: left;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08); transform: rotate(-1.2deg);
 }
-.hero::before {
-  content: ''; position: absolute; top: -120px; right: -120px;
-  width: 500px; height: 500px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,107,79,.12), transparent 65%);
-  pointer-events: none;
+.doc-tag {
+  display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--g); background: rgba(1,107,79,.09);
+  padding: 4px 10px; border-radius: 100px; margin-bottom: 14px;
 }
-.hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  border: 1px solid rgba(1,107,79,.35); background: rgba(1,107,79,.1);
-  color: var(--g); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
+.doc-title { font-size: 17px; font-weight: 800; letter-spacing: -.01em; line-height: 1.3; margin-bottom: 8px; }
+.doc-sub { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.doc-line { height: 7px; background: #efeeea; border-radius: 4px; margin-bottom: 8px; }
+.doc-line.w80 { width: 80%; } .doc-line.w60 { width: 60%; } .doc-line.w90 { width: 90%; }
+.doc-block { height: 30px; background: rgba(1,107,79,.12); border: 1px dashed rgba(1,107,79,.35); border-radius: 8px; margin-top: 14px; }
+.doc-badge {
+  position: absolute; right: -14px; bottom: -14px; width: 58px; height: 58px;
+  background: var(--g); color: #fff; border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; letter-spacing: .06em;
+  box-shadow: 0 10px 24px rgba(1,107,79,.35);
 }
-.hero-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--g); box-shadow: 0 0 6px var(--g); }
-.hero h1 {
-  font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #fff;
-  line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px;
-}
-.hero h1 em { color: var(--g); font-style: normal; }
-.hero-desc { font-size: 16px; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 560px; margin-bottom: 40px; }
-.hero-stats { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
-.hero-stat-num { font-size: 32px; font-weight: 800; color: var(--g); line-height: 1; }
-.hero-stat-label { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .06em; margin-top: 6px; }
+.doc-badge svg { width: 14px; height: 14px; margin-top: 2px; }
+.doc-caption { font-size: 11.5px; color: #9a9a9a; margin-top: 26px; line-height: 1.6; }
 
-/* INSIDE */
-.inside { padding: 72px 24px; }
-.inside-inner { max-width: 720px; margin: 0 auto; }
-.inside-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--g); font-weight: 700; margin-bottom: 12px; }
-.inside h2 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 32px; }
-.inside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-.inside-list li {
-  display: flex; align-items: flex-start; gap: 14px;
-  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-  padding: 18px 22px; font-size: 15px; color: #333; line-height: 1.6;
+.benefits {
+  background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+  padding: 34px 32px; box-shadow: 0 18px 44px rgba(0,0,0,.07);
 }
-.inside-check {
-  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
-  background: var(--g-light); border: 1px solid var(--g-border);
-  display: flex; align-items: center; justify-content: center;
-  margin-top: 1px;
+.benefit { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.benefit-ic {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 9px;
+  background: #f3f2ef; display: flex; align-items: center; justify-content: center;
 }
-.inside-check svg { width: 12px; height: 12px; }
+.benefit-ic svg { width: 17px; height: 17px; }
+.benefit p { font-size: 13.5px; color: #333; line-height: 1.6; padding-top: 5px; }
+.cta {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; margin-top: 8px; padding: 16px 24px;
+  background: var(--g); color: #fff; text-decoration: none;
+  border-radius: 100px; font-size: 15px; font-weight: 700;
+  box-shadow: 0 10px 26px rgba(1,107,79,.3);
+  transition: all .2s;
+}
+.cta:hover { background: var(--g-dark); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(1,107,79,.4); }
+.cta-sub {
+  display: block; text-align: center; font-size: 12.5px; color: var(--muted);
+  margin-top: 14px; text-decoration: underline; text-underline-offset: 3px;
+}
+.cta-sub:hover { color: var(--g); }
 
-/* VALUE BOX */
-.value-box {
-  background: var(--dark); border-radius: 20px; padding: 36px;
-  margin-top: 48px; position: relative; overflow: hidden;
+/* 3-Spalten-Features */
+.features {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;
+  text-align: center; padding: 72px 0 64px;
 }
-.value-box::before {
-  content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--g), transparent);
-}
-.value-box h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
-.value-box p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.8; }
+.feature-ic { height: 40px; margin-bottom: 16px; }
+.feature-ic svg { width: 34px; height: 34px; }
+.feature h3 { font-size: 15.5px; font-weight: 800; letter-spacing: -.01em; margin-bottom: 8px; line-height: 1.35; }
+.feature p { font-size: 12.5px; color: var(--muted); line-height: 1.65; max-width: 250px; margin: 0 auto; }
 
-/* DOWNLOAD GATE */
-.gate-section { padding: 72px 24px 96px; }
+/* GATE (Formular) */
+.gate { padding: 8px 0 80px; }
 .gate-card {
-  max-width: 520px; margin: 0 auto;
-  background: var(--card); border: 1px solid var(--border); border-radius: 24px;
-  padding: 48px 40px; position: relative; overflow: hidden;
+  max-width: 480px; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 42px 38px; box-shadow: 0 20px 48px rgba(0,0,0,.07); position: relative; overflow: hidden;
 }
 .gate-card::before {
-  content: ''; position: absolute; top: -1px; left: 15%; right: 15%; height: 2px;
+  content: ''; position: absolute; top: 0; left: 18%; right: 18%; height: 3px;
   background: linear-gradient(90deg, transparent, var(--g), transparent);
 }
-.gate-icon { font-size: 40px; margin-bottom: 16px; }
-.gate-title { font-size: 24px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 8px; }
-.gate-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
-.gate-group { margin-bottom: 16px; }
-.gate-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: .03em; font-weight: 500; }
+.gate-title { font-size: 22px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 8px; text-align: center; }
+.gate-sub { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 26px; text-align: center; }
+.gate-group { margin-bottom: 15px; }
+.gate-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: .03em; font-weight: 600; }
 .gate-input {
-  width: 100%; background: #f8f8f7; border: 1px solid var(--border); border-radius: 10px;
-  padding: 13px 16px; font-size: 15px; color: var(--text); font-family: 'Figtree', sans-serif;
+  width: 100%; background: #faf9f7; border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 15px; font-size: 15px; color: var(--ink); font-family: 'Figtree', sans-serif;
   outline: none; transition: border-color .2s;
 }
 .gate-input:focus { border-color: var(--g); background: #fff; }
-.gate-input::placeholder { color: #bbb; }
-.gate-check { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
-.gate-check input { margin-top: 3px; accent-color: var(--g); flex-shrink: 0; }
-.gate-check label { font-size: 12px; color: #888; line-height: 1.55; }
-.gate-check label a { color: var(--g); text-decoration: none; }
-.gate-legal { font-size: 11px; color: #aaa; margin: 12px 0 4px; line-height: 1.5; }
+.gate-input::placeholder { color: #b5b5b5; }
+.gate-check { display: flex; align-items: flex-start; gap: 10px; margin: 16px 0 6px; }
+.gate-check input { margin-top: 3px; accent-color: var(--g); flex-shrink: 0; width: 15px; height: 15px; }
+.gate-check label { font-size: 12px; color: #777; line-height: 1.6; }
+.gate-check label a { color: var(--g); font-weight: 600; text-decoration: none; }
+.gate-legal { font-size: 11px; color: #aaa; margin: 12px 0 2px; line-height: 1.5; }
 .gate-btn {
   width: 100%; padding: 15px; background: var(--g); color: #fff;
-  border: none; border-radius: 100px; font-size: 14px; font-weight: 700;
+  border: none; border-radius: 100px; font-size: 14.5px; font-weight: 700;
   cursor: pointer; font-family: 'Figtree', sans-serif;
-  box-shadow: 0 4px 20px rgba(1,107,79,.3);
-  transition: all .25s; margin-top: 8px;
+  box-shadow: 0 8px 22px rgba(1,107,79,.28);
+  transition: all .25s; margin-top: 10px;
   display: flex; align-items: center; justify-content: center; gap: 8px;
 }
-.gate-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.45); }
+.gate-btn:hover { background: var(--g-dark); transform: translateY(-2px); }
 .gate-btn:disabled { opacity: .6; cursor: wait; transform: none; }
-.gate-fine { font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; }
+.gate-fine { font-size: 11px; color: #aaa; text-align: center; margin-top: 10px; }
 
-/* FOOTER CTA */
-.footer-cta {
-  background: var(--dark); padding: 64px 24px; text-align: center;
-}
-.footer-cta p { font-size: 14px; color: rgba(255,255,255,.4); margin-bottom: 20px; }
-.footer-cta a {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--g); color: #fff; text-decoration: none;
-  padding: 14px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
-  transition: all .25s; font-family: 'Figtree', sans-serif;
-}
-.footer-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(1,107,79,.4); }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,.2); margin-top: 32px; }
+/* FOOTER */
+.footer { text-align: center; padding: 0 0 44px; font-size: 12px; color: #9a9a9a; }
+.footer a { color: #777; text-decoration: none; }
+.footer a:hover { color: var(--g); }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-  .hero { padding: 48px 20px 44px; }
-  .hero-stats { gap: 24px; }
-  .hero-stat-num { font-size: 26px; }
-  .inside { padding: 48px 20px; }
-  .gate-card { padding: 36px 24px; }
-  .gate-section { padding: 48px 20px 64px; }
+@media (max-width: 760px) {
+  .head { padding: 40px 0 30px; }
+  .grid { grid-template-columns: 1fr; gap: 34px; }
+  .doc { transform: none; }
+  .features { grid-template-columns: 1fr; gap: 40px; padding: 56px 0 48px; }
+  .gate-card { padding: 34px 22px; }
 }
 </style>
 
@@ -215,100 +209,110 @@ body { font-family: 'Figtree', sans-serif; background: var(--light-bg); color: v
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <a class="topbar-brand" href="/">
-    <div class="topbar-mark">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10L7 3l5 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="wrap">
+
+  <!-- BRAND + HEADLINE -->
+  <header class="head">
+    <a class="brand" href="/">Averio Media</a>
+    <div class="kicker">Für B2B-Dienstleister, Handwerk &amp; lokale Unternehmen</div>
+    <h1>Kompletter Guide: Google&nbsp;Ads Kampagnen in 7 Schritten optimieren — vom Suchbegriffsbericht bis zum Testing-Rhythmus</h1>
+  </header>
+
+  <!-- DOKUMENT + VORTEILE -->
+  <section class="grid">
+    <div class="doc-col">
+      <div class="doc">
+        <span class="doc-tag">Averio Guide</span>
+        <div class="doc-title">7 Schritte zur Kampagnen-Optimierung</div>
+        <div class="doc-sub">Systematisch verbessern: Analyse, Keywords, Anzeigen, Gebote, Skalierung.</div>
+        <div class="doc-line w90"></div>
+        <div class="doc-line w80"></div>
+        <div class="doc-line w60"></div>
+        <div class="doc-line w90"></div>
+        <div class="doc-line w80"></div>
+        <div class="doc-block"></div>
+        <div class="doc-badge">PDF<svg viewBox="0 0 14 14" fill="none"><path d="M7 2v7M4.5 6.5L7 9l2.5-2.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 11.5h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <p class="doc-caption">Praxisnah aus laufenden Google-Ads-Kampagnen – ohne Theorie-Ballast.</p>
     </div>
-    <span class="topbar-name">Averio Media</span>
-  </a>
-  <span class="topbar-badge">Kostenloser Guide 03</span>
+
+    <div class="benefits">
+        <div class="benefit"><div class="benefit-ic"><svg viewBox="0 0 16 16" fill="none"><path d="M2 12l4-4 3 3 5-6" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 5h4v4" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Performance-Daten analysieren & Ausgangssituation verstehen</p></div>
+        <div class="benefit"><div class="benefit-ic"><svg viewBox="0 0 16 16" fill="none"><rect x="3" y="2" width="10" height="12" rx="1.5" stroke="#016B4F" stroke-width="1.5"/><path d="M5.5 5.5h5M5.5 8h5M5.5 10.5h3" stroke="#016B4F" stroke-width="1.3" stroke-linecap="round"/></svg></div><p>Suchbegriffsbericht auswerten & Keywords bereinigen</p></div>
+        <div class="benefit"><div class="benefit-ic"><svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#016B4F" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round"/></svg></div><p>Anzeigentexte analysieren & schwache Varianten ersetzen</p></div>
+        <div class="benefit"><div class="benefit-ic"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#016B4F" stroke-width="1.5"/><path d="M5.5 8l1.8 1.8L10.5 6.5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Qualitätsfaktor verbessern, Klickkosten senken</p></div>
+      <a class="cta" href="#gate-card">
+        Jetzt kostenlosen Guide anfordern
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="cta-sub" href="#gate-card">Weiter zu Schritt 2 →</a>
+    </div>
+  </section>
+
+  <!-- 3 FEATURES -->
+  <section class="features">
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10M8 10l4 4 4-4" stroke="#111" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 18h14" stroke="#111" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>In 2 Schritten zum Guide</h3>
+        <p>Klicke auf den Button, trage deine Daten ein und erhalte den Guide direkt nach der Bestätigung per E-Mail.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5C4 5.7 4.7 5 5.5 5H10c1.1 0 2 .9 2 2v12c0-1.1-.9-2-2-2H5.5C4.7 17 4 16.3 4 15.5v-9z" stroke="#111" stroke-width="1.7" stroke-linejoin="round"/><path d="M20 6.5C20 5.7 19.3 5 18.5 5H14c-1.1 0-2 .9-2 2v12c0-1.1.9-2 2-2h4.5c.8 0 1.5-.7 1.5-1.5v-9z" stroke="#111" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <h3>Praxisorientiert</h3>
+        <p>Basierend auf dem echten Agentur-Alltag – ohne Theorie-Ballast, ohne Floskeln.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M14.5 6.5a4 4 0 01-5.7 5.4L5 15.7 8.3 19l3.8-3.8a4 4 0 005.4-5.7l-2.4 2.4-2.1-2.1 2.5-2.3z" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Sofort umsetzbar</h3>
+        <p>Du kannst die Inhalte direkt nach dem Lesen in deinem Google-Ads-Konto umsetzbar machen.</p>
+      </div>
+  </section>
+
+  <!-- GATE -->
+  <section class="gate">
+    <div class="gate-card" id="gate-card">
+      <div id="gate-form-area">
+        <div class="gate-title">Guide kostenlos laden</div>
+        <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
+        <div class="gate-group">
+          <label class="gate-label" for="g-name">Dein Name *</label>
+          <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
+        </div>
+        <div class="gate-group">
+          <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
+          <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
+        </div>
+        <div class="gate-check">
+          <input type="checkbox" id="g-dsgvo">
+          <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen, stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu und möchte den Averio-Media-Newsletter erhalten (Tipps zu Google Ads &amp; KI-Sichtbarkeit – jederzeit abbestellbar). *</label>
+        </div>
+        <p class="gate-legal">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
+        <button class="gate-btn" id="g-submit" onclick="submitGuideGate()">
+          <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Jetzt herunterladen
+        </button>
+        <div class="gate-fine">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
+      </div>
+      <div id="gate-success" style="display:none;text-align:center;padding:1rem 0;">
+        <div style="font-size:16px;margin-bottom:1rem;color:#016B4F;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" stroke="#016B4F" stroke-width="2.5"/><path d="M14 22.5l5.5 5.5L30 17" stroke="#016B4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
+        <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach.</span></div>
+        <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Averio Media · Marie Böttiger · <a href="/kontakt">Kontakt</a> · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
+  </footer>
+
 </div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge"><span class="hero-badge-dot"></span> Kostenlos · Direkt nutzbar</div>
-    <h1>Step-by-Step Guide zur<br><em>Kampagnen­optimierung</em></h1>
-    <p class="hero-desc">7 konkrete Schritte, wie du bestehende Google Ads Kampagnen systematisch verbesserst. Mit klaren Handlungsempfehlungen für jeden Bereich.</p>
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">7</div><div class="hero-stat-label">Schritte</div></div>
-      <div><div class="hero-stat-num">10</div><div class="hero-stat-label">Seiten</div></div>
-      <div><div class="hero-stat-num">50–60%</div><div class="hero-stat-label">weniger CPC</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- WAS DRIN IST -->
-<section class="inside">
-  <div class="inside-inner">
-    <div class="inside-label">Inhalt</div>
-    <h2>Die 7 Schritte im Überblick</h2>
-    <ul class="inside-list">
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Performance-Daten analysieren & Ausgangssituation verstehen</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Suchbegriffsbericht auswerten & Keywords bereinigen</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Anzeigentexte analysieren & schwache Varianten ersetzen</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Qualitätsfaktor verbessern, Klickkosten senken</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Landing Page für Conversions optimieren</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Gebotsstrategien anpassen & Budget effizient verteilen</span></li>
-      <li><div class="inside-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#016B4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Testen, skalieren & Routine aufbauen</span></li>
-    </ul>
-    <div class="value-box">
-      <h3>Für wen ist dieser Guide?</h3>
-      <p>Für Fortgeschrittene mit laufenden Kampagnen. Du hast schon Traffic, aber die Leads kommen nicht zuverlässig? Dann ist dieser Guide für dich.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DOWNLOAD GATE -->
-<section class="gate-section">
-  <div class="gate-card" id="gate-card">
-    <div id="gate-form-area">
-      <div class="gate-icon">📥</div>
-      <div class="gate-title">Guide kostenlos laden</div>
-      <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
-      <div class="gate-group">
-        <label class="gate-label" for="g-name">Dein Name *</label>
-        <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
-      </div>
-      <div class="gate-group">
-        <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
-        <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
-      </div>
-      <div class="gate-check">
-        <input type="checkbox" id="g-dsgvo">
-        <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *</label>
-      </div>
-      <div class="gate-check">
-        <input type="checkbox" id="g-nl">
-        <label for="g-nl">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</label>
-      </div>
-      <p class="gate-legal">Guides sind zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
-      <button class="gate-btn" id="g-submit" onclick="submitGuideGate()">
-        <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Jetzt herunterladen
-      </button>
-      <div class="gate-fine">Einmaliger Versand · Kein Spam · Abmeldung jederzeit</div>
-    </div>
-    <div id="gate-success" style="display:none;text-align:center;padding:1rem 0;">
-      <div style="font-size:48px;margin-bottom:1rem;">✅</div>
-      <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
-      <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach.</span></div>
-      <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER CTA -->
-<footer class="footer-cta">
-  <p>Brauchst du Hilfe bei deinen Google Ads?</p>
-  <a href="/kontakt">Kostenloses Erstgespräch buchen →</a>
-  <div class="footer-copy">© 2026 Averio Media · Marie Böttiger</div>
-</footer>
 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 <script>
+
 const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
 const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
@@ -318,12 +322,11 @@ const GUIDE_TITLE = 'Step-by-Step Kampagnenoptimierung';
 async function submitGuideGate() {
   const name  = document.getElementById('g-name').value.trim();
   const email = document.getElementById('g-email').value.trim();
-  const dsgvo = document.getElementById('g-dsgvo').checked;
-  const nl    = document.getElementById('g-nl').checked;
+  const consent = document.getElementById('g-dsgvo').checked;
 
   if (!name)  { alert('Bitte gib deinen Namen ein.'); return; }
   if (!email || !email.includes('@')) { alert('Bitte gib eine gültige E-Mail-Adresse ein.'); return; }
-  if (!dsgvo) { alert('Bitte bestätige die Datenschutzerklärung.'); return; }
+  if (!consent) { alert('Bitte bestätige die Einwilligung (Datenschutz & Newsletter).'); return; }
 
   const btn = document.getElementById('g-submit');
   btn.innerHTML = 'Wird gesendet…';
@@ -340,16 +343,14 @@ async function submitGuideGate() {
     fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI:', e); }
 
-  if (nl) {
-    try {
-      const nfd = new FormData();
-      nfd.append('EMAIL', email);
-      nfd.append('email_address_check', '');
-      nfd.append('locale', 'de');
-      nfd.append('OPT_IN', '1');
-      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
-    } catch(e) { console.warn('Newsletter:', e); }
-  }
+  try {
+    const nfd = new FormData();
+    nfd.append('EMAIL', email);
+    nfd.append('email_address_check', '');
+    nfd.append('locale', 'de');
+    nfd.append('OPT_IN', '1');
+    fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
+  } catch(e) { console.warn('Newsletter:', e); }
 
   try {
     await fetch(NFORMS_URL, {
@@ -360,7 +361,7 @@ async function submitGuideGate() {
         Name: name,
         Email: email,
         Guide: GUIDE_TITLE,
-        Newsletter: nl ? 'Ja' : 'Nein'
+        Newsletter: 'Ja'
       })
     });
   } catch(e) { console.warn('nForms:', e); }
@@ -368,6 +369,7 @@ async function submitGuideGate() {
   document.getElementById('gate-form-area').style.display = 'none';
   document.getElementById('gate-success').style.display = 'block';
 }
+
 </script>
 
 </body>
