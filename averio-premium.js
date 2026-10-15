@@ -403,7 +403,9 @@ function revealSplit(el) {
       e.preventDefault();
       const nav = document.querySelector('.nav');
       const navH = nav ? nav.offsetHeight : 80;
-      lenis.scrollTo(absTop(target) - navH - 16, { duration: 1.4 });
+      // Auf die visuelle Card zielen (inkl. Headline), nicht nur das form-Element
+      const el = target.closest('.sc-card') || target;
+      lenis.scrollTo(absTop(el) - navH - 16, { duration: 1.4 });
     });
   });
 })();
