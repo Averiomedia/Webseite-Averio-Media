@@ -386,12 +386,15 @@ function revealSplit(el) {
     onUpdate(self) { nav.classList.toggle('scrolled', self.progress > 0); }
   });
 
-  // Smooth scroll nav links
-  document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+  // Smooth scroll: alle In-Page-Anker (Nav + CTAs wie "Jetzt pruefen")
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
     a.addEventListener('click', e => {
+      const target = document.querySelector(href);
+      if (!target) return;
       e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) lenis.scrollTo(target, { offset: -80, duration: 1.4 });
+      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
     });
   });
 })();
