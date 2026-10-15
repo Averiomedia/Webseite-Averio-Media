@@ -2,9 +2,7 @@ User-agent: *
 Allow: /
 
 # Interne / nicht indexierbare Seiten
-Disallow: /averio-premium-datenschutz.html
-Disallow: /averio-premium-impressum.html
-Disallow: /averio-premium-termin-bestaetigung.html
+# (averio-premium-*.html weiterleitet auf /-Pfade -> nicht disallown, sonst sieht Google die 301 nicht)
 Disallow: /averio-danke.html
 Disallow: /averio-danke-kampagnencheck.html
 Disallow: /averio-danke-kurzcheck.html
@@ -17,12 +15,6 @@ Disallow: /averio-preisliste-download.html
 Disallow: /averio-kampagnenanalyse-buchen.html
 Disallow: /index-hell.html
 Disallow: /index-standalone.html
-
-# Interne Angebots-/Proposal-Seiten (nicht indexieren)
-Disallow: /averio-premium-angebote.html
-Disallow: /averio-premium-angebot-zusammenarbeit.html
-Disallow: /averio-premium-angebot-kampagnencheck.html
-Disallow: /averio-premium-angebot-potenzialanalyse.html
 
 # Alte Versionen (nicht indexieren)
 Disallow: /averio-premium-original.html

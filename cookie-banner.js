@@ -250,7 +250,7 @@
           Google Tag Manager und Google Ads Conversion Tracking kannst du
           einzeln aktivieren&nbsp;– standardmäßig sind beide deaktiviert.
           Mehr Infos in unserer
-          <a href="averio-premium-datenschutz.html">Datenschutzerklärung</a>.
+          <a href="/datenschutz">Datenschutzerklärung</a>.
         </p>
       </div>
 
