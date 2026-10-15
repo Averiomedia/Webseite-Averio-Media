@@ -387,6 +387,13 @@ function revealSplit(el) {
   });
 
   // Smooth scroll: alle In-Page-Anker (Nav + CTAs wie "Jetzt pruefen")
+  // Ziel-Position via offsetTop berechnen: getBoundingClientRect enthaelt
+  // die .reveal-Transforms, dadurch landete der Scroll zu tief.
+  function absTop(el) {
+    let y = 0;
+    while (el) { y += el.offsetTop; el = el.offsetParent; }
+    return y;
+  }
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     const href = a.getAttribute('href');
     if (!href || href === '#') return;
@@ -394,7 +401,9 @@ function revealSplit(el) {
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
+      const nav = document.querySelector('.nav');
+      const navH = nav ? nav.offsetHeight : 80;
+      lenis.scrollTo(absTop(target) - navH - 16, { duration: 1.4 });
     });
   });
 })();
