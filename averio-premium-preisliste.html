@@ -687,6 +687,7 @@ async function submitPreisliste() {
       fd.append('locale', 'de');
       // OPT_IN ist bei Brevo eine Pflicht-Checkbox (value=1) – ohne sie 400.
       fd.append('OPT_IN', '1');
+      fd.append('QUELLE', 'Preisliste');
       // PREISLISTE_THEMA ist bei Brevo ein Radio: 1=Google Ads, 2=GEO-Integration.
       fd.append('PREISLISTE_THEMA', thema === 'GEO-Integration' ? '2' : '1');
       fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
@@ -701,6 +702,7 @@ async function submitPreisliste() {
       nfd.append('email_address_check', '');
       nfd.append('locale', 'de');
       nfd.append('OPT_IN', '1');
+      nfd.append('QUELLE', 'Preisliste');
       fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
     } catch (e) { console.warn('Newsletter:', e); }
   }
