@@ -318,7 +318,6 @@ h1 {
 <script>
 
 const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
-const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 const GUIDE_ID = 'guide-4';
 const GUIDE_TITLE = 'Negative Keyword Bibel';
@@ -350,18 +349,6 @@ async function submitGuideGate() {
     if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI:', e); }
-
-  try {
-    const nfd = new FormData();
-    nfd.append('EMAIL', email);
-    nfd.append('email_address_check', '');
-    nfd.append('locale', 'de');
-    nfd.append('OPT_IN', '1');
-    nfd.append('QUELLE', 'Premium-Guides');
-    if (name) nfd.append('FIRSTNAME', name);
-    if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
-    fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
-  } catch(e) { console.warn('Newsletter:', e); }
 
   try {
     await fetch(NFORMS_URL, {

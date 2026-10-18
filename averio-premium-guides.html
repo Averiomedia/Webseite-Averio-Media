@@ -1347,12 +1347,6 @@ const BREVO_GUIDE_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FK
 // ── nForms für Marie's Benachrichtigungen
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
-// ── Newsletter-Sammel-Formular in Brevo ──
-//    Trägt nur bei ausdrücklichem Häkchen Kontakte in die Liste
-//    „Averio Media Newsletter" ein (nicht beim Newsletter-Gate selbst –
-//    dort läuft die Anmeldung bereits über BREVO_FORM_URL).
-const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
-
 // ── Guide gate logic
 let currentGuideId = '';
 let currentGuideTitle = '';
@@ -1431,22 +1425,6 @@ async function submitGate() {
     if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(isNewsletter ? BREVO_FORM_URL : BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI Fehler:', e); }
-
-  // Newsletter – läuft beim Guide-Download automatisch mit (gemeinsamer Consent-Haken);
-  // das Newsletter-Gate selbst meldet bereits über BREVO_FORM_URL
-  if (!isNewsletter && NEWSLETTER_BREVO_URL) {
-    try {
-      const nfd = new FormData();
-      nfd.append('EMAIL', email);
-      nfd.append('email_address_check', '');
-      nfd.append('locale', 'de');
-      nfd.append('OPT_IN', '1');
-      nfd.append('QUELLE', 'Premium-Guides');
-      if (name) nfd.append('FIRSTNAME', name);
-      if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
-      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
-    } catch(e) { console.warn('Newsletter:', e); }
-  }
 
   // nForms-Eintrag damit Marie sieht, wer welchen Guide angefragt hat
   try {

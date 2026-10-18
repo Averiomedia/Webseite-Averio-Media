@@ -299,11 +299,6 @@ html[data-theme="light"] .ag-input { background: #F8F9FA; border-color: #DEE2E6;
 const BREVO_FORM_URL = 'https://7fef3727.sibforms.com/serve/MUIFAAjq25OKFXwr2FKMgBK_NkVnOIzNJOGHZRlyBS_D-f1lcC-o5LNtCHNDev_rkXVmacRpowDukVvKNF1R27Xz8cbUMNBxgPyUNiHH49gNvcSo1HPKsREPI9-_KtkLGjI7yLACfX3T6RzpU-22wU71oFiNOiNv1d9x521UbAwumGS-4MVZ1jJgmlWkmk-TOcvVQup-U5nHgCAFmw==';
 const NFORMS_URL   = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
-// ── Newsletter-Sammel-Formular in Brevo ──
-//    Trägt nur bei ausdrücklichem Häkchen Kontakte in die Liste
-//    „Averio Media Newsletter" ein.
-const NEWSLETTER_BREVO_URL = 'https://7fef3727.sibforms.com/serve/MUIFAHUgMcr1hd6x12Y71aiaiug-pDyuUHn4QnkbTr9THXCF642UGAV-lnxJcx-bHXUHuHzjhv2ACEOvRaE3h-14PqATrEi_1Lf786yB14DstcjhQf_2QwmPDbj5UpyfaK1ZZZNuszyIKzTPoHPBZvP4aNlvJMrQh0dHxzAZwbZ1UEKxFxYGCS_25W3_qBHdgOq7dK0alFFIvx3zdQ==';
-
 const GUIDE_MAP = {
   'guide-1': { title: '10 Budgetvernichtende Google Ads Fehler', h1: 'Zehn Fehler, die Ihr Budget <span class="accent">verbrennen.</span>' },
   'guide-2': { title: 'Die 6-Punkte-Checkliste für profitable Google Ads', h1: 'Sechs Bereiche, <span class="accent">23 Prüfpunkte.</span>' },
@@ -363,21 +358,6 @@ async function submitGuide() {
     if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch (e) { console.warn('Brevo:', e); }
-
-  // Newsletter – läuft über den gemeinsamen Consent-Haken (Datenschutz + Newsletter) mit
-  if (NEWSLETTER_BREVO_URL) {
-    try {
-      const nfd = new FormData();
-      nfd.append('EMAIL', email);
-      nfd.append('email_address_check', '');
-      nfd.append('locale', 'de');
-      nfd.append('OPT_IN', '1');
-      nfd.append('QUELLE', 'Guide-Anfordern');
-      if (name) nfd.append('FIRSTNAME', name);
-      if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
-      fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
-    } catch (e) { console.warn('Newsletter:', e); }
-  }
 
   // nForms – Benachrichtigung mit den Kontaktdaten
   try {
