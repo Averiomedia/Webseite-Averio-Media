@@ -1294,6 +1294,10 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
         <label class="gate-label">E-Mail-Adresse *</label>
         <input class="gate-input" id="gate-email" type="email" placeholder="deine@email.de">
       </div>
+      <div class="gate-form-group">
+        <label class="gate-label">Telefon (optional)</label>
+        <input class="gate-input" id="gate-tel" type="tel" placeholder="+49 170 1234567" autocomplete="tel">
+      </div>
       <div class="gate-check-wrap">
         <input type="checkbox" id="gate-dsgvo">
         <label class="gate-check-label" for="gate-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen, stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu und möchte den Averio-Media-Newsletter erhalten (Tipps zu Google Ads &amp; KI-Sichtbarkeit – jederzeit abbestellbar). *</label>
@@ -1364,6 +1368,7 @@ function openGuideGate(guideId, title, icon) {
     : 'Trag deine E-Mail ein. Du bekommst eine Bestätigungs-E-Mail. Erst nach dem Klick auf den Link öffnet sich dein Guide.';
   document.getElementById('gate-name').value        = '';
   document.getElementById('gate-email').value       = '';
+  document.getElementById('gate-tel').value         = '';
   document.getElementById('gate-dsgvo').checked     = false;
   // Button-Text je nach Modus anpassen
   const finePrint = document.getElementById('gate-fine-print');
@@ -1392,6 +1397,7 @@ function closeGateForce() {
 async function submitGate() {
   const name         = document.getElementById('gate-name').value.trim();
   const email        = document.getElementById('gate-email').value.trim();
+  const tel          = document.getElementById('gate-tel').value.trim();
   const dsgvo        = document.getElementById('gate-dsgvo').checked;
   const isNewsletter = currentGuideId === 'newsletter';
 
@@ -1422,6 +1428,7 @@ async function submitGate() {
     fd.append('OPT_IN', '1');
     fd.append('QUELLE', 'Premium-Guides');
     if (name) fd.append('FIRSTNAME', name);
+    if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(isNewsletter ? BREVO_FORM_URL : BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI Fehler:', e); }
 
@@ -1436,6 +1443,7 @@ async function submitGate() {
       nfd.append('OPT_IN', '1');
       nfd.append('QUELLE', 'Premium-Guides');
       if (name) nfd.append('FIRSTNAME', name);
+      if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
       fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
     } catch(e) { console.warn('Newsletter:', e); }
   }
@@ -1449,6 +1457,7 @@ async function submitGate() {
         Formular:   isNewsletter ? 'Newsletter Anmeldung' : 'Guide Download Anfrage',
         Name:       name,
         Email:      email,
+        Telefon:    tel || '–',
         Guide:      isNewsletter ? '–' : currentGuideTitle,
         Newsletter: 'Ja'
       })

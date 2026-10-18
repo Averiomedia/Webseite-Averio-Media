@@ -198,6 +198,9 @@ html[data-theme="light"] .ag-input { background: #F8F9FA; border-color: #DEE2E6;
       <label class="ag-label" for="ag-email">E-Mail</label>
       <input class="ag-input" type="email" id="ag-email" autocomplete="email" placeholder="name@unternehmen.de">
 
+      <label class="ag-label" for="ag-tel">Telefon (optional)</label>
+      <input class="ag-input" type="tel" id="ag-tel" autocomplete="tel" placeholder="+49 170 1234567">
+
       <label class="ag-check">
         <input type="checkbox" id="ag-dsgvo">
         <span>Ich habe die <a href="/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>
@@ -328,6 +331,7 @@ let currentGuide = null;
 async function submitGuide() {
   const name  = document.getElementById('ag-name').value.trim();
   const email = document.getElementById('ag-email').value.trim();
+  const tel   = document.getElementById('ag-tel').value.trim();
   const dsgvo = document.getElementById('ag-dsgvo').checked;
 
   if (!name) { alert('Bitte geben Sie Ihren Namen an.'); return; }
@@ -356,6 +360,7 @@ async function submitGuide() {
     fd.append('OPT_IN', '1');
     fd.append('QUELLE', 'Guide-Anfordern');
     if (name) fd.append('FIRSTNAME', name);
+    if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch (e) { console.warn('Brevo:', e); }
 
@@ -369,6 +374,7 @@ async function submitGuide() {
       nfd.append('OPT_IN', '1');
       nfd.append('QUELLE', 'Guide-Anfordern');
       if (name) nfd.append('FIRSTNAME', name);
+      if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
       fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
     } catch (e) { console.warn('Newsletter:', e); }
   }
@@ -382,6 +388,7 @@ async function submitGuide() {
         Formular: 'Guide Landingpage Anfrage',
         Name: name,
         Email: email,
+        Telefon: tel || '–',
         Guide: guideTitle,
         Quelle: location.pathname + (location.search || ''),
         Newsletter: 'Ja'

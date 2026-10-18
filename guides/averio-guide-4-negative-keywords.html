@@ -282,6 +282,10 @@ h1 {
           <label class="gate-label" for="g-email">E-Mail-Adresse *</label>
           <input class="gate-input" id="g-email" type="email" placeholder="deine@email.de" autocomplete="email">
         </div>
+        <div class="gate-group">
+          <label class="gate-label" for="g-tel">Telefon (optional)</label>
+          <input class="gate-input" id="g-tel" type="tel" placeholder="+49 170 1234567" autocomplete="tel">
+        </div>
         <div class="gate-check">
           <input type="checkbox" id="g-dsgvo">
           <label for="g-dsgvo">Ich habe die <a href="/datenschutz" target="_blank">Datenschutzhinweise</a> zur Kenntnis genommen, stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu und möchte den Averio-Media-Newsletter erhalten (Tipps zu Google Ads &amp; KI-Sichtbarkeit – jederzeit abbestellbar). *</label>
@@ -322,6 +326,7 @@ const GUIDE_TITLE = 'Negative Keyword Bibel';
 async function submitGuideGate() {
   const name  = document.getElementById('g-name').value.trim();
   const email = document.getElementById('g-email').value.trim();
+  const tel   = document.getElementById('g-tel').value.trim();
   const consent = document.getElementById('g-dsgvo').checked;
 
   if (!name)  { alert('Bitte gib deinen Namen ein.'); return; }
@@ -340,6 +345,9 @@ async function submitGuideGate() {
     fd.append('email_address_check', '');
     fd.append('locale', 'de');
     fd.append('OPT_IN', '1');
+    fd.append('QUELLE', 'Premium-Guides');
+    if (name) fd.append('FIRSTNAME', name);
+    if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) fd.append('SMS', tel);
     fetch(BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI:', e); }
 
@@ -349,6 +357,9 @@ async function submitGuideGate() {
     nfd.append('email_address_check', '');
     nfd.append('locale', 'de');
     nfd.append('OPT_IN', '1');
+    nfd.append('QUELLE', 'Premium-Guides');
+    if (name) nfd.append('FIRSTNAME', name);
+    if (tel && /^[\d+()\/\s.-]{6,}$/.test(tel)) nfd.append('SMS', tel);
     fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
   } catch(e) { console.warn('Newsletter:', e); }
 
@@ -360,6 +371,7 @@ async function submitGuideGate() {
         Formular: 'Guide Download (Teaser-Seite)',
         Name: name,
         Email: email,
+        Telefon: tel || '–',
         Guide: GUIDE_TITLE,
         Newsletter: 'Ja'
       })
