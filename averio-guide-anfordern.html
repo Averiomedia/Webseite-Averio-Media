@@ -201,12 +201,7 @@ html[data-theme="light"] .ag-input { background: #F8F9FA; border-color: #DEE2E6;
       <label class="ag-check">
         <input type="checkbox" id="ag-dsgvo">
         <span>Ich habe die <a href="/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>
-        gelesen und willige ein, dass meine Angaben zur Zusendung des Guides und zur dazugehörigen Bestätigungs-E-Mail verarbeitet werden. Die Einwilligung kann jederzeit widerrufen werden.</span>
-      </label>
-
-      <label class="ag-check">
-        <input type="checkbox" id="ag-newsletter">
-        <span>Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</span>
+        zur Kenntnis genommen, willige ein, dass meine Angaben zur Zusendung des Guides und der Bestätigungs-E-Mail verarbeitet werden, und möchte den gelegentlichen Averio-Media-Newsletter erhalten (Tipps zu Google Ads und KI-Sichtbarkeit – jederzeit abbestellbar). *</span>
       </label>
 
       <button class="ag-submit" id="ag-submit" onclick="submitGuide()">
@@ -334,11 +329,10 @@ async function submitGuide() {
   const name  = document.getElementById('ag-name').value.trim();
   const email = document.getElementById('ag-email').value.trim();
   const dsgvo = document.getElementById('ag-dsgvo').checked;
-  const nl    = document.getElementById('ag-newsletter').checked;
 
   if (!name) { alert('Bitte geben Sie Ihren Namen an.'); return; }
   if (!email || !email.includes('@')) { alert('Bitte geben Sie eine gültige E-Mail-Adresse an.'); return; }
-  if (!dsgvo) { alert('Bitte bestätigen Sie die Datenschutzerklärung.'); return; }
+  if (!dsgvo) { alert('Bitte bestätige die Einwilligung (Datenschutz & Newsletter).'); return; }
 
   const btn = document.getElementById('ag-submit');
   btn.disabled = true;
@@ -364,8 +358,8 @@ async function submitGuide() {
     fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch (e) { console.warn('Brevo:', e); }
 
-  // Newsletter – nur bei ausdrücklichem Häkchen in die Brevo-Liste
-  if (nl && NEWSLETTER_BREVO_URL) {
+  // Newsletter – läuft über den gemeinsamen Consent-Haken (Datenschutz + Newsletter) mit
+  if (NEWSLETTER_BREVO_URL) {
     try {
       const nfd = new FormData();
       nfd.append('EMAIL', email);
@@ -388,7 +382,7 @@ async function submitGuide() {
         Email: email,
         Guide: guideTitle,
         Quelle: location.pathname + (location.search || ''),
-        Newsletter: nl ? 'Ja' : 'Nein'
+        Newsletter: 'Ja'
       })
     });
   } catch (e) { console.warn('nForms:', e); }

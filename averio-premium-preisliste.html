@@ -558,17 +558,10 @@ html[data-theme="light"] .pl-stats             { border-top-color: #DEE2E6 !impo
           <label class="form-check">
             <input type="checkbox" id="pl-dsgvo">
             <div class="check-box"></div>
-            <span class="check-label">Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+            <span class="check-label">Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen, stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu und möchte den Averio-Media-Newsletter erhalten (Tipps zu Google Ads &amp; KI-Sichtbarkeit – jederzeit abbestellbar). *</span>
           </label>
         </div>
-        <div class="form-group" style="margin-top:.5rem;">
-          <label class="form-check">
-            <input type="checkbox" id="pl-newsletter">
-            <div class="check-box"></div>
-            <span class="check-label">Ja, ich möchte gelegentlich den Averio-Media-Newsletter erhalten – Tipps zu Google Ads und KI-Sichtbarkeit. Jederzeit abbestellbar. (optional)</span>
-          </label>
-        </div>
-        <div class="form-error" id="pl-error">Bitte fülle alle Pflichtfelder aus und stimmen der Datenschutzerklärung zu.</div>
+        <div class="form-error" id="pl-error">Bitte fülle alle Pflichtfelder aus und stimme der Einwilligung (Datenschutz &amp; Newsletter) zu.</div>
         <p class="pl-fine">Die Preisliste ist zur persönlichen, nicht-kommerziellen Nutzung bestimmt. Weitergabe ohne Genehmigung ist nicht gestattet (§&nbsp;327 ff. BGB).</p>
 
         <button class="pl-submit-btn" id="pl-btn" onclick="submitPreisliste()">
@@ -659,7 +652,6 @@ async function submitPreisliste() {
   const tel   = document.getElementById('pl-tel').value.trim();
   const thema = document.getElementById('pl-thema').value;
   const dsgvo = document.getElementById('pl-dsgvo').checked;
-  const nl    = document.getElementById('pl-newsletter').checked;
   const errEl = document.getElementById('pl-error');
   const btn   = document.getElementById('pl-btn');
 
@@ -694,8 +686,8 @@ async function submitPreisliste() {
     } catch (e) { console.warn('Brevo:', e); }
   }
 
-  // Newsletter – nur bei ausdrücklichem Häkchen in die Brevo-Liste
-  if (nl && NEWSLETTER_BREVO_URL) {
+  // Newsletter – läuft über den gemeinsamen Consent-Haken (Datenschutz + Newsletter) mit
+  if (NEWSLETTER_BREVO_URL) {
     try {
       const nfd = new FormData();
       nfd.append('EMAIL', email);
@@ -719,7 +711,7 @@ async function submitPreisliste() {
         Telefon:  tel || '–',
         Thema:    thema,
         Quelle:   location.pathname,
-        Newsletter: nl ? 'Ja' : 'Nein'
+        Newsletter: 'Ja'
       })
     });
   } catch (e) { console.warn('nForms:', e); }
