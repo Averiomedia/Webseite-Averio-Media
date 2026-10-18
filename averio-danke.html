@@ -223,6 +223,18 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
   50% { transform: translateY(6px); }
 }
 
+.dl-btn {
+  display: none; align-items: center; justify-content: center; gap: 10px;
+  background: #016B4F; color: #fff; text-decoration: none;
+  border-radius: 100px; padding: 15px 32px;
+  font-size: 15px; font-weight: 700; font-family: 'Figtree', sans-serif;
+  letter-spacing: -.01em; margin: -16px auto 40px; max-width: 420px;
+  box-shadow: 0 6px 24px rgba(1,107,79,.35);
+  transition: opacity .2s, transform .15s, box-shadow .25s;
+}
+.dl-btn:hover { opacity: .9; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(1,107,79,.5); }
+.dl-btn svg { flex-shrink: 0; }
+
 /* ── BRIDGE ── */
 .bridge {
   background: #0d0d0d; border-top: 1px solid rgba(255,255,255,.09);
@@ -471,6 +483,10 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
   </div>
 <h1 class="hero-title">Dein Guide ist<br><em>auf dem Weg</em> zu dir.</h1>
 <p class="hero-sub">Schau in dein Postfach. Der Download-Link ist bereits unterwegs. Manchmal landet er im Spam-Ordner, also kurz dort nachschauen.</p>
+  <a id="dl-btn" class="dl-btn" href="#">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span id="dl-btn-text">Guide jetzt herunterladen</span>
+  </a>
   <div class="hero-arrow">
     <span>Noch eine Sache</span>
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M4 10l5 5 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -638,42 +654,61 @@ body { font-family: 'Figtree', sans-serif; background: #080808; color: #fff; lin
 // ── nForms Konfiguration
 const NFORMS_URL = 'https://api.nforms.eu/f/nf_kk51wb8cu2ohffr3vycazh702eh2a66q';
 
-// ── Lese Guide-Name aus URL-Parameter
+// ── Guide-Parameter (URL zuerst, dann localStorage) + Download-Button
 (function() {
   const params = new URLSearchParams(window.location.search);
-  const guide  = params.get('guide');
-  if (guide) {
-    const map = {
-      'guide-1': '10 Budgetvernichtende Fehler',
-      'guide-2': '6 Punkte Checkliste',
-      'guide-3': 'Step-by-Step Optimierung',
-      'guide-4': 'Negative-Keyword-Bibel',
-      'guide-5': 'GA4 Tracking Setup',
-      'preisliste': 'Preisliste'
-    };
-    if (map[guide]) {
-      let label = map[guide];
-      if (guide === 'preisliste') {
-        let thema = '';
-        try { thema = localStorage.getItem('av_preislisteThema') || ''; } catch (e) {}
-        const bt = document.querySelector('.confirm-text');
-        if (bt) bt.textContent = 'Preisliste angefordert';
-        const h1 = document.querySelector('.hero-title');
-        if (h1) {
-          if (thema === 'Google Ads') {
-            h1.innerHTML = 'Ihre Google-Ads-Preisliste ist<br><em>auf dem Weg</em> zu Ihnen.';
-            label = 'Google-Ads-Preisliste';
-          } else if (thema === 'GEO-Integration') {
-            h1.innerHTML = 'Ihre Preisliste f&#252;r die GEO-Integration ist<br><em>auf dem Weg</em> zu Ihnen.';
-            label = 'Preisliste f&#252;r die GEO-Integration';
-          } else {
-            h1.innerHTML = 'Ihre Preisliste ist<br><em>auf dem Weg</em> zu Ihnen.';
-          }
-        }
+  let guide = params.get('guide');
+  if (!guide) {
+    try { guide = localStorage.getItem('av_pendingGuide'); } catch (e) {}
+  }
+  if (!guide) return;
+
+  const map = {
+    'guide-1': '10 Budgetvernichtende Fehler',
+    'guide-2': '6 Punkte Checkliste',
+    'guide-3': 'Step-by-Step Optimierung',
+    'guide-4': 'Negative-Keyword-Bibel',
+    'guide-5': 'GA4 Tracking Setup',
+    'preisliste': 'Preisliste'
+  };
+  if (!map[guide]) return;
+  let label = map[guide];
+  const isPreisliste = guide === 'preisliste';
+
+  if (isPreisliste) {
+    let thema = '';
+    try { thema = localStorage.getItem('av_preislisteThema') || ''; } catch (e) {}
+    const bt = document.querySelector('.confirm-text');
+    if (bt) bt.textContent = 'Preisliste angefordert';
+    const h1 = document.querySelector('.hero-title');
+    if (h1) {
+      if (thema === 'Google Ads') {
+        h1.innerHTML = 'Ihre Google-Ads-Preisliste ist<br><em>bereit.</em>';
+        label = 'Google-Ads-Preisliste';
+      } else if (thema === 'GEO-Integration') {
+        h1.innerHTML = 'Ihre Preisliste f&#252;r die GEO-Integration ist<br><em>bereit.</em>';
+        label = 'Preisliste f&#252;r die GEO-Integration';
+      } else {
+        h1.innerHTML = 'Ihre Preisliste ist<br><em>bereit.</em>';
       }
-      const sub = document.querySelector('.hero-sub');
-      if (sub) sub.innerHTML = `„<em style="color:rgba(255,255,255,.7);font-style:normal;">${label}</em>". Bitte bestätigen Sie Ihre Anfrage in der E-Mail, die soeben unterwegs ist – erst nach dem Klick auf den Bestätigungslink öffnet sich der Download. Manchmal landet sie im Spam-Ordner, also kurz dort nachschauen.`;
     }
+  } else {
+    const h1 = document.querySelector('.hero-title');
+    if (h1) h1.innerHTML = 'Dein Guide ist<br><em>bereit.</em>';
+  }
+
+  const sub = document.querySelector('.hero-sub');
+  if (sub) {
+    sub.innerHTML = isPreisliste
+      ? `&#8222;<em style="color:rgba(255,255,255,.7);font-style:normal;">${label}</em>&#8220; steht Ihnen hier direkt bereit. Zus&#228;tzlich schicken wir Ihnen den Link per E-Mail – falls er fehlt oder gel&#246;scht wurde, funktioniert der Button hier jederzeit. Manchmal landet die Mail im Spam-Ordner, also kurz dort nachschauen.`
+      : `&#8222;<em style="color:rgba(255,255,255,.7);font-style:normal;">${label}</em>&#8220; steht dir hier direkt bereit. Zus&#228;tzlich schicke ich dir den Link per E-Mail – falls er fehlt oder gel&#246;scht wurde, funktioniert der Button hier jederzeit. Manchmal landet die Mail im Spam-Ordner, also kurz dort nachschauen.`;
+  }
+
+  const btn = document.getElementById('dl-btn');
+  if (btn) {
+    btn.href = isPreisliste ? '/preisliste-download' : '/guide-download?guide=' + guide;
+    document.getElementById('dl-btn-text').textContent = isPreisliste ? 'Preisliste jetzt &#246;ffnen' : 'Guide jetzt herunterladen';
+    btn.style.display = 'inline-flex';
   }
 })();
 
