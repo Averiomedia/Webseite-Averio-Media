@@ -1285,7 +1285,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
     <div id="guide-gate-form-inner">
       <div class="guide-gate-icon" id="gate-icon">📋</div>
       <div class="guide-gate-title" id="gate-title">Guide herunterladen</div>
-      <div class="guide-gate-sub" id="gate-sub">Trag deine E-Mail ein. Dein Download öffnet sich direkt nach dem Absenden – den Link bekommst du zusätzlich per E-Mail. Kein Spam, nur dieser Guide.</div>
+      <div class="guide-gate-sub" id="gate-sub">Trag deine E-Mail ein. Der Download-Link kommt sofort in dein Postfach. Kein Spam, nur dieser Guide.</div>
       <div class="gate-form-group">
         <label class="gate-label">Dein Name *</label>
         <input class="gate-input" id="gate-name" type="text" placeholder="Max Mustermann">
@@ -1312,7 +1312,7 @@ html[data-theme="light"] .guide-gate-success-text  { color: #495057 !important; 
     <div class="guide-gate-success" id="guide-gate-success">
       <div class="guide-gate-success-icon">✅</div>
       <div class="guide-gate-success-title">Link gesendet!</div>
-      <div class="guide-gate-success-text">Dein Download ist bereit – der nächste Klick öffnet ihn. Der Link ist zusätzlich per E-Mail unterwegs (ggf. Spam-Ordner).</div>
+      <div class="guide-gate-success-text">Der Download-Link ist auf dem Weg zu dir. Schau in dein Postfach. Und ggf. in den Spam-Ordner.</div>
       <button onclick="closeGateForce()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Schließen</button>
     </div>
   </div>
@@ -1359,7 +1359,7 @@ function openGuideGate(guideId, title, icon) {
   document.getElementById('gate-title').textContent = isNewsletter ? 'Newsletter abonnieren' : title + ' herunterladen';
   document.getElementById('gate-sub').textContent   = isNewsletter
     ? 'Trag dich ein. Du bekommst eine Bestätigungs-E-Mail. Nach dem Klick auf den Link darin bist du dabei.'
-    : 'Trag deine E-Mail ein. Dein Download öffnet sich direkt – den Link bekommst du zusätzlich per E-Mail.';
+    : 'Trag deine E-Mail ein. Du bekommst eine Bestätigungs-E-Mail. Erst nach dem Klick auf den Link öffnet sich dein Guide.';
   document.getElementById('gate-name').value        = '';
   document.getElementById('gate-email').value       = '';
   document.getElementById('gate-tel').value         = '';

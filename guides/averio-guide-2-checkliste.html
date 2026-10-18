@@ -273,7 +273,7 @@ h1 {
     <div class="gate-card" id="gate-card">
       <div id="gate-form-area">
         <div class="gate-title">Guide kostenlos laden</div>
-        <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Dein Download startet direkt nach dem Absenden – den Link bekommst du zusätzlich per E-Mail.</div>
+        <div class="gate-sub">Trag deinen Namen und deine E-Mail ein. Du erhältst eine Bestätigungs-E-Mail – erst nach dem Klick auf den Link darin startet der Download.</div>
         <div class="gate-group">
           <label class="gate-label" for="g-name">Dein Name *</label>
           <input class="gate-input" id="g-name" type="text" placeholder="Max Mustermann" autocomplete="name">
@@ -301,10 +301,9 @@ h1 {
         <div style="font-size:16px;margin-bottom:1rem;color:#016B4F;">
           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" stroke="#016B4F" stroke-width="2.5"/><path d="M14 22.5l5.5 5.5L30 17" stroke="#016B4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Dein Guide ist bereit!</div>
-        <div style="font-size:14px;color:#666;line-height:1.7;">Der Button unten öffnet deinen Download sofort. Der Link ist zusätzlich per E-Mail unterwegs – falls die Mail fehlt oder gel&#246;scht ist, funktioniert der Button jederzeit.<br><span style="color:#999;font-size:12px;">Nichts im Postfach? Manchmal landet die Mail im Spam-Ordner.</span></div>
-        <a id="g-dl-link" href="#" style="display:inline-block;margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;text-decoration:none;">Jetzt herunterladen</a>
-        <button onclick="location.reload()" style="margin-top:1rem;background:transparent;color:#666;border:1px solid #ddd;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
+        <div style="font-size:20px;font-weight:800;margin-bottom:.5rem;">Fast geschafft!</div>
+        <div style="font-size:14px;color:#666;line-height:1.7;">Prüfe jetzt dein Postfach und klicke auf den Bestätigungslink in der E-Mail. Erst danach startet der Download.<br><span style="color:#999;font-size:12px;">Nichts da? Schau kurz im Spam-Ordner nach – oder fordere den Guide noch einmal an, dann kommt eine neue Bestätigungs-Mail.</span></div>
+        <button onclick="location.reload()" style="margin-top:1.5rem;background:#016B4F;color:#fff;border:none;padding:12px 28px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Figtree',sans-serif;">Zurück</button>
       </div>
     </div>
   </section>
@@ -366,7 +365,6 @@ async function submitGuideGate() {
     });
   } catch(e) { console.warn('nForms:', e); }
 
-  document.getElementById('g-dl-link').href = '/guide-download?guide=' + GUIDE_ID;
   document.getElementById('gate-form-area').style.display = 'none';
   document.getElementById('gate-success').style.display = 'block';
 }
