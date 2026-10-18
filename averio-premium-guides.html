@@ -1421,6 +1421,7 @@ async function submitGate() {
     // OPT_IN ist bei Brevo eine Pflicht-Checkbox (value=1) – ohne sie 400.
     fd.append('OPT_IN', '1');
     fd.append('QUELLE', 'Premium-Guides');
+    if (name) fd.append('FIRSTNAME', name);
     fetch(isNewsletter ? BREVO_FORM_URL : BREVO_GUIDE_URL, { method: 'POST', body: fd, mode: 'no-cors' });
   } catch(e) { console.warn('Brevo DOI Fehler:', e); }
 
@@ -1434,6 +1435,7 @@ async function submitGate() {
       nfd.append('locale', 'de');
       nfd.append('OPT_IN', '1');
       nfd.append('QUELLE', 'Premium-Guides');
+      if (name) nfd.append('FIRSTNAME', name);
       fetch(NEWSLETTER_BREVO_URL, { method: 'POST', body: nfd, mode: 'no-cors' });
     } catch(e) { console.warn('Newsletter:', e); }
   }
