@@ -1410,7 +1410,7 @@ html[data-theme="light"] .footer a               { color: #495057 !important; }
           e.preventDefault();
           var target = document.querySelector(a.getAttribute('href'));
           if (!target) return;
-          if (typeof lenis !== 'undefined') {
+          if (typeof lenis !== 'undefined' && lenis) {
             lenis.scrollTo(target, { offset: -100, duration: 1.4 });
           } else {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });

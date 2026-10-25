@@ -6,17 +6,20 @@
 /* ── GSAP REGISTRATION ────────────────────────────────── */
 gsap.registerPlugin(ScrollTrigger);
 
-/* ── LENIS SMOOTH SCROLL ──────────────────────────────── */
-const lenis = new Lenis({
-  duration: 1.0,
-  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true,
-  smoothTouch: false,
-  syncTouch: false,
-});
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add(time => lenis.raf(time * 1000));
-gsap.ticker.lagSmoothing(0);
+/* ── LENIS SMOOTH SCROLL (nur Desktop — auf Touch-Geräten deaktiviert) ── */
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+let lenis = null;
+if (!isTouchDevice) {
+  lenis = new Lenis({
+    duration: 1.0,
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    syncTouch: false,
+  });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(time => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+}
 
 /* ── PRELOADER ────────────────────────────────────────── */
 (function initPreloader() {
@@ -405,7 +408,9 @@ function revealSplit(el) {
       const navH = nav ? nav.offsetHeight : 80;
       // Auf die visuelle Card zielen (inkl. Headline), nicht nur das form-Element
       const el = target.closest('.sc-card') || target;
-      lenis.scrollTo(absTop(el) - navH - 16, { duration: 1.4 });
+      const dest = absTop(el) - navH - 16;
+      if (lenis) { lenis.scrollTo(dest, { duration: 1.4 }); }
+      else { window.scrollTo({ top: dest, behavior: 'smooth' }); }
     });
   });
 })();
