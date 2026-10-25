@@ -1379,7 +1379,7 @@ body::before {
   /* Nav */
   .nav { padding: .85rem 1.25rem; gap: 0; }
   .nav-links { display: none; }
-  .nav-cta { font-size: 12px; padding: 8px 16px; }
+  .nav-cta { display: none; }
   .nav-burger { display: flex; }
 
   /* Sections */
@@ -1412,6 +1412,10 @@ body::before {
 
   /* Ticker */
   .ticker-section { padding: 2rem 0; }
+
+  /* Ads-Check & Branchen grid → single column on mobile */
+  .ads-check-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  .branchen-grid { grid-template-columns: 1fr !important; min-height: auto !important; }
 }
 
 /* ── RESPONSIVE: SMALL MOBILE ─────────────────────────── */

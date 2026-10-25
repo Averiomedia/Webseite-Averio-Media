@@ -148,7 +148,7 @@
 <script src="js/lenis.min.js"></script>
 
 <!-- Shared Premium Styles -->
-  <link rel="stylesheet" href="averio-media-weiss.css?v=18">
+  <link rel="stylesheet" href="averio-media-weiss.css?v=19">
 
 <!-- V1-specific overrides -->
 <style>
@@ -535,14 +535,18 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
 
 /* ── Responsive: Ads-Check & Warum Averio grids ── */
 @media (max-width: 768px) {
-  section[style*="linear-gradient(135deg"] > .max-w[style*="grid-template-columns:1fr 1fr"] {
+  .ads-check-grid {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 2.5rem !important;
   }
-  .reveal[style*="grid-template-columns:1fr 1fr"][style*="max-width:900px"] {
+  .branchen-grid {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+  .comparison-grid {
     grid-template-columns: 1fr !important;
   }
-  .reveal[style*="grid-template-columns:1fr auto"] {
+  .kontakt-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -940,7 +944,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
 <!-- ════ ADS-CHECK ══════════════════════════════════════ -->
 <section class="section" style="background:linear-gradient(160deg,#014D3A 0%,#016B4F 45%,#028A63 100%);padding:6rem 0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 20%,rgba(255,255,255,.06),transparent);pointer-events:none"></div>
-  <div class="max-w" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative">
+  <div class="max-w ads-check-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative">
     <div>
       <div style="display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#B8F0D8;background:rgba(184,240,216,.12);border:1px solid rgba(184,240,216,.2);padding:7px 16px;border-radius:100px;margin-bottom:2rem">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B8F0D8" stroke-width="2"/><path d="M8 12l3 3 5-6" stroke="#B8F0D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1080,7 +1084,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
       <div class="sec-eyebrow reveal" style="justify-content:center">Warum Averio</div>
       <h2 class="sec-title reveal reveal-d1">Anders als klassische<br><em>Agenturen</em></h2>
     </div>
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:900px;margin:0 auto">
+    <div class="reveal comparison-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:900px;margin:0 auto">
       <!-- Agentur-Spalte -->
       <div style="background:rgba(255,68,68,.04);border:1px solid rgba(255,68,68,.12);border-radius:16px;padding:2rem">
         <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#ff6b6b;margin-bottom:1.2rem">Klassische Agenturen</div>
@@ -1177,7 +1181,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
 <!-- ════ BRANCHEN-NISCHE ═════════════════════════════════ -->
 <section class="section" style="padding:4rem 0">
   <div class="max-w">
-    <div class="reveal" style="background:linear-gradient(135deg,#014D3A 0%,#016B4F 55%,#028A63 100%);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:420px;position:relative">
+    <div class="reveal branchen-grid" style="background:linear-gradient(135deg,#014D3A 0%,#016B4F 55%,#028A63 100%);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:420px;position:relative">
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 75% 50%,rgba(255,255,255,.07),transparent);pointer-events:none"></div>
       <div style="padding:clamp(2rem,4vw,3.5rem);position:relative;z-index:1">
         <div style="display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#B8F0D8;background:rgba(184,240,216,.12);border:1px solid rgba(184,240,216,.2);padding:6px 14px;border-radius:100px;margin-bottom:1.5rem">
@@ -1357,7 +1361,7 @@ html[data-theme="light"] [style*="color:rgba(255,255,255,.5)"] { color: #888 !im
       </p>
     </div>
 
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start">
+    <div class="reveal kontakt-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start">
 
       <!-- Calendly -->
       <div style="background:var(--card-bg, rgba(255,255,255,.03));border:1px solid var(--border-line, rgba(255,255,255,.08));border-radius:16px;padding:2rem;min-height:500px">
